@@ -32,6 +32,9 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <a href="#services" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.services}</a>
           <a href="#industries" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.industries}</a>
+          <a href="#sample-builds" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "சிறந்த படைப்புகள்" : language === "es" ? "Portafolio" : "Builds"}
+          </a>
           {language !== "es" && (
             <a href="#insights" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.insights}</a>
           )}

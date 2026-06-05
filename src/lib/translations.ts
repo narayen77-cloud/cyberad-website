@@ -8,10 +8,10 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      title: "Bridging the Gap Between Legacy and Large Scale.",
-      subtitle: "Helping traditional businesses grow using modern digital systems, automation, and strategic marketing.",
+      title: "Helping Traditional Businesses Grow Using Modern Digital Systems.",
+      subtitle: "We empower local enterprises with high-impact automation, multi-page websites, and strategic marketing built to scale your revenue.",
       cta: "Get Started",
-      technicalGap: "The Gap We Bridge",
+      technicalGap: "DIGITAL GROWTH PARTNER",
     },
     services: {
       title: "Strategy Packages",
@@ -64,6 +64,38 @@ export const translations = {
       email: "Email",
       message: "Message",
       submit: "Send Message",
+    },
+    builds: {
+      title: "Featured Realizations",
+      subtitle: "High-performance digital products engineered to solve complex delivery and scale challenges.",
+      visit: "Launch Live Site",
+      categories: {
+        education: "Healthcare Education",
+        solar: "Clean Energy Systems",
+        industrial: "Aesthetics & Wellness",
+        admission: "Institutional Admissions"
+      }
+    },
+    leadForm: {
+      title: "Initiate Your Consultation",
+      subtitle: "Fill out this brief form, and our lead strategist will analyze your requirements within 4 hours.",
+      name: "Your Name",
+      number: "WhatsApp / Contact Number",
+      detail: "Small Detail or Brief (Optional)",
+      submit: "Submit Consultation Request",
+      successTitle: "Submission Successful",
+      successMsg: "Thank you! Our lead strategist will get in touch with you shortly. You can also send this request directly via WhatsApp for instant tracking.",
+      successCta: "Send via WhatsApp Now",
+      methodLabel: "Select Submission Delivery Method:",
+      methodWhatsapp: "WhatsApp Secure Sync (Recommended)",
+      methodInternal: "Private Website Submission",
+      successInternalTitle: "Consultation Registered",
+      successInternalMsg: "Success! Your consultation request has been stored securely in our system database. Our strategist will review your requirements and reach out via Call or Email within 4 hours.",
+      emailFallbackCta: "Send via Direct Email",
+      errors: {
+        name: "Please enter your name",
+        number: "Please enter a valid contact number"
+      }
     },
     footer: {
       rights: "© 2026 Cyber Enterprises. All rights reserved.",
@@ -138,6 +170,38 @@ export const translations = {
       message: "செய்தி",
       submit: "அனுப்புக",
     },
+    builds: {
+      title: "சிறந்த படைப்புகள்",
+      subtitle: "கவனத்தை ஈர்த்து வணிக வெற்றியாக மாற்றும் அதிவேக டிஜிட்டல் அமைப்புகள்.",
+      visit: "இணையதளத்தைப் பார்க்க",
+      categories: {
+        education: "சுகாதாரக் கல்வி",
+        solar: "சூரிய மின்சக்தி",
+        industrial: "அழகியல் & சருமப் பராமரிப்பு",
+        admission: "பள்ளி சேர்க்கை"
+      }
+    },
+    leadForm: {
+      title: "உடனடி ஆலோசனையைத் தொடங்குங்கள்",
+      subtitle: "இந்த எளிய படிவத்தை நிரப்பவும். எங்கள் தலைமை உத்தியாளர் 4 மணி நேரத்திற்குள் உங்களைத் தொடர்புகொள்கிறார்.",
+      name: "உங்கள் பெயர்",
+      number: "வாட்ஸ்அப் / தொடர்பு எண்",
+      detail: "கூடுதல் தகவல் அல்லது சுருக்கம் (விருப்பம்)",
+      submit: "கோரிக்கையை சமர்ப்பிக்கவும்",
+      successTitle: "வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது",
+      successMsg: "நன்றி! எங்கள் உத்தியாளர் விரைவில் உங்களைத் தொடர்புகொள்வார். விரைவான பதிலுக்கு இந்தத் தகவலை வாட்ஸ்அப்பிலும் நேரடியாக அனுப்பலாம்.",
+      successCta: "வாட்ஸ்அப்பில் உடனடியாக அனுப்பவும்",
+      methodLabel: "சமர்ப்பிக்கும் முறையைத் தேர்ந்தெடுக்கவும்:",
+      methodWhatsapp: "வாட்ஸ்அப் நேரடி ஒத்திசைவு (பரிந்துரைக்கப்படுகிறது)",
+      methodInternal: "வலைத்தள உட்சேர்க்கை (தனியுரிமை)",
+      successInternalTitle: "ஆலோசனை பதிவு செய்யப்பட்டது",
+      successInternalMsg: "வெற்றி! உங்களின் ஆலோசனை கோரிக்கை எங்கள் தளத்தில் பாதுகாப்பாக சேமிக்கப்பட்டது. எங்களின் தலைமை உத்தியாளர் 4 மணி நேரத்திற்குள் மின்னஞ்சல் அல்லது தொலைபேசி மூலம் உங்களைத் தொடர்புகொள்கவார்.",
+      emailFallbackCta: "மின்னஞ்சல் மூலம் நேரடியாக அனுப்ப",
+      errors: {
+        name: "தயவுசெய்து உங்கள் பெயரை உள்ளிடவும்",
+        number: "தயவுசெய்து சரியான தொடர்பு எண்ணை உள்ளிடவும்"
+      }
+    },
     footer: {
       rights: "© 2026 சைபர் என்டர்பிரைசஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
       location: "தென்னிந்தியா | உலகளாவிய இருப்பு",
@@ -210,6 +274,38 @@ export const translations = {
       email: "Correo electrónico",
       message: "Mensaje",
       submit: "Enviar Mensaje",
+    },
+    builds: {
+      title: "Sitios Desarrollados",
+      subtitle: "Sistemas digitales de alto rendimiento diseñados para convertir la atención en autoridad de mercado.",
+      visit: "Ver Sitio Web",
+      categories: {
+        education: "Educación de la Salud",
+        solar: "Sistemas de Energía Solar",
+        industrial: "Estética y Bienestar",
+        admission: "Admisiones Escolares"
+      }
+    },
+    leadForm: {
+      title: "Inicie su Consulta",
+      subtitle: "Complete este breve formulario y nuestro estratega principal se comunicará con usted en menos de 4 horas.",
+      name: "Su Nombre",
+      number: "WhatsApp / Número de Contacto",
+      detail: "Breve Descripción o Detalle (Opcional)",
+      submit: "Enviar Solicitud de Consulta",
+      successTitle: "Envío Exitoso",
+      successMsg: "¡Gracias! Nuestro estratega se pondrá en contacto pronto. También puede enviar estos detalles por WhatsApp para un procesamiento instantáneo.",
+      successCta: "Enviar por WhatsApp Ahora",
+      methodLabel: "Seleccione el método de envío:",
+      methodWhatsapp: "Sincronización por WhatsApp (Recomendado)",
+      methodInternal: "Envío Privado en el Sitio",
+      successInternalTitle: "Consulta Registrada",
+      successInternalMsg: "¡Éxito! Su solicitud de consulta ha sido guardada de forma segura en nuestra base de datos. Nuestro estratega principal revisará sus requisitos y se comunicará por llamada o correo en menos de 4 horas.",
+      emailFallbackCta: "Enviar por Correo Directo",
+      errors: {
+        name: "Por favor, ingrese su nombre",
+        number: "Por favor, ingrese un número de contacto válido"
+      }
     },
     footer: {
       rights: "© 2026 Cyber Enterprises. Todos los derechos reservados.",

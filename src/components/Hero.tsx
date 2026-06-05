@@ -18,9 +18,6 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="text-[10px] text-brand-charcoal/20 font-mono mb-2 select-all">
-              mpact-Site-Verification: e9c681ad-3a9f-48ae-aa32-246fc2968712
-            </div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest mb-6">
               {t.hero.technicalGap}
             </span>
@@ -36,7 +33,13 @@ export function Hero() {
                 ? "text-sm sm:text-base md:text-lg leading-relaxed" 
                 : "text-base sm:text-lg lg:text-xl leading-relaxed"
             }`}>
-              {t.hero.subtitle}
+              {language === 'en' ? (
+                <>
+                  We empower local enterprises with high-impact <strong className="font-semibold text-brand-charcoal">automation</strong>, <strong className="font-semibold text-brand-charcoal">multi-page websites</strong>, and <strong className="font-semibold text-brand-charcoal">strategic marketing</strong> built to scale your revenue.
+                </>
+              ) : (
+                t.hero.subtitle
+              )}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <Button 

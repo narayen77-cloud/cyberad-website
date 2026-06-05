@@ -1,205 +1,296 @@
-import { useLanguage } from "./LanguageContext";
-import { motion } from "motion/react";
-import { ExternalLink, Globe, Laptop, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import express from "express";
+import path from "path";
+import fs from "fs/promises";
+import { createServer as createViteServer } from "vite";
+import { GoogleGenAI } from "@google/genai";
+import dotenv from "dotenv";
 
-interface BuildItem {
-  id: string;
-  url: string;
-  categoryKey: string;
-  title: string;
-  description: {
-    en: string;
-    ta: string;
-    es: string;
-  };
-  metrics: {
-    en: string[];
-    ta: string[];
-    es: string[];
-  };
-  screenshotHint: string;
-}
+dotenv.config();
 
-const BUILDS: BuildItem[] = [
-  {
-    id: "stfathima",
-    url: "https://stfathima.netlify.app/",
-    categoryKey: "education",
-    title: "St. Fathima Allied Health Institute",
-    description: {
-      en: "A dedicated healthcare education platform providing structured information on DMLT and allied health courses, fees, and admission paths for aspiring medical professionals.",
-      ta: "மாணவர்களுக்கு DMLT மற்றும் அதன் சார்ந்த மருத்துவக் கல்வி விவரங்கள், கட்டண முறைகள் மற்றும் சேர்க்கை வழிகளை வழங்கும் பிரத்யேக சுகாதாரக் கல்வி இணையதளம்.",
-      es: "Una plataforma educativa dedicada al área de la salud que proporciona información estructurada sobre cursos de DMLT, tarifas y vías de admisión para futuros profesionales médicos."
-    },
-    metrics: {
-      en: ["Allied Health Programs", "Structured Fees Directory", "Dynamic Admission Path"],
-      ta: ["துணை மருத்துவப் படிப்புகள்", "கட்டண விவரங்கள்", "எளிதான சேர்க்கை வழி"],
-      es: ["Programas de Salud", "Estructura de Tarifas", "Ruta de Admisión Directa"]
-    },
-    screenshotHint: "Healthcare Education Platform"
-  },
-  {
-    id: "mihirasolar",
-    url: "https://mihirasolar.com/",
-    categoryKey: "solar",
-    title: "Mihira Solar",
-    description: {
-      en: "A professional clean-energy business website showcasing sustainable solar installation services, product structures, and cost-effective renewable energy solutions for residential and commercial clients.",
-      ta: "வீடுகள் மற்றும் வணிக நிறுவனங்களுக்குத் தேவையான சூரிய மின்சக்தி அமைப்புகள், தயாரிப்பு விவரங்கள் மற்றும் செலவு குறைந்த கட்டமைப்பு முறைகளை விளக்கும் இணையதளம்.",
-      es: "Un sitio web profesional de energía limpia que presenta servicios de instalación solar sostenible, estructuras de productos y soluciones rentables para clientes residenciales y comerciales."
-    },
-    metrics: {
-      en: ["Sustainable Solar Setup", "Residential & Commercial", "Cost-effective Energy Solutions"],
-      ta: ["சூரிய ஆற்றல் அமைப்புகள்", "வீடு & வணிக பயன்பாடு", "செலவு குறைந்த தீர்வ بیاடுகள்"],
-      es: ["Instalación Solar Sostenible", "Residencial y Comercial", "Energía Rentable"]
-    },
-    screenshotHint: "Clean-Energy Business Website"
-  },
-  {
-    id: "veenussindia",
-    url: "https://veenussindia.com/",
-    categoryKey: "industrial",
-    title: "Veenuss Aesthetics",
-    description: {
-      en: "A premium business platform designed for Veenuss Aesthetics, highlighting advanced beauty treatments, clinical skincare services, and specialized wellness solutions.",
-      ta: "மேம்பட்ட அழகு சிகிச்சைகள், மருத்துவ ரீதியான சருமப் பராமரிப்பு சேவைகள் மற்றும் பிரத்யேக ஆரோக்கிய தீர்வுகளை முன்னிலைப்படுத்தும் வீனஸ் அழகியல் தளம்.",
-      es: "Una plataforma de negocios premium diseñada para Veenuss Aesthetics, destacando tratamientos de belleza de vanguardia, servicios clínicos de cuidado de la piel y soluciones de bienestar especializadas."
-    },
-    metrics: {
-      en: ["Advanced Beauty Treatments", "Clinical Skincare Solutions", "Specialized Wellness Plans"],
-      ta: ["மேம்பட்ட அழகு சிகிச்சைகள்", "மருத்துவ சருமப் பராமரிப்பு", "சிறப்பு ஆரோக்கிய முறைகள்"],
-      es: ["Tratamientos de Belleza", "Cuidado Clínico de Piel", "Soluciones de Bienestar"]
-    },
-    screenshotHint: "Aesthetics & Wellness Platform"
-  },
-  {
-    id: "aksharavidya",
-    url: "https://aksharavidyaashram-admission.netlify.app/",
-    categoryKey: "admission",
-    title: "Akshara Vidyaashram Admissions",
-    description: {
-      en: "A streamlined institutional portal built specifically to manage school admissions, showcase campus features, and guide parents through the enrollment process.",
-      ta: "பள்ளி மாணவர் சேர்க்கையை நெறிப்படுத்தவும், வளாகச் சிறப்புகளை விளக்கிப் பெற்றோர்களுக்கு எளிய சேர்க்கை வழிகாட்டியாகவும் உருவாக்கப்பட்ட தளம்.",
-      es: "Un portal institucional optimizado diseñado específicamente para gestionar las admisiones escolares, exhibir las instalaciones del campus y guiar a los padres en el proceso de inscripción."
-    },
-    metrics: {
-      en: ["Streamlined School Enrollment", "Campus Features Showcase", "Step-by-Step Parent Guidance"],
-      ta: ["எளிதான சேர்க்கை நுழைவாயில்", "வளாக வசதிகள் காட்சி", "பெற்றோர்களுக்கான வழிகாட்டி"],
-      es: ["Admisión Escolar Simplificada", "Instalaciones del Campus", "Guía Paso a Paso para Padres"]
-    },
-    screenshotHint: "Institutional Admission Portal"
+/**
+ * Automatically parses a Google Form URL to detect the submission POST URL
+ * and maps Name, Phone, and Brief question entry IDs dynamically.
+ */
+async function getGoogleFormConfig(sourceUrl: string) {
+  // Determine Form ID or exact action formResponse URL
+  let formId = "1YRKRanmyPgfzHbLhn6bh6PZB-8cTffLWv9jgqdIyWLA"; // Default fallback form ID
+  
+  const match = sourceUrl.match(/\/forms\/d\/(e\/)?([a-zA-Z0-9-_]+)/);
+  if (match) {
+    formId = match[2];
   }
-];
 
-export function SampleBuilds() {
-  const { language: rawLanguage, t } = useLanguage();
-  const lang = (rawLanguage as string) === "es" ? "es" : (rawLanguage as string) === "ta" ? "ta" : "en";
+  // Construct target URLs
+  const viewUrl = `https://docs.google.com/forms/d/${formId}/viewform`;
+  const postUrl = `https://docs.google.com/forms/d/${formId}/formResponse`;
 
-  const tBuilds = t.builds || {
-    title: "Featured Realizations",
-    subtitle: "High-performance digital products engineered to solve complex delivery and scale challenges.",
-    visit: "Launch Live Site",
-    categories: {
-      education: "Education Portal",
-      solar: "Solar & Renewable Systems",
-      industrial: "Industrial Manufacturing Showcase",
-      admission: "Interactive Admission Systems"
-    }
-  };
+  // Default Entry ID Fallbacks
+  let entryName = process.env.GOOGLE_FORM_ENTRY_NAME || "entry.1000001";
+  let entryPhone = process.env.GOOGLE_FORM_ENTRY_PHONE || "entry.1000002";
+  let entryBrief = process.env.GOOGLE_FORM_ENTRY_BRIEF || "entry.1000003";
 
-  return (
-    <section id="sample-builds" className="py-24 px-6 bg-brand-offwhite border-t border-brand-charcoal/5 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-          <div className="space-y-4 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-[0.25em] rounded-full">
-              <Laptop className="w-3 h-3" />
-              <span>{lang === "ta" ? "நேரடி தயாரிப்புகள்" : lang === "es" ? "Portafolio Real" : "LIVE PRODUCTIONS"}</span>
-            </div>
-            <h2 className="text-4xl md:text-6xl serif italic tracking-tight text-brand-charcoal">
-              {tBuilds.title}
-            </h2>
-            <p className="text-lg text-brand-charcoal/60 font-light leading-relaxed">
-              {tBuilds.subtitle}
-            </p>
-          </div>
+  try {
+    console.log(`[Google Form Auto-Detector] Fetching form view to extract schemas: ${viewUrl}`);
+    const res = await fetch(viewUrl, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      }
+    });
+
+    if (res.ok) {
+      const html = await res.text();
+      // Extract FB_PUBLIC_LOAD_DATA_
+      const loadDataMatch = html.match(/FB_PUBLIC_LOAD_DATA_\s*=\s*(.*?);\s*<\/script>/);
+      if (loadDataMatch) {
+        let jsonStr = loadDataMatch[1].trim();
+        if (jsonStr.endsWith(";")) {
+          jsonStr = jsonStr.slice(0, -1);
+        }
+        const loadData = JSON.parse(jsonStr);
+        if (loadData && loadData[1] && loadData[1][1]) {
+          const questions = loadData[1][1];
+          console.log(`[Google Form Auto-Detector] Successfully parsed ${questions.length} question fields dynamically.`);
           
-          <div className="hidden lg:block">
-            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-charcoal/40 font-mono">
-              {lang === "ta" ? "நிலை: 100% நேரடிச் செயல்பாடு" : lang === "es" ? "Estado: 100% Producción" : "STATUS: 100% DEPLOYED & ACTIVE"}
-            </span>
-          </div>
-        </div>
+          let nameFound = false;
+          let phoneFound = false;
+          let briefFound = false;
 
-        {/* Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {BUILDS.map((build, index) => {
-            const catLabel = tBuilds.categories?.[build.categoryKey as keyof typeof tBuilds.categories] || build.categoryKey;
-            
-            return (
-              <motion.div
-                key={build.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-white border border-brand-charcoal/5 rounded-[2rem] p-6 lg:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-500 overflow-hidden"
-              >
-                {/* Visual Glass Highlight */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/5 rounded-full blur-2xl group-hover:bg-brand-gold/10 transition-colors" />
+          for (const q of questions) {
+            const label = (q[1] || "").toLowerCase();
+            const entryId = q[4]?.[0]?.[0];
+            if (entryId) {
+              const fullEntry = `entry.${entryId}`;
+              // Map label containing Name, Phone/WhatsApp, Brief/Message
+              if (!nameFound && (label.includes("name") || label.includes("பெயர்") || label.includes("nombre"))) {
+                entryName = fullEntry;
+                nameFound = true;
+                console.log(`- Automatically mapped Name to field: ${fullEntry} ("${q[1]}")`);
+              } else if (!phoneFound && (label.includes("phone") || label.includes("whatsapp") || label.includes("number") || label.includes("contact") || label.includes("தொடர்பு") || label.includes("cel") || label.includes("tel") || label.includes("கைபேசி"))) {
+                entryPhone = fullEntry;
+                phoneFound = true;
+                console.log(`- Automatically mapped Phone to field: ${fullEntry} ("${q[1]}")`);
+              } else if (!briefFound && (label.includes("brief") || label.includes("detail") || label.includes("consultation") || label.includes("விவரம்") || label.includes("message") || label.includes("comment") || label.includes("mensaj"))) {
+                entryBrief = fullEntry;
+                briefFound = true;
+                console.log(`- Automatically mapped Brief to field: ${fullEntry} ("${q[1]}")`);
+              }
+            }
+          }
+        }
+      }
+    } else {
+      console.warn(`[Google Form Auto-Detector] Could not fetch form page (status ${res.status}). Using fallback entry schemas.`);
+    }
+  } catch (error) {
+    console.error("[Google Form Auto-Detector] Unexpected error during dynamic auto-mapping:", error);
+  }
 
-                <div>
-                  {/* Category Card Header */}
-                  <div className="flex items-center justify-between gap-2 mb-6">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-brand-gold bg-brand-gold/5 px-3 py-1 rounded-full border border-brand-gold/10">
-                      {catLabel}
-                    </span>
-                    <span className="text-[10px] font-mono text-brand-charcoal/40 uppercase tracking-wider flex items-center gap-1">
-                      <Globe className="w-3.5 h-3.5" />
-                      {build.screenshotHint}
-                    </span>
-                  </div>
-
-                  {/* Title & Description */}
-                  <h3 className="text-2xl font-serif italic text-brand-charcoal group-hover:text-brand-gold transition-colors duration-300 mb-3 flex items-center gap-1.5">
-                    {build.title}
-                  </h3>
-                  
-                  <p className="text-sm font-light text-brand-charcoal/70 leading-relaxed mb-6">
-                    {build.description[lang] || build.description.en}
-                  </p>
-
-                  {/* Operational Metrics (Checks) */}
-                  <div className="space-y-2 mb-8 pt-4 border-t border-brand-charcoal/5">
-                    {(build.metrics[lang] || build.metrics.en).map((mObj, mIdx) => (
-                      <div key={mIdx} className="flex items-center gap-2.5 text-xs font-light text-brand-charcoal/80">
-                        <CheckCircle2 className="w-4 h-4 text-brand-gold shrink-0" />
-                        <span>{mObj}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Direct Action Link */}
-                <div className="pt-4 mt-auto">
-                  <a
-                    href={build.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-6 py-3 bg-brand-charcoal hover:bg-brand-gold text-white hover:text-brand-charcoal rounded-full text-[11px] font-bold uppercase tracking-widest transition-all duration-300 shadow-sm"
-                  >
-                    <span>{tBuilds.visit || "Launch Live Site"}</span>
-                    <ArrowUpRight className="w-4 h-4" />
-                  </a>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-      </div>
-    </section>
-  );
+  return { postUrl, entryName, entryPhone, entryBrief };
 }
+
+async function startServer() {
+  const app = express();
+  const PORT = 3000;
+
+  app.use(express.json());
+
+  // Lazy-loaded Gemini API client to prevent startup crash if GEMINI_API_KEY is not defined
+  let aiClient: GoogleGenAI | null = null;
+  function getGeminiClient() {
+    if (!aiClient) {
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) {
+        throw new Error("AI service configuration is missing. Please set GEMINI_API_KEY in Secrets.");
+      }
+      aiClient = new GoogleGenAI({
+        apiKey,
+        httpOptions: {
+          headers: {
+            'User-Agent': 'aistudio-build',
+          }
+        }
+      });
+    }
+    return aiClient;
+  }
+
+  // API Routes
+  app.post("/api/submit-lead", async (req, res) => {
+    console.log("Lead form submission received:", req.body);
+    try {
+      const { name, phone, brief, lang } = req.body;
+      if (!name || !phone) {
+        return res.status(400).json({ error: "Name and contact number are required" });
+      }
+
+      const timestamp = new Date().toISOString();
+      const newLead = { name, phone, brief, lang, timestamp };
+
+      // 1. Durably write/append to local leads_db.json file
+      const dbPath = path.join(process.cwd(), "leads_db.json");
+      let leads: any[] = [];
+      try {
+        const fileContent = await fs.readFile(dbPath, "utf-8");
+        leads = JSON.parse(fileContent);
+      } catch (err) {
+        // If file doesn't exist, start empty
+      }
+      leads.push(newLead);
+      await fs.writeFile(dbPath, JSON.stringify(leads, null, 2), "utf-8");
+      console.log("Lead securely saved locally to leads_db.json");
+
+      // 2. Optional: Dispatch to Webhook URL if set in environment
+      if (process.env.LEAD_WEBHOOK_URL) {
+        try {
+          console.log("Dispatching lead to LEAD_WEBHOOK_URL:", process.env.LEAD_WEBHOOK_URL);
+          await fetch(process.env.LEAD_WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newLead)
+          });
+          console.log("Lead webhook dispatch successful!");
+        } catch (webhookErr: any) {
+          console.error("Failed to dispatch to webhook:", webhookErr);
+        }
+      }
+
+      // 3. Dispatch to Google Form (with Dynamic Auto-Detection & Fallbacks)
+      const formSourceUrl = process.env.GOOGLE_FORM_POST_URL || "https://docs.google.com/forms/d/1YRKRanmyPgfzHbLhn6bh6PZB-8cTffLWv9jgqdIyWLA/edit";
+      if (formSourceUrl) {
+        try {
+          console.log(`[Google Form Pipeline] Resolving configuration for form URL: ${formSourceUrl}`);
+          const config = await getGoogleFormConfig(formSourceUrl);
+          
+          const params = new URLSearchParams();
+          params.append(config.entryName, name);
+          params.append(config.entryPhone, phone);
+          params.append(config.entryBrief, brief || "");
+
+          console.log(`[Google Form Pipeline] Dispatching POST submission to action URL: ${config.postUrl}`);
+          console.log(`[Google Form Pipeline] Payload mapped parameters: Name: ${config.entryName}, Phone: ${config.entryPhone}, Brief: ${config.entryBrief}`);
+
+          const formResponse = await fetch(config.postUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: params.toString()
+          });
+
+          if (formResponse.ok) {
+            console.log("[Google Form Pipeline] Google Form submission completed successfully!");
+          } else {
+            console.warn(`[Google Form Pipeline] Form submission action returned status code: ${formResponse.status}`);
+          }
+        } catch (formErr: any) {
+          console.error("[Google Form Pipeline] Failed to submit to Google Form:", formErr);
+        }
+      }
+
+      res.json({ success: true, message: "Lead saved successfully on site" });
+    } catch (error: any) {
+      console.error("Internal Lead Submission Error:", error);
+      res.status(500).json({ error: "Failed to submit lead", details: error.message });
+    }
+  });
+
+  app.get("/api/leads", async (req, res) => {
+    try {
+      const clientPasscode = req.headers["x-admin-passcode"];
+      const actualPasscode = process.env.ADMIN_PASSCODE || "admin123";
+      if (clientPasscode !== actualPasscode) {
+        return res.status(401).json({ error: "Unauthorized: Invalid passcode" });
+      }
+
+      const dbPath = path.join(process.cwd(), "leads_db.json");
+      let leads: any[] = [];
+      try {
+        const fileContent = await fs.readFile(dbPath, "utf-8");
+        leads = JSON.parse(fileContent);
+      } catch (err) {
+        // If file doesn't exist, we start empty
+      }
+      res.json({ success: true, leads });
+    } catch (error: any) {
+      console.error("Failed to read leads:", error);
+      res.status(500).json({ error: "Failed to load leads", details: error.message });
+    }
+  });
+
+  app.post("/api/leads/clear", async (req, res) => {
+    try {
+      const clientPasscode = req.headers["x-admin-passcode"];
+      const actualPasscode = process.env.ADMIN_PASSCODE || "admin123";
+      if (clientPasscode !== actualPasscode) {
+        return res.status(401).json({ error: "Unauthorized: Invalid passcode" });
+      }
+
+      const dbPath = path.join(process.cwd(), "leads_db.json");
+      await fs.writeFile(dbPath, JSON.stringify([], null, 2), "utf-8");
+      res.json({ success: true, message: "Lead database cleared successfully" });
+    } catch (error: any) {
+      console.error("Failed to clear leads:", error);
+      res.status(500).json({ error: "Failed to clear lead database" });
+    }
+  });
+
+  app.post("/api/strategy", async (req, res) => {
+    console.log("Strategy request received:", req.body);
+    try {
+      const { industry, language } = req.body;
+      
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) {
+        console.error("GEMINI_API_KEY is not defined in environment variables");
+        return res.status(500).json({ error: "AI service configuration is missing. Please check Secrets." });
+      }
+
+      const prompt = `Act as a premium digital marketing expert for the ${industry} sector in India. 
+      Provide a concise, 3-point digital marketing strategy to help a business owner who is not very tech-savvy. 
+      The tone should be professional and encouraging. 
+      Provide the response in ${language === 'ta' ? 'Tamil' : 'English'}.
+      Focus on Meta Ads, Google Ads, and Lead retention through AI.`;
+
+      console.log("Calling Gemini API with prompt length:", prompt.length);
+
+      const ai = getGeminiClient();
+      const response = await ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents: prompt,
+      });
+
+      if (!response.text) {
+        console.error("Gemini returned empty response");
+        return res.status(500).json({ error: "AI failed to generate a response. Please try again." });
+      }
+
+      console.log("Strategy successfully generated");
+      res.json({ strategy: response.text });
+    } catch (error: any) {
+      console.error("Gemini Error Details:", error);
+      res.status(500).json({ 
+        error: "Failed to generate strategy", 
+        details: error.message || "Unknown error"
+      });
+    }
+  });
+
+  // Vite middleware for development
+  if (process.env.NODE_ENV !== "production") {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(process.cwd(), "dist");
+    app.use(express.static(distPath));
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(distPath, "index.html"));
+    });
+  }
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+startServer();

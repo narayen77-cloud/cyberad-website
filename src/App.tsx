@@ -13,6 +13,7 @@ import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { Quote } from "./components/Quote";
 import { Insights } from "./components/Insights";
+import { SampleBuilds } from "./components/SampleBuilds";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
@@ -37,6 +38,7 @@ export default function App() {
           <Services />
           <Industries />
           <Quote />
+          <SampleBuilds />
           <Insights />
           <Contact />
         </main>
