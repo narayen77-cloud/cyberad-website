@@ -77,7 +77,7 @@ export function PrivacyPolicy({ onClose }: { onClose: () => void }) {
             <h2 className="text-xl serif italic mb-4 text-brand-charcoal">6. Contact Us</h2>
             <p className="font-medium">Cyber Enterprises</p>
             <p>184/12 E Hospital Road, Cuddalore, Tamil Nadu</p>
-            <p>Email: cyberwaba@gmail.com</p>
+            <p>Email: <a href="mailto:support@cyberad.in" className="hover:underline text-brand-gold">support@cyberad.in</a></p>
             <p>WhatsApp: 9092979797</p>
           </footer>
         </div>

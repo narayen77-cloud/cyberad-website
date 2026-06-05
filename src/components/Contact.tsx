@@ -27,7 +27,7 @@ export function Contact() {
           </a>
           
           <div className="flex flex-col items-center gap-2">
-            <p className="font-serif text-lg italic text-brand-charcoal/80">cyberwaba@gmail.com</p>
+            <a href="mailto:support@cyberad.in" className="font-serif text-lg italic text-brand-charcoal/80 hover:text-brand-gold transition-colors">support@cyberad.in</a>
             <p className="text-brand-charcoal/40 uppercase tracking-[0.3em] text-[10px] font-bold">
               {t.footer.location}
             </p>

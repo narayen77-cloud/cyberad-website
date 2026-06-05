@@ -4,11 +4,12 @@ export const translations = {
       services: "Services",
       about: "About",
       industries: "Industries",
+      insights: "Insights",
       contact: "Contact",
     },
     hero: {
       title: "Bridging the Gap Between Legacy and Large Scale.",
-      subtitle: "Premium digital marketing for visionary business owners. We combine traditional values with cutting-edge AI lead retention.",
+      subtitle: "Helping traditional businesses grow using modern digital systems, automation, and strategic marketing.",
       cta: "Get Started",
       technicalGap: "The Gap We Bridge",
     },
@@ -37,7 +38,7 @@ export const translations = {
       },
       personal: {
         title: "Personal Branding",
-        description: "For influencers and professionals who want to own their niche and scale their name."
+        description: "For founders, consultants, educators, and professionals building authority online."
       },
       trial: {
         title: "14-Day Trial",
@@ -67,7 +68,8 @@ export const translations = {
     footer: {
       rights: "© 2026 Cyber Enterprises. All rights reserved.",
       location: "Southern India | Global Presence",
-      privacy: "Privacy Policy"
+      privacy: "Privacy Policy",
+      refund: "Refund Policy"
     }
   },
   ta: {
@@ -75,11 +77,12 @@ export const translations = {
       services: "சேவைகள்",
       about: "எங்களை பற்றி",
       industries: "துறைகள்",
+      insights: "நுண்ணறிவு",
       contact: "தொடர்பு",
     },
     hero: {
-      title: "பாரம்பரியத்திற்கும் நவீன வளர்ச்சிக்-குமான இடைவெளியைக் குறைப்போம்.",
-      subtitle: "தொலைநோக்கு பார்வை கொண்ட வணிக உரிமையாளர்களுக்கு பிரீமியம் டிஜிட்டல் மார்க்கெட்டிங். நாங்கள் பாரம்பரிய மதிப்புகளை அதிநவீன AI உடன் இணைக்கிறோம்.",
+      title: "பாரம்பரியத்திற்கும் நவீன வளர்ச்சிக்குமான இடைவெளியைக் குறைப்போம்.",
+      subtitle: "பாரம்பரிய வணிகங்கள் நவீன டிஜிட்டல் அமைப்புகள், ஆட்டோமேஷன் மற்றும் உத்திசார் மார்க்கெட்டிங் மூலம் வளர உதவுகிறோம்.",
       cta: "தொடங்குங்கள்",
       technicalGap: "தொழில்நுட்ப இடைவெளி",
     },
@@ -108,7 +111,7 @@ export const translations = {
       },
       personal: {
         title: "தனிநபர் பிராண்டிங்",
-        description: "தங்கள் துறையில் முத்திரை பதிக்க விரும்பும் செல்வாக்கு செலுத்துபவர்கள் மற்றும் நிபுணர்களுக்கு."
+        description: "ஆன்லைனில் தங்களது ஆளுமையை வளர்க்கும் நிறுவனர்கள், ஆலோசகர்கள், கல்வியாளர்கள் மற்றும் நிபுணர்களுக்கு."
       },
       trial: {
         title: "14-நாள் சோதனை",
@@ -138,9 +141,83 @@ export const translations = {
     footer: {
       rights: "© 2026 சைபர் என்டர்பிரைசஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
       location: "தென்னிந்தியா | உலகளாவிய இருப்பு",
-      privacy: "தனியுரிமைக் கொள்கை"
+      privacy: "தனியுரிமைக் கொள்கை",
+      refund: "திரும்பப் பெறும் கொள்கை"
+    }
+  },
+  es: {
+    nav: {
+      services: "Servicios",
+      about: "Nosotros",
+      industries: "Industrias",
+      insights: "Artículos",
+      contact: "Contacto",
+    },
+    hero: {
+      title: "Cerrando la brecha entre el legado y la gran escala.",
+      subtitle: "Ayudamos a las empresas tradicionales a crecer utilizando sistemas digitales modernos, automatización y marketing estratégico.",
+      cta: "Comenzar",
+      technicalGap: "La Brecha que Superamos",
+    },
+    services: {
+      title: "Paquetes de Estrategia",
+      cta: "Consultar en WhatsApp",
+      socialMedia: {
+        title: "Presencia en Redes Sociales",
+        description: "Para marcas enfocadas en visibilidad, autoridad y un branding constante en redes sociales."
+      },
+      marketing: {
+        title: "Crecimiento de Marketing",
+        description: "Generación pura de leads. Campañas de alto impacto diseñadas para llenar su canal de ventas."
+      },
+      ecommerce: {
+        title: "Ventas y Comercio Electrónico",
+        description: "Seguimiento directo de ventas, optimización de pagos y conversión de leads para marcas minoristas."
+      },
+      automation: {
+        title: "Automatización de Mensajería",
+        description: "Sistemas de WhatsApp, Messenger y Telegram que gestionan clientes potenciales mientras duerme."
+      },
+      event: {
+        title: "Maestría en Eventos",
+        description: "Embudos de principio a fin para lanzamientos, espectáculos y exposiciones. Convierta multitudes en clientes."
+      },
+      personal: {
+        title: "Marca Personal",
+        description: "Para fundadores, consultores, educadores y profesionales que construyen autoridad en línea."
+      },
+      trial: {
+        title: "Prueba de 14 días",
+        description: "Una muestra de bajo riesgo de nuestros resultados. Vea el impacto de nuestra estrategia en dos semanas."
+      }
+    },
+    industries: {
+      title: "Sectores en los que nos especializamos",
+      education: "Instituciones Educativas Líderes",
+      solar: "Energía Solar y Renovable",
+      premium: "Venta Minorista y Servicios Premium",
+      smallBusiness: "Pequeñas Empresas y Negocios Locales",
+    },
+    aiTool: {
+      title: "Generador de Estrategia Instantáneo",
+      prompt: "Seleccione su industria para ver cómo la IA puede transformar su alcance.",
+      button: "Generar Estrategia",
+      loading: "Diseñando su estrategia...",
+    },
+    contact: {
+      title: "Escalemos su Negocio",
+      name: "Nombre",
+      email: "Correo electrónico",
+      message: "Mensaje",
+      submit: "Enviar Mensaje",
+    },
+    footer: {
+      rights: "© 2026 Cyber Enterprises. Todos los derechos reservados.",
+      location: "Sur de India | Presencia Global",
+      privacy: "Política de Privacidad",
+      refund: "Política de Reembolso"
     }
   }
 };
 
-export type Language = 'en' | 'ta';
+export type Language = 'en' | 'ta' | 'es';

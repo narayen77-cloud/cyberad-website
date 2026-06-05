@@ -4,30 +4,41 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
-    <section className="relative pt-40 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
+    <section className="relative pt-32 pb-16 md:pt-40 md:pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
       <div className="absolute top-20 right-[-10%] w-[50%] h-[50%] bg-brand-gold/5 blur-[120px] rounded-full" />
       <div className="absolute bottom-20 left-[-10%] w-[40%] h-[40%] bg-brand-charcoal/5 blur-[100px] rounded-full" />
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div className="relative z-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center w-full">
+        <div className="relative z-10 max-w-xl mx-auto md:mx-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
+            <div className="text-[10px] text-brand-charcoal/20 font-mono mb-2 select-all">
+              mpact-Site-Verification: e9c681ad-3a9f-48ae-aa32-246fc2968712
+            </div>
             <span className="inline-block px-4 py-1.5 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest mb-6">
               {t.hero.technicalGap}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] leading-tight tracking-tighter mb-8 serif font-normal">
+            <h1 className={`serif font-normal break-words sm:break-normal mb-6 md:mb-8 ${
+              language === 'ta'
+                ? "text-[21px] xs:text-2xl sm:text-3xl md:text-[38px] lg:text-[44px] leading-[1.35] md:leading-[1.25] tracking-normal"
+                : "text-3xl sm:text-4xl md:text-5xl lg:text-[54px] leading-tight md:leading-[1.15] tracking-tighter"
+            }`}>
               {t.hero.title}
             </h1>
-            <p className="text-xl text-brand-charcoal/60 max-w-lg mb-10 leading-relaxed font-light">
+            <p className={`text-brand-charcoal/60 max-w-lg mb-8 md:mb-10 font-light ${
+              language === 'ta' 
+                ? "text-sm sm:text-base md:text-lg leading-relaxed" 
+                : "text-base sm:text-lg lg:text-xl leading-relaxed"
+            }`}>
               {t.hero.subtitle}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <Button 
                 size="lg" 
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -51,7 +62,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl"
+          className="relative aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/3] w-full max-w-xl mx-auto md:max-w-none rounded-3xl overflow-hidden shadow-2xl mt-4 md:mt-0"
         >
           <img 
             src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" 
@@ -59,8 +70,8 @@ export function Hero() {
             className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 to-transparent" />
-          <div className="absolute bottom-8 left-8 right-8 p-6 backdrop-blur-md bg-brand-offwhite/10 border border-brand-offwhite/20 rounded-2xl">
-            <p className="text-brand-offwhite font-serif italic text-lg leading-snug">
+          <div className="absolute bottom-6 left-6 right-6 p-5 backdrop-blur-md bg-brand-offwhite/10 border border-brand-offwhite/20 rounded-2xl">
+            <p className="text-brand-offwhite font-serif italic text-sm sm:text-base md:text-lg leading-snug">
               "Technology shouldn't be a barrier. It should be your greatest leverage."
             </p>
           </div>

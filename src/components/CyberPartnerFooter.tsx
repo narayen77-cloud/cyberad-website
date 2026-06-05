@@ -35,7 +35,7 @@ export function CyberPartnerFooter() {
   return (
     <div 
       id="cyber-partner-section" 
-      className="w-full max-w-4xl mx-auto mt-8 p-6 md:p-8 bg-neutral-50/75 border border-brand-charcoal/5 rounded-3xl"
+      className="w-full max-w-4xl mx-auto mt-8 p-6 md:p-8 bg-neutral-50/75 border border-brand-charcoal/5 rounded-3xl animate-fadeIn"
     >
       <div className="flex flex-col items-center text-center space-y-4">
         {/* Humble, loving badge */}
@@ -56,55 +56,13 @@ export function CyberPartnerFooter() {
         </div>
 
         {/* Respectful message */}
-        <p className="max-w-xl text-xs md:text-sm text-brand-charcoal/60 leading-relaxed font-sans font-normal">
+        <p className="max-w-2xl text-xs md:text-sm text-brand-charcoal/70 leading-relaxed font-sans font-normal tracking-wide px-4">
           {isTamil ? (
-            "நாங்கள் உங்களை மனதார வரவேற்கிறோம். எங்கள் பிராண்டான சைபர் என்டர்பிரைசஸ் மூலம் இந்த இணையதளம் நேர்த்தியாக வடிவமைக்கப்பட்டுள்ளது. பார்வையாளர்கள் எளிதாகவும் வேகமாகவும் தேவையானதை பெற வழிவகுக்கிறது."
+            "சைபர் என்டர்பிரைசஸ் ஒரு முதன்மையான, குடும்பத்திற்குச் சொந்தமான டிஜிட்டல் மார்க்கெட்டிங் மற்றும் தொழில்நுட்ப ஆலோசனை நிறுவனமாக செயல்படுகிறது. நாங்கள் உலகெங்கிலும் உள்ள பிராண்டுகளுக்கு நம்பிக்கையையும், பாரம்பரிய மதிப்புகளையும் மற்றும் அதிநவீன டிஜிட்டல் வளர்ச்சி தீர்வுகளையும் இணைக்கிறோம்."
           ) : (
-            "We are deeply grateful for your presence. This website is respectfully designed and digitally supported with care by Cyber Enterprises to bridge trust, traditional values, and digital growth."
+            "Cyber Enterprises operates as a premier, family-owned digital marketing and technology consultancy. We bridge trust, traditional values, and cutting-edge digital growth solutions for brands across the world."
           )}
         </p>
-
-        {/* CTA Buttons in a single line/flex block with pristine spacing */}
-        <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto pt-2">
-          {/* 👍 Appreciated This Website */}
-          <motion.a
-            id="gtm-appreciate-btn"
-            href={appreciationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => handleTracking("appreciate")}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-5 py-3 bg-white border border-brand-charcoal/10 rounded-full text-xs font-bold text-brand-charcoal hover:shadow-md hover:border-brand-gold/30 transition-all cursor-pointer"
-          >
-            <ThumbsUp className="w-4 h-4 text-brand-gold" />
-            <span>
-              {isTamil ? "👍 இணையதளம் பிடித்திருக்கிறது" : "👍 Appreciated This Website"}
-            </span>
-          </motion.a>
-
-          {/* 📩 Interested in Something Similar */}
-          <motion.a
-            id="gtm-similar-btn"
-            href={inquiryUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => handleTracking("similar")}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 py-3 bg-brand-charcoal text-white rounded-full text-xs font-bold hover:bg-neutral-800 hover:shadow-lg transition-all cursor-pointer"
-          >
-            <Send className="w-3.5 h-3.5 text-brand-gold" />
-            <span>
-              {isTamil ? "📩 இதே போன்ற சேவை தேவை" : "📩 Interested in Something Similar"}
-            </span>
-          </motion.a>
-        </div>
-        
-        {/* Discrete sub-text */}
-        <div className="text-[9px] text-brand-charcoal/30 uppercase tracking-widest pt-2">
-          {isTamil ? "ஒரே கிளிக் தொடர்பு • தட்டச்சு செய்ய வேண்டியதில்லை" : "One-Click Instant Connect • No Typing Required"}
-        </div>
       </div>
     </div>
   );
