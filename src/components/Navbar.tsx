@@ -13,18 +13,18 @@ export function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center"
         >
-          <div className="relative w-36 sm:w-44 h-11">
+          <div className="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center">
             <img 
               src="/logo.png" 
               alt="CYBERAD.IN Logo" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded-full bg-white transition-transform hover:scale-105 duration-300"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = 'none';
                 (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
               }}
             />
-            <div className="hidden text-lg font-bold uppercase tracking-wider text-brand-blue flex items-center h-full">
-              Cyber Enterprises
+            <div className="hidden text-base sm:text-lg font-bold uppercase tracking-wider text-brand-charcoal flex items-center h-full ml-3 font-serif">
+              Cyber <span className="text-brand-gold ml-1">Enterprises</span>
             </div>
           </div>
         </motion.div>
@@ -35,9 +35,6 @@ export function Navbar() {
           </a>
           <a href="#services" className="text-sm font-medium hover:text-brand-gold transition-colors">
             {language === "ta" ? "சேவைகள்" : language === "es" ? "Servicios" : "Services"}
-          </a>
-          <a href="#campaign" className="text-sm font-medium hover:text-brand-gold transition-colors">
-            {language === "ta" ? "விளம்பரம்" : language === "es" ? "Campaña" : "Start Campaign"}
           </a>
           <a href="#sample-builds" className="text-sm font-medium hover:text-brand-gold transition-colors">
             {language === "ta" ? "படைப்புகள்" : language === "es" ? "Portafolio" : "Portfolio"}
@@ -86,7 +83,7 @@ export function Navbar() {
             </button>
           </div>
           <a
-            href="#campaign"
+            href="#contact"
             className="hidden sm:inline-block rounded-full px-4 sm:px-6 py-2 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-brand-charcoal text-xs font-bold uppercase tracking-wider transition-all"
           >
             {language === "ta" ? "தொடங்கு" : language === "es" ? "Comenzar" : "Start now"}

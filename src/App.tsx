@@ -7,13 +7,11 @@ import { LanguageProvider } from "./components/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { WhatDoYouNeed } from "./components/WhatDoYouNeed";
-import { CampaignConfigurator } from "./components/CampaignConfigurator";
 import { Services } from "./components/Services";
 import { HowItWorks } from "./components/HowItWorks";
 import { SampleBuilds } from "./components/SampleBuilds";
 import { JargonTranslator } from "./components/JargonTranslator";
 import { WhyWorkWithMe } from "./components/WhyWorkWithMe";
-import { TrialOffer } from "./components/TrialOffer";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
@@ -41,9 +39,6 @@ export default function App() {
           {/* Section 1 — What Do You Need? (8 large outcome-driven options) */}
           <WhatDoYouNeed />
           
-          {/* Section 2 — Start Your Advertising Campaign (Interactive Configurator) */}
-          <CampaignConfigurator />
-
           {/* Section: Dynamic Service Offerings */}
           <Services />
 
@@ -58,9 +53,6 @@ export default function App() {
 
           {/* Section 5 — Why Work With Me? (Outcome Positioning) */}
           <WhyWorkWithMe />
-
-          {/* Section 6 — Small Trial Offer ( Starter pricing list with WhatsApp actions) */}
-          <TrialOffer />
 
           {/* Clean Local Contact Form (WhatsApp / Email only, as requested) */}
           <Contact />
