@@ -1,60 +1,223 @@
-import { useLanguage } from "./LanguageContext";
-import { motion } from "motion/react";
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | Cyber Enterprises</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght=100..900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                offwhite: '#FDFCFB',
+                charcoal: '#1A1A1A',
+                gold: '#D4AF37',
+                blue: '#005696',
+              }
+            },
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .serif-font {
+        font-family: 'Cormorant Garamond', serif;
+      }
+      .sans-font {
+        font-family: 'Inter', sans-serif;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FFFFFF;
+        color: #1A1A1A;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-image: url('https://i.ibb.co/XdfbJ9Q/Watermark-version.png');
+        background-repeat: repeat;
+        background-position: center;
+        background-size: 320px auto;
+        opacity: 0.03;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col justify-between selection:bg-brand-gold/30 selection:text-brand-charcoal">
+    
+    <!-- Elegant Navigation Block Header -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-brand-charcoal/5">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center">
+          <a href="/" class="block">
+            <img 
+              src="https://i.ibb.co/tMd9S3H4/transparent.png" 
+              alt="Cyber Enterprises Crest" 
+              style="max-width: 90px; height: auto;" 
+              class="object-contain"
+            />
+          </a>
+        </div>
 
-export function Industries() {
-  const { t } = useLanguage();
+        <div class="hidden md:flex items-center gap-8 text-brand-charcoal/70">
+          <a href="/#services" class="text-xs font-semibold uppercase tracking-wider hover:text-brand-gold transition-colors">Services</a>
+          <a href="/#industries" class="text-xs font-semibold uppercase tracking-wider hover:text-brand-gold transition-colors">Industries</a>
+          <a href="/#insights" class="text-xs font-semibold uppercase tracking-wider hover:text-brand-gold transition-colors">Insights</a>
+          <a href="/#contact" class="text-xs font-semibold uppercase tracking-wider hover:text-brand-gold transition-colors">Contact</a>
+        </div>
 
-  const industries = [
-    {
-      title: t.industries.education,
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop",
-      span: "md:col-span-2",
-    },
-    {
-      title: t.industries.solar,
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop",
-      span: "md:col-span-1",
-    },
-    {
-      title: t.industries.smallBusiness,
-      image: "https://images.unsplash.com/photo-1556740734-75474a702e8d?q=80&w=2070&auto=format&fit=crop",
-      span: "md:col-span-1",
-    },
-    {
-      title: t.industries.premium,
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop",
-      span: "md:col-span-2",
-    },
-  ];
-
-  return (
-    <section id="industries" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-5xl md:text-6xl text-center mb-16 serif italic">{t.industries.title}</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {industries.map((industry, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className={`relative h-[400px] rounded-3xl overflow-hidden group cursor-pointer ${industry.span}`}
-            >
-              <img 
-                src={industry.image} 
-                alt={industry.title} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[0.3] group-hover:grayscale-0"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/80 via-transparent to-transparent" />
-              <div className="absolute bottom-10 left-10">
-                <h3 className="text-3xl text-brand-offwhite serif italic">{industry.title}</h3>
-              </div>
-            </motion.div>
-          ))}
+        <div class="flex items-center gap-4">
+          <a href="/" class="rounded-full px-6 py-2.5 text-xs font-bold uppercase tracking-wider border border-brand-gold/50 text-brand-gold hover:bg-brand-gold hover:text-white transition-all duration-300">
+            Back to Home
+          </a>
         </div>
       </div>
-    </section>
-  );
-}
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-32 pb-20 px-6 max-w-4xl mx-auto w-full">
+      <div class="relative bg-white border border-brand-charcoal/5 rounded-[2rem] p-8 sm:p-12 md:p-16 shadow-[0_0_50px_-12px_rgba(214,175,55,0.08)] overflow-hidden">
+        
+        <!-- Luxury ambient corner lights -->
+        <div class="absolute -top-12 -right-12 w-48 h-48 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <header class="mb-12 text-center sm:text-left relative z-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
+            Legal Compliance Update
+          </span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl serif-font italic text-brand-charcoal mb-4 tracking-tight leading-tight">
+            Privacy Policy
+          </h1>
+          <p class="text-xs font-mono text-brand-gold font-bold uppercase tracking-[0.15em] opacity-80">
+            Last Updated: April 30, 2024
+          </p>
+          <div class="mt-6 w-16 h-[1px] bg-brand-gold opacity-50"></div>
+        </header>
+
+        <!-- Compliance Text Structure -->
+        <div class="text-brand-charcoal/80 space-y-8 font-light leading-relaxed text-sm sm:text-base relative z-10 font-sans">
+          
+          <p class="text-brand-charcoal/95 text-base sm:text-lg italic serif-font">
+            At Cyber Enterprises, we value your privacy and are committed to protecting your personal data in compliance with the Digital Personal Data Protection (DPDP) Act of India. This Privacy Policy explains how we collect, use, and safeguard information when you interact with us or our clients via our WhatsApp Marketing services and website.
+          </p>
+
+          <div class="grid gap-8 pt-4">
+            <section class="border-t border-brand-charcoal/5 pt-6 group">
+              <h2 class="text-lg sm:text-xl serif-font italic text-brand-charcoal mb-3 flex items-start gap-3">
+                <span class="font-sans font-bold text-xs bg-brand-gold/10 px-2.5 py-1 rounded border border-brand-gold/20 text-brand-gold shrink-0">1</span>
+                Information We Collect
+              </h2>
+              <p class="pl-0 sm:pl-10 text-brand-charcoal/70 leading-relaxed text-xs sm:text-sm mt-1">
+                We may collect the following information when you interact with our WhatsApp services or website:<br/><br/>
+                • <strong>Contact Details:</strong> Name, phone number, and email address.<br/>
+                • <strong>Inquiry Data:</strong> Information you provide when asking about our services (e.g., school admissions, solar installations).<br/>
+                • <strong>Usage Data:</strong> Details of your interactions with our automated WhatsApp flows (e.g., button clicks, message read status).
+              </p>
+            </section>
+
+            <section class="border-t border-brand-charcoal/5 pt-6 group">
+              <h2 class="text-lg sm:text-xl serif-font italic text-brand-charcoal mb-3 flex items-start gap-3">
+                <span class="font-sans font-bold text-xs bg-brand-gold/10 px-2.5 py-1 rounded border border-brand-gold/20 text-brand-gold shrink-0">2</span>
+                How We Use Your Information
+              </h2>
+              <p class="pl-0 sm:pl-10 text-brand-charcoal/70 leading-relaxed text-xs sm:text-sm mt-1">
+                We use the collected data for the following purposes:<br/><br/>
+                • <strong>Communication:</strong> To provide instant automated responses to your inquiries on WhatsApp.<br/>
+                • <strong>Service Delivery:</strong> To share brochures, fee structures, and promotional materials as requested by you.<br/>
+                • <strong>Lead Management:</strong> To help our clients connect with interested prospects.<br/>
+                • <strong>Compliance:</strong> To maintain records of user consent (Opt-ins) as required by Meta and Indian law.
+              </p>
+            </section>
+
+            <section class="border-t border-brand-charcoal/5 pt-6 group">
+              <h2 class="text-lg sm:text-xl serif-font italic text-brand-charcoal mb-3 flex items-start gap-3">
+                <span class="font-sans font-bold text-xs bg-brand-gold/10 px-2.5 py-1 rounded border border-brand-gold/20 text-brand-gold shrink-0">3</span>
+                WhatsApp Communication & Consent
+              </h2>
+              <p class="pl-0 sm:pl-10 text-brand-charcoal/70 leading-relaxed text-xs sm:text-sm mt-1">
+                • <strong>Opt-in:</strong> We only send marketing messages to users who have provided explicit consent via website forms, ads, or by messaging us first.<br/>
+                • <strong>Opt-out:</strong> You can stop receiving messages at any time by replying with "STOP" or "UNSUBSCRIBE".<br/>
+                • <strong>24-Hour Window:</strong> We adhere to Meta’s policy of responding within 24 hours of a user-initiated message.
+              </p>
+            </section>
+
+            <section class="border-t border-brand-charcoal/5 pt-6 group">
+              <h2 class="text-lg sm:text-xl serif-font italic text-brand-charcoal mb-3 flex items-start gap-3">
+                <span class="font-sans font-bold text-xs bg-brand-gold/10 px-2.5 py-1 rounded border border-brand-gold/20 text-brand-gold shrink-0">4</span>
+                Data Sharing and Security
+              </h2>
+              <p class="pl-0 sm:pl-10 text-brand-charcoal/70 leading-relaxed text-xs sm:text-sm mt-1">
+                • <strong>No Data Selling:</strong> We do not sell, rent, or trade your personal data to third-party data brokers.<br/>
+                • <strong>Service Providers:</strong> We share data only with verified Business Solution Providers (BSPs) and Meta.<br/>
+                • <strong>Security:</strong> We implement industry-standard encryption to protect your data from unauthorized access or breaches.
+              </p>
+            </section>
+
+            <section class="border-t border-brand-charcoal/5 pt-6 group">
+              <h2 class="text-lg sm:text-xl serif-font italic text-brand-charcoal mb-3 flex items-start gap-3">
+                <span class="font-sans font-bold text-xs bg-brand-gold/10 px-2.5 py-1 rounded border border-brand-gold/20 text-brand-gold shrink-0">5</span>
+                Your Rights
+              </h2>
+              <p class="pl-0 sm:pl-10 text-brand-charcoal/70 leading-relaxed text-xs sm:text-sm mt-1">
+                Under the DPDP Act, you have the right to access and review data, request corrections, request deletion, and withdraw consent at any time.
+              </p>
+            </section>
+
+            <section class="border-t border-brand-charcoal/5 pt-6 group">
+              <h2 class="text-lg sm:text-xl serif-font italic text-brand-charcoal mb-3 flex items-start gap-3">
+                <span class="font-sans font-bold text-xs bg-brand-gold/10 px-2.5 py-1 rounded border border-brand-gold/20 text-brand-gold shrink-0">6</span>
+                Contact Details
+              </h2>
+              <p class="pl-0 sm:pl-10 text-brand-charcoal/70 leading-relaxed text-xs sm:text-sm mt-1">
+                For questions regarding personal data access, deletion, or cookie structures, reach out to us at:<br/><br/>
+                <span class="text-brand-charcoal font-medium">Cyber Enterprises</span><br/>
+                184 / 12E, Hospital Road, Cuddalore – 607001, Tamil Nadu.<br/>
+                Email: <a href="mailto:support@cyberad.in" class="text-brand-gold hover:underline">support@cyberad.in</a><br/>
+                WhatsApp: +91-89256-93013
+              </p>
+            </section>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Muted Footer Section -->
+    <footer class="py-8 border-t border-brand-charcoal/5 text-center px-6">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-brand-charcoal/40 text-[10px] font-bold uppercase tracking-widest font-sans">
+        <div>
+          &copy; 2026 Cyber Enterprises. All Rights Reserved.
+        </div>
+        <div class="flex gap-4">
+          <a href="/" class="hover:text-brand-gold transition-colors">Home</a>
+          <span>|</span>
+          <a href="/#contact" class="hover:text-brand-gold transition-colors">Support</a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

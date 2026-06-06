@@ -1,59 +1,70 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
 
-import { LanguageProvider } from "./components/LanguageContext";
-import { Navbar } from "./components/Navbar";
-import { Hero } from "./components/Hero";
-import { Services } from "./components/Services";
-import { Industries } from "./components/Industries";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
-import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
-import { Quote } from "./components/Quote";
-import { Insights } from "./components/Insights";
-import { SampleBuilds } from "./components/SampleBuilds";
-import { PrivacyPolicy } from "./components/PrivacyPolicy";
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "motion/react";
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-offwhite: #FDFCFB;
+  --color-brand-charcoal: #1A1A1A;
+  --color-brand-gold: #D4AF37;
+  --color-brand-blue: #005696;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
 
-export default function App() {
-  const [showPrivacy, setShowPrivacy] = useState(false);
-
-  useEffect(() => {
-    if (showPrivacy) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [showPrivacy]);
-
-  return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-brand-offwhite text-brand-charcoal font-sans selection:bg-brand-gold/30">
-        <Navbar />
-        <main>
-          <Hero />
-          <Services />
-          <Industries />
-          <Quote />
-          <SampleBuilds />
-          <Insights />
-          <Contact />
-        </main>
-        <Footer 
-          onShowPrivacy={() => setShowPrivacy(true)} 
-        />
-        <FloatingWhatsApp />
-
-        <AnimatePresence>
-          {showPrivacy && (
-            <PrivacyPolicy onClose={() => setShowPrivacy(false)} />
-          )}
-        </AnimatePresence>
-      </div>
-    </LanguageProvider>
-  );
+  /* Shadcn overrides */
+  --color-background: var(--color-brand-offwhite);
+  --color-foreground: var(--color-brand-charcoal);
+  --color-primary: var(--color-brand-charcoal);
+  --color-primary-foreground: var(--color-brand-offwhite);
+  --color-border: color-mix(in srgb, var(--color-brand-charcoal) 10%, transparent);
 }
 
+:root {
+  background-color: var(--color-brand-offwhite);
+  color: var(--color-brand-charcoal);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+.serif {
+  font-family: var(--font-serif);
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    @apply font-medium tracking-tight;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-offwhite);
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-brand-charcoal) 20%, transparent);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-gold);
+}
+
+/* Markdown styling */
+.markdown-body {
+  @apply text-brand-charcoal/80 leading-relaxed;
+}
+.markdown-body h1, .markdown-body h2 {
+  @apply text-2xl mb-4 font-serif italic;
+}
+.markdown-body p {
+  @apply mb-4;
+}
+.markdown-body ul {
+  @apply list-disc pl-6 mb-4 space-y-2;
+}
