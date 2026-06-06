@@ -25,7 +25,7 @@ const BUILDS: BuildItem[] = [
     id: "mehrasolar",
     url: "https://mihirasolar.com/",
     categoryKey: "solar",
-    title: "Mehra Solar Website",
+    title: "Mihira Renewable energy",
     description: {
       en: "A professional clean-energy business website showcasing sustainable solar installation services, product structures, and cost-effective renewable energy solutions.",
       ta: "வீடுகள் மற்றும் வணிக நிறுவனங்களுக்குத் தேவையான சூரிய மின்சக்தி அமைப்புகள் மற்றும் தயாரிப்பு விவரங்களை விளக்கும் இணையதளம்.",
@@ -42,9 +42,9 @@ const BUILDS: BuildItem[] = [
     id: "venusaesthetics",
     url: "https://veenussindia.com/",
     categoryKey: "clinical",
-    title: "Venus Aesthetics Website",
+    title: "Veenuss Asthetics",
     description: {
-      en: "A premium business platform designed for Venus Aesthetics, highlighting advanced beauty treatments, clinical skincare services, and specialized wellness solutions.",
+      en: "A premium business platform designed for Veenuss Asthetics, highlighting advanced beauty treatments, clinical skincare services, and specialized wellness solutions.",
       ta: "மேம்பட்ட அழகு சிகிச்சைகள், மருத்துவ ரீதியான சருமப் பராமரிப்பு சேவைகள் மற்றும் பிரத்தியேக ஆரோக்கிய தீர்வுகளை முன்னிலைப்படுத்தும் வீனஸ் அழகியல் தளம்.",
       es: "Una plataforma estética premium diseñada para destacar tratamientos de belleza avanzados y servicios de cuidado clínico de la piel."
     },
@@ -59,7 +59,7 @@ const BUILDS: BuildItem[] = [
     id: "venusayush",
     url: "https://veenussindia.com/",
     categoryKey: "ayur",
-    title: "Venus Ayush Care Website",
+    title: "Veenus ayushcare Center",
     description: {
       en: "A clinical portal showcasing traditional herbal wisdom combined with modern diagnostic approaches for organic recovery and wellness.",
       ta: "பாரம்பரிய ஆயுர்வேத மற்றும் இயற்கை மருத்துவத்தின் நன்மைகளை எடுத்துரைக்கும் ஒரு மருத்துவ இணையதளம்.",

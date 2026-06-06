@@ -1,207 +1,296 @@
-import { useLanguage } from "./LanguageContext";
-import { motion } from "motion/react";
-import { MessageCircle, Check, Sparkles } from "lucide-react";
+import express from "express";
+import path from "path";
+import fs from "fs/promises";
+import { createServer as createViteServer } from "vite";
+import { GoogleGenAI } from "@google/genai";
+import dotenv from "dotenv";
 
-interface ServicePack {
-  title: { en: string; ta: string; es: string };
-  price: string;
-  subtitle: { en: string; ta: string; es: string };
-  bullets: { en: string[]; ta: string[]; es: string[] };
-}
+dotenv.config();
 
-const PACKAGES: ServicePack[] = [
-  {
-    title: {
-      en: "Starter Website",
-      ta: "ஸ்டார்டர் இணையதளம்",
-      es: "Sitio Web Inicial"
-    },
-    price: "₹2,999",
-    subtitle: {
-      en: "Single-page professional website",
-      ta: "ஒற்றைப் பக்க தொழில்முறை தளம்",
-      es: "Sitio web comercial de una sola página"
-    },
-    bullets: {
-      en: [
-        "1 Fully custom web page",
-        "Mobile-optimized design",
-        "WhatsApp click-to-chat setup",
-        "Includes basic design consultation",
-        "Ready in 3 to 5 days"
-      ],
-      ta: [
-        "1 தனிப்பயனாக்கப்பட்ட முழுமையானப் பக்கம்",
-        "மொபைல் மற்றும் கணினிக்கு ஏற்ற வடிவமைப்பு",
-        "நேரடி வாட்ஸ்அப் பட்டன் இணைப்பு",
-        "அடிப்படை மார்க்கெட்டிங் ஆலோசனை",
-        "3 முதல் 5 நாட்களில் தயார்"
-      ],
-      es: [
-        "1 Página web completamente a la medida",
-        "Optimizado para celulares y tablets",
-        "Botón de chat directo de WhatsApp",
-        "Consulta básica de conversión incluida",
-        "Listo en 3 a 5 días hábiles"
-      ]
-    }
-  },
-  {
-    title: {
-      en: "Starter Ad Campaign",
-      ta: "ஸ்டார்டர் விளம்பரப் பிரச்சாரம்",
-      es: "Campaña de Anuncios Inicial"
-    },
-    price: "₹999 Setup",
-    subtitle: {
-      en: "Customer pays ad budgets separately",
-      ta: "விளம்பரச் செலவு தனித்துக் கட்டப்பட வேண்டும்",
-      es: "El cliente paga el gasto publicitario aparte"
-    },
-    bullets: {
-      en: [
-        "Meta or Google campaign setup",
-        "Targeting & audience config",
-        "1 Lead generation system setup",
-        "WhatsApp integration with ad",
-        "14 Days monitoring support"
-      ],
-      ta: [
-        "மெட்டா அல்லது கூகுள் விளம்பர அமைப்பு",
-        "இலக்கு பார்வையாளர்கள் குறியீடு",
-        "1 உயர்நிலை வாடிக்கையாளர் ஈர்ப்பு விளம்பரம்",
-        "நேரடி வாட்ஸ்அப் மெசேஜ் இணைப்பு",
-        "14 நாட்கள் விளம்பரக் கண்காணிப்பு"
-      ],
-      es: [
-        "Configuración en Meta Ads o Google Ads",
-        "Segmentación y público objetivo exacto",
-        "1 Anuncio dinámico para prospectos",
-        "Integración de chat de WhatsApp con anuncio",
-        "14 Días de monitoreo y soporte"
-      ]
-    }
-  },
-  {
-    title: {
-      en: "Introductory Flyer Trial",
-      ta: "துண்டுப்பிரசுரம் (Flyers Offer)",
-      es: "Prueba de Folletos"
-    },
-    price: "₹149",
-    subtitle: {
-      en: "We design 3 gorgeous digital flyers",
-      ta: "3 உயர்தர விளம்பரத் துண்டுப்பிரசுரங்கள்",
-      es: "Diseño de 3 volantes profesionales"
-    },
-    bullets: {
-      en: [
-        "3 Premium flyer design versions",
-        "High-resolution digital formats",
-        "Custom offers branding theme",
-        "2 Fast design revisions",
-        "Delivered in 48 hours"
-      ],
-      ta: [
-        "3 உயர்தரத் தனித்துவ வடிவங்கள்",
-        "அச்சிடத் தயாரான PDF மற்றும் படங்கள்",
-        "உங்கள் கடையின் சிறப்புத் திட்டங்கள்",
-        "2 வடிவ திருத்தங்கள் வரை",
-        "48 மணிநேரத்திற்குள் விரைவான விநியோகம்"
-      ],
-      es: [
-        "3 Versiones de volantes premium",
-        "Alta resolución para impresión",
-        "Temas personalizados de su negocio",
-        "2 Rondas de cambios rápidos",
-        "Entrega rápida en 48 horas"
-      ]
-    }
+/**
+ * Automatically parses a Google Form URL to detect the submission POST URL
+ * and maps Name, Phone, and Brief question entry IDs dynamically.
+ */
+async function getGoogleFormConfig(sourceUrl: string) {
+  // Determine Form ID or exact action formResponse URL
+  let formId = "1YRKRanmyPgfzHbLhn6bh6PZB-8cTffLWv9jgqdIyWLA"; // Default fallback form ID
+  
+  const match = sourceUrl.match(/\/forms\/d\/(e\/)?([a-zA-Z0-9-_]+)/);
+  if (match) {
+    formId = match[2];
   }
-];
 
-export function TrialOffer() {
-  const { language } = useLanguage();
-  const lang = (language as "en" | "ta" | "es") || "en";
+  // Construct target URLs
+  const viewUrl = `https://docs.google.com/forms/d/${formId}/viewform`;
+  const postUrl = `https://docs.google.com/forms/d/${formId}/formResponse`;
 
-  const handleInquire = (pack: ServicePack) => {
-    const txt = `Hi CyberAD, I'm interested in your Small Trial Offer: "${pack.title[lang]}" for ${pack.price}. Can we get started?`;
-    window.open(`https://wa.me/918925693013?text=${encodeURIComponent(txt)}`, "_blank");
-  };
+  // Default Entry ID Fallbacks
+  let entryName = process.env.GOOGLE_FORM_ENTRY_NAME || "entry.1000001";
+  let entryPhone = process.env.GOOGLE_FORM_ENTRY_PHONE || "entry.1000002";
+  let entryBrief = process.env.GOOGLE_FORM_ENTRY_BRIEF || "entry.1000003";
 
-  return (
-    <section id="trial-offers" className="py-24 px-4 sm:px-6 bg-brand-offwhite border-t border-brand-charcoal/5 relative">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-[0.25em] rounded-full">
-            <Sparkles className="w-3.5 h-3.5 animate-pulse" />
-            <span>{lang === "ta" ? "சிறிய சோதனைச் சேவை" : lang === "es" ? "PRUEBA SIN COMPROMISO" : "SMALL TRIAL OFFER"}</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl serif font-normal text-brand-charcoal">
-            {lang === "ta" ? "சிறிய சோதனைச் சலுகைகள்" : lang === "es" ? "Ofertas Especiales de Prueba" : "Small Trial Offer"}
-          </h2>
-          <p className="text-sm md:text-base text-brand-charcoal/50 font-light max-w-xl mx-auto leading-relaxed">
-            {lang === "ta"
-              ? "எங்கள் திறனைச் சோதித்துப் பார்க்க எளிய மற்றும் மிகக் குறைந்த கட்டணத்தில் மூன்று ஸ்டார்டர் தொகுப்புகள் — எந்தவித உள்காரணங்களும் இன்றி."
-              : lang === "es"
-              ? "Pruebe la calidad de nuestro soporte técnico con tres ofertas iniciales de bajo precio y sin contratos a largo plazo."
-              : "Test the caliber of our digital support before committing. No complex contracts, just solid first impressions."}
-          </p>
-        </div>
+  try {
+    console.log(`[Google Form Auto-Detector] Fetching form view to extract schemas: ${viewUrl}`);
+    const res = await fetch(viewUrl, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      }
+    });
 
-        {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PACKAGES.map((pack, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-white rounded-[2.5rem] border border-brand-charcoal/5 p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-            >
-              {/* Top gradient highlight */}
-              <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-brand-gold/50 to-brand-gold group-hover:h-2 transition-all" />
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-serif text-brand-charcoal tracking-tight font-medium">
-                    {pack.title[lang] || pack.title.en}
-                  </h3>
-                  <p className="text-xs font-light text-brand-charcoal/50 leading-relaxed mt-1">
-                    {pack.subtitle[lang] || pack.subtitle.en}
-                  </p>
-                </div>
+    if (res.ok) {
+      const html = await res.text();
+      // Extract FB_PUBLIC_LOAD_DATA_
+      const loadDataMatch = html.match(/FB_PUBLIC_LOAD_DATA_\s*=\s*(.*?);\s*<\/script>/);
+      if (loadDataMatch) {
+        let jsonStr = loadDataMatch[1].trim();
+        if (jsonStr.endsWith(";")) {
+          jsonStr = jsonStr.slice(0, -1);
+        }
+        const loadData = JSON.parse(jsonStr);
+        if (loadData && loadData[1] && loadData[1][1]) {
+          const questions = loadData[1][1];
+          console.log(`[Google Form Auto-Detector] Successfully parsed ${questions.length} question fields dynamically.`);
+          
+          let nameFound = false;
+          let phoneFound = false;
+          let briefFound = false;
 
-                <div className="py-4 border-y border-brand-charcoal/5">
-                  <span className="text-3xl md:text-4xl font-serif font-bold text-brand-gold">
-                    {pack.price}
-                  </span>
-                </div>
+          for (const q of questions) {
+            const label = (q[1] || "").toLowerCase();
+            const entryId = q[4]?.[0]?.[0];
+            if (entryId) {
+              const fullEntry = `entry.${entryId}`;
+              // Map label containing Name, Phone/WhatsApp, Brief/Message
+              if (!nameFound && (label.includes("name") || label.includes("பெயர்") || label.includes("nombre"))) {
+                entryName = fullEntry;
+                nameFound = true;
+                console.log(`- Automatically mapped Name to field: ${fullEntry} ("${q[1]}")`);
+              } else if (!phoneFound && (label.includes("phone") || label.includes("whatsapp") || label.includes("number") || label.includes("contact") || label.includes("தொடர்பு") || label.includes("cel") || label.includes("tel") || label.includes("கைபேசி"))) {
+                entryPhone = fullEntry;
+                phoneFound = true;
+                console.log(`- Automatically mapped Phone to field: ${fullEntry} ("${q[1]}")`);
+              } else if (!briefFound && (label.includes("brief") || label.includes("detail") || label.includes("consultation") || label.includes("விவரம்") || label.includes("message") || label.includes("comment") || label.includes("mensaj"))) {
+                entryBrief = fullEntry;
+                briefFound = true;
+                console.log(`- Automatically mapped Brief to field: ${fullEntry} ("${q[1]}")`);
+              }
+            }
+          }
+        }
+      }
+    } else {
+      console.warn(`[Google Form Auto-Detector] Could not fetch form page (status ${res.status}). Using fallback entry schemas.`);
+    }
+  } catch (error) {
+    console.error("[Google Form Auto-Detector] Unexpected error during dynamic auto-mapping:", error);
+  }
 
-                <ul className="space-y-3">
-                  {(pack.bullets[lang] || pack.bullets.en).map((bull, bidx) => (
-                    <li key={bidx} className="flex items-start gap-2.5 text-xs md:text-sm font-light text-brand-charcoal/75">
-                      <Check className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
-                      <span>{bull}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pt-8">
-                <button
-                  onClick={() => handleInquire(pack)}
-                  className="w-full py-3.5 bg-brand-charcoal hover:bg-brand-gold text-white hover:text-brand-charcoal rounded-full text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow cursor-pointer flex items-center justify-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>{lang === "ta" ? "வாட்ஸ்அப் மூலம் தொடர்புகொள்க" : lang === "es" ? "Pedir por WhatsApp" : "Inquire via WhatsApp"}</span>
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return { postUrl, entryName, entryPhone, entryBrief };
 }
+
+async function startServer() {
+  const app = express();
+  const PORT = 3000;
+
+  app.use(express.json());
+
+  // Lazy-loaded Gemini API client to prevent startup crash if GEMINI_API_KEY is not defined
+  let aiClient: GoogleGenAI | null = null;
+  function getGeminiClient() {
+    if (!aiClient) {
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) {
+        throw new Error("AI service configuration is missing. Please set GEMINI_API_KEY in Secrets.");
+      }
+      aiClient = new GoogleGenAI({
+        apiKey,
+        httpOptions: {
+          headers: {
+            'User-Agent': 'aistudio-build',
+          }
+        }
+      });
+    }
+    return aiClient;
+  }
+
+  // API Routes
+  app.post("/api/submit-lead", async (req, res) => {
+    console.log("Lead form submission received:", req.body);
+    try {
+      const { name, phone, brief, lang } = req.body;
+      if (!name || !phone) {
+        return res.status(400).json({ error: "Name and contact number are required" });
+      }
+
+      const timestamp = new Date().toISOString();
+      const newLead = { name, phone, brief, lang, timestamp };
+
+      // 1. Durably write/append to local leads_db.json file
+      const dbPath = path.join(process.cwd(), "leads_db.json");
+      let leads: any[] = [];
+      try {
+        const fileContent = await fs.readFile(dbPath, "utf-8");
+        leads = JSON.parse(fileContent);
+      } catch (err) {
+        // If file doesn't exist, start empty
+      }
+      leads.push(newLead);
+      await fs.writeFile(dbPath, JSON.stringify(leads, null, 2), "utf-8");
+      console.log("Lead securely saved locally to leads_db.json");
+
+      // 2. Optional: Dispatch to Webhook URL if set in environment
+      if (process.env.LEAD_WEBHOOK_URL) {
+        try {
+          console.log("Dispatching lead to LEAD_WEBHOOK_URL:", process.env.LEAD_WEBHOOK_URL);
+          await fetch(process.env.LEAD_WEBHOOK_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newLead)
+          });
+          console.log("Lead webhook dispatch successful!");
+        } catch (webhookErr: any) {
+          console.error("Failed to dispatch to webhook:", webhookErr);
+        }
+      }
+
+      // 3. Dispatch to Google Form (with Dynamic Auto-Detection & Fallbacks)
+      const formSourceUrl = process.env.GOOGLE_FORM_POST_URL || "https://docs.google.com/forms/d/1YRKRanmyPgfzHbLhn6bh6PZB-8cTffLWv9jgqdIyWLA/edit";
+      if (formSourceUrl) {
+        try {
+          console.log(`[Google Form Pipeline] Resolving configuration for form URL: ${formSourceUrl}`);
+          const config = await getGoogleFormConfig(formSourceUrl);
+          
+          const params = new URLSearchParams();
+          params.append(config.entryName, name);
+          params.append(config.entryPhone, phone);
+          params.append(config.entryBrief, brief || "");
+
+          console.log(`[Google Form Pipeline] Dispatching POST submission to action URL: ${config.postUrl}`);
+          console.log(`[Google Form Pipeline] Payload mapped parameters: Name: ${config.entryName}, Phone: ${config.entryPhone}, Brief: ${config.entryBrief}`);
+
+          const formResponse = await fetch(config.postUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: params.toString()
+          });
+
+          if (formResponse.ok) {
+            console.log("[Google Form Pipeline] Google Form submission completed successfully!");
+          } else {
+            console.warn(`[Google Form Pipeline] Form submission action returned status code: ${formResponse.status}`);
+          }
+        } catch (formErr: any) {
+          console.error("[Google Form Pipeline] Failed to submit to Google Form:", formErr);
+        }
+      }
+
+      res.json({ success: true, message: "Lead saved successfully on site" });
+    } catch (error: any) {
+      console.error("Internal Lead Submission Error:", error);
+      res.status(500).json({ error: "Failed to submit lead", details: error.message });
+    }
+  });
+
+  app.get("/api/leads", async (req, res) => {
+    try {
+      const clientPasscode = req.headers["x-admin-passcode"];
+      const actualPasscode = process.env.ADMIN_PASSCODE || "admin123";
+      if (clientPasscode !== actualPasscode) {
+        return res.status(401).json({ error: "Unauthorized: Invalid passcode" });
+      }
+
+      const dbPath = path.join(process.cwd(), "leads_db.json");
+      let leads: any[] = [];
+      try {
+        const fileContent = await fs.readFile(dbPath, "utf-8");
+        leads = JSON.parse(fileContent);
+      } catch (err) {
+        // If file doesn't exist, we start empty
+      }
+      res.json({ success: true, leads });
+    } catch (error: any) {
+      console.error("Failed to read leads:", error);
+      res.status(500).json({ error: "Failed to load leads", details: error.message });
+    }
+  });
+
+  app.post("/api/leads/clear", async (req, res) => {
+    try {
+      const clientPasscode = req.headers["x-admin-passcode"];
+      const actualPasscode = process.env.ADMIN_PASSCODE || "admin123";
+      if (clientPasscode !== actualPasscode) {
+        return res.status(401).json({ error: "Unauthorized: Invalid passcode" });
+      }
+
+      const dbPath = path.join(process.cwd(), "leads_db.json");
+      await fs.writeFile(dbPath, JSON.stringify([], null, 2), "utf-8");
+      res.json({ success: true, message: "Lead database cleared successfully" });
+    } catch (error: any) {
+      console.error("Failed to clear leads:", error);
+      res.status(500).json({ error: "Failed to clear lead database" });
+    }
+  });
+
+  app.post("/api/strategy", async (req, res) => {
+    console.log("Strategy request received:", req.body);
+    try {
+      const { industry, language } = req.body;
+      
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey) {
+        console.error("GEMINI_API_KEY is not defined in environment variables");
+        return res.status(500).json({ error: "AI service configuration is missing. Please check Secrets." });
+      }
+
+      const prompt = `Act as a premium digital marketing expert for the ${industry} sector in India. 
+      Provide a concise, 3-point digital marketing strategy to help a business owner who is not very tech-savvy. 
+      The tone should be professional and encouraging. 
+      Provide the response in ${language === 'ta' ? 'Tamil' : 'English'}.
+      Focus on Meta Ads, Google Ads, and Lead retention through AI.`;
+
+      console.log("Calling Gemini API with prompt length:", prompt.length);
+
+      const ai = getGeminiClient();
+      const response = await ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents: prompt,
+      });
+
+      if (!response.text) {
+        console.error("Gemini returned empty response");
+        return res.status(500).json({ error: "AI failed to generate a response. Please try again." });
+      }
+
+      console.log("Strategy successfully generated");
+      res.json({ strategy: response.text });
+    } catch (error: any) {
+      console.error("Gemini Error Details:", error);
+      res.status(500).json({ 
+        error: "Failed to generate strategy", 
+        details: error.message || "Unknown error"
+      });
+    }
+  });
+
+  // Vite middleware for development
+  if (process.env.NODE_ENV !== "production") {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(process.cwd(), "dist");
+    app.use(express.static(distPath));
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(distPath, "index.html"));
+    });
+  }
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+startServer();
