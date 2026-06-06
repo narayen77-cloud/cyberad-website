@@ -15,10 +15,35 @@ import {
 
 export function TrackingAuditConsole() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [events, setEvents] = useState<TrackedEvent[]>([]);
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationPassed, setVerificationPassed] = useState(true);
   const [activeTab, setActiveTab] = useState<"checklist" | "logs" | "setup">("checklist");
+
+  useEffect(() => {
+    // Check if audit query parameter is present
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has("audit") || urlParams.get("audit") === "true") {
+        setIsVisible(true);
+      }
+
+      // Add secret keyboard listener (Shift + A or Ctrl + Shift + A) to toggle visibility
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Match Shift + A (ensure we ignore typing in inputs if needed, though simple check is fine here)
+        if ((e.shiftKey && e.key === "A") || (e.ctrlKey && e.shiftKey && e.key === "A")) {
+          setIsVisible(prev => !prev);
+          setIsOpen(true); // Open immediately
+        }
+      };
+
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     // Initial fetch
@@ -58,22 +83,24 @@ export function TrackingAuditConsole() {
   return (
     <>
       {/* Small floating action trigger at the bottom-left */}
-      <div className="fixed bottom-8 left-8 z-[90]">
-        <motion.button
-          onClick={() => setIsOpen(true)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="flex items-center gap-2 bg-brand-charcoal text-brand-gold hover:text-white px-5 py-3.5 rounded-full shadow-2xl border border-brand-gold/30 text-xs font-mono font-medium tracking-wider cursor-pointer"
-        >
-          <Cpu className="w-4 h-4 animate-pulse text-brand-gold" />
-          <span>🔍 GTM & ANALYTICS AUDIT CONSOLE</span>
-          {events.length > 0 && (
-            <span className="bg-brand-gold text-brand-charcoal px-1.5 py-0.5 rounded-full font-sans font-bold text-[9px] ml-1">
-              {events.length}
-            </span>
-          )}
-        </motion.button>
-      </div>
+      {isVisible && (
+        <div className="fixed bottom-8 left-8 z-[90]">
+          <motion.button
+            onClick={() => setIsOpen(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 bg-brand-charcoal text-brand-gold hover:text-white px-5 py-3.5 rounded-full shadow-2xl border border-brand-gold/30 text-xs font-mono font-medium tracking-wider cursor-pointer"
+          >
+            <Cpu className="w-4 h-4 animate-pulse text-brand-gold" />
+            <span>🔍 GTM & ANALYTICS AUDIT CONSOLE</span>
+            {events.length > 0 && (
+              <span className="bg-brand-gold text-brand-charcoal px-1.5 py-0.5 rounded-full font-sans font-bold text-[9px] ml-1">
+                {events.length}
+              </span>
+            )}
+          </motion.button>
+        </div>
+      )}
 
       <AnimatePresence>
         {isOpen && (
