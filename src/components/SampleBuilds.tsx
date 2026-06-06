@@ -22,72 +22,72 @@ interface BuildItem {
 
 const BUILDS: BuildItem[] = [
   {
-    id: "stfathima",
-    url: "https://stfathima.netlify.app/",
-    categoryKey: "education",
-    title: "St. Fathima Allied Health Institute",
-    description: {
-      en: "A dedicated healthcare education platform providing structured information on DMLT and allied health courses, fees, and admission paths for aspiring medical professionals.",
-      ta: "மாணவர்களுக்கு DMLT மற்றும் அதன் சார்ந்த மருத்துவக் கல்வி விவரங்கள், கட்டண முறைகள் மற்றும் சேர்க்கை வழிகளை வழங்கும் பிரத்யேக சுகாதாரக் கல்வி இணையதளம்.",
-      es: "Una plataforma educativa dedicada al área de la salud que proporciona información estructurada sobre cursos de DMLT, tarifas y vías de admisión para futuros profesionales médicos."
-    },
-    metrics: {
-      en: ["Allied Health Programs", "Structured Fees Directory", "Dynamic Admission Path"],
-      ta: ["துணை மருத்துவப் படிப்புகள்", "கட்டண விவரங்கள்", "எளிதான சேர்க்கை வழி"],
-      es: ["Programas de Salud", "Estructura de Tarifas", "Ruta de Admisión Directa"]
-    },
-    screenshotHint: "Healthcare Education Platform"
-  },
-  {
-    id: "mihirasolar",
+    id: "mehrasolar",
     url: "https://mihirasolar.com/",
     categoryKey: "solar",
-    title: "Mihira Solar",
+    title: "Mehra Solar Website",
     description: {
-      en: "A professional clean-energy business website showcasing sustainable solar installation services, product structures, and cost-effective renewable energy solutions for residential and commercial clients.",
-      ta: "வீடுகள் மற்றும் வணிக நிறுவனங்களுக்குத் தேவையான சூரிய மின்சக்தி அமைப்புகள், தயாரிப்பு விவரங்கள் மற்றும் செலவு குறைந்த கட்டமைப்பு முறைகளை விளக்கும் இணையதளம்.",
-      es: "Un sitio web profesional de energía limpia que presenta servicios de instalación solar sostenible, estructuras de productos y soluciones rentables para clientes residenciales y comerciales."
+      en: "A professional clean-energy business website showcasing sustainable solar installation services, product structures, and cost-effective renewable energy solutions.",
+      ta: "வீடுகள் மற்றும் வணிக நிறுவனங்களுக்குத் தேவையான சூரிய மின்சக்தி அமைப்புகள் மற்றும் தயாரிப்பு விவரங்களை விளக்கும் இணையதளம்.",
+      es: "Un sitio web profesional de energía limpia que presenta servicios de instalación solar sostenible, estructuras de productos y soluciones rentables."
     },
     metrics: {
-      en: ["Sustainable Solar Setup", "Residential & Commercial", "Cost-effective Energy Solutions"],
-      ta: ["சூரிய ஆற்றல் அமைப்புகள்", "வீடு & வணிக பயன்பாடு", "செலவு குறைந்த தீர்வ بیاடுகள்"],
-      es: ["Instalación Solar Sostenible", "Residencial y Comercial", "Energía Rentable"]
+      en: ["Sustainable Solar Installation", "Cost-effective energy planning", "Responsive business design"],
+      ta: ["சூரிய மின்சக்தி அமைப்புகள்", "செலவு அடுத்தகட்டத் திட்டங்கள்", "விரைவான மொபைல் வடிவமைப்பு"],
+      es: ["Instalación de energía solar sostenible", "Planificación de energía rentable", "Diseño ágil y responsive"]
     },
     screenshotHint: "Clean-Energy Business Website"
   },
   {
-    id: "veenussindia",
+    id: "venusaesthetics",
     url: "https://veenussindia.com/",
-    categoryKey: "industrial",
-    title: "Veenuss Aesthetics",
+    categoryKey: "clinical",
+    title: "Venus Aesthetics Website",
     description: {
-      en: "A premium business platform designed for Veenuss Aesthetics, highlighting advanced beauty treatments, clinical skincare services, and specialized wellness solutions.",
-      ta: "மேம்பட்ட அழகு சிகிச்சைகள், மருத்துவ ரீதியான சருமப் பராமரிப்பு சேவைகள் மற்றும் பிரத்யேக ஆரோக்கிய தீர்வுகளை முன்னிலைப்படுத்தும் வீனஸ் அழகியல் தளம்.",
-      es: "Una plataforma de negocios premium diseñada para Veenuss Aesthetics, destacando tratamientos de belleza de vanguardia, servicios clínicos de cuidado de la piel y soluciones de bienestar especializadas."
+      en: "A premium business platform designed for Venus Aesthetics, highlighting advanced beauty treatments, clinical skincare services, and specialized wellness solutions.",
+      ta: "மேம்பட்ட அழகு சிகிச்சைகள், மருத்துவ ரீதியான சருமப் பராமரிப்பு சேவைகள் மற்றும் பிரத்தியேக ஆரோக்கிய தீர்வுகளை முன்னிலைப்படுத்தும் வீனஸ் அழகியல் தளம்.",
+      es: "Una plataforma estética premium diseñada para destacar tratamientos de belleza avanzados y servicios de cuidado clínico de la piel."
     },
     metrics: {
-      en: ["Advanced Beauty Treatments", "Clinical Skincare Solutions", "Specialized Wellness Plans"],
-      ta: ["மேம்பட்ட அழகு சிகிச்சைகள்", "மருத்துவ சருமப் பராமரிப்பு", "சிறப்பு ஆரோக்கிய முறைகள்"],
-      es: ["Tratamientos de Belleza", "Cuidado Clínico de Piel", "Soluciones de Bienestar"]
+      en: ["Advanced skincare highlight", "Clinical beauty presentation", "Direct inquiry integrations"],
+      ta: ["சருமப் பாரமரிப்பு விளக்கம்", "மருத்துவ அழகு சிகிச்சைகள்", "நேரடி வாட்ஸ்அப் பட்டன்"],
+      es: ["Tratamiento estético de vanguardia", "Presentación de belleza clínica", "Integración de consulta rápida"]
     },
     screenshotHint: "Aesthetics & Wellness Platform"
   },
   {
-    id: "aksharavidya",
-    url: "https://aksharavidyaashram-admission.netlify.app/",
-    categoryKey: "admission",
-    title: "Akshara Vidyaashram Admissions",
+    id: "venusayush",
+    url: "https://veenussindia.com/",
+    categoryKey: "ayur",
+    title: "Venus Ayush Care Website",
     description: {
-      en: "A streamlined institutional portal built specifically to manage school admissions, showcase campus features, and guide parents through the enrollment process.",
-      ta: "பள்ளி மாணவர் சேர்க்கையை நெறிப்படுத்தவும், வளாகச் சிறப்புகளை விளக்கிப் பெற்றோர்களுக்கு எளிய சேர்க்கை வழிகாட்டியாகவும் உருவாக்கப்பட்ட தளம்.",
-      es: "Un portal institucional optimizado diseñado específicamente para gestionar las admisiones escolares, exhibir las instalaciones del campus y guiar a los padres en el proceso de inscripción."
+      en: "A clinical portal showcasing traditional herbal wisdom combined with modern diagnostic approaches for organic recovery and wellness.",
+      ta: "பாரம்பரிய ஆயுர்வேத மற்றும் இயற்கை மருத்துவத்தின் நன்மைகளை எடுத்துரைக்கும் ஒரு மருத்துவ இணையதளம்.",
+      es: "Un portal clínico de bienestar que presenta la sabiduría de la medicina tradicional para una recuperación orgánica y saludable."
     },
     metrics: {
-      en: ["Streamlined School Enrollment", "Campus Features Showcase", "Step-by-Step Parent Guidance"],
-      ta: ["எளிதான சேர்க்கை நுழைவாயில்", "வளாக வசதிகள் காட்சி", "பெற்றோர்களுக்கான வழிகாட்டி"],
-      es: ["Admisión Escolar Simplificada", "Instalaciones del Campus", "Guía Paso a Paso para Padres"]
+      en: ["Herbal & Organic therapy focus", "Holistic treatment schedules", "Professional system delivery"],
+      ta: ["மூலிகை மற்றும் இயற்கை சிகிச்சை முறைகள்", "முழுமையான மருத்துவத் திட்டங்கள்", "எளிதான தொடர்பு வசதி"],
+      es: ["Terapias orgánicas y tradicionales", "Tratamiento holístico guiado", "Presentación ágil de la clínica"]
     },
-    screenshotHint: "Institutional Admission Portal"
+    screenshotHint: "Holistic Health Care Website"
+  },
+  {
+    id: "cyberadwebsite",
+    url: "https://cyberad.in/",
+    categoryKey: "agency",
+    title: "CyberAD Website",
+    description: {
+      en: "Our own high-performance, clutter-free digital support partner platform built in simple language to scale offline businesses.",
+      ta: "எங்களது சொந்த அதிநவீன மற்றும் எளிய மொழியில் அமைந்த இணையதளம்.",
+      es: "Nuestra propia plataforma web de soporte digital construida sin jerga técnica para potenciar negocios tradicionales."
+    },
+    metrics: {
+      en: ["Multi-language capability", "Outcome-driven layouts", "Zero technical jargon rules"],
+      ta: ["பன்மொழி வசதி", "விளைவுகள் சார்ந்த வடிவமைப்பு", "பூஜ்ஜிய தொழில்நுட்ப விளம்பரம்"],
+      es: ["Capacidad multi-idioma refinada", "Estructura enfocada en ventas", "Cero complicaciones de jerga"]
+    },
+    screenshotHint: "Your Digital Support Partner"
   }
 ];
 
@@ -95,20 +95,24 @@ export function SampleBuilds() {
   const { language: rawLanguage, t } = useLanguage();
   const lang = (rawLanguage as string) === "es" ? "es" : (rawLanguage as string) === "ta" ? "ta" : "en";
 
-  const tBuilds = t.builds || {
-    title: "Featured Realizations",
-    subtitle: "High-performance digital products engineered to solve complex delivery and scale challenges.",
-    visit: "Launch Live Site",
+  const tBuilds = {
+    title: lang === "ta" ? "சமீபத்திய படைப்புகள்" : lang === "es" ? "Trabajo Reciente" : "Recent Work",
+    subtitle: lang === "ta" 
+      ? "பாரம்பரிய வணிகங்களை வெற்றிகரமாக ஆன்லைனில் கொண்டு சேர்த்த எங்களது முந்தைய படைப்புகள்:" 
+      : lang === "es" 
+      ? "Portafolios activos y sistemas implementados que impulsan el crecimiento de negocios físicos:" 
+      : "Pristine digital products built to empower traditional operations and maximize revenue. Look at our active creations:",
+    visit: lang === "ta" ? "இணையதளத்தைப் பார் ↗" : lang === "es" ? "Visitar Sitio ↗" : "Launch Live Site ↗",
     categories: {
-      education: "Education Portal",
-      solar: "Solar & Renewable Systems",
-      industrial: "Industrial Manufacturing Showcase",
-      admission: "Interactive Admission Systems"
+      solar: lang === "ta" ? "சோலார் மின்சக்தி" : lang === "es" ? "Tecnología Solar" : "Solar Clean-Tech",
+      clinical: lang === "ta" ? "அழகு சிகிச்சை" : lang === "es" ? "Clínica Estética" : "Aesthetics & Clinical",
+      ayur: lang === "ta" ? "இயற்கை மருத்துவம்" : lang === "es" ? "Salud Ayush" : "Ayush Holistic Care",
+      agency: lang === "ta" ? "தொழில்நுட்ப உதவி" : lang === "es" ? "Soporte de Agencia" : "Technical Support"
     }
   };
 
   return (
-    <section id="sample-builds" className="py-24 px-6 bg-brand-offwhite border-t border-brand-charcoal/5 relative overflow-hidden">
+    <section id="sample-builds" className="py-24 px-4 sm:px-6 bg-brand-offwhite border-t border-brand-charcoal/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}

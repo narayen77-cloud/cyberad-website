@@ -40,6 +40,10 @@ export const translations = {
         title: "Personal Branding",
         description: "For founders, consultants, educators, and professionals building authority online."
       },
+      pitchDeck: {
+        title: "Investor Pitch Deck & Growth",
+        description: "A premium, high-conversion strategic master deck carefully designed to secure venture funding, capital, and elite institutional partnerships."
+      },
       trial: {
         title: "14-Day Trial",
         description: "A low-risk showcase of our results. See the impact of our strategy in two weeks."
@@ -145,6 +149,10 @@ export const translations = {
         title: "தனிநபர் பிராண்டிங்",
         description: "ஆன்லைனில் தங்களது ஆளுமையை வளர்க்கும் நிறுவனர்கள், ஆலோசகர்கள், கல்வியாளர்கள் மற்றும் நிபுணர்களுக்கு."
       },
+      pitchDeck: {
+        title: "முதலீட்டாளர் பிட்ச் டெக் உத்தி",
+        description: "மூலதன நிதி, பெரும் முதலீடுகள் மற்றும் உயர்தர கூட்டாண்மைகளை ஈர்ப்பதற்கான பிரீமியம் விளக்க உத்தித் தொகுப்பு."
+      },
       trial: {
         title: "14-நாள் சோதனை",
         description: "எங்கள் முடிவுகளின் குறைந்த அபாயக் காட்சி. இரண்டு வாரங்களில் மாற்றத்தைக் காணுங்கள்."
@@ -249,6 +257,10 @@ export const translations = {
       personal: {
         title: "Marca Personal",
         description: "Para fundadores, consultores, educadores y profesionales que construyen autoridad en línea."
+      },
+      pitchDeck: {
+        title: "Pitch Deck e Investor Pack",
+        description: "Una presentación estratégica premium de alta conversión diseñada meticulosamente para asegurar rondas de capital de riesgo y alianzas de élite."
       },
       trial: {
         title: "Prueba de 14 días",

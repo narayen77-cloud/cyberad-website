@@ -6,7 +6,7 @@ export function Contact() {
   const lang = (rawLanguage as string) === "es" ? "es" : (rawLanguage as string) === "ta" ? "ta" : "en";
 
   return (
-    <section id="contact" className="py-24 px-6 bg-brand-charcoal/[0.02] border-t border-brand-charcoal/5 relative">
+    <section id="contact" className="py-24 px-4 sm:px-6 bg-brand-charcoal/[0.02] border-t border-brand-charcoal/5 relative">
       <div className="max-w-7xl mx-auto">
         
          {/* Contact Grid Section */}

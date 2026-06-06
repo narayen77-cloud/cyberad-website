@@ -390,7 +390,7 @@ export function Insights() {
   }
 
   return (
-    <section id="insights" className="py-32 px-6 bg-brand-charcoal/[0.01] border-t border-brand-charcoal/5">
+    <section id="insights" className="py-32 px-4 sm:px-6 bg-brand-charcoal/[0.01] border-t border-brand-charcoal/5">
       <div className="max-w-7xl mx-auto">
         
         <AnimatePresence mode="wait">

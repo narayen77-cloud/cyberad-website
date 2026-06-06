@@ -1,25 +1,20 @@
-# GEMINI_API_KEY: Required for Gemini AI API calls.
-# AI Studio automatically injects this at runtime from user secrets.
-# Users configure this via the Secrets panel in the AI Studio UI.
-GEMINI_API_KEY="MY_GEMINI_API_KEY"
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-# APP_URL: The URL where this applet is hosted.
-# AI Studio automatically injects this at runtime with the Cloud Run service URL.
-# Used for self-referential links, OAuth callbacks, and API endpoints.
-APP_URL="MY_APP_URL"
+# Run and deploy your AI Studio app
 
-# LEAD INTAKE ROUTING INTEGRATION (OPTIONAL)
-# If set, lead submissions are securely posted to these destinations directly from the server:
-# 1. Custom Webhook (Discord, Slack, Make, Zapier, or microservices)
-LEAD_WEBHOOK_URL=""
+This contains everything you need to run your app locally.
 
-# 2. Google Form Submission
-GOOGLE_FORM_POST_URL="https://docs.google.com/forms/d/1YRKRanmyPgfzHbLhn6bh6PZB-8cTffLWv9jgqdIyWLA/edit"
-GOOGLE_FORM_ENTRY_NAME="entry.1000001"
-GOOGLE_FORM_ENTRY_PHONE="entry.1000002"
-GOOGLE_FORM_ENTRY_BRIEF="entry.1000003"
+View your app in AI Studio: https://ai.studio/apps/fd548adc-3d3c-4cfb-86f1-ec2b5008b03d
 
-# 3. Secure Admin Leads Dashboard Passcode
-ADMIN_PASSCODE="admin123"
+## Run Locally
+
+**Prerequisites:**  Node.js
 
 
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

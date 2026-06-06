@@ -28,7 +28,7 @@ export function Industries() {
   ];
 
   return (
-    <section id="industries" className="py-20 px-6">
+    <section id="industries" className="py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-5xl md:text-6xl text-center mb-16 serif italic">{t.industries.title}</h2>
         

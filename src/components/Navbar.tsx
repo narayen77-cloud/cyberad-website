@@ -7,7 +7,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-brand-offwhite/80 backdrop-blur-md border-b border-brand-charcoal/5">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -30,15 +30,24 @@ export function Navbar() {
         </motion.div>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="#services" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.services}</a>
-          <a href="#industries" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.industries}</a>
-          <a href="#sample-builds" className="text-sm font-medium hover:text-brand-gold transition-colors">
-            {language === "ta" ? "சிறந்த படைப்புகள்" : language === "es" ? "Portafolio" : "Builds"}
+          <a href="#hero" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "முகப்பு" : language === "es" ? "Inicio" : "Home"}
           </a>
-          {language !== "es" && (
-            <a href="#insights" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.insights}</a>
-          )}
-          <a href="#contact" className="text-sm font-medium hover:text-brand-gold transition-colors">{t.nav.contact}</a>
+          <a href="#services" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "சேவைகள்" : language === "es" ? "Servicios" : "Services"}
+          </a>
+          <a href="#campaign" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "விளம்பரம்" : language === "es" ? "Campaña" : "Start Campaign"}
+          </a>
+          <a href="#sample-builds" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "படைப்புகள்" : language === "es" ? "Portafolio" : "Portfolio"}
+          </a>
+          <a href="#about" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "பற்றி" : language === "es" ? "Nosotros" : "About"}
+          </a>
+          <a href="#contact" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "தொடர்பு" : language === "es" ? "Contacto" : "Contact"}
+          </a>
         </div>
 
         <div className="flex items-center gap-3">
@@ -76,9 +85,12 @@ export function Navbar() {
               Español
             </button>
           </div>
-          <Button className="rounded-full px-4 sm:px-6 py-1 bg-brand-charcoal hover:bg-brand-charcoal/90 text-brand-offwhite text-xs font-bold uppercase tracking-wider">
-            {t.hero.cta}
-          </Button>
+          <a
+            href="#campaign"
+            className="hidden sm:inline-block rounded-full px-4 sm:px-6 py-2 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-brand-charcoal text-xs font-bold uppercase tracking-wider transition-all"
+          >
+            {language === "ta" ? "தொடங்கு" : language === "es" ? "Comenzar" : "Start now"}
+          </a>
         </div>
       </div>
     </nav>

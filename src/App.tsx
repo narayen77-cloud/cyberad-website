@@ -6,14 +6,17 @@
 import { LanguageProvider } from "./components/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
+import { WhatDoYouNeed } from "./components/WhatDoYouNeed";
+import { CampaignConfigurator } from "./components/CampaignConfigurator";
 import { Services } from "./components/Services";
-import { Industries } from "./components/Industries";
+import { HowItWorks } from "./components/HowItWorks";
+import { SampleBuilds } from "./components/SampleBuilds";
+import { JargonTranslator } from "./components/JargonTranslator";
+import { WhyWorkWithMe } from "./components/WhyWorkWithMe";
+import { TrialOffer } from "./components/TrialOffer";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
-import { Quote } from "./components/Quote";
-import { Insights } from "./components/Insights";
-import { SampleBuilds } from "./components/SampleBuilds";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
@@ -35,11 +38,31 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
+          {/* Section 1 — What Do You Need? (8 large outcome-driven options) */}
+          <WhatDoYouNeed />
+          
+          {/* Section 2 — Start Your Advertising Campaign (Interactive Configurator) */}
+          <CampaignConfigurator />
+
+          {/* Section: Dynamic Service Offerings */}
           <Services />
-          <Industries />
-          <Quote />
+
+          {/* Section 3 — How It Works (Timeline-based 4 steps) */}
+          <HowItWorks />
+
+          {/* Section 4 — Recent Work (Completed project screenshots) */}
           <SampleBuilds />
-          <Insights />
+
+          {/* Visual Language — Jargon to Object Translation */}
+          <JargonTranslator />
+
+          {/* Section 5 — Why Work With Me? (Outcome Positioning) */}
+          <WhyWorkWithMe />
+
+          {/* Section 6 — Small Trial Offer ( Starter pricing list with WhatsApp actions) */}
+          <TrialOffer />
+
+          {/* Clean Local Contact Form (WhatsApp / Email only, as requested) */}
           <Contact />
         </main>
         <Footer 

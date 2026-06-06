@@ -6,7 +6,7 @@ export function Footer({ onShowPrivacy }: { onShowPrivacy: () => void }) {
   const { language, t } = useLanguage();
 
   return (
-    <footer className="py-12 border-t border-brand-charcoal/5 px-6">
+    <footer className="py-12 border-t border-brand-charcoal/5 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-10">
         {/* Cyber Enterprises Digital Partner Footer Badge Preview */}
         <CyberPartnerFooter />

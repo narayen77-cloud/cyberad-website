@@ -6,7 +6,7 @@ export function Quote() {
   const { language } = useLanguage();
 
   return (
-    <section id="thirukkural" className="py-20 px-6 bg-white border-y border-brand-gold/40 relative">
+    <section id="thirukkural" className="py-20 px-4 sm:px-6 bg-white border-y border-brand-gold/40 relative">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-[3px] bg-brand-gold" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-[3px] bg-brand-gold" />
       
