@@ -5,6 +5,7 @@ import {
   Users, Globe, FileText, Palette, FileSpreadsheet, 
   Video, Bot, ShieldCheck, ChevronDown, MessageSquare 
 } from "lucide-react";
+import { trackEvent } from "../lib/tracking";
 
 interface ServiceOption {
   icon: any;
@@ -183,6 +184,30 @@ export function WhatDoYouNeed() {
     const message = encodeURIComponent(
       `Hi CyberAD, I checked your website and I need help with: ${selectedText}. Can we connect?`
     );
+
+    // Track GTM dataLayer events
+    trackEvent("lead_form_submission", "Conversions", {
+      item_name: srv.label.en,
+      sub_item: sub || "General",
+      message: selectedText,
+    });
+    trackEvent("whatsapp_click", "Engagement", {
+      click_ref: "Selection Outcome Click",
+      target_text: selectedText,
+    });
+    trackEvent("thank_you_page_view", "Conversions", {
+      path: "/thank-you",
+      title: "Thank You | Customer Inquiry",
+    });
+
+    // Alert the custom Thank You dialogue listeners
+    window.dispatchEvent(
+      new CustomEvent("lead_submitted_virtual", {
+        detail: { message: selectedText }
+      })
+    );
+
+    // Launch WhatsApp thread securely
     window.open(`https://wa.me/918925693013?text=${message}`, "_blank");
   };
 

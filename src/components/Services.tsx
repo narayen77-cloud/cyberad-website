@@ -1,6 +1,7 @@
 import { useLanguage } from "./LanguageContext";
 import { motion } from "motion/react";
 import { Target, ShoppingBag, Zap, Calendar, User, MessageSquareCode, FileText } from "lucide-react";
+import { trackEvent } from "../lib/tracking";
 
 export function Services() {
   const { language, t } = useLanguage();
@@ -46,6 +47,28 @@ export function Services() {
 
   const handleInquiry = (packageTitle: string) => {
     const message = encodeURIComponent(`Hi Cyber Enterprises, I'm interested in the premium ${packageTitle}. Can we discuss more?`);
+    
+    // GTM Audit Logs
+    trackEvent("lead_form_submission", "Conversions", {
+      item_name: `Package Deck: ${packageTitle}`,
+      category: "Growth Packages",
+    });
+    trackEvent("whatsapp_click", "Engagement", {
+      click_ref: "Explore Strategy Click",
+      package_title: packageTitle,
+    });
+    trackEvent("thank_you_page_view", "Conversions", {
+      path: "/thank-you-service",
+      title: "Thank You | Custom Growth Request",
+    });
+
+    // Alert context listeners for the Thank You modal
+    window.dispatchEvent(
+      new CustomEvent("lead_submitted_virtual", {
+        detail: { message: `Premium Pack Choice: ${packageTitle}` }
+      })
+    );
+
     window.open(`https://wa.me/918925693013?text=${message}`, '_blank');
   };
 

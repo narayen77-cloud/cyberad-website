@@ -1,5 +1,6 @@
 import { useLanguage } from "./LanguageContext";
 import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { trackEvent } from "../lib/tracking";
 
 export function Contact() {
   const { language: rawLanguage, t } = useLanguage();
@@ -39,22 +40,32 @@ export function Contact() {
                   <h4 className="text-xs font-bold uppercase tracking-wider text-brand-charcoal/40 font-mono mb-1">
                     {lang === "ta" ? "மின்னஞ்சல்" : lang === "es" ? "Correo Electrónico" : "EMAIL INQUIRIES"}
                   </h4>
-                  <a href="mailto:support@cyberad.in" className="text-base font-serif italic text-brand-charcoal hover:text-brand-gold transition-colors">
+                  <a 
+                    href="mailto:support@cyberad.in" 
+                    onClick={() => trackEvent("email_click", "Engagement", { email: "support@cyberad.in", placement: "Contact Panel" })}
+                    className="text-base font-serif italic text-brand-charcoal hover:text-brand-gold transition-colors"
+                  >
                     support@cyberad.in
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-brand-gold/10 text-brand-gold rounded-full shrink-0">
-                  <MapPin className="w-5 h-5" />
+                <div className="p-3 bg-brand-gold/10 text-brand-gold rounded-full shrink-0 items-center justify-center flex">
+                  <span 
+                    onClick={() => trackEvent("phone_click", "Engagement", { phone: "+91-89256-93013", placement: "Contact Panel Desk" })}
+                    className="cursor-pointer hover:text-brand-gold transition-all duration-300"
+                    title="Click to dial"
+                  >
+                    <MapPin className="w-5 h-5 text-brand-gold" />
+                  </span>
                 </div>
                 <div>
                   <h4 className="text-xs font-bold uppercase tracking-wider text-brand-charcoal/40 font-mono mb-1">
                     {lang === "ta" ? "தலைமையகம்" : lang === "es" ? "Sede Central" : "REGIONAL HQ"}
                   </h4>
-                  <p className="text-base text-brand-charcoal/80 font-light">
-                    {t.footer?.location || "Southern India"}
+                  <p className="text-base text-brand-charcoal/80 font-light hover:text-brand-gold transition-colors cursor-pointer" onClick={() => trackEvent("phone_click", "Engagement", { phone: "+91-89256-93013", placement: "HQ Text Tap" })}>
+                    {t.footer?.location || "Southern India"} (+91 89256 93013)
                   </p>
                 </div>
               </div>
@@ -73,7 +84,18 @@ export function Contact() {
                 href="https://wa.me/918925693013" 
                 target="_blank" 
                 rel="noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#25D366] text-white hover:bg-[#128C7E] rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm w-full justify-center sm:w-auto"
+                onClick={() => {
+                  trackEvent("whatsapp_click", "Engagement", { destination: "Contact Direct Action" });
+                  trackEvent("contact_form_submission", "Conversions", { source: "Contact Direct Action Banner" });
+                  trackEvent("thank_you_page_view", "Conversions", { path: "/thank-you-contact", title: "Thank You" });
+                  
+                  window.dispatchEvent(
+                    new CustomEvent("lead_submitted_virtual", {
+                      detail: { message: "Direct Connect Action Panel Inquiry" }
+                    })
+                  );
+                }}
+                className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#25D366] text-white hover:bg-[#128C7E] rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm w-full justify-center sm:w-auto cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
                 <span>{lang === "ta" ? "வாட்ஸ்அப் உரையாடல்" : lang === "es" ? "Hablar en WhatsApp" : "Connect Directly"}</span>
