@@ -15,7 +15,7 @@ export interface TrackingIDs {
 
 export const TRACKING_IDS: TrackingIDs = {
   gtmContainerId: "GTM-P9RMQ9CG",
-  ga4MeasurementId: "G-T2HJZ1L4M2",
+  ga4MeasurementId: "G-VWJ28W6KCV",
   metaPixelId: "283749283749283",
   googleAdsConversionId: "AW-11234567890",
   googleAdsConversionLabel: "lead_submission_conversion",
@@ -82,7 +82,7 @@ export function trackEvent(
   const firedTags: string[] = ["Google Tag Manager"];
   
   if (eventName === "page_view") {
-    firedTags.push("GA4 Config Tag (G-T2HJZ1L4M2)", "Meta Pixel Base (283749283749283)", "Clarity Base (m3v1h4n8x2)", "LinkedIn Insight Tag (5829104)");
+    firedTags.push("GA4 Config Tag (G-VWJ28W6KCV)", "Meta Pixel Base (283749283749283)", "Clarity Base (m3v1h4n8x2)", "LinkedIn Insight Tag (5829104)");
   } else if (eventName.includes("whatsapp") || eventName.includes("click") || eventName.includes("submission")) {
     firedTags.push("GA4 Event Event Tracker", "Meta Pixel Lead Event");
     if (eventName === "lead_form_submission" || eventName === "contact_form_submission") {
