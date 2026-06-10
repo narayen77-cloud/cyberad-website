@@ -76,14 +76,6 @@ export function Hero() {
               >
                 <span>{language === "ta" ? "வாட்ஸ்அப் செய்க" : language === "es" ? "Escríbenos por WhatsApp" : "WhatsApp Us"}</span>
               </a>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="rounded-full h-12 px-6 border-brand-charcoal/10 hover:bg-brand-charcoal/5 cursor-pointer text-xs md:text-sm"
-              >
-                {language === "ta" ? "விளம்பரக் கட்டணம் காண்க" : language === "es" ? "Pedir Cotización" : "Request a Quote"}
-              </Button>
             </div>
           </motion.div>
         </div>

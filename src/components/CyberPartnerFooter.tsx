@@ -44,15 +44,6 @@ export function CyberPartnerFooter() {
           <span>
             {isTamil ? "வடிவமைப்பு & டிஜிட்டல் பார்ட்னர்" : "Digital Partner & Support"}
           </span>
-          <span className="opacity-30">•</span>
-          <a 
-            href="https://cyberad.in" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-brand-gold hover:underline transition-all font-sans lowercase tracking-wide"
-          >
-            cyberad.in
-          </a>
         </div>
 
         {/* Respectful message */}

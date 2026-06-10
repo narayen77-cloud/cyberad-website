@@ -64,8 +64,8 @@ export function Contact() {
                   <h4 className="text-xs font-bold uppercase tracking-wider text-brand-charcoal/40 font-mono mb-1">
                     {lang === "ta" ? "தலைமையகம்" : lang === "es" ? "Sede Central" : "REGIONAL HQ"}
                   </h4>
-                  <p className="text-base text-brand-charcoal/80 font-light hover:text-brand-gold transition-colors cursor-pointer" onClick={() => trackEvent("phone_click", "Engagement", { phone: "+91-89256-93013", placement: "HQ Text Tap" })}>
-                    {t.footer?.location || "Southern India"} (+91 89256 93013)
+                  <p className="text-base text-brand-charcoal/80 font-light">
+                    {t.footer?.location || "Southern India"}
                   </p>
                 </div>
               </div>
