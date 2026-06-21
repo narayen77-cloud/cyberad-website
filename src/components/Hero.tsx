@@ -6,20 +6,6 @@ import { Button } from "@/components/ui/button";
 
 const carouselImages = [
   {
-    src: "/assets/hero_carousel_0.jpg",
-    alt: "Social Media Marketing",
-    title: {
-      en: "Social Media Presence",
-      ta: "சமூக ஊடக விளம்பரம்",
-      es: "Presencia en Redes Sociales"
-    },
-    desc: {
-      en: "Command authority, build community, and engage customers consistently.",
-      ta: "உங்கள் பிராண்டை நுகர்வோரிடம் கொண்டு சேர்க்கும் சமூக ஊடக கட்டமைப்பு.",
-      es: "Construya autoridad, comunidad y atraiga clientes de forma constante."
-    }
-  },
-  {
     src: "/assets/hero_carousel_1.jpg",
     alt: "Blood Test Vial",
     title: {
@@ -31,6 +17,20 @@ const carouselImages = [
       en: "High-impact lead generation campaigns built for specialized clinics.",
       ta: "மருத்துவமனைகள் மற்றும் லேப்களுக்கான பிரத்யேக விளம்பர உத்திகள்.",
       es: "Campañas de generación de leads de alto impacto para clínicas especializadas."
+    }
+  },
+  {
+    src: "/assets/hero_carousel_0.jpg",
+    alt: "Social Media Marketing",
+    title: {
+      en: "Social Media Presence",
+      ta: "சமூக ஊடக விளம்பரம்",
+      es: "Presencia en Redes Sociales"
+    },
+    desc: {
+      en: "Command authority, build community, and engage customers consistently.",
+      ta: "உங்கள் பிராண்டை நுகர்வோரிடம் கொண்டு சேர்க்கும் சமூக ஊடக கட்டமைப்பு.",
+      es: "Construya autoridad, comunidad y atraiga clientes de forma constante."
     }
   },
   {
