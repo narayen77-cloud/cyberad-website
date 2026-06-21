@@ -1,5 +1,5 @@
 import { useLanguage } from "./LanguageContext";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { trackEvent } from "../lib/tracking";
 
 export function Contact() {
@@ -71,36 +71,7 @@ export function Contact() {
               </div>
             </div>
 
-            {/* Micro WhatsApp Direct CTA Banner */}
-            <div className="p-6 bg-[#25D366]/5 rounded-3xl border border-[#25D366]/10 space-y-4">
-              <p className="text-xs font-light text-brand-charcoal/70 leading-relaxed">
-                {lang === "ta" 
-                  ? "உடனடி பதிலுக்கும், எங்களோடு நேரடி கலந்துரையாடலுக்கும் கீழே உள்ள வாட்ஸ்அப் பட்டனை சொடுக்கவும்." 
-                  : lang === "es" 
-                  ? "¿Tiene prisa? Conéctese con nuestro estratega directamente en un toque a través de WhatsApp." 
-                  : "Prefer instant communication? Start a live dialog with our coordinator instantly via WhatsApp."}
-              </p>
-              <a 
-                href="https://wa.me/918925693013" 
-                target="_blank" 
-                rel="noreferrer"
-                onClick={() => {
-                  trackEvent("whatsapp_click", "Engagement", { destination: "Contact Direct Action" });
-                  trackEvent("contact_form_submission", "Conversions", { source: "Contact Direct Action Banner" });
-                  trackEvent("thank_you_page_view", "Conversions", { path: "/thank-you-contact", title: "Thank You" });
-                  
-                  window.dispatchEvent(
-                    new CustomEvent("lead_submitted_virtual", {
-                      detail: { message: "Direct Connect Action Panel Inquiry" }
-                    })
-                  );
-                }}
-                className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#25D366] text-white hover:bg-[#128C7E] rounded-full text-xs font-bold uppercase tracking-widest transition-all shadow-sm w-full justify-center sm:w-auto cursor-pointer"
-              >
-                <MessageCircle className="w-4 h-4 fill-current" />
-                <span>{lang === "ta" ? "வாட்ஸ்அப் உரையாடல்" : lang === "es" ? "Hablar en WhatsApp" : "Connect Directly"}</span>
-              </a>
-            </div>
+
           </div>
 
         </div>

@@ -30,9 +30,6 @@ export function Footer({ onShowPrivacy }: { onShowPrivacy: () => void }) {
               <a href="https://www.instagram.com/cybernarayanan?igsh=aDFqamdra3lkYTZ4" target="_blank" rel="noreferrer" className="hover:text-brand-gold transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://wa.me/918925693013" target="_blank" rel="noreferrer" className="hover:text-brand-gold transition-colors">
-                <MessageCircle className="w-5 h-5" />
-              </a>
               <a href="https://www.cyberad.in/" target="_blank" rel="noreferrer" className="hover:text-brand-gold transition-colors">
                 <Globe className="w-5 h-5" />
               </a>
