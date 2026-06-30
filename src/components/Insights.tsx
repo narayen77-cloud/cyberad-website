@@ -483,7 +483,7 @@ export function Insights() {
                   </div>
                   <button
                     onClick={() => setSelectedCategory("All")}
-                    className="px-6 py-2.5 bg-brand-charcoal text-white hover:bg-brand-gold hover:text-brand-charcoal rounded-full text-[11px] font-bold uppercase tracking-widest transition-all duration-300"
+                    className="px-6 py-2.5 bg-brand-charcoal text-white hover:bg-brand-gold hover:text-white rounded-full text-[11px] font-bold uppercase tracking-widest transition-all duration-300"
                   >
                     {language === 'ta' ? "அனைத்து கட்டுரைகளையும் காட்டு" : (language === 'es' ? "Ver todas las discusiones" : "View All Discussions")}
                   </button>
@@ -674,7 +674,7 @@ export function Insights() {
                 <div className="flex flex-col sm:flex-row justify-center gap-4 relative">
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="px-8 py-4 bg-brand-gold text-brand-charcoal rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-offwhite transition-all cursor-pointer"
+                    className="px-8 py-4 bg-brand-gold text-brand-offwhite rounded-full text-xs font-bold uppercase tracking-widest hover:bg-brand-gold/80 transition-all cursor-pointer"
                   >
                     {language === 'ta' ? "தொகுப்புகளைப் பாருங்கள்" : (language === 'es' ? "Explorar Servicios y Paquetes" : "Explore Services & Packages")}
                   </button>

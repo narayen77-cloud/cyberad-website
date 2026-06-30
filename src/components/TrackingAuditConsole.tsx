@@ -94,7 +94,7 @@ export function TrackingAuditConsole() {
             <Cpu className="w-4 h-4 animate-pulse text-brand-gold" />
             <span>🔍 GTM & ANALYTICS AUDIT CONSOLE</span>
             {events.length > 0 && (
-              <span className="bg-brand-gold text-brand-charcoal px-1.5 py-0.5 rounded-full font-sans font-bold text-[9px] ml-1">
+              <span className="bg-brand-gold text-white px-1.5 py-0.5 rounded-full font-sans font-bold text-[9px] ml-1">
                 {events.length}
               </span>
             )}
@@ -179,7 +179,7 @@ export function TrackingAuditConsole() {
                     <button
                       onClick={handleVerifyNow}
                       disabled={isVerifying}
-                      className="px-4 py-2 bg-brand-gold text-brand-charcoal hover:bg-white font-mono text-xs font-bold uppercase rounded-lg transition-all flex items-center gap-1.5 disabled:opacity-50 cursor-pointer"
+                      className="px-4 py-2 bg-brand-gold text-white hover:bg-white hover:text-brand-charcoal font-mono text-xs font-bold uppercase rounded-lg transition-all flex items-center gap-1.5 disabled:opacity-50 cursor-pointer"
                     >
                       <RefreshCw className={`w-3.5 h-3.5 ${isVerifying ? "animate-spin" : ""}`} />
                       {isVerifying ? "AUDITING..." : "RE-VERIFY NOW"}
@@ -250,7 +250,7 @@ export function TrackingAuditConsole() {
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                       <button
                         onClick={() => handleSimulateEvent("contact_form_submission", "Conversions", { name: "Test Lead", type: "Email Inquiry" })}
-                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-brand-charcoal text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
+                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-white text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
                       >
                         <span>Contact Sub</span>
                         <Play className="w-3 h-3 text-emerald-400 shrink-0 select-none" />
@@ -258,7 +258,7 @@ export function TrackingAuditConsole() {
                       
                       <button
                         onClick={() => handleSimulateEvent("lead_form_submission", "Conversions", { selected_service: "Automated WhatsApp Bot Inquiry" })}
-                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-brand-charcoal text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
+                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-white text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
                       >
                         <span>Lead Sub</span>
                         <Play className="w-3 h-3 text-emerald-400 shrink-0 select-none" />
@@ -266,7 +266,7 @@ export function TrackingAuditConsole() {
 
                       <button
                         onClick={() => handleSimulateEvent("whatsapp_click", "Engagement", { destination: "https://wa.me/918925693013" })}
-                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-brand-charcoal text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
+                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-white text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
                       >
                         <span>WhatsApp Click</span>
                         <Play className="w-3 h-3 text-emerald-400 shrink-0 select-none" />
@@ -274,7 +274,7 @@ export function TrackingAuditConsole() {
 
                       <button
                         onClick={() => handleSimulateEvent("phone_click", "Engagement", { phone: "+918925693013" })}
-                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-brand-charcoal text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
+                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-white text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
                       >
                         <span>Phone Click</span>
                         <Play className="w-3 h-3 text-emerald-400 shrink-0 select-none" />
@@ -282,7 +282,7 @@ export function TrackingAuditConsole() {
 
                       <button
                         onClick={() => handleSimulateEvent("email_click", "Engagement", { email: "support@cyberad.in" })}
-                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-brand-charcoal text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
+                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-white text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
                       >
                         <span>Email Click</span>
                         <Play className="w-3 h-3 text-emerald-400 shrink-0 select-none" />
@@ -290,7 +290,7 @@ export function TrackingAuditConsole() {
 
                       <button
                         onClick={() => handleSimulateEvent("thank_you_page_view", "Conversions", { virtual_url: "https://cyberad.in/thank-you" })}
-                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-brand-charcoal text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
+                        className="py-2 px-3 bg-white/5 hover:bg-brand-gold hover:text-white text-white rounded font-mono text-[10px] text-left transition-colors cursor-pointer flex items-center justify-between"
                       >
                         <span>Thank You Page</span>
                         <Play className="w-3 h-3 text-emerald-400 shrink-0 select-none" />

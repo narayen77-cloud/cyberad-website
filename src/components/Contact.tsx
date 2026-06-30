@@ -18,8 +18,20 @@ export function Contact() {
             <span className="text-[10px] font-mono font-bold tracking-[0.3em] text-brand-gold uppercase block">
               {lang === "ta" ? "தொடர்பு விவரங்கள்" : lang === "es" ? "CANAL DIRECTO" : "DIRECT CHANNEL"}
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl serif italic text-brand-charcoal tracking-tight leading-tight">
-              {t.contact?.title || "Let's Scale Your Business"}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl serif font-normal text-brand-charcoal tracking-tight leading-tight">
+              {lang === "en" ? (
+                <>
+                  Accelerate <span className="text-brand-gold font-serif italic">Property Sales</span>
+                </>
+              ) : lang === "ta" ? (
+                <>
+                  உங்கள் சொத்து <span className="text-brand-gold font-serif italic">விற்பனையை உயர்த்துவோம்</span>
+                </>
+              ) : (
+                <>
+                  Acelere sus <span className="text-brand-gold font-serif italic">Ventas de Propiedades</span>
+                </>
+              )}
             </h2>
             <p className="text-base text-brand-charcoal/60 font-light leading-relaxed">
               We don't just run advertising campaigns. We craft end-to-end, high-performance customer acquisitions and intelligent messaging pipelines designed to scale your business sustainably.

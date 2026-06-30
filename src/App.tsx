@@ -6,10 +6,8 @@
 import { LanguageProvider } from "./components/LanguageContext";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
-import { WhatDoYouNeed } from "./components/WhatDoYouNeed";
-import { HowItWorks } from "./components/HowItWorks";
-import { SampleBuilds } from "./components/SampleBuilds";
 import { WhyWorkWithMe } from "./components/WhyWorkWithMe";
+import { FeaturedProject } from "./components/FeaturedProject";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
@@ -64,17 +62,12 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
-          {/* Section 1 — What Do You Need? (8 large outcome-driven options) */}
-          <WhatDoYouNeed />
-          
-          {/* Section 3 — How It Works (Timeline-based 4 steps) */}
-          <HowItWorks />
-
-          {/* Section 4 — Recent Work (Completed project screenshots) */}
-          <SampleBuilds />
 
           {/* Section 5 — Why Work With Me? (Outcome Positioning) */}
           <WhyWorkWithMe />
+
+          {/* Section 6 — Case Study / Featured Portfolio */}
+          <FeaturedProject />
 
           {/* Clean Local Contact Form (WhatsApp / Email only, as requested) */}
           <Contact />
@@ -134,7 +127,7 @@ export default function App() {
 
                 <button
                   onClick={() => setShowThankYou(false)}
-                  className="w-full py-3.5 bg-brand-charcoal hover:bg-brand-gold hover:text-brand-charcoal text-white rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer"
+                  className="w-full py-3.5 bg-brand-charcoal hover:bg-brand-gold hover:text-white text-white rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer"
                 >
                   Return to Cyber Enterprises
                 </button>

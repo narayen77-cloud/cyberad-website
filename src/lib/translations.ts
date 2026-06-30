@@ -3,98 +3,100 @@ export const translations = {
     nav: {
       services: "Services",
       about: "About",
-      industries: "Industries",
+      industries: "Sectors",
       insights: "Insights",
       contact: "Contact",
     },
     hero: {
-      title: "Helping Traditional Businesses Grow Using Modern Digital Systems.",
-      subtitle: "We empower local enterprises with high-impact automation, multi-page websites, and strategic marketing built to scale your revenue.",
-      cta: "Get Started",
-      technicalGap: "DIGITAL GROWTH PARTNER",
+      title: "Sell. Buy. Rent. Smarter.",
+      subheading: "Digital Marketing & Lead Generation Exclusively for Real Estate",
+      description: "Helping builders, developers, agents, and property owners reach qualified buyers, tenants, and investors through technology-driven marketing.",
+      ctaPrimary: "Sell My Property",
+      ctaSecondary: "View Sample Project",
+      technicalGap: "REAL ESTATE DIGITAL PARTNER",
     },
     services: {
-      title: "Strategy Packages",
-      cta: "Inquire on WhatsApp",
+      title: "Lead Generation Solutions",
+      cta: "Inquire Now",
       socialMedia: {
-        title: "Social Media Presence",
-        description: "For brands focusing on visibility, authority, and consistent social media branding."
+        title: "Social Ads",
+        description: "Meta & Google campaigns built for real estate buyers."
       },
       marketing: {
-        title: "Marketing Growth",
-        description: "Pure lead generation. High-impact campaigns designed to fill your sales pipeline."
+        title: "Growth Systems",
+        description: "Pure property sales funnel optimization."
       },
       ecommerce: {
-        title: "Sales & E-commerce",
-        description: "Direct sales tracking, checkout optimization, and lead conversion for retail brands."
+        title: "Real Estate Portal Sync",
+        description: "Sync 99Acres and MagicBricks leads instantly."
       },
       automation: {
-        title: "Messaging Automation",
-        description: "WhatsApp, Messenger, and Telegram systems that handle leads while you sleep."
+        title: "WhatsApp Floor Plan Assistant",
+        description: "Deliver pricing, brochures, and layout PDFs 24/7."
       },
       event: {
-        title: "Event-Based Mastery",
-        description: "End-to-end funnels for launches, shows, and exhibitions. Turn crowd into customers."
+        title: "Project Launch Funnels",
+        description: "Complete end-to-end launch marketing for new layouts."
       },
       personal: {
-        title: "Personal Branding",
-        description: "For founders, consultants, educators, and professionals building authority online."
+        title: "Developer Authority",
+        description: "Build premium digital presence for real estate developers."
       },
       pitchDeck: {
-        title: "Investor Pitch Deck & Growth",
-        description: "A premium, high-conversion strategic master deck carefully designed to secure venture funding, capital, and elite institutional partnerships."
+        title: "HNI & JV Presentation Decks",
+        description: "Premium builder pitch decks designed to close joint-ventures."
       },
       trial: {
-        title: "14-Day Trial",
-        description: "A low-risk showcase of our results. See the impact of our strategy in two weeks."
+        title: "Lead Trial Offer",
+        description: "Experience the volume and quality of our lead engine."
       }
     },
     industries: {
-      title: "Sectors We Specialize In",
-      education: "Leading Educational Institutions",
-      solar: "Solar & Renewable Energy",
-      premium: "Premium Retail & Services",
-      smallBusiness: "Small & Local Businesses",
+      title: "Property Segments We Master",
+      education: "Premium Residential Townships",
+      solar: "Luxury Gated Communities & Villas",
+      premium: "Commercial office spaces & retail hubs",
+      smallBusiness: "High-Yield Plots & Investment Lands",
     },
     aiTool: {
-      title: "Instant Strategy Generator",
-      prompt: "Select your industry to see how AI can transform your reach.",
-      button: "Generate Strategy",
-      loading: "Crafting your strategy...",
+      title: "Instant Lead Blueprint Generator",
+      prompt: "Select your real estate segment to see our lead acquisition model.",
+      button: "Generate Blueprint",
+      loading: "Crafting your lead model...",
     },
     contact: {
-      title: "Let's Scale Your Business",
+      title: "Accelerate Property Sales",
       name: "Name",
       email: "Email",
       message: "Message",
       submit: "Send Message",
     },
     builds: {
-      title: "Featured Realizations",
-      subtitle: "High-performance digital products engineered to solve complex delivery and scale challenges.",
-      visit: "Launch Live Site",
+      title: "Featured Real Estate Campaigns",
+      subtitle: "High-converting digital systems engineered to deliver qualified site visits and maximize developer bookings.",
+      visit: "Launch Project Site",
       categories: {
-        education: "Healthcare Education",
-        solar: "Clean Energy Systems",
-        industrial: "Aesthetics & Wellness",
-        admission: "Institutional Admissions"
+        education: "Residential Townships",
+        solar: "Luxury Gated Communities",
+        industrial: "Eco-Farms & Villas",
+        admission: "Commercial Spaces"
       }
     },
     leadForm: {
-      title: "Initiate Your Consultation",
-      subtitle: "Fill out this brief form, and our lead strategist will analyze your requirements within 4 hours.",
+      title: "Acquire Real Estate Buyer Leads",
+      subtitle: "Fill out this brief form, and our lead strategist will analyze your requirements and reach out within 4 hours.",
       name: "Your Name",
-      number: "WhatsApp / Contact Number",
-      detail: "Small Detail or Brief (Optional)",
+      number: "Contact Number / WhatsApp",
+      detail: "Property Location & Budget Details (Optional)",
       submit: "Submit Consultation Request",
-      successTitle: "Submission Successful",
-      successMsg: "Thank you! Our lead strategist will get in touch with you shortly. You can also send this request directly via WhatsApp for instant tracking.",
+      successTitle: "Lead Registered Successfully",
+      successMsg: "Thank you! Our lead strategist will get in touch with you shortly to analyze your marketing needs.",
       successCta: "Send via WhatsApp Now",
-      methodLabel: "Select Submission Delivery Method:",
+      methodLabel: "Select Delivery Method:",
       methodWhatsapp: "WhatsApp Secure Sync (Recommended)",
-      methodInternal: "Private Website Submission",
-      successInternalTitle: "Consultation Registered",
-      successInternalMsg: "Success! Your consultation request has been stored securely in our system database. Our strategist will review your requirements and reach out via Call or Email within 4 hours.",
+      methodInternal: "Private Secure Server Submit",
+      successInternalTitle: "Request Registered",
+      successInternalMsg: "Success! Your request has been stored securely in our system database. Our strategist will review your requirements and reach out within 4 hours.",
       emailFallbackCta: "Send via Direct Email",
       errors: {
         name: "Please enter your name",
@@ -103,7 +105,7 @@ export const translations = {
     },
     footer: {
       rights: "© 2026 Cyber Enterprises. All rights reserved.",
-      location: "Southern India | Global Presence",
+      location: "Southern India | Real Estate Growth Support",
       privacy: "Privacy Policy",
       refund: "Refund Policy"
     }
@@ -112,98 +114,100 @@ export const translations = {
     nav: {
       services: "சேவைகள்",
       about: "எங்களை பற்றி",
-      industries: "துறைகள்",
+      industries: "பிரிவுகள்",
       insights: "நுண்ணறிவு",
       contact: "தொடர்பு",
     },
     hero: {
-      title: "பாரம்பரியத்திற்கும் நவீன வளர்ச்சிக்குமான இடைவெளியைக் குறைப்போம்.",
-      subtitle: "பாரம்பரிய வணிகங்கள் நவீன டிஜிட்டல் அமைப்புகள், ஆட்டோமேஷன் மற்றும் உத்திசார் மார்க்கெட்டிங் மூலம் வளர உதவுகிறோம்.",
-      cta: "தொடங்குங்கள்",
-      technicalGap: "தொழில்நுட்ப இடைவெளி",
+      title: "விற்க. வாங்க. வாடகைக்கு விட. மிகச்சிறப்பாக.",
+      subheading: "ரியல் எஸ்டேட்டிற்கான பிரத்யேக டிஜிட்டல் மார்க்கெட்டிங் மற்றும் லீட் ஜெனரேஷன்",
+      description: "பில்டர்கள், டெவலப்பர்கள், ஏஜெண்டுகள் மற்றும் சொத்து உரிமையாளர்களுக்கு தொழில்நுட்பம் சார்ந்த மார்க்கெட்டிங் மூலம் தகுதியான வாங்குபவர்கள், வாடகைதாரர்கள் மற்றும் முதலீட்டாளர்களை அடைய உதவுகிறோம்.",
+      ctaPrimary: "என் சொத்தை விற்க",
+      ctaSecondary: "மாதிரி திட்டத்தைக் காண்க",
+      technicalGap: "ரியல் எஸ்டேட் டிஜிட்டல் வளர்ச்சி",
     },
     services: {
-      title: "உத்தி தொகுப்புகள்",
-      cta: "வாட்ஸ்அப்பில் விசாரிக்கவும்",
+      title: "லீட் ஜெனரேஷன் தீர்வுகள்",
+      cta: "இப்போதே விசாரிக்கவும்",
       socialMedia: {
-        title: "சமூக ஊடக இருப்பு",
-        description: "விளம்பரம் மற்றும் நிலையான சமூக ஊடக வர்த்தகத்தில் கவனம் செலுத்தும் பிராண்டுகளுக்கு."
+        title: "சமூக விளம்பரங்கள்",
+        description: "வாங்குபவர்களுக்கான மெட்டா & கூகுள் பிரச்சாரங்கள்."
       },
       marketing: {
-        title: "வளர்ச்சி சந்தைப்படுத்தல்",
-        description: "விற்பனை வாய்ப்புகளை உருவாக்கும் உயர் தாக்க பிரச்சாரங்கள்."
+        title: "வளர்ச்சி அமைப்புகள்",
+        description: "சொத்து விற்பனை உகப்பாக்கம்."
       },
       ecommerce: {
-        title: "விற்பனை மற்றும் ஈ-காமர்ஸ்",
-        description: "நேரடி விற்பனை கண்காணிப்பு மற்றும் சில்லறை பிராண்டுகளுக்கான விற்பனை மேம்படுத்தல்."
+        title: "போர்டல் ஒத்திசைவு",
+        description: "99Acres மற்றும் MagicBricks லீட்களை ஒத்திசைக்கவும்."
       },
       automation: {
-        title: "செய்தி ஆட்டோமேஷன்",
-        description: "நீங்கள் உறங்கும் போதும் வாடிக்கையாளர்களைக் கையாளும் வாட்ஸ்அப் மற்றும் டெலிகிராம் அமைப்புகள்."
+        title: "வாட்ஸ்அப் வரைபட உதவியாளர்",
+        description: "விலைப்பட்டியல் மற்றும் வரைபட PDFகளை 24/7 வழங்கவும்."
       },
       event: {
-        title: "நிகழ்வு சார்ந்த நிபுணத்துவம்",
-        description: "நிகழ்ச்சிகள் மற்றும் கண்காட்சிகளுக்கான இறுதி-முதல்-இறுதி சந்தைப்படுத்தல்."
+        title: "திட்ட வெளியீட்டு புனல்கள்",
+        description: "புதிய தளவமைப்புகளுக்கான வெளியீட்டு சந்தைப்படுத்தல்."
       },
       personal: {
-        title: "தனிநபர் பிராண்டிங்",
-        description: "ஆன்லைனில் தங்களது ஆளுமையை வளர்க்கும் நிறுவனர்கள், ஆலோசகர்கள், கல்வியாளர்கள் மற்றும் நிபுணர்களுக்கு."
+        title: "டெவலப்பர் அங்கீகாரம்",
+        description: "ரியல் எஸ்டேட் உருவாக்குநர்களுக்கான பிரீமியம் தளம்."
       },
       pitchDeck: {
-        title: "முதலீட்டாளர் பிட்ச் டெக் உத்தி",
-        description: "மூலதன நிதி, பெரும் முதலீடுகள் மற்றும் உயர்தர கூட்டாண்மைகளை ஈர்ப்பதற்கான பிரீமியம் விளக்க உத்தித் தொகுப்பு."
+        title: "HNI மற்றும் JV விளக்கக்காட்சிகள்",
+        description: "கூட்டு முயற்சிகளை முடிக்க உதவும் விளக்கப்படங்கள்."
       },
       trial: {
-        title: "14-நாள் சோதனை",
-        description: "எங்கள் முடிவுகளின் குறைந்த அபாயக் காட்சி. இரண்டு வாரங்களில் மாற்றத்தைக் காணுங்கள்."
+        title: "லீட் சோதனை சலுகை",
+        description: "எங்கள் லீட் இன்ஜினின் தரம் மற்றும் அளவை அனுபவிக்கவும்."
       }
     },
     industries: {
-      title: "நாங்கள் நிபுணத்துவம் பெற்ற துறைகள்",
-      education: "முன்னணி கல்வி நிறுவனங்கள்",
-      solar: "சூரிய சக்தி மற்றும் புதுப்பிக்கத்தக்க ஆற்றல்",
-      premium: "பிரீமியம் சில்லறை மற்றும் சேவைகள்",
-      smallBusiness: "சிறு மற்றும் உள்ளூர் வணிகங்கள்",
+      title: "நாங்கள் நிபுணத்துவம் பெற்ற சொத்துப் பிரிவுகள்",
+      education: "முன்னணி குடியிருப்பு டவுன்ஷிப்புகள்",
+      solar: "சொகுசு வில்லாக்கள் & மனைகள்",
+      premium: "வணிக கட்டிடங்கள் & கடைகள்",
+      smallBusiness: "விவசாய நிலங்கள் & முதலீட்டு மனைகள்",
     },
     aiTool: {
-      title: "உடனடி உத்தி ஜெனரேட்டர்",
-      prompt: "உங்கள் தொழிலைத் தேர்ந்தெடுத்து AI உங்கள் வளர்ச்சியை எவ்வாறு மாற்றும் என்று பாருங்கள்.",
-      button: "உத்தியை உருவாக்கு",
-      loading: "உங்கள் உத்திகளை உருவாக்குகிறோம்...",
+      title: "உடனடி லீட் புளூபிரிண்ட் ஜெனரேட்டர்",
+      prompt: "எங்கள் லீட் கையகப்படுத்தல் மாதிரியைக் காண சொத்துப் பிரிவைத் தேர்ந்தெடுக்கவும்.",
+      button: "புளூபிரிண்ட் உருவாக்கு",
+      loading: "உங்கள் லீட் மாடலை உருவாக்குகிறோம்...",
     },
     contact: {
-      title: "உங்கள் வணிகத்தை உயர்த்துவோம்",
+      title: "உங்கள் சொத்து விற்பனையை உயர்த்துவோம்",
       name: "பெயர்",
       email: "மின்னஞ்சல்",
       message: "செய்தி",
       submit: "அனுப்புக",
     },
     builds: {
-      title: "சிறந்த படைப்புகள்",
-      subtitle: "கவனத்தை ஈர்த்து வணிக வெற்றியாக மாற்றும் அதிவேக டிஜிட்டல் அமைப்புகள்.",
-      visit: "இணையதளத்தைப் பார்க்க",
+      title: "சிறந்த ரியல் எஸ்டேட் படைப்புகள்",
+      subtitle: "வாங்குபவர்களின் நேரடி வருகைகளை உறுதி செய்யும் மற்றும் சொத்து விற்பனையை உயர்த்தும் அதிவேக டிஜிட்டல் அமைப்புகள்.",
+      visit: "திட்ட தளத்தைப் பார்க்க",
       categories: {
-        education: "சுகாதாரக் கல்வி",
-        solar: "சூரிய மின்சக்தி",
-        industrial: "அழகியல் & சருமப் பராமரிப்பு",
-        admission: "பள்ளி சேர்க்கை"
+        education: "குடியிருப்பு டவுன்ஷிப்புகள்",
+        solar: "சொகுசு வில்லாக்கள்",
+        industrial: "விவசாய நிலங்கள்",
+        admission: "வணிக வளாகங்கள்"
       }
     },
     leadForm: {
-      title: "உடனடி ஆலோசனையைத் தொடங்குங்கள்",
+      title: "வாங்குபவர்களின் லீட்ஸ் பெறுக",
       subtitle: "இந்த எளிய படிவத்தை நிரப்பவும். எங்கள் தலைமை உத்தியாளர் 4 மணி நேரத்திற்குள் உங்களைத் தொடர்புகொள்கிறார்.",
       name: "உங்கள் பெயர்",
-      number: "வாட்ஸ்அப் / தொடர்பு எண்",
-      detail: "கூடுதல் தகவல் அல்லது சுருக்கம் (விருப்பம்)",
+      number: "தொடர்பு எண் / வாட்ஸ்அப்",
+      detail: "சொத்து இருப்பிடம் & பட்ஜெட் விவரங்கள் (விருப்பம்)",
       submit: "கோரிக்கையை சமர்ப்பிக்கவும்",
       successTitle: "வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது",
-      successMsg: "நன்றி! எங்கள் உத்தியாளர் விரைவில் உங்களைத் தொடர்புகொள்வார். விரைவான பதிலுக்கு இந்தத் தகவலை வாட்ஸ்அப்பிலும் நேரடியாக அனுப்பலாம்.",
+      successMsg: "நன்றி! எங்கள் உத்தியாளர் விரைவில் உங்களைத் தொடர்புகொள்வார். உங்களது விற்பனைத் திட்டங்களை வகுக்க உதவுவார்.",
       successCta: "வாட்ஸ்அப்பில் உடனடியாக அனுப்பவும்",
       methodLabel: "சமர்ப்பிக்கும் முறையைத் தேர்ந்தெடுக்கவும்:",
       methodWhatsapp: "வாட்ஸ்அப் நேரடி ஒத்திசைவு (பரிந்துரைக்கப்படுகிறது)",
       methodInternal: "வலைத்தள உட்சேர்க்கை (தனியுரிமை)",
-      successInternalTitle: "ஆலோசனை பதிவு செய்யப்பட்டது",
-      successInternalMsg: "வெற்றி! உங்களின் ஆலோசனை கோரிக்கை எங்கள் தளத்தில் பாதுகாப்பாக சேமிக்கப்பட்டது. எங்களின் தலைமை உத்தியாளர் 4 மணி நேரத்திற்குள் மின்னஞ்சல் அல்லது தொலைபேசி மூலம் உங்களைத் தொடர்புகொள்கவார்.",
+      successInternalTitle: "கோரிக்கை பதிவு செய்யப்பட்டது",
+      successInternalMsg: "வெற்றி! உங்களின் கோரிக்கை எங்கள் தளத்தில் பாதுகாப்பாக சேமிக்கப்பட்டது. எங்களின் தலைமை உத்தியாளர் 4 மணி நேரத்திற்குள் உங்களைத் தொடர்புகொள்கிறார்.",
       emailFallbackCta: "மின்னஞ்சல் மூலம் நேரடியாக அனுப்ப",
       errors: {
         name: "தயவுசெய்து உங்கள் பெயரை உள்ளிடவும்",
@@ -212,7 +216,7 @@ export const translations = {
     },
     footer: {
       rights: "© 2026 சைபர் என்டர்பிரைசஸ். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
-      location: "தென்னிந்தியா | உலகளாவிய இருப்பு",
+      location: "தென்னிந்தியா | ரியல் எஸ்டேட் வளர்ச்சி ஆதரவு",
       privacy: "தனியுரிமைக் கொள்கை",
       refund: "திரும்பப் பெறும் கொள்கை"
     }
@@ -221,98 +225,100 @@ export const translations = {
     nav: {
       services: "Servicios",
       about: "Nosotros",
-      industries: "Industrias",
+      industries: "Sectores",
       insights: "Artículos",
       contact: "Contacto",
     },
     hero: {
-      title: "Cerrando la brecha entre el legado y la gran escala.",
-      subtitle: "Ayudamos a las empresas tradicionales a crecer utilizando sistemas digitales modernos, automatización y marketing estratégico.",
-      cta: "Comenzar",
-      technicalGap: "La Brecha que Superamos",
+      title: "Venda. Compre. Alquile. Más inteligente.",
+      subheading: "Marketing Digital y Generación de Prospectos Exclusivo para Bienes Raíces",
+      description: "Ayudamos a constructores, desarrolladores, agentes y propietarios de viviendas a llegar a compradores, inquilinos e inversores calificados mediante marketing basado en tecnología.",
+      ctaPrimary: "Vender Mi Propiedad",
+      ctaSecondary: "Ver Proyecto de Muestra",
+      technicalGap: "SOCIO DIGITAL INMOBILIARIO",
     },
     services: {
-      title: "Paquetes de Estrategia",
-      cta: "Consultar en WhatsApp",
+      title: "Soluciones de Captación de Clientes",
+      cta: "Consultar Ahora",
       socialMedia: {
-        title: "Presencia en Redes Sociales",
-        description: "Para marcas enfocadas en visibilidad, autoridad y un branding constante en redes sociales."
+        title: "Anuncios Sociales",
+        description: "Campañas en Meta y Google diseñadas para compradores de real estate."
       },
       marketing: {
-        title: "Crecimiento de Marketing",
-        description: "Generación pura de leads. Campañas de alto impacto diseñadas para llenar su canal de ventas."
+        title: "Sistemas de Crecimiento",
+        description: "Optimización pura del embudo de ventas de propiedades."
       },
       ecommerce: {
-        title: "Ventas y Comercio Electrónico",
-        description: "Seguimiento directo de ventas, optimización de pagos y conversión de leads para marcas minoristas."
+        title: "Sincronización de Portales",
+        description: "Sincronice prospectos de portales inmobiliarios al instante."
       },
       automation: {
-        title: "Automatización de Mensajería",
-        description: "Sistemas de WhatsApp, Messenger y Telegram que gestionan clientes potenciales mientras duerme."
+        title: "Asistente de WhatsApp de Planos",
+        description: "Entregue precios, folletos y PDFs de distribución las 24 horas."
       },
       event: {
-        title: "Maestría en Eventos",
-        description: "Embudos de principio a fin para lanzamientos, espectáculos y exposiciones. Convierta multitudes en clientes."
+        title: "Embudos de Lanzamiento de Proyectos",
+        description: "Marketing de lanzamiento integral para nuevos desarrollos de terrenos."
       },
       personal: {
-        title: "Marca Personal",
-        description: "Para fundadores, consultores, educadores y profesionales que construyen autoridad en línea."
+        title: "Autoridad del Desarrollador",
+        description: "Construya presencia digital premium para desarrolladores inmobiliarios."
       },
       pitchDeck: {
-        title: "Pitch Deck e Investor Pack",
-        description: "Una presentación estratégica premium de alta conversión diseñada meticulosamente para asegurar rondas de capital de riesgo y alianzas de élite."
+        title: "Decks de Presentación para HNI y JV",
+        description: "Presentaciones premium para constructoras diseñadas para cerrar acuerdos de coinversión."
       },
       trial: {
-        title: "Prueba de 14 días",
-        description: "Una muestra de bajo riesgo de nuestros resultados. Vea el impacto de nuestra estrategia en dos semanas."
+        title: "Prueba de Prospectos",
+        description: "Experimente el volumen y la calidad de nuestro motor de leads."
       }
     },
     industries: {
-      title: "Sectores en los que nos especializamos",
-      education: "Instituciones Educativas Líderes",
-      solar: "Energía Solar y Renovable",
-      premium: "Venta Minorista y Servicios Premium",
-      smallBusiness: "Pequeñas Empresas y Negocios Locales",
+      title: "Sectores Inmobiliarios que Dominamos",
+      education: "Desarrollos Residenciales y Condominios",
+      solar: "Comunidades Privadas y Villas de Lujo",
+      premium: "Espacios de Oficina y Centros Comerciales",
+      smallBusiness: "Terrenos de Inversión y Parcelas de Alto Rendimiento",
     },
     aiTool: {
-      title: "Generador de Estrategia Instantáneo",
-      prompt: "Seleccione su industria para ver cómo la IA puede transformar su alcance.",
-      button: "Generar Estrategia",
-      loading: "Diseñando su estrategia...",
+      title: "Generador de Blueprint de Prospectos",
+      prompt: "Seleccione su sector inmobiliario para ver nuestro modelo de captación de leads.",
+      button: "Generar Blueprint",
+      loading: "Diseñando su modelo de leads...",
     },
     contact: {
-      title: "Escalemos su Negocio",
+      title: "Acelere sus Ventas de Propiedades",
       name: "Nombre",
       email: "Correo electrónico",
       message: "Mensaje",
       submit: "Enviar Mensaje",
     },
     builds: {
-      title: "Sitios Desarrollados",
-      subtitle: "Sistemas digitales de alto rendimiento diseñados para convertir la atención en autoridad de mercado.",
-      visit: "Ver Sitio Web",
+      title: "Campañas Inmobiliarias Destacadas",
+      subtitle: "Sistemas digitales de alto rendimiento diseñados para garantizar visitas a obra y maximizar reservas de desarrolladores.",
+      visit: "Ver Sitio del Proyecto",
       categories: {
-        education: "Educación de la Salud",
-        solar: "Sistemas de Energía Solar",
-        industrial: "Estética y Bienestar",
-        admission: "Admisiones Escolares"
+        education: "Desarrollos Residenciales",
+        solar: "Comunidades de Lujo",
+        industrial: "Fincas y Villas Ecológicas",
+        admission: "Espacios Comerciales"
       }
     },
     leadForm: {
-      title: "Inicie su Consulta",
-      subtitle: "Complete este breve formulario y nuestro estratega principal se comunicará con usted en menos de 4 horas.",
+      title: "Solicite Clientes Inmobiliarios",
+      subtitle: "Complete este breve formulario y nuestro estratega principal analizará sus requisitos y se comunicará en menos de 4 horas.",
       name: "Su Nombre",
-      number: "WhatsApp / Número de Contacto",
-      detail: "Breve Descripción o Detalle (Opcional)",
+      number: "Número de Contacto / WhatsApp",
+      detail: "Ubicación de la Propiedad y Detalles de Presupuesto (Opcional)",
       submit: "Enviar Solicitud de Consulta",
-      successTitle: "Envío Exitoso",
-      successMsg: "¡Gracias! Nuestro estratega se pondrá en contacto pronto. También puede enviar estos detalles por WhatsApp para un procesamiento instantáneo.",
+      successTitle: "Prospecto Registrado con Éxito",
+      successMsg: "¡Gracias! Nuestro estratega se pondrá en contacto pronto para analizar sus requisitos de marketing.",
       successCta: "Enviar por WhatsApp Ahora",
       methodLabel: "Seleccione el método de envío:",
       methodWhatsapp: "Sincronización por WhatsApp (Recomendado)",
-      methodInternal: "Envío Privado en el Sitio",
-      successInternalTitle: "Consulta Registrada",
-      successInternalMsg: "¡Éxito! Su solicitud de consulta ha sido guardada de forma segura en nuestra base de datos. Nuestro estratega principal revisará sus requisitos y se comunicará por llamada o correo en menos de 4 horas.",
+      methodInternal: "Envío Seguro al Servidor Privado",
+      successInternalTitle: "Solicitud Registrada",
+      successInternalMsg: "¡Éxito! Su solicitud de consulta ha sido guardada de forma segura en nuestra base de datos. Nuestro estratega principal revisará sus requisitos y se comunicará en menos de 4 horas.",
       emailFallbackCta: "Enviar por Correo Directo",
       errors: {
         name: "Por favor, ingrese su nombre",
@@ -321,7 +327,7 @@ export const translations = {
     },
     footer: {
       rights: "© 2026 Cyber Enterprises. Todos los derechos reservados.",
-      location: "Sur de India | Presencia Global",
+      location: "Sur de India | Soporte de Crecimiento Inmobiliario",
       privacy: "Política de Privacidad",
       refund: "Política de Reembolso"
     }

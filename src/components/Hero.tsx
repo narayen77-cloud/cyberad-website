@@ -1,6 +1,8 @@
 import { useLanguage } from "./LanguageContext";
 import { motion } from "motion/react";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import heroImage from "../assets/images/hero_real_estate.jpg";
 
 export function Hero() {
   const { language, t } = useLanguage();
@@ -17,46 +19,52 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-bold uppercase tracking-widest mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6">
               {t.hero.technicalGap}
             </span>
-            <h1 id="hero-title" className={`serif font-normal break-words sm:break-normal mb-6 md:mb-8 ${
+            <h1 id="hero-title" className={`serif font-normal break-words sm:break-normal mb-4 ${
               language === 'ta'
-                ? "text-[21px] xs:text-2xl sm:text-3xl md:text-[38px] lg:text-[44px] leading-[1.35] md:leading-[1.25] tracking-normal"
-                : "text-3xl sm:text-4xl md:text-5xl lg:text-[54px] leading-tight md:leading-[1.15] tracking-tighter"
+                ? "text-[28px] xs:text-3xl sm:text-4xl md:text-[42px] lg:text-[48px] leading-[1.25] tracking-normal"
+                : "text-4xl sm:text-5xl md:text-6xl lg:text-[64px] leading-tight tracking-tight text-brand-charcoal"
             }`}>
               {t.hero.title}
             </h1>
             
-            {/* Main Subheading (with bolded keywords) */}
-            <p className={`text-brand-charcoal/80 mb-4 font-normal ${
+            {/* Subheading: Exclusively for Real Estate */}
+            <h2 className={`font-serif italic font-medium text-brand-gold mb-4 ${
+              language === 'ta'
+                ? "text-lg sm:text-xl leading-relaxed"
+                : "text-xl sm:text-2xl leading-relaxed"
+            }`}>
+              {t.hero.subheading}
+            </h2>
+
+            {/* Description */}
+            <p className={`text-brand-charcoal/70 mb-8 font-light ${
               language === 'ta' 
                 ? "text-sm sm:text-base leading-relaxed" 
                 : "text-base sm:text-lg leading-relaxed"
             }`}>
-              {language === 'en' ? (
-                <>
-                  We empower local enterprises with high-impact <strong className="font-bold text-brand-charcoal">automation</strong>, <strong className="font-bold text-brand-charcoal">multi-page websites</strong>, and <strong className="font-bold text-brand-charcoal">strategic marketing</strong> built to scale your revenue.
-                </>
-              ) : language === 'ta' ? (
-                <>
-                  உங்களது வணிகத்தை அதிவேகமாக வளர்க்கும் உயர்ரக <strong className="font-bold text-brand-charcoal">ஆட்டோமேஷன்</strong>, <strong className="font-bold text-brand-charcoal">வலைதளங்கள்</strong>, மற்றும் <strong className="font-bold text-brand-charcoal">மார்க்கெட்டிங் உத்திகளை</strong> நாங்கள் வழங்குகிறோம்.
-                </>
-              ) : (
-                <>
-                  Impulsamos las empresas locales con <strong className="font-bold text-brand-charcoal">automatización</strong> de alto impacto, <strong className="font-bold text-brand-charcoal">sitios web multi-página</strong> y <strong className="font-bold text-brand-charcoal">marketing estratégico</strong> para escalar sus ingresos.
-                </>
-              )}
+              {t.hero.description}
             </p>
 
-            {/* Secondary Products List Subheading from brief */}
-            <p className="text-xs sm:text-sm text-brand-charcoal/50 mb-8 md:mb-10 font-mono tracking-wide uppercase leading-relaxed">
-              {language === 'ta'
-                ? "இணையதளங்கள், கூகுள் விளம்பரங்கள், மெட்டா விளம்பரங்கள், வீடியோக்கள், விளக்கக்காட்சிகள், கட்டுரைகள் மற்றும் வணிக உதவி சேவைகள்."
-                : language === 'es'
-                ? "Sitios Web, Google Ads, Meta Ads, Videos, Presentaciones, Creación de Contenido y Servicios de Soporte."
-                : "Websites, Google Ads, Meta Ads, Videos, Presentations, Content Creation and Business Support Services."}
-            </p>
+            {/* Dual CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="#contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-charcoal hover:bg-brand-gold text-white hover:text-white font-mono text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300 shadow-sm hover:scale-[1.02] cursor-pointer"
+              >
+                <span>{t.hero.ctaPrimary}</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="#portfolio"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 border border-brand-charcoal/20 hover:border-brand-charcoal hover:bg-brand-charcoal/5 text-brand-charcoal font-mono text-xs font-bold uppercase tracking-widest rounded-full transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+              >
+                <span>{t.hero.ctaSecondary}</span>
+                <ChevronRight className="w-4 h-4" />
+              </a>
+            </div>
 
           </motion.div>
         </div>
@@ -68,19 +76,15 @@ export function Hero() {
           className="relative aspect-[4/3] sm:aspect-[16/10] md:aspect-[4/3] w-full max-w-xl mx-auto md:max-w-none rounded-3xl overflow-hidden shadow-2xl mt-4 md:mt-0"
         >
           <img 
-            src="/assets/hero_image.jpg" 
-            alt="Warm and highly positive team collaborated around a computer bathed in sunlit golden leverage" 
+            src={heroImage} 
+            alt="A set of keys with a house keychain in front of miniature model houses, representing real estate and home ownership" 
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover contrast-[1.05] transition-all duration-700 hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 to-transparent" />
           <div className="absolute bottom-6 left-6 right-6 p-5 backdrop-blur-md bg-brand-offwhite/10 border border-brand-offwhite/20 rounded-2xl">
             <p className="text-brand-offwhite font-serif italic text-sm sm:text-base md:text-lg leading-snug">
-              {language === "ta"
-                ? "\"தொழில்நுட்பம் ஒரு தடையாக இருக்கக்கூடாது. அதுவே உங்களது மிகப்பெரிய பலமாக இருக்க வேண்டும்.\""
-                : language === "es"
-                ? "\"La tecnología no debería ser una barrera. Debería ser tu mayor ventaja.\""
-                : "\"Technology shouldn't be a barrier. It should be your greatest leverage.\""}
+              "Technology shouldn't be a barrier. It should be your greatest leverage."
             </p>
           </div>
         </motion.div>

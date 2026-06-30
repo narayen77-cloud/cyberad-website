@@ -33,14 +33,11 @@ export function Navbar() {
           <a href="#hero" className="text-sm font-medium hover:text-brand-gold transition-colors">
             {language === "ta" ? "முகப்பு" : language === "es" ? "Inicio" : "Home"}
           </a>
-          <a href="#services" className="text-sm font-medium hover:text-brand-gold transition-colors">
-            {language === "ta" ? "சேவைகள்" : language === "es" ? "Servicios" : "Services"}
-          </a>
-          <a href="#sample-builds" className="text-sm font-medium hover:text-brand-gold transition-colors">
-            {language === "ta" ? "படைப்புகள்" : language === "es" ? "Portafolio" : "Portfolio"}
-          </a>
           <a href="#about" className="text-sm font-medium hover:text-brand-gold transition-colors">
             {language === "ta" ? "பற்றி" : language === "es" ? "Nosotros" : "About"}
+          </a>
+          <a href="#portfolio" className="text-sm font-medium hover:text-brand-gold transition-colors">
+            {language === "ta" ? "கேஸ் ஸ்டடி" : language === "es" ? "Portafolio" : "Portfolio"}
           </a>
           <a href="#contact" className="text-sm font-medium hover:text-brand-gold transition-colors">
             {language === "ta" ? "தொடர்பு" : language === "es" ? "Contacto" : "Contact"}
@@ -53,7 +50,7 @@ export function Navbar() {
               onClick={() => setLanguage("ta")}
               className={`px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full transition-all duration-300 text-[10px] sm:text-xs font-medium cursor-pointer ${
                 language === "ta" 
-                  ? "bg-brand-gold text-brand-charcoal shadow-sm font-semibold" 
+                  ? "bg-brand-gold text-brand-offwhite shadow-sm font-semibold" 
                   : "text-brand-charcoal/60 hover:text-brand-charcoal"
               }`}
             >
@@ -64,7 +61,7 @@ export function Navbar() {
               onClick={() => setLanguage("en")}
               className={`px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full transition-all duration-300 text-[10px] sm:text-xs font-medium cursor-pointer ${
                 language === "en" 
-                  ? "bg-brand-gold text-brand-charcoal shadow-sm font-semibold" 
+                  ? "bg-brand-gold text-brand-offwhite shadow-sm font-semibold" 
                   : "text-brand-charcoal/60 hover:text-brand-charcoal"
               }`}
             >
@@ -75,7 +72,7 @@ export function Navbar() {
               onClick={() => setLanguage("es")}
               className={`px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full transition-all duration-300 text-[10px] sm:text-xs font-medium cursor-pointer ${
                 language === "es" 
-                  ? "bg-brand-gold text-brand-charcoal shadow-sm font-semibold" 
+                  ? "bg-brand-gold text-brand-offwhite shadow-sm font-semibold" 
                   : "text-brand-charcoal/60 hover:text-brand-charcoal"
               }`}
             >
@@ -84,7 +81,7 @@ export function Navbar() {
           </div>
           <a
             href="#contact"
-            className="hidden sm:inline-block rounded-full px-4 sm:px-6 py-2 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-brand-charcoal text-xs font-bold uppercase tracking-wider transition-all"
+            className="hidden sm:inline-block rounded-full px-4 sm:px-6 py-2 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-white text-xs font-bold uppercase tracking-wider transition-all"
           >
             {language === "ta" ? "தொடங்கு" : language === "es" ? "Comenzar" : "Start now"}
           </a>
