@@ -56,22 +56,28 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 font-sans text-sm font-medium text-slate-500">
+          <nav className="hidden lg:flex items-center gap-6 font-sans text-xs font-bold uppercase tracking-wider text-slate-500">
             <button 
               onClick={() => scrollToSection('target-partners')} 
-              className="hover:text-indigo-600 cursor-pointer transition-colors"
+              className="hover:text-indigo-650 hover:translate-y-[-1px] transition-all cursor-pointer"
             >
               {t('whoWeWorkWith', 'header')}
             </button>
             <button 
+              onClick={() => scrollToSection('campaigns-showcase')} 
+              className="hover:text-indigo-650 hover:translate-y-[-1px] transition-all cursor-pointer"
+            >
+              {language === 'en' ? 'Campaigns' : 'பிரச்சாரங்கள்'}
+            </button>
+            <button 
               onClick={() => scrollToSection('marketing-engine')} 
-              className="hover:text-indigo-600 cursor-pointer transition-colors"
+              className="hover:text-indigo-650 hover:translate-y-[-1px] transition-all cursor-pointer"
             >
               {t('theEngine', 'header')}
             </button>
             <button 
               onClick={() => scrollToSection('qualification-process')} 
-              className="hover:text-indigo-600 cursor-pointer transition-colors"
+              className="hover:text-indigo-650 hover:translate-y-[-1px] transition-all cursor-pointer"
             >
               {t('ourProcess', 'header')}
             </button>

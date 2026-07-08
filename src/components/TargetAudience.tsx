@@ -161,7 +161,7 @@ export default function TargetAudience() {
                       {selectedData.badge}
                     </span>
                     <h3 className="font-display font-bold text-2xl text-slate-900">
-                      {t('helpPrefix', 'targetAudience')}{selectedData.title}
+                      {t('helpPrefix', 'targetAudience')} {selectedData.title}
                     </h3>
                     <p className="text-xs text-slate-500 font-mono mt-0.5 italic">
                       {selectedData.subtitle}
@@ -169,15 +169,15 @@ export default function TargetAudience() {
                   </div>
 
                   {/* Premium Sector Specific Image Placeholder */}
-                  <div className="relative rounded-2xl overflow-hidden border border-slate-200 aspect-[21/9] bg-slate-100 group">
+                  <div className="relative rounded-[1.5rem] overflow-hidden border border-slate-200 aspect-[21/10] bg-slate-100 group">
                     <img 
                       src={audienceImages[selectedData.id]?.url || 'https://picsum.photos/seed/builders/800/350'}
                       alt={audienceImages[selectedData.id]?.alt || 'Sector Visualizer'}
                       referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.03]"
+                      className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-                    <span className="absolute bottom-3 left-4 text-[9px] font-mono font-bold text-white tracking-widest bg-indigo-600/90 px-2 py-0.5 rounded backdrop-blur-xs">
+                    <span className="absolute bottom-3 left-4 text-[9px] font-mono font-bold text-white tracking-widest bg-indigo-600/90 px-3 py-1 rounded backdrop-blur-xs">
                       {audienceImages[selectedData.id]?.tag || 'B2B SPEC'}
                     </span>
                   </div>

@@ -76,7 +76,7 @@ export const translations: Record<Language, Record<string, any>> = {
           solutions: [
             "A closed, dedicated buyer ad-stack targeting active capital.",
             "Exclusive project-level landing pages with interactive walkthroughs.",
-            "Guaranteed lead routing direct to the builder's internal CRM."
+            "Direct lead routing to the builder's internal CRM."
           ]
         },
         developers: {
@@ -207,9 +207,37 @@ export const translations: Record<Language, Record<string, any>> = {
       crmNotice: "100% Client-Owned Direct Leads",
       weDoNotSell: "We do not sell properties. We sell results."
     },
+    propertyCampaigns: {
+      badge: "STRATEGIC CAMPAIGNS",
+      headline: "Successful Campaigns & Property Showcase",
+      description: "See how we help sell different types of property assets strategically, delivering highly qualified buyer leads instead of general public enquiries.",
+      challengeLabel: "Sourcing Challenge:",
+      strategyLabel: "Direct Sourcing Strategy:",
+      metricLabel: "Campaign Outcome:",
+      villasTitle: "Luxury Villas & Estates",
+      villasDesc: "High-value premium properties requiring discrete, high-income targeting and virtual walkthroughs.",
+      villasChallenge: "Generic listing sites attract low-intent visitors and competitors who undercut prices.",
+      villasStrategy: "Hyper-targeted Meta Ads focusing on luxury lifestyle, business owners, and local HNIs combined with private video tours.",
+      villasMetrics: "₹450 Avg CPL | 85% Qualified Buyers",
+      plotsTitle: "Plotted Developments & Land",
+      plotsDesc: "High-velocity land releases and plotted layouts requiring fast pre-launch registration pipelines.",
+      plotsChallenge: "Buyers want concrete location details and layout plots but portals only display list views.",
+      plotsStrategy: "Google Search Ads combined with interactive plot-selection maps and automated layout sheets delivered via WhatsApp.",
+      plotsMetrics: "12% Registration Rate | CPL under ₹300",
+      apartmentsTitle: "Premium Apartments & Condos",
+      apartmentsDesc: "Multi-unit construction projects demanding direct inventory clearance without broker commissions.",
+      apartmentsChallenge: "Mass marketing gets high volume but very low-quality leads, wasting sales team time.",
+      apartmentsStrategy: "Custom project landing pages highlighting layout masterplans, property features, and direct contact forms.",
+      apartmentsMetrics: "18% Lead Conversion | Zero Broker Cuts",
+      commercialTitle: "Commercial & Office Spaces",
+      commercialDesc: "B2B offices and retail layouts targeting business owners and institutional investors.",
+      commercialChallenge: "Commercial buyers do not search portals; they buy through direct networks and relationships.",
+      commercialStrategy: "LinkedIn campaigns + targeted Google search queries capturing specific yield-seeking commercial investors.",
+      commercialMetrics: "6.8% High-Intent Call Rates"
+    },
     leadFunnel: {
       badge: "THE PIPELINE INFRASTRUCTURE",
-      headline: "Our Lead Generation & Filtering Process",
+      headline: "Our Lead Generation Process",
       description: "We help property owners and developers generate quality leads and manage the information pipeline efficiently.",
       guaranteeTitle: "B2B INFRASTRUCTURE INTEGRITY",
       guaranteeText: "Unlike traditional property listing directories that distribute your leads to other competing brokers, our marketing pipeline delivers enquiries that belong solely to your company.",
@@ -239,13 +267,6 @@ export const translations: Record<Language, Record<string, any>> = {
         {
           id: 4,
           phase: "PHASE 04",
-          title: "Lead Review & Filtering",
-          badge: "ENQUIRY REVIEW",
-          description: "We review submitted enquiries, remove obvious spam where possible, and organize leads before sharing them with your sales team."
-        },
-        {
-          id: 5,
-          phase: "PHASE 05",
           title: "Lead Delivery",
           badge: "CRM DISPATCH",
           description: "Relevant enquiries are delivered to your sales team promptly so they can contact prospective buyers and continue the sales process."
@@ -253,9 +274,9 @@ export const translations: Record<Language, Record<string, any>> = {
       ]
     },
     contactForm: {
-      badge: "PARTNER ENROLLMENT",
-      headline: "Request a Custom Ad Strategy",
-      description: "Ready to skip generic portal listing directories and establish your own high-converting direct ad engine? Contact our lead-architects to map out your seller pipeline. Our B2B services are exclusively for real estate sellers.",
+      badge: "",
+      headline: "Start Your Campaign",
+      description: "Ready to establish your own high-converting direct ad engine? Contact our lead-architects to map out your seller pipeline. Our B2B services are exclusively for real estate sellers.",
       corpDesigned: "Designed for Real Estate Sellers",
       corpDesignedDesc: "We work exclusively with builders, land developers, corporate agencies, multi-unit owners, industry specialists, and single property sellers to establish direct-to-buyer marketing pipelines.",
       consultationIncl: "Strategic Consultation Inclusions",
@@ -521,9 +542,37 @@ export const translations: Record<Language, Record<string, any>> = {
       crmNotice: "105% கிளையண்ட்-சொந்தமான நேரடி லீட்கள்",
       weDoNotSell: "நாங்கள் சொத்துக்களை விற்பதில்லை. முடிவுகளை விற்கிறோம்."
     },
+    propertyCampaigns: {
+      badge: "மூலோபாய பிரச்சாரங்கள்",
+      headline: "வெற்றிகரமான பிரச்சாரங்கள் & சொத்துக்கள் காட்சி",
+      description: "பொதுவான விசாரணைகளுக்குப் பதிலாக மிகவும் தகுதியான வாங்குபவர்களைக் கண்டறிந்து, பல்வேறு வகையான சொத்துக்களை விற்க நாங்கள் எவ்வாறு உதவுகிறோம் என்பதைப் பாருங்கள்.",
+      challengeLabel: "சவால்:",
+      strategyLabel: "நேரடி விளம்பர உத்தி:",
+      metricLabel: "பிரச்சாரத்தின் முடிவு:",
+      villasTitle: "சொகுசு வில்லாக்கள் & எஸ்டேட்டுகள்",
+      villasDesc: "உயர்தர பிரீமியம் சொத்துக்களுக்கு தகுந்த வருமானம் உள்ள நபர்களைக் குறிவைக்கும் விளம்பரங்கள் மற்றும் மெய்நிகர் சுற்றுப்பயணங்கள் தேவை.",
+      villasChallenge: "பொதுவான தளங்கள் குறைந்த ஆர்வமுள்ள பார்வையாளர்களையும் விலையைக் குறைக்கும் போட்டியாளர்களையும் ஈர்க்கின்றன.",
+      villasStrategy: "உள்ளூர் உயர் வருவாய் ஈட்டுபவர்கள் மற்றும் வணிக உரிமையாளர்களைக் குறிவைத்து மெட்டா விளம்பரங்கள் மற்றும் பிரத்தியேக வீடியோ சுற்றுப்பயணங்கள்.",
+      villasMetrics: "₹450 சராசரி CPL | 85% தகுதியான வாங்குபவர்கள்",
+      plotsTitle: "நில மேம்பாடுகள் & மனைப்பிரிவுகள்",
+      plotsDesc: "அறிமுகத்திற்கு முந்தைய பதிவுகளை விரைவாகப் பெறுவதற்கு வேகமான விளம்பரப் பாதைகள் தேவை.",
+      plotsChallenge: "வாங்குபவர்கள் மனை அமைப்பைக் கேட்கிறார்கள், ஆனால் போர்டல்கள் வெறும் பட்டியலை மட்டுமே காட்டுகின்றன.",
+      plotsStrategy: "கூகுள் விளம்பரங்கள் மற்றும் வாட்ஸ்அப் மூலம் மனை விவரங்களை வழங்கும் தானியங்கி அமைப்புகள்.",
+      plotsMetrics: "12% பதிவு விகிதம் | CPL ₹300-க்குள்",
+      apartmentsTitle: "பிரீமியம் அடுக்குமாடி குடியிருப்புகள்",
+      apartmentsDesc: "தரகு கமிஷன் இல்லாமல் நேரடி விற்பனையை விரும்பும் குடியிருப்புகள்.",
+      apartmentsChallenge: "பொதுவான விளம்பரம் அதிக எண்ணிக்கையிலான தகுதியற்ற விவரங்களை மட்டுமே தருகிறது, இதனால் நேரம் வீணாகிறது.",
+      apartmentsStrategy: "தள அமைப்புகள், சொத்தின் சிறப்பம்சங்கள் மற்றும் நேரடி தொடர்பு படிவங்களை வழங்கும் பிரத்தியேக பக்கங்கள்.",
+      apartmentsMetrics: "18% லீட் மாற்று விகிதம் | பூஜ்ஜிய கமிஷன்",
+      commercialTitle: "வணிக மற்றும் அலுவலக இடங்கள்",
+      commercialDesc: "வணிக உரிமையாளர்கள் மற்றும் நிறுவன முதலீட்டாளர்களைக் குறிவைக்கும் இடங்கள்.",
+      commercialChallenge: "வணிக ரீதியாக வாங்குபவர்கள் போர்டல்களைத் தேடுவதில்லை; அவர்கள் நேரடி உறவுகள் மூலம் வாங்குகிறார்கள்.",
+      commercialStrategy: "வணிக முதலீட்டாளர்களை ஈர்ப்பதற்கான லிங்க்டின் விளம்பரங்கள் மற்றும் இலக்கு வைக்கப்பட்ட கூகுள் தேடல் விளம்பரங்கள்.",
+      commercialMetrics: "6.8% உயர் ஆர்வமுள்ள அழைப்பு விகிதங்கள்"
+    },
     leadFunnel: {
       badge: "பைப்லைன் உள்கட்டமைப்பு",
-      headline: "எங்கள் லீட் ஜெனரேஷன் & வடிகட்டுதல் செயல்முறை",
+      headline: "எங்கள் லீட் ஜெனரேஷன் செயல்முறை",
       description: "சொத்து உரிமையாளர்கள் மற்றும் டெவலப்பர்களுக்குத் தரமான லீட்களை உருவாக்கவும், தகவல் பைப்லைனை திறமையாக நிர்வகிக்கவும் நாங்கள் உதவுகிறோம்.",
       guaranteeTitle: "B2B உள்கட்டமைப்பு நம்பகத்தன்மை",
       guaranteeText: "உங்கள் லீட்களை இதர போட்டி தரகர்களுக்கு விநியோகிக்கும் பாரம்பரிய சொத்துப் பட்டியல் இணையதளங்களைப் போலல்லாமல், எங்களின் மார்க்கெட்டிங் பைப்லைன் உங்கள் நிறுவனத்திற்கு மட்டுமே சொந்தமான விசாரணைகளை வழங்குகிறது.",
@@ -553,13 +602,6 @@ export const translations: Record<Language, Record<string, any>> = {
         {
           id: 4,
           phase: "படி 04",
-          title: "லீட் மதிப்பாய்வு & வடிகட்டுதல்",
-          badge: "விசாரணை ஆய்வு",
-          description: "சமர்ப்பிக்கப்பட்ட விசாரணைகளை நாங்கள் மதிப்பாய்வு செய்து, முடிந்தவரை தேவையற்ற ஸ்பாம்களை நீக்கி, உங்கள் விற்பனைக் குழுவிடம் பகிர்வதற்கு முன் லீட்களை ஒழுங்கமைக்கிறோம்."
-        },
-        {
-          id: 5,
-          phase: "படி 05",
           title: "லீட் வழங்கல்",
           badge: "CRM அனுப்புதல்",
           description: "தொடர்புடைய விசாரணைகள் உங்கள் விற்பனைக் குழுவிடம் உடனுக்குடன் வழங்கப்படுகின்றன, இதனால் அவர்கள் வாங்குபவர்களைத் தொடர்பு கொண்டு விற்பனைச் செயல்முறையைத் தொடரலாம்."
@@ -567,9 +609,9 @@ export const translations: Record<Language, Record<string, any>> = {
       ]
     },
     contactForm: {
-      badge: "கூட்டாளர் சேர்க்கை",
-      headline: "தனிப்பயன் விளம்பர உத்தியைக் கோருக",
-      description: "பொதுவான பட்டியல் தளங்களைத் தவிர்த்து உங்கள் சொந்த உயர்-மாற்று நேரடி விளம்பர இயந்திரத்தை நிறுவத் தயாரா? எங்கள் லீட் நிபுணர்களை தொடர்பு கொள்ளவும். வாங்குபவர்களும் தங்களின் தேவைகளை இங்கே சமர்ப்பிக்கலாம்.",
+      badge: "",
+      headline: "உங்கள் பிரச்சாரத்தைத் தொடங்குங்கள்",
+      description: "உங்களின் சொந்த உயர்-மாற்று நேரடி விளம்பரப் பாதையை நிறுவத் தயாரா? எங்கள் லீட் நிபுணர்களை தொடர்பு கொள்ளவும்.",
       corpDesigned: "நிறுவனங்கள் & வாங்குபவர்களுக்காக வடிவமைக்கப்பட்டது",
       corpDesignedDesc: "நாங்கள் பதிவுசெய்யப்பட்ட பில்டர்கள், டெவலப்பர்களுடன் பணியாற்றுகிறோம். வாங்குபவர்களும் தங்களின் தேவைகளைப் பதிவு செய்து அறிவிப்புகளைப் பெறலாம்.",
       consultationIncl: "மார்க்கெட்டிங் ஆலோசனையின் உள்ளடக்கங்கள்",

@@ -75,11 +75,11 @@ export default function Footer() {
             <div className="space-y-2.5 text-sm font-sans">
               <p className="flex items-start gap-2">
                 <span className="font-mono text-indigo-400 font-bold">EMAIL:</span>
-                <span className="text-slate-300">partnerships@exclusiveremarketing.com</span>
+                <span className="text-slate-300">SUPPORT@CYBERAD.IN</span>
               </p>
               <p className="flex items-start gap-2">
                 <span className="font-mono text-indigo-400 font-bold">{language === 'en' ? 'HOURS:' : 'வேலை நேரம்:'}</span>
-                <span className="text-slate-300">{language === 'en' ? 'Mon - Fri: 9:00 AM - 6:00 PM (B2B Only)' : 'திங்கள் - வெள்ளி: காலை 9:00 - மாலை 6:00 (B2B மட்டும்)'}</span>
+                <span className="text-slate-300">{language === 'en' ? 'Mon - Fri: 10:00 AM - 6:00 PM' : 'திங்கள் - வெள்ளி: காலை 10:00 - மாலை 6:00'}</span>
               </p>
               <div className="inline-flex items-center gap-1.5 bg-slate-900 border border-slate-800 px-3.5 py-1.5 rounded-full text-xs text-emerald-400 font-mono mt-1">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
