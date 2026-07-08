@@ -61,6 +61,35 @@ export default function ContactForm() {
         };
         setSubmissionDetails(details);
         setSubmitted(true);
+
+        // Fire GA4 Event with debug_mode: true
+        if (typeof window !== 'undefined') {
+          const gtag = (window as any).gtag;
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              form_name: 'Leadscyber RE Contact Form',
+              lead_source: 'Website',
+              page_location: window.location.href,
+              page_title: document.title,
+              debug_mode: true
+            });
+          }
+        }
+
+        // Fire Meta Pixel Event
+        if (typeof window !== 'undefined') {
+          const fbq = (window as any).fbq;
+          if (typeof fbq === 'function') {
+            const pixelParams: any = {
+              content_name: 'Leadscyber RE Contact Form'
+            };
+            const metaTestCode = import.meta.env.VITE_META_TEST_EVENT_CODE;
+            if (metaTestCode) {
+              pixelParams.test_event_code = metaTestCode;
+            }
+            fbq('track', 'Lead', pixelParams);
+          }
+        }
       } else {
         setErrorMsg(result.message || "Failed to submit request. Please verify your access key.");
       }
