@@ -50,10 +50,10 @@ export default function Footer() {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('marketing-engine')} 
+                  onClick={() => scrollToSection('services-section')} 
                   className="hover:text-indigo-400 transition-colors cursor-pointer text-left"
                 >
-                  {t('quickLinksEngine', 'footer')}
+                  {language === 'en' ? 'Our Services' : 'எங்கள் சேவைகள்'}
                 </button>
               </li>
               <li>

@@ -91,29 +91,7 @@ export default function LeadFunnelVisualizer() {
           ))}
         </div>
 
-        {/* Bottom Banner */}
-        <div className="bg-slate-900 text-white rounded-[2rem] p-6 md:p-8 mt-12 border border-slate-950 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div className="space-y-1.5">
-            <span className="text-[10px] font-mono text-indigo-400 font-bold uppercase tracking-widest block">
-              {language === 'en' ? 'Direct Sourcing Engine' : 'நேரடி விளம்பர இயந்திரம்'}
-            </span>
-            <h4 className="font-display font-bold text-lg text-white">
-              {t('guaranteeTitle', 'leadFunnel')}
-            </h4>
-            <p className="text-xs text-slate-400 font-sans max-w-xl">
-              {t('guaranteeText', 'leadFunnel')}
-            </p>
-          </div>
-          <button
-            onClick={() => {
-              const element = document.getElementById('partner-form');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="font-display font-semibold text-xs bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3.5 rounded-full shadow-lg shadow-indigo-100/10 transition-all duration-300 hover:translate-y-[-1px] cursor-pointer shrink-0"
-          >
-            {language === 'en' ? 'Start Your Campaign' : 'உங்கள் பிரச்சாரத்தைத் தொடங்குங்கள்'}
-          </button>
-        </div>
+
 
         {/* Lead Quality Disclaimer Note */}
         <p className="text-[11px] text-slate-400 text-center font-sans max-w-2xl mx-auto mt-6 leading-relaxed">

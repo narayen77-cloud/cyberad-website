@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Megaphone, ArrowDown, Shield } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import luxuryVillaHero from '@/assets/luxury-villa-hero.png';
+import leadGenHeroImg from '@/assets/media__1783586024004.jpg';
 
 export default function Hero() {
   const { language, t } = useLanguage();
@@ -26,8 +26,8 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Hero Content Column (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-6">
+          {/* Hero Content Column (6 cols) */}
+          <div className="lg:col-span-6 flex flex-col items-start space-y-6">
             
             {/* Exclusive Tagline Badge */}
             <motion.div 
@@ -38,7 +38,7 @@ export default function Hero() {
             >
               <Megaphone className="w-3.5 h-3.5 text-indigo-400" />
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-300">
-                {language === 'en' ? 'B2B DIRECT LEAD SOURCING' : 'B2B நேரடி வாடிக்கையாளர் ஈர்ப்பு'}
+                {language === 'en' ? 'REAL ESTATE DIGITAL MARKETING AGENCY' : 'ரியல் எஸ்டேட் விளம்பர முகமை'}
               </span>
             </motion.div>
 
@@ -47,17 +47,15 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15]"
+              className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.2] text-white"
             >
               {language === 'en' ? (
                 <>
-                  We Don't Just List Properties.<br />
-                  We Help You <span className="text-indigo-400">Sell Them.</span>
+                  Lead Generation That <span className="text-indigo-400">Sells Property</span>.
                 </>
               ) : (
                 <>
-                  நாங்கள் சொத்துக்களை பட்டியலிடுவதில்லை.<br />
-                  அவற்றை விற்க <span className="text-indigo-400">உதவுகிறோம்.</span>
+                  சொத்துக்களை விற்க உதவும் <span className="text-indigo-400">லீட் ஜெனரேஷன்</span>.
                 </>
               )}
             </motion.h1>
@@ -67,11 +65,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base sm:text-lg text-slate-300 max-w-xl leading-relaxed"
+              className="text-sm sm:text-base text-slate-350 max-w-xl leading-relaxed font-sans font-medium"
             >
               {language === 'en' 
-                ? "Bypass public directories and shared broker listing portals. We build private, high-intent advertising funnels on Meta & Google to deliver verified buyer leads directly to your sales team."
-                : "பொதுவான சொத்துப் பட்டியல்களைத் தவிர்த்திடுங்கள். தகுதியான வாங்குபவர்களை நேரடியாக ஈர்க்கும் விளம்பரப் பாதைகளை மெட்டா மற்றும் கூகுளில் அமைத்து, உங்கள் நிறுவனத்திற்கு லீட்களை வழங்குகிறோம்."}
+                ? "Not impressions. Not vanity metrics. More Leads. More Site Visits. More Sales."
+                : "வெறும் விளம்பரப் பார்வைகள் அல்ல. வெற்று அளவீடுகள் அல்ல. அதிக லீட்கள். அதிக தளம் வருகைகள். அதிக விற்பனை."}
             </motion.p>
 
             {/* Action Buttons */}
@@ -83,7 +81,7 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollToSection('partner-form')}
-                className="font-display font-semibold text-sm bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-300 hover:translate-y-[-1px] cursor-pointer"
+                className="font-display font-semibold text-xs bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all duration-300 hover:translate-y-[-1px] cursor-pointer"
               >
                 {t('launchCampaign', 'common')}
               </button>
@@ -94,20 +92,20 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex items-start gap-2.5 text-xs text-slate-300 bg-slate-800/40 p-4.5 rounded-2xl border border-slate-850 max-w-lg mt-4 shadow-inner"
+              className="flex items-start gap-2.5 text-sm text-slate-300 bg-slate-850/60 p-4 rounded-2xl border border-slate-800 max-w-lg mt-4 shadow-inner"
             >
-              <Shield className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-              <p className="leading-relaxed font-medium">
+              <Shield className="w-4.5 h-4.5 text-indigo-400 shrink-0 mt-0.5" />
+              <p className="leading-relaxed font-bold font-sans text-white">
                 {language === 'en' 
-                  ? "Not a property listing website. We help real estate professionals generate qualified leads and close more sales."
-                  : "இது சொத்துப் பட்டியல் இணையதளம் அல்ல. ரியல் எஸ்டேட் வல்லுநர்கள் தகுதியான லீட்களை உருவாக்கவும், அதிக விற்பனையை முடிக்கவும் நாங்கள் உதவுகிறோம்."}
+                  ? "Built for Leads. Not Listings."
+                  : "லீட்களுக்காக கட்டப்பட்டது. சொத்துப் பட்டியல்களுக்காக அல்ல."}
               </p>
             </motion.div>
 
           </div>
 
-          {/* Clean Mockup / Visual Column (5 cols) */}
-          <div className="lg:col-span-5">
+          {/* Clean Mockup / Visual Column (6 cols) */}
+          <div className="lg:col-span-6">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -120,20 +118,11 @@ export default function Hero() {
               </div>
 
               <div className="space-y-6">
-                <div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block">
-                    {language === 'en' ? 'ACTIVE CAMPAIGN PREVIEW' : 'செயலில் உள்ள விளம்பர மாதிரி'}
-                  </span>
-                  <h3 className="font-display font-bold text-xl text-white tracking-tight mt-1">
-                    Luxury Property Launch
-                  </h3>
-                </div>
-
                 {/* Campaign Image Mockup */}
-                <div className="relative rounded-2xl overflow-hidden border border-slate-800 aspect-video">
+                <div className="relative rounded-2xl overflow-hidden border border-slate-800 aspect-[16/10] mt-4">
                   <img 
-                    src={luxuryVillaHero}
-                    alt="Luxury Real Estate Campaign"
+                    src={leadGenHeroImg}
+                    alt="Lead Generation Campaign"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>

@@ -7,8 +7,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import TargetAudience from './components/TargetAudience';
-import PropertyCampaigns from './components/PropertyCampaigns';
-import Capabilities from './components/Capabilities';
+import Services from './components/Services';
 import LeadFunnelVisualizer from './components/LeadFunnelVisualizer';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -26,11 +25,8 @@ export default function App() {
         {/* Section detailing exactly who we work with (Builders, Developers, etc) */}
         <TargetAudience />
 
-        {/* Successful Property Campaigns Showcase */}
-        <PropertyCampaigns />
-
-        {/* The Digital Marketing Capabilities (Meta, Google, Landers, etc) */}
-        <Capabilities />
+        {/* Our Services (What we do, Reach, Multi-device optimization) */}
+        <Services />
 
         {/* Step-by-step Lead Verification & Delivery Funnel */}
         <LeadFunnelVisualizer />

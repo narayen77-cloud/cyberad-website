@@ -64,16 +64,10 @@ export default function Header() {
               {t('whoWeWorkWith', 'header')}
             </button>
             <button 
-              onClick={() => scrollToSection('campaigns-showcase')} 
+              onClick={() => scrollToSection('services-section')} 
               className="hover:text-indigo-650 hover:translate-y-[-1px] transition-all cursor-pointer"
             >
-              {language === 'en' ? 'Campaigns' : 'பிரச்சாரங்கள்'}
-            </button>
-            <button 
-              onClick={() => scrollToSection('marketing-engine')} 
-              className="hover:text-indigo-650 hover:translate-y-[-1px] transition-all cursor-pointer"
-            >
-              {t('theEngine', 'header')}
+              {language === 'en' ? 'Services' : 'சேவைகள்'}
             </button>
             <button 
               onClick={() => scrollToSection('qualification-process')} 

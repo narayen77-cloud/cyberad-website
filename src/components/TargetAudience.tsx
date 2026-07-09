@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Hammer, Building2, Users, Home, Network, CheckCircle2, ChevronRight, Ban } from 'lucide-react';
+import { Hammer, Building2, Users, CheckCircle2, ChevronRight, Ban, Megaphone } from 'lucide-react';
 import { TargetAudience as TargetAudienceType } from '../types';
 import { useLanguage, translations } from '../context/LanguageContext';
 
 // Import images
-import blueprintImage from '@/assets/blueprint-planning.jpg';
-import gpsImage from '@/assets/gps-navigation.jpg';
-import brokerageCenterImage from '@/assets/brokerage-center.png';
-import waterfrontEstateImage from '@/assets/waterfront-estate.png';
-import boardroomStrategyImage from '@/assets/boardroom-strategy.png';
+import teamHighFive from '@/assets/media__1783588780848.jpg';
+import landLayoutImg from '@/assets/media__1783589612214.jpg';
+import skyscrapersImg from '@/assets/media__1783590494707.jpg';
+import forSaleSign from '@/assets/media__1783591363812.jpg';
 
 export default function TargetAudience() {
   const { language, t } = useLanguage();
 
-  const audienceIds = ['builders', 'developers', 'agencies', 'owners', 'partners'];
+  const audienceIds = ['builders', 'developers', 'agencies', 'singleSellers'];
   const audienceIcons: Record<string, string> = {
     builders: 'Hammer',
     developers: 'Building2',
     agencies: 'Users',
-    owners: 'Home',
-    partners: 'Network'
+    singleSellers: 'Megaphone'
   };
 
   const audiences: TargetAudienceType[] = audienceIds.map(id => {
@@ -41,29 +39,24 @@ export default function TargetAudience() {
 
   const audienceImages: Record<string, { url: string; alt: string; tag: string }> = {
     builders: {
-      url: blueprintImage,
-      alt: 'Collaborative luxury property blueprint planning and architectural discussion',
+      url: teamHighFive,
+      alt: 'Professional real estate team celebrating project milestone with high fives',
       tag: 'DIRECT AUDIENCE POOL'
     },
     developers: {
-      url: gpsImage,
-      alt: 'Hyperlocal GPS map navigation showing directions to property site visit',
+      url: landLayoutImg,
+      alt: 'Developer pointing at land layout master plan on a computer screen',
       tag: 'PRE-LAUNCH VELOCITY TARGETS'
     },
     agencies: {
-      url: brokerageCenterImage,
-      alt: 'Sleek and luxurious modern brokerage center office lobby',
-      tag: 'INBOUND DELEGATION'
+      url: skyscrapersImg,
+      alt: 'Low-angle view of modern high-rise corporate skyscrapers against a blue sky',
+      tag: 'DIRECT LEAD DELIVERY'
     },
-    owners: {
-      url: waterfrontEstateImage,
-      alt: 'Premium waterfront luxury estate render with private boat dock at sunset',
-      tag: 'DISCRETE PORTFOLIO SALES'
-    },
-    partners: {
-      url: boardroomStrategyImage,
-      alt: 'Institutional investors and real estate developers collaborating in corporate boardroom',
-      tag: 'CHANNEL DEPLOYMENT ENGINE'
+    singleSellers: {
+      url: forSaleSign,
+      alt: 'Red For Sale sign in front of a modern house under construction',
+      tag: 'SINGLE UNIT SALE'
     }
   };
 
@@ -71,9 +64,8 @@ export default function TargetAudience() {
     switch (iconName) {
       case 'Hammer': return <Hammer className="w-5 h-5 text-indigo-600" />;
       case 'Building2': return <Building2 className="w-5 h-5 text-indigo-600" />;
+      case 'Megaphone': return <Megaphone className="w-5 h-5 text-indigo-600" />;
       case 'Users': return <Users className="w-5 h-5 text-indigo-600" />;
-      case 'Home': return <Home className="w-5 h-5 text-indigo-600" />;
-      case 'Network': return <Network className="w-5 h-5 text-indigo-600" />;
       default: return <Building2 className="w-5 h-5 text-indigo-600" />;
     }
   };
@@ -161,10 +153,14 @@ export default function TargetAudience() {
                       {selectedData.badge}
                     </span>
                     <h3 className="font-display font-bold text-2xl text-slate-900">
-                      {t('helpPrefix', 'targetAudience')} {selectedData.title}
+                      {selectedData.id === 'builders' 
+                        ? (language === 'en' ? 'Build Projects. We Bring Buyers.' : 'திட்டங்களை உருவாக்குங்கள். வாங்குபவர்களை நாங்கள் அழைத்து வருகிறோம்.') 
+                        : `${t('helpPrefix', 'targetAudience')} ${selectedData.title}`}
                     </h3>
                     <p className="text-xs text-slate-500 font-mono mt-0.5 italic">
-                      {selectedData.subtitle}
+                      {selectedData.id === 'builders' 
+                        ? (language === 'en' ? 'You build exceptional properties. We generate the enquiries.' : 'நீங்கள் சிறந்த சொத்துக்களை உருவாக்குங்கள். லீட்களை நாங்கள் உருவாக்குகிறோம்.') 
+                        : selectedData.subtitle}
                     </p>
                   </div>
 
@@ -182,9 +178,20 @@ export default function TargetAudience() {
                     </span>
                   </div>
 
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {selectedData.description}
-                  </p>
+                  {selectedData.id === 'builders' ? (
+                    <div className="space-y-1">
+                      <h4 className="font-display font-bold text-xl text-slate-900 leading-snug">
+                        {language === 'en' ? 'Sales That Deserve Celebration.' : 'கொண்டாடத் தகுந்த விற்பனைகள்.'}
+                      </h4>
+                      <p className="text-slate-500 text-sm leading-relaxed font-sans">
+                        {selectedData.description}
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-slate-600 text-sm leading-relaxed">
+                      {selectedData.description}
+                    </p>
+                  )}
                 </div>
 
                 <div className="pt-4 border-t border-slate-200">
@@ -208,16 +215,17 @@ export default function TargetAudience() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Bottom Reminder Badge */}
-            <div className="mt-8 pt-4 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-              <span className="flex items-center gap-1">
-                <span className="h-1.5 w-1.5 bg-indigo-500 rounded-full"></span>
-                {t('exclusivePipeline', 'targetAudience')}
-              </span>
-              <span className="font-semibold text-slate-500">
-                {t('notAPublicBoard', 'targetAudience')}
-              </span>
-            </div>
+            {selectedData.id !== 'builders' && (
+              <div className="mt-8 pt-4 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+                <span className="flex items-center gap-1">
+                  <span className="h-1.5 w-1.5 bg-indigo-500 rounded-full"></span>
+                  {t('exclusivePipeline', 'targetAudience')}
+                </span>
+                <span className="font-semibold text-slate-500">
+                  {t('notAPublicBoard', 'targetAudience')}
+                </span>
+              </div>
+            )}
 
           </div>
 

@@ -27,7 +27,7 @@ export const translations: Record<Language, Record<string, any>> = {
       customLandingPages: "Custom brand landing pages only",
     },
     header: {
-      title: "EXCLUSIVE",
+      title: "CyberAd",
       subtitle: "Real Estate Marketing",
       whoWeWorkWith: "Who We Work With",
       theEngine: "The Engine",
@@ -43,11 +43,11 @@ export const translations: Record<Language, Record<string, any>> = {
       headlineEnd: " Sell More of Them.",
       description: "We help builders, land developers, corporate agencies, multi-unit owners, industry specialists, and single property sellers generate quality, exclusive leads through Meta Ads, Google Ads, high-converting landing pages, and marketing automation.",
       b2bScopeTitle: "B2B Scope Clarification:",
-      b2bScopeText: "We are strictly a professional lead generation agency. We build direct marketing pipelines and custom advertising systems for real estate sellers to generate high-intent buyers, completely bypassing public broker boards and general directories.",
+      b2bScopeText: "We are strictly a professional lead generation agency. We build direct marketing pipelines and custom advertising systems for real estate sellers to generate high-intent buyers.",
       epiphanyTitle: "The Cognitive Shift",
       epiphanySubtitle: "How leading builders view our partnership",
       pitfallLabel: "The Portal Pitfall:",
-      pitfallText: '"As a property seller or builder, paying mass listing directories to feature my property next to hundreds of competitors often results in price-driven comparisons and unqualified enquiries rather than direct connections with serious buyers."',
+      pitfallText: '"As a property seller or builder, showing my property alongside hundreds of other active listings often results in price-driven comparisons rather than direct connections with serious buyers."',
       breakthroughLabel: "The Agency Breakthrough:",
       breakthroughText: '"Exclusive marketing doesn\'t sell properties directly. They build a private digital ecosystem for my brand so buyers only see my development and contact my sales office directly."',
       singleMandateTitle: "Our Single Mandate:",
@@ -58,7 +58,7 @@ export const translations: Record<Language, Record<string, any>> = {
     targetAudience: {
       badge: "OUR TARGET CLIENTELE",
       headline: "We Work Exclusively With Real Estate Professionals",
-      description: "We do not service retail house hunters. We represent the digital machinery of builders, land developers, corporate agencies, multi-unit owners, industry specialists, and single property sellers.",
+      description: "We represent the digital machinery of builders, land developers, corporate agencies, multi-unit owners, industry specialists, and single property sellers.",
       selectCategory: "Select Your Category:",
       specSheet: "B2B SPECIFICATION SHEET",
       helpPrefix: "How We Help",
@@ -71,12 +71,13 @@ export const translations: Record<Language, Record<string, any>> = {
           title: "Builders",
           subtitle: "Direct construction houses & developers",
           badge: "REAL ESTATE BUILDERS",
-          description: "For prime builders constructuring gated communities, townships, or luxury structures who demand direct inventory clearance without giving away heavy brokerage cuts or relying on slow listing portals.",
+          description: "Helping premium builders accelerate inventory movement through exclusive buyer acquisition campaigns.",
           painPoints: [],
           solutions: [
-            "A closed, dedicated buyer ad-stack targeting active capital.",
-            "Exclusive project-level landing pages with interactive walkthroughs.",
-            "Direct lead routing to the builder's internal CRM."
+            "Dedicated campaigns targeting genuine property buyers",
+            "High-converting project landing pages",
+            "Qualified leads delivered directly to your CRM",
+            "Private marketing ecosystem—not a public property portal"
           ]
         },
         developers: {
@@ -128,15 +129,15 @@ export const translations: Record<Language, Record<string, any>> = {
           ]
         },
         singleSellers: {
-          title: "Single Property Sellers",
+          title: "Individual Owners & Resale",
           subtitle: "Individual premium property marketing",
-          badge: "INDIVIDUAL SELLERS",
-          description: "For private owners wanting to sell high-value individual apartments, premium villas, or prime plots without paying massive brokerage fees or being lost on public listing sites.",
+          badge: "INDIVIDUAL OWNERS & RESALE",
+          description: "For private owners wanting to sell high-value individual apartments, premium villas, or prime plots through direct advertising campaigns.",
           painPoints: [],
           solutions: [
             "A dedicated single-property landing micro-funnel showcasing high-res media.",
             "Precision targeted local social media campaigns reaching high-income neighborhoods.",
-            "Direct phone and WhatsApp connection with zero intermediary agents."
+            "Direct phone and WhatsApp connection with buyers."
           ]
         }
       }
@@ -216,22 +217,22 @@ export const translations: Record<Language, Record<string, any>> = {
       metricLabel: "Campaign Outcome:",
       villasTitle: "Luxury Villas & Estates",
       villasDesc: "High-value premium properties requiring discrete, high-income targeting and virtual walkthroughs.",
-      villasChallenge: "Generic listing sites attract low-intent visitors and competitors who undercut prices.",
+      villasChallenge: "",
       villasStrategy: "Hyper-targeted Meta Ads focusing on luxury lifestyle, business owners, and local HNIs combined with private video tours.",
       villasMetrics: "₹450 Avg CPL | 85% Qualified Buyers",
       plotsTitle: "Plotted Developments & Land",
       plotsDesc: "High-velocity land releases and plotted layouts requiring fast pre-launch registration pipelines.",
-      plotsChallenge: "Buyers want concrete location details and layout plots but portals only display list views.",
+      plotsChallenge: "",
       plotsStrategy: "Google Search Ads combined with interactive plot-selection maps and automated layout sheets delivered via WhatsApp.",
       plotsMetrics: "12% Registration Rate | CPL under ₹300",
       apartmentsTitle: "Premium Apartments & Condos",
-      apartmentsDesc: "Multi-unit construction projects demanding direct inventory clearance without broker commissions.",
+      apartmentsDesc: "Multi-unit construction projects demanding direct inventory clearance.",
       apartmentsChallenge: "Mass marketing gets high volume but very low-quality leads, wasting sales team time.",
       apartmentsStrategy: "Custom project landing pages highlighting layout masterplans, property features, and direct contact forms.",
-      apartmentsMetrics: "18% Lead Conversion | Zero Broker Cuts",
+      apartmentsMetrics: "18% Lead Conversion",
       commercialTitle: "Commercial & Office Spaces",
       commercialDesc: "B2B offices and retail layouts targeting business owners and institutional investors.",
-      commercialChallenge: "Commercial buyers do not search portals; they buy through direct networks and relationships.",
+      commercialChallenge: "",
       commercialStrategy: "LinkedIn campaigns + targeted Google search queries capturing specific yield-seeking commercial investors.",
       commercialMetrics: "6.8% High-Intent Call Rates"
     },
@@ -240,36 +241,36 @@ export const translations: Record<Language, Record<string, any>> = {
       headline: "Our Lead Generation Process",
       description: "We help property owners and developers generate quality leads and manage the information pipeline efficiently.",
       guaranteeTitle: "B2B INFRASTRUCTURE INTEGRITY",
-      guaranteeText: "Unlike traditional property listing directories that distribute your leads to other competing brokers, our marketing pipeline delivers enquiries that belong solely to your company.",
+      guaranteeText: "Our marketing pipeline delivers direct enquiries that belong solely to your company, ensuring exclusive and dedicated leads.",
       integrateCrm: "Integrate funnel into your CRM",
       steps: [
         {
           id: 1,
           phase: "PHASE 01",
-          title: "Targeted Digital Marketing Campaigns",
-          badge: "META & GOOGLE ADS",
-          description: "We run targeted Meta, Google and digital campaigns to attract people actively interested in buying or investing in real estate."
+          title: "Targeted Campaigns",
+          badge: "META, GOOGLE & WHATSAPP",
+          description: "We set up and launch premium, localized social media, search, and message campaigns to attract active property buyers."
         },
         {
           id: 2,
           phase: "PHASE 02",
           title: "High-Converting Landing Pages",
-          badge: "HIGH-SPEED UX",
-          description: "Prospective buyers are directed to dedicated landing pages designed to capture genuine enquiries for your project."
+          badge: "MOBILE-OPTIMIZED UX",
+          description: "Prospective buyers land on ultra-fast, distraction-free landing pages presenting layout masterplans and key details."
         },
         {
           id: 3,
           phase: "PHASE 03",
-          title: "Lead Information Collection",
-          badge: "PREFERENCE SELECTION",
-          description: "Interested buyers submit their contact details, property preferences, budget and location requirements to help improve lead relevance."
+          title: "Smart Lead Capture",
+          badge: "VERIFIED FORM SUBMISSIONS",
+          description: "We filter spam and fake numbers by capturing verified buyer criteria including budget, timeline, and phone numbers."
         },
         {
           id: 4,
           phase: "PHASE 04",
-          title: "Lead Delivery",
-          badge: "CRM DISPATCH",
-          description: "Relevant enquiries are delivered to your sales team promptly so they can contact prospective buyers and continue the sales process."
+          title: "CRM Routing & Closing",
+          badge: "AUTOMATED DIRECT ROUTING",
+          description: "Enquiries are routed instantly into your sales CRM, empowering your team to focus exclusively on closing property sales."
         }
       ]
     },
@@ -289,7 +290,7 @@ export const translations: Record<Language, Record<string, any>> = {
       corpEmail: "Corporate or Personal Email",
       placeholderEmail: "johndoe@builder.com",
       phone: "Phone Number",
-      placeholderPhone: "+91 98765 43210",
+      placeholderPhone: "+91 XXXXX XXXXX",
       companyName: "Company / Property Name",
       placeholderCompany: "Apex Developers Ltd. (or Property Location/Address)",
       profClass: "Professional Classification / Role",
@@ -362,7 +363,7 @@ export const translations: Record<Language, Record<string, any>> = {
       customLandingPages: "தனிப்பயன் பிராண்ட் இறங்கும் பக்கங்கள் மட்டுமே",
     },
     header: {
-      title: "பிரத்தியேக",
+      title: "CyberAd",
       subtitle: "ரியல் எஸ்டேட் சந்தைப்படுத்தல்",
       whoWeWorkWith: "நாம் யாருடன் வேலை செய்கிறோம்",
       theEngine: "எங்கள் தொழில்நுட்ப இயந்திரம்",
@@ -378,11 +379,11 @@ export const translations: Record<Language, Record<string, any>> = {
       headlineEnd: " நாங்கள் உதவுகிறோம்.",
       description: "நாங்கள் பில்டர்கள், நில மேம்பாட்டாளர்கள், கார்ப்பரேட் முகமைகள், பல-யூனிட் உரிமையாளர்கள், தொழில்முறை நிபுணர்கள் மற்றும் தனி சொத்து விற்பனையாளர்கள் மெட்டா விளம்பரங்கள், கூகுள் விளம்பரங்கள், அதிக மாற்று விகிதம் கொண்ட லேண்டிங் பக்கங்கள் மற்றும் சந்தைப்படுத்தல் ஆட்டோமேஷன் மூலம் தரமான, பிரத்தியேக லீட்களை உருவாக்க உதவுகிறோம்.",
       b2bScopeTitle: "B2B நோக்க விளக்கம்:",
-      b2bScopeText: "நாங்கள் ஒரு தொழில்முறை லீட் ஜெனரேஷன் ஏஜென்சி மட்டுமே. சொத்து விற்பனையாளர்களுக்காக பிரத்தியேக மார்க்கெட்டிங் பைப்லைன்களை உருவாக்கி, தகுதியான வாங்குபவர்களின் லீட்களைத் தரகர்கள் அல்லது பொது விளம்பரப் பலகைகள் இன்றி நேரடியாக வழங்குகிறோம்.",
+      b2bScopeText: "நாங்கள் ஒரு தொழில்முறை லீட் ஜெனரேஷன் ஏஜென்சி மட்டுமே. சொத்து விற்பனையாளர்களுக்காக பிரத்தியேக மார்க்கெட்டிங் பைப்லைன்களை உருவாக்கி, தகுதியான வாங்குபவர்களின் லீட்களை நேரடியாக வழங்குகிறோம்.",
       epiphanyTitle: "சிந்தனை மாற்றம்",
       epiphanySubtitle: "முன்னணி பில்டர்கள் எங்களை எவ்வாறு பார்க்கிறார்கள்",
       pitfallLabel: "போர்ட்டல் குறைபாடுகள்:",
-      pitfallText: '"ஒரு சொத்து விற்பனையாளர் அல்லது பில்டராக, பொதுவான போர்ட்டல்களில் நூற்றுக்கணக்கான இதர திட்டங்களுக்கு மத்தியில் பணம் செலுத்தி விளம்பரம் செய்யும்போது, அது நேரடி வாங்குபவர்களை ஈர்ப்பதற்கு பதிலாக, தேவையற்ற விலைப்போர்களையும் தகுதியற்ற விசாரணைகளையே உருவாக்குகிறது."',
+      pitfallText: '"ஒரு சொத்து விற்பனையாளர் அல்லது பில்டராக, நூற்றுக்கணக்கான இதர திட்டங்களுக்கு மத்தியில் விளம்பரம் செய்யும்போது, அது நேரடி வாங்குபவர்களை ஈர்ப்பதற்கு பதிலாக, தேவையற்ற விலைப்போர்களையும் தகுதியற்ற விசாரணைகளையே உருவாக்குகிறது."',
       breakthroughLabel: "முகமை திருப்புமுனை:",
       breakthroughText: '"பிரத்தியேக மார்க்கெட்டிங் நேரடியாக சொத்துக்களை விற்பதில்லை. அவர்கள் எனது பிராண்டிற்கு ஒரு தனித்துவமான டிஜிட்டல் சுற்றுச்சூழல் அமைப்பை உருவாக்குகிறார்கள், எனவே வாங்குபவர்கள் எனது திட்டத்தை மட்டுமே பார்த்து எங்கள் விற்பனை அலுவலகத்தை நேரடியாக தொடர்பு கொள்கிறார்கள்."',
       singleMandateTitle: "எங்கள் ஒரே நோக்கம்:",
@@ -393,7 +394,7 @@ export const translations: Record<Language, Record<string, any>> = {
     targetAudience: {
       badge: "எங்கள் இலக்கு வாடிக்கையாளர்கள்",
       headline: "நாங்கள் ரியல் எஸ்டேட் வல்லுநர்களுடன் மட்டுமே பிரத்தியேகமாக வேலை செய்கிறோம்",
-      description: "நாங்கள் வீடு தேடும் தனிநபர்களுக்குச் சேவை செய்வதில்லை. பில்டர்கள், நில டெவலப்பர்கள், கார்ப்பரேட் முகமைகள், பல-யூனிட் உரிமையாளர்கள், தொழில்முறை நிபுணர்கள் மற்றும் தனி சொத்து விற்பனையாளர்களின் டிஜிட்டல் விளம்பர உள்கட்டமைப்பை மட்டுமே நாங்கள் உருவாக்குகிறோம்.",
+      description: "பில்டர்கள், நில டெவலப்பர்கள், கார்ப்பரேட் முகமைகள், பல-யூனிட் உரிமையாளர்கள், தொழில்முறை நிபுணர்கள் மற்றும் தனி சொத்து விற்பனையாளர்களின் டிஜிட்டல் விளம்பர உள்கட்டமைப்பை மட்டுமே நாங்கள் உருவாக்குகிறோம்.",
       selectCategory: "உங்கள் வகையைத் தேர்ந்தெடுக்கவும்:",
       specSheet: "B2B விவரக்குறிப்பு தாள்",
       helpPrefix: "நாம் எவ்வாறு உதவுகிறோம் - ",
@@ -406,12 +407,13 @@ export const translations: Record<Language, Record<string, any>> = {
           title: "பில்டர்கள்",
           subtitle: "நேரடி கட்டுமான நிறுவனங்கள் & பில்டர்கள்",
           badge: "ரியல் எஸ்டேட் பில்டர்கள்",
-          description: "குடியிருப்பு வளாகங்கள், டவுன்ஷிப்கள் அல்லது சொகுசு கட்டிடங்களை உருவாக்கும் முன்னணி பில்டர்களுக்கு, தரகுத் தொகை இழப்பு இல்லாமல் நேரடி விற்பனையை உருவாக்க உதவுகிறோம்.",
+          description: "பிரத்தியேக விளம்பர பிரச்சாரங்கள் மூலம் சொத்துக்களை விரைவாக விற்க பில்டர்களுக்கு உதவுகிறோம்.",
           painPoints: [],
           solutions: [
-            "செயலில் உள்ள வாங்குபவர்களைக் குறிவைக்கும் தனி விளம்பர கட்டமைப்பு.",
-            "மெய்நிகர் உலாக்களுடன் கூடிய பிரத்தியேக திட்ட இறங்கும் பக்கங்கள்.",
-            "பில்டரின் உள் CRM-key-க்கு நேரடியாக தகுதியான லீட்கள் அனுப்பப்படுதல்."
+            "உண்மையான சொத்து வாங்குபவர்களைக் குறிவைக்கும் பிரத்தியேக விளம்பரங்கள்",
+            "அதிக வாடிக்கையாளர்களை ஈர்க்கும் திட்ட இறங்கும் பக்கங்கள்",
+            "உங்கள் CRM-க்கு நேரடியாக அனுப்பப்படும் தகுதியான லீட்கள்",
+            "தனிப்பயனாக்கப்பட்ட சந்தைப்படுத்தல் சுற்றுச்சூழல்—இது பொதுச் சொத்து போர்டல் அல்ல"
           ]
         },
         developers: {
@@ -463,15 +465,15 @@ export const translations: Record<Language, Record<string, any>> = {
           ]
         },
         singleSellers: {
-          title: "தனி சொத்து விற்பனையாளர்கள்",
+          title: "தனி நபர் உரிமையாளர்கள் & மறுவிற்பனை",
           subtitle: "தனிப்பட்ட பிரீமியம் சொத்து விற்பனை",
-          badge: "தனி நபர் விற்பனையாளர்கள்",
-          description: "தங்களின் மதிப்புமிக்க தனிப்பட்ட அடுக்குமாடி குடியிருப்புகள், பிரீமியம் வில்லாக்கள் அல்லது மனைகளை, அதிக தரகு கமிஷன் செலுத்தாமல் நேரடியாக விற்க விரும்பும் தனி நபர் உரிமையாளர்களுக்கான பிரத்யேக சேவை.",
+          badge: "தனி நபர் உரிமையாளர்கள் & மறுவிற்பனை",
+          description: "தங்களின் மதிப்புமிக்க தனிப்பட்ட அடுக்குமாடி குடியிருப்புகள், பிரீமியம் வில்லாக்கள் அல்லது மனைகளை நேரடி விளம்பர பிரச்சாரங்கள் மூலம் விற்க விரும்பும் தனி நபர் உரிமையாளர்களுக்கான பிரத்யேக சேவை.",
           painPoints: [],
           solutions: [
             "அதிவேக காட்சிகள் கொண்ட பிரத்தியேக தனி-சொத்து லேண்டிங் தளம்.",
             "உயர் வருவாய் உள்ள பகுதிகளைக் குறிவைத்து நடத்தப்படும் சமூக ஊடக விளம்பரங்கள்.",
-            "தரகர்கள் இன்றி வாங்குபவர்களுடன் நேரடியாக வாட்ஸ்அப் அல்லது தொலைபேசி வழி தொடர்பு."
+            "வாங்குபவர்களுடன் நேரடியாக வாட்ஸ்அப் அல்லது தொலைபேசி வழி தொடர்பு."
           ]
         }
       }
@@ -551,22 +553,22 @@ export const translations: Record<Language, Record<string, any>> = {
       metricLabel: "பிரச்சாரத்தின் முடிவு:",
       villasTitle: "சொகுசு வில்லாக்கள் & எஸ்டேட்டுகள்",
       villasDesc: "உயர்தர பிரீமியம் சொத்துக்களுக்கு தகுந்த வருமானம் உள்ள நபர்களைக் குறிவைக்கும் விளம்பரங்கள் மற்றும் மெய்நிகர் சுற்றுப்பயணங்கள் தேவை.",
-      villasChallenge: "பொதுவான தளங்கள் குறைந்த ஆர்வமுள்ள பார்வையாளர்களையும் விலையைக் குறைக்கும் போட்டியாளர்களையும் ஈர்க்கின்றன.",
+      villasChallenge: "",
       villasStrategy: "உள்ளூர் உயர் வருவாய் ஈட்டுபவர்கள் மற்றும் வணிக உரிமையாளர்களைக் குறிவைத்து மெட்டா விளம்பரங்கள் மற்றும் பிரத்தியேக வீடியோ சுற்றுப்பயணங்கள்.",
       villasMetrics: "₹450 சராசரி CPL | 85% தகுதியான வாங்குபவர்கள்",
       plotsTitle: "நில மேம்பாடுகள் & மனைப்பிரிவுகள்",
       plotsDesc: "அறிமுகத்திற்கு முந்தைய பதிவுகளை விரைவாகப் பெறுவதற்கு வேகமான விளம்பரப் பாதைகள் தேவை.",
-      plotsChallenge: "வாங்குபவர்கள் மனை அமைப்பைக் கேட்கிறார்கள், ஆனால் போர்டல்கள் வெறும் பட்டியலை மட்டுமே காட்டுகின்றன.",
+      plotsChallenge: "",
       plotsStrategy: "கூகுள் விளம்பரங்கள் மற்றும் வாட்ஸ்அப் மூலம் மனை விவரங்களை வழங்கும் தானியங்கி அமைப்புகள்.",
       plotsMetrics: "12% பதிவு விகிதம் | CPL ₹300-க்குள்",
       apartmentsTitle: "பிரீமியம் அடுக்குமாடி குடியிருப்புகள்",
-      apartmentsDesc: "தரகு கமிஷன் இல்லாமல் நேரடி விற்பனையை விரும்பும் குடியிருப்புகள்.",
+      apartmentsDesc: "நேரடி விற்பனையை விரும்பும் அடுக்குமாடி குடியிருப்புகள்.",
       apartmentsChallenge: "பொதுவான விளம்பரம் அதிக எண்ணிக்கையிலான தகுதியற்ற விவரங்களை மட்டுமே தருகிறது, இதனால் நேரம் வீணாகிறது.",
       apartmentsStrategy: "தள அமைப்புகள், சொத்தின் சிறப்பம்சங்கள் மற்றும் நேரடி தொடர்பு படிவங்களை வழங்கும் பிரத்தியேக பக்கங்கள்.",
-      apartmentsMetrics: "18% லீட் மாற்று விகிதம் | பூஜ்ஜிய கமிஷன்",
+      apartmentsMetrics: "18% லீட் மாற்று விகிதம்",
       commercialTitle: "வணிக மற்றும் அலுவலக இடங்கள்",
       commercialDesc: "வணிக உரிமையாளர்கள் மற்றும் நிறுவன முதலீட்டாளர்களைக் குறிவைக்கும் இடங்கள்.",
-      commercialChallenge: "வணிக ரீதியாக வாங்குபவர்கள் போர்டல்களைத் தேடுவதில்லை; அவர்கள் நேரடி உறவுகள் மூலம் வாங்குகிறார்கள்.",
+      commercialChallenge: "",
       commercialStrategy: "வணிக முதலீட்டாளர்களை ஈர்ப்பதற்கான லிங்க்டின் விளம்பரங்கள் மற்றும் இலக்கு வைக்கப்பட்ட கூகுள் தேடல் விளம்பரங்கள்.",
       commercialMetrics: "6.8% உயர் ஆர்வமுள்ள அழைப்பு விகிதங்கள்"
     },
@@ -575,7 +577,7 @@ export const translations: Record<Language, Record<string, any>> = {
       headline: "எங்கள் லீட் ஜெனரேஷன் செயல்முறை",
       description: "சொத்து உரிமையாளர்கள் மற்றும் டெவலப்பர்களுக்குத் தரமான லீட்களை உருவாக்கவும், தகவல் பைப்லைனை திறமையாக நிர்வகிக்கவும் நாங்கள் உதவுகிறோம்.",
       guaranteeTitle: "B2B உள்கட்டமைப்பு நம்பகத்தன்மை",
-      guaranteeText: "உங்கள் லீட்களை இதர போட்டி தரகர்களுக்கு விநியோகிக்கும் பாரம்பரிய சொத்துப் பட்டியல் இணையதளங்களைப் போலல்லாமல், எங்களின் மார்க்கெட்டிங் பைப்லைன் உங்கள் நிறுவனத்திற்கு மட்டுமே சொந்தமான விசாரணைகளை வழங்குகிறது.",
+      guaranteeText: "எங்களின் மார்க்கெட்டிங் பைப்லைன் உங்கள் நிறுவனத்திற்கு மட்டுமே சொந்தமான நேரடி விசாரணைகளை வழங்குகிறது, இது பிரத்தியேகமான மற்றும் அர்ப்பணிக்கப்பட்ட லீட்களை உறுதி செய்கிறது.",
       integrateCrm: "உங்கள் CRM-ல் இந்த புனலை ஒருங்கிணைக்கவும்",
       steps: [
         {
@@ -624,7 +626,7 @@ export const translations: Record<Language, Record<string, any>> = {
       corpEmail: "கார்ப்பரேட் அல்லது தனிப்பட்ட மின்னஞ்சல்",
       placeholderEmail: "johndoe@builder.com",
       phone: "தொலைபேசி எண்",
-      placeholderPhone: "+91 98765 43210",
+      placeholderPhone: "+91 XXXXX XXXXX",
       companyName: "நிறுவனம் / விரும்பும் பகுதி",
       placeholderCompany: "அபெக்ஸ் டெவலப்பர்ஸ் லிமிடெட் (அல்லது விரும்பும் நகரம்/பகுதி)",
       profClass: "தொழில்முறை வகைப்பாடு / பங்கு",
