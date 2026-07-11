@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, ShieldCheck, FileText } from 'lucide-react';
+import { ShieldCheck, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
@@ -19,17 +19,15 @@ export default function Footer() {
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
-          {/* Column 1: Logo & Statement (5 cols) */}
-          <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="bg-indigo-600 text-white p-2.5 rounded-xl">
-                <Building2 className="w-5 h-5" />
-              </div>
-              <span className="font-display font-bold text-lg text-white tracking-tight leading-tight">
-                {t('title', 'header')}
-              </span>
+          <div className="md:col-span-5 space-y-1">
+            <div className="flex items-center">
+              <img 
+                src="https://assets.cyberad.in/logo.png" 
+                alt="CyberAd Logo" 
+                className="h-14 md:h-16 w-auto object-contain invert mix-blend-screen" 
+              />
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm -mt-1">
               {t('desc', 'footer')}
             </p>
           </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Shield, Building2, Globe } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Header() {
-  const { language, setLanguage, t } = useLanguage();
+  const { language, t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -38,21 +38,17 @@ export default function Header() {
       </div>
 
       {/* Main Navbar */}
-      <div className="w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-4 px-6">
+      <div className="w-full bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-2.5 sm:py-4 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div 
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-            className="flex items-center gap-2.5 cursor-pointer group"
+            className="flex items-center cursor-pointer group"
           >
-            <div className="bg-slate-900 text-white p-2 rounded-lg group-hover:bg-indigo-600 transition-colors duration-300 shadow-sm">
-              <Building2 className="w-5.5 h-5.5" />
-            </div>
-            <div>
-              <div className="font-display font-bold text-lg md:text-xl tracking-tight text-slate-800 flex items-center gap-1.5">
-                {t('title', 'header')} <span className="text-indigo-600">B2B</span>
-              </div>
-              <p className="text-[9px] font-mono tracking-widest text-slate-500 uppercase">{t('subtitle', 'header')}</p>
-            </div>
+            <img 
+              src="https://assets.cyberad.in/logo.png" 
+              alt="CyberAd Logo" 
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -77,34 +73,8 @@ export default function Header() {
             </button>
           </nav>
 
-          {/* Action CTA & Language Toggle */}
+          {/* Action CTA */}
           <div className="flex items-center gap-3 md:gap-4">
-            {/* Elegant Pill-shaped language switcher */}
-            <div className="flex items-center bg-slate-100 p-0.5 rounded-full border border-slate-200">
-              <button
-                onClick={() => setLanguage('en')}
-                className={`text-[10px] font-mono font-bold px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
-                  language === 'en' 
-                    ? 'bg-slate-900 text-white shadow-sm' 
-                    : 'text-slate-500 hover:text-slate-800'
-                }`}
-                title="English Language"
-              >
-                EN
-              </button>
-              <button
-                onClick={() => setLanguage('ta')}
-                className={`text-[10px] font-sans font-semibold px-2.5 py-1 rounded-full transition-all duration-200 cursor-pointer ${
-                  language === 'ta' 
-                    ? 'bg-slate-900 text-white shadow-sm' 
-                    : 'text-slate-500 hover:text-slate-800'
-                }`}
-                title="தமிழ் மொழி"
-              >
-                தமிழ்
-              </button>
-            </div>
-
             <button
               onClick={() => scrollToSection('partner-form')}
               className="font-display font-semibold text-xs md:text-sm tracking-wide bg-slate-900 hover:bg-indigo-600 text-white px-4 md:px-5 py-2.5 rounded-full shadow-lg shadow-slate-200 transition-all duration-300 hover:translate-y-[-1px] cursor-pointer"

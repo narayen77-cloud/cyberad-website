@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const translations: Record<Language, Record<string, any>> = {
   en: {
     common: {
-      callToAction: "Request Strategy Call",
+      callToAction: "Get in Touch",
       launchCampaign: "Launch Your Campaign Engine",
       calculateRoi: "Calculate Acquisition ROI",
       b2bNotice: "B2B ARCHITECTURE",
@@ -281,7 +281,7 @@ export const translations: Record<Language, Record<string, any>> = {
       corpDesigned: "Designed for Real Estate Sellers",
       corpDesignedDesc: "We work exclusively with builders, land developers, corporate agencies, multi-unit owners, industry specialists, and single property sellers to establish direct-to-buyer marketing pipelines.",
       consultationIncl: "Strategic Consultation Inclusions",
-      consultationInclDesc: "Every strategy call includes a personalized location demand audit, estimated Meta and Google cost-per-click values, and wireframe prototypes for your developments.",
+      consultationInclDesc: "Every discussion includes a personalized location demand audit, estimated Meta and Google cost-per-click values, and wireframe prototypes for your developments.",
       antiListings: "Lead Quality Notice",
       antiListingsDesc: "We do not host open houses, represent individual single-unit tenants, or act as traditional brokers. We are a specialized real estate lead generation agency.",
       callDuration: "ESTIMATED FIRST CALL DURATION: 20 MINUTES",
@@ -298,7 +298,7 @@ export const translations: Record<Language, Record<string, any>> = {
       targetBudget: "Target Monthly Marketing Budget",
       goalsDetails: "Campaign Goals or Property Details",
       placeholderDetails: "Tell us about your housing project, land plots, or individual property, unit count, and past marketing challenges...",
-      submitBtn: "Request Campaign Strategy Call",
+      submitBtn: "Discuss Further",
       secureNotice: "Secure Channel — We never sell or share your details.",
       successTitle: "Submission Received Successfully",
       successRef: "REFERENCE ID",
@@ -350,7 +350,7 @@ export const translations: Record<Language, Record<string, any>> = {
   },
   ta: {
     common: {
-      callToAction: "வியூக அழைப்பைக் கோருக",
+      callToAction: "தொடர்பு கொள்ளவும்",
       launchCampaign: "உங்கள் பிரச்சார இயந்திரத்தைத் துவக்குங்கள்",
       calculateRoi: "முதலீட்டின் மீதான வருவாயைக் கணக்கிடுக (ROI)",
       b2bNotice: "B2B கட்டமைப்பு",
@@ -634,7 +634,7 @@ export const translations: Record<Language, Record<string, any>> = {
       targetBudget: "இலக்கு மாதாந்திர மார்க்கெட்டிங் பட்ஜெட்",
       goalsDetails: "பிரச்சார இலக்குகள் அல்லது வாங்குபவர் தேவைகள்",
       placeholderDetails: "உங்கள் வீட்டுத் திட்டம் அல்லது நீங்கள் ஒரு வாங்குபவர் எனில் உங்கள் குறிப்பிட்ட தேவைகளைப் பற்றி விரிவாக எழுதவும்...",
-      submitBtn: "தேவைகளைச் சமர்ப்பிக்கவும் / அழைப்பைக் கோருக",
+      submitBtn: "மேலும் விவாதிக்கவும்",
       secureNotice: "பாதுகாப்பான சேனல் — உங்கள் விவரங்களை நாங்கள் ஒருபோதும் விற்கவோ அல்லது பகிரவோ மாட்டோம்.",
       successTitle: "சமர்ப்பிப்பு வெற்றிகரமாகப் பெறப்பட்டது",
       successRef: "குறிப்பு எண்",

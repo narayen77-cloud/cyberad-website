@@ -101,21 +101,27 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="partner-form" className="py-20 px-6 bg-white border-b border-slate-100">
-      <div className="max-w-3xl mx-auto">
+    <section id="partner-form" className="py-24 px-6 bg-slate-950 text-white border-b border-slate-900 relative overflow-hidden">
+      {/* Glow effect for extra prominence */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div className="max-w-3xl mx-auto relative z-10">
         
         {/* Centered Form Header */}
-        <div className="text-center mb-12 space-y-3">
-          <h2 className="font-display font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+        <div className="text-center mb-12 space-y-4">
+          <span className="text-xs font-mono font-bold tracking-widest text-indigo-400 uppercase bg-indigo-500/10 px-3.5 py-1.5 rounded-full border border-indigo-500/20">
+            {language === 'en' ? 'Get In Touch' : 'தொடர்பு கொள்ள'}
+          </span>
+          <h2 className="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight bg-gradient-to-r from-white via-slate-100 to-indigo-200 bg-clip-text text-transparent">
             {t('headline', 'contactForm')}
           </h2>
-          <p className="text-slate-500 text-sm sm:text-base font-sans max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-400 text-sm sm:text-base font-sans max-w-xl mx-auto leading-relaxed">
             {t('description', 'contactForm')}
           </p>
         </div>
 
-        {/* Form Container Card */}
-        <div className="bg-slate-50 border border-slate-200 rounded-[2.5rem] p-6 md:p-10 shadow-sm relative">
+        {/* Form Container Card - prominent white card popping out of dark section */}
+        <div className="bg-white border border-slate-200 rounded-[2.5rem] p-6 md:p-10 shadow-2xl relative overflow-hidden text-slate-900">
           <AnimatePresence mode="wait">
             {!submitted ? (
               <motion.form 
@@ -129,7 +135,7 @@ export default function ContactForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Name */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block">
+                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block text-left">
                       {language === 'en' ? 'Full Name' : 'முழு பெயர்'}
                     </label>
                     <input
@@ -138,13 +144,13 @@ export default function ContactForm() {
                       placeholder={t('placeholderName', 'contactForm')}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-655 focus:ring-1 focus:ring-indigo-650 transition-all font-sans text-slate-800 placeholder-slate-400"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-sans text-slate-800 placeholder-slate-400"
                     />
                   </div>
 
                   {/* Phone */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block">
+                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block text-left">
                       {t('phone', 'contactForm')}
                     </label>
                     <input
@@ -153,7 +159,7 @@ export default function ContactForm() {
                       placeholder={t('placeholderPhone', 'contactForm')}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-650 focus:ring-1 focus:ring-indigo-650 transition-all font-sans text-slate-800 placeholder-slate-400"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-sans text-slate-800 placeholder-slate-400"
                     />
                   </div>
                 </div>
@@ -161,7 +167,7 @@ export default function ContactForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Email (Optional) */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block">
+                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block text-left">
                       {language === 'en' ? 'Email Address (Optional)' : 'மின்னஞ்சல் முகவரி (விருப்பத்திற்குரியது)'}
                     </label>
                     <input
@@ -169,13 +175,13 @@ export default function ContactForm() {
                       placeholder={t('placeholderEmail', 'contactForm')}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-650 focus:ring-1 focus:ring-indigo-650 transition-all font-sans text-slate-800 placeholder-slate-400"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-sans text-slate-800 placeholder-slate-400"
                     />
                   </div>
 
                   {/* Place of the Property */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block">
+                    <label className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wide block text-left">
                       {language === 'en' ? 'Place of the Property' : 'சொத்து அமைந்துள்ள இடம்'}
                     </label>
                     <input
@@ -184,14 +190,14 @@ export default function ContactForm() {
                       placeholder={language === 'en' ? 'e.g., Adyar, Chennai' : 'எ.கா., அடையார், சென்னை'}
                       value={formData.companyName}
                       onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                      className="w-full bg-white border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-650 focus:ring-1 focus:ring-indigo-650 transition-all font-sans text-slate-800 placeholder-slate-400"
+                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-sans text-slate-800 placeholder-slate-400"
                     />
                   </div>
                 </div>
 
                 {/* Error Message Block */}
                 {errorMsg && (
-                  <div className="bg-rose-50 border border-rose-100 rounded-xl p-3.5 text-xs text-rose-650 flex items-start gap-2.5">
+                  <div className="bg-rose-50 border border-rose-100 rounded-xl p-3.5 text-xs text-rose-700 flex items-start gap-2.5">
                     <ShieldAlert className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
                     <span>{errorMsg}</span>
                   </div>
@@ -201,7 +207,7 @@ export default function ContactForm() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className={`w-full ${submitting ? 'bg-slate-400 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700'} text-white font-display font-semibold text-sm py-3.5 px-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-2`}
+                  className={`w-full ${submitting ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-indigo-600 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-600/30 hover:-translate-y-0.5'} text-white font-display font-semibold text-sm py-3.5 px-4 rounded-full shadow-md transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer mt-2`}
                 >
                   {submitting ? (
                     <span>{language === 'en' ? 'Submitting...' : 'சமர்ப்பிக்கப்படுகிறது...'}</span>
@@ -244,7 +250,7 @@ export default function ContactForm() {
                 </div>
 
                 {/* Lead Goal Summary Card */}
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 text-left max-w-md mx-auto space-y-3.5 shadow-sm">
+                <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-left max-w-md mx-auto space-y-3.5 shadow-sm">
                   <div className="flex items-center gap-2 text-indigo-600">
                     <Sparkles className="w-4.5 h-4.5" />
                     <span className="font-display font-bold text-xs uppercase tracking-wide">
@@ -263,7 +269,7 @@ export default function ContactForm() {
                       <span className="text-slate-400 block text-[9px] uppercase">
                         {language === 'en' ? 'PROPERTY LOCATION:' : 'சொத்து இடம்:'}
                       </span>
-                      <span className="font-semibold text-indigo-600">{submissionDetails?.companyName}</span>
+                      <span className="font-semibold text-indigo-650">{submissionDetails?.companyName}</span>
                     </div>
                   </div>
 
@@ -284,7 +290,7 @@ export default function ContactForm() {
                       companyName: ''
                     });
                   }}
-                  className="font-display font-semibold text-xs text-indigo-600 hover:text-indigo-750 bg-indigo-50 border border-indigo-200/50 px-5 py-2.5 rounded-full cursor-pointer transition-all"
+                  className="font-display font-semibold text-xs text-indigo-650 hover:text-indigo-750 bg-indigo-50 border border-indigo-200/50 px-5 py-2.5 rounded-full cursor-pointer transition-all hover:bg-indigo-100/60"
                 >
                   {t('submitAnother', 'contactForm')}
                 </button>
