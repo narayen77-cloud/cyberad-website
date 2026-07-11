@@ -8,8 +8,8 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      title: "Helping Traditional Businesses Grow Using Modern Digital Systems.",
-      subtitle: "We empower local enterprises with high-impact automation, multi-page websites, and strategic marketing built to scale your revenue.",
+      title: "Accelerating Traditional Businesses with Modern Digital Growth.",
+      subtitle: "We help businesses generate more leads, automate operations, and increase revenue through intelligent websites, AI-powered automation, and data-driven digital marketing.",
       cta: "Get Started",
       technicalGap: "DIGITAL GROWTH PARTNER",
     },
@@ -117,8 +117,8 @@ export const translations = {
       contact: "தொடர்பு",
     },
     hero: {
-      title: "பாரம்பரியத்திற்கும் நவீன வளர்ச்சிக்குமான இடைவெளியைக் குறைப்போம்.",
-      subtitle: "பாரம்பரிய வணிகங்கள் நவீன டிஜிட்டல் அமைப்புகள், ஆட்டோமேஷன் மற்றும் உத்திசார் மார்க்கெட்டிங் மூலம் வளர உதவுகிறோம்.",
+      title: "பாரம்பரிய வணிகங்களை நவீன டிஜிட்டல் வளர்ச்சி மூலம் துரிதப்படுத்துகிறோம்.",
+      subtitle: "அறிவார்ந்த இணையதளங்கள், AI ஆட்டோமேஷன் மற்றும் தரவு சார்ந்த டிஜிட்டல் மார்க்கெட்டிங் மூலம் வணிகங்கள் கூடுதல் வாய்ப்புகளைப் பெறவும், செயல்பாடுகளை ஆட்டோமேட் செய்யவும் மற்றும் வருவாயை அதிகரிக்கவும் உதவுகிறோம்.",
       cta: "தொடங்குங்கள்",
       technicalGap: "தொழில்நுட்ப இடைவெளி",
     },
@@ -226,8 +226,8 @@ export const translations = {
       contact: "Contacto",
     },
     hero: {
-      title: "Cerrando la brecha entre el legado y la gran escala.",
-      subtitle: "Ayudamos a las empresas tradicionales a crecer utilizando sistemas digitales modernos, automatización y marketing estratégico.",
+      title: "Acelerando negocios tradicionales con crecimiento digital moderno.",
+      subtitle: "Ayudamos a las empresas a generar más clientes potenciales, automatizar operaciones e incrementar ingresos a través de sitios web inteligentes, automatización impulsada por IA y marketing digital centrado en datos.",
       cta: "Comenzar",
       technicalGap: "La Brecha que Superamos",
     },

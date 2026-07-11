@@ -1,7 +1,5 @@
 import { useLanguage } from "./LanguageContext";
 import { motion } from "motion/react";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export function Hero() {
   const { language, t } = useLanguage();
@@ -37,15 +35,15 @@ export function Hero() {
             }`}>
               {language === 'en' ? (
                 <>
-                  We empower local enterprises with high-impact <strong className="font-bold text-brand-charcoal">automation</strong>, <strong className="font-bold text-brand-charcoal">multi-page websites</strong>, and <strong className="font-bold text-brand-charcoal">strategic marketing</strong> built to scale your revenue.
+                  We help businesses <strong className="font-bold text-brand-charcoal">generate more leads</strong>, <strong className="font-bold text-brand-charcoal">automate operations</strong>, and <strong className="font-bold text-brand-charcoal">increase revenue</strong> through intelligent websites, AI-powered automation, and data-driven digital marketing.
                 </>
               ) : language === 'ta' ? (
                 <>
-                  உங்களது வணிகத்தை அதிவேகமாக வளர்க்கும் உயர்ரக <strong className="font-bold text-brand-charcoal">ஆட்டோமேஷன்</strong>, <strong className="font-bold text-brand-charcoal">வலைதளங்கள்</strong>, மற்றும் <strong className="font-bold text-brand-charcoal">மார்க்கெட்டிங் உத்திகளை</strong> நாங்கள் வழங்குகிறோம்.
+                  அறிவார்ந்த இணையதளங்கள், AI ஆட்டோமேஷன் மற்றும் தரவு சார்ந்த டிஜிட்டல் மார்க்கெட்டிங் மூலம் வணிகங்கள் <strong className="font-bold text-brand-charcoal">கூடுதல் வாய்ப்புகளைப் பெறவும்</strong>, <strong className="font-bold text-brand-charcoal">செயல்பாடுகளை ஆட்டோமேட் செய்யவும்</strong> மற்றும் <strong className="font-bold text-brand-charcoal">வருவாயை அதிகரிக்கவும்</strong> உதவுகிறோம்.
                 </>
               ) : (
                 <>
-                  Impulsamos las empresas locales con <strong className="font-bold text-brand-charcoal">automatización</strong> de alto impacto, <strong className="font-bold text-brand-charcoal">sitios web multi-página</strong> y <strong className="font-bold text-brand-charcoal">marketing estratégico</strong> para escalar sus ingresos.
+                  Ayudamos a las empresas a <strong className="font-bold text-brand-charcoal">generar más clientes potenciales</strong>, <strong className="font-bold text-brand-charcoal">automatizar operaciones</strong> e <strong className="font-bold text-brand-charcoal">incrementar ingresos</strong> a través de sitios web inteligentes, automatización impulsada por IA y marketing digital centrado en datos.
                 </>
               )}
             </p>
@@ -59,24 +57,7 @@ export function Hero() {
                 : "Websites, Google Ads, Meta Ads, Videos, Presentations, Content Creation and Business Support Services."}
             </p>
 
-            {/* Three CTA Buttons from brief */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-start items-stretch">
-              <Button 
-                size="lg" 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="rounded-full h-12 px-6 bg-brand-charcoal text-brand-offwhite hover:bg-brand-charcoal/90 hover:scale-102 transition-all cursor-pointer text-xs md:text-sm"
-              >
-                {language === "ta" ? "இலவச ஆலோசனை பெறுக" : language === "es" ? "Consulta Gratuita" : "Get a Free Consultation"}
-              </Button>
-              <a 
-                href="https://wa.me/918925693013"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full h-12 px-6 bg-[#25D366] hover:bg-[#128C7E] text-white hover:scale-102 transition-all cursor-pointer text-xs md:text-sm font-semibold shadow-sm"
-              >
-                <span>{language === "ta" ? "வாட்ஸ்அப் செய்க" : language === "es" ? "Escríbenos por WhatsApp" : "WhatsApp Us"}</span>
-              </a>
-            </div>
+            {/* Hero CTA Buttons removed as requested */}
           </motion.div>
         </div>
 
