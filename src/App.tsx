@@ -83,7 +83,7 @@ export default function App() {
         {/* Dynamic Auditing Debug Drawer Console */}
         <TrackingAuditConsole />
 
-        {/* Global Thank You Page Modal Simulation */}
+        {/* Global Thank You Page Modal */}
         <AnimatePresence>
           {showThankYou && (
             <motion.div
@@ -110,30 +110,23 @@ export default function App() {
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
 
-                <h3 className="text-2xl md:text-3xl serif italic text-brand-charcoal mb-3">
+                <h3 className="text-2xl md:text-3xl serif italic text-brand-charcoal mb-4">
                   Thank You!
                 </h3>
                 
-                <span className="text-[10px] uppercase font-mono font-bold tracking-widest text-brand-gold bg-brand-gold/10 px-3 py-1 rounded-full inline-block mb-4">
-                  GTM Tag Success Checked
-                </span>
-
-                <p className="text-sm font-light text-brand-charcoal/60 leading-relaxed mb-6">
-                  Your inquiry message has been compiled. The system has automatically pushed a <strong className="text-brand-charcoal font-semibold">thank_you_page_view</strong> conversion dataLayer event into GTM.
+                <p className="text-base font-semibold text-brand-charcoal mb-2">
+                  Your enquiry has been received successfully.
                 </p>
 
-                <div className="p-4 bg-brand-offwhite rounded-2xl mb-6 text-left border border-brand-charcoal/5">
-                  <div className="text-[9px] font-mono opacity-50 uppercase mb-1">Lead Package Request:</div>
-                  <p className="text-xs font-mono text-brand-charcoal/90 leading-tight">
-                    {thankYouMessage}
-                  </p>
-                </div>
+                <p className="text-sm font-light text-brand-charcoal/60 leading-relaxed mb-8">
+                  Thank you for contacting Cyberad. Our team will review your request and get in touch with you shortly.
+                </p>
 
                 <button
                   onClick={() => setShowThankYou(false)}
                   className="w-full py-3.5 bg-brand-charcoal hover:bg-brand-gold hover:text-brand-charcoal text-white rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer"
                 >
-                  Return to Cyber Enterprises
+                  Return to Home
                 </button>
               </motion.div>
             </motion.div>
