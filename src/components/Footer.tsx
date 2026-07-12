@@ -1,4 +1,5 @@
 import { useLanguage } from "./LanguageContext";
+import { Link } from "./RouterContext";
 import { Instagram, Facebook, MessageCircle, Globe } from "lucide-react";
 import { CyberPartnerFooter } from "./CyberPartnerFooter";
 
@@ -22,7 +23,7 @@ export function Footer({ onShowPrivacy }: { onShowPrivacy: () => void }) {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 text-brand-charcoal/60 pt-6 border-t border-brand-charcoal/5">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 text-left">
             <div className="flex items-center gap-6">
               <a href="https://www.facebook.com/share/1XHudMJnxJ/" target="_blank" rel="noreferrer" className="hover:text-brand-gold transition-colors">
                 <Facebook className="w-5 h-5" />
@@ -37,27 +38,35 @@ export function Footer({ onShowPrivacy }: { onShowPrivacy: () => void }) {
                 <Globe className="w-5 h-5" />
               </a>
             </div>
-            <div className="flex items-center gap-4">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em]">{t.footer.rights}</p>
-              <span className="opacity-20">|</span>
-              <a 
-                href="/privacy-policy.html"
-                className="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-brand-gold transition-colors"
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em]">{t.footer.rights}</p>
+              <span className="opacity-20 hidden xs:inline">|</span>
+              <Link 
+                to="/privacy-policy"
+                className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] hover:text-brand-gold transition-colors cursor-pointer"
               >
                 {t.footer.privacy}
-              </a>
+              </Link>
               <span className="opacity-20">|</span>
-              <a 
-                href="/refund-policy.html"
-                className="text-[10px] font-bold uppercase tracking-[0.2em] hover:text-brand-gold transition-colors"
+              <Link 
+                to="/terms"
+                className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] hover:text-brand-gold transition-colors cursor-pointer"
               >
-                {t.footer.refund}
-              </a>
+                Terms
+              </Link>
+              <span className="opacity-20">|</span>
+              <Link 
+                to="/cookie-policy"
+                className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] hover:text-brand-gold transition-colors cursor-pointer"
+              >
+                Cookies
+              </Link>
             </div>
           </div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-40">{t.footer.location}</p>
+          <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] opacity-40">{t.footer.location}</p>
         </div>
       </div>
     </footer>
   );
 }
+

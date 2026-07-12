@@ -92,6 +92,24 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  // Security Headers Middleware
+  app.use((req, res, next) => {
+    res.setHeader(
+      "Content-Security-Policy",
+      "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://connect.facebook.net https://www.clarity.ms https://*.clarity.ms; " +
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+      "img-src 'self' data: https://images.unsplash.com https://www.clarity.ms https://connect.facebook.net https://c.bing.com https://*.clarity.ms; " +
+      "connect-src 'self' https://api.web3forms.com https://www.google-analytics.com https://stats.g.doubleclick.net https://connect.facebook.net https://*.clarity.ms https://*.bing.com; " +
+      "font-src 'self' https://fonts.gstatic.com; " +
+      "frame-src 'self' https://www.googletagmanager.com https://connect.facebook.net;"
+    );
+    res.setHeader("X-Frame-Options", "DENY");
+    res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+    res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+    next();
+  });
+
   app.use(express.json());
 
   // Lazy-loaded Gemini API client to prevent startup crash if GEMINI_API_KEY is not defined
