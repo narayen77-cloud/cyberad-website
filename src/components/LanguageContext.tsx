@@ -1,18 +1,18 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
-import { translations, Language } from "@/src/lib/translations";
+import React, { createContext, useContext, ReactNode } from "react";
+import { translations } from "@/src/lib/translations";
 
 interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  language: "en";
+  setLanguage: (lang: "en") => void;
   t: typeof translations.en;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
-
-  const t = translations[language];
+  const language = "en";
+  const setLanguage = () => {};
+  const t = translations.en;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>

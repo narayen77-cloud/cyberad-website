@@ -126,7 +126,7 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !mobile) {
-      setError(lang === "ta" ? "பெயர் மற்றும் கைபேசி எண் தேவை" : lang === "es" ? "Nombre y teléfono requeridos" : "Name and Mobile Number are required");
+      setError("Name and Mobile Number are required");
       return;
     }
 
@@ -215,34 +215,16 @@ export default function Home() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-charcoal/5 border border-brand-charcoal/5 text-brand-charcoal/80 text-[10px] font-mono font-bold uppercase tracking-widest">
                 <Sparkles className="w-3.5 h-3.5 text-brand-gold animate-spin" />
-                {lang === "ta" ? "உங்கள் டிஜிட்டல் வளர்ச்சி பார்ட்னர்" : lang === "es" ? "SU SOCIO DE CRECIMIENTO DIGITAL" : "YOUR DIGITAL GROWTH PARTNER"}
+                YOUR DIGITAL GROWTH PARTNER
               </span>
 
               <h1 className="serif font-bold text-brand-charcoal text-4xl sm:text-5xl lg:text-6xl leading-[1.15] tracking-tight">
-                {lang === "ta" ? (
-                  <>
-                    அதிக லீட்களை உருவாக்குங்கள். <span className="serif italic text-brand-gold">அதிக விற்பனையை முடியுங்கள்.</span>
-                  </>
-                ) : lang === "es" ? (
-                  <>
-                    Genere más leads. <span className="serif italic text-brand-gold">Cierre más ventas.</span>
-                  </>
-                ) : (
-                  <>
-                    Generate More Leads. <br />
-                    <span className="serif italic text-brand-gold">Close More Sales.</span>
-                  </>
-                )}
+                Generate More Leads. <br />
+                <span className="serif italic text-brand-gold">Close More Sales.</span>
               </h1>
 
               <p className="text-base sm:text-lg text-brand-charcoal/80 font-normal max-w-xl leading-relaxed">
-                {lang === "ta" ? (
-                  "உங்கள் வணிக வளர்ச்சிக்கு உதவும் டிஜிட்டல் மார்க்கெட்டிங் மற்றும் AI ஆட்டோமேஷன்."
-                ) : lang === "es" ? (
-                  "Marketing digital y automatización de IA que ayudan a que su negocio crezca."
-                ) : (
-                  "Digital marketing and AI automation that help your business grow."
-                )}
+                Digital marketing and AI automation that help your business grow.
               </p>
 
               <div className="pt-4 flex flex-wrap gap-4 items-center">
@@ -251,14 +233,14 @@ export default function Home() {
                   onClick={ctaClick}
                   className="px-8 py-4 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-brand-charcoal rounded-full text-xs font-mono font-bold uppercase tracking-widest transition-all duration-300 shadow-lg shadow-brand-charcoal/10 hover:shadow-brand-gold/20 flex items-center gap-2 group cursor-pointer"
                 >
-                  <span>{lang === "ta" ? "இலவச ஆலோசனை பெறுங்கள்" : lang === "es" ? "Iniciar Consulta" : "Get Free Consultation"}</span>
+                  <span>Get Free Consultation</span>
                   <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="#services"
                   className="px-8 py-4 border border-brand-charcoal/10 hover:border-brand-gold text-brand-charcoal hover:text-brand-gold rounded-full text-xs font-mono font-bold uppercase tracking-widest transition-all duration-300 cursor-pointer"
                 >
-                  {lang === "ta" ? "மேலும் அறிய" : lang === "es" ? "Saber Más" : "Learn More"}
+                  Learn More
                 </Link>
               </div>
             </motion.div>
@@ -296,7 +278,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
             <span className="text-[10px] font-mono font-bold tracking-[0.25em] text-brand-charcoal/40 uppercase text-center md:text-left shrink-0">
-              {lang === "ta" ? "தொழில்முனைவோரால் நம்பப்படுகிறது" : lang === "es" ? "CON LA CONFIANZA DE EMPRESAS" : "TRUSTED BY LOCAL ENTERPRISES"}
+              TRUSTED BY LOCAL ENTERPRISES
             </span>
             <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-xs font-serif italic font-semibold text-brand-charcoal/30">
               <span className="hover:text-brand-gold transition-colors duration-300">Mihira Energy</span>
@@ -313,13 +295,13 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20 space-y-4">
             <span className="text-[10px] font-mono font-bold tracking-[0.3em] text-brand-gold uppercase block">
-              {lang === "ta" ? "எங்கள் சேவைகள்" : lang === "es" ? "QUÉ OFRECEMOS" : "CORE SERVICES"}
+              CORE SERVICES
             </span>
             <h2 className="text-4xl md:text-5xl serif italic text-brand-charcoal">
-              {lang === "ta" ? "உயர்-தாக்க வளர்ச்சி சேவைகள்" : lang === "es" ? "Especialidades de Alto Impacto" : "Premium Growth Services"}
+              Premium Growth Services
             </h2>
             <p className="text-sm sm:text-base text-brand-charcoal/60 max-w-xl mx-auto font-light leading-relaxed">
-              {lang === "ta" ? "உங்கள் தற்போதைய வணிக வளர்ச்சிக்கு தேவையான தீர்வைத் தேர்ந்தெடுக்கவும்." : lang === "es" ? "Seleccione la solución diseñada para adaptarse a su etapa operativa actual." : "Select the target solution designed to match your current operational stage."}
+              Select the target solution designed to match your current operational stage.
             </p>
           </div>
 
@@ -337,10 +319,10 @@ export default function Home() {
                   <Cpu className="w-6 h-6 animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-serif italic text-brand-gold mb-4">
-                  {lang === "ta" ? "AI ஆட்டோமேஷன்" : lang === "es" ? "Automatización con IA" : "AI Automation"}
+                  AI Automation
                 </h3>
                 <p className="text-sm text-white/70 font-light leading-relaxed mb-8">
-                  {lang === "ta" ? "24/7 வாடிக்கையாளர் தொடர்புகளைக் கையாளும் வாட்ஸ்அப் சாட்போட் மற்றும் கூகுள் ஷீட்ஸ் ஆட்டோமேஷன்." : lang === "es" ? "Chatbots inteligentes en la API de WhatsApp, sincronización automatizada con CRM y asistentes de venta activos 24/7." : "Smart WhatsApp API chatbots, automated CRM database sync, and 24/7 lead nurturing assistants."}
+                  Smart WhatsApp API chatbots, automated CRM database sync, and 24/7 lead nurturing assistants.
                 </p>
               </div>
               <div className="pt-6 border-t border-white/10">
@@ -348,7 +330,7 @@ export default function Home() {
                   to="#ai-automation"
                   className="text-xs font-mono font-bold uppercase tracking-widest text-brand-gold hover:text-white inline-flex items-center gap-1 group/link cursor-pointer"
                 >
-                  <span>{lang === "ta" ? "மேலும் அறிய" : lang === "es" ? "Saber Más" : "Learn More"}</span>
+                  <span>Learn More</span>
                   <ArrowRight className="w-3.5 h-3.5 transform group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -367,10 +349,10 @@ export default function Home() {
                   <Target className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-serif italic text-brand-charcoal mb-4 group-hover:text-brand-gold transition-colors">
-                  {lang === "ta" ? "டிஜிட்டல் மார்க்கெட்டிங்" : lang === "es" ? "Marketing Digital" : "Digital Marketing"}
+                  Digital Marketing
                 </h3>
                 <p className="text-sm text-brand-charcoal/60 font-light leading-relaxed mb-8">
-                  {lang === "ta" ? "கூகுள் மற்றும் மெட்டா விளம்பரங்கள் மூலமாக நிலையான விற்பனை வாய்ப்புகளை உருவாக்கும் மார்க்கெட்டிங் உத்திகள்." : lang === "es" ? "Campañas de publicidad optimizadas en Google y Meta junto con SEO local para generar un flujo constante de ventas." : "Data-driven Meta & Google Ads campaigns and local search optimization (SEO) to build consistent sales pipelines."}
+                  Data-driven Meta & Google Ads campaigns and local search optimization (SEO) to build consistent sales pipelines.
                 </p>
               </div>
               <div className="pt-6 border-t border-brand-charcoal/5">
@@ -378,7 +360,7 @@ export default function Home() {
                   to="#digital-marketing"
                   className="text-xs font-mono font-bold uppercase tracking-widest text-brand-charcoal hover:text-brand-gold inline-flex items-center gap-1 group/link cursor-pointer"
                 >
-                  <span>{lang === "ta" ? "மேலும் அறிய" : lang === "es" ? "Saber Más" : "Learn More"}</span>
+                  <span>Learn More</span>
                   <ArrowRight className="w-3.5 h-3.5 transform group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -396,13 +378,13 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5 space-y-6">
               <span className="text-[10px] font-mono font-bold tracking-[0.3em] text-brand-gold uppercase block">
-                {lang === "ta" ? "ஏன் எங்களை தேர்ந்தெடுக்க வேண்டும்?" : lang === "es" ? "NUESTRA GARANTÍA" : "WHY CYBERAD"}
+                WHY CYBERAD
               </span>
               <h2 className="text-4xl md:text-5xl serif italic text-brand-offwhite leading-tight">
-                {lang === "ta" ? "உண்மையான அனுபவம். உண்மையான முடிவுகள்." : lang === "es" ? "Experiencia Comercial Real, no Falsas Métricas." : "Real Business Experience. Measurable Results."}
+                Real Business Experience. Measurable Results.
               </h2>
               <p className="text-sm text-brand-offwhite/60 font-light leading-relaxed">
-                {lang === "ta" ? "நாங்கள் ஆடம்பர வார்த்தைகளை உபயோகிக்கும் மார்க்கெட்டிங் ஏஜென்சி இல்லை; உங்கள் வணிகத்தை ஆட்டோமேஷன் மற்றும் விளம்பரங்கள் மூலம் வளர்க்கும் நேரடி வளர்ச்சி பங்குதாரர்." : lang === "es" ? "No vendemos reportes llenos de tecnicismos complejos. Diseñamos sistemas de software sólidos, gestionamos pautas y le garantizamos contacto directo con un experto." : "We don't sell fancy marketing slides. We build solid software, manage high-conversion campaigns, set up workflows, and act as your dedicated support coordinator."}
+                We don't sell fancy marketing slides. We build solid software, manage high-conversion campaigns, set up workflows, and act as your dedicated support coordinator.
               </p>
             </div>
 
@@ -412,10 +394,10 @@ export default function Home() {
                   <Shield className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-serif italic text-brand-offwhite">
-                  {lang === "ta" ? "30+ ஆண்டுகள் அனுபவம்" : lang === "es" ? "+30 Años de Experiencia" : "30+ Years Experience"}
+                  30+ Years Experience
                 </h3>
                 <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                  {lang === "ta" ? "ஒரு வணிகம் எவ்வாறு செயல்படுகிறது, வரவு செலவுகள் மற்றும் பணப்புழக்கத்தை எவ்வாறு சீரமைக்க வேண்டும் என்பதை நாங்கள் நன்கு அறிவோம்." : lang === "es" ? "Entendemos cómo opera un negocio tradicional, gestionamos presupuestos con cautela y cuidamos el flujo de caja." : "We understand how business actually operates, manage expenses, scale client retention, and secure cash flow."}
+                  We understand how business actually operates, manage expenses, scale client retention, and secure cash flow.
                 </p>
               </div>
 
@@ -424,10 +406,10 @@ export default function Home() {
                   <UserCheck className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-serif italic text-brand-offwhite">
-                  {lang === "ta" ? "நேரடி ஆலோசகர் தொடர்பு" : lang === "es" ? "Contacto Directo Especializado" : "One-Point Contact"}
+                  One-Point Contact
                 </h3>
                 <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                  {lang === "ta" ? "உங்களோடு ஒரு சர்வதேச அனுபவம் வாய்ந்த ஆலோசகர் மட்டுமே நேரடியாக தொடர்புகொள்வார் — இடைத்தரகர்கள் எவரும் இல்லை." : lang === "es" ? "Sin tickets de soporte, sin esperas y sin pasantes inexpertos. Coordina todo de manera directa y ágil con un especialista." : "No support tickets, no waiting lines, and no junior interns. You coordinate operations directly with a dedicated expert."}
+                  No support tickets, no waiting lines, and no junior interns. You coordinate operations directly with a dedicated expert.
                 </p>
               </div>
 
@@ -436,10 +418,10 @@ export default function Home() {
                   <BarChart3 className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-serif italic text-brand-offwhite">
-                  {lang === "ta" ? "விளைவுகளில் மட்டுமே கவனம்" : lang === "es" ? "Enfoque en Resultados Reales" : "Pure Outcome Focus"}
+                  Pure Outcome Focus
                 </h3>
                 <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                  {lang === "ta" ? "தேவையற்ற விளம்பரக் குறியீடுகள் இல்லை; வாடிக்கையாளர் அழைப்புகள் மற்றும் விற்பனையில் மட்டுமே கவனம்." : lang === "es" ? "Medimos prospectos calificados, interacciones y aumento directo de ingresos, no impresiones sin valor." : "Zero vanity metrics. We focus strictly on verified leads, WhatsApp connection volume, and sales growth."}
+                  Zero vanity metrics. We focus strictly on verified leads, WhatsApp connection volume, and sales growth.
                 </p>
               </div>
 
@@ -448,10 +430,10 @@ export default function Home() {
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h3 className="text-lg font-serif italic text-brand-offwhite">
-                  {lang === "ta" ? "MNC உலகளாவிய தரம்" : lang === "es" ? "Calidad y Estilo Global" : "Global MNC Exposure"}
+                  Global MNC Exposure
                 </h3>
                 <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                  {lang === "ta" ? "சர்வதேச அளவில் முன்னணி நிறுவனங்கள் மற்றும் MNCகளுக்கு வழங்கப்பட்ட உயர்தர டிஜிட்டல் வளர்ச்சி உத்திகள்." : lang === "es" ? "Benefíciese de metodologías de nivel corporativo internacional, adaptadas especialmente para pequeñas y medianas empresas." : "Benefit from system designs built for multinational corporations, scaled with care for local enterprises."}
+                  Benefit from system designs built for multinational corporations, scaled with care for local enterprises.
                 </p>
               </div>
             </div>
@@ -463,56 +445,38 @@ export default function Home() {
             <div className="col-span-full space-y-12">
               <div className="text-center space-y-2">
                 <span className="text-[9px] font-mono font-bold tracking-[0.3em] text-brand-gold uppercase block">
-                  {lang === "ta" ? "எங்கள் மதிப்புகள்" : lang === "es" ? "NUESTROS VALORES" : "OUR STANDARDS"}
+                  OUR STANDARDS
                 </span>
                 <h3 className="text-3xl serif italic text-brand-offwhite">
-                  {lang === "ta" ? "தொழில்முறை நெறிமுறைகள்" : lang === "es" ? "Nuestros Estándares Profesionales" : "Our Professional Standards"}
+                  Our Professional Standards
                 </h3>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="p-8 bg-white/5 border border-white/10 rounded-[2rem] space-y-4">
                   <h4 className="text-xl font-serif italic text-brand-gold">
-                    {lang === "ta" ? "1. பயனுள்ள முடிவுகள்" : lang === "es" ? "1. Resultados Reales" : "1. Results That Matter"}
+                    1. Results That Matter
                   </h4>
                   <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                    {lang === "ta" ? (
-                      "வருவாய், வாடிக்கையாளர்கள் மற்றும் புதிய வாய்ப்புகளை உருவாக்குவதில் மட்டுமே எங்கள் கவனம். வெற்று விளம்பரக் குறியீடுகளைத் தவிர்த்து, உண்மையான வளர்ச்சியைத் தருகிறோம்."
-                    ) : lang === "es" ? (
-                      "Nos enfocamos en generar consultas, clientes e ingresos reales. Cada sistema está diseñado para impactar su balance, no métricas de vanidad."
-                    ) : (
-                      "We focus on generating enquiries, customers, and revenue. Every campaign, workflow, and system we design is built to increase your bottom line, not just vanity metrics."
-                    )}
+                    We focus on generating enquiries, customers, and revenue. Every campaign, workflow, and system we design is built to increase your bottom line, not just vanity metrics.
                   </p>
                 </div>
 
                 <div className="p-8 bg-white/5 border border-white/10 rounded-[2rem] space-y-4">
                   <h4 className="text-xl font-serif italic text-brand-gold">
-                    {lang === "ta" ? "2. நேர்மையான ஆலோசனை" : lang === "es" ? "2. Consejo Honesto" : "2. Honest Advice"}
+                    2. Honest Advice
                   </h4>
                   <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                    {lang === "ta" ? (
-                      "உங்கள் வணிகத்திற்குப் பயனளிக்கும் உத்திகளை மட்டுமே பரிந்துரைப்போம். ஒரு தளம் உங்களுக்குப் பொருந்தவில்லை எனில், அதை நேரடியாக உங்களிடம் தெரிவிப்போம்."
-                    ) : lang === "es" ? (
-                      "Recomendamos solo lo que beneficia a su negocio. Si una plataforma o estrategia no genera retornos reales, se lo diremos directamente."
-                    ) : (
-                      "We recommend only what benefits your business. If a platform doesn't suit your target audience, or a strategy isn't yielding real returns, we tell you directly without agency jargon."
-                    )}
+                    We recommend only what benefits your business. If a platform doesn't suit your target audience, or a strategy isn't yielding real returns, we tell you directly without agency jargon.
                   </p>
                 </div>
 
                 <div className="p-8 bg-white/5 border border-white/10 rounded-[2rem] space-y-4">
                   <h4 className="text-xl font-serif italic text-brand-gold">
-                    {lang === "ta" ? "3. நீண்ட கால பார்ட்னர்" : lang === "es" ? "3. Alianza a Largo Plazo" : "3. Long-Term Partnership"}
+                    3. Long-Term Partnership
                   </h4>
                   <p className="text-xs text-brand-offwhite/60 font-light leading-relaxed">
-                    {lang === "ta" ? (
-                      "உங்கள் வணிகத்துடன் இணைந்து வளர்வதே எங்கள் நோக்கம். நீடித்த வாடிக்கையாளர் ஈர்ப்பு அமைப்புகள் மூலம் எதிர்கால வளர்ச்சியை உறுதி செய்கிறோம்."
-                    ) : lang === "es" ? (
-                      "Trabajamos con usted para mejorar y escalar a lo largo del tiempo. Construimos sistemas sostenibles de adquisición para respaldar su crecimiento futuro."
-                    ) : (
-                      "We work with you to improve and scale over time. From ad optimization to custom tech setups, we build sustainable customer acquisition systems that fuel future growth."
-                    )}
+                    We work with you to improve and scale over time. From ad optimization to custom tech setups, we build sustainable customer acquisition systems that fuel future growth.
                   </p>
                 </div>
             </div>
@@ -540,28 +504,10 @@ export default function Home() {
               Paid Acquisition & SEO
             </span>
             <h2 className="serif font-bold text-4xl sm:text-5xl leading-tight text-brand-charcoal">
-              {lang === "ta" ? (
-                <>
-                  விளம்பர உத்திகள் மூலம் <span className="serif italic text-brand-gold">விற்பனை பெருக்குதல்</span>
-                </>
-              ) : lang === "es" ? (
-                <>
-                  Pauta Publicitaria para <span className="serif italic text-brand-gold">Escalar Ventas</span>
-                </>
-              ) : (
-                <>
-                  Data-Driven Ad Campaigns that <span className="serif italic text-brand-gold">Drive Revenue</span>
-                </>
-              )}
+              Data-Driven Ad Campaigns that <span className="serif italic text-brand-gold">Drive Revenue</span>
             </h2>
             <p className="text-base text-brand-charcoal/70 font-light leading-relaxed max-w-xl">
-              {lang === "ta" ? (
-                "வடிவமைக்கப்பட்ட விளம்பரக் கோட்பாடுகள், துல்லியமான டார்கெட்டிங் மற்றும் பகுப்பாய்வுகள் மூலமாக உங்கள் முதலீட்டிற்கு அதிக லாபம் தரும் மார்க்கெட்டிங் தீசுகள்."
-              ) : lang === "es" ? (
-                "Optimice sus presupuestos publicitarios. Llegue a clientes con intención de compra mediante Google Search, anuncios en Instagram y SEO local."
-              ) : (
-                "Deploy outcome-focused advertising campaigns, customized landing page funnels, and localized search engine optimization to capture and convert customer demand."
-              )}
+              Deploy outcome-focused advertising campaigns, customized landing page funnels, and localized search engine optimization to capture and convert customer demand.
             </p>
 
             <div className="space-y-4 pt-4">
@@ -603,28 +549,10 @@ export default function Home() {
               Enterprise Tech Stack
             </span>
             <h2 className="serif font-bold text-4xl sm:text-5xl leading-tight">
-              {lang === "ta" ? (
-                <>
-                  AI வாட்ஸ்அப் மற்றும் <span className="serif italic text-brand-gold">விற்பனை ஆட்டோமேஷன்</span>
-                </>
-              ) : lang === "es" ? (
-                <>
-                  Automatización de Ventas e <span className="serif italic text-brand-gold">IA en WhatsApp</span>
-                </>
-              ) : (
-                <>
-                  AI WhatsApp & Sales <span className="serif italic text-brand-gold">Automation Systems</span>
-                </>
-              )}
+              AI WhatsApp & Sales <span className="serif italic text-brand-gold">Automation Systems</span>
             </h2>
             <p className="text-base text-brand-offwhite/70 font-light leading-relaxed max-w-xl">
-              {lang === "ta" ? (
-                "உங்கள் வணிகத்தை ஸ்மார்ட் வாட்ஸ்அப் ஏபிஐ சாட்போட்கள், தானியங்கி சிஆர்எம் மற்றும் 24/7 லீட் தகுதிப்படுத்தும் உதவியாளர்களுடன் மேம்படுத்துங்கள்."
-              ) : lang === "es" ? (
-                "Potencie su negocio con chatbots inteligentes en la API de WhatsApp, sincronización automatizada con CRM y asistentes virtuales activos las 24 horas."
-              ) : (
-                "Supercharge your business with smart WhatsApp API chatbots, automated CRM database sync, and 24/7 qualified lead generation systems."
-              )}
+              Supercharge your business with smart WhatsApp API chatbots, automated CRM database sync, and 24/7 qualified lead generation systems.
             </p>
 
             <div className="space-y-4 pt-4">
@@ -696,13 +624,13 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-5 space-y-6">
               <span className="text-[10px] font-mono font-bold tracking-[0.3em] text-brand-gold uppercase block">
-                {lang === "ta" ? "தொடர்பு கொள்ள" : lang === "es" ? "CONTACTO DIRECTO" : "DIRECT CHANNEL"}
+                DIRECT CHANNEL
               </span>
               <h2 className="text-4xl md:text-5xl serif italic text-brand-charcoal leading-tight">
-                {t.contact?.title || "Let's Scale Your Business"}
+                Let's Scale Your Business
               </h2>
               <p className="text-sm text-brand-charcoal/60 font-light leading-relaxed">
-                {lang === "ta" ? "நாங்கள் விளம்பரங்களை மட்டும் இயக்குவதில்லை; உங்கள் வணிகத்தை ஆட்டோமேஷன் மற்றும் உத்திகள் மூலம் நிலையாக வளர்க்க டிஜிட்டல் வளர்ச்சி அமைப்புகளை உருவாக்குகிறோம்." : lang === "es" ? "No solo ejecutamos campañas publicitarias. Diseñamos embudos completos de adquisición y automatización listos para hacer crecer su negocio." : "We don't just run advertising campaigns. We craft end-to-end, high-performance customer acquisition funnels and messaging systems designed to scale your business sustainably."}
+                We don't just run advertising campaigns. We craft end-to-end, high-performance customer acquisition funnels and messaging systems designed to scale your business sustainably.
               </p>
 
               <div className="space-y-4 pt-6 border-t border-brand-charcoal/5">
@@ -737,10 +665,10 @@ export default function Home() {
                     <CheckCircle className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl serif italic text-brand-charcoal">
-                    {lang === "ta" ? "நன்றி!" : lang === "es" ? "¡Gracias!" : "Enquiry Received"}
+                    Enquiry Received
                   </h3>
                   <p className="text-sm font-light text-brand-charcoal/60 max-w-sm mx-auto leading-relaxed">
-                    {lang === "ta" ? "உங்கள் விசாரணை பெறப்பட்டது. விரைவில் உங்களைத் தொடர்பு கொள்கிறோம்." : lang === "es" ? "Hemos recibido su consulta correctamente y nos contactaremos pronto." : "Thank you. We have received your enquiry and will contact you shortly."}
+                    Thank you. We have received your enquiry and will contact you shortly.
                   </p>
                 </div>
               ) : (
@@ -753,53 +681,53 @@ export default function Home() {
 
                   <div className="space-y-1.5">
                     <label className="text-[10px] uppercase font-mono font-bold tracking-widest text-brand-charcoal/60 block">
-                      {lang === "ta" ? "பெயர் *" : lang === "es" ? "Nombre *" : "Name *"}
+                      Name *
                     </label>
                     <Input
                       type="text"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder={lang === "ta" ? "உங்கள் பெயர்" : lang === "es" ? "Su nombre" : "Your Name"}
+                      placeholder="Your Name"
                       className="h-11 px-4 border-brand-charcoal/10 focus:border-brand-gold focus:ring-brand-gold bg-white"
                     />
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-[10px] uppercase font-mono font-bold tracking-widest text-brand-charcoal/60 block">
-                      {lang === "ta" ? "கைபேசி எண் *" : lang === "es" ? "Número de Móvil *" : "Mobile Number *"}
+                      Mobile Number *
                     </label>
                     <Input
                       type="tel"
                       required
                       value={mobile}
                       onChange={(e) => setMobile(e.target.value)}
-                      placeholder={lang === "ta" ? "கைபேசி எண்" : lang === "es" ? "Número de móvil" : "Mobile Number"}
+                      placeholder="Mobile Number"
                       className="h-11 px-4 border-brand-charcoal/10 focus:border-brand-gold focus:ring-brand-gold bg-white"
                     />
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-[10px] uppercase font-mono font-bold tracking-widest text-brand-charcoal/60 block">
-                      {lang === "ta" ? "மின்னஞ்சல் (விரும்பினால்)" : lang === "es" ? "Correo (Opcional)" : "Email (Optional)"}
+                      Email (Optional)
                     </label>
                     <Input
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder={lang === "ta" ? "மின்னஞ்சல் முகவரி" : lang === "es" ? "Correo electrónico" : "Email Address"}
+                      placeholder="Email Address"
                       className="h-11 px-4 border-brand-charcoal/10 focus:border-brand-gold focus:ring-brand-gold bg-white"
                     />
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-[10px] uppercase font-mono font-bold tracking-widest text-brand-charcoal/60 block">
-                      {lang === "ta" ? "செய்தி (விரும்பினால்)" : lang === "es" ? "Mensaje (Opcional)" : "Message (Optional)"}
+                      Message (Optional)
                     </label>
                     <Textarea
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      placeholder={lang === "ta" ? "உங்கள் செய்தி..." : lang === "es" ? "Escriba su mensaje..." : "Your Message..."}
+                      placeholder="Your Message..."
                       className="min-h-[100px] px-4 py-3 border-brand-charcoal/10 focus:border-brand-gold focus:ring-brand-gold bg-white"
                     />
                   </div>
@@ -812,10 +740,10 @@ export default function Home() {
                     {submitting ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>{lang === "ta" ? "அனுப்பப்படுகிறது..." : lang === "es" ? "Enviando..." : "Sending..."}</span>
+                        <span>Sending...</span>
                       </>
                     ) : (
-                      <span>{lang === "ta" ? "சமர்ப்பிக்கவும்" : lang === "es" ? "Enviar Consulta" : "Submit Enquiry"}</span>
+                      <span>Submit Enquiry</span>
                     )}
                   </button>
                 </form>

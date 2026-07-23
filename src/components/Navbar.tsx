@@ -6,24 +6,17 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function Navbar() {
-  const { language, setLanguage, t } = useLanguage();
   const { path } = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   const navLinks = [
-    { to: "/", labelEn: "Home", labelTa: "முகப்பு", labelEs: "Inicio" },
-    { to: "#digital-marketing", labelEn: "Lead Generation", labelTa: "லீட் ஜெனரேஷன்", labelEs: "Captación de Leads" },
-    { to: "#ai-automation", labelEn: "AI Automation", labelTa: "AI ஆட்டோமேஷன்", labelEs: "Automatización con IA" },
-    { to: "#about", labelEn: "Digital Solutions", labelTa: "டிஜிட்டல் தீர்வுகள்", labelEs: "Soluciones Digitales" },
-    { to: "#contact", labelEn: "Contact", labelTa: "தொடர்பு", labelEs: "Contacto" }
+    { to: "/", label: "Home" },
+    { to: "#digital-marketing", label: "Lead Generation" },
+    { to: "#ai-automation", label: "AI Automation" },
+    { to: "#about", label: "Digital Solutions" },
+    { to: "#contact", label: "Contact" }
   ];
-
-  const getLabel = (link: typeof navLinks[0]) => {
-    if (language === "ta") return link.labelTa;
-    if (language === "es") return link.labelEs;
-    return link.labelEn;
-  };
 
   useEffect(() => {
     if (path !== "/") {
@@ -97,54 +90,18 @@ export function Navbar() {
                     : "border-transparent text-brand-charcoal/70 hover:text-brand-gold"
                 }`}
               >
-                {getLabel(link)}
+                {link.label}
               </Link>
             );
           })}
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Language Selector */}
-          <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-sans font-medium border border-brand-charcoal/10 rounded-full p-0.5 bg-brand-charcoal/[0.03]">
-            <button
-              onClick={() => setLanguage("ta")}
-              className={`px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full transition-all duration-300 text-[10px] sm:text-xs font-medium cursor-pointer ${
-                language === "ta" 
-                  ? "bg-brand-gold text-brand-charcoal shadow-sm font-semibold" 
-                  : "text-brand-charcoal/60 hover:text-brand-charcoal"
-              }`}
-            >
-              தமிழ்
-            </button>
-            <span className="text-brand-charcoal/10 select-none text-[8px] sm:text-xs">|</span>
-            <button
-              onClick={() => setLanguage("en")}
-              className={`px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full transition-all duration-300 text-[10px] sm:text-xs font-medium cursor-pointer ${
-                language === "en" 
-                  ? "bg-brand-gold text-brand-charcoal shadow-sm font-semibold" 
-                  : "text-brand-charcoal/60 hover:text-brand-charcoal"
-              }`}
-            >
-              English
-            </button>
-            <span className="text-brand-charcoal/10 select-none text-[8px] sm:text-xs">|</span>
-            <button
-              onClick={() => setLanguage("es")}
-              className={`px-1.5 py-0.5 sm:px-2.5 sm:py-1 rounded-full transition-all duration-300 text-[10px] sm:text-xs font-medium cursor-pointer ${
-                language === "es" 
-                  ? "bg-brand-gold text-brand-charcoal shadow-sm font-semibold" 
-                  : "text-brand-charcoal/60 hover:text-brand-charcoal"
-              }`}
-            >
-              Español
-            </button>
-          </div>
-
           <Link
             to="#contact"
             className="hidden sm:inline-block rounded-full px-5 py-2.5 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-brand-charcoal text-xs font-mono font-bold uppercase tracking-wider transition-all cursor-pointer"
           >
-            {language === "ta" ? "தொடங்கு" : language === "es" ? "Comenzar" : "Start Now"}
+            Start Now
           </Link>
 
           {/* Mobile menu trigger */}
@@ -175,7 +132,7 @@ export function Navbar() {
                       : "border-transparent text-brand-charcoal/70 hover:text-brand-gold"
                   }`}
                 >
-                  {getLabel(link)}
+                  {link.label}
                 </Link>
               );
             })}
@@ -184,7 +141,7 @@ export function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center py-3 bg-brand-charcoal hover:bg-brand-gold text-white hover:text-brand-charcoal rounded-full text-xs font-mono font-bold uppercase tracking-wider transition-colors inline-block"
             >
-              {language === "ta" ? "தொடங்கு" : language === "es" ? "Comenzar" : "Start Now"}
+              Start Now
             </Link>
           </div>
         </div>

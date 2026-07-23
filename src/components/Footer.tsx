@@ -15,10 +15,7 @@ export function Footer({ onShowPrivacy }: { onShowPrivacy: () => void }) {
         {/* Brand positioning row */}
         <div className="text-center pt-6 pb-2 border-t border-brand-charcoal/5">
           <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] text-brand-charcoal/60 leading-relaxed px-4">
-            {language === 'ta' 
-              ? "டிஜிட்டல் வளர்ச்சி • வாட்ஸ்அப் ஆட்டோமேஷன் • உத்திசார் பிராண்டிங் • AI-இயக்க மார்க்கெட்டிங்"
-              : "Digital Growth • WhatsApp Automation • Strategic Branding • AI-Driven Marketing"
-            }
+            Digital Growth • WhatsApp Automation • Strategic Branding • AI-Driven Marketing
           </p>
         </div>
 

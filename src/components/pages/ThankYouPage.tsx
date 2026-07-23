@@ -1,14 +1,10 @@
 import { useEffect } from "react";
 import { Link } from "../RouterContext";
-import { useLanguage } from "../LanguageContext";
 import { motion } from "motion/react";
-import { CheckCircle2, ArrowLeft, Home, Sparkles } from "lucide-react";
+import { CheckCircle2, Home, Sparkles } from "lucide-react";
 import { trackEvent } from "../../lib/tracking";
 
 export default function ThankYouPage() {
-  const { language } = useLanguage();
-  const lang = (language as "en" | "ta" | "es") || "en";
-
   useEffect(() => {
     // Track thank you pageview
     trackEvent("thank_you_page_view", "Conversions", {
@@ -39,21 +35,15 @@ export default function ThankYouPage() {
 
         <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-charcoal/5 border border-brand-charcoal/5 text-brand-charcoal/60 text-[9px] font-mono font-bold uppercase tracking-wider rounded-full mb-4">
           <Sparkles className="w-3 h-3 text-brand-gold" />
-          {lang === "ta" ? "விசாரணை பெறப்பட்டது" : lang === "es" ? "SOLICITUD REGISTRADA" : "ENQUIRY RECORDED"}
+          ENQUIRY RECORDED
         </span>
 
         <h1 className="text-3xl md:text-4xl serif italic text-brand-charcoal mb-4">
-          {lang === "ta" ? "மிக்க நன்றி!" : lang === "es" ? "¡Muchas Gracias!" : "Thank You!"}
+          Thank You!
         </h1>
 
         <p className="text-sm font-light text-brand-charcoal/70 leading-relaxed mb-8">
-          {lang === "ta" ? (
-            "உங்கள் விவரங்கள் பெறப்பட்டன. எங்கள் தொழில்நுட்ப ஆலோசனைக் குழுவினர் விரைவில் உங்களைத் தொடர்பு கொண்டு உங்களுடைய திட்டத்தைப் பற்றி விவாதிப்பர்."
-          ) : lang === "es" ? (
-            "Hemos recibido sus detalles de contacto con éxito. Nuestro socio principal analizará su requerimiento y le contactará en breve."
-          ) : (
-            "We have successfully recorded your details. Our technical growth partner will analyze your requirements and reach out to discuss your campaign strategy shortly."
-          )}
+          We have successfully recorded your details. Our technical growth partner will analyze your requirements and reach out to discuss your campaign strategy shortly.
         </p>
 
         <div className="flex flex-col gap-3">
@@ -62,14 +52,14 @@ export default function ThankYouPage() {
             className="w-full py-4 bg-brand-charcoal hover:bg-brand-gold text-brand-offwhite hover:text-brand-charcoal rounded-full text-xs font-mono font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-brand-charcoal/10 hover:shadow-brand-gold/20 cursor-pointer"
           >
             <Home className="w-4 h-4" />
-            <span>{lang === "ta" ? "முகப்பு பக்கம் திரும்புக" : lang === "es" ? "Volver al Inicio" : "Return to Home"}</span>
+            <span>Return to Home</span>
           </Link>
           
           <Link
             to="#contact"
             className="w-full py-3.5 border border-brand-charcoal/10 hover:border-brand-gold text-brand-charcoal hover:text-brand-gold rounded-full text-xs font-mono font-bold uppercase tracking-widest transition-all duration-300 inline-block cursor-pointer"
           >
-            {lang === "ta" ? "மற்றொரு கேள்வி கேட்க" : lang === "es" ? "Nueva Consulta" : "Submit Another Inquiry"}
+            Submit Another Inquiry
           </Link>
         </div>
       </motion.div>
