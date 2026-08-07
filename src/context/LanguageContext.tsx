@@ -58,7 +58,7 @@ export const translations: Record<Language, Record<string, any>> = {
     targetAudience: {
       badge: "OUR TARGET CLIENTELE",
       headline: "We Work Exclusively With Real Estate Professionals",
-      description: "We represent the digital machinery of builders, land developers, corporate agencies, multi-unit owners, industry specialists, and single property sellers.",
+      description: "We power the digital engine for builders and property sellers.",
       selectCategory: "Select Your Category:",
       specSheet: "B2B SPECIFICATION SHEET",
       helpPrefix: "How We Help",

@@ -230,7 +230,7 @@ export default function Services() {
                 {language === 'en' ? 'CAMPAIGN REACH' : 'விளம்பர இலக்கு'}
               </span>
               <h3 className="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-3 tracking-tight">
-                {language === 'en' ? 'Who We Help You Reach' : 'நாங்கள் யாரை சென்றடைய உதவுகிறோம்'}
+                {language === 'en' ? 'Your Target Audience' : 'நாங்கள் யாரை சென்றடைய உதவுகிறோம்'}
               </h3>
               <p className="text-slate-500 mt-2 text-sm font-sans">
                 {language === 'en' 

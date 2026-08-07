@@ -38,7 +38,7 @@ export default function Hero() {
             >
               <Megaphone className="w-3.5 h-3.5 text-indigo-400" />
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-300">
-                {language === 'en' ? 'REAL ESTATE DIGITAL MARKETING AGENCY' : 'ரியல் எஸ்டேட் விளம்பர முகமை'}
+                {language === 'en' ? 'We power the digital engine for builders and property sellers' : 'ரியல் எஸ்டேட் விளம்பர முகமை'}
               </span>
             </motion.div>
 
