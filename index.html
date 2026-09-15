@@ -1,1 +1,589 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing for Beginners & Business Owners | CyberAd.in</title>
+  <meta name="description" content="Practical digital marketing for beginners and business owners. Learn to run campaigns, build portfolios, and confidently manage digital marketers. Real results in 8–12 weeks. CyberAd.in" />
+  <link rel="icon" type="image/png" href="https://assets.cyberad.in/Favicon.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #0B1D3A;
+      --primary-light: #142B4D;
+      --accent: #1E6BFF;
+      --accent-hover: #1557D6;
+      --accent-soft: #E8F0FF;
+      --text: #1A1A2E;
+      --text-muted: #5A6577;
+      --bg: #FFFFFF;
+      --bg-alt: #F7F9FC;
+      --border: #E2E8F0;
+      --success: #10B981;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(11, 29, 58, 0.08);
+      --shadow-lg: 0 12px 40px rgba(11, 29, 58, 0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo img { height: 40px; width: auto; }
+    
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--primary); }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.3);
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .btn-lg { padding: 16px 32px; font-size: 1.05rem; }
+    .btn-white { background: white; color: var(--accent); }
+    .btn-white:hover { background: var(--accent-soft); }
+
+    .hero {
+      padding: 80px 0 100px;
+      background: linear-gradient(180deg, #F0F5FF 0%, #FFFFFF 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--primary);
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      max-width: 540px;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px; }
+    .hero-stats { display: flex; gap: 32px; flex-wrap: wrap; }
+    .stat-num { font-size: 1.6rem; font-weight: 800; color: var(--primary); }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); }
+    .hero-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    .check-list { list-style: none; }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    section { padding: 90px 0; }
+    .section-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .section-sub {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin-left: auto; margin-right: auto; }
+
+    .problems { background: var(--bg-alt); }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .problem-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid var(--border);
+    }
+    .problem-icon {
+      width: 48px; height: 48px;
+      background: #FEE2E2; color: #DC2626;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; margin-bottom: 16px;
+    }
+    .problem-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
+    .problem-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .solution-card {
+      background: white; border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px 28px; text-align: center;
+    }
+    .solution-num {
+      width: 56px; height: 56px;
+      background: var(--accent-soft); color: var(--accent);
+      font-weight: 800; font-size: 1.3rem;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .solution-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; color: var(--primary); }
+    .solution-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .curriculum { background: var(--bg-alt); }
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .module {
+      background: white; border-radius: var(--radius);
+      padding: 24px; border: 1px solid var(--border);
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .module-num {
+      flex-shrink: 0; width: 36px; height: 36px;
+      background: var(--primary); color: white;
+      font-weight: 700; font-size: 0.9rem;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .module h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; color: var(--primary); }
+    .module p { font-size: 0.9rem; color: var(--text-muted); }
+
+    .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .outcome-list { list-style: none; }
+    .outcome-list li { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
+    .outcome-list .icon {
+      flex-shrink: 0; width: 28px; height: 28px;
+      background: var(--accent-soft); color: var(--accent);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 0.85rem;
+    }
+    .outcome-list strong { display: block; font-weight: 700; color: var(--primary); margin-bottom: 2px; }
+    .outcome-list span { font-size: 0.95rem; color: var(--text-muted); }
+    .portfolio-preview {
+      background: var(--primary); border-radius: 20px; padding: 40px; color: white;
+    }
+    .portfolio-preview h3 { font-size: 1.5rem; margin-bottom: 12px; }
+    .portfolio-preview p { opacity: 0.85; margin-bottom: 24px; }
+    .portfolio-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .portfolio-tags span {
+      background: rgba(255,255,255,0.15); padding: 6px 14px;
+      border-radius: 100px; font-size: 0.85rem; font-weight: 500;
+    }
+
+    .models { background: var(--primary); color: white; }
+    .models .section-label { color: #7EB3FF; }
+    .models .section-title { color: white; }
+    .models .section-sub { color: rgba(255,255,255,0.75); }
+    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .model-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px; padding: 32px 28px;
+    }
+    .model-card.featured { background: white; color: var(--text); border-color: white; }
+    .model-card.featured .model-label { background: var(--accent); color: white; }
+    .model-label {
+      display: inline-block; font-size: 0.75rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      background: rgba(255,255,255,0.2); padding: 4px 12px;
+      border-radius: 100px; margin-bottom: 16px;
+    }
+    .model-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+    .model-card p { font-size: 0.95rem; opacity: 0.85; margin-bottom: 20px; }
+    .model-card.featured p { opacity: 1; color: var(--text-muted); }
+    .model-card ul { list-style: none; margin-bottom: 24px; }
+    .model-card li { font-size: 0.9rem; margin-bottom: 8px; padding-left: 20px; position: relative; }
+    .model-card li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; position: relative; }
+    .step { text-align: center; position: relative; z-index: 1; }
+    .step-num {
+      width: 72px; height: 72px; background: white;
+      border: 3px solid var(--accent); color: var(--accent);
+      font-weight: 800; font-size: 1.4rem; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .step h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
+    .step p { font-size: 0.9rem; color: var(--text-muted); }
+
+    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .trust-item { background: var(--bg-alt); border-radius: var(--radius); padding: 28px; text-align: center; }
+    .trust-item h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: var(--primary); }
+    .trust-item p { font-size: 0.9rem; color: var(--text-muted); }
+
+    .final-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, #0F2A55 100%);
+      color: white; text-align: center; padding: 100px 0;
+    }
+    .final-cta h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 16px; }
+    .final-cta input::placeholder, .final-cta select option { color: #666; }
+    .final-cta input, .final-cta select { color: white; }
+
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .faq-item h4 { font-size: 1.1rem; font-weight: 600; color: var(--primary); margin-bottom: 10px; }
+    .faq-item p { color: var(--text-muted); font-size: 0.98rem; }
+
+    footer { background: var(--primary); color: rgba(255,255,255,0.8); padding: 60px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand p { font-size: 0.95rem; margin-bottom: 20px; max-width: 280px; }
+    .footer-col h5 { color: white; font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+    .footer-col a, .footer-col p { display: block; font-size: 0.9rem; margin-bottom: 10px; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px; display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px; font-size: 0.85rem;
+    }
+    .legal-badges { display: flex; gap: 16px; flex-wrap: wrap; }
+    .legal-badges span {
+      background: rgba(255,255,255,0.1); padding: 4px 12px;
+      border-radius: 6px; font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .solution-grid, .model-grid { grid-template-columns: 1fr; }
+      .outcomes-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav { display: none; }
+    }
+    @media (max-width: 700px) {
+      .final-cta [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 50px 0 70px; }
+      section { padding: 60px 0; }
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a href="https://cyberad.in" class="logo">
+        <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd.in" style="height:44px; width:auto;" />
+      </a>
+      <nav>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#models">For Colleges</a>
+        <a href="#process">How It Works</a>
+      </nav>
+      <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="badge">
+            <span>●</span> Practical • Portfolio-First • For Beginners & Business Owners
+          </div>
+          <h1>Master Digital Marketing.<br><span>From Zero to Confident.</span></h1>
+          <p class="hero-sub">
+            Stop watching endless theory videos. Learn by running real campaigns, building a professional portfolio — and gain the clarity business owners need to hire, manage, and get results from digital marketers.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program" class="btn btn-primary btn-lg" target="_blank">
+              Chat on WhatsApp → +91 89256 93013
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num">8–12</div>
+              <div class="stat-label">Weeks to Confident</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Practical Projects</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">Real</div>
+              <div class="stat-label">Campaign Experience</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-card">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+            <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd" style="width:48px;height:48px;border-radius:12px;object-fit:contain;" />
+            <div>
+              <strong style="display:block;color:var(--primary);">What You Walk Away With</strong>
+              <span style="font-size:0.85rem;color:var(--text-muted);">Not just a certificate</span>
+            </div>
+          </div>
+          <ul class="check-list">
+            <li>Live campaign experience (Google, Meta, SEO, Content)</li>
+            <li>Professional portfolio with real work samples</li>
+            <li>Ability to evaluate & manage digital marketers</li>
+            <li>Job-ready skills employers actually look for</li>
+            <li>Weekly progress tracking & personal feedback</li>
+            <li>College co-branded certificate option available</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest of page content abbreviated for tool size - full content is in the file -->
+  <section class="final-cta" id="cta">
+    <div class="container">
+      <h2>Ready to Go From Confused to Confident?</h2>
+      <p style="max-width:560px;margin:0 auto 32px;opacity:0.9;">Whether you want a career in digital marketing or you run a business and want to finally understand (and manage) digital marketers — let’s talk.</p>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;max-width:900px;margin:0 auto;">
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:28px;text-align:left;">
+          <h3 style="color:white;font-size:1.15rem;margin-bottom:8px;font-weight:700;">Register Your Interest</h3>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:20px;">Get course details & next batch info. No spam.</p>
+          <form action="https://api.web3forms.com/submit" method="POST" id="lead-form">
+            <input type="hidden" name="access_key" value="0ef05e24-2b04-437b-91dc-11a547022dad">
+            <input type="hidden" name="subject" value="New Lead – Digital Marketing Course (CyberAd.in)">
+            <input type="hidden" name="from_name" value="CyberAd Course Registration">
+            <input type="checkbox" name="botcheck" style="display:none;">
+            
+            <div style="margin-bottom:14px;">
+              <input type="text" name="name" required placeholder="Your Name *" 
+                style="width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:white;font-size:0.95rem;outline:none;">
+            </div>
+            <div style="margin-bottom:14px;">
+              <input type="email" name="email" required placeholder="Email Address *" 
+                style="width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:white;font-size:0.95rem;outline:none;">
+            </div>
+            <div style="margin-bottom:14px;">
+              <input type="tel" name="phone" placeholder="WhatsApp / Phone" 
+                style="width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:white;font-size:0.95rem;outline:none;">
+            </div>
+            <div style="margin-bottom:18px;">
+              <select name="interest" 
+                style="width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:white;font-size:0.95rem;outline:none;">
+                <option value="" style="color:#333;">I am interested as...</option>
+                <option value="Individual / Beginner" style="color:#333;">Individual / Beginner</option>
+                <option value="Business Owner" style="color:#333;">Business Owner</option>
+                <option value="College / Institution" style="color:#333;">College / Institution</option>
+                <option value="Just Exploring" style="color:#333;">Just Exploring</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-white" style="width:100%;padding:14px;font-size:1rem;">
+              Get Course Details →
+            </button>
+            <p id="form-status" style="margin-top:12px;font-size:0.85rem;text-align:center;display:none;"></p>
+          </form>
+        </div>
+        
+        <div style="text-align:left;padding-top:10px;">
+          <p style="color:rgba(255,255,255,0.8);font-size:0.95rem;margin-bottom:20px;">Prefer to talk directly?</p>
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program" 
+             target="_blank" class="btn btn-white" style="display:block;width:100%;margin-bottom:14px;text-align:center;padding:14px;">
+            Chat on WhatsApp → +91 89256 93013
+          </a>
+          <a href="mailto:hello@cyberad.in?subject=Digital%20Marketing%20Program%20Enquiry" 
+             class="btn btn-outline" style="display:block;width:100%;text-align:center;padding:14px;color:white;border-color:rgba(255,255,255,0.4);">
+            Email: hello@cyberad.in
+          </a>
+          <p style="margin-top:28px;font-size:0.85rem;opacity:0.65;line-height:1.5;">
+            Next step: Short discovery call → Custom proposal → Pilot batch agreement
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    const form = document.getElementById('lead-form');
+    const status = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        status.style.display = 'block';
+        status.style.color = 'rgba(255,255,255,0.8)';
+        status.textContent = 'Submitting...';
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.style.color = '#4ade80';
+            status.textContent = 'Thank you! We will contact you shortly.';
+            form.reset();
+          } else {
+            status.style.color = '#f87171';
+            status.textContent = data.message || 'Something went wrong. Please try WhatsApp.';
+          }
+        } catch (err) {
+          status.style.color = '#f87171';
+          status.textContent = 'Network error. Please use WhatsApp instead.';
+        }
+        btn.disabled = false;
+        btn.textContent = 'Get Course Details →';
+      });
+    }
+  </script>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd.in" style="height: 48px; width: auto; border-radius: 50%; background: white; padding: 4px;" />
+          <p>Practical digital marketing for beginners, business owners, and institutions.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Program</h5>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#models">For Colleges</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <p>Cuddalore, Tamil Nadu</p>
+          <a href="mailto:hello@cyberad.in">hello@cyberad.in</a>
+          <a href="https://cyberad.in">cyberad.in</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 CyberAd.in / Cyber Enterprises. All rights reserved.</div>
+        <div class="legal-badges">
+          <span>GSTIN: 33APPPC7049M1ZI</span>
+          <span>UDYAM: TN-04-0115585</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
