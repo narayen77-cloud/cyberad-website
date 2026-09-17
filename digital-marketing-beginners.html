@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1B2LW255M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-V1B2LW255M');
+  </script>
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -20,6 +30,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Marketing for Beginners & Business Owners | CyberAd.in</title>
   <meta name="description" content="Practical digital marketing for beginners and business owners. Learn to run campaigns, build portfolios, and confidently manage digital marketers. Real results in 8–12 weeks. CyberAd.in" />
+  <link rel="icon" type="image/png" href="https://assets.cyberad.in/Favicon.png" />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,16 +57,21 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       color: var(--text);
       line-height: 1.6;
       background: var(--bg);
-      overflow-x: hidden;
     }
 
     a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     
     .container {
       width: 100%;
@@ -69,7 +85,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -78,11 +94,13 @@
       align-items: center;
       justify-content: space-between;
       height: 72px;
+      gap: 16px;
     }
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-shrink: 0;
     }
     .logo img {
       height: 40px;
@@ -121,6 +139,8 @@
       border: none;
       cursor: pointer;
       transition: all 0.2s ease;
+      text-align: center;
+      white-space: nowrap;
     }
     .btn-primary {
       background: var(--accent);
@@ -187,23 +207,27 @@
       padding: 6px 14px;
       border-radius: 100px;
       margin-bottom: 20px;
+      max-width: 100%;
+      line-height: 1.4;
     }
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
       font-weight: 800;
       line-height: 1.15;
       color: var(--primary);
       letter-spacing: -0.03em;
       margin-bottom: 20px;
+      word-break: break-word;
     }
     .hero h1 span {
       color: var(--accent);
     }
     .hero-sub {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
       margin-bottom: 32px;
       max-width: 540px;
+      line-height: 1.6;
     }
     .hero-ctas {
       display: flex;
@@ -257,6 +281,7 @@
       gap: 12px;
       margin-bottom: 14px;
       font-size: 0.98rem;
+      line-height: 1.45;
     }
     .check-list li::before {
       content: '✓';
@@ -287,7 +312,7 @@
       margin-bottom: 12px;
     }
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
       font-weight: 800;
       color: var(--primary);
       letter-spacing: -0.02em;
@@ -299,6 +324,7 @@
       color: var(--text-muted);
       max-width: 640px;
       margin-bottom: 48px;
+      line-height: 1.6;
     }
     .text-center { text-align: center; }
     .text-center .section-sub { margin-left: auto; margin-right: auto; }
@@ -309,7 +335,7 @@
     }
     .problem-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
     }
     .problem-card {
@@ -344,6 +370,7 @@
     .problem-card p {
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     /* ========== SOLUTION ========== */
@@ -386,6 +413,7 @@
     .solution-card p {
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.55;
     }
 
     /* ========== CURRICULUM ========== */
@@ -394,7 +422,7 @@
     }
     .modules {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
     .module {
@@ -428,6 +456,7 @@
     .module p {
       font-size: 0.9rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* ========== OUTCOMES ========== */
@@ -468,6 +497,7 @@
     .outcome-list span {
       font-size: 0.95rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
     .portfolio-preview {
       background: var(--primary);
@@ -484,6 +514,7 @@
     .portfolio-preview p {
       opacity: 0.85;
       margin-bottom: 24px;
+      line-height: 1.6;
     }
     .portfolio-tags {
       display: flex;
@@ -517,6 +548,8 @@
       border-radius: 16px;
       padding: 32px 28px;
       transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
     }
     .model-card:hover {
       background: rgba(255,255,255,0.12);
@@ -533,6 +566,7 @@
     }
     .model-label {
       display: inline-block;
+      align-self: flex-start;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -551,17 +585,20 @@
       font-size: 0.95rem;
       opacity: 0.85;
       margin-bottom: 20px;
+      line-height: 1.55;
     }
     .model-card.featured p { opacity: 1; color: var(--text-muted); }
     .model-card ul {
       list-style: none;
       margin-bottom: 24px;
+      flex-grow: 1;
     }
     .model-card li {
       font-size: 0.9rem;
       margin-bottom: 8px;
       padding-left: 20px;
       position: relative;
+      line-height: 1.45;
     }
     .model-card li::before {
       content: '→';
@@ -615,12 +652,13 @@
     .step p {
       font-size: 0.9rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* ========== TRUST ========== */
     .trust-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
     }
     .trust-item {
@@ -638,31 +676,241 @@
     .trust-item p {
       font-size: 0.9rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
-    /* ========== CTA ========== */
+    /* ========== CTA & LEAD FORM SECTION ========== */
     .final-cta {
       background: linear-gradient(135deg, var(--primary) 0%, #0F2A55 100%);
       color: white;
       text-align: center;
-      padding: 100px 0;
+      padding: 90px 0;
     }
     .final-cta h2 {
       font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 800;
       margin-bottom: 16px;
+      line-height: 1.25;
     }
-    .final-cta p {
+    .final-cta p.cta-intro {
       font-size: 1.15rem;
-      opacity: 0.85;
-      max-width: 560px;
+      opacity: 0.88;
+      max-width: 580px;
       margin: 0 auto 36px;
+      line-height: 1.6;
     }
-    .cta-buttons {
+    .final-cta-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: start;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .lead-form-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: left;
+      backdrop-filter: blur(8px);
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-input, .form-select {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(255,255,255,0.12);
+      color: #FFFFFF;
+      font-size: 16px; /* Prevents auto-zoom on iOS */
+      outline: none;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-input:focus, .form-select:focus {
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.18);
+      box-shadow: 0 0 0 3px rgba(30, 107, 255, 0.25);
+    }
+    .form-input::placeholder {
+      color: rgba(255,255,255,0.65);
+    }
+    .form-select option {
+      background: #0B1D3A;
+      color: #FFFFFF;
+    }
+
+    /* ========== SEATS SCARCITY BLOCK ========== */
+    .seats-scarcity-block {
+      background: rgba(11, 29, 58, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 22px;
+    }
+    .seats-header {
       display: flex;
-      gap: 16px;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .seats-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #93C5FD;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .seats-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #38BDF8;
+      display: inline-block;
+    }
+    .seats-status-pill {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #F1F5F9;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: all 0.2s ease;
+    }
+    .seats-status-pill.urgent {
+      background: rgba(239, 68, 68, 0.22);
+      color: #FECACA;
+      border-color: rgba(239, 68, 68, 0.45);
+      font-weight: 700;
+    }
+    .seats-status-pill.full {
+      background: rgba(239, 68, 68, 0.3);
+      color: #F87171;
+      border-color: rgba(239, 68, 68, 0.5);
+      font-weight: 700;
+    }
+    .seats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin: 12px 0 10px;
+      user-select: none;
+    }
+    .seat-tile {
+      height: 32px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+      cursor: default;
+    }
+    .seat-tile.available {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 2px 6px rgba(30, 107, 255, 0.35);
+    }
+    .seat-tile.taken {
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.28);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      opacity: 0.45;
+    }
+    .seats-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+    .seats-legend {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .legend-box {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      display: inline-block;
+    }
+    .legend-box.legend-taken {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .legend-box.legend-available {
+      background: var(--accent);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .seats-note {
+      font-style: italic;
+      opacity: 0.75;
+    }
+
+    /* ========== INCLUSIONS CARD ========== */
+    .inclusions-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .inclusions-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .inclusions-header h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .inclusions-text {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.84);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .inclusions-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .inclusions-badges span {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
     }
 
     /* ========== FAQ ========== */
@@ -680,10 +928,12 @@
       color: var(--primary);
       margin-bottom: 10px;
       cursor: pointer;
+      line-height: 1.4;
     }
     .faq-item p {
       color: var(--text-muted);
       font-size: 0.98rem;
+      line-height: 1.6;
     }
 
     /* ========== FOOTER ========== */
@@ -706,6 +956,7 @@
       font-size: 0.95rem;
       margin-bottom: 20px;
       max-width: 280px;
+      line-height: 1.55;
     }
     .footer-col h5 {
       color: white;
@@ -742,21 +993,360 @@
       font-size: 0.8rem;
     }
 
-    /* ========== RESPONSIVE ========== */
+    /* ========== MOBILE STICKY CTA BAR ========== */
+    .mobile-sticky-bar {
+      display: none;
+    }
+
+    /* ========== RESPONSIVE BREAKPOINTS ========== */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .solution-grid, .model-grid { grid-template-columns: 1fr; }
-      .outcomes-grid { grid-template-columns: 1fr; }
+      .outcomes-grid { grid-template-columns: 1fr; gap: 36px; }
       .process-steps { grid-template-columns: 1fr 1fr; }
       .process-steps::before { display: none; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .final-cta-grid { grid-template-columns: 1fr; gap: 32px; max-width: 580px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       nav { display: none; }
     }
+
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 68px; /* Offset for sticky bottom action bar */
+      }
+      .mobile-sticky-bar {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background: rgba(11, 29, 58, 0.97);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+      }
+      .mobile-sticky-bar .bar-info {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.25;
+        overflow: hidden;
+      }
+      .mobile-sticky-bar .bar-title {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .mobile-sticky-bar .bar-sub {
+        font-size: 0.72rem;
+        color: #93C5FD;
+      }
+      .mobile-sticky-bar .bar-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #25D366;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 0.86rem;
+        padding: 10px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35);
+        flex-shrink: 0;
+      }
+      .mobile-sticky-bar .bar-cta:active {
+        transform: scale(0.98);
+      }
+    }
+
     @media (max-width: 600px) {
-      .hero { padding: 50px 0 70px; }
-      section { padding: 60px 0; }
-      .process-steps { grid-template-columns: 1fr; }
-      .hero-stats { gap: 20px; }
+      .container {
+        padding: 0 16px;
+      }
+      .header-inner {
+        height: 62px;
+      }
+      .logo img {
+        height: 36px;
+      }
+      .header-inner .btn {
+        padding: 8px 14px;
+        font-size: 0.82rem;
+      }
+      
+      .hero {
+        padding: 36px 0 48px;
+      }
+      .badge {
+        font-size: 0.76rem;
+        padding: 5px 12px;
+        margin-bottom: 14px;
+      }
+      .hero h1 {
+        font-size: clamp(1.75rem, 7vw, 2.3rem);
+        margin-bottom: 14px;
+      }
+      .hero-sub {
+        font-size: 0.98rem;
+        line-height: 1.55;
+        margin-bottom: 22px;
+      }
+      .hero-ctas {
+        margin-bottom: 24px;
+      }
+      .hero-ctas .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.98rem;
+      }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        background: rgba(30, 107, 255, 0.05);
+        padding: 14px 10px;
+        border-radius: 12px;
+        border: 1px solid rgba(30, 107, 255, 0.1);
+        text-align: center;
+      }
+      .hero-stats .stat {
+        text-align: center;
+      }
+      .stat-num {
+        font-size: 1.35rem;
+      }
+      .stat-label {
+        font-size: 0.72rem;
+        line-height: 1.2;
+      }
+      .hero-card {
+        padding: 20px 16px;
+        border-radius: 16px;
+      }
+      .hero-card-header {
+        margin-bottom: 16px;
+        gap: 10px;
+      }
+      .hero-card-header img {
+        width: 40px;
+        height: 40px;
+      }
+      .check-list li {
+        font-size: 0.88rem;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .check-list li::before {
+        width: 18px;
+        height: 18px;
+        font-size: 0.7rem;
+      }
+
+      section {
+        padding: 50px 0;
+      }
+      .section-label {
+        font-size: 0.78rem;
+        margin-bottom: 8px;
+      }
+      .section-title {
+        font-size: clamp(1.45rem, 5.5vw, 1.95rem);
+        margin-bottom: 12px;
+      }
+      .section-sub {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 28px;
+      }
+
+      .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .problem-card {
+        padding: 20px 18px;
+      }
+
+      .solution-card {
+        padding: 24px 18px;
+      }
+
+      .modules {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .module {
+        padding: 16px 14px;
+        gap: 12px;
+      }
+      .module-num {
+        width: 32px;
+        height: 32px;
+        font-size: 0.82rem;
+      }
+      .module h4 {
+        font-size: 0.98rem;
+      }
+      .module p {
+        font-size: 0.85rem;
+      }
+
+      .portfolio-preview {
+        padding: 24px 18px;
+        border-radius: 16px;
+      }
+      .portfolio-preview h3 {
+        font-size: 1.25rem;
+      }
+      .portfolio-preview p {
+        font-size: 0.9rem;
+        margin-bottom: 18px;
+      }
+      .portfolio-tags {
+        gap: 6px;
+      }
+      .portfolio-tags span {
+        font-size: 0.78rem;
+        padding: 5px 10px;
+      }
+
+      .model-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .step {
+        padding: 10px;
+      }
+      .step-num {
+        width: 54px;
+        height: 54px;
+        font-size: 1.15rem;
+        margin: 0 auto 12px;
+      }
+      .step h4 {
+        font-size: 1rem;
+      }
+      .step p {
+        font-size: 0.86rem;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .trust-item {
+        padding: 18px 16px;
+      }
+
+      .faq-item {
+        padding: 18px 0;
+      }
+      .faq-item h4 {
+        font-size: 1rem;
+      }
+      .faq-item p {
+        font-size: 0.9rem;
+      }
+
+      .final-cta {
+        padding: 56px 0;
+      }
+      .final-cta h2 {
+        font-size: clamp(1.45rem, 5.5vw, 2rem);
+      }
+      .final-cta p.cta-intro {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+      }
+      .lead-form-card {
+        padding: 20px 16px;
+        border-radius: 14px;
+      }
+      
+      .seats-scarcity-block {
+        padding: 12px 14px;
+        margin-bottom: 18px;
+      }
+      .seats-header {
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+      .seats-badge {
+        font-size: 0.76rem;
+      }
+      .seats-status-pill {
+        font-size: 0.78rem;
+        padding: 3px 8px;
+      }
+      .seats-grid {
+        gap: 5px;
+        margin: 10px 0 8px;
+      }
+      .seat-tile {
+        height: 28px;
+        font-size: 0.65rem;
+      }
+      .seats-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        font-size: 0.72rem;
+      }
+
+      .inclusions-card {
+        padding: 18px 16px;
+        margin-bottom: 20px;
+      }
+      .inclusions-header h4 {
+        font-size: 1rem;
+      }
+      .inclusions-text {
+        font-size: 0.86rem;
+        line-height: 1.55;
+        margin-bottom: 14px;
+      }
+      .inclusions-badges {
+        gap: 6px;
+      }
+      .inclusions-badges span {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+      }
+      .legal-badges {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .seat-tile {
+        height: 26px;
+        font-size: 0.6rem;
+      }
     }
   </style>
 </head>
@@ -1022,7 +1612,7 @@
     </div>
   </section>
 
-  <!-- MODELS (from SOP) -->
+  <!-- MODELS -->
   <section class="models" id="models">
     <div class="container">
       <div class="text-center">
@@ -1071,7 +1661,7 @@
     </div>
   </section>
 
-  <!-- PROCESS (aligned with SOP) -->
+  <!-- PROCESS -->
   <section id="process">
     <div class="container">
       <div class="text-center">
@@ -1168,24 +1758,248 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- FINAL CTA + LEAD FORM -->
   <section class="final-cta" id="cta">
     <div class="container">
       <h2>Ready to Go From Confused to Confident?</h2>
-      <p>Whether you want a career in digital marketing or you run a business and want to finally understand (and manage) digital marketers — let’s talk.</p>
-      <div class="cta-buttons">
-        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program%20for%20beginners%20%2F%20business%20owners" class="btn btn-white btn-lg" target="_blank">
-          Chat on WhatsApp → +91 89256 93013
-        </a>
-        <a href="mailto:hello@cyberad.in?subject=Digital%20Marketing%20Program%20Enquiry" class="btn btn-outline btn-lg" style="color:white; border-color:rgba(255,255,255,0.4);">
-          Email Us
-        </a>
+      <p class="cta-intro">Whether you want a career in digital marketing or you run a business and want to finally understand (and manage) digital marketers — let’s talk.</p>
+      
+      <div class="final-cta-grid">
+        <!-- Lead Form -->
+        <div class="lead-form-card">
+          
+          <!-- SEATS SCARCITY BLOCK -->
+          <div class="seats-scarcity-block" id="seats-scarcity-block">
+            <div class="seats-header">
+              <div class="seats-badge">
+                <span class="seats-dot"></span>
+                <span>Only 20 Seats Per Batch</span>
+              </div>
+              <div class="seats-status-pill" id="seats-status" aria-live="polite">
+                <!-- Status line updated automatically -->
+              </div>
+            </div>
+
+            <!-- Visual 20-Seat Map Grid (4 rows x 5 columns) -->
+            <div class="seats-grid" id="seats-grid" aria-hidden="true">
+              <!-- Rendered via JavaScript -->
+            </div>
+
+            <div class="seats-footer">
+              <div class="seats-legend">
+                <span class="legend-item"><span class="legend-box legend-taken"></span> Taken</span>
+                <span class="legend-item"><span class="legend-box legend-available"></span> Available</span>
+              </div>
+              <span class="seats-note">Seats fill as registrations are confirmed.</span>
+            </div>
+          </div>
+
+          <h3 style="color:white;font-size:1.15rem;margin-bottom:8px;font-weight:700;">El Curso Digital Marketing Course Registration</h3>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;margin-bottom:20px;">Register your interest to receive course curriculum & next batch schedule.</p>
+          <form action="https://api.web3forms.com/submit" method="POST" id="lead-form">
+            <!-- Web3Forms Config -->
+            <input type="hidden" name="access_key" value="0ef05e24-2b04-437b-91dc-11a547022dad">
+            <input type="hidden" name="subject" value="New Registration – El Curso Digital Marketing Course (cyberad.in)">
+            <input type="hidden" name="from_name" value="CyberAd - El Curso Form">
+            <input type="checkbox" name="botcheck" style="display:none;">
+            
+            <div class="form-group">
+              <input type="text" name="name" required placeholder="Your Full Name *" class="form-input">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" required placeholder="Email Address *" class="form-input">
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" required placeholder="WhatsApp / Phone Number *" class="form-input">
+            </div>
+            <div class="form-group" style="margin-bottom: 18px;">
+              <select name="interest" required class="form-select">
+                <option value="">I am registering as... *</option>
+                <option value="Individual / Beginner">Individual / Beginner</option>
+                <option value="Business Owner">Business Owner</option>
+                <option value="College / Institution">College / Institution</option>
+                <option value="Just Exploring">Just Exploring</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-white" style="width:100%;padding:14px;font-size:1rem;font-weight:700;">
+              Submit Registration →
+            </button>
+            <p id="form-status" style="margin-top:12px;font-size:0.9rem;text-align:center;display:none;"></p>
+          </form>
+        </div>
+        
+        <!-- Inclusions & Direct Assistance Column -->
+        <div style="text-align:left;">
+          <!-- Inclusions Card -->
+          <div class="inclusions-card">
+            <div class="inclusions-header">
+              <h4>Everything You Need, Taken Care Of</h4>
+            </div>
+            <p class="inclusions-text">
+              Your three-day learning experience includes vegetarian meals, a participant learning kit with a notepad, pen and water bottle, course materials, and a beginner-friendly digital marketing book by Harish Vasudevan. You’ll also receive continued online access through Google Classroom, allowing you to revisit the learning materials whenever you need. As a small additional perk, Spotify Premium will also be provided.
+            </p>
+            <div class="inclusions-badges">
+              <span>🍽️ Vegetarian Meals</span>
+              <span>📓 Participant Learning Kit</span>
+              <span>📖 Book by Harish Vasudevan</span>
+              <span>💻 Google Classroom Access</span>
+              <span>🎵 Spotify Premium</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp + Email Direct -->
+          <p style="color:rgba(255,255,255,0.8);font-size:0.95rem;margin-bottom:14px;">Prefer direct assistance or have questions?</p>
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program" 
+             target="_blank" class="btn btn-white" style="display:block;width:100%;margin-bottom:12px;text-align:center;padding:14px;font-weight:700;">
+            Chat on WhatsApp → +91 89256 93013
+          </a>
+          <a href="mailto:hello@cyberad.in?subject=Digital%20Marketing%20Program%20Enquiry" 
+             class="btn btn-outline" style="display:block;width:100%;text-align:center;padding:14px;color:white;border-color:rgba(255,255,255,0.4);">
+            Email: hello@cyberad.in
+          </a>
+          <p style="margin-top:20px;font-size:0.85rem;opacity:0.65;line-height:1.5;">
+            Next step: Short discovery call → Custom proposal → Batch confirmation
+          </p>
+        </div>
       </div>
-      <p style="margin-top: 28px; font-size: 0.9rem; opacity: 0.7;">
-        Next step: Short discovery call → Custom proposal → Pilot batch agreement
-      </p>
     </div>
   </section>
+  
+  <script>
+    // =========================================================================
+    // 🎓 BATCH SEAT CAPACITY & REGISTRATIONS (Single Source of Truth)
+    // -------------------------------------------------------------------------
+    // Currently 20 out of 20 seats are OPEN and AVAILABLE.
+    // 
+    // To mark seats as booked when students register, you can either:
+    // 
+    // METHOD 1 (Recommended): Add student names/initials into CONFIRMED_STUDENTS:
+    //   e.g. const CONFIRMED_STUDENTS = ["Rahul S.", "Priya M."];
+    //   (This grays out the seats AND shows their name on hover)
+    //
+    // METHOD 2: Or simply set MANUAL_BOOKED_COUNT to the number of bookings:
+    //   e.g. const MANUAL_BOOKED_COUNT = 2;
+    // =========================================================================
+    const TOTAL_SEATS = 20;
+
+    // List of confirmed student names (Empty = All 20 seats open)
+    const CONFIRMED_STUDENTS = [
+      // "Student Name 1",
+      // "Student Name 2",
+    ];
+
+    // Manual count override (if not listing names):
+    const MANUAL_BOOKED_COUNT = 0; // Set to 0 initially (all 20 available)
+    // =========================================================================
+
+    function initSeatMap() {
+      const grid = document.getElementById('seats-grid');
+      const statusEl = document.getElementById('seats-status');
+      const submitBtn = document.querySelector('#lead-form button[type="submit"]');
+
+      if (!grid || !statusEl) return;
+
+      // Calculate total booked seats
+      const totalBooked = Math.max(CONFIRMED_STUDENTS.length, MANUAL_BOOKED_COUNT);
+      const clampedBooked = Math.max(0, Math.min(TOTAL_SEATS, totalBooked));
+      const seatsLeft = TOTAL_SEATS - clampedBooked;
+
+      // Clear existing grid
+      grid.innerHTML = '';
+
+      // Generate 20 visual seat tiles (4 rows x 5 columns)
+      for (let i = 1; i <= TOTAL_SEATS; i++) {
+        const isTaken = i <= clampedBooked;
+        const tile = document.createElement('div');
+        tile.className = 'seat-tile ' + (isTaken ? 'taken' : 'available');
+        
+        // Seat label (e.g., 01, 02... 20)
+        tile.textContent = i < 10 ? '0' + i : String(i);
+
+        // Hover tooltip for transparency
+        if (isTaken) {
+          const studentName = CONFIRMED_STUDENTS[i - 1];
+          tile.title = studentName 
+            ? 'Seat ' + (i < 10 ? '0' + i : i) + ': ' + studentName + ' (Confirmed)' 
+            : 'Seat ' + (i < 10 ? '0' + i : i) + ': Booked';
+        } else {
+          tile.title = 'Seat ' + (i < 10 ? '0' + i : i) + ': Available';
+        }
+
+        grid.appendChild(tile);
+      }
+
+      // Update live status text and urgency styles
+      if (clampedBooked >= TOTAL_SEATS) {
+        statusEl.className = 'seats-status-pill full';
+        statusEl.textContent = 'Batch Full (20/20 seats taken)';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Batch Full — Registrations Closed';
+          submitBtn.style.opacity = '0.6';
+          submitBtn.style.cursor = 'not-allowed';
+        }
+      } else if (clampedBooked === 0) {
+        statusEl.className = 'seats-status-pill';
+        statusEl.textContent = 'All 20 seats available (0 taken)';
+      } else if (seatsLeft <= 5) {
+        statusEl.className = 'seats-status-pill urgent';
+        statusEl.textContent = clampedBooked + ' of ' + TOTAL_SEATS + ' taken • Only ' + seatsLeft + ' seat' + (seatsLeft === 1 ? '' : 's') + ' left';
+      } else {
+        statusEl.className = 'seats-status-pill';
+        statusEl.textContent = clampedBooked + ' of ' + TOTAL_SEATS + ' taken • ' + seatsLeft + ' seats left';
+      }
+    }
+
+    // Initialize seat map when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSeatMap);
+    } else {
+      initSeatMap();
+    }
+
+    const form = document.getElementById('lead-form');
+    const status = document.getElementById('form-status');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const originalText = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Submitting...';
+        status.style.display = 'block';
+        status.style.color = 'rgba(255,255,255,0.8)';
+        status.textContent = 'Sending your registration...';
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.style.color = '#4ade80';
+            status.textContent = '✓ Thank you! Registration received. We will contact you shortly.';
+            if (typeof fbq === 'function') {
+              fbq('track', 'Lead', {
+                content_name: 'Digital Marketing Course Registration'
+              });
+            }
+            form.reset();
+          } else {
+            status.style.color = '#f87171';
+            status.textContent = data.message || 'Submission failed. Please try WhatsApp directly.';
+          }
+        } catch (err) {
+          status.style.color = '#f87171';
+          status.textContent = 'Network error. Please reach out via WhatsApp.';
+        } finally {
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      });
+    }
+  </script>
 
   <!-- FOOTER -->
   <footer>
@@ -1218,6 +2032,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- MOBILE STICKY BOTTOM ACTION BAR -->
+  <div class="mobile-sticky-bar" aria-label="Quick contact bar">
+    <div class="bar-info">
+      <span class="bar-title">Digital Marketing Batch</span>
+      <span class="bar-sub">20 Seats • Enrolling Now</span>
+    </div>
+    <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program" 
+       target="_blank" class="bar-cta" aria-label="Chat on WhatsApp">
+      <span>💬 WhatsApp</span>
+    </a>
+  </div>
 
 </body>
 </html>
