@@ -911,6 +911,49 @@
       }
     }
 
+    /* ========== INCLUSIONS CARD ========== */
+    .inclusions-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      padding: 22px 24px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .inclusions-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .inclusions-header h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+    .inclusions-text {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .inclusions-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .inclusions-badges span {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
   </style>
 </head>
 <body>
@@ -1395,18 +1438,36 @@
           </form>
         </div>
         
-        <!-- WhatsApp + Email Direct -->
-        <div style="text-align:left;padding-top:10px;">
-          <p style="color:rgba(255,255,255,0.8);font-size:0.95rem;margin-bottom:20px;">Prefer direct assistance or have questions?</p>
+        <!-- Inclusions & Direct Assistance Column -->
+        <div style="text-align:left;">
+          <!-- Inclusions Card -->
+          <div class="inclusions-card">
+            <div class="inclusions-header">
+              <h4>Everything You Need, Taken Care Of</h4>
+            </div>
+            <p class="inclusions-text">
+              Your three-day learning experience includes vegetarian meals, a participant learning kit with a notepad, pen and water bottle, course materials, and a beginner-friendly digital marketing book by Harish Vasudevan. You’ll also receive continued online access through Google Classroom, allowing you to revisit the learning materials whenever you need. As a small additional perk, Spotify Premium will also be provided.
+            </p>
+            <div class="inclusions-badges">
+              <span>🍽️ Vegetarian Meals</span>
+              <span>📓 Participant Learning Kit</span>
+              <span>📖 Book by Harish Vasudevan</span>
+              <span>💻 Google Classroom Access</span>
+              <span>🎵 Spotify Premium</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp + Email Direct -->
+          <p style="color:rgba(255,255,255,0.8);font-size:0.95rem;margin-bottom:14px;">Prefer direct assistance or have questions?</p>
           <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20program" 
-             target="_blank" class="btn btn-white" style="display:block;width:100%;margin-bottom:14px;text-align:center;padding:14px;">
+             target="_blank" class="btn btn-white" style="display:block;width:100%;margin-bottom:12px;text-align:center;padding:14px;">
             Chat on WhatsApp → +91 89256 93013
           </a>
           <a href="mailto:hello@cyberad.in?subject=Digital%20Marketing%20Program%20Enquiry" 
              class="btn btn-outline" style="display:block;width:100%;text-align:center;padding:14px;color:white;border-color:rgba(255,255,255,0.4);">
             Email: hello@cyberad.in
           </a>
-          <p style="margin-top:28px;font-size:0.85rem;opacity:0.65;line-height:1.5;">
+          <p style="margin-top:20px;font-size:0.85rem;opacity:0.65;line-height:1.5;">
             Next step: Short discovery call → Custom proposal → Batch confirmation
           </p>
         </div>
