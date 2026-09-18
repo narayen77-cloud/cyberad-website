@@ -138,9 +138,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] font-mono text-slate-600 pt-4 border-t border-slate-900/50">
             <span>© 2026 {t('copyright', 'footer')}</span>
             <div className="flex gap-4">
-              <span className="hover:text-slate-400 transition-colors cursor-pointer">{t('termsOfService', 'footer')}</span>
-              <span>•</span>
-              <span className="hover:text-slate-400 transition-colors cursor-pointer">{t('privacyCharter', 'footer')}</span>
+              <a href="/privacy" className="hover:text-slate-400 transition-colors">{t('privacyCharter', 'footer')}</a>
             </div>
           </div>
         </div>
