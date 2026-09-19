@@ -236,67 +236,166 @@
       margin-bottom: 40px;
     }
     .hero-stats {
-      display: flex;
-      gap: 32px;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
-    .stat {
-      text-align: left;
+    .stat-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(11, 29, 58, 0.04);
     }
-    .stat-num {
-      font-size: 1.6rem;
+    .stat-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(30, 107, 255, 0.1);
+    }
+    .stat-card-icon {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    .stat-card .stat-num {
+      font-size: 1.05rem;
       font-weight: 800;
       color: var(--primary);
-      line-height: 1.2;
+      line-height: 1.25;
+      margin-bottom: 2px;
     }
-    .stat-label {
-      font-size: 0.85rem;
+    .stat-card .stat-label {
+      font-size: 0.78rem;
       color: var(--text-muted);
+      line-height: 1.35;
     }
     .hero-card {
-      background: white;
+      background: #FFFFFF;
       border-radius: 20px;
-      box-shadow: var(--shadow-lg);
-      padding: 32px;
-      border: 1px solid var(--border);
+      box-shadow: 0 16px 44px rgba(11, 29, 58, 0.1), 0 0 0 1px rgba(30, 107, 255, 0.06);
+      padding: 28px 24px;
+      border: 1px solid rgba(226, 232, 240, 0.9);
       position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1E6BFF 0%, #6366F1 50%, #00D4B2 100%);
     }
     .hero-card-header {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
     }
-    .hero-card-header img {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+    .hero-card-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .check-list {
+    .hero-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1E6BFF;
+      background: #E8F0FF;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .hero-card-title {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    .hero-card-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      display: block;
+    }
+    .assets-list {
       list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
     }
-    .check-list li {
+    .asset-item {
       display: flex;
       align-items: flex-start;
       gap: 12px;
-      margin-bottom: 14px;
-      font-size: 0.98rem;
-      line-height: 1.45;
+      padding: 10px 12px;
+      background: #F8FAFC;
+      border-radius: 10px;
+      border: 1px solid #EDF2F7;
+      transition: all 0.2s ease;
     }
-    .check-list li::before {
-      content: '✓';
+    .asset-item:hover {
+      background: #F0F5FF;
+      border-color: #BFDBFE;
+      transform: translateX(3px);
+    }
+    .asset-icon-box {
       flex-shrink: 0;
-      width: 22px;
-      height: 22px;
-      background: var(--accent);
-      color: white;
-      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #E2E8F0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.75rem;
+      font-size: 1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .asset-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .asset-title {
+      font-size: 0.88rem;
       font-weight: 700;
-      margin-top: 2px;
+      color: var(--primary);
+      line-height: 1.35;
+      display: block;
+    }
+    .asset-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+      margin-top: 1px;
+      display: block;
+    }
+    .hero-card-footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-align: center;
+    }
+    .hero-card-footer span {
+      color: var(--accent);
+      font-weight: 700;
     }
 
     /* ========== SECTIONS ========== */
@@ -1395,15 +1494,18 @@
             </a>
           </div>
           <div class="hero-stats">
-            <div class="stat">
+            <div class="stat-card">
+              <span class="stat-card-icon">🕒</span>
               <div class="stat-num">3 days</div>
               <div class="stat-label">11:00–16:00</div>
             </div>
-            <div class="stat">
+            <div class="stat-card">
+              <span class="stat-card-icon">📍</span>
               <div class="stat-num">Pondicherry University</div>
               <div class="stat-label">Dept. of Management Studies, seminar hall</div>
             </div>
-            <div class="stat">
+            <div class="stat-card">
+              <span class="stat-card-icon">🏷️</span>
               <div class="stat-num">₹5,099</div>
               <div class="stat-label">all inclusive</div>
             </div>
@@ -1412,20 +1514,62 @@
         
         <div class="hero-card">
           <div class="hero-card-header">
-            <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd" style="width:48px; height:48px; border-radius:12px; object-fit:contain;" />
-            <div>
-              <strong style="display:block; color:var(--primary);">What you walk away with</strong>
-              <span style="font-size:0.85rem; color:var(--text-muted);">Not a pile of slides. Assets you can use on Monday.</span>
+            <div class="hero-card-header-left">
+              <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd" style="width:44px; height:44px; border-radius:10px; object-fit:contain;" />
+              <div>
+                <strong class="hero-card-title">What you walk away with</strong>
+                <span class="hero-card-sub">Not a pile of slides. Assets you can use on Monday.</span>
+              </div>
             </div>
+            <span class="hero-card-badge">💼 6 Assets</span>
           </div>
-          <ul class="check-list">
-            <li>Your offer, written so a stranger understands it</li>
-            <li>A no-code payment page / payment link</li>
-            <li>A WhatsApp pitch you can send the same week</li>
-            <li>A short plan to keep the customer after the first payment</li>
-            <li>The book <em>Digital Marketing for Non-Marketers</em> — Harish Vasudevan</li>
-            <li>Certificate of participation</li>
+          <ul class="assets-list">
+            <li class="asset-item">
+              <div class="asset-icon-box">📝</div>
+              <div class="asset-content">
+                <span class="asset-title">Your offer, written so a stranger understands it</span>
+                <span class="asset-desc">Clear commercial pitch with zero buzzwords</span>
+              </div>
+            </li>
+            <li class="asset-item">
+              <div class="asset-icon-box">💳</div>
+              <div class="asset-content">
+                <span class="asset-title">A no-code payment page / payment link</span>
+                <span class="asset-desc">Live checkout system ready to accept payments</span>
+              </div>
+            </li>
+            <li class="asset-item">
+              <div class="asset-icon-box">💬</div>
+              <div class="asset-content">
+                <span class="asset-title">A WhatsApp pitch you can send the same week</span>
+                <span class="asset-desc">Direct-response closing scripts for warm inquiries</span>
+              </div>
+            </li>
+            <li class="asset-item">
+              <div class="asset-icon-box">🔁</div>
+              <div class="asset-content">
+                <span class="asset-title">A short plan to keep the customer after the first payment</span>
+                <span class="asset-desc">Retention blueprint to drive repeat business</span>
+              </div>
+            </li>
+            <li class="asset-item">
+              <div class="asset-icon-box">📖</div>
+              <div class="asset-content">
+                <span class="asset-title">The book: <em>Digital Marketing for Non-Marketers</em></span>
+                <span class="asset-desc">By Harish Vasudevan — reference handbook</span>
+              </div>
+            </li>
+            <li class="asset-item">
+              <div class="asset-icon-box">🎓</div>
+              <div class="asset-content">
+                <span class="asset-title">Certificate of participation</span>
+                <span class="asset-desc">Official certification upon programme completion</span>
+              </div>
+            </li>
           </ul>
+          <div class="hero-card-footer">
+            <span>⚡ Ready for Action:</span> Tangible deliverables in hand by Day 3.
+          </div>
         </div>
       </div>
     </div>
