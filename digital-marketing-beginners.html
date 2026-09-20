@@ -82,11 +82,8 @@
 
     /* ========== HEADER ========== */
     header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(12px);
+      position: relative;
+      background: #FFFFFF;
       border-bottom: 1px solid var(--border);
     }
     .header-inner {
@@ -133,6 +130,109 @@
     nav a:hover {
       color: var(--primary);
       background: rgba(11, 29, 58, 0.05);
+    }
+
+    /* ========== SLIM STICKY TOP BAR (APPEARS ON SCROLL) ========== */
+    .sticky-top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 64px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 4px 20px rgba(11, 29, 58, 0.08);
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+    }
+    .sticky-top-bar.is-visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .sticky-top-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      gap: 16px;
+    }
+    .sticky-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .sticky-logo img {
+      height: 38px;
+      width: auto;
+      border-radius: 50%;
+    }
+    .sticky-logo-text {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+    .sticky-logo-text span {
+      color: var(--accent);
+    }
+    .sticky-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 20px;
+      font-weight: 700;
+      font-size: 0.90rem;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #FFFFFF;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.25);
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .sticky-cta-btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(30, 107, 255, 0.35);
+    }
+    @media (max-width: 768px) {
+      .sticky-top-bar {
+        height: 58px;
+      }
+      .sticky-logo img {
+        height: 32px;
+      }
+      .sticky-logo-text {
+        font-size: 1.05rem;
+      }
+      .sticky-cta-btn {
+        padding: 8px 16px;
+        font-size: 0.84rem;
+      }
+    }
+    @media (max-width: 400px) {
+      .sticky-top-bar {
+        height: 56px;
+      }
+      .sticky-logo img {
+        height: 28px;
+      }
+      .sticky-logo-text {
+        font-size: 0.95rem;
+      }
+      .sticky-cta-btn {
+        padding: 7px 12px;
+        font-size: 0.80rem;
+      }
     }
     
     .btn {
@@ -1097,11 +1197,6 @@
       font-size: 0.8rem;
     }
 
-    /* ========== MOBILE STICKY CTA BAR ========== */
-    .mobile-sticky-bar {
-      display: none;
-    }
-
     /* ========== RESPONSIVE BREAKPOINTS ========== */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1112,64 +1207,6 @@
       .final-cta-grid { grid-template-columns: 1fr; gap: 32px; max-width: 580px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       nav { display: none; }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding-bottom: 68px; /* Offset for sticky bottom action bar */
-      }
-      .mobile-sticky-bar {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 999;
-        background: rgba(11, 29, 58, 0.97);
-        backdrop-filter: blur(12px);
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
-      }
-      .mobile-sticky-bar .bar-info {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.25;
-        overflow: hidden;
-      }
-      .mobile-sticky-bar .bar-title {
-        font-size: 0.82rem;
-        font-weight: 700;
-        color: #FFFFFF;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .mobile-sticky-bar .bar-sub {
-        font-size: 0.72rem;
-        color: #93C5FD;
-      }
-      .mobile-sticky-bar .bar-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        background: #25D366;
-        color: #FFFFFF;
-        font-weight: 700;
-        font-size: 0.86rem;
-        padding: 10px 16px;
-        border-radius: 8px;
-        text-decoration: none;
-        white-space: nowrap;
-        box-shadow: 0 2px 10px rgba(37, 211, 102, 0.35);
-        flex-shrink: 0;
-      }
-      .mobile-sticky-bar .bar-cta:active {
-        transform: scale(0.98);
-      }
     }
 
     @media (max-width: 600px) {
@@ -1474,9 +1511,20 @@
         <a href="#schedule">Schedule &amp; Venue</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20Foundation%20Programme" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+      <a href="#cta" class="btn btn-primary">Inquire Now →</a>
     </div>
   </header>
+
+  <!-- SLIM STICKY TOP BAR (Appears on Scroll) -->
+  <div id="sticky-top-bar" class="sticky-top-bar" aria-label="Sticky navigation bar">
+    <div class="container sticky-top-inner">
+      <a href="https://cyberad.in" class="sticky-logo" aria-label="CyberAd Homepage">
+        <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd.in" />
+        <span class="sticky-logo-text">CyberAd<span>.in</span></span>
+      </a>
+      <a href="#cta" class="sticky-cta-btn">Inquire Now →</a>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -2110,6 +2158,31 @@
         }
       });
     }
+
+    // =========================================================================
+    // SLIM STICKY TOP BAR SCROLL CONTROLLER
+    // -------------------------------------------------------------------------
+    const stickyTopBar = document.getElementById('sticky-top-bar');
+    if (stickyTopBar) {
+      let isStickyVisible = false;
+      const scrollThreshold = 180;
+      const checkStickyScroll = () => {
+        const scrolled = window.scrollY || document.documentElement.scrollTop;
+        if (scrolled > scrollThreshold) {
+          if (!isStickyVisible) {
+            stickyTopBar.classList.add('is-visible');
+            isStickyVisible = true;
+          }
+        } else {
+          if (isStickyVisible) {
+            stickyTopBar.classList.remove('is-visible');
+            isStickyVisible = false;
+          }
+        }
+      };
+      window.addEventListener('scroll', checkStickyScroll, { passive: true });
+      checkStickyScroll();
+    }
   </script>
 
   <!-- FOOTER -->
@@ -2145,18 +2218,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- MOBILE STICKY BOTTOM ACTION BAR -->
-  <div class="mobile-sticky-bar" aria-label="Quick contact bar">
-    <div class="bar-info">
-      <span class="bar-title">Foundation Programme: 29 Sep – 1 Oct</span>
-      <span class="bar-sub">20 Seats · Pondicherry Univ · ₹5,099</span>
-    </div>
-    <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%27m%20interested%20in%20the%20Digital%20Marketing%20Foundation%20Programme" 
-       target="_blank" class="bar-cta" aria-label="Chat on WhatsApp">
-      <span>WhatsApp</span>
-    </a>
-  </div>
 
 </body>
 </html>
