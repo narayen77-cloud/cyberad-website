@@ -73,8 +73,33 @@ export default function Header() {
             </button>
           </nav>
 
-          {/* Action CTA */}
+          {/* Action CTA & Radio Language Switcher */}
           <div className="flex items-center gap-3 md:gap-4">
+            <div className="inline-flex items-center bg-slate-100 p-1 rounded-full border border-slate-200 gap-2 text-xs font-semibold">
+              <label className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full cursor-pointer transition-all ${language === 'en' ? 'bg-white text-slate-900 shadow-xs font-bold' : 'text-slate-500 hover:text-slate-900'}`}>
+                <input 
+                  type="radio" 
+                  name="react-lang" 
+                  value="en" 
+                  checked={language === 'en'} 
+                  onChange={() => setLanguage('en')}
+                  className="accent-indigo-600 w-3.5 h-3.5 cursor-pointer"
+                />
+                <span>English</span>
+              </label>
+              <label className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full cursor-pointer transition-all ${language === 'ta' ? 'bg-white text-slate-900 shadow-xs font-bold' : 'text-slate-500 hover:text-slate-900'}`}>
+                <input 
+                  type="radio" 
+                  name="react-lang" 
+                  value="ta" 
+                  checked={language === 'ta'} 
+                  onChange={() => setLanguage('ta')}
+                  className="accent-indigo-600 w-3.5 h-3.5 cursor-pointer"
+                />
+                <span>தமிழ்</span>
+              </label>
+            </div>
+
             <button
               onClick={() => scrollToSection('partner-form')}
               className="font-display font-semibold text-xs md:text-sm tracking-wide bg-slate-900 hover:bg-indigo-600 text-white px-4 md:px-5 py-2.5 rounded-full shadow-lg shadow-slate-200 transition-all duration-300 hover:translate-y-[-1px] cursor-pointer"
