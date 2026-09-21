@@ -80,31 +80,49 @@
       padding: 0 20px;
     }
 
+    /* ========== HEADER & NAVIGATION TYPOGRAPHY (Inter) ========== */
+    header,
+    .header-inner,
+    nav,
+    nav a,
+    .lang-switcher-wrap,
+    .lang-radio-label,
+    .sticky-top-bar,
+    .sticky-top-inner,
+    .sticky-actions,
+    .sticky-cta-btn,
+    .header-actions .btn {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
     /* ========== RADIO BUTTON LANGUAGE SWITCHER ========== */
     .lang-switcher-wrap {
       display: inline-flex;
       align-items: center;
-      background: #F1F5F9;
-      padding: 4px 8px;
+      background: #F8FAFC;
+      padding: 3px 6px;
       border-radius: 9999px;
-      border: 1px solid #CBD5E1;
-      gap: 12px;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.04);
+      border: 1px solid #E2E8F0;
+      gap: 10px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
       flex-shrink: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
 
     .lang-radio-label {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 500;
       color: #64748B;
       cursor: pointer;
       user-select: none;
-      transition: all 0.2s ease;
-      padding: 3px 6px;
+      transition: all 0.15s ease;
+      padding: 3px 8px;
       border-radius: 9999px;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      letter-spacing: -0.01em;
     }
 
     .lang-radio-label:hover {
@@ -114,9 +132,9 @@
     .lang-radio-label input[type="radio"] {
       appearance: none;
       -webkit-appearance: none;
-      width: 15px;
-      height: 15px;
-      border: 2px solid #94A3B8;
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #94A3B8;
       border-radius: 50%;
       outline: none;
       cursor: pointer;
@@ -124,7 +142,7 @@
       place-content: center;
       margin: 0;
       background: #FFFFFF;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .lang-radio-label input[type="radio"]:checked {
@@ -134,11 +152,11 @@
 
     .lang-radio-label input[type="radio"]::before {
       content: "";
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       transform: scale(0);
-      transition: 120ms transform cubic-bezier(0.16, 1, 0.3, 1);
+      transition: 100ms transform cubic-bezier(0.16, 1, 0.3, 1);
       background: var(--accent);
     }
 
@@ -148,9 +166,9 @@
 
     .lang-radio-label.is-active {
       color: var(--primary);
-      font-weight: 700;
+      font-weight: 600;
       background: #FFFFFF;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
     }
 
     /* ========== HEADER ========== */
@@ -1188,19 +1206,19 @@
         <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd.in" />
       </a>
       
-      <!-- Center Nav Links -->
+      <!-- Center Nav Links (Always English) -->
       <nav>
-        <a href="#curriculum" data-i18n="navCurriculum">Curriculum</a>
-        <a href="#who-its-for" data-i18n="navWhoItsFor">Who It’s For</a>
-        <a href="#what-changes" data-i18n="navWhatChanges">What Changes</a>
-        <a href="#schedule" data-i18n="navSchedule">Schedule &amp; Venue</a>
-        <a href="#faq" data-i18n="navFaq">FAQ</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#who-its-for">Who It’s For</a>
+        <a href="#what-changes">What Changes</a>
+        <a href="#schedule">Schedule &amp; Venue</a>
+        <a href="#faq">FAQ</a>
       </nav>
 
       <!-- Right: Radio Button Switcher & CTA -->
       <div class="header-actions">
         <!-- Radio Button Language Switcher -->
-        <div class="lang-switcher-wrap" role="radiogroup" aria-label="Select Language / மொழியைத் தேர்ந்தெடுக்கவும்">
+        <div class="lang-switcher-wrap" role="radiogroup" aria-label="Select Language">
           <label class="lang-radio-label is-active" id="label-lang-main-en">
             <input type="radio" name="site-language-main" value="en" checked onchange="setSiteLanguage('en')">
             <span>English</span>
@@ -1211,7 +1229,7 @@
           </label>
         </div>
 
-        <a href="#cta" class="btn btn-primary" data-i18n="navCta">Inquire Now →</a>
+        <a href="#cta" class="btn btn-primary">Inquire Now →</a>
       </div>
     </div>
   </header>
@@ -1236,7 +1254,7 @@
             <span>தமிழ்</span>
           </label>
         </div>
-        <a href="#cta" class="sticky-cta-btn" data-i18n="navCta">Inquire Now →</a>
+        <a href="#cta" class="sticky-cta-btn">Inquire Now →</a>
       </div>
     </div>
   </div>
@@ -1752,11 +1770,11 @@
         </div>
         <div class="footer-col">
           <h5 data-i18n="footerColProg">Programme</h5>
-          <a href="#curriculum" data-i18n="navCurriculum">Curriculum</a>
-          <a href="#who-its-for" data-i18n="navWhoItsFor">Who It’s For</a>
-          <a href="#what-changes" data-i18n="navWhatChanges">What Changes</a>
-          <a href="#schedule" data-i18n="navSchedule">Schedule &amp; Venue</a>
-          <a href="#faq" data-i18n="navFaq">FAQ</a>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#who-its-for">Who It’s For</a>
+          <a href="#what-changes">What Changes</a>
+          <a href="#schedule">Schedule &amp; Venue</a>
+          <a href="#faq">FAQ</a>
         </div>
         <div class="footer-col">
           <h5 data-i18n="footerColContact">Contact</h5>
