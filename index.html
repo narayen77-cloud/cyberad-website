@@ -953,10 +953,18 @@
     }
     .seats-header {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
       gap: 8px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    @media (min-width: 460px) {
+      .seats-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
     }
     .seats-badge {
       display: inline-flex;
@@ -965,6 +973,8 @@
       font-size: 0.80rem;
       font-weight: 700;
       color: #93C5FD;
+      line-height: 1.4;
+      flex: 1 1 auto;
     }
     .seats-dot {
       width: 8px;
@@ -973,9 +983,10 @@
       border-radius: 50%;
       display: inline-block;
       box-shadow: 0 0 8px #10B981;
+      flex-shrink: 0;
     }
     .seats-status-pill {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       padding: 3px 10px;
       border-radius: 100px;
@@ -983,6 +994,7 @@
       color: #34D399;
       border: 1px solid rgba(16, 185, 129, 0.3);
       white-space: nowrap;
+      flex-shrink: 0;
     }
     .seats-status-pill.urgent {
       background: rgba(239, 68, 68, 0.15);
@@ -1141,13 +1153,25 @@
       font-size: 0.78rem;
     }
 
+    /* Clean anchor scrolling margin for sticky header */
+    section[id], [id="cta"], #curriculum, #who-its-for, #what-changes, #schedule, #faq, #outcomes {
+      scroll-margin-top: 80px;
+    }
+
     /* ========== RESPONSIVE BREAKPOINTS ========== */
+    @media (max-width: 1100px) {
+      nav a { font-size: 0.84rem; padding: 5px 8px; }
+      .header-inner { gap: 10px; }
+      .header-actions { gap: 10px; }
+    }
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
       .solution-grid { grid-template-columns: 1fr; }
       .process-steps { grid-template-columns: 1fr; }
       .final-cta-grid { grid-template-columns: 1fr; gap: 32px; max-width: 580px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 820px) {
       nav { display: none; }
     }
 
@@ -1975,12 +1999,6 @@
       ta: {
         pageTitle: "டிஜிட்டல் மார்க்கெட்டிங் அடிப்படை பயிற்சி | CyberAd.in",
         pageDesc: "பாண்டிச்சேரி பல்கலைக்கழகத்தில் சிறு வணிக உரிமையாளர்கள் மற்றும் மார்க்கெட்டிங் மேலாளர்களுக்கான 3 நாள் நேரடி செயல்முறைப் பயிற்சி (தமிழ் & English). CyberAd.in",
-        navCurriculum: "பாடத்திட்டம்",
-        navWhoItsFor: "யாருக்கானது",
-        navWhatChanges: "3 நாட்களில் என்ன மாறும்",
-        navSchedule: "நேரம் & இடம்",
-        navFaq: "கேள்வி-பதில்",
-        navCta: "இப்போதே விண்ணப்பிக்கவும் →",
         heroBadge: "<span>●</span> Cyberad.in பயிற்சி திட்டம் · தமிழ் & ஆங்கிலத்தில் நடைபெறும் · பாண்டிச்சேரி பல்கலைக்கழகம்",
         heroTitle: "உங்கள் வாடிக்கையாளர்கள் ஆன்லைனில் தேடுகிறார்கள்.<br><span>உங்கள் மார்க்கெட்டிங் இன்னும் தயாராகவில்லையா?</span>",
         heroSub: "அதிக விற்பனை மற்றும் வருவாயை விரும்பும் தொழில் உரிமையாளர்கள் மற்றும் மார்க்கெட்டிங் மேலாளர்களுக்கான 3 நாள் நேரடி வகுப்பறைப் பயிற்சி.",
@@ -2103,7 +2121,7 @@
         faq9A: "ஒரே இரவில் மாயாஜால விற்பனையையோ மேஜிக் அல்காரிதத்தையோ இது உறுதியளிக்காது. 3 நாட்களில் வாழ்நாள் மீடியா வாழ்க்கையைத் தராது. பயிற்சியின் பின்னர் நீங்கள் செய்ய வேண்டிய களப்பணியை இது மாற்றாது.",
         ctaTitle: "உங்களிடம் ஒரு வணிகம் இருந்து, டிஜிட்டல் மார்க்கெட்டிங்கில் தெளிவு இல்லையெனில் — உடனே விண்ணப்பியுங்கள்.",
         ctaIntro: "வணிக உரிமையாளர்கள், மார்க்கெட்டிங் மேலாளர்கள் மற்றும் விற்பனையை உயர்த்த வேண்டியவர்களுக்கான நேரடி ஆரம்ப அமைப்பு.",
-        seatsBadgeText: "29 செப், 30 செப் & 1 அக் 2026 · 20 இடங்கள் மட்டுமே (தமிழ் & English)",
+        seatsBadgeText: "29 Sep, 30 Sep & 1 Oct 2026 · 20 இடங்கள் மட்டுமே (தமிழ் & English)",
         legendTaken: "நிரப்பப்பட்டது",
         legendAvailable: "இருப்பில் உள்ளது",
         seatsNote: "பதிவுகள் உறுதி செய்யப்படும் போது இருக்கைகள் நிரப்பப்படும்.",
