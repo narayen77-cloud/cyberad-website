@@ -18,6 +18,7 @@ export default defineConfig(() => {
           privacy: path.resolve(__dirname, 'privacy.html'),
           privacyPolicy: path.resolve(__dirname, 'privacy-policy.html'),
           digitalMarketing: path.resolve(__dirname, 'digital-marketing-beginners.html'),
+          thankYou: path.resolve(__dirname, 'thank-you.html'),
         },
       },
     },
