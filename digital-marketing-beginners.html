@@ -508,187 +508,170 @@
       border: 1px solid #BFDBFE;
     }
     .hero h1 {
-      font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
       font-weight: 800;
-      line-height: 1.2;
+      line-height: 1.15;
       color: var(--primary);
       letter-spacing: -0.03em;
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       word-break: break-word;
     }
     .hero h1 span {
       color: var(--accent);
     }
     .hero-sub {
-      font-size: 1.12rem;
-      color: var(--text-muted);
-      margin-bottom: 30px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 20px;
       max-width: 540px;
+      line-height: 1.4;
+    }
+    .hero-note-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 26px;
+      font-size: 0.96rem;
       line-height: 1.6;
+      color: #334155;
+    }
+    .hero-note-card p {
+      margin: 0;
     }
     .hero-ctas {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 36px;
-    }
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
+      margin-bottom: 24px;
     }
-    .stat-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 14px 16px;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(11, 29, 58, 0.04);
-    }
-    .stat-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(30, 107, 255, 0.1);
-    }
-    .stat-card .stat-num {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1.25;
-      margin-bottom: 2px;
-    }
-    .stat-card .stat-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
-    .hero-card {
+
+    /* Curiosity Counter */
+    .curiosity-counter {
       background: #FFFFFF;
-      border-radius: 20px;
-      box-shadow: 0 16px 44px rgba(11, 29, 58, 0.1), 0 0 0 1px rgba(30, 107, 255, 0.06);
-      padding: 26px 22px;
-      border: 1px solid rgba(226, 232, 240, 0.9);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #1E6BFF 0%, #6366F1 50%, #00D4B2 100%);
-    }
-    .hero-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-card-header-left {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .hero-card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #1E6BFF;
-      background: #E8F0FF;
-      padding: 4px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.02em;
-      white-space: nowrap;
-    }
-    .hero-card-title {
-      display: block;
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1.25;
-    }
-    .hero-card-sub {
-      font-size: 0.80rem;
-      color: var(--text-muted);
-      margin-top: 2px;
-      display: block;
-    }
-    .assets-list {
-      list-style: none;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 16px rgba(11, 29, 58, 0.05);
+      margin-top: 8px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-    }
-    .asset-item {
-      display: flex;
-      align-items: flex-start;
       gap: 10px;
-      padding: 9px 11px;
-      background: #F8FAFC;
-      border-radius: 10px;
-      border: 1px solid #EDF2F7;
-      transition: all 0.2s ease;
+      max-width: 520px;
     }
-    .asset-item:hover {
-      background: #F0F5FF;
-      border-color: #BFDBFE;
-      transform: translateX(3px);
-    }
-    .asset-icon-box {
-      flex-shrink: 0;
-      width: 26px;
-      height: 26px;
-      border-radius: 6px;
-      background: var(--accent-soft);
-      border: 1px solid #BFDBFE;
+    .curiosity-status-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: var(--accent);
+      gap: 16px;
+      flex-wrap: wrap;
     }
-    .asset-content {
-      flex: 1;
-      min-width: 0;
+    .curiosity-status-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: var(--primary);
     }
-    .asset-title {
-      font-size: 0.86rem;
+    .curiosity-status-item strong {
       font-weight: 700;
       color: var(--primary);
-      line-height: 1.35;
-      display: block;
     }
-    .asset-desc {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-      margin-top: 1px;
-      display: block;
+    .status-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
     }
-    .hero-card-footer {
-      margin-top: 14px;
+    .status-indicator.completed {
+      background: #64748B;
+    }
+    .status-indicator.pulse-green {
+      background: #10B981;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse-green-ring 2s infinite;
+    }
+    @keyframes pulse-green-ring {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+    .curiosity-separator {
+      width: 1px;
+      height: 18px;
+      background: #E2E8F0;
+    }
+    .curiosity-subline {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--accent);
       padding-top: 10px;
-      border-top: 1px dashed var(--border);
+      border-top: 1px dashed #E2E8F0;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      font-weight: 500;
-      text-align: center;
     }
-    .hero-card-footer span {
-      color: var(--accent);
+
+    /* 1:1 Hero Photo Frame */
+    .hero-photo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-photo-frame {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 1 / 1;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #0B1D3A;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      box-shadow: 0 16px 44px rgba(11, 29, 58, 0.12), 0 0 0 1px rgba(30, 107, 255, 0.08);
+      cursor: zoom-in;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-photo-frame:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 24px 52px rgba(11, 29, 58, 0.18), 0 0 0 1px rgba(30, 107, 255, 0.25);
+    }
+    .hero-photo-img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .hero-photo-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      background: rgba(11, 29, 58, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-size: 0.76rem;
       font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+    }
+    .photo-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+      flex-shrink: 0;
     }
 
     /* ========== SECTIONS ========== */
@@ -1432,6 +1415,232 @@
       .hero-stats { grid-template-columns: 1fr; gap: 8px; }
       .seat-tile { height: 26px; font-size: 0.60rem; }
     }
+
+    /* ========== LIGHTBOX MODAL ========== */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 20px;
+    }
+    .lightbox-modal.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 29, 58, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      cursor: pointer;
+    }
+    .lightbox-content {
+      position: relative;
+      z-index: 10;
+      max-width: 92vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: lightboxZoom 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes lightboxZoom {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .lightbox-close-btn {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: #0B1D3A;
+      border: 2px solid rgba(11, 29, 58, 0.2);
+      font-size: 1.1rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease;
+      z-index: 20;
+    }
+    .lightbox-close-btn:hover {
+      background: #EF4444;
+      color: #FFFFFF;
+      border-color: #EF4444;
+      transform: scale(1.08);
+    }
+    .lightbox-image {
+      max-width: 90vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.2);
+      background: #000;
+    }
+    .lightbox-caption {
+      color: #FFFFFF;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-top: 12px;
+      text-align: center;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 6px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      letter-spacing: -0.01em;
+      max-width: 90vw;
+    }
+    .lightbox-trigger {
+      cursor: zoom-in;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .lightbox-trigger:hover {
+      transform: scale(1.015);
+      box-shadow: 0 8px 24px rgba(30,107,255,0.25);
+    }
+    .lightbox-zoom-hint {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(11, 29, 58, 0.85);
+      backdrop-filter: blur(6px);
+      color: #FFFFFF;
+      font-size: 0.70rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      border: 1px solid rgba(255,255,255,0.2);
+      pointer-events: none;
+    }
+
+    /* ========== CELEBRATION CONFETTI & BANNER ========== */
+    #celebration-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 99990;
+    }
+
+    .celebration-banner-wrapper {
+      position: fixed;
+      top: calc(var(--header-height, 70px) + 14px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px) scale(0.96);
+      z-index: 99995;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      width: calc(100% - 32px);
+      max-width: 460px;
+    }
+
+    .celebration-banner-wrapper.is-visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    .celebration-banner {
+      background: rgba(11, 29, 58, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(245, 158, 11, 0.7);
+      border-radius: 16px;
+      padding: 12px 16px;
+      box-shadow: 0 12px 36px rgba(11, 29, 58, 0.35), 0 0 24px rgba(245, 158, 11, 0.22);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      pointer-events: auto;
+    }
+
+    .celebration-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(30, 107, 255, 0.25));
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      animation: celebrationBounce 1s infinite alternate cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes celebrationBounce {
+      from { transform: scale(0.94) rotate(-4deg); }
+      to { transform: scale(1.08) rotate(6deg); }
+    }
+
+    .celebration-text-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .celebration-heading {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .celebration-heading span.sparkle {
+      color: #F59E0B;
+    }
+
+    .celebration-subtext {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 2px;
+      line-height: 1.35;
+    }
+
+    .celebration-close-btn {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.8);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.80rem;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .celebration-close-btn:hover {
+      background: rgba(239, 68, 68, 0.8);
+      color: #FFFFFF;
+      border-color: #EF4444;
+    }
   </style>
 </head>
 <body>
@@ -1440,6 +1649,21 @@
     src="https://www.facebook.com/tr?id=1535033778024253&ev=PageView&noscript=1"
     alt=""
   /></noscript>
+
+  <!-- CELEBRATION TOAST BANNER -->
+  <div id="celebration-banner" class="celebration-banner-wrapper" role="status" aria-live="polite">
+    <div class="celebration-banner">
+      <div class="celebration-icon-box">🎉</div>
+      <div class="celebration-text-group">
+        <div class="celebration-heading">
+          <span data-i18n="celebrationHeading">Thank You, Pondicherry!</span>
+          <span class="sparkle">✨</span>
+        </div>
+        <p class="celebration-subtext" data-i18n="celebrationSub">Batch 1 at Pondicherry University successfully completed</p>
+      </div>
+      <button type="button" class="celebration-close-btn" onclick="dismissCelebration()" aria-label="Close notification">✕</button>
+    </div>
+  </div>
 
   <!-- UNIFIED STICKY HEADER -->
   <header>
@@ -1499,93 +1723,66 @@
       <div class="hero-grid">
         <div>
           <div class="badge" data-i18n-html="heroBadge">
-            <span>●</span> Cyberad.in programme · Conducted in English &amp; தமிழ் · Pondicherry University
+            <span>🎉</span> Batch 1 completed
           </div>
-          <h1 data-i18n-html="heroTitle">Your customers already look online.<br><span>Your marketing still isn’t.</span></h1>
+          <h1 data-i18n="heroTitle">El Curso</h1>
           <p class="hero-sub" data-i18n="heroSub">
-            A 3-day practical classroom programme at Pondicherry University for business owners and marketers who need more sales.
+            A digital marketing course for beginners
           </p>
-          <div class="hero-ctas">
-            <a href="https://rzp.io/rzp/Yq3VZOB" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-i18n="heroPayBtn">
-              Pay ₹5,099 and reserve seat →
-            </a>
-            <a href="#cta" class="btn btn-outline btn-lg" data-i18n="heroCta">
-              Inquire Now →
-            </a>
+          <div class="hero-note-card">
+            <p data-i18n="heroNote">
+              Batch 1 is successfully completed. Three days at Pondicherry University, by CyberAd.in with ACIC Push. Thank you to every participant. You made this programme real. The next batch is ready. If you want a seat, show your interest and we will confirm it.
+            </p>
           </div>
-          <div class="hero-stats">
-            <div class="stat-card">
-              <div class="stat-num" data-i18n="heroStat1Num">3 days</div>
-              <div class="stat-label" data-i18n="heroStat1Label">11:00–16:00 (Bilingual: English &amp; தமிழ்)</div>
+          <div class="hero-ctas">
+            <a href="https://wa.me/918925693013?text=I%20want%20a%20seat%20in%20the%20next%20El%20Curso%20batch" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-i18n="heroPrimaryBtn">
+              Show interest →
+            </a>
+            <button type="button" onclick="openLightbox('batch-1-graduates.jpg', 'El Curso Batch 1 participants at Pondicherry University')" class="btn btn-outline btn-lg" data-i18n="heroSecondaryBtn" style="display:inline-flex; align-items:center; gap:8px; cursor:pointer;">
+              <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M20.4 14.5L16 10 4 20"/></svg>
+              View Batch 1 photo
+            </button>
+          </div>
+          
+          <!-- Curiosity Counter -->
+          <div class="curiosity-counter" id="curiosity-counter">
+            <div class="curiosity-status-row">
+              <div class="curiosity-status-item">
+                <span class="status-indicator completed"></span>
+                <span><strong data-i18n="counterBatch1Label">Batch 1:</strong> <span data-i18n="counterBatch1Status">Completed</span></span>
+              </div>
+              <div class="curiosity-separator"></div>
+              <div class="curiosity-status-item">
+                <span class="status-indicator pulse-green"></span>
+                <span><strong data-i18n="counterNextBatchLabel">Next batch:</strong> <span data-i18n="counterNextBatchStatus" style="color: #059669; font-weight: 700;">Seats open</span></span>
+              </div>
             </div>
-            <div class="stat-card">
-              <div class="stat-num" data-i18n="heroStat2Num">Pondicherry University</div>
-              <div class="stat-label" data-i18n="heroStat2Label">Dept. of Management Studies, seminar hall</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-num" data-i18n="heroStat3Num">₹5,099</div>
-              <div class="stat-label" data-i18n="heroStat3Label">all inclusive (including GST)</div>
+            <div class="curiosity-subline" data-i18n="counterSubline">
+              Show interest to book a seat.
             </div>
           </div>
         </div>
         
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <div class="hero-card-header-left">
-              <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd" style="width:40px; height:40px; border-radius:10px; object-fit:contain;" />
-              <div>
-                <strong class="hero-card-title" data-i18n="heroCardTitle">What you walk away with</strong>
-                <span class="hero-card-sub" data-i18n="heroCardSub">Not a pile of slides. Assets you can use on Monday.</span>
-              </div>
+        <!-- 1:1 Hero Photo Frame -->
+        <div class="hero-photo-container">
+          <div 
+            class="hero-photo-frame lightbox-trigger"
+            onclick="openLightbox('batch-1-graduates.jpg', 'El Curso Batch 1 participants at Pondicherry University')"
+            title="Click to view full photo"
+          >
+            <img 
+              src="batch-1-graduates.jpg" 
+              alt="El Curso Batch 1 participants at Pondicherry University" 
+              class="hero-photo-img"
+            />
+            <div class="lightbox-zoom-hint">
+              <svg style="width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:2.5;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span data-i18n="clickToEnlarge">Click to Zoom</span>
             </div>
-            <span class="hero-card-badge" data-i18n="heroCardBadge">6 Deliverables</span>
-          </div>
-          <ul class="assets-list">
-            <li class="asset-item">
-              <div class="asset-icon-box">01</div>
-              <div class="asset-content">
-                <span class="asset-title" data-i18n="asset1Title">Your offer, written so a stranger understands it</span>
-                <span class="asset-desc" data-i18n="asset1Desc">Clear commercial pitch with zero buzzwords</span>
-              </div>
-            </li>
-            <li class="asset-item">
-              <div class="asset-icon-box">02</div>
-              <div class="asset-content">
-                <span class="asset-title" data-i18n="asset2Title">A no-code payment page / payment link</span>
-                <span class="asset-desc" data-i18n="asset2Desc">Live checkout system ready to accept payments</span>
-              </div>
-            </li>
-            <li class="asset-item">
-              <div class="asset-icon-box">03</div>
-              <div class="asset-content">
-                <span class="asset-title" data-i18n="asset3Title">A WhatsApp pitch you can send the same week</span>
-                <span class="asset-desc" data-i18n="asset3Desc">Direct-response closing scripts for warm inquiries</span>
-              </div>
-            </li>
-            <li class="asset-item">
-              <div class="asset-icon-box">04</div>
-              <div class="asset-content">
-                <span class="asset-title" data-i18n="asset4Title">A short plan to keep the customer after the first payment</span>
-                <span class="asset-desc" data-i18n="asset4Desc">Retention blueprint to drive repeat business</span>
-              </div>
-            </li>
-            <li class="asset-item">
-              <div class="asset-icon-box">05</div>
-              <div class="asset-content">
-                <span class="asset-title" data-i18n-html="asset5Title">The book: <em>Digital Marketing for Non-Marketers</em></span>
-                <span class="asset-desc" data-i18n="asset5Desc">By Harish Vasudevan — reference handbook</span>
-              </div>
-            </li>
-            <li class="asset-item">
-              <div class="asset-icon-box">06</div>
-              <div class="asset-content">
-                <span class="asset-title" data-i18n="asset6Title">Certificate of participation</span>
-                <span class="asset-desc" data-i18n="asset6Desc">Official certification upon programme completion</span>
-              </div>
-            </li>
-          </ul>
-          <div class="hero-card-footer" data-i18n-html="heroCardFooter">
-            <span>Key Takeaway:</span> Tangible deliverables in hand by Day 3.
+            <div class="hero-photo-tag">
+              <span class="photo-tag-dot"></span>
+              <span data-i18n="heroPhotoBadge">El Curso Batch 1 · Pondicherry University</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1785,26 +1982,93 @@
     </div>
   </section>
 
-  <!-- YOUR CERTIFICATE PREVIEW SECTION -->
+  <!-- REAL CLASSROOM COHORT & CERTIFICATE SECTION -->
   <section id="certificate" class="certificate-section" style="background: var(--bg);">
     <div class="container">
       <div class="text-center" style="max-width: 760px; margin: 0 auto 36px;">
-        <div class="section-label" data-i18n="certLabel">YOUR CERTIFICATE</div>
-        <h2 class="section-title" data-i18n="certTitle">Your Certificate</h2>
-        <p class="section-sub" data-i18n="certSub">A certificate of participation will be provided upon successful completion of the programme.</p>
+        <div class="section-label" data-i18n="certLabel">CLASSROOM COHORT &amp; CERTIFICATION</div>
+        <h2 class="section-title" data-i18n="certTitle">Real Classroom Learning &amp; Official Certification</h2>
+        <p class="section-sub" data-i18n="certSub">An intensive 3-day practical programme delivered at Pondicherry University, culminating in recognized certificates of participation.</p>
       </div>
-      <div class="certificate-wrapper">
-        <div class="certificate-card">
-          <img 
-            src="/sample-certificate.jpg" 
-            alt="Sample certificate of participation for the Digital Marketing Foundation &amp; Practical Application Programme" 
-            class="certificate-image" 
-            draggable="false"
-            oncontextmenu="return false;"
-            loading="lazy"
-          />
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+        
+        <!-- Live Batch 1 Classroom Photo -->
+        <div style="background: white; border: 1px solid var(--border); border-radius: 16px; padding: 14px; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+          <div 
+            class="lightbox-trigger"
+            onclick="openLightbox('batch-1-graduates.jpg', 'Digital Marketing Foundation Programme – Batch 1 Cohort at Pondicherry University with Harish Vasudevan')"
+            style="border-radius: 10px; overflow: hidden; position: relative; background: #0B1D3A; aspect-ratio: 4/3;"
+            title="Click to view full-size photo"
+          >
+            <img 
+              src="batch-1-graduates.jpg" 
+              alt="Batch 1 Graduates at Pondicherry University Department of Management Studies" 
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block;"
+              loading="lazy"
+            />
+            <div class="lightbox-zoom-hint">
+              <svg style="width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:2.5;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Click to Zoom</span>
+            </div>
+            <div style="position: absolute; bottom: 8px; left: 8px; background: rgba(11,29,58,0.88); backdrop-filter: blur(8px); color: white; font-size: 0.72rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2);">
+              🎓 Batch 1 Cohort (Oct 2026)
+            </div>
+          </div>
+          <div style="padding: 14px 6px 4px; text-align: left;">
+            <strong style="color: var(--primary); font-size: 0.95rem; display: block;" data-i18n="cohortPhotoTitle">Pondicherry University Classroom Session</strong>
+            <span style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.4; display: block; margin-top: 3px;" data-i18n="cohortPhotoDesc">Participants with Course Leader Harish Vasudevan at Department of Management Studies.</span>
+          </div>
         </div>
+
+        <!-- Sample Certificate Card -->
+        <div style="background: white; border: 1px solid var(--border); border-radius: 16px; padding: 14px; box-shadow: var(--shadow); display: flex; flex-direction: column;">
+          <div 
+            class="lightbox-trigger"
+            onclick="openLightbox('/sample-certificate.jpg', 'Certificate of Participation – Digital Marketing Foundation Programme (Pondicherry University & CyberAd)')"
+            style="border-radius: 10px; overflow: hidden; position: relative; background: #F8FAFC; border: 1px solid #EDF2F7; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;"
+            title="Click to view full-size certificate"
+          >
+            <img 
+              src="/sample-certificate.jpg" 
+              alt="Sample certificate of participation for the Digital Marketing Foundation &amp; Practical Application Programme" 
+              style="width: 100%; height: 100%; object-fit: contain; display: block;"
+              draggable="false"
+              oncontextmenu="return false;"
+              loading="lazy"
+            />
+            <div class="lightbox-zoom-hint">
+              <svg style="width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:2.5;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              <span>Click to Zoom</span>
+            </div>
+          </div>
+          <div style="padding: 14px 6px 4px; text-align: left;">
+            <strong style="color: var(--primary); font-size: 0.95rem; display: block;" data-i18n="certCardTitle">Official Certificate of Participation</strong>
+            <span style="color: var(--text-muted); font-size: 0.82rem; line-height: 1.4; display: block; margin-top: 3px;" data-i18n="certCardDesc">Jointly issued upon successful completion by ACIC-PUSH, Pondicherry University &amp; CyberAd.</span>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Google Business Profile Review Callout -->
+      <div style="background: white; border: 1px solid var(--border); border-radius: 16px; padding: 18px 24px; box-shadow: var(--shadow); margin-top: 24px; max-width: 1000px; margin-left: auto; margin-right: auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #F8FAFC; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg style="width: 26px; height: 26px;" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+          </div>
+          <div>
+            <div style="font-size: 1rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
+              <span data-i18n="gbpSectionTitle">Google Business Profile Reviews</span>
+              <span style="color: #F59E0B; font-size: 0.95rem; letter-spacing: 1px;">★★★★★</span>
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin: 3px 0 0;" data-i18n="gbpSectionSub">Completed Batch 1? Share your feedback on Google and help future business owners decide.</p>
+          </div>
+        </div>
+        <a href="https://g.page/r/CctJ_MlMfCdREBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 10px 18px; font-size: 0.88rem; font-weight: 700; border-color: #1E6BFF; color: #1E6BFF; display: inline-flex; align-items: center; gap: 6px;" data-i18n="gbpReviewCta">
+          <svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          Write a Google Review →
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -1930,59 +2194,51 @@
         <!-- Lead Form -->
         <div class="lead-form-card">
           
-          <!-- SEATS SCARCITY BLOCK -->
-          <div class="seats-scarcity-block" id="seats-scarcity-block">
-            <div class="seats-header">
-              <div class="seats-badge">
-                <span class="seats-dot"></span>
-                <span id="seats-badge-text" data-i18n="seatsBadgeText">29 Sep, 30 Sep &amp; 1 Oct 2026 · 20 seats (English &amp; தமிழ்)</span>
+          <!-- BATCH STATUS BANNER / CURIOSITY COUNTER -->
+          <div class="seats-scarcity-block" id="seats-scarcity-block" style="padding: 16px 18px; margin-bottom: 20px;">
+            <div class="curiosity-status-row" style="justify-content: center; gap: 20px;">
+              <div class="curiosity-status-item" style="color: #FFFFFF;">
+                <span class="status-indicator completed"></span>
+                <span><strong data-i18n="counterBatch1Label" style="color: #FFFFFF;">Batch 1:</strong> <span data-i18n="counterBatch1Status">Completed</span></span>
               </div>
-              <div class="seats-status-pill" id="seats-status" aria-live="polite">
-                <!-- Status line updated automatically -->
+              <div class="curiosity-separator" style="background: rgba(255,255,255,0.2);"></div>
+              <div class="curiosity-status-item" style="color: #6EE7B7;">
+                <span class="status-indicator pulse-green"></span>
+                <span><strong data-i18n="counterNextBatchLabel" style="color: #6EE7B7;">Next batch:</strong> <span data-i18n="counterNextBatchStatus" style="color: #6EE7B7; font-weight: 700;">Seats open</span></span>
               </div>
             </div>
-
-            <!-- Visual 20-Seat Map Grid (4 rows x 5 columns) -->
-            <div class="seats-grid" id="seats-grid" aria-hidden="true">
-              <!-- Rendered via JavaScript -->
-            </div>
-
-            <div class="seats-footer">
-              <div class="seats-legend">
-                <span class="legend-item"><span class="legend-box legend-taken"></span> <span data-i18n="legendTaken">Taken</span></span>
-                <span class="legend-item"><span class="legend-box legend-available"></span> <span data-i18n="legendAvailable">Available</span></span>
-              </div>
-              <span class="seats-note" data-i18n="seatsNote">Seats fill as registrations are confirmed.</span>
+            <div style="text-align: center; margin-top: 10px; font-size: 0.85rem; color: #93C5FD; font-weight: 600; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 8px;" data-i18n="counterSubline">
+              Show interest to book a seat.
             </div>
           </div>
 
-          <!-- Direct Official Payment Option -->
+          <!-- Direct Official Booking / Interest Option -->
           <div style="background: rgba(30, 107, 255, 0.16); border: 1.5px solid rgba(147, 197, 253, 0.4); border-radius: 12px; padding: 16px; margin-bottom: 22px; text-align: center;">
-            <div style="color: #93C5FD; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;" data-i18n="directPayLabel">Ready to Register Directly?</div>
-            <div style="color: #FFFFFF; font-size: 1.15rem; font-weight: 800; margin-bottom: 12px;" data-i18n="directPayTitle">Official Programme Fee: ₹5,099 (incl. GST)</div>
-            <a href="https://rzp.io/rzp/Yq3VZOB" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; background: #1E6BFF; color: #FFFFFF; border: none; box-shadow: 0 4px 14px rgba(0,0,0,0.25);" data-i18n="heroPayBtn">
-              Pay ₹5,099 and reserve seat →
+            <div style="color: #93C5FD; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;" data-i18n="directPayLabel">Next Batch Coming Soon</div>
+            <div style="color: #FFFFFF; font-size: 1.15rem; font-weight: 800; margin-bottom: 12px;" data-i18n="directPayTitle">Batch 1 Completed · Next Batch Seats Open</div>
+            <a href="https://wa.me/918925693013?text=I%20want%20a%20seat%20in%20the%20next%20El%20Curso%20batch" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; background: #1E6BFF; color: #FFFFFF; border: none; box-shadow: 0 4px 14px rgba(0,0,0,0.25);" data-i18n="heroPrimaryBtn">
+              Show interest →
             </a>
             <div style="margin-top: 10px; font-size: 0.78rem; color: rgba(255,255,255,0.85); line-height: 1.4;" data-i18n="officialPaymentNoteLight">
-              🔒 Pay the official fee only on Razorpay. We never ask for UPI PIN or OTP on chat.
+              🔒 Show interest to receive priority notice and confirm your seat in the next batch.
             </div>
           </div>
 
           <div style="display: flex; align-items: center; gap: 12px; margin: 18px 0 16px;">
             <div style="flex: 1; height: 1px; background: rgba(255,255,255,0.15);"></div>
-            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;" data-i18n="orInquireText">Or submit an inquiry</span>
+            <span style="font-size: 0.8rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;" data-i18n="orInquireText">Or submit your waitlist inquiry</span>
             <div style="flex: 1; height: 1px; background: rgba(255,255,255,0.15);"></div>
           </div>
 
-          <h3 style="color:white;font-size:1.15rem;margin-bottom:6px;font-weight:700;" data-i18n="formTitle">Digital Marketing Foundation Programme Inquiry</h3>
+          <h3 style="color:white;font-size:1.15rem;margin-bottom:6px;font-weight:700;" data-i18n="formTitle">Next Batch Priority Waitlist Inquiry</h3>
           <p style="color:rgba(255,255,255,0.75);font-size:0.85rem;margin-bottom:18px;line-height:1.4;" data-i18n-html="formSub">
-            Submit your details below. <em>Please note: An inquiry is not a confirmation of a seat.</em>
+            Submit your details below to get notified first when the next cohort opens.
           </p>
           <form action="https://api.web3forms.com/submit" method="POST" id="lead-form">
             <!-- Web3Forms Config -->
             <input type="hidden" name="access_key" value="0ef05e24-2b04-437b-91dc-11a547022dad">
-            <input type="hidden" name="subject" value="New Inquiry – Digital Marketing Foundation Programme (cyberad.in)">
-            <input type="hidden" name="from_name" value="CyberAd - Foundation Programme Inquiry">
+            <input type="hidden" name="subject" value="New Waitlist Inquiry – Digital Marketing Foundation Programme (cyberad.in)">
+            <input type="hidden" name="from_name" value="CyberAd - Foundation Programme Waitlist">
             <input type="checkbox" name="botcheck" style="display:none;">
             
             <div class="form-group">
@@ -2004,7 +2260,7 @@
               </select>
             </div>
             <button type="submit" class="btn btn-white" style="width:100%;padding:14px;font-size:1rem;font-weight:700;" data-i18n="submitBtn">
-              Submit Inquiry →
+              Join Priority Waitlist →
             </button>
             <p style="margin-top:10px;font-size:0.75rem;color:rgba(255,255,255,0.75);text-align:center;line-height:1.4;" data-i18n-html="privacyNotice">
               We respect your privacy. By submitting, you agree to our <a href="/privacy" target="_blank" style="color:#93C5FD;text-decoration:underline;">Privacy Policy</a>. No spam, ever.
@@ -2092,7 +2348,11 @@
           </div>
           <a href="mailto:hello@cyberad.in">hello@cyberad.in</a>
           <a href="mailto:support@cyberad.in">support@cyberad.in</a>
-          <p style="font-size:0.80rem; color:#64748B; margin-top:6px;" data-i18n="footerLocation">Dept. of Management Studies, Pondicherry University, Puducherry – 605014</p>
+          <a href="https://g.page/r/CctJ_MlMfCdREBM/review" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none;">
+            <svg style="width: 15px; height: 15px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <span data-i18n="footerGbpLink">Review us on Google</span>
+          </a>
+          <p style="font-size:0.80rem; color:#64748B; margin-top:8px;" data-i18n="footerLocation">Dept. of Management Studies, Pondicherry University, Puducherry – 605014</p>
         </div>
 
         <!-- Col 4: Business & Legal -->
@@ -2135,32 +2395,33 @@
         bottomCtaTitle: "Not sure if this program is right for you?",
         bottomCtaSub: "Talk to us on WhatsApp.",
         bottomCtaBtn: "TALK TO US ON WHATSAPP →",
-        heroBadge: "<span>●</span> Cyberad.in programme · Conducted in English & தமிழ் · Pondicherry University",
-        heroTitle: "Your customers already look online.<br><span>Your marketing still isn’t.</span>",
-        heroSub: "A 3-day practical classroom programme at Pondicherry University for business owners and marketers who need more sales.",
-        heroCta: "Inquire Now →",
-        heroStat1Num: "3 days",
-        heroStat1Label: "11:00–16:00 (Bilingual: English & தமிழ்)",
-        heroStat2Num: "Pondicherry University",
-        heroStat2Label: "Dept. of Management Studies, seminar hall",
-        heroStat3Num: "₹5,099",
-        heroStat3Label: "all inclusive (including GST)",
-        heroCardTitle: "What you walk away with",
-        heroCardSub: "Not a pile of slides. Assets you can use on Monday.",
-        heroCardBadge: "6 Deliverables",
-        asset1Title: "Your offer, written so a stranger understands it",
-        asset1Desc: "Clear commercial pitch with zero buzzwords",
-        asset2Title: "A no-code payment page / payment link",
-        asset2Desc: "Live checkout system ready to accept payments",
-        asset3Title: "A WhatsApp pitch you can send the same week",
-        asset3Desc: "Direct-response closing scripts for warm inquiries",
-        asset4Title: "A short plan to keep the customer after the first payment",
-        asset4Desc: "Retention blueprint to drive repeat business",
-        asset5Title: "The book: <em>Digital Marketing for Non-Marketers</em>",
-        asset5Desc: "By Harish Vasudevan — reference handbook",
-        asset6Title: "Certificate of participation",
-        asset6Desc: "Official certification upon programme completion",
-        heroCardFooter: "<span>Key Takeaway:</span> Tangible deliverables in hand by Day 3.",
+        heroBadge: "<span>🎉</span> Batch 1 completed",
+        heroTitle: "El Curso",
+        heroSub: "A digital marketing course for beginners",
+        heroNote: "Batch 1 is successfully completed. Three days at Pondicherry University, by CyberAd.in with ACIC Push. Thank you to every participant. You made this programme real. The next batch is ready. If you want a seat, show your interest and we will confirm it.",
+        heroPrimaryBtn: "Show interest →",
+        heroSecondaryBtn: "View Batch 1 photo",
+        heroPhotoBadge: "<span style=\"width:7px; height:7px; border-radius:50%; background:#10B981; display:inline-block; box-shadow:0 0 6px #10B981;\"></span> El Curso Batch 1 · Pondicherry University",
+        celebrationHeading: "Thank You, Pondicherry!",
+        celebrationSub: "Batch 1 at Pondicherry University successfully completed",
+        counterBatch1Label: "Batch 1:",
+        counterBatch1Status: "Completed",
+        counterNextBatchLabel: "Next batch:",
+        counterNextBatchStatus: "Seats open",
+        counterSubline: "Show interest to book a seat.",
+        asset1Title: "New customer acquisition offer & system",
+        asset1Desc: "Commercial pitch crafted to turn complete strangers into paying clients",
+        asset2Title: "WhatsApp & inbound call handling scripts",
+        asset2Desc: "Direct-response closing scripts to convert inquiries and phone calls into sales",
+        asset3Title: "Live no-code payment link & checkout",
+        asset3Desc: "Working payment links ready to collect fees directly without a developer",
+        asset4Title: "Customer retention & repeat sales blueprint",
+        asset4Desc: "Action plan to keep customers buying repeatedly and increase lifetime value",
+        asset5Title: "Harish Vasudevan’s Book: <em>Digital Marketing for Non-Marketers</em>",
+        asset5Desc: "Comprehensive hardcopy reference handbook distributed to every participant",
+        asset6Title: "Official Certificate of Participation",
+        asset6Desc: "Recognized credentials awarded by Pondicherry University, ACIC-PUSH & CyberAd",
+        heroCardFooter: "<span>✨ Gratitude:</span> Thank you to all our wonderful participants & mentors!",
         problemLabel: "The Reality Check",
         problemTitle: "Most “digital marketing” does not grow the business",
         problemSub: "You post. You boost. You hire someone. The enquiry trickle stays the same. Nobody showed you the path from first glance to payment.",
@@ -2203,21 +2464,25 @@
         module5Desc: "One sale is not the business. The next one is.",
         outcomesLabel: "Outcome",
         outcomesTitle: "What “it worked” looks like on Monday",
-        outcome1Title: "Clear Customer Journey",
-        outcome1Desc: "You can explain how a stranger finds you and why they pay.",
-        outcome2Title: "Your Own Offer",
-        outcome2Desc: "You have an offer in your own words.",
-        outcome3Title: "Direct WhatsApp Pitch",
-        outcome3Desc: "You can send a WhatsApp pitch instead of “please share.”",
-        outcome4Title: "Live Payment Link",
-        outcome4Desc: "You have a link that takes money.",
-        outcome5Title: "Customer Retention Plan",
-        outcome5Desc: "You know one simple way to stay in the customer’s life after they pay.",
+        outcome1Title: "New Customer Acquisition Path",
+        outcome1Desc: "You can explain how a complete stranger finds you, trusts you, and becomes a paying customer.",
+        outcome2Title: "High-Converting Commercial Offer",
+        outcome2Desc: "You leave with a clear, premium offer written in simple language that strangers understand.",
+        outcome3Title: "WhatsApp & Call Closing System",
+        outcome3Desc: "You have ready-to-send WhatsApp pitches and phone scripts to handle inquiries with confidence.",
+        outcome4Title: "Live Payment Link & Checkout",
+        outcome4Desc: "You have a working payment page to collect fees directly without developer dependencies.",
+        outcome5Title: "Customer Retention & Repeat Sales Blueprint",
+        outcome5Desc: "You know proven, structured ways to keep existing customers buying repeatedly after their first payment.",
         outcomeSummary: "That is how a shop, a clinic, a coaching centre, a property business or a service firm — and the person responsible for its marketing — starts bringing in more of the right work.",
         outcomeTakeaway: "You will not walk out as a full-time media buyer. You will walk out able to run the first practical pieces yourself.",
-        certLabel: "YOUR CERTIFICATE",
-        certTitle: "Your Certificate",
-        certSub: "A certificate of participation will be provided upon successful completion of the programme.",
+        certLabel: "CLASSROOM COHORT & CERTIFICATION",
+        certTitle: "Real Classroom Learning & Official Certification",
+        certSub: "An intensive 3-day practical programme delivered at Pondicherry University, culminating in recognized certificates of participation.",
+        cohortPhotoTitle: "Pondicherry University Classroom Session",
+        cohortPhotoDesc: "Participants with Course Leader Harish Vasudevan at Department of Management Studies.",
+        certCardTitle: "Official Certificate of Participation",
+        certCardDesc: "Jointly issued upon successful completion by ACIC-PUSH, Pondicherry University & CyberAd.",
         scheduleLabel: "THE THREE DAYS",
         scheduleTitle: "Clear work. Then you take it home.",
         scheduleSub: "A focused 3-step practical progression across the classroom sessions.",
@@ -2258,19 +2523,19 @@
         faq8A: "The programme is conducted bilingually in English & Tamil (தமிழ் & English). Complex concepts are broken down into simple, practical business language with local examples so every participant can follow with ease.",
         faq9Q: "What this programme will not do",
         faq9A: "It will not promise overnight sales or a magic algorithm. It will not turn three days into a full-time media career. It will not replace the work you still have to do with your own customers after you leave.",
-        ctaTitle: "If you have a business and zero clarity with digital marketing — inquire now.",
-        ctaIntro: "For owners, marketing managers, and anyone in marketing whose real job is more sales. Not another pile of notes. A working starting system.",
-        seatsBadgeText: "29 Sep, 30 Sep & 1 Oct 2026 · 20 seats (English & தமிழ்)",
+        ctaTitle: "Want to transform your business digital marketing? Join the next batch waitlist.",
+        ctaIntro: "For owners, marketing managers, and anyone in marketing whose real job is more sales. Register to receive priority notice when the next dates are announced.",
+        seatsBadgeText: "Batch 1 Completed · Priority Waitlist Open for Batch 2",
         legendTaken: "Taken",
         legendAvailable: "Available",
-        seatsNote: "Seats fill as registrations are confirmed.",
-        seatsAllAvailable: "All 20 seats available (0 taken)",
-        seatsTakenFmt: "{booked} of 20 taken • {left} seats left",
-        seatsUrgentFmt: "{booked} of 20 taken • Only {left} seat{plural} left",
-        seatsFull: "Batch Full (20/20 seats taken)",
-        seatsClosedBtn: "Batch Full — Inquiries Closed",
-        formTitle: "Digital Marketing Foundation Programme Inquiry",
-        formSub: "Submit your details below. <em>Please note: An inquiry is not a confirmation of a seat.</em>",
+        seatsNote: "Waitlist entries are queued on first-come, first-served basis.",
+        seatsAllAvailable: "Priority waitlist open for next batch",
+        seatsTakenFmt: "Batch 1 Completed · Priority Waitlist Open",
+        seatsUrgentFmt: "Batch 1 Completed · Priority Waitlist Open",
+        seatsFull: "Batch 1 Completed Successfully",
+        seatsClosedBtn: "Join Priority Waitlist Below",
+        formTitle: "Next Batch Priority Waitlist Inquiry",
+        formSub: "Submit your details below to get notified first when the next cohort opens.",
         placeholderName: "Your Full Name *",
         placeholderEmail: "Email Address *",
         placeholderPhone: "WhatsApp / Phone Number *",
@@ -2279,11 +2544,11 @@
         optManager: "Marketing Manager",
         optHandler: "Handling Marketing in a Business",
         optExploring: "Just Exploring",
-        submitBtn: "Submit Inquiry →",
+        submitBtn: "Join Priority Waitlist →",
         submittingBtn: "Submitting...",
         privacyNotice: "We respect your privacy. By submitting, you agree to our <a href=\"/privacy\" target=\"_blank\" style=\"color:#93C5FD;text-decoration:underline;\">Privacy Policy</a>. No spam, ever.",
-        formStatusSending: "Sending your inquiry...",
-        formStatusSuccess: "✓ Thank you! Inquiry received. We will contact you with seat confirmation shortly.",
+        formStatusSending: "Sending your waitlist registration...",
+        formStatusSuccess: "✓ Thank you! Waitlist entry received. We will notify you first when the next batch is announced.",
         inclusionsTitle: "Everything You Need, Taken Care Of",
         inclusionsDesc: "Your three-day classroom learning experience (29, 30 September and 1 October 2026, 11:00–16:00) at Pondicherry University includes a participant learning kit with a notepad, pen and water bottle, course materials, and the book <em>Digital Marketing for Non-Marketers</em> by Harish Vasudevan. You’ll also receive continued online access through Google Classroom.",
         badgeKit: "Participant Learning Kit",
@@ -2291,7 +2556,7 @@
         badgeClassroom: "Google Classroom Access",
         directAssistTitle: "Prefer direct assistance or have questions?",
         directAssistBtn: "Email: hello@cyberad.in",
-        directAssistNext: "Next step: Submit the inquiry form and wait for seat confirmation from our team before travel or payment.",
+        directAssistNext: "Next step: Submit the waitlist form and our team will contact you with batch dates and registration details.",
         footerBrandText: "Delivered in association with ACIC-PUSH and Cyber Enterprises, at the Department of Management Studies, Pondicherry University.",
         footerCourseText: "3-Day Practical Classroom Programme",
         footerColProg: "Programme",
@@ -2300,13 +2565,19 @@
         footerLocation: "Dept. of Management Studies, Pondicherry University, Puducherry – 605014",
         footerPrivacy: "Privacy Policy",
         footerRights: "© 2026 CyberAd.in / Cyber Enterprises. All rights reserved. • <a href=\"/privacy\" style=\"color:#93C5FD;text-decoration:underline;\">Privacy Policy</a>",
-        heroPayBtn: "Pay ₹5,099 and reserve seat →",
-        payReserveBtn: "Pay ₹5,099 and reserve seat →",
-        directPayLabel: "Ready to Register Directly?",
-        directPayTitle: "Official Programme Fee: ₹5,099 (incl. GST)",
-        officialPaymentNote: "<svg style=\"width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;\" viewBox=\"0 0 24 24\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg><span>Pay the official fee only on Razorpay. We never ask for UPI PIN or OTP on chat.</span>",
-        officialPaymentNoteLight: "🔒 Pay the official fee only on Razorpay. We never ask for UPI PIN or OTP on chat.",
-        orInquireText: "Or submit an inquiry"
+        heroPayBtn: "Join Next Batch Waitlist →",
+        payReserveBtn: "Join Next Batch Waitlist →",
+        directPayLabel: "Next Batch Coming Soon",
+        directPayTitle: "Batch 1 Completed · Join Priority Waitlist",
+        officialPaymentNote: "<svg style=\"width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;\" viewBox=\"0 0 24 24\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg><span>Register below to get early notification and priority booking for the next cohort.</span>",
+        officialPaymentNoteLight: "🔒 Next batch dates will be announced soon. Join waitlist for priority access.",
+        orInquireText: "Or submit your waitlist inquiry",
+        gbpHeroSub: "Share your class experience on Google",
+        gbpReviewBtn: "Review on Google →",
+        gbpSectionTitle: "Google Business Profile Reviews",
+        gbpSectionSub: "Completed Batch 1? Share your feedback on Google and help future business owners decide.",
+        gbpReviewCta: "Write a Google Review →",
+        footerGbpLink: "Review us on Google (GBP)"
       },
       ta: {
         pageTitle: "டிஜிட்டல் மார்க்கெட்டிங் அடிப்படை பயிற்சி | CyberAd.in",
@@ -2319,32 +2590,33 @@
         bottomCtaTitle: "இந்தப் பயிற்சி உங்களுக்குப் பொருந்துமா என்று தெரியவில்லையா?",
         bottomCtaSub: "எங்களுடன் வாட்ஸ்அப்பில் பேசுங்கள்.",
         bottomCtaBtn: "வாட்ஸ்அப்பில் பேசவும் →",
-        heroBadge: "<span>●</span> Cyberad.in பயிற்சி திட்டம் · தமிழ் & ஆங்கிலத்தில் நடைபெறும் · பாண்டிச்சேரி பல்கலைக்கழகம்",
-        heroTitle: "உங்கள் வாடிக்கையாளர்கள் ஆன்லைனில் தேடுகிறார்கள்.<br><span>உங்கள் மார்க்கெட்டிங் இன்னும் தயாராகவில்லையா?</span>",
-        heroSub: "அதிக விற்பனை மற்றும் வருவாயை விரும்பும் தொழில் உரிமையாளர்கள் மற்றும் மார்க்கெட்டிங் மேலாளர்களுக்கான 3 நாள் நேரடி வகுப்பறைப் பயிற்சி.",
-        heroCta: "இப்போதே விண்ணப்பிக்கவும் →",
-        heroStat1Num: "3 நாட்கள்",
-        heroStat1Label: "காலை 11:00–மாலை 4:00 (இருமொழி: தமிழ் & English)",
-        heroStat2Num: "பாண்டிச்சேரி பல்கலைக்கழகம்",
-        heroStat2Label: "மேலாண்மை ஆய்வுகள் துறை, கருத்தரங்கு அரங்கம்",
-        heroStat3Num: "₹5,099",
-        heroStat3Label: "அனைத்து வரிகளும் அடங்கும் (GST உட்பட)",
-        heroCardTitle: "பயிற்சியின் முடிவில் நீங்கள் பெற்றுச் செல்பவை",
-        heroCardSub: "வெறும் ஸ்லைடுகள் அல்ல. திங்கட்கிழமை முதல் தொழிலில் பயன்படுத்தக்கூடிய 6 நேரடி அமைப்புகள்.",
-        heroCardBadge: "6 நடைமுறை ஆவணங்கள்",
-        asset1Title: "புதிய நபரும் எளிதில் புரிந்துகொள்ளும் உங்கள் வணிக சலுகை (Offer)",
-        asset1Desc: "குழப்பமான வார்த்தைகள் இன்றி தெளிவான வணிக விளக்கம்",
-        asset2Title: "நோ-கோட் (No-code) கட்டணப் பக்கம் / பேமென்ட் லிங்க்",
-        asset2Desc: "வாடிக்கையாளர்களிடம் இருந்து பணத்தைப் பெற உடனடியாக இயங்கும் முறை",
-        asset3Title: "அதே வாரத்தில் வாடிக்கையாளர்களுக்கு அனுப்பக்கூடிய வாட்ஸ்அப் விற்பனை உரை",
-        asset3Desc: "விசாரணைகளை நேரடி விற்பனையாக மாற்றும் வாட்ஸ்அப் ஸ்கிரிப்ட்",
-        asset4Title: "முதல் முறை வாங்கிய வாடிக்கையாளரைத் தொடர்ந்து தக்கவைக்கும் திட்டம்",
-        asset4Desc: "மீண்டும் மீண்டும் விற்பனையை உருவாக்கும் வாடிக்கையாளர் தக்கவைப்பு உத்தி",
-        asset5Title: "டிஜிட்டல் மார்க்கெட்டிங் புத்தகம்: <em>Digital Marketing for Non-Marketers</em>",
-        asset5Desc: "Book by Harish Vasudevan — reference handbook",
-        asset6Title: "பங்கேற்புச் சான்றிதழ் (Certificate of Participation)",
-        asset6Desc: "பயிற்சியை வெற்றிகரமாக முடித்ததற்கான அதிகாரப்பூர்வ சான்றிதழ்",
-        heroCardFooter: "<span>முக்கிய பயன்:</span> 3-வது நாளின் முடிவில் இவை அனைத்தும் உங்கள் கைகளில் தயாராக இருக்கும்.",
+        heroBadge: "<span>🎉</span> முதல் பேட்ச் நிறைவடைந்தது",
+        heroTitle: "El Curso",
+        heroSub: "ஆரம்பநிலையாளர்களுக்கான டிஜிட்டல் மார்க்கெட்டிங் நேரடிப் பயிற்சி",
+        heroNote: "முதல் பேட்ச் வெற்றிகரமாக நிறைவடைந்தது. பாண்டிச்சேரி பல்கலைக்கழகத்தில் CyberAd.in மற்றும் ACIC Push இணைந்து நடத்திய 3 நாள் நேரடிப் பயிற்சி. கலந்து கொண்ட ஒவ்வொரு பங்கேற்பாளருக்கும் மனமார்ந்த நன்றிகள். அடுத்த பேட்ச் தயாராக உள்ளது. உங்களுக்கான இடத்தை முன்பதிவு செய்ய உங்கள் விருப்பத்தை தெரிவியுங்கள், நாங்கள் உறுதி செய்கிறோம்.",
+        heroPrimaryBtn: "விருப்பத்தை தெரிவிக்க →",
+        heroSecondaryBtn: "முதல் பேட்ச் புகைப்படத்தைப் பார்க்க",
+        heroPhotoBadge: "<span style=\"width:7px; height:7px; border-radius:50%; background:#10B981; display:inline-block; box-shadow:0 0 6px #10B981;\"></span> El Curso முதல் பேட்ச் · பாண்டிச்சேரி பல்கலைக்கழகம்",
+        celebrationHeading: "நன்றி, பாண்டிச்சேரி!",
+        celebrationSub: "பாண்டிச்சேரி பல்கலைக்கழக முதல் பேட்ச் வெற்றிகரமாக நிறைவு",
+        counterBatch1Label: "முதல் பேட்ச்:",
+        counterBatch1Status: "நிறைவடைந்தது",
+        counterNextBatchLabel: "அடுத்த பேட்ச்:",
+        counterNextBatchStatus: "இடங்கள் திறக்கப்பட்டுள்ளன",
+        counterSubline: "முன்பதிவு செய்ய உங்கள் ஆர்வத்தை வெளிப்படுத்துங்கள்.",
+        asset1Title: "புதிய வாடிக்கையாளர்களை ஈர்க்கும் சலுகை & அமைப்பு",
+        asset1Desc: "புதிய நபர்களை பணம் செலுத்தும் வாடிக்கையாளர்களாக மாற்றும் நேரடி வணிக சலுகை",
+        asset2Title: "வாட்ஸ்அப் & கால் ஹேண்ட்லிங் உரைகள்",
+        asset2Desc: "விசாரணைகளையும் அழைப்புகளையும் நேரடி விற்பனையாக மாற்றும் வாட்ஸ்அப் & கால் ஸ்கிரிப்ட்கள்",
+        asset3Title: "நோ-கோட் நேரடி கட்டண அமைப்பு & பேமென்ட் லிங்க்",
+        asset3Desc: "டெவலப்பர் இன்றி உடனடியாக பணம் வசூலிக்கும் நேரடி பேமென்ட் லிங்க்",
+        asset4Title: "வாடிக்கையாளர் தக்கவைப்பு & தொடர் விற்பனைத் திட்டம்",
+        asset4Desc: "வாடிக்கையாளர்களைத் தொடர்ந்து தக்கவைத்து மீண்டும் மீண்டும் விற்பனையை உருவாக்கும் உத்தி",
+        asset5Title: "ஹரிஷ் வாசுதேவன் அவர்களின் புத்தகம்: <em>Digital Marketing for Non-Marketers</em>",
+        asset5Desc: "அனைத்து பங்கேற்பாளர்களுக்கும் வழங்கப்பட்ட அச்சிடப்பட்ட முழுமையான குறிப்பேடு புத்தகம்",
+        asset6Title: "அதிகாரப்பூர்வ பங்கேற்புச் சான்றிதழ்",
+        asset6Desc: "பாண்டிச்சேரி பல்கலைக்கழகம், ACIC-PUSH & CyberAd வழங்கிய அதிகாரப்பூர்வ சான்றிதழ்",
+        heroCardFooter: "<span>✨ மனமார்ந்த நன்றி:</span> அனைத்து பங்கேற்பாளர்களுக்கும் வழிகாட்டிகளுக்கும் எங்கள் நெஞ்சார்ந்த நன்றிகள்!",
         problemLabel: "உண்மை நிலை",
         problemTitle: "பெரும்பாலான “டிஜிட்டல் மார்க்கெட்டிங்” ஏன் வணிகத்தை வளர்ப்பதில்லை?",
         problemSub: "நீங்கள் போஸ்ட் போடுகிறீர்கள், பூஸ்ட் செய்கிறீர்கள், ஆட்களை நியமிக்கிறீர்கள். ஆனால் வணிக விசாரணைகள் மாறுவதே இல்லை. பார்வையாளரை எப்படி பணம் செலுத்தும் வாடிக்கையாளராக மாற்றுவது என்ற தெளிவு பலருக்கு இருப்பதில்லை.",
@@ -2387,21 +2659,25 @@
         module5Desc: "ஒரு முறை விற்பது மட்டும் தொழில் அல்ல. அடுத்தடுத்த விற்பனைகளே உண்மையான வணிக வளர்ச்சி.",
         outcomesLabel: "வெற்றி முடிவுகள்",
         outcomesTitle: "திங்கட்கிழமை முதல் உங்கள் வணிகத்தில் செயல்படும் 5 முடிவுகள்",
-        outcome1Title: "தெளிவான வாடிக்கையாளர் பயணம்",
-        outcome1Desc: "புதிய நபர் உங்களை எப்படிக் கண்டறிகிறார் மற்றும் ஏன் பணம் செலுத்துகிறார் என்பதை உங்களால் தெளிவாக விளக்க முடியும்.",
-        outcome2Title: "உங்கள் சொந்த வணிக சலுகை (Offer)",
-        outcome2Desc: "உங்கள் சொந்த வார்த்தைகளில் உருவாக்கப்பட்ட தெளிவான வணிக சலுகை.",
-        outcome3Title: "நேரடி வாட்ஸ்அப் விற்பனை உரை (Pitch)",
-        outcome3Desc: "வெறும் \"ஷேர் பண்ணுங்க\" என்று கூறாமல், வாடிக்கையாளர்களை வாங்குவதற்குத் தூண்டும் வாட்ஸ்அப் உரை.",
-        outcome4Title: "நேரடி கட்டண இணைப்பு (Payment Link)",
-        outcome4Desc: "பணத்தை உடனடியாகப் பெறக்கூடிய இயங்கும் பேமென்ட் லிங்க்.",
-        outcome5Title: "வாடிக்கையாளர் தக்கவைப்புத் திட்டம்",
-        outcome5Desc: "வாடிக்கையாளர் பணம் செலுத்திய பிறகு அவருடன் தொடர்பில் இருப்பதற்கான ஒரு எளிய உத்தி.",
+        outcome1Title: "புதிய வாடிக்கையாளர் சேர்க்கைப் பாதை",
+        outcome1Desc: "புதிய நபர் உங்களை எப்படிக் கண்டறிகிறார், நம்புகிறார் மற்றும் ஏன் பணம் செலுத்துகிறார் என்பதை தெளிவாக விளக்க முடியும்.",
+        outcome2Title: "அதிக விற்பனையைத் தரும் வணிக சலுகை (Offer)",
+        outcome2Desc: "வாடிக்கையாளர் உடனடியாகப் புரிந்துகொள்ளும் உங்கள் சொந்த வணிக சலுகை.",
+        outcome3Title: "வாட்ஸ்அப் & கால் விற்பனை உரைகள் (Closing Script)",
+        outcome3Desc: "விசாரணைகளையும் அழைப்புகளையும் தயக்கமின்றி விற்பனையாக மாற்றும் வாட்ஸ்அப் மற்றும் போன் கால் உரைகள்.",
+        outcome4Title: "நேரடி கட்டண இணைப்பு & செக்அவுட் (Live Payment Link)",
+        outcome4Desc: "டெவலப்பர் இன்றி பணத்தை உடனடியாகப் பெறக்கூடிய இயங்கும் நேரடி பேமென்ட் லிங்க்.",
+        outcome5Title: "வாடிக்கையாளர் தக்கவைப்பு & தொடர் விற்பனைத் திட்டம்",
+        outcome5Desc: "வாடிக்கையாளர் முதல் முறை வாங்கிய பின்னரும் அவருடன் தொடர்பில் இருந்து மீண்டும் மீண்டும் வாங்க வைக்கும் உத்தி.",
         outcomeSummary: "கடைகள், கிளினிக்குகள், பயிற்சி மையங்கள், ரியல் எஸ்டேட் மற்றும் சேவை நிறுவனங்கள் தங்கள் வணிகத்தை சரியான பாதையில் கொண்டுசெல்லும் விதம் இதுவே.",
         outcomeTakeaway: "நீங்கள் ஒரு முழு நேர விளம்பர நிபுணராக மாறமாட்டீர்கள். ஆனால் முதல் நடைமுறைப் படிகளை சுயமாக வெற்றிகரமாக இயக்கும் திறன் பெறுவீர்கள்.",
-        certLabel: "சான்றிதழ்",
-        certTitle: "உங்கள் பங்கேற்புச் சான்றிதழ்",
-        certSub: "பயிற்சியை வெற்றிகரமாக முடித்தவுடன் அதிகாரப்பூர்வ பங்கேற்புச் சான்றிதழ் வழங்கப்படும்.",
+        certLabel: "வகுப்பறைப் பயிற்சி & சான்றிதழ்",
+        certTitle: "நேரடி வகுப்பறைப் பயிற்சி & அதிகாரப்பூர்வ சான்றிதழ்",
+        certSub: "பாண்டிச்சேரி பல்கலைக்கழகத்தில் நடைபெற்ற 3 நாள் தீவிர நேரடிப் பயிற்சி மற்றும் பங்கேற்பாளர்களுக்கு வழங்கப்பட்ட சான்றிதழ்கள்.",
+        cohortPhotoTitle: "பாண்டிச்சேரி பல்கலைக்கழக வகுப்பறைப் பயிற்சி",
+        cohortPhotoDesc: "மேலாண்மை ஆய்வுகள் துறையில் பயிற்சியாளர் ஹரிஷ் வாசுதேவன் அவர்களுடன் பங்கேற்பாளர்கள்.",
+        certCardTitle: "அதிகாரப்பூர்வ பங்கேற்புச் சான்றிதழ்",
+        certCardDesc: "பாண்டிச்சேரி பல்கலைக்கழகம், ACIC-PUSH மற்றும் CyberAd இணைந்து வழங்கும் அதிகாரப்பூர்வ சான்றிதழ்.",
         scheduleLabel: "3 நாள் பயிற்சி பயணம்",
         scheduleTitle: "தெளிவான நடைமுறைப் பயிற்சி. அதை உங்கள் வணிகத்தில் உடனே செயல்படுத்துங்கள்.",
         scheduleSub: "வகுப்பறை அமர்வுகளில் 3 படிகளில் நிகழும் நடைமுறை முன்னேற்றம்.",
@@ -2442,19 +2718,19 @@
         faq8A: "இந்தப் பயிற்சி தமிழ் மற்றும் ஆங்கிலம் (தமிழ் & English) ஆகிய இரு மொழிகளிலும் நடத்தப்படும். கடினமான கோட்பாடுகள் இன்றி, அனைவரும் எளிதில் புரிந்துகொள்ளும் வகையில் உள்ளூர் வணிக உதாரணங்களுடன் தெளிவாக விளக்கப்படும்.",
         faq9Q: "இந்தப் பயிற்சி எதைச் செய்யாது?",
         faq9A: "ஒரே இரவில் மாயாஜால விற்பனையையோ மேஜிக் அல்காரிதத்தையோ இது உறுதியளிக்காது. 3 நாட்களில் வாழ்நாள் மீடியா வாழ்க்கையைத் தராது. பயிற்சியின் பின்னர் நீங்கள் செய்ய வேண்டிய களப்பணியை இது மாற்றாது.",
-        ctaTitle: "உங்களிடம் ஒரு வணிகம் இருந்து, டிஜிட்டல் மார்க்கெட்டிங்கில் தெளிவு இல்லையெனில் — உடனே விண்ணப்பியுங்கள்.",
-        ctaIntro: "வணிக உரிமையாளர்கள், மார்க்கெட்டிங் மேலாளர்கள் மற்றும் விற்பனையை உயர்த்த வேண்டியவர்களுக்கான நேரடி ஆரம்ப அமைப்பு.",
-        seatsBadgeText: "29 Sep, 30 Sep & 1 Oct 2026 · 20 இடங்கள் மட்டுமே (தமிழ் & English)",
+        ctaTitle: "உங்கள் வணிக மார்க்கெட்டிங்கை மாற்ற விரும்புகிறீர்களா? அடுத்த பேட்ச் காத்திருப்போர் பட்டியலில் இணையுங்கள்.",
+        ctaIntro: "வணிக உரிமையாளர்கள், மார்க்கெட்டிங் மேலாளர்கள் மற்றும் விற்பனையை உயர்த்த வேண்டியவர்களுக்கான நேரடி ஆரம்ப அமைப்பு. அடுத்த பேட்ச் தேதிகளை முதலில் பெற இன்றே இணையுங்கள்.",
+        seatsBadgeText: "முதல் பேட்ச் நிறைவு · அடுத்த பேட்சிற்கான காத்திருப்போர் பட்டியல்",
         legendTaken: "நிரப்பப்பட்டது",
         legendAvailable: "இருப்பில் உள்ளது",
-        seatsNote: "பதிவுகள் உறுதி செய்யப்படும் போது இருக்கைகள் நிரப்பப்படும்.",
-        seatsAllAvailable: "அனைத்து 20 இருக்கைகளும் இருப்பில் உள்ளன (0 நிரப்பப்பட்டது)",
-        seatsTakenFmt: "{booked} / 20 நிரப்பப்பட்டது • {left} இருக்கைகள் மீதமுள்ளன",
-        seatsUrgentFmt: "{booked} / 20 நிரப்பப்பட்டது • இன்னும் {left} இருக்கை மட்டுமே மீதம் உள்ளது",
-        seatsFull: "வகுப்பு முழுமையாக நிரம்பியது (20/20 இருக்கைகள்)",
-        seatsClosedBtn: "வகுப்பு நிரம்பியது — சேர்க்கை முடிந்தது",
-        formTitle: "டிஜிட்டல் மார்க்கெட்டிங் அடிப்படை பயிற்சி சேர்க்கை விசாரணை",
-        formSub: "உங்கள் விவரங்களை கீழே உள்ளிடவும். <em>குறிப்பு: விசாரணை செய்வது மட்டுமே இருக்கைக்கான உறுதிப்படுத்தல் அல்ல.</em>",
+        seatsNote: "காத்திருப்போர் பட்டியல் பதிவுகளுக்கு முன்னுரிமை அடிப்படையில் சேர்க்கை வழங்கப்படும்.",
+        seatsAllAvailable: "அடுத்த பேட்சிற்கான முன்னுரிமைப் பதிவு திறக்கப்பட்டுள்ளது",
+        seatsTakenFmt: "முதல் பேட்ச் வெற்றிகரமாக நிறைவடைந்தது · காத்திருப்போர் பட்டியல்",
+        seatsUrgentFmt: "முதல் பேட்ச் வெற்றிகரமாக நிறைவடைந்தது · காத்திருப்போர் பட்டியல்",
+        seatsFull: "முதல் பேட்ச் வெற்றிகரமாக நிறைவடைந்தது",
+        seatsClosedBtn: "கீழே காத்திருப்போர் பட்டியலில் இணையுங்கள்",
+        formTitle: "அடுத்த பேட்ச் முன்னுரிமை காத்திருப்போர் பட்டியல்",
+        formSub: "அடுத்த பேட்ச் தேதிகள் அறிவிக்கப்படும் போது முன்னுரிமை தகவலைப் பெற உங்கள் விவரங்களை கீழே உள்ளிடவும்.",
         placeholderName: "உங்கள் முழு பெயர் *",
         placeholderEmail: "மின்னஞ்சல் முகவரி *",
         placeholderPhone: "வாட்ஸ்அப் / தொலைபேசி எண் *",
@@ -2463,11 +2739,11 @@
         optManager: "சந்தைப்படுத்தல் மேலாளர் (Marketing Manager)",
         optHandler: "வணிகத்தில் மார்க்கெட்டிங் பொறுப்பாளர் (Handling Marketing)",
         optExploring: "விவரம் அறிய விரும்புகிறேன் (Just Exploring)",
-        submitBtn: "விண்ணப்பத்தை சமர்ப்பிக்கவும் →",
+        submitBtn: "முன்னுரிமை பட்டியலில் இணையுங்கள் →",
         submittingBtn: "சமர்ப்பிக்கப்படுகிறது...",
         privacyNotice: "உங்கள் தனியுரிமையை மதிக்கிறோம். சமர்ப்பிப்பதன் மூலம் எங்கள் <a href=\"/privacy\" target=\"_blank\" style=\"color:#93C5FD;text-decoration:underline;\">தனியுரிமைக் கொள்கையை</a> ஏற்கிறீர்கள். தேவையற்ற செய்திகள் ஒருபோதும் அனுப்பப்படாது.",
-        formStatusSending: "உங்கள் விண்ணப்பம் அனுப்பப்படுகிறது...",
-        formStatusSuccess: "✓ நன்றி! உங்கள் விண்ணப்பம் பெறப்பட்டது. இருக்கை உறுதிப்படுத்தலுடன் விரைவில் உங்களைத் தொடர்பு கொள்வோம்.",
+        formStatusSending: "உங்கள் பதிவு அனுப்பப்படுகிறது...",
+        formStatusSuccess: "✓ நன்றி! உங்கள் பதிவு பெறப்பட்டது. அடுத்த பேட்ச் அறிவிக்கப்பட்டவுடன் உங்களுக்கு முன்னுரிமை தகவல் அனுப்பப்படும்.",
         inclusionsTitle: "உங்களுக்குத் தேவையான அனைத்தும் இதில் அடங்கும்",
         inclusionsDesc: "பாண்டிச்சேரி பல்கலைக்கழகத்தில் நடைபெறும் உங்கள் 3 நாள் வகுப்பறைப் பயிற்சியில் (29, 30 செப் மற்றும் 1 அக் 2026, 11:00–16:00) நோட்பேட், பேனா மற்றும் தண்ணீர் பாட்டில் அடங்கிய Participant Learning Kit, பாடப் பொருட்கள் மற்றும் Harish Vasudevan எழுதிய \"Digital Marketing for Non-Marketers\" புத்தகம் ஆகியவை அடங்கும். மேலும் Google Classroom தொடர் ஆன்லைன் அணுகலையும் பெறுவீர்கள்.",
         badgeKit: "Participant Learning Kit",
@@ -2475,7 +2751,7 @@
         badgeClassroom: "Google Classroom Access",
         directAssistTitle: "நேரடி உதவி தேவையா அல்லது சந்தேகங்கள் உள்ளதா?",
         directAssistBtn: "மின்னஞ்சல்: hello@cyberad.in",
-        directAssistNext: "அடுத்த படி: படிவத்தை சமர்ப்பித்து, பணம் செலுத்துவதற்கு முன் எங்கள் குழுவிடமிருந்து இருக்கை உறுதிப்படுத்தலுக்காக காத்திருக்கவும்.",
+        directAssistNext: "அடுத்த படி: காத்திருப்போர் படிவத்தை சமர்ப்பிக்கவும், அடுத்த பேட்ச் தேதிகளுடன் எங்கள் குழு உங்களைத் தொடர்பு கொள்ளும்.",
         footerBrandText: "பாண்டிச்சேரி பல்கலைக்கழக மேலாண்மை ஆய்வுகள் துறையில், ACIC-PUSH மற்றும் Cyber Enterprises உடன் இணைந்து வழங்கப்படுகிறது.",
         footerCourseText: "3 நாள் நேரடி வகுப்பறைப் பயிற்சி",
         footerColProg: "பயிற்சி திட்டம்",
@@ -2484,13 +2760,19 @@
         footerLocation: "மேலாண்மை ஆய்வுகள் துறை, பாண்டிச்சேரி பல்கலைக்கழகம், புதுச்சேரி – 605014",
         footerPrivacy: "தனியுரிமைக் கொள்கை",
         footerRights: "© 2026 CyberAd.in / Cyber Enterprises. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. • <a href=\"/privacy\" style=\"color:#93C5FD;text-decoration:underline;\">தனியுரிமைக் கொள்கை</a>",
-        heroPayBtn: "₹5,099 செலுத்தி இருக்கையை முன்பதிவு செய்யவும் →",
-        payReserveBtn: "₹5,099 செலுத்தி இருக்கையை முன்பதிவு செய்யவும் →",
-        directPayLabel: "நேரடியாக முன்பதிவு செய்ய விரும்புகிறீர்களா?",
-        directPayTitle: "அதிகாரப்பூர்வ பயிற்சிக் கட்டணம்: ₹5,099 (GST உட்பட)",
-        officialPaymentNote: "<svg style=\"width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;\" viewBox=\"0 0 24 24\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg><span>அதிகாரப்பூர்வ கட்டணத்தை Razorpay வழியாக மட்டுமே செலுத்தவும். வாட்ஸ்அப் அல்லது சாட்டில் UPI PIN அல்லது OTP-ஐ நாங்கள் ஒருபோதும் கேட்க மாட்டோம்.</span>",
-        officialPaymentNoteLight: "🔒 அதிகாரப்பூர்வ கட்டணத்தை Razorpay வழியாக மட்டுமே செலுத்தவும். வாட்ஸ்அப் அல்லது சாட்டில் UPI PIN அல்லது OTP-ஐ நாங்கள் ஒருபோதும் கேட்க மாட்டோம்.",
-        orInquireText: "அல்லது உங்கள் விசாரணையை சமர்ப்பிக்கவும்"
+        heroPayBtn: "அடுத்த பேட்ச் காத்திருப்போர் பட்டியல் →",
+        payReserveBtn: "அடுத்த பேட்ச் காத்திருப்போர் பட்டியல் →",
+        directPayLabel: "அடுத்த பேட்ச் விரைவில் தொடங்குகிறது",
+        directPayTitle: "முதல் பேட்ச் நிறைவு · அடுத்த பேட்ச் காத்திருப்போர் பட்டியல்",
+        officialPaymentNote: "<svg style=\"width:16px;height:16px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;\" viewBox=\"0 0 24 24\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg><span>அடுத்த பேட்சில் முன்னுரிமை சேர்க்கை பெற கீழே உங்கள் விவரங்களைப் பதிவு செய்யவும்.</span>",
+        officialPaymentNoteLight: "🔒 அடுத்த பேட்ச் தேதிகள் விரைவில் அறிவிக்கப்படும். முன்னுரிமை பெற காத்திருப்போர் பட்டியலில் இணையுங்கள்.",
+        orInquireText: "அல்லது உங்கள் தகவல்களை கீழே உள்ளிடவும்",
+        gbpHeroSub: "உங்கள் வகுப்பு அனுபவத்தை Google-ல் பகிருங்கள்",
+        gbpReviewBtn: "Google-ல் மதிப்பீடு செய்க →",
+        gbpSectionTitle: "Google Business Profile மதிப்பீடுகள்",
+        gbpSectionSub: "முதல் பேட்சில் பங்கேற்றீர்களா? உங்கள் கருத்துக்களை Google-ல் பதிவிட்டு மற்றவர்களுக்கு உதவுங்கள்.",
+        gbpReviewCta: "Google Review எழுதுங்கள் →",
+        footerGbpLink: "Google-ல் எங்களை மதிப்பீடு செய்க (GBP)"
       }
     };
 
@@ -2580,99 +2862,24 @@
     }
 
     // =========================================================================
-    // BATCH SEAT CAPACITY & REGISTRATIONS (Single Source of Truth)
+    // BATCH STATUS HELPER
     // -------------------------------------------------------------------------
-    const TOTAL_SEATS = 20;
-
-    // List of confirmed attendee names (Empty = All 20 seats open)
-    const CONFIRMED_STUDENTS = [
-      'Dr. R. Ravi (Chief Manager - The New Indian Express)',
-      'Guru Prasath',
-      'Kumaravel',
-      'Kailash',
-      'Karthikeyan',
-      'Ramkumar',
-      'Praveen',
-      'Bharath',
-      'Malea',
-      'Kumudha',
-      'Subashini',
-      'Satheesh Kumar',
-      'Ayyappan D',
-      'K. Vaijayanthi',
-      'R. Sathya',
-      'M. Nanthini',
-      'Bhuvanesh'
-    ];
-
-    // Manual count override (if not listing names):
-    const MANUAL_BOOKED_COUNT = 0; // 0 initially (all 20 available)
-
     function updateSeatMapStatus() {
-      const statusEl = document.getElementById('seats-status');
+      const badgeText = document.getElementById('seats-badge-text');
       const submitBtn = document.querySelector('#lead-form button[type="submit"]');
-      if (!statusEl) return;
-
-      const totalBooked = Math.max(CONFIRMED_STUDENTS.length, MANUAL_BOOKED_COUNT);
-      const clampedBooked = Math.max(0, Math.min(TOTAL_SEATS, totalBooked));
-      const seatsLeft = TOTAL_SEATS - clampedBooked;
       const dict = TRANSLATIONS[currentLanguage] || TRANSLATIONS.en;
 
-      if (clampedBooked >= TOTAL_SEATS) {
-        statusEl.className = 'seats-status-pill full';
-        statusEl.textContent = dict.seatsFull;
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = dict.seatsClosedBtn;
-          submitBtn.style.opacity = '0.6';
-          submitBtn.style.cursor = 'not-allowed';
-        }
-      } else if (clampedBooked === 0) {
-        statusEl.className = 'seats-status-pill';
-        statusEl.textContent = dict.seatsAllAvailable;
-      } else if (seatsLeft <= 5) {
-        statusEl.className = 'seats-status-pill urgent';
-        const msg = dict.seatsUrgentFmt
-          .replace('{booked}', clampedBooked)
-          .replace('{left}', seatsLeft)
-          .replace('{plural}', seatsLeft === 1 ? '' : 's');
-        statusEl.textContent = msg;
-      } else {
-        statusEl.className = 'seats-status-pill';
-        const msg = dict.seatsTakenFmt
-          .replace('{booked}', clampedBooked)
-          .replace('{left}', seatsLeft);
-        statusEl.textContent = msg;
+      if (badgeText && dict.seatsBadgeText) {
+        badgeText.textContent = dict.seatsBadgeText;
+      }
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.style.cursor = 'pointer';
       }
     }
 
     function initSeatMap() {
-      const grid = document.getElementById('seats-grid');
-      if (!grid) return;
-
-      const totalBooked = Math.max(CONFIRMED_STUDENTS.length, MANUAL_BOOKED_COUNT);
-      const clampedBooked = Math.max(0, Math.min(TOTAL_SEATS, totalBooked));
-
-      grid.innerHTML = '';
-
-      for (let i = 1; i <= TOTAL_SEATS; i++) {
-        const isTaken = i <= clampedBooked;
-        const tile = document.createElement('div');
-        tile.className = 'seat-tile ' + (isTaken ? 'taken' : 'available');
-        tile.textContent = i < 10 ? '0' + i : String(i);
-
-        if (isTaken) {
-          const studentName = CONFIRMED_STUDENTS[i - 1];
-          tile.title = studentName 
-            ? 'Seat ' + (i < 10 ? '0' + i : i) + ': ' + studentName + ' (Confirmed)' 
-            : 'Seat ' + (i < 10 ? '0' + i : i) + ': Booked';
-        } else {
-          tile.title = 'Seat ' + (i < 10 ? '0' + i : i) + ': Available';
-        }
-
-        grid.appendChild(tile);
-      }
-
       updateSeatMapStatus();
     }
 
@@ -2742,7 +2949,172 @@
           }
         });
       }
+
+      // Initialize celebration confetti & "Thank You, Pondicherry!" toast
+      initCelebration();
+    });
+
+    // =========================================================================
+    // CELEBRATORY CONFETTI & "THANK YOU, PONDICHERRY!"
+    // -------------------------------------------------------------------------
+    function initCelebration() {
+      // Trigger once per visitor session
+      if (sessionStorage.getItem('cyberad_pondicherry_celebrated')) return;
+      sessionStorage.setItem('cyberad_pondicherry_celebrated', 'true');
+
+      // Create confetti canvas
+      const canvas = document.createElement('canvas');
+      canvas.id = 'celebration-canvas';
+      document.body.appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      const onResize = () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      };
+      window.addEventListener('resize', onResize);
+
+      const colors = ['#1E6BFF', '#3B82F6', '#F59E0B', '#FBBF24', '#10B981', '#34D399', '#EC4899', '#8B5CF6', '#FFFFFF'];
+      const particles = [];
+      const isMobile = window.innerWidth < 600;
+      const particleCount = isMobile ? 80 : 140;
+
+      // Create particle bursts
+      for (let i = 0; i < particleCount; i++) {
+        const isLeft = Math.random() < 0.5;
+        particles.push({
+          x: isLeft ? width * 0.15 + (Math.random() * width * 0.25) : width * 0.60 + (Math.random() * width * 0.25),
+          y: height * 0.20 + (Math.random() * height * 0.25),
+          vx: (Math.random() - 0.5) * (isMobile ? 10 : 14),
+          vy: -Math.random() * 11 - 3,
+          size: Math.random() * 8 + 5,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotationSpeed: (Math.random() - 0.5) * 8,
+          wobble: Math.random() * 10,
+          wobbleSpeed: 0.08 + Math.random() * 0.05,
+          opacity: 1,
+          shape: Math.random() > 0.35 ? 'rect' : 'circle'
+        });
+      }
+
+      const startTime = performance.now();
+      const duration = 2800; // 2.8 seconds
+
+      function render(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        ctx.clearRect(0, 0, width, height);
+
+        let activeCount = 0;
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.36; // gravity
+          p.vx *= 0.985; // air resistance
+          p.rotation += p.rotationSpeed;
+          p.wobble += p.wobbleSpeed;
+
+          if (progress > 0.65) {
+            p.opacity = Math.max(0, 1 - (progress - 0.65) / 0.35);
+          }
+
+          if (p.opacity > 0 && p.y < height + 40) {
+            activeCount++;
+            ctx.save();
+            ctx.translate(p.x + Math.sin(p.wobble) * 3, p.y);
+            ctx.rotate((p.rotation * Math.PI) / 180);
+            ctx.globalAlpha = p.opacity;
+            ctx.fillStyle = p.color;
+
+            if (p.shape === 'rect') {
+              ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+            } else {
+              ctx.beginPath();
+              ctx.arc(0, 0, p.size / 2.4, 0, Math.PI * 2);
+              ctx.fill();
+            }
+            ctx.restore();
+          }
+        });
+
+        if (progress < 1 && activeCount > 0) {
+          requestAnimationFrame(render);
+        } else {
+          window.removeEventListener('resize', onResize);
+          if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
+        }
+      }
+
+      requestAnimationFrame(render);
+
+      // Display "Thank You, Pondicherry!" Toast Banner
+      const toast = document.getElementById('celebration-banner');
+      if (toast) {
+        setTimeout(() => {
+          toast.classList.add('is-visible');
+        }, 120);
+
+        // Auto dismiss after 3.8s
+        setTimeout(() => {
+          dismissCelebration();
+        }, 4000);
+      }
+    }
+
+    function dismissCelebration() {
+      const toast = document.getElementById('celebration-banner');
+      if (toast) {
+        toast.classList.remove('is-visible');
+      }
+    }
+
+    // =========================================================================
+    // FULL-SCREEN IMAGE LIGHTBOX
+    // -------------------------------------------------------------------------
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('image-lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cap = document.getElementById('lightbox-caption');
+      if (!modal || !img) return;
+
+      img.src = src;
+      if (cap) {
+        cap.textContent = caption || '';
+        cap.style.display = caption ? 'block' : 'none';
+      }
+
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('image-lightbox');
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        closeLightbox();
+      }
     });
   </script>
+
+  <!-- PHOTO LIGHTBOX MODAL -->
+  <div id="image-lightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Photo Lightbox">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">✕</button>
+      <img id="lightbox-img" src="" alt="Full view" class="lightbox-image" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
 </body>
 </html>
