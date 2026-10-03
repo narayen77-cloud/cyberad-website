@@ -102,80 +102,71 @@
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
     }
 
-    /* ========== RADIO BUTTON LANGUAGE SWITCHER ========== */
+    /* ========== PROMINENT SEGMENTED LANGUAGE SWITCHER ========== */
     .lang-switcher-wrap {
       display: inline-flex;
       align-items: center;
-      background: #F8FAFC;
-      padding: 3px 6px;
+      background: #EFF6FF;
+      padding: 3px 4px;
       border-radius: 9999px;
-      border: 1px solid #E2E8F0;
-      gap: 8px;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+      border: 2px solid #2563EB;
+      gap: 3px;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.16), inset 0 1px 2px rgba(255, 255, 255, 0.8);
       flex-shrink: 0;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .lang-switcher-wrap:hover {
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.24);
+      border-color: #1D4ED8;
+    }
+
+    .lang-globe-icon {
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+      margin-right: 2px;
+      color: #2563EB;
+      flex-shrink: 0;
     }
 
     .lang-radio-label {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: #64748B;
+      justify-content: center;
+      position: relative;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #1E293B;
       cursor: pointer;
       user-select: none;
-      transition: all 0.15s ease;
-      padding: 3px 8px;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 5px 13px;
       border-radius: 9999px;
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       letter-spacing: -0.01em;
+      line-height: 1.2;
     }
 
-    .lang-radio-label:hover {
-      color: var(--primary);
+    .lang-radio-label:hover:not(.is-active) {
+      color: #1D4ED8;
+      background: rgba(37, 99, 235, 0.1);
     }
 
     .lang-radio-label input[type="radio"] {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 14px;
-      height: 14px;
-      border: 1.5px solid #94A3B8;
-      border-radius: 50%;
-      outline: none;
-      cursor: pointer;
-      display: grid;
-      place-content: center;
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
       margin: 0;
-      background: #FFFFFF;
-      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .lang-radio-label input[type="radio"]:checked {
-      border-color: var(--accent);
-      background: #FFFFFF;
-    }
-
-    .lang-radio-label input[type="radio"]::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      transform: scale(0);
-      transition: 100ms transform cubic-bezier(0.16, 1, 0.3, 1);
-      background: var(--accent);
-    }
-
-    .lang-radio-label input[type="radio"]:checked::before {
-      transform: scale(1);
     }
 
     .lang-radio-label.is-active {
-      color: var(--primary);
-      font-weight: 600;
-      background: #FFFFFF;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      color: #FFFFFF !important;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      box-shadow: 0 2px 6px rgba(29, 78, 216, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.2);
     }
 
     /* ========== FIXED FLOATING HEADER ========== */
@@ -1495,10 +1486,11 @@
     }
 
     @media (max-width: 420px) {
-      .lang-switcher-wrap { padding: 2px 4px; gap: 4px; }
-      .lang-radio-label { font-size: 0.72rem; padding: 2px 4px; }
+      .lang-switcher-wrap { padding: 2px 3px; gap: 2px; border-width: 1.5px; }
+      .lang-globe-icon { width: 13px; height: 13px; margin-left: 3px; margin-right: 1px; }
+      .lang-radio-label { font-size: 0.74rem; padding: 4px 8px; }
       .header-actions { gap: 6px; }
-      .btn-whatsapp-header { padding: 6px 10px; font-size: 0.75rem; }
+      .btn-whatsapp-header { padding: 6px 8px; font-size: 0.72rem; }
     }
 
     @media (max-width: 380px) {
@@ -1775,6 +1767,7 @@
       <div class="header-actions">
         <!-- Radio Button Language Switcher -->
         <div class="lang-switcher-wrap" role="radiogroup" aria-label="Select Language">
+          <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           <label class="lang-radio-label is-active" id="label-lang-main-en">
             <input type="radio" name="site-language-main" value="en" checked onchange="setSiteLanguage('en')">
             <span>English</span>
