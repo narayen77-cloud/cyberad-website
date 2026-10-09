@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
@@ -7,7 +7,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-V1B2LW255M');
   </script>
 
@@ -28,19 +27,19 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="meta-title">CyberAd.in | Digital Marketing & Growth Solutions</title>
-  <meta name="description" id="meta-desc" content="CyberAd.in helps business owners, clinics, institutions, and founders build practical digital marketing systems that generate high-intent customers and measurable sales." />
+  <title>CyberAd.in | Performance Digital Marketing & Lead Generation Agency</title>
+  <meta name="description" content="CyberAd.in helps businesses, clinics, institutions, and founders generate qualified customer leads through targeted Meta Ads, Google Search Ads, fast landing pages, and marketing automation." />
   <link rel="icon" type="image/png" href="https://assets.cyberad.in/Favicon.png" />
   
-  <!-- Fonts: Inter + Mukta Malar for English & Tamil typography -->
+  <!-- Fonts: Inter for clean, modern typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Mukta+Malar:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --primary: #0B1D3A;
-      --primary-light: #142B4D;
+      --primary-light: #162B5E;
       --accent: #1E6BFF;
       --accent-hover: #1557D6;
       --accent-soft: #EFF6FF;
@@ -49,141 +48,83 @@
       --bg: #FFFFFF;
       --bg-alt: #F8FAFC;
       --border: #E2E8F0;
+      --border-dark: #CBD5E1;
       --success: #10B981;
-      --radius: 12px;
-      --shadow: 0 4px 20px rgba(11, 29, 58, 0.08);
-      --shadow-lg: 0 12px 40px rgba(11, 29, 58, 0.12);
-      --header-height: 70px;
-      --sticky-bottom-height: 76px;
+      --radius: 14px;
+      --shadow-sm: 0 2px 8px rgba(11, 29, 58, 0.04);
+      --shadow: 0 6px 20px rgba(11, 29, 58, 0.07);
+      --shadow-lg: 0 14px 40px rgba(11, 29, 58, 0.11);
+      --header-height: 72px;
+      --sticky-bottom-height: 74px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
-    html, body {
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
       width: 100%;
-      -webkit-text-size-adjust: 100%;
+      padding-top: var(--header-height);
+      padding-bottom: 0;
     }
 
-    body {
-      font-family: 'Inter', 'Mukta Malar', system-ui, -apple-system, sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-      background: var(--bg);
-      padding-top: var(--header-height, 70px);
-      padding-bottom: calc(var(--sticky-bottom-height, 76px) + 20px);
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: var(--sticky-bottom-height);
+      }
     }
 
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; height: auto; display: block; }
-    
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+
     .container {
       width: 100%;
-      max-width: 1140px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
     }
 
-    /* ========== HEADER & TYPOGRAPHY ========== */
-    header,
-    .header-inner,
-    nav,
-    nav a,
-    .lang-switcher-wrap,
-    .lang-radio-label,
-    .btn-contact-header,
-    .btn-whatsapp-bottom,
-    .btn {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 16px;
+      }
     }
 
-    /* ========== PROMINENT SEGMENTED LANGUAGE SWITCHER ========== */
-    .lang-switcher-wrap {
-      display: inline-flex;
-      align-items: center;
-      background: #EFF6FF;
-      padding: 3px 4px;
-      border-radius: 9999px;
-      border: 2px solid #2563EB;
-      gap: 3px;
-      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.16), inset 0 1px 2px rgba(255, 255, 255, 0.8);
-      flex-shrink: 0;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .lang-switcher-wrap:hover {
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.24);
-      border-color: #1D4ED8;
-    }
-
-    .lang-globe-icon {
-      width: 15px;
-      height: 15px;
-      margin-left: 5px;
-      margin-right: 2px;
-      color: #2563EB;
-      flex-shrink: 0;
-    }
-
-    .lang-radio-label {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      font-size: 0.84rem;
-      font-weight: 700;
-      color: #1E293B;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
-      padding: 5px 13px;
-      border-radius: 9999px;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-    }
-
-    .lang-radio-label:hover:not(.is-active) {
-      color: #1D4ED8;
-      background: rgba(37, 99, 235, 0.1);
-    }
-
-    .lang-radio-label input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-      height: 0;
-      pointer-events: none;
-      margin: 0;
-    }
-
-    .lang-radio-label.is-active {
-      color: #FFFFFF !important;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      box-shadow: 0 2px 6px rgba(29, 78, 216, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    }
-
-    /* ========== FIXED FLOATING HEADER ========== */
+    /* ========== HEADER ========== */
     header {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       width: 100%;
-      height: var(--header-height, 70px);
+      height: var(--header-height);
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 14px rgba(11, 29, 58, 0.06);
-      transition: background 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 2px 10px rgba(11, 29, 58, 0.03);
     }
+
     .header-inner {
       display: flex;
       align-items: center;
@@ -191,148 +132,81 @@
       height: 100%;
       gap: 16px;
     }
+
     .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-      text-decoration: none;
-    }
-    .logo img {
-      height: 42px;
-      width: auto;
-      object-fit: contain;
-      border-radius: 50%;
-    }
-    .logo-text-badge {
-      font-weight: 800;
-      font-size: 1.18rem;
-      color: var(--primary);
-      letter-spacing: -0.02em;
       display: inline-flex;
       align-items: center;
+      gap: 10px;
+      text-decoration: none;
     }
-    .logo-text-badge span {
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-text {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: -0.03em;
+    }
+
+    .logo-text span {
       color: var(--accent);
     }
-    
-    .header-nav {
+
+    .nav-menu {
       display: flex;
       align-items: center;
       gap: 24px;
-      white-space: nowrap;
     }
-    .header-nav a {
+
+    .nav-link {
       font-size: 0.92rem;
       font-weight: 600;
       color: #475569;
       padding: 6px 12px;
       border-radius: 8px;
-      letter-spacing: -0.01em;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      text-decoration: none;
+      transition: all 0.15s ease;
     }
-    .header-nav a:hover {
+
+    .nav-link:hover {
       color: var(--accent);
-      background: rgba(30, 107, 255, 0.06);
+      background: var(--accent-soft);
     }
 
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    /* PROMINENT CONTACT BUTTON IN HEADER */
-    .btn-contact-header {
+    .btn-header-cta {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 9px 18px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      border-radius: 9999px;
+      gap: 8px;
       background: var(--accent);
-      color: #FFFFFF;
-      border: 1px solid var(--accent);
-      text-decoration: none;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 2px 10px rgba(30, 107, 255, 0.28);
-      white-space: nowrap;
-      flex-shrink: 0;
+      color: #FFFFFF !important;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 10px rgba(30, 107, 255, 0.25);
     }
-    .btn-contact-header:hover {
+
+    .btn-header-cta:hover {
       background: var(--accent-hover);
-      border-color: var(--accent-hover);
-      color: #FFFFFF;
       transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.38);
+      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.35);
     }
-    .btn-contact-header svg {
+
+    .btn-header-cta svg {
       width: 16px;
       height: 16px;
-      fill: #25D366;
-      flex-shrink: 0;
+      fill: #FFFFFF;
     }
 
-    /* Mobile Hamburger Toggle */
-    .mobile-menu-btn {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: #FFFFFF;
-      color: var(--primary);
-      cursor: pointer;
-      transition: all 0.15s ease;
-      padding: 0;
-    }
-    .mobile-menu-btn:hover {
-      background: #F1F5F9;
-    }
-    .mobile-menu-btn svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    /* Mobile Drawer Menu */
-    .mobile-nav-drawer {
-      display: none;
-      position: fixed;
-      top: 64px;
-      left: 0;
-      right: 0;
-      background: #FFFFFF;
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 12px 30px rgba(11, 29, 58, 0.12);
-      padding: 16px 20px 24px;
-      z-index: 999;
-      flex-direction: column;
-      gap: 6px;
-      animation: slideDownNav 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .mobile-nav-drawer.is-open {
-      display: flex;
-    }
-    .mobile-nav-drawer a {
-      padding: 11px 14px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #334155;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.15s ease;
-    }
-    .mobile-nav-drawer a:hover {
-      background: #F8FAFC;
-      color: var(--accent);
-    }
-    @keyframes slideDownNav {
-      from { opacity: 0; transform: translateY(-8px); }
-      to { opacity: 1; transform: translateY(0); }
+    @media (max-width: 860px) {
+      .nav-menu {
+        display: none;
+      }
     }
 
     /* ========== BUTTONS ========== */
@@ -340,1352 +214,1543 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 12px 24px;
+      gap: 10px;
+      padding: 13px 26px;
       font-weight: 700;
-      font-size: 0.95rem;
-      border-radius: 8px;
+      font-size: 0.98rem;
+      border-radius: 10px;
       border: none;
       cursor: pointer;
       transition: all 0.2s ease;
-      text-align: center;
-      white-space: nowrap;
       text-decoration: none;
     }
+
     .btn-primary {
       background: var(--accent);
-      color: white;
+      color: #FFFFFF !important;
       box-shadow: 0 4px 14px rgba(30, 107, 255, 0.3);
     }
+
     .btn-primary:hover {
       background: var(--accent-hover);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(30, 107, 255, 0.4);
-      color: white;
-    }
-    .btn-outline {
-      background: transparent;
-      color: var(--primary);
-      border: 2px solid var(--border);
-    }
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: rgba(30, 107, 255, 0.04);
-    }
-    .btn-lg {
-      padding: 15px 30px;
-      font-size: 1.05rem;
-      border-radius: 10px;
     }
 
-    /* ========== HERO ========== */
+    .btn-whatsapp {
+      background: #25D366;
+      color: #FFFFFF !important;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1EBE5B;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-outline {
+      background: #FFFFFF;
+      color: var(--primary) !important;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent) !important;
+      background: var(--accent-soft);
+      transform: translateY(-1px);
+    }
+
+    .btn-lg {
+      padding: 16px 32px;
+      font-size: 1.05rem;
+      border-radius: 12px;
+    }
+
+    /* ========== HERO SECTION ========== */
     .hero {
-      padding: 64px 0 80px;
+      padding: 70px 0 80px;
       background: linear-gradient(180deg, #F0F5FF 0%, #FFFFFF 100%);
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid var(--border);
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -200px;
-      right: -100px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(30,107,255,0.08) 0%, transparent 70%);
-      pointer-events: none;
+
+    .hero-content {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      align-items: center;
-    }
-    .badge {
+
+    .badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       background: var(--accent-soft);
       color: var(--accent);
-      font-size: 0.85rem;
-      font-weight: 700;
-      padding: 6px 14px;
-      border-radius: 100px;
-      margin-bottom: 20px;
-      max-width: 100%;
-      line-height: 1.4;
-      border: 1px solid #BFDBFE;
-    }
-    .hero h1 {
-      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      line-height: 1.18;
-      color: var(--primary);
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
-      word-break: break-word;
-    }
-    .hero h1 span {
-      color: var(--accent);
-    }
-    .hero-sub {
-      font-size: 1.12rem;
-      font-weight: 400;
-      color: #475569;
-      margin-bottom: 28px;
-      max-width: 560px;
-      line-height: 1.6;
-    }
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-    }
-
-    /* ========== SECTION STYLING ========== */
-    section {
-      padding: 80px 0;
-    }
-    .section-label {
       font-size: 0.82rem;
       font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 7px 16px;
+      border-radius: 9999px;
+      border: 1px solid #BFDBFE;
+      margin-bottom: 22px;
+    }
+
+    .badge-pill .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--primary);
+      letter-spacing: -0.035em;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 34px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-features-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px 24px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 840px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero-features-bar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: left;
+      }
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .hero-feature-item svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ========== SECTION HEADERS ========== */
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--accent);
-      margin-bottom: 10px;
+      background: var(--accent-soft);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 12px;
     }
+
     .section-title {
-      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
       font-weight: 800;
       color: var(--primary);
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
       line-height: 1.25;
       margin-bottom: 14px;
     }
-    .section-sub {
+
+    .section-desc {
       font-size: 1.05rem;
       color: var(--text-muted);
       max-width: 640px;
+      margin: 0 auto 48px;
       line-height: 1.6;
-      margin-bottom: 40px;
     }
-    .text-center { text-align: center; }
-    .text-center .section-sub { margin-left: auto; margin-right: auto; }
 
-    /* ========== CARDS & GRIDS ========== */
-    .features-grid {
+    /* ========== SERVICES GRID ========== */
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-    .feature-card {
+
+    @media (max-width: 960px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
       box-shadow: var(--shadow);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .feature-card:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-lg);
-    }
-    .feature-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
       background: var(--accent-soft);
       color: var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 0.95rem;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
-    .feature-card h4 {
-      font-size: 1.15rem;
+
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 10px;
     }
-    .feature-card p {
-      font-size: 0.92rem;
+
+    .service-card p {
+      font-size: 0.95rem;
       color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .service-badge {
+      margin-top: 18px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ========== COMPARISON / PROBLEM VS SOLUTION ========== */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    @media (max-width: 800px) {
+      .compare-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .compare-card {
+      background: #FFFFFF;
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .compare-card.flaws {
+      border-top: 4px solid #EF4444;
+      background: #FFFDFC;
+    }
+
+    .compare-card.solutions {
+      border-top: 4px solid var(--accent);
+      background: #FFFFFF;
+      box-shadow: var(--shadow);
+    }
+
+    .compare-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .compare-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .compare-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.98rem;
+      color: var(--text);
       line-height: 1.55;
     }
 
-    /* Process Steps */
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 36px;
+    .compare-list li .icon-cross {
+      color: #EF4444;
+      font-weight: 900;
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-top: 3px;
     }
-    .step {
+
+    .compare-list li .icon-check {
+      color: #10B981;
+      font-weight: 900;
+      font-size: 1.1rem;
+      line-height: 1;
+      margin-top: 3px;
+    }
+
+    /* ========== TARGET CLIENTELE ========== */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 960px) {
+      .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .audience-card {
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      position: relative;
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      text-align: left;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
     }
-    .step-num {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 14px;
+
+    .audience-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
     }
-    .step h4 {
+
+    .audience-num {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .audience-card h4 {
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 8px;
     }
-    .step p {
-      font-size: 0.9rem;
+
+    .audience-card p {
+      font-size: 0.88rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    /* FAQ */
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    /* ========== 4-STEP PROCESS ========== */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
     }
-    .faq-item {
+
+    @media (max-width: 960px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .process-card {
       background: #FFFFFF;
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px 26px;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
     }
-    .faq-item h4 {
-      font-size: 1.05rem;
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .process-card h4 {
+      font-size: 1.08rem;
       font-weight: 700;
       color: var(--primary);
       margin-bottom: 8px;
     }
-    .faq-item p {
-      font-size: 0.92rem;
+
+    .process-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ========== PREVIOUS PROGRAMME / SOCIAL PROOF ========== */
+    .proof-section {
+      background: var(--bg-alt);
+    }
+
+    .proof-box {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 640px) {
+      .proof-box {
+        padding: 24px;
+      }
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .proof-img-wrap {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: #0B1D3A;
+      position: relative;
+    }
+
+    .proof-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .proof-img-wrap:hover img {
+      transform: scale(1.04);
+    }
+
+    .proof-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .proof-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .proof-desc {
+      font-size: 0.98rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .proof-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ========== FAQ SECTION ========== */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 800px) {
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-q {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .faq-a {
+      font-size: 0.94rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
-    /* ========== LIGHTBOX MODAL ========== */
-    .lightbox-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      padding: 20px;
-    }
-    .lightbox-modal.is-open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .lightbox-backdrop {
-      position: absolute;
-      inset: 0;
-      background: rgba(11, 29, 58, 0.92);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .lightbox-content {
-      position: relative;
-      z-index: 2;
-      max-width: 90vw;
-      max-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox-image {
-      max-width: 88vw;
-      max-height: 80vh;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.15);
-      background: #000;
-    }
-    .lightbox-close-btn {
-      position: absolute;
-      top: -46px;
-      right: 0;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+    /* ========== CONTACT FORM & ACTION SECTION ========== */
+    .contact-section {
+      background: linear-gradient(180deg, #0B1D3A 0%, #061124 100%);
       color: #FFFFFF;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.15s ease, transform 0.15s ease;
-    }
-    .lightbox-close-btn:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: scale(1.08);
-    }
-    .lightbox-caption {
-      margin-top: 12px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.9rem;
-      text-align: center;
-      max-width: 600px;
-      line-height: 1.4;
-    }
-    .lightbox-zoom-hint {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(11, 29, 58, 0.85);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      color: #FFFFFF;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      pointer-events: none;
-      border: 1px solid rgba(255,255,255,0.15);
+      padding: 90px 0;
     }
 
-    /* ========== STICKY BOTTOM WHATSAPP CTA BAR ========== */
-    .sticky-bottom-cta {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 990;
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-top: 1px solid #E2E8F0;
-      box-shadow: 0 -4px 24px rgba(11, 29, 58, 0.08);
-      transition: transform 0.25s ease, opacity 0.25s ease;
+    .contact-section .section-title {
+      color: #FFFFFF;
     }
-    .sticky-bottom-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 20px;
-      max-width: 1140px;
+
+    .contact-section .section-desc {
+      color: #94A3B8;
+    }
+
+    .contact-box-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: flex-start;
+      max-width: 1080px;
       margin: 0 auto;
-      gap: 16px;
     }
-    .bottom-cta-text-group {
+
+    @media (max-width: 880px) {
+      .contact-box-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-card {
+      background: #FFFFFF;
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (max-width: 640px) {
+      .form-card {
+        padding: 24px 20px;
+      }
+    }
+
+    .form-card h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .form-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      border: 1px solid var(--border-dark);
+      border-radius: 8px;
+      font-family: inherit;
+      background: #FFFFFF;
+      transition: border-color 0.15s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(30, 107, 255, 0.15);
+    }
+
+    .contact-info-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+    }
+
+    .contact-info-card h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .contact-info-card p {
+      color: #CBD5E1;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .info-list {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 18px;
+      margin-bottom: 32px;
     }
-    .bottom-cta-title {
-      font-size: 0.96rem;
-      font-weight: 700;
-      color: #0B1D3A;
-      letter-spacing: -0.01em;
-      line-height: 1.3;
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
     }
-    .bottom-cta-sub {
-      font-size: 0.84rem;
-      color: #64748B;
-      line-height: 1.35;
-    }
-    .btn-whatsapp-bottom {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 22px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      letter-spacing: 0.02em;
-      border-radius: 9999px;
-      background: var(--accent);
-      color: #FFFFFF;
-      text-decoration: none;
-      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.3);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      white-space: nowrap;
+
+    .info-item svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--accent);
       flex-shrink: 0;
+      margin-top: 2px;
     }
-    .btn-whatsapp-bottom:hover {
-      background: var(--accent-hover);
+
+    .info-item .info-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #94A3B8;
+      font-weight: 700;
+    }
+
+    .info-item .info-val {
+      font-size: 1.05rem;
+      font-weight: 700;
       color: #FFFFFF;
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(30, 107, 255, 0.4);
-    }
-    .btn-whatsapp-bottom svg {
-      width: 18px;
-      height: 18px;
-      fill: #25D366;
-      flex-shrink: 0;
     }
 
     /* ========== FOOTER ========== */
     footer {
-      background: var(--primary);
-      color: white;
-      padding: 60px 0 40px;
-      font-size: 0.9rem;
+      background: #061124;
+      color: #94A3B8;
+      padding: 48px 0 36px;
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
+
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 36px;
     }
-    .footer-brand img {
-      height: 38px;
-      width: auto;
-      margin-bottom: 14px;
-      border-radius: 50%;
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
     }
-    .footer-brand p {
-      color: #94A3B8;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      margin-bottom: 14px;
-    }
-    .collab-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 6px;
-      padding: 4px 10px;
-      font-size: 0.78rem;
-      color: #93C5FD;
-    }
-    .footer-col h5 {
-      color: white;
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .footer-col a {
-      display: block;
-      color: #94A3B8;
+
+    .footer-brand {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: #FFFFFF;
       margin-bottom: 8px;
-      font-size: 0.85rem;
-      transition: color 0.15s ease;
-      text-decoration: none;
     }
-    .footer-col a:hover {
+
+    .footer-brand span {
+      color: var(--accent);
+    }
+
+    .footer-col h5 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-col ul a {
+      color: #94A3B8;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col ul a:hover {
       color: #FFFFFF;
     }
-    .footer-contact-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-      font-size: 0.85rem;
-    }
-    .footer-contact-item svg {
-      width: 16px;
-      height: 16px;
-      fill: #25D366;
-      flex-shrink: 0;
-    }
-    .legal-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 8px;
-    }
-    .legal-badges span {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 4px;
-      padding: 2px 7px;
-      font-size: 0.72rem;
-      color: #94A3B8;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .legal-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding-top: 24px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #64748B;
-      font-size: 0.82rem;
       flex-wrap: wrap;
-      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.82rem;
     }
 
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
-      .header-nav { display: none; }
-      .mobile-menu-btn { display: inline-flex; }
+    .legal-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
-    @media (max-width: 640px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.1rem; }
-      .hero-ctas { flex-direction: column; align-items: stretch; }
-      .hero-ctas .btn { width: 100%; }
-      .bottom-cta-title { font-size: 0.88rem; }
-      .bottom-cta-sub { display: none; }
+    /* ========== STICKY MOBILE CTA ========== */
+    .sticky-mobile-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: #FFFFFF;
+      padding: 10px 16px;
+      border-top: 1px solid var(--border);
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
     }
 
-    @media (max-width: 420px) {
-      .lang-switcher-wrap { padding: 2px 3px; gap: 2px; border-width: 1.5px; }
-      .lang-globe-icon { width: 13px; height: 13px; margin-left: 3px; margin-right: 1px; }
-      .lang-radio-label { font-size: 0.74rem; padding: 4px 8px; }
-      .header-actions { gap: 6px; }
-      .btn-contact-header { padding: 6px 10px; font-size: 0.76rem; }
+    @media (max-width: 768px) {
+      .sticky-mobile-cta {
+        display: block;
+      }
+    }
+
+    .sticky-mobile-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: #25D366;
+      color: #FFFFFF !important;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 14px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      text-decoration: none;
+    }
+
+    .sticky-mobile-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: #FFFFFF;
+    }
+
+    /* ========== LIGHTBOX ========== */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox-modal.is-open {
+      display: flex;
+    }
+
+    .lightbox-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .lightbox-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      width: 100%;
+      background: #000000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-image {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .lightbox-caption {
+      color: #FFFFFF;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      background: #111827;
+      text-align: center;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.7);
+      color: #FFFFFF;
+      border: 1px solid rgba(255,255,255,0.3);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- UNIFIED STICKY HEADER -->
+  <!-- Top Sticky Header -->
   <header>
-    <div class="container header-inner">
-      <a href="https://cyberad.in" class="logo" aria-label="CyberAd Homepage">
-        <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd.in" />
-        <span class="logo-text-badge">CyberAd<span>.in</span></span>
-      </a>
-      
-      <!-- Minimal Desktop Navigation -->
-      <nav class="header-nav" aria-label="Primary Navigation">
-        <a href="#what-we-do" data-i18n="navServices">What We Do</a>
-        <a href="#who-its-for" data-i18n="navWho">Who We Help</a>
-        <a href="#what-changes" data-i18n="navFramework">Framework</a>
-        <a href="#outcomes" data-i18n="navOutcomes">Outcomes</a>
-        <a href="#el-curso" data-i18n="navElCurso">El Curso</a>
-        <a href="#faq" data-i18n="navFaq">FAQ</a>
-      </nav>
-
-      <!-- Right: Language Toggle, Prominent Contact CTA & Mobile Hamburger -->
-      <div class="header-actions">
-        <!-- Prominent Language Switcher -->
-        <div class="lang-switcher-wrap" role="radiogroup" aria-label="Select Language">
-          <svg class="lang-globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-          <label class="lang-radio-label is-active" id="label-lang-main-en">
-            <input type="radio" name="site-language-main" value="en" checked onchange="setSiteLanguage('en')">
-            <span>English</span>
-          </label>
-          <label class="lang-radio-label" id="label-lang-main-ta">
-            <input type="radio" name="site-language-main" value="ta" onchange="setSiteLanguage('ta')">
-            <span>α«ñα««α«┐α«┤α»ì</span>
-          </label>
-        </div>
-
-        <!-- Prominent Single Contact Button (Electric Blue) -->
-        <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" class="btn-contact-header">
-          <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-          <span data-i18n="contactUsText">Contact us</span>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <img src="https://assets.cyberad.in/logo.png" alt="CyberAd.in Logo" />
+          <span class="logo-text">CyberAd<span>.in</span></span>
         </a>
 
-        <!-- Mobile Hamburger Menu Button -->
-        <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMobileMenu()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </div>
-    </div>
+        <nav class="nav-menu">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#comparison" class="nav-link">Why Us</a>
+          <a href="#process" class="nav-link">How It Works</a>
+          <a href="#audience" class="nav-link">Who It's For</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
 
-    <!-- Mobile Navigation Drawer -->
-    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
-      <a href="#what-we-do" onclick="closeMobileMenu()" data-i18n="navServices">What We Do</a>
-      <a href="#who-its-for" onclick="closeMobileMenu()" data-i18n="navWho">Who We Help</a>
-      <a href="#what-changes" onclick="closeMobileMenu()" data-i18n="navFramework">Framework</a>
-      <a href="#outcomes" onclick="closeMobileMenu()" data-i18n="navOutcomes">Outcomes</a>
-      <a href="#el-curso" onclick="closeMobileMenu()" data-i18n="navElCurso">El Curso</a>
-      <a href="#faq" onclick="closeMobileMenu()" data-i18n="navFaq">FAQ</a>
-      <a href="#contact" onclick="closeMobileMenu()" data-i18n="navContact">Contact</a>
+        <a 
+          href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-header-cta"
+        >
+          <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO: CYBERAD.IN DIGITAL MARKETING & INNOVATION -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <div class="badge" data-i18n-html="heroBadge">
-            <span>ΓùÅ</span> CyberAd.in ┬╖ Digital Marketing &amp; Innovation
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="pulse-dot"></span>
+            Performance Digital Marketing Agency
           </div>
-          <h1 data-i18n-html="heroTitle">
-            Digital Marketing Built for <span>Real Business Growth.</span>
+          
+          <h1>
+            Predictable Digital Marketing That Generates <span>Real Leads &amp; Sales</span>.
           </h1>
-          <p class="hero-sub" data-i18n="heroSub">
-            We help business owners, clinics, institutions, and founders build practical marketing systems ΓÇö attracting the right customers, generating qualified enquiries, and increasing revenue.
+
+          <p class="hero-sub">
+            We build high-converting ad pipelines, search marketing systems, and lead qualification funnels that deliver serious inquiries directly to your phone and CRM.
           </p>
-          <div class="hero-ctas">
-            <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" data-i18n="heroPrimaryBtn">
-              <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: #25D366;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-              <span data-i18n="contactUsText">Contact us</span>
+
+          <div class="hero-actions">
+            <a 
+              href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-whatsapp btn-lg"
+            >
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#FFFFFF;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+              <span>Get Started on WhatsApp</span>
             </a>
-            <a href="#what-we-do" class="btn btn-outline btn-lg" data-i18n="heroSecondaryBtn">
-              What We Do Γåô
+            <a href="#contact" class="btn btn-outline btn-lg">
+              <span>Request Free Consultation</span>
             </a>
           </div>
-        </div>
-        
-        <!-- Hero Right Feature Card -->
-        <div class="hero-feature-card" style="background: #FFFFFF; border: 1px solid var(--border); border-radius: 20px; padding: 28px; box-shadow: var(--shadow-lg);">
-          <div style="font-size: 0.82rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;" data-i18n="heroCardEyebrow">
-            What We Deliver
-          </div>
-          <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 20px; line-height: 1.35;" data-i18n="heroCardTitle">
-            Measurable Systems for Every Stage of Customer Growth
-          </h3>
-          
-          <div style="display: flex; flex-direction: column; gap: 16px;">
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <div style="width: 32px; height: 32px; border-radius: 8px; background: #EFF6FF; color: #1E6BFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0;">1</div>
-              <div>
-                <strong style="color: var(--primary); font-size: 0.95rem; display: block;" data-i18n="heroPillar1Title">Attention &amp; Customer Acquisition</strong>
-                <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;" data-i18n="heroPillar1Desc">Paid Ads (Meta &amp; Google), Local Search, and inbound commercial positioning.</span>
-              </div>
-            </div>
 
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <div style="width: 32px; height: 32px; border-radius: 8px; background: #EFF6FF; color: #1E6BFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0;">2</div>
-              <div>
-                <strong style="color: var(--primary); font-size: 0.95rem; display: block;" data-i18n="heroPillar2Title">High-Converting Web &amp; Funnels</strong>
-                <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;" data-i18n="heroPillar2Desc">Clear value propositions, fast loading pages, and seamless checkout integrations.</span>
-              </div>
+          <div class="hero-features-bar">
+            <div class="hero-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>100% Exclusive Inquiries</span>
             </div>
-
-            <div style="display: flex; gap: 12px; align-items: flex-start;">
-              <div style="width: 32px; height: 32px; border-radius: 8px; background: #EFF6FF; color: #1E6BFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0;">3</div>
-              <div>
-                <strong style="color: var(--primary); font-size: 0.95rem; display: block;" data-i18n="heroPillar3Title">WhatsApp Closing &amp; Retention</strong>
-                <span style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;" data-i18n="heroPillar3Desc">Scripts, messaging funnels, and follow-up loops that turn enquiries into repeat buyers.</span>
-              </div>
+            <div class="hero-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Meta &amp; Google Ad Precision</span>
+            </div>
+            <div class="hero-feature-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>Instant WhatsApp CRM Routing</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHAT WE DO / SERVICES SECTION -->
-  <section id="what-we-do" style="background: var(--bg);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label" data-i18n="servicesLabel">WHAT WE DO</div>
-        <h2 class="section-title" data-i18n="servicesTitle">Complete Digital Marketing &amp; Sales Engines</h2>
-        <p class="section-sub" data-i18n="servicesSub">We don't do vanity metrics or random posting. We design and manage systems that connect awareness directly to revenue.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-num">01</div>
-          <h4 data-i18n="service1Title">Performance Marketing &amp; Ads</h4>
-          <p data-i18n="service1Desc">Data-backed Meta and Google advertising campaigns targeted at high-intent local and regional buyers.</p>
+    <!-- CORE SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">What We Do</span>
+          <h2 class="section-title">Strategic Digital Marketing Services</h2>
+          <p class="section-desc">
+            We manage your complete digital growth stack so you can focus on running your business and closing sales.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-num">02</div>
-          <h4 data-i18n="service2Title">Conversion Web Design</h4>
-          <p data-i18n="service2Desc">Fast, mobile-optimized landing pages and websites engineered to capture leads and close sales.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">03</div>
-          <h4 data-i18n="service3Title">Local SEO &amp; Google Profile</h4>
-          <p data-i18n="service3Desc">Dominating Google Maps and local search so nearby customers find you first when searching for your service.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">04</div>
-          <h4 data-i18n="service4Title">WhatsApp Sales Automation</h4>
-          <p data-i18n="service4Desc">Structured WhatsApp scripts, quick-reply routing, and automated payment links to rapidly close inbound leads.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- THE REALITY CHECK / PROBLEMS -->
-  <section id="problems" class="problems" style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label" data-i18n="problemLabel">The Reality Check</div>
-        <h2 class="section-title" data-i18n="problemTitle">Why Most ΓÇ£Digital MarketingΓÇ¥ Does Not Grow Sales</h2>
-        <p class="section-sub" data-i18n="problemSub">You post. You boost. You hire someone. The enquiry trickle stays the same. Nobody showed you the path from first glance to payment.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-num">1</div>
-          <h4 data-i18n="problem1Title">1. Posting is not a plan</h4>
-          <p data-i18n="problem1Desc">Content without an offer and a way to pay is decoration.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">2</div>
-          <h4 data-i18n="problem2Title">2. Ads without an offer waste money</h4>
-          <p data-i18n="problem2Desc">Traffic onto a weak message does not become fees.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">3</div>
-          <h4 data-i18n="problem3Title">3. A freelancer without a brief produces posts, not sales</h4>
-          <p data-i18n="problem3Desc">If you cannot explain the journey, you cannot direct the work.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">4</div>
-          <h4 data-i18n="problem4Title">4. Hesitation when asking for money</h4>
-          <p data-i18n="problem4Desc">That hesitation is why people inquire and disappear without completing a purchase.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="services-grid">
+          <!-- 1. Meta Ads -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </div>
+              <h3>Meta Ads (Facebook &amp; Instagram)</h3>
+              <p>
+                Reach prospective buyers based on exact geographic clusters, income segments, and verified purchasing behaviors.
+              </p>
+            </div>
+            <div class="service-badge">Targeted Visual Ads →</div>
+          </div>
 
-  <!-- WHO WE HELP -->
-  <section id="who-its-for" style="background: var(--bg);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label" data-i18n="whoLabel">WHO WE HELP</div>
-        <h2 class="section-title" data-i18n="whoTitle">Built for Growing Businesses &amp; Marketers</h2>
-        <p class="section-sub" data-i18n="whoDesc">Small business owners, marketing managers, and founders who need digital marketing to generate actual customer revenue.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <h4 data-i18n="whoCat1Title">Retail &amp; Local Shops</h4>
-          <p data-i18n="whoCat1Desc">Footfall, local awareness, and repeat buyer WhatsApp catalogues.</p>
-        </div>
-        <div class="feature-card">
-          <h4 data-i18n="whoCat2Title">Clinics &amp; Healthcare</h4>
-          <p data-i18n="whoCat2Desc">High-trust patient acquisition, Google Maps authority, and appointment booking.</p>
-        </div>
-        <div class="feature-card">
-          <h4 data-i18n="whoCat3Title">Institutions &amp; Coaching</h4>
-          <p data-i18n="whoCat3Desc">Student enrollment funnels, webinar registrations, and structured payment links.</p>
-        </div>
-        <div class="feature-card">
-          <h4 data-i18n="whoCat4Title">Service &amp; B2B Firms</h4>
-          <p data-i18n="whoCat4Desc">Direct lead generation, executive positioning, and structured proposal closing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- 2. Google Search Ads -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+              </div>
+              <h3>Google Search Ads</h3>
+              <p>
+                Capture high-intent prospects who are actively searching for your services on Google with high conversion keyword targeting.
+              </p>
+            </div>
+            <div class="service-badge">High-Intent Inquiries →</div>
+          </div>
 
-  <!-- THE REVENUE FRAMEWORK / WHAT CHANGES -->
-  <section id="what-changes" style="background: var(--bg-alt);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label" data-i18n="changesLabel">THE FRAMEWORK</div>
-        <h2 class="section-title" data-i18n="changesTitle">The Customer Journey from Attention to Revenue</h2>
-        <p class="section-sub" data-i18n="changesSub">A practical, structured shift from random tactics to a working sales system.</p>
-      </div>
-      <div class="process-steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h4 data-i18n="pillar1Title">1. Attention &amp; Trust</h4>
-          <p data-i18n="pillar1Desc">Attention ΓåÆ interest ΓåÆ trust ΓåÆ offer ΓåÆ payment ΓåÆ repeat. Posts, WhatsApp, and payments stop being separate hobbies.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h4 data-i18n="pillar2Title">2. Compelling Commercial Offer</h4>
-          <p data-i18n="pillar2Desc">Present what you sell in clear, plain language that strangers immediately understand and value.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h4 data-i18n="pillar3Title">3. Fast Checkout &amp; Retention</h4>
-          <p data-i18n="pillar3Desc">Instant digital payments + structured follow-up loops that turn single sales into repeat revenue.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- 3. Landing Pages -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+              </div>
+              <h3>High-Converting Landing Pages</h3>
+              <p>
+                Fast-loading, distraction-free landing pages built to turn mobile traffic into verified WhatsApp inquiries and phone calls.
+              </p>
+            </div>
+            <div class="service-badge">Mobile-First Conversion →</div>
+          </div>
 
-  <!-- 5 PRACTICAL OUTCOMES -->
-  <section id="outcomes" style="background: var(--bg);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label" data-i18n="outcomesLabel">PRACTICAL RESULTS</div>
-        <h2 class="section-title" data-i18n="outcomesTitle">5 Tangible Assets in Every System We Build</h2>
-        <p class="section-sub" data-i18n="outcomesSub">Clear, measurable components that bring predictability to your marketing.</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-num">1</div>
-          <h4 data-i18n="outcome1Title">New Customer Acquisition Path</h4>
-          <p data-i18n="outcome1Desc">A clear, repeatable roadmap showing how a stranger finds you, trusts you, and becomes a client.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">2</div>
-          <h4 data-i18n="outcome2Title">High-Converting Commercial Offer</h4>
-          <p data-i18n="outcome2Desc">A premium offer written in simple language that clearly sets you apart from competitors.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">3</div>
-          <h4 data-i18n="outcome3Title">WhatsApp &amp; Call Closing Scripts</h4>
-          <p data-i18n="outcome3Desc">Proven conversation scripts to handle questions, build confidence, and close deals effortlessly.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-num">4</div>
-          <h4 data-i18n="outcome4Title">Live Digital Payment Links</h4>
-          <p data-i18n="outcome4Desc">Frictionless digital payment links to collect advance fees without needing technical developers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- 4. WhatsApp Automation -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+              </div>
+              <h3>WhatsApp &amp; CRM Routing</h3>
+              <p>
+                Automate instant lead notifications directly to your phone or team CRM so you never miss a hot customer inquiry.
+              </p>
+            </div>
+            <div class="service-badge">&lt; 60-Sec Response Setup →</div>
+          </div>
 
-  <!-- EL CURSO BATCH 1 COMPLETION SECTION (LOWER ON PAGE) -->
-  <section id="el-curso" class="certificate-section" style="background: var(--bg-alt); padding: 72px 0;">
-    <div class="container">
-      <div style="max-width: 860px; margin: 0 auto; background: #FFFFFF; border: 1px solid var(--border); border-radius: 20px; padding: 32px; box-shadow: var(--shadow);">
-        <div style="display: grid; grid-template-columns: minmax(240px, 280px) 1fr; gap: 32px; align-items: center;">
-          <!-- 1:1 Frame Photo -->
-          <div 
-            class="lightbox-trigger"
-            onclick="openLightbox('batch-1-graduates.jpg', 'El Curso Batch 1 at Pondicherry University')"
-            style="aspect-ratio: 1/1; width: 100%; max-width: 280px; margin: 0 auto; border-radius: 16px; overflow: hidden; position: relative; background: #0B1D3A; box-shadow: 0 6px 20px rgba(11, 29, 58, 0.12); cursor: pointer;"
-            title="Click to view full photo"
-          >
-            <img 
-              src="batch-1-graduates.jpg" 
-              alt="El Curso Batch 1 at Pondicherry University" 
-              style="width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block;"
-              loading="lazy"
-            />
-            <div class="lightbox-zoom-hint">
-              <svg style="width:12px; height:12px; fill:none; stroke:currentColor; stroke-width:2.5;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-              <span data-i18n="clickToEnlarge">Click to Zoom</span>
+          <!-- 5. Local SEO -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <h3>Local SEO &amp; Google Maps</h3>
+              <p>
+                Optimize your Google Business Profile and local listings to dominate local search rankings and drive consistent walk-ins.
+              </p>
+            </div>
+            <div class="service-badge">Local Dominance →</div>
+          </div>
+
+          <!-- 6. Analytics & ROI -->
+          <div class="service-card">
+            <div>
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+              </div>
+              <h3>Analytics &amp; ROI Tracking</h3>
+              <p>
+                Clear, transparent reporting on cost per lead, conversion rate, and return on ad spend (ROAS) across all ad platforms.
+              </p>
+            </div>
+            <div class="service-badge">Data-Driven Growth →</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON: WHY WORK WITH US -->
+    <section id="comparison" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">The Difference</span>
+          <h2 class="section-title">Why Traditional Marketing Fails</h2>
+          <p class="section-desc">
+            Stop wasting budgets on generic boosting. Build a predictable, closed-loop acquisition engine.
+          </p>
+        </div>
+
+        <div class="compare-grid">
+          <!-- Traditional Flaws -->
+          <div class="compare-card flaws">
+            <h3>❌ The Common Pitfalls</h3>
+            <ul class="compare-list">
+              <li>
+                <span class="icon-cross">✕</span>
+                <span>Boosting social media posts without clear conversion tracking or sales funnels.</span>
+              </li>
+              <li>
+                <span class="icon-cross">✕</span>
+                <span>Buying shared listing portal leads where 10 other competitors call the same person.</span>
+              </li>
+              <li>
+                <span class="icon-cross">✕</span>
+                <span>Sending paid clicks to slow websites filled with distractions and no clear action.</span>
+              </li>
+              <li>
+                <span class="icon-cross">✕</span>
+                <span>Delayed customer follow-ups that cause interested buyers to buy elsewhere.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CyberAd Approach -->
+          <div class="compare-card solutions">
+            <h3>✓ The CyberAd Engine</h3>
+            <ul class="compare-list">
+              <li>
+                <span class="icon-check">✓</span>
+                <span><strong>100% Exclusive Leads:</strong> Enquiries generated belong solely to your business.</span>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <span><strong>High-Intent Targeting:</strong> Reaching buyers actively searching with budget ready.</span>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <span><strong>Custom Conversion Landing Pages:</strong> Laser-focused on inquiries and phone calls.</span>
+              </li>
+              <li>
+                <span class="icon-check">✓</span>
+                <span><strong>Automated WhatsApp Sync:</strong> Immediate notifications to your phone within seconds.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE WORK WITH -->
+    <section id="audience">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Target Clientele</span>
+          <h2 class="section-title">Who We Build Growth Systems For</h2>
+          <p class="section-desc">
+            Tailored digital marketing funnels built for businesses that require high-intent leads and direct customer calls.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-num">01 / LOCAL BUSINESSES</div>
+            <h4>Retail &amp; Local Stores</h4>
+            <p>Drive foot traffic, local map pack visibility, and seasonal promotion inquiries.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-num">02 / HEALTHCARE</div>
+            <h4>Clinics &amp; Doctors</h4>
+            <p>Generate qualified patient appointment bookings and consultation requests.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-num">03 / EDUCATION</div>
+            <h4>Schools &amp; Institutes</h4>
+            <p>Fill admission inquiries and seat registrations before batches close.</p>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-num">04 / REAL ESTATE</div>
+            <h4>Builders &amp; Developers</h4>
+            <p>Acquire serious property buyers for plotted layouts, apartments, and villas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STEP PROCESS -->
+    <section id="process" style="background: var(--bg-alt);">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Our Simple 4-Step Process</h2>
+          <p class="section-desc">
+            A proven framework that takes your campaigns from setup to consistent daily customer inquiries.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="step-number">1</div>
+            <h4>Market &amp; Audience Audit</h4>
+            <p>We analyze your local market, competitors, and target demographics to identify high-intent buyer keywords.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-number">2</div>
+            <h4>Landing Page &amp; Funnel Setup</h4>
+            <p>We build an ultra-fast, mobile-optimized landing page with direct WhatsApp and call integration.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-number">3</div>
+            <h4>Campaign Launch</h4>
+            <p>We deploy laser-targeted Google Search and Meta ad campaigns with verified conversion tracking.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="step-number">4</div>
+            <h4>Lead Delivery &amp; Optimization</h4>
+            <p>Inquiries are delivered in real time to your phone/CRM, and campaigns are optimized weekly for lower CPL.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / PREVIOUS PROGRAMME -->
+    <section class="proof-section">
+      <div class="container">
+        <div class="proof-box">
+          <div class="proof-grid">
+            <div class="proof-img-wrap" onclick="openLightbox('batch-1-graduates.jpg', 'El Curso Batch 1 at Pondicherry University')" title="Click to enlarge photo">
+              <img src="batch-1-graduates.jpg" alt="El Curso Batch 1 Graduates at Pondicherry University" loading="lazy" />
+            </div>
+            <div>
+              <div class="proof-tag">Track Record &amp; Foundation</div>
+              <h3 class="proof-title">El Curso · Batch 1 at Pondicherry University</h3>
+              <p class="proof-desc">
+                Conducted at the Department of Management Studies, Pondicherry University, in association with ACIC-PUSH. We train, build, and deploy high-performance marketing systems for business owners and students.
+              </p>
+              <div class="proof-links">
+                <a href="https://g.page/r/CctJ_MlMfCdREBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.88rem;padding:9px 18px;">
+                  ★ Read Google Reviews
+                </a>
+                <a href="/digital-marketing-beginners.html" class="btn btn-outline" style="font-size:0.88rem;padding:9px 18px;">
+                  View Programme Details →
+                </a>
+              </div>
             </div>
           </div>
-          
-          <!-- Note & Contact Button Beside the Photo -->
-          <div>
-            <div class="section-label" style="margin-bottom: 8px;" data-i18n="elCursoLabel">EL CURSO ┬╖ PONDICHERRY UNIVERSITY</div>
-            <p style="font-size: 1.05rem; color: var(--primary); font-weight: 500; line-height: 1.65; margin-bottom: 24px;" data-i18n="elCursoNote">
-              El Curso, Batch 1, is complete. A digital marketing course for beginners, held at Pondicherry University by CyberAd.in with ACIC Push. Thank you to the participants.
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Frequently Asked Questions</span>
+          <h2 class="section-title">Answers to Common Questions</h2>
+          <p class="section-desc">
+            Everything you need to know about starting your digital marketing campaign with CyberAd.in.
+          </p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4 class="faq-q">What is the minimum budget required to start?</h4>
+            <p class="faq-a">
+              We structure custom ad budgets based on your industry and location. Campaigns typically begin from small local tests to scalable multi-channel budgets, ensuring positive ROAS before expanding.
             </p>
-            <div>
-              <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-weight: 700; font-size: 0.95rem; border-radius: 9999px;" data-i18n="contactUsBtn">
-                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #25D366;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-                <span data-i18n="contactUsText">Contact us</span>
-              </a>
-            </div>
+          </div>
+
+          <div class="faq-item">
+            <h4 class="faq-q">How soon can we expect inquiries to start coming in?</h4>
+            <p class="faq-a">
+              Once landing pages and tracking APIs are deployed (usually within 3–5 business days), live ad campaigns on Meta and Google start generating inquiries within the first 24 to 48 hours.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4 class="faq-q">Are the leads exclusive to my business?</h4>
+            <p class="faq-a">
+              Yes, 100%. Unlike shared lead portals, all campaigns are run under your brand. Every lead submitted is routed directly and exclusively to your WhatsApp, phone, or CRM.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4 class="faq-q">How do I get in touch to start a campaign?</h4>
+            <p class="faq-a">
+              You can click the WhatsApp button to chat directly with us, or fill out the consultation form below. We will review your requirements and share a tailored strategy.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Google Business Profile Review Callout -->
-        <div style="background: #F8FAFC; border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; margin-top: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
-          <div style="display: flex; align-items: center; gap: 14px;">
-            <div style="width: 44px; height: 44px; border-radius: 10px; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-              <svg style="width: 24px; height: 24px;" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-            </div>
-            <div>
-              <div style="font-size: 0.95rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 6px;">
-                <span data-i18n="gbpSectionTitle">Google Reviews</span>
-                <span style="color: #F59E0B; font-size: 0.9rem;">ΓÿàΓÿàΓÿàΓÿàΓÿà</span>
+    <!-- CONTACT FORM SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag" style="background: rgba(30, 107, 255, 0.2); color: #93C5FD;">Get In Touch</span>
+          <h2 class="section-title">Ready to Scale Your Inquiries?</h2>
+          <p class="section-desc">
+            Tell us about your business goals and let's map out your custom digital marketing campaign.
+          </p>
+        </div>
+
+        <div class="contact-box-grid">
+          <!-- Form Card -->
+          <div class="form-card">
+            <h3>Request Strategy Consultation</h3>
+            <p>Fill out the form and our team will get back to you within 2 business hours.</p>
+
+            <form id="lead-form" onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" class="form-control" />
               </div>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin: 2px 0 0;" data-i18n="gbpSectionSub">Completed Batch 1? Share your experience on Google.</p>
+
+              <div class="form-group">
+                <label for="phone">Phone Number (WhatsApp)</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="business">Business Name / Location</label>
+                <input type="text" id="business" name="business" required placeholder="e.g. Apex Clinic, Chennai" class="form-control" />
+              </div>
+
+              <div class="form-group">
+                <label for="goal">Your Primary Goal</label>
+                <input type="text" id="goal" name="goal" placeholder="e.g. Need more patient appointments / sales leads" class="form-control" />
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;font-size:1.02rem;padding:14px;">
+                <span>Submit Consultation Request</span>
+              </button>
+
+              <div id="form-status" style="margin-top:14px;font-size:0.88rem;display:none;text-align:center;"></div>
+            </form>
+          </div>
+
+          <!-- Direct Info Card -->
+          <div class="contact-info-card">
+            <h3>Direct Contact Channels</h3>
+            <p>Prefer an instant conversation? Reach out directly via WhatsApp or email.</p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+                <div>
+                  <div class="info-label">WhatsApp Hotline</div>
+                  <div class="info-val">
+                    <a href="https://wa.me/918925693013" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF;text-decoration:underline;">+91 89256 93013</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <div>
+                  <div class="info-label">Official Email</div>
+                  <div class="info-val">
+                    <a href="mailto:hello@cyberad.in" style="color:#FFFFFF;">hello@cyberad.in</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <div>
+                  <div class="info-label">Operating Hours</div>
+                  <div class="info-val">Mon – Sat: 9:30 AM – 6:30 PM</div>
+                </div>
+              </div>
             </div>
-          </div>
-          <a href="https://g.page/r/CctJ_MlMfCdREBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 9px 16px; font-size: 0.85rem; font-weight: 700; border-color: #1E6BFF; color: #1E6BFF; display: inline-flex; align-items: center; gap: 6px;" data-i18n="gbpReviewCta">
-            <svg style="width:15px;height:15px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            Review us on Google ΓåÆ
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- COMMON QUESTIONS / FAQ -->
-  <section id="faq" style="background: var(--bg);">
-    <div class="container">
-      <div class="text-center">
-        <div class="section-label" data-i18n="faqLabel">Common Questions</div>
-        <h2 class="section-title" data-i18n="faqTitle">Everything You Need to Know</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h4 data-i18n="faq1Q">How does CyberAd help businesses grow?</h4>
-          <p data-i18n="faq1A">We build and run end-to-end digital acquisition systems ΓÇö from high-converting landing pages and targeted paid ads to WhatsApp lead closing and customer retention.</p>
-        </div>
-        <div class="faq-item">
-          <h4 data-i18n="faq2Q">Is this for business owners and marketing managers?</h4>
-          <p data-i18n="faq2A">Yes. We work with business owners, marketing leaders, clinics, coaching centres, and service firms who need measurable sales and customer enquiries.</p>
-        </div>
-        <div class="faq-item">
-          <h4 data-i18n="faq3Q">I already run ads and post on social media. Why am I not seeing enough sales?</h4>
-          <p data-i18n="faq3A">Posting and random ads without a structured commercial offer and direct checkout path result in wasted effort. We build the complete chain: attention ΓåÆ offer ΓåÆ payment ΓåÆ repeat.</p>
-        </div>
-        <div class="faq-item">
-          <h4 data-i18n="faq4Q">How do I get in touch with CyberAd.in?</h4>
-          <p data-i18n="faq4A">You can reach us directly via WhatsApp at +91 89256 93013 or email us at hello@cyberad.in. We are happy to discuss your business and marketing goals.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CONTACT SECTION (PROMINENT ELECTRIC BLUE ON DEEP NAVY) -->
-  <section class="final-cta" id="contact" style="background: #0B1D3A; color: #FFFFFF; padding: 80px 0;">
-    <div class="container">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <div class="badge" style="background: rgba(30, 107, 255, 0.2); color: #93C5FD; border-color: rgba(147, 197, 253, 0.3); margin-bottom: 16px;" data-i18n="contactBadge">
-          LetΓÇÖs Connect
-        </div>
-        <h2 style="color: #FFFFFF; font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 16px; line-height: 1.25;" data-i18n="contactSectionTitle">
-          Need Digital Marketing Help for Your Business?
-        </h2>
-        <p style="color: rgba(255, 255, 255, 0.82); font-size: 1.08rem; max-width: 640px; margin: 0 auto 36px; line-height: 1.6;" data-i18n="contactSectionDesc">
-          Whether you want to build a high-performing digital marketing engine, have a doubt, or want to reach CyberAd.in ΓÇö connect with our team directly.
-        </p>
-
-        <!-- Prominent Contact Button: Electric Blue on Deep Navy -->
-        <div style="margin-bottom: 40px;">
-          <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="background: #1E6BFF; color: #FFFFFF; border: none; padding: 16px 36px; font-size: 1.1rem; font-weight: 800; border-radius: 9999px; box-shadow: 0 6px 20px rgba(30, 107, 255, 0.4); display: inline-flex; align-items: center; gap: 10px;" data-i18n="contactUsBtn">
-            <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: #25D366;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-            <span data-i18n="contactUsText">Contact us</span>
-          </a>
-        </div>
-
-        <!-- Direct Contact Channels -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; text-align: left;">
-          <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 18px;">
-            <div style="font-size: 0.8rem; color: #93C5FD; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">WhatsApp &amp; Phone</div>
-            <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" style="color: #FFFFFF; font-weight: 700; font-size: 1rem;">+91 89256 93013</a>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 18px;">
-            <div style="font-size: 0.8rem; color: #93C5FD; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Direct Email</div>
-            <a href="mailto:hello@cyberad.in" style="color: #FFFFFF; font-weight: 700; font-size: 1rem;">hello@cyberad.in</a>
-          </div>
-          <div style="background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 12px; padding: 18px;">
-            <div style="font-size: 0.8rem; color: #93C5FD; font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">Location</div>
-            <span style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem; line-height: 1.4;">Dept. of Management Studies, Pondicherry University</span>
+            <a 
+              href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-whatsapp" 
+              style="width:100%;font-size:1.02rem;padding:14px;"
+            >
+              <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#FFFFFF;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+              <span>Instant WhatsApp Chat</span>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- STICKY BOTTOM WHATSAPP CTA BAR -->
-  <aside id="sticky-bottom-cta" class="sticky-bottom-cta" aria-label="WhatsApp consultation bar">
-    <div class="sticky-bottom-inner">
-      <div class="bottom-cta-text-group">
-        <div class="bottom-cta-title" data-i18n="bottomCtaTitle">Need digital marketing help or have a question?</div>
-        <div class="bottom-cta-sub" data-i18n="bottomCtaSub">Talk directly to CyberAd.in.</div>
-      </div>
-      <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-bottom">
-        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-        <span data-i18n="contactUsText">Contact us</span>
-      </a>
-    </div>
-  </aside>
+    </section>
+  </main>
 
-  <!-- SPACIOUS FOOTER -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <!-- Col 1: Brand & Academic Collab -->
-        <div class="footer-brand">
-          <img src="https://assets.cyberad.in/cyberad-whatsapp.png" alt="CyberAd.in" />
-          <p data-i18n="footerBrandText">Delivered in association with ACIC-PUSH and Cyber Enterprises, at the Department of Management Studies, Pondicherry University.</p>
-          <div class="collab-tag">
-            <span>ΓùÅ</span>
-            <span data-i18n="footerCourseText">Digital Marketing &amp; Innovation</span>
-          </div>
+        <div>
+          <div class="footer-brand">CyberAd<span>.in</span></div>
+          <p style="max-width: 320px; line-height: 1.6; margin-bottom: 12px;">
+            Performance digital marketing systems for businesses, healthcare clinics, and institutions.
+          </p>
+          <p style="color: #64748B; font-size: 0.82rem;">
+            Affiliated with Cyber Enterprises.
+          </p>
         </div>
 
-        <!-- Col 2: Navigation Links -->
         <div class="footer-col">
-          <h5 data-i18n="footerColProg">Navigation</h5>
-          <a href="#what-we-do" data-i18n="navServices">What We Do</a>
-          <a href="#who-its-for" data-i18n="navWho">Who We Help</a>
-          <a href="#what-changes" data-i18n="navFramework">Framework</a>
-          <a href="#outcomes" data-i18n="navOutcomes">Outcomes</a>
-          <a href="#el-curso" data-i18n="navElCurso">El Curso</a>
-          <a href="#faq" data-i18n="navFaq">FAQ</a>
-          <a href="#contact" data-i18n="navContact">Contact ΓåÆ</a>
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#comparison">Why Us</a></li>
+            <li><a href="#process">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
         </div>
 
-        <!-- Col 3: Direct Contact & WhatsApp -->
         <div class="footer-col">
-          <h5 data-i18n="footerColContact">Contact &amp; WhatsApp</h5>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-            <a href="https://wa.me/918925693013?text=Hello%20CyberAd.in%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener noreferrer" style="color:#38BDF8; font-weight:700;">+91 89256 93013</a>
-          </div>
-          <a href="mailto:hello@cyberad.in">hello@cyberad.in</a>
-          <a href="mailto:support@cyberad.in">support@cyberad.in</a>
-          <a href="https://g.page/r/CctJ_MlMfCdREBM/review" target="_blank" rel="noopener noreferrer" style="color: #FBBF24; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none;">
-            <svg style="width: 15px; height: 15px; fill: currentColor;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-            <span data-i18n="footerGbpLink">Review us on Google</span>
-          </a>
-          <p style="font-size:0.80rem; color:#64748B; margin-top:8px;" data-i18n="footerLocation">Dept. of Management Studies, Pondicherry University, Puducherry ΓÇô 605014</p>
-        </div>
-
-        <!-- Col 4: Business & Legal -->
-        <div class="footer-col">
-          <h5 data-i18n="footerColLegal">Business &amp; Legal</h5>
-          <a href="/privacy" data-i18n="footerPrivacy">Privacy Policy</a>
-          <div style="margin-top:12px;">
-            <span style="font-size:0.75rem; color:#64748B; display:block; margin-bottom:4px;">Official Registrations:</span>
-            <div class="legal-badges" style="margin-top:6px;">
-              <span>GSTIN: 33APPPC7049M1ZI</span>
-              <span>UDYAM: TN-04-0115585</span>
-            </div>
-          </div>
+          <h5>Contact</h5>
+          <ul>
+            <li>WhatsApp: <a href="https://wa.me/918925693013">+91 89256 93013</a></li>
+            <li>Email: <a href="mailto:hello@cyberad.in">hello@cyberad.in</a></li>
+            <li>Location: Puducherry – 605014</li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div data-i18n-html="footerRights">┬⌐ 2026 CyberAd.in / Cyber Enterprises. All rights reserved. ΓÇó <a href="/privacy" style="color:#93C5FD;text-decoration:underline;">Privacy Policy</a></div>
-        <div class="legal-badges">
-          <span>Cyber Enterprises</span>
-          <span>Pondicherry University</span>
+      <div class="legal-bottom">
+        <div class="legal-tags">
+          <span>GSTIN: 33APPPC7049M1ZI</span>
+          <span>UDYAM: TN-04-0115585</span>
+        </div>
+        <div>
+          © 2026 CyberAd.in. All rights reserved.
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- STICKY MOBILE CTA -->
+  <aside class="sticky-mobile-cta" aria-label="Confirm on WhatsApp">
+    <a 
+      href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="sticky-mobile-btn"
+    >
+      <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.079-2.128-.514-.999-.413-1.748-1.226-2.027-1.603-.06-.08-.553-.736-.553-1.402 0-.667.35-1.002.476-1.135.127-.133.277-.166.37-.166.092 0 .185.002.266.006.086.004.2-.033.313.238.115.277.394.962.428 1.032.035.07.058.152.012.244-.046.092-.07.15-.139.231-.07.081-.146.181-.209.243-.07.07-.143.146-.062.285.081.139.36.95 1.155 1.658.468.417.863.546 1.001.615.139.07.22.058.301-.035.081-.093.347-.404.44-.543.092-.139.185-.116.312-.07.127.046.809.381.948.45.139.07.231.104.266.162.035.058.035.335-.109.74zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.956-1.399C8.397 21.492 10.144 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+      <span>Chat on WhatsApp</span>
+    </a>
+  </aside>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="image-lightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Photo Lightbox">
+    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">✕</button>
+      <img id="lightbox-img" src="" alt="Full view" class="lightbox-image" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
   <script>
-    // =========================================================================
-    // I18N BILINGUAL TRANSLATION DICTIONARY (English & Tamil)
-    // -------------------------------------------------------------------------
-    const TRANSLATIONS = {
-      en: {
-        pageTitle: "CyberAd.in | Digital Marketing & Growth Solutions",
-        pageDesc: "CyberAd.in helps business owners, clinics, institutions, and founders build practical digital marketing systems that generate high-intent customers and measurable sales.",
-        navServices: "What We Do",
-        navWho: "Who We Help",
-        navFramework: "Framework",
-        navOutcomes: "Outcomes",
-        navElCurso: "El Curso",
-        navFaq: "FAQ",
-        navContact: "Contact",
-        contactUsText: "Contact us",
-        bottomCtaTitle: "Need digital marketing help or have a question?",
-        bottomCtaSub: "Talk directly to CyberAd.in.",
-        heroBadge: "<span>ΓùÅ</span> CyberAd.in ┬╖ Digital Marketing &amp; Innovation",
-        heroTitle: "Digital Marketing Built for <span style=\"color: var(--accent);\">Real Business Growth.</span>",
-        heroSub: "We help business owners, clinics, institutions, and founders build practical marketing systems ΓÇö attracting the right customers, generating qualified enquiries, and increasing revenue.",
-        heroPrimaryBtn: "Contact us",
-        heroSecondaryBtn: "What We Do Γåô",
-        heroCardEyebrow: "What We Deliver",
-        heroCardTitle: "Measurable Systems for Every Stage of Customer Growth",
-        heroPillar1Title: "Attention & Customer Acquisition",
-        heroPillar1Desc: "Paid Ads (Meta & Google), Local Search, and inbound commercial positioning.",
-        heroPillar2Title: "High-Converting Web & Funnels",
-        heroPillar2Desc: "Clear value propositions, fast loading pages, and seamless checkout integrations.",
-        heroPillar3Title: "WhatsApp Closing & Retention",
-        heroPillar3Desc: "Scripts, messaging funnels, and follow-up loops that turn enquiries into repeat buyers.",
-        servicesLabel: "WHAT WE DO",
-        servicesTitle: "Complete Digital Marketing & Sales Engines",
-        servicesSub: "We don't do vanity metrics or random posting. We design and manage systems that connect awareness directly to revenue.",
-        service1Title: "Performance Marketing & Ads",
-        service1Desc: "Data-backed Meta and Google advertising campaigns targeted at high-intent local and regional buyers.",
-        service2Title: "Conversion Web Design",
-        service2Desc: "Fast, mobile-optimized landing pages and websites engineered to capture leads and close sales.",
-        service3Title: "Local SEO & Google Profile",
-        service3Desc: "Dominating Google Maps and local search so nearby customers find you first when searching for your service.",
-        service4Title: "WhatsApp Sales Automation",
-        service4Desc: "Structured WhatsApp scripts, quick-reply routing, and automated payment links to rapidly close inbound leads.",
-        problemLabel: "The Reality Check",
-        problemTitle: "Why Most ΓÇ£Digital MarketingΓÇ¥ Does Not Grow Sales",
-        problemSub: "You post. You boost. You hire someone. The enquiry trickle stays the same. Nobody showed you the path from first glance to payment.",
-        problem1Title: "1. Posting is not a plan",
-        problem1Desc: "Content without an offer and a way to pay is decoration.",
-        problem2Title: "2. Ads without an offer waste money",
-        problem2Desc: "Traffic onto a weak message does not become fees.",
-        problem3Title: "3. A freelancer without a brief produces posts, not sales",
-        problem3Desc: "If you cannot explain the journey, you cannot direct the work.",
-        problem4Title: "4. Hesitation when asking for money",
-        problem4Desc: "That hesitation is why people inquire and disappear without completing a purchase.",
-        whoLabel: "WHO WE HELP",
-        whoTitle: "Built for Growing Businesses & Marketers",
-        whoDesc: "Small business owners, marketing managers, and founders who need digital marketing to generate actual customer revenue.",
-        whoCat1Title: "Retail & Local Shops",
-        whoCat1Desc: "Footfall, local awareness, and repeat buyer WhatsApp catalogues.",
-        whoCat2Title: "Clinics & Healthcare",
-        whoCat2Desc: "High-trust patient acquisition, Google Maps authority, and appointment booking.",
-        whoCat3Title: "Institutions & Coaching",
-        whoCat3Desc: "Student enrollment funnels, webinar registrations, and structured payment links.",
-        whoCat4Title: "Service & B2B Firms",
-        whoCat4Desc: "Direct lead generation, executive positioning, and structured proposal closing.",
-        changesLabel: "THE FRAMEWORK",
-        changesTitle: "The Customer Journey from Attention to Revenue",
-        changesSub: "A practical, structured shift from random tactics to a working sales system.",
-        pillar1Title: "1. Attention & Trust",
-        pillar1Desc: "Attention ΓåÆ interest ΓåÆ trust ΓåÆ offer ΓåÆ payment ΓåÆ repeat. Posts, WhatsApp, and payments stop being separate hobbies.",
-        pillar2Title: "2. Compelling Commercial Offer",
-        pillar2Desc: "Present what you sell in clear, plain language that strangers immediately understand and value.",
-        pillar3Title: "3. Fast Checkout & Retention",
-        pillar3Desc: "Instant digital payments + structured follow-up loops that turn single sales into repeat revenue.",
-        outcomesLabel: "PRACTICAL RESULTS",
-        outcomesTitle: "5 Tangible Assets in Every System We Build",
-        outcomesSub: "Clear, measurable components that bring predictability to your marketing.",
-        outcome1Title: "New Customer Acquisition Path",
-        outcome1Desc: "A clear, repeatable roadmap showing how a stranger finds you, trusts you, and becomes a client.",
-        outcome2Title: "High-Converting Commercial Offer",
-        outcome2Desc: "A premium offer written in simple language that clearly sets you apart from competitors.",
-        outcome3Title: "WhatsApp & Call Closing Scripts",
-        outcome3Desc: "Proven conversation scripts to handle questions, build confidence, and close deals effortlessly.",
-        outcome4Title: "Live Digital Payment Links",
-        outcome4Desc: "Frictionless digital payment links to collect advance fees without needing technical developers.",
-        elCursoLabel: "EL CURSO ┬╖ PONDICHERRY UNIVERSITY",
-        elCursoNote: "El Curso, Batch 1, is complete. A digital marketing course for beginners, held at Pondicherry University by CyberAd.in with ACIC Push. Thank you to the participants.",
-        clickToEnlarge: "Click to Zoom",
-        gbpSectionTitle: "Google Reviews",
-        gbpSectionSub: "Completed Batch 1? Share your experience on Google.",
-        gbpReviewCta: "Review us on Google ΓåÆ",
-        faqLabel: "Common Questions",
-        faqTitle: "Everything You Need to Know",
-        faq1Q: "How does CyberAd help businesses grow?",
-        faq1A: "We build and run end-to-end digital acquisition systems ΓÇö from high-converting landing pages and targeted paid ads to WhatsApp lead closing and customer retention.",
-        faq2Q: "Is this for business owners and marketing managers?",
-        faq2A: "Yes. We work with business owners, marketing leaders, clinics, coaching centres, and service firms who need measurable sales and customer enquiries.",
-        faq3Q: "I already run ads and post on social media. Why am I not seeing enough sales?",
-        faq3A: "Posting and random ads without a structured commercial offer and direct checkout path result in wasted effort. We build the complete chain: attention ΓåÆ offer ΓåÆ payment ΓåÆ repeat.",
-        faq4Q: "How do I get in touch with CyberAd.in?",
-        faq4A: "You can reach us directly via WhatsApp at +91 89256 93013 or email us at hello@cyberad.in. We are happy to discuss your business and marketing goals.",
-        contactBadge: "LetΓÇÖs Connect",
-        contactSectionTitle: "Need Digital Marketing Help for Your Business?",
-        contactSectionDesc: "Whether you want to build a high-performing digital marketing engine, have a doubt, or want to reach CyberAd.in ΓÇö connect with our team directly.",
-        contactUsBtn: "Contact us",
-        footerBrandText: "Delivered in association with ACIC-PUSH and Cyber Enterprises, at the Department of Management Studies, Pondicherry University.",
-        footerCourseText: "Digital Marketing & Innovation",
-        footerColProg: "Navigation",
-        footerColContact: "Contact & WhatsApp",
-        footerColLegal: "Business & Legal",
-        footerLocation: "Dept. of Management Studies, Pondicherry University, Puducherry ΓÇô 605014",
-        footerPrivacy: "Privacy Policy",
-        footerRights: "┬⌐ 2026 CyberAd.in / Cyber Enterprises. All rights reserved. ΓÇó <a href=\"/privacy\" style=\"color:#93C5FD;text-decoration:underline;\">Privacy Policy</a>",
-        footerGbpLink: "Review us on Google"
-      },
-      ta: {
-        pageTitle: "CyberAd.in | α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì & α«╡α«úα«┐α«ò α«╡α«│α«░α»ìα«Üα»ìα«Üα«┐ α«ñα»Çα«░α»ìα«╡α»üα«òα«│α»ì",
-        pageDesc: "α«╡α«úα«┐α«ò α«ëα«░α«┐α««α»êα«»α«╛α«│α«░α»ìα«òα«│α»ì, α«òα«┐α«│α«┐α«⌐α«┐α«òα»ìα«òα»üα«òα«│α»ì, α«òα«▓α»ìα«╡α«┐ α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¿α«┐α«▒α»üα«╡α«⌐α«░α»ìα«òα«│α»üα«òα»ìα«òα»ü α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»êα«»α»üα««α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α»êα«»α»üα««α»ì α«àα«ñα«┐α«òα«░α«┐α«òα»ìα«òα»üα««α»ì α«¿α«ƒα»êα««α»üα«▒α»ê α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì α«àα««α»êα«¬α»ìα«¬α»üα«òα«│α»ê CyberAd.in α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«òα«┐α«▒α«ñα»ü.",
-        navServices: "α«¿α«╛α«Öα»ìα«òα«│α»ì α«Üα»åα«»α»ìα«╡α«ñα»ü",
-        navWho: "α«»α«╛α«░α»üα«òα»ìα«òα»ü",
-        navFramework: "α«òα«ƒα»ìα«ƒα««α»êα«¬α»ìα«¬α»ü",
-        navOutcomes: "α««α»üα«ƒα«┐α«╡α»üα«òα«│α»ì",
-        navElCurso: "El Curso",
-        navFaq: "α«òα»çα«│α»ìα«╡α«┐α«òα«│α»ì",
-        navContact: "α«ñα»èα«ƒα«░α»ìα«¬α»ü",
-        contactUsText: "α«Äα«Öα»ìα«òα«│α»êα«ñα»ì α«ñα»èα«ƒα«░α»ìα«¬α»ü α«òα»èα«│α»ìα«│",
-        bottomCtaTitle: "α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì α«ëα«ñα«╡α«┐ α«ñα»çα«╡α»êα«»α«╛ α«àα«▓α»ìα«▓α«ñα»ü α«Üα«¿α»ìα«ñα»çα«òα«Öα»ìα«òα«│α»ì α«ëα«│α»ìα«│α«ñα«╛?",
-        bottomCtaSub: "CyberAd.in α«ëα«ƒα«⌐α»ì α«¿α»çα«░α«ƒα«┐α«»α«╛α«ò α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ìα«¬α«┐α«▓α»ì α«¬α»çα«Üα»üα«Öα»ìα«òα«│α»ì.",
-        heroBadge: "<span>ΓùÅ</span> CyberAd.in ┬╖ α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì &amp; α«¬α»üα«ñα»ìα«ñα«╛α«òα»ìα«òα««α»ì",
-        heroTitle: "α«ëα«úα»ìα««α»êα«»α«╛α«⌐ α«╡α«úα«┐α«ò α«╡α«│α«░α»ìα«Üα»ìα«Üα«┐α«òα»ìα«òα«╛α«⌐ <span style=\"color: var(--accent);\">α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì.</span>",
-        heroSub: "α«╡α«úα«┐α«ò α«ëα«░α«┐α««α»êα«»α«╛α«│α«░α»ìα«òα«│α»ì, α««α«░α»üα«ñα»ìα«ñα»üα«╡α«░α»ìα«òα«│α»ì, α«¬α«»α«┐α«▒α»ìα«Üα«┐ α««α»êα«»α«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¿α«┐α«▒α»üα«╡α«⌐α«░α»ìα«òα«│α»üα«òα»ìα«òα»ü α«Üα«░α«┐α«»α«╛α«⌐ α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»ê α«êα«░α»ìα«ñα»ìα«ñα»ü, α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα«┐, α«╡α«░α»üα«╡α«╛α«»α»ê α«ëα«»α«░α»ìα«ñα»ìα«ñα»üα««α»ì α«Äα«│α«┐α«» α«╡α«úα«┐α«ò α«àα««α»êα«¬α»ìα«¬α»üα«òα«│α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«òα«┐α«▒α»ïα««α»ì.",
-        heroPrimaryBtn: "α«Äα«Öα»ìα«òα«│α»êα«ñα»ì α«ñα»èα«ƒα«░α»ìα«¬α»ü α«òα»èα«│α»ìα«│",
-        heroSecondaryBtn: "α«¿α«╛α«Öα»ìα«òα«│α»ì α«Üα»åα«»α»ìα«╡α«ñα»ü Γåô",
-        heroCardEyebrow: "α«¿α«╛α«Öα»ìα«òα«│α»ì α«╡α«┤α«Öα»ìα«òα»üα«╡α«ñα»ü",
-        heroCardTitle: "α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì α«╡α«│α«░α»ìα«Üα»ìα«Üα«┐α«òα»ìα«òα«╛α«⌐ α«¿α«ƒα»êα««α»üα«▒α»ê α«àα««α»êα«¬α»ìα«¬α»üα«òα«│α»ì",
-        heroPillar1Title: "α«òα«╡α«⌐ α«êα«░α»ìα«¬α»ìα«¬α»ü & α«¬α»üα«ñα«┐α«» α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»ì",
-        heroPillar1Desc: "Meta & Google α«╡α«┐α«│α««α»ìα«¬α«░α«Öα»ìα«òα«│α»ì, Local Search α««α«▒α»ìα«▒α»üα««α»ì α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì α«Üα»çα«░α»ìα«òα»ìα«òα»ê α«ëα«ñα»ìα«ñα«┐α«òα«│α»ì.",
-        heroPillar2Title: "α«àα«ñα«┐α«ò α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α»êα«ñα»ì α«ñα«░α»üα««α»ì α«çα«úα»êα«»α«ñα«│α«Öα»ìα«òα«│α»ì",
-        heroPillar2Desc: "α«ñα»åα«│α«┐α«╡α«╛α«⌐ α«Üα«▓α»üα«òα»êα«òα«│α»ì, α«àα«ñα«┐α«╡α»çα«ò α«¬α«òα»ìα«òα«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¿α»çα«░α«ƒα«┐ α«òα«ƒα»ìα«ƒα«ú α«çα«úα»êα«¬α»ìα«¬α»üα«òα«│α»ì.",
-        heroPillar3Title: "α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»ê & α«ñα»èα«ƒα«░α»ì α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì",
-        heroPillar3Desc: "α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»ê α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α«╛α«ò α««α«╛α«▒α»ìα«▒α»üα««α»ì α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«ëα«░α»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«åα«ƒα»ìα«ƒα»ïα««α»çα«╖α«⌐α»ì.",
-        servicesLabel: "α«¿α«╛α«Öα»ìα«òα«│α»ì α«Üα»åα«»α»ìα«╡α«ñα»ü",
-        servicesTitle: "α««α»üα«┤α»üα««α»êα«»α«╛α«⌐ α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì & α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«àα««α»êα«¬α»ìα«¬α»üα«òα«│α»ì",
-        servicesSub: "α«╡α»åα«▒α»üα««α»ì α«▓α»êα«òα»ìα«òα»üα«òα«│α»ì α«àα«▓α»ìα«▓α«ñα»ü α«¬α«ñα«┐α«╡α»üα«òα«│α»ì α«àα«▓α»ìα«▓; α«òα«╡α«⌐ α«êα«░α»ìα«¬α»ìα«¬α»ê α«¿α»çα«░α«ƒα«┐α«»α«╛α«ò α«╡α«úα«┐α«ò α«╡α«░α»üα«╡α«╛α«»α«╛α«ò α««α«╛α«▒α»ìα«▒α»üα««α»ì α«àα««α»êα«¬α»ìα«¬α»üα«òα«│α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«òα«┐α«▒α»ïα««α»ì.",
-        service1Title: "α«╡α«┐α«│α««α»ìα«¬α«░α«Öα»ìα«òα«│α»ì & α«Üα»åα«»α«▓α»ìα«ñα«┐α«▒α«⌐α»ì α«Üα«¿α»ìα«ñα»êα«¬α»ìα«¬α«ƒα»üα«ñα»ìα«ñα«▓α»ì",
-        service1Desc: "α«ëα«│α»ìα«│α»éα«░α»ì α««α«▒α»ìα«▒α»üα««α»ì α«¬α«┐α«░α«╛α«¿α»ìα«ñα«┐α«» α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»ê α«çα«▓α«òα»ìα«òα«╛α«òα«òα»ì α«òα»èα«úα»ìα«ƒ Meta & Google α«╡α«┐α«│α««α»ìα«¬α«░α«Öα»ìα«òα«│α»ì.",
-        service2Title: "α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«Üα«╛α«░α»ìα«¿α»ìα«ñ α«çα«úα»êα«»α«ñα«│ α«╡α«ƒα«┐α«╡α««α»êα«¬α»ìα«¬α»ü",
-        service2Desc: "α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»êα«»α»üα««α»ì α««α»üα«⌐α»ìα«¬α«ñα«┐α«╡α»üα«òα«│α»êα«»α»üα««α»ì α«ëα«ƒα«⌐α«ƒα«┐α«»α«╛α«òα«¬α»ì α«¬α»åα«▒α«òα»ìα«òα»éα«ƒα«┐α«» α«àα«ñα«┐α«╡α»çα«ò α«çα«úα»êα«»α«ñα«│α«Öα»ìα«òα«│α»ì.",
-        service3Title: "Google Maps & α«ëα«│α»ìα«│α»éα«░α»ì α«Äα«╕α»ìα«Üα«┐α«ô",
-        service3Desc: "α«ëα«Öα»ìα«òα«│α»ì α«¬α«òα»üα«ñα«┐α«»α»êα«Üα»ì α«Üα»üα«▒α»ìα«▒α«┐α«»α»üα«│α»ìα«│ α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»ì α«ñα»çα«ƒα»üα««α»ì α«¬α»ïα«ñα»ü α«ëα«Öα»ìα«òα«│α»ê α««α»üα«ñα«▓α«┐α«▓α»ì α«òα«╛α«úα»üα««α»ì α«òα«ƒα»ìα«ƒα««α»êα«¬α»ìα«¬α»ü.",
-        service4Title: "α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«åα«ƒα»ìα«ƒα»ïα««α»çα«╖α«⌐α»ì",
-        service4Desc: "α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»ê α«╡α«┐α«░α»êα«╡α«╛α«ò α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α«╛α«ò α««α«╛α«▒α»ìα«▒α»üα««α»ì α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«ëα«░α»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«òα«ƒα»ìα«ƒα«ú α«çα«úα»êα«¬α»ìα«¬α»üα«òα«│α»ì.",
-        problemLabel: "α«ëα«úα»ìα««α»ê α«¿α«┐α«▓α»ê",
-        problemTitle: "α«¬α»åα«░α»üα««α»ìα«¬α«╛α«▓α«╛α«⌐ α«╡α«┐α«│α««α»ìα«¬α«░α«Öα»ìα«òα«│α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α»êα«ñα»ì α«ñα«░α«╛α«ñα«ñα»ü α«Åα«⌐α»ì?",
-        problemSub: "α«¿α»Çα«Öα»ìα«òα«│α»ì α«¬α»ïα«╕α»ìα«ƒα»ì α«Üα»åα«»α»ìα«òα«┐α«▒α»Çα«░α»ìα«òα«│α»ì. α«¬α»éα«╕α»ìα«ƒα»ì α«Üα»åα«»α»ìα«òα«┐α«▒α»Çα«░α»ìα«òα«│α»ì. α«»α«╛α«░α»êα«»α»ï α«¬α«úα«┐α«òα»ìα«òα««α«░α»ìα«ñα»ìα«ñα»üα«òα«┐α«▒α»Çα«░α»ìα«òα«│α»ì. α«åα«⌐α«╛α«▓α»ì α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»ì α«òα»üα«▒α»êα«╡α»ü. α««α»üα«ñα«▓α»ì α«¬α«╛α«░α»ìα«╡α»êα«»α«┐α«▓α»ì α«çα«░α»üα«¿α»ìα«ñα»ü α«òα«ƒα»ìα«ƒα«úα««α»ì α«╡α«░α»ê α«¬α«╛α«ñα»ê α«àα««α»êα«»α«╡α«┐α«▓α»ìα«▓α»ê.",
-        problem1Title: "1. α«╡α»åα«▒α»üα««α»ì α«¬α«ñα«┐α«╡α»üα«òα«│α»ì α««α«ƒα»ìα«ƒα»üα««α»ì α«╡α«úα«┐α«òα«ñα»ì α«ñα«┐α«ƒα»ìα«ƒα««α»ì α«àα«▓α»ìα«▓",
-        problem1Desc: "α«Üα«▓α»üα«òα»êα«»α»üα««α»ì, α«¬α«úα«ñα»ìα«ñα»êα«¬α»ì α«¬α»åα«▒α»üα«╡α«ñα«▒α»ìα«òα«╛α«⌐ α«╡α«┤α«┐α«»α»üα««α»ì α«çα«▓α»ìα«▓α«╛α«ñ α«òα«⌐α»ìα«ƒα»åα«⌐α»ìα«ƒα»ì α«╡α»åα«▒α»üα««α»ì α«àα«▓α«Öα»ìα«òα«╛α«░α««α»ì α««α«ƒα»ìα«ƒα»üα««α»ç.",
-        problem2Title: "2. α«Üα«▓α»üα«òα»ê α«çα«▓α»ìα«▓α«╛α«ñ α«╡α«┐α«│α««α»ìα«¬α«░α««α»ì α«¬α«ú α«╡α«┐α«░α«»α««α»ì",
-        problem2Desc: "α«ñα»åα«│α«┐α«╡α«▒α»ìα«▒ α«Üα»åα«»α»ìα«ñα«┐α«»α«┐α«▓α»ì α«Üα»åα«▓α»üα«ñα»ìα«ñα«¬α»ìα«¬α«ƒα»üα««α»ì α«╡α«┐α«│α««α»ìα«¬α«░α«¬α»ì α«¬α«úα««α»ì α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»ê α«êα«░α»ìα«òα»ìα«òα«╛α«ñα»ü.",
-        problem3Title: "3. α«ñα»åα«│α«┐α«╡α«╛α«⌐ α«╡α«┐α«│α«òα»ìα«òα««α»ì α«çα«⌐α»ìα«▒α«┐ α«Üα»åα«»α»ìα«»α«¬α»ìα«¬α«ƒα»üα««α»ì α«╡α»çα«▓α»ê α«¬α«▓α«⌐α»ì α«ñα«░α«╛α«ñα»ü",
-        problem3Desc: "α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«¬α»ì α«¬α«╛α«ñα»êα«»α»ê α«¿α»Çα«Öα»ìα«òα«│α»ì α«ñα»åα«│α«┐α«╡α«╛α«òα«¬α»ì α«¬α»üα«░α«┐α«¿α»ìα«ñα»ü α«òα»èα«│α»ìα«│α«╛α«╡α«┐α«ƒα»ìα«ƒα«╛α«▓α»ì α«¬α«úα«┐α«»α»ê α«╡α«┤α«┐α«¿α«ƒα«ñα»ìα«ñ α««α»üα«ƒα«┐α«»α«╛α«ñα»ü.",
-        problem4Title: "4. α«òα«ƒα»ìα«ƒα«úα««α»ì α«òα»çα«ƒα»ìα«òα»üα««α»ì α«¬α»ïα«ñα»ü α«Åα«▒α»ìα«¬α«ƒα»üα««α»ì α«ñα«»α«òα»ìα«òα««α»ì",
-        problem4Desc: "α«àα«¿α»ìα«ñ α«ñα«»α«òα»ìα«òα««α»ç α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»ì α«╡α«┐α«Üα«╛α«░α«┐α«ñα»ìα«ñα»üα«╡α«┐α«ƒα»ìα«ƒα»ü α««α«▒α»êα«¿α»ìα«ñα»ü α«¬α»ïα«╡α«ñα«▒α»ìα«òα»üα«òα»ì α«òα«╛α«░α«úα««α»ì.",
-        whoLabel: "α«»α«╛α«░α»üα«òα»ìα«òα»ü α«çα«ñα»ü α«¬α»èα«░α»üα«¿α»ìα«ñα»üα««α»ì",
-        whoTitle: "α«╡α«úα«┐α«ò α«ëα«░α«┐α««α»êα«»α«╛α«│α«░α»ìα«òα«│α»ì & α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì α«¬α«úα«┐α«»α«╛α«│α«░α»ìα«òα«│α»üα«òα»ìα«òα»ü",
-        whoDesc: "α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α«╡α«┤α«┐α«»α«╛α«ò α«ëα«úα»ìα««α»êα«»α«╛α«⌐ α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ìα«òα«│α»êα«»α»üα««α»ì α«╡α«░α»üα«╡α«╛α«»α»êα«»α»üα««α»ì α«¬α»åα«▒ α«╡α«┐α«░α»üα««α»ìα«¬α»üα««α»ì α«Üα«┐α«▒α»ü α«╡α«úα«┐α«ò α«ëα«░α«┐α««α»êα«»α«╛α«│α«░α»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α««α»çα«▓α«╛α«│α«░α»ìα«òα«│α»üα«òα»ìα«òα»ü.",
-        whoCat1Title: "α«Üα«┐α«▓α»ìα«▓α«▒α»ê α«╡α«úα«┐α«òα««α»ì & α«ëα«│α»ìα«│α»éα«░α»ì α«òα«ƒα»êα«òα«│α»ì",
-        whoCat1Desc: "α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì α«╡α«░α»üα«òα»ê, α«ëα«│α»ìα«│α»éα«░α»ì α«╡α«┐α«┤α«┐α«¬α»ìα«¬α»üα«úα«░α»ìα«╡α»ü α««α«▒α»ìα«▒α»üα««α»ì α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«òα»çα«ƒα»ìα«▓α«╛α«òα»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»ê.",
-        whoCat2Title: "α««α«░α»üα«ñα»ìα«ñα»üα«╡α««α«⌐α»êα«òα«│α»ì & α«òα«┐α«│α«┐α«⌐α«┐α«òα»ìα«òα»üα«òα«│α»ì",
-        whoCat2Desc: "α«¿α««α»ìα«¬α«òα««α«╛α«⌐ α«¿α»ïα«»α«╛α«│α«┐ α«Üα»çα«░α»ìα«òα»ìα«òα»ê, Google Maps α««α»üα«⌐α»ìα«⌐α»üα«░α«┐α««α»ê α««α«▒α»ìα«▒α»üα««α»ì α««α»üα«⌐α»ìα«¬α«ñα«┐α«╡α»ü α««α»üα«▒α»ê.",
-        whoCat3Title: "α«¬α«»α«┐α«▒α»ìα«Üα«┐ α««α»êα«»α«Öα»ìα«òα«│α»ì & α«òα«▓α»ìα«╡α«┐",
-        whoCat3Desc: "α««α«╛α«úα«╡α«░α»ì α«Üα»çα«░α»ìα«òα»ìα«òα»êα«¬α»ì α«¬α«╛α«ñα»ê α««α«▒α»ìα«▒α»üα««α»ì α«¿α»çα«░α«ƒα«┐ α«òα«ƒα»ìα«ƒα«ú α«çα«úα»êα«¬α»ìα«¬α»üα«òα«│α»ì.",
-        whoCat4Title: "α«Üα»çα«╡α»ê & α«ñα»èα«┤α«┐α«▓α»ì α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»ì",
-        whoCat4Desc: "α«¿α»çα«░α«ƒα«┐ α«╡α«úα«┐α«ò α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«Æα«¬α»ìα«¬α«¿α»ìα«ñα«Öα»ìα«òα«│α»ê α««α»üα«ƒα«┐α«òα»ìα«òα»üα««α»ì α«àα««α»êα«¬α»ìα«¬α»ü.",
-        changesLabel: "α«òα«ƒα»ìα«ƒα««α»êα«¬α»ìα«¬α»ü",
-        changesTitle: "α«òα«╡α«⌐ α«êα«░α»ìα«¬α»ìα«¬α«┐α«▓α»ì α«çα«░α»üα«¿α»ìα«ñα»ü α«╡α«░α»üα«╡α«╛α«»α»ì α«╡α«░α»ê",
-        changesSub: "α«Üα»Çα«░α«▒α»ìα«▒ α«╡α»çα«▓α»êα«òα«│α«┐α«▓α»ì α«çα«░α»üα«¿α»ìα«ñα»ü α«çα«»α«Öα»ìα«òα»üα««α»ì α«ñα»åα«│α«┐α«╡α«╛α«⌐ α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«àα««α»êα«¬α»ìα«¬α»üα«òα»ìα«òα»ü α««α«╛α«▒α»üα««α»ì α««α»üα«▒α»ê.",
-        pillar1Title: "1. α«òα«╡α«⌐ α«êα«░α»ìα«¬α»ìα«¬α»ü & α«¿α««α»ìα«¬α«┐α«òα»ìα«òα»ê",
-        pillar1Desc: "α«òα«╡α«⌐ α«êα«░α»ìα«¬α»ìα«¬α»ü ΓåÆ α«åα«░α»ìα«╡α««α»ì ΓåÆ α«¿α««α»ìα«¬α«┐α«òα»ìα«òα»ê ΓåÆ α«Üα«▓α»üα«òα»ê ΓåÆ α«òα«ƒα»ìα«ƒα«úα««α»ì ΓåÆ α«ñα»èα«ƒα«░α»ì α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì.",
-        pillar2Title: "2. α«ñα«░α««α«╛α«⌐ α«╡α«úα«┐α«ò α«Üα«▓α»üα«òα»ê (Offer)",
-        pillar2Desc: "α«¿α»Çα«Öα»ìα«òα«│α»ì α«╡α«┐α«▒α»ìα«¬α«ñα»ê α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì α«ëα«ƒα«⌐α«ƒα«┐α«»α«╛α«òα«¬α»ì α«¬α»üα«░α«┐α«¿α»ìα«ñα»üα«òα»èα«│α»ìα«│α»üα««α»ì α«Äα«│α«┐α«» α««α»èα«┤α«┐α«»α«┐α«▓α»ì α««α»üα«⌐α»ìα«╡α»êα«ñα»ìα«ñα«▓α»ì.",
-        pillar3Title: "3. α«ëα«ƒα«⌐α«ƒα«┐ α«òα«ƒα»ìα«ƒα«úα««α»ì & α«ñα«òα»ìα«òα«╡α»êα«¬α»ìα«¬α»ü",
-        pillar3Desc: "α«ƒα»åα«╡α«▓α«¬α»ìα«¬α«░α»ì α«çα«⌐α»ìα«▒α«┐ α«¿α»çα«░α«ƒα«┐ α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α«¬α»çα««α»åα«⌐α»ìα«ƒα»ì + α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»êα«ñα»ì α«ñα«òα»ìα«òα«╡α»êα«òα»ìα«òα»üα««α»ì α«Äα«│α«┐α«» α««α»üα«▒α»ê.",
-        outcomesLabel: "α«¿α«ƒα»êα««α»üα«▒α»ê α««α»üα«ƒα«┐α«╡α»üα«òα«│α»ì",
-        outcomesTitle: "α«¿α«╛α«Öα»ìα«òα«│α»ì α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα««α»ì α«àα««α»êα«¬α»ìα«¬α«┐α«⌐α»ì 5 α«¬α«▓α«⌐α»ìα«òα«│α»ì",
-        outcomesSub: "α«ëα«Öα»ìα«òα«│α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ìα«òα»ê α«¿α««α»ìα«¬α«┐α«òα»ìα«òα»êα«»α»üα«ƒα«⌐α»üα««α»ì α«Üα»üα«▓α«¬α««α«╛α«òα«╡α»üα««α»ì α«╡α«┤α«┐α«¿α«ƒα«ñα»ìα«ñα»üα««α»ì α«ñα»åα«│α«┐α«╡α«╛α«⌐ α«òα»éα«▒α»üα«òα«│α»ì.",
-        outcome1Title: "α«¬α»üα«ñα«┐α«» α«╡α«╛α«ƒα«┐α«òα»ìα«òα»êα«»α«╛α«│α«░α»ì α«Üα»çα«░α»ìα«òα»ìα«òα»êα«¬α»ì α«¬α«╛α«ñα»ê",
-        outcome1Desc: "α«¬α»üα«ñα«┐α«» α«¿α«¬α«░α»ì α«ëα«Öα»ìα«òα«│α»êα«òα»ì α«òα«úα»ìα«ƒα«▒α«┐α«¿α»ìα«ñα»ü, α«¿α««α»ìα«¬α«┐, α«òα«ƒα»ìα«ƒα«úα««α»ì α«Üα»åα«▓α»üα«ñα»ìα«ñα»üα««α»ì α«ñα»åα«│α«┐α«╡α«╛α«⌐ α«╡α«░α»êα«¬α«ƒα««α»ì.",
-        outcome2Title: "α«àα«ñα«┐α«ò α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α»êα«ñα»ì α«ñα«░α»üα««α»ì α«╡α«úα«┐α«ò α«Üα«▓α»üα«òα»ê",
-        outcome2Desc: "α«¬α»ïα«ƒα»ìα«ƒα«┐α«»α«╛α«│α«░α»ìα«òα«│α»ê α«╡α«┐α«ƒ α«ëα«Öα»ìα«òα«│α»ê α«ñα«⌐α«┐α«ñα»ìα«ñα»üα«òα»ìα«òα«╛α«ƒα»ìα«ƒα»üα««α»ì α«ëα«Öα»ìα«òα«│α»ì α«Üα»èα«¿α»ìα«ñ α«╡α«úα«┐α«ò α«Üα«▓α»üα«òα»ê.",
-        outcome3Title: "α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì & α«òα«╛α«▓α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«ëα«░α»êα«òα«│α»ì",
-        outcome3Desc: "α«╡α«┐α«Üα«╛α«░α«úα»êα«òα«│α»êα«»α»üα««α»ì α«àα«┤α»êα«¬α»ìα«¬α»üα«òα«│α»êα«»α»üα««α»ì α«¿α««α»ìα«¬α«┐α«òα»ìα«òα»êα«»α»üα«ƒα«⌐α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α«╛α«ò α««α«╛α«▒α»ìα«▒α»üα««α»ì α«ëα«░α»êα«òα«│α»ì.",
-        outcome4Title: "α«¿α»çα«░α«ƒα«┐ α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α«òα«ƒα»ìα«ƒα«ú α«çα«úα»êα«¬α»ìα«¬α»üα«òα«│α»ì",
-        outcome4Desc: "α«ƒα»åα«╡α«▓α«¬α»ìα«¬α«░α»ì α«çα«⌐α»ìα«▒α«┐ α««α»üα«⌐α»ìα«¬α«úα«ñα»ìα«ñα»êα«¬α»ì α«¬α»åα«▒α«òα»ìα«òα»éα«ƒα«┐α«» α«çα«»α«Öα»ìα«òα»üα««α»ì α«¿α»çα«░α«ƒα«┐ α«¬α»çα««α»åα«⌐α»ìα«ƒα»ì α«▓α«┐α«Öα»ìα«òα»ì.",
-        elCursoLabel: "EL CURSO ┬╖ α«¬α«╛α«úα»ìα«ƒα«┐α«Üα»ìα«Üα»çα«░α«┐ α«¬α«▓α»ìα«òα«▓α»êα«òα»ìα«òα«┤α«òα««α»ì",
-        elCursoNote: "El Curso, Batch 1, is complete. A digital marketing course for beginners, held at Pondicherry University by CyberAd.in with ACIC Push. Thank you to the participants.",
-        clickToEnlarge: "α«¬α»åα«░α«┐α«ñα«╛α«òα»ìα«ò α«òα«┐α«│α«┐α«òα»ì α«Üα»åα«»α»ìα«ò",
-        gbpSectionTitle: "Google α««α«ñα«┐α«¬α»ìα«¬α»Çα«ƒα»üα«òα«│α»ì",
-        gbpSectionSub: "α««α»üα«ñα«▓α»ì α«¬α»çα«ƒα»ìα«Üα«┐α«▓α»ì α«¬α«Öα»ìα«òα»çα«▒α»ìα«▒α»Çα«░α»ìα«òα«│α«╛? α«ëα«Öα»ìα«òα«│α»ì α«òα«░α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ê Google-α«▓α»ì α«¬α«òα«┐α«░α»üα«Öα»ìα«òα«│α»ì.",
-        gbpReviewCta: "Google-α«▓α»ì α««α«ñα«┐α«¬α»ìα«¬α»Çα«ƒα»ü α«Üα»åα«»α»ìα«ò ΓåÆ",
-        faqLabel: "α«¬α»èα«ñα»üα«╡α«╛α«⌐ α«òα»çα«│α»ìα«╡α«┐α«òα«│α»ì",
-        faqTitle: "α«¿α»Çα«Öα»ìα«òα«│α»ì α«ñα»åα«░α«┐α«¿α»ìα«ñα»üα«òα»èα«│α»ìα«│ α«╡α»çα«úα»ìα«ƒα«┐α«»α«╡α»ê",
-        faq1Q: "CyberAd α«╡α«úα«┐α«ò α«╡α«│α«░α»ìα«Üα»ìα«Üα«┐α«òα»ìα«òα»ü α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«ëα«ñα«╡α»üα«òα«┐α«▒α«ñα»ü?",
-        faq1A: "α«àα«ñα«┐α«ò α«╡α«┐α«▒α»ìα«¬α«⌐α»êα«»α»êα«ñα»ì α«ñα«░α»üα««α»ì α«çα«úα»êα«»α«ñα«│α«Öα»ìα«òα«│α»ì, Meta & Google α«╡α«┐α«│α««α»ìα«¬α«░α«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«åα«ƒα»ìα«ƒα»ïα««α»çα«╖α«⌐α»ì α«╡α«░α»ê α««α»üα«┤α»üα««α»êα«»α«╛α«⌐ α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α«òα«ƒα»ìα«ƒα««α»êα«¬α»ìα«¬α»üα«òα«│α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα»üα«òα«┐α«▒α»ïα««α»ì.",
-        faq2Q: "α«çα«ñα»ü α«»α«╛α«░α»üα«òα»ìα«òα»üα«¬α»ì α«¬α»èα«░α»üα«¿α»ìα«ñα»üα««α»ì?",
-        faq2A: "α«╡α«úα«┐α«ò α«ëα«░α«┐α««α»êα«»α«╛α«│α«░α»ìα«òα«│α»ì, α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì α««α»çα«▓α«╛α«│α«░α»ìα«òα«│α»ì, α«òα«┐α«│α«┐α«⌐α«┐α«òα»ìα«òα»üα«òα«│α»ì, α«¬α«»α«┐α«▒α»ìα«Üα«┐ α««α»êα«»α«Öα»ìα«òα«│α»ì α««α«▒α»ìα«▒α»üα««α»ì α«Üα»çα«╡α»ê α«¿α«┐α«▒α»üα«╡α«⌐α«Öα»ìα«òα«│α»üα«òα»ìα«òα»ü.",
-        faq3Q: "α«¿α«╛α«⌐α»ì α«Åα«▒α»ìα«òα«⌐α«╡α»ç α«╡α«┐α«│α««α»ìα«¬α«░α«Öα»ìα«òα«│α»ì α«çα«»α«òα»ìα«òα«┐α«»α»üα««α»ì α«¬α»ïα«ñα«┐α«» α«╡α«┐α«▒α»ìα«¬α«⌐α»ê α«╡α«░α«╡α«┐α«▓α»ìα«▓α»ê α«Åα«⌐α»ì?",
-        faq3A: "α«Üα«░α«┐α«»α«╛α«⌐ α«Üα«▓α»üα«òα»êα«»α»üα««α»ì, α«¿α»çα«░α«ƒα«┐ α«òα«ƒα»ìα«ƒα«ú α«╡α«┤α«┐α«»α»üα««α»ì α«çα«▓α»ìα«▓α«╛α««α«▓α»ì α«╡α»åα«▒α»üα««α»ì α«╡α«┐α«│α««α»ìα«¬α«░α««α»ì α«¬α«ú α«╡α«┐α«░α«»α««α»ì α«åα«òα»üα««α»ì. α«òα«╡α«⌐ α«êα«░α»ìα«¬α»ìα«¬α»ü ΓåÆ α«Üα«▓α»üα«òα»ê ΓåÆ α«òα«ƒα»ìα«ƒα«úα««α»ì α«Äα«⌐α»ìα«▒ α««α»üα«┤α»üα««α»êα«»α«╛α«⌐ α«¬α«╛α«ñα»êα«»α»ê α«¿α«╛α«Öα»ìα«òα«│α»ì α«òα«ƒα»ìα«ƒα««α»êα«òα»ìα«òα«┐α«▒α»ïα««α»ì.",
-        faq4Q: "CyberAd.in α«É α«Äα«╡α»ìα«╡α«╛α«▒α»ü α«ñα»èα«ƒα«░α»ìα«¬α»üα«òα»èα«│α»ìα«╡α«ñα»ü?",
-        faq4A: "+91 89256 93013 α«Äα«⌐α»ìα«▒ α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì α«Äα«úα»ìα«úα«┐α«▓α»ï α«àα«▓α»ìα«▓α«ñα»ü hello@cyberad.in α«Äα«⌐α»ìα«▒ α««α«┐α«⌐α»ìα«⌐α«₧α»ìα«Üα«▓α«┐α«▓α»ï α«¿α»çα«░α«ƒα«┐α«»α«╛α«òα«ñα»ì α«ñα»èα«ƒα«░α»ìα«¬α»üα«òα»èα«│α»ìα«│α«▓α«╛α««α»ì.",
-        contactBadge: "α«çα«úα»êα«╡α»ïα««α»ì",
-        contactSectionTitle: "α«ëα«Öα»ìα«òα«│α»ì α«╡α«úα«┐α«òα«ñα»ìα«ñα«┐α«▒α»ìα«òα»ü α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì α«ëα«ñα«╡α«┐ α«ñα»çα«╡α»êα«»α«╛?",
-        contactSectionDesc: "α«ëα«Öα»ìα«òα«│α»ì α«╡α«úα«┐α«òα«ñα»ìα«ñα«┐α«▒α»ìα«òα«╛α«⌐ α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì α«àα««α»êα«¬α»ìα«¬α»ê α«ëα«░α»üα«╡α«╛α«òα»ìα«òα«╡α»ï, α«Üα«¿α»ìα«ñα»çα«òα«Öα»ìα«òα«│α»ê α«òα»çα«ƒα»ìα«òα«╡α»ï α«àα«▓α»ìα«▓α«ñα»ü CyberAd.in α«É α«ñα»èα«ƒα«░α»ìα«¬α»üα«òα»èα«│α»ìα«│α«╡α»ï ΓÇö α«¿α»çα«░α«ƒα«┐α«»α«╛α«ò α«Äα«Öα»ìα«òα«│α»ê α«àα«┤α»êα«òα»ìα«òα«╡α»üα««α»ì.",
-        contactUsBtn: "α«Äα«Öα»ìα«òα«│α»êα«ñα»ì α«ñα»èα«ƒα«░α»ìα«¬α»ü α«òα»èα«│α»ìα«│",
-        footerBrandText: "α«¬α«╛α«úα»ìα«ƒα«┐α«Üα»ìα«Üα»çα«░α«┐ α«¬α«▓α»ìα«òα«▓α»êα«òα»ìα«òα«┤α«ò α««α»çα«▓α«╛α«úα»ìα««α»ê α«åα«»α»ìα«╡α»üα«òα«│α»ì α«ñα»üα«▒α»êα«»α«┐α«▓α»ì, ACIC-PUSH α««α«▒α»ìα«▒α»üα««α»ì Cyber Enterprises α«ëα«ƒα«⌐α»ì α«çα«úα»êα«¿α»ìα«ñα»ü α«╡α«┤α«Öα»ìα«òα«¬α»ìα«¬α«ƒα»üα«òα«┐α«▒α«ñα»ü.",
-        footerCourseText: "α«ƒα«┐α«£α«┐α«ƒα»ìα«ƒα«▓α»ì α««α«╛α«░α»ìα«òα»ìα«òα»åα«ƒα»ìα«ƒα«┐α«Öα»ì & α«¬α»üα«ñα»ìα«ñα«╛α«òα»ìα«òα««α»ì",
-        footerColProg: "α«╡α«┤α«┐α«òα«╛α«ƒα»ìα«ƒα«▓α»ì",
-        footerColContact: "α«ñα»èα«ƒα«░α»ìα«¬α»ü & α«╡α«╛α«ƒα»ìα«╕α»ìα«àα«¬α»ì",
-        footerColLegal: "α«╡α«úα«┐α«ò & α«Üα«ƒα»ìα«ƒ α«╡α«┐α«╡α«░α«Öα»ìα«òα«│α»ì",
-        footerLocation: "α««α»çα«▓α«╛α«úα»ìα««α»ê α«åα«»α»ìα«╡α»üα«òα«│α»ì α«ñα»üα«▒α»ê, α«¬α«╛α«úα»ìα«ƒα«┐α«Üα»ìα«Üα»çα«░α«┐ α«¬α«▓α»ìα«òα«▓α»êα«òα»ìα«òα«┤α«òα««α»ì, α«¬α»üα«ñα»üα«Üα»ìα«Üα»çα«░α«┐ ΓÇô 605014",
-        footerPrivacy: "α«ñα«⌐α«┐α«»α»üα«░α«┐α««α»êα«òα»ì α«òα»èα«│α»ìα«òα»ê",
-        footerRights: "┬⌐ 2026 CyberAd.in / Cyber Enterprises. α«àα«⌐α»êα«ñα»ìα«ñα»ü α«ëα«░α«┐α««α»êα«òα«│α»üα««α»ì α«¬α«╛α«ñα»üα«òα«╛α«òα»ìα«òα«¬α»ìα«¬α«ƒα»ìα«ƒα«╡α»ê. ΓÇó <a href=\"/privacy\" style=\"color:#93C5FD;text-decoration:underline;\">α«ñα«⌐α«┐α«»α»üα«░α«┐α««α»êα«òα»ì α«òα»èα«│α»ìα«òα»ê</a>",
-        footerGbpLink: "Google-α«▓α»ì α«Äα«Öα»ìα«òα«│α»ê α««α«ñα«┐α«¬α»ìα«¬α»Çα«ƒα»ü α«Üα»åα«»α»ìα«ò"
-      }
-    };
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const business = document.getElementById('business').value;
+      const goal = document.getElementById('goal').value;
 
-    let currentLanguage = 'en';
+      btn.disabled = true;
+      btn.innerText = 'Submitting...';
+      status.style.display = 'none';
 
-    function updateStickyBottomSpacing() {
-      const bottomBar = document.getElementById('sticky-bottom-cta');
-      if (bottomBar) {
-        const height = bottomBar.offsetHeight;
-        document.documentElement.style.setProperty('--sticky-bottom-height', (height + 14) + 'px');
-      }
-    }
+      const payload = {
+        access_key: "0558b39e-9300-4d1b-ae16-305c2f725d68",
+        subject: `New Digital Marketing Lead - ${name}`,
+        from_name: "CyberAd.in Lead Engine",
+        name: name,
+        phone: phone,
+        business: business,
+        goal: goal
+      };
 
-    function toggleMobileMenu() {
-      const drawer = document.getElementById('mobile-nav-drawer');
-      const btn = document.getElementById('mobile-menu-btn');
-      if (!drawer || !btn) return;
-      const isOpen = drawer.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          status.style.display = 'block';
+          status.style.color = '#10B981';
+          status.innerHTML = '<strong>✓ Thank you!</strong> Your consultation request has been received. We will contact you on WhatsApp / Phone shortly.';
+          document.getElementById('lead-form').reset();
+          btn.innerText = 'Submitted Successfully';
 
-    function closeMobileMenu() {
-      const drawer = document.getElementById('mobile-nav-drawer');
-      const btn = document.getElementById('mobile-menu-btn');
-      if (drawer && drawer.classList.contains('is-open')) {
-        drawer.classList.remove('is-open');
-        if (btn) btn.setAttribute('aria-expanded', 'false');
-      }
-    }
-
-    function setSiteLanguage(lang) {
-      if (!TRANSLATIONS[lang]) return;
-      currentLanguage = lang;
-      localStorage.setItem('cyberad_site_lang', lang);
-      document.documentElement.lang = lang;
-
-      // Update Radio Buttons in header
-      document.querySelectorAll('input[name="site-language-main"]').forEach(radio => {
-        radio.checked = (radio.value === lang);
-      });
-
-      // Update Active Classes on Radio Labels
-      const mainEnLabel = document.getElementById('label-lang-main-en');
-      const mainTaLabel = document.getElementById('label-lang-main-ta');
-
-      if (mainEnLabel) mainEnLabel.classList.toggle('is-active', lang === 'en');
-      if (mainTaLabel) mainTaLabel.classList.toggle('is-active', lang === 'ta');
-
-      const dict = TRANSLATIONS[lang];
-
-      // Update Document Meta Title & Description
-      if (dict.pageTitle) document.title = dict.pageTitle;
-      const metaDesc = document.getElementById('meta-desc');
-      if (metaDesc && dict.pageDesc) metaDesc.setAttribute('content', dict.pageDesc);
-
-      // Update textContent for elements with data-i18n
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (dict[key]) {
-          el.textContent = dict[key];
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', { form_name: 'CyberAd Digital Marketing Form' });
+          }
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', 'Lead');
+          }
+        } else {
+          status.style.display = 'block';
+          status.style.color = '#EF4444';
+          status.innerText = data.message || 'Submission failed. Please reach out directly on WhatsApp.';
+          btn.disabled = false;
+          btn.innerText = 'Submit Consultation Request';
         }
-      });
-
-      // Update innerHTML for elements with data-i18n-html
-      document.querySelectorAll('[data-i18n-html]').forEach(el => {
-        const key = el.getAttribute('data-i18n-html');
-        if (dict[key]) {
-          el.innerHTML = dict[key];
-        }
-      });
-
-      // Update placeholder for inputs with data-i18n-placeholder
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-        const key = el.getAttribute('data-i18n-placeholder');
-        if (dict[key]) {
-          el.setAttribute('placeholder', dict[key]);
-        }
-      });
-
-      // Re-calculate sticky bottom height if text wrapped
-      updateStickyBottomSpacing();
+      } catch (err) {
+        status.style.display = 'block';
+        status.style.color = '#EF4444';
+        status.innerText = 'An error occurred. Please click the WhatsApp button above to chat directly.';
+        btn.disabled = false;
+        btn.innerText = 'Submit Consultation Request';
+      }
     }
 
-    // =========================================================================
-    // INITIALIZATION
-    // -------------------------------------------------------------------------
-    document.addEventListener('DOMContentLoaded', () => {
-      // Check saved language or default to English
-      const savedLang = localStorage.getItem('cyberad_site_lang');
-      if (savedLang && (savedLang === 'ta' || savedLang === 'en')) {
-        setSiteLanguage(savedLang);
-      } else {
-        setSiteLanguage('en');
-      }
-
-      // Calculate sticky bottom height & listen for resize
-      updateStickyBottomSpacing();
-      window.addEventListener('resize', updateStickyBottomSpacing, { passive: true });
-
-      const bottomBar = document.getElementById('sticky-bottom-cta');
-      if (bottomBar && window.ResizeObserver) {
-        new ResizeObserver(() => updateStickyBottomSpacing()).observe(bottomBar);
-      }
-    });
-
-    // =========================================================================
-    // FULL-SCREEN IMAGE LIGHTBOX
-    // -------------------------------------------------------------------------
     function openLightbox(src, caption) {
       const modal = document.getElementById('image-lightbox');
       const img = document.getElementById('lightbox-img');
@@ -1717,15 +1782,5 @@
       }
     });
   </script>
-
-  <!-- PHOTO LIGHTBOX MODAL -->
-  <div id="image-lightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Photo Lightbox">
-    <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
-    <div class="lightbox-content">
-      <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close Lightbox">Γ£ò</button>
-      <img id="lightbox-img" src="" alt="Full view" class="lightbox-image" />
-      <div id="lightbox-caption" class="lightbox-caption"></div>
-    </div>
-  </div>
 </body>
 </html>
