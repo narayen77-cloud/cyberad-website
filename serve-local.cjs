@@ -27,11 +27,22 @@ const server = http.createServer((req, res) => {
 
   let filePath = path.join(PUBLIC_DIR, reqPath);
 
+  // If path is a directory, look for index.html inside it
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+    const dirIndex = path.join(filePath, 'index.html');
+    if (fs.existsSync(dirIndex)) {
+      filePath = dirIndex;
+    }
+  }
+
   // If path has no extension and file doesn't exist, check for .html
   if (!fs.existsSync(filePath) && fs.existsSync(filePath + '.html')) {
     filePath += '.html';
   } else if (!fs.existsSync(filePath) && fs.existsSync(path.join(PUBLIC_DIR, 'public', reqPath))) {
     filePath = path.join(PUBLIC_DIR, 'public', reqPath);
+    if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+      filePath = path.join(filePath, 'index.html');
+    }
   }
 
   fs.stat(filePath, (err, stats) => {

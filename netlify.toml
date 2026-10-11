@@ -21,3 +21,13 @@
   from = "/thank-you"
   to = "/thank-you.html"
   status = 200
+
+[[redirects]]
+  from = "/english-communication-programme"
+  to = "/english-communication-programme/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/english-course"
+  to = "/english-communication-programme/index.html"
+  status = 200
