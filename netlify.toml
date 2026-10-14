@@ -31,3 +31,23 @@
   from = "/english-course"
   to = "/english-communication-programme/index.html"
   status = 200
+
+[[redirects]]
+  from = "/commercial-land-cuddalore"
+  to = "/commercial-land-cuddalore/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/land-for-sale-cuddalore"
+  to = "/commercial-land-cuddalore/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/cuddalore-commercial-land"
+  to = "/commercial-land-cuddalore/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/cuddalore-land"
+  to = "/commercial-land-cuddalore/index.html"
+  status = 200

@@ -20,6 +20,7 @@ export default defineConfig(() => {
           digitalMarketing: path.resolve(__dirname, 'digital-marketing-beginners.html'),
           thankYou: path.resolve(__dirname, 'thank-you.html'),
           englishCommunication: path.resolve(__dirname, 'english-communication-programme.html'),
+          commercialLand: path.resolve(__dirname, 'commercial-land-cuddalore.html'),
         },
       },
     },
