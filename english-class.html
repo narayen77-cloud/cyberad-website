@@ -369,6 +369,11 @@
       border: 1px solid rgba(52, 211, 153, 0.4);
       color: #D1FAE5;
     }
+    .seat-badge.reserved {
+      background: rgba(245, 158, 11, 0.2);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #FDE68A;
+    }
     .seat-badge.claimed {
       background: rgba(239, 68, 68, 0.2);
       border: 1px solid rgba(239, 68, 68, 0.5);
@@ -984,7 +989,7 @@
   <div class="top-banner">
     <div class="container">
       <span>✨ <strong>FREE Online Orientation</strong>: Saturday, 17 October 2026 (6:00 PM – 7:00 PM)</span>
-      <span class="badge-seats" style="background:rgba(16,185,129,0.2); color:#34D399; border-color:rgba(16,185,129,0.4);">8 Seats Available</span>
+      <span class="badge-seats" style="background:rgba(245,158,11,0.2); color:#FBBF24; border-color:rgba(245,158,11,0.4);">Only 6 Seats Left</span>
     </div>
   </div>
 
@@ -1029,20 +1034,20 @@
         </div>
       </div>
 
-      <!-- CURIOSITY COUNTER WIDGET (ALL 8 SEATS FREE) -->
+      <!-- CURIOSITY COUNTER WIDGET (2 SAID YES FOR ORIENTATION) -->
       <div class="curiosity-card">
         <div class="curiosity-header">
           <div class="curiosity-title">
             <span>🔥</span>
             <span>Batch Curiosity & Seat Status</span>
           </div>
-          <div class="seat-status-pill">8 of 8 Seats Available</div>
+          <div class="seat-status-pill" style="background:#F59E0B;">6 of 8 Seats Left</div>
         </div>
 
         <!-- VISUAL 8 SEAT ROSTER -->
         <div class="seat-roster-grid">
-          <div class="seat-badge open"><span class="seat-num">#1</span> Open</div>
-          <div class="seat-badge open"><span class="seat-num">#2</span> Open</div>
+          <div class="seat-badge reserved"><span class="seat-num">#1</span> Said "YES"</div>
+          <div class="seat-badge reserved"><span class="seat-num">#2</span> Said "YES"</div>
           <div class="seat-badge open"><span class="seat-num">#3</span> Open</div>
           <div class="seat-badge open"><span class="seat-num">#4</span> Open</div>
           <div class="seat-badge open"><span class="seat-num">#5</span> Open</div>
@@ -1053,11 +1058,11 @@
 
         <div class="curiosity-stats-row">
           <div>
-            <strong style="color:#34D399;">8 of 8 Seats Currently Free</strong> &bull; <span>Be among the first to reserve</span>
+            <strong style="color:#FBBF24;">2 Candidates Said "YES" for Orientation</strong> &bull; <span style="color:#34D399; font-weight:700;">Only 6 Seats Remaining</span>
           </div>
           <div class="live-viewers">
             <span class="pulse-dot" style="background:#4ADE80; box-shadow:0 0 8px #4ADE80;"></span>
-            <span id="viewerCount">38</span> learners looking right now
+            <span id="viewerCount">43</span> learners looking right now
           </div>
         </div>
 
@@ -1198,7 +1203,7 @@
 
       <!-- PRICING CARD -->
       <div class="pricing-card">
-        <div class="seats-pill" style="background:linear-gradient(135deg, #10B981 0%, #059669 100%); box-shadow:0 4px 12px rgba(16,185,129,0.35);">8 Seats Open &bull; Strictly 8 Max</div>
+        <div class="seats-pill" style="background:linear-gradient(135deg, #F59E0B 0%, #D97706 100%); box-shadow:0 4px 12px rgba(245,158,11,0.35);">Only 6 Seats Left &bull; Strictly 8 Max</div>
 
         <h3 class="pricing-title">Live Speaking Cohort</h3>
         <p class="pricing-subtitle">3-Month Small-Group Interactive Training</p>
@@ -1212,7 +1217,7 @@
         <div class="pricing-specs">
           <div class="pricing-spec-row">
             <span class="spec-label">Cohort Size:</span>
-            <span class="spec-val" style="color:#10B981;">8 of 8 Seats Available</span>
+            <span class="spec-val" style="color:#D97706;">6 of 8 Seats Left (2 Said "YES")</span>
           </div>
           <div class="pricing-spec-row">
             <span class="spec-label">Class Frequency:</span>
@@ -1441,7 +1446,7 @@
   <div class="mobile-bottom-bar">
     <div class="mobile-bar-info">
       <div class="mobile-bar-price">₹2,000<span style="font-size:0.8rem; font-weight:normal;">/mo</span></div>
-      <div class="mobile-bar-tag" style="color:#34D399;">8 Seats Open &bull; Sat 17 Oct</div>
+      <div class="mobile-bar-tag" style="color:#FBBF24;">Only 6 Seats Left &bull; Sat 17 Oct</div>
     </div>
     <a href="https://wa.me/918925693013?text=YES%20-%20Please%20send%20me%20the%20Google%20Meet%20link%20for%20English%20Class%20Orientation" class="mobile-bar-btn" target="_blank" rel="noopener noreferrer">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
