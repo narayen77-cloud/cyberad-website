@@ -332,30 +332,54 @@
     .seat-status-pill {
       font-size: 0.78rem;
       font-weight: 800;
-      background: #EF4444;
+      background: #10B981;
       color: var(--white);
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
       animation: seatPulse 2.5s infinite;
     }
     @keyframes seatPulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.88; transform: scale(1.03); }
+      50% { opacity: 0.9; transform: scale(1.02); }
     }
-    .seat-progress-bar-bg {
-      width: 100%;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 999px;
-      overflow: hidden;
+    .seat-roster-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
       margin-bottom: 12px;
     }
-    .seat-progress-bar-fill {
-      height: 100%;
-      width: 62.5%; /* 5 of 8 filled */
-      background: linear-gradient(90deg, #F59E0B 0%, #EF4444 100%);
-      border-radius: 999px;
-      transition: width 1s ease-in-out;
+    @media (max-width: 520px) {
+      .seat-roster-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .seat-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border-radius: var(--radius-sm);
+      padding: 7px 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .seat-badge.open {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(52, 211, 153, 0.4);
+      color: #D1FAE5;
+    }
+    .seat-badge.claimed {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.5);
+      color: #FECACA;
+    }
+    .seat-num {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      color: #FFFFFF;
     }
     .curiosity-stats-row {
       display: flex;
@@ -960,7 +984,7 @@
   <div class="top-banner">
     <div class="container">
       <span>✨ <strong>FREE Online Orientation</strong>: Saturday, 17 October 2026 (6:00 PM – 7:00 PM)</span>
-      <span class="badge-seats">Only 8 Seats</span>
+      <span class="badge-seats" style="background:rgba(16,185,129,0.2); color:#34D399; border-color:rgba(16,185,129,0.4);">8 Seats Available</span>
     </div>
   </div>
 
@@ -1005,24 +1029,31 @@
         </div>
       </div>
 
-      <!-- CURIOSITY COUNTER WIDGET -->
+      <!-- CURIOSITY COUNTER WIDGET (ALL 8 SEATS FREE) -->
       <div class="curiosity-card">
         <div class="curiosity-header">
           <div class="curiosity-title">
             <span>🔥</span>
-            <span>Batch Curiosity Counter</span>
+            <span>Batch Curiosity & Seat Status</span>
           </div>
-          <div class="seat-status-pill">Strictly 8 Seats Only</div>
+          <div class="seat-status-pill">8 of 8 Seats Available</div>
         </div>
 
-        <!-- SEAT PROGRESS BAR -->
-        <div class="seat-progress-bar-bg">
-          <div class="seat-progress-bar-fill" id="seatFillBar"></div>
+        <!-- VISUAL 8 SEAT ROSTER -->
+        <div class="seat-roster-grid">
+          <div class="seat-badge open"><span class="seat-num">#1</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#2</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#3</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#4</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#5</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#6</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#7</span> Open</div>
+          <div class="seat-badge open"><span class="seat-num">#8</span> Open</div>
         </div>
 
         <div class="curiosity-stats-row">
           <div>
-            <strong>5 of 8 Seats Spoken For</strong> &bull; <span style="color:#FBBF24; font-weight:700;">Only 3 Seats Remaining</span>
+            <strong style="color:#34D399;">8 of 8 Seats Currently Free</strong> &bull; <span>Be among the first to reserve</span>
           </div>
           <div class="live-viewers">
             <span class="pulse-dot" style="background:#4ADE80; box-shadow:0 0 8px #4ADE80;"></span>
@@ -1167,7 +1198,7 @@
 
       <!-- PRICING CARD -->
       <div class="pricing-card">
-        <div class="seats-pill">Only 8 Seats Per Batch</div>
+        <div class="seats-pill" style="background:linear-gradient(135deg, #10B981 0%, #059669 100%); box-shadow:0 4px 12px rgba(16,185,129,0.35);">8 Seats Open &bull; Strictly 8 Max</div>
 
         <h3 class="pricing-title">Live Speaking Cohort</h3>
         <p class="pricing-subtitle">3-Month Small-Group Interactive Training</p>
@@ -1181,7 +1212,7 @@
         <div class="pricing-specs">
           <div class="pricing-spec-row">
             <span class="spec-label">Cohort Size:</span>
-            <span class="spec-val" style="color:#DC2626;">Strictly 8 Learners Max</span>
+            <span class="spec-val" style="color:#10B981;">8 of 8 Seats Available</span>
           </div>
           <div class="pricing-spec-row">
             <span class="spec-label">Class Frequency:</span>
@@ -1410,7 +1441,7 @@
   <div class="mobile-bottom-bar">
     <div class="mobile-bar-info">
       <div class="mobile-bar-price">₹2,000<span style="font-size:0.8rem; font-weight:normal;">/mo</span></div>
-      <div class="mobile-bar-tag">Strictly 8 Seats &bull; Sat 17 Oct</div>
+      <div class="mobile-bar-tag" style="color:#34D399;">8 Seats Open &bull; Sat 17 Oct</div>
     </div>
     <a href="https://wa.me/918925693013?text=YES%20-%20Please%20send%20me%20the%20Google%20Meet%20link%20for%20English%20Class%20Orientation" class="mobile-bar-btn" target="_blank" rel="noopener noreferrer">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
