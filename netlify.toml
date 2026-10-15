@@ -51,3 +51,33 @@
   from = "/cuddalore-land"
   to = "/commercial-land-cuddalore/index.html"
   status = 200
+
+[[redirects]]
+  from = "/English_class"
+  to = "/English_class/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/English_class/*"
+  to = "/English_class/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/english_class"
+  to = "/English_class/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/english_class/*"
+  to = "/English_class/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/english-class"
+  to = "/English_class/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/english-class/*"
+  to = "/English_class/index.html"
+  status = 200
