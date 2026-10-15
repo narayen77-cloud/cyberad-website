@@ -1152,186 +1152,139 @@
       .price-figure {
         font-size: 2.5rem;
       }
-    /* BROCHURE & CURRICULUM COMPARISON STYLING */
-    .brochure-section {
+      .pricing-card {
+        padding: 28px 18px;
+      }
+    }
+
+    /* BATCH BROCHURE CARDS ENHANCEMENTS */
+    .batch-progression {
       background: #F8FAFC;
-      border-bottom: 1px solid var(--slate-200);
-      padding: 56px 0;
-    }
-    .brochure-nav-wrap {
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 14px;
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
-    }
-    .brochure-tab-btn {
-      background: var(--white);
-      color: var(--slate-700);
-      border: 2px solid var(--slate-200);
-      padding: 10px 22px;
-      border-radius: 999px;
-      font-size: 0.92rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.25s ease;
-      font-family: inherit;
-      display: inline-flex;
-      align-items: center;
+      flex-direction: column;
       gap: 8px;
     }
-    .brochure-tab-btn:hover {
-      border-color: #93C5FD;
-      color: var(--primary-blue);
-      transform: translateY(-1px);
-    }
-    .brochure-tab-btn.active {
-      background: var(--primary-blue);
-      border-color: var(--primary-blue);
-      color: var(--white);
-      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
-    }
-    .brochure-panel {
-      display: none;
-      background: var(--white);
-      border: 1px solid var(--slate-200);
-      border-radius: 20px;
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-      animation: fadeIn 0.3s ease;
-    }
-    .brochure-panel.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .brochure-header-bar {
-      padding: 26px 30px;
-      border-bottom: 1px solid var(--slate-200);
-      background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .brochure-tag-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .brochure-batch-pill {
-      font-size: 0.76rem;
-      font-weight: 800;
-      padding: 4px 12px;
-      border-radius: 999px;
-      letter-spacing: 0.04em;
-    }
-    .brochure-months-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 20px;
-      padding: 28px 30px;
-      background: #F8FAFC;
-    }
-    .month-card {
-      background: var(--white);
-      border: 1px solid #E2E8F0;
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
-      display: flex;
-      flex-direction: column;
-    }
-    .month-card-header {
-      padding-bottom: 12px;
-      margin-bottom: 14px;
-      border-bottom: 2px solid #EFF6FF;
-    }
-    .month-badge {
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 3px 8px;
-      border-radius: 6px;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-    .month-title {
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: var(--slate-900);
-    }
-    .month-sub {
+    .progression-step {
       font-size: 0.8rem;
-      color: var(--slate-500);
-      margin-top: 2px;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
     }
-    .week-list {
+    .progression-badge {
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .batch-outcome-highlight {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border: 1px solid #FCD34D;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 0.82rem;
+      color: #78350F;
+      line-height: 1.45;
+    }
+    .batch-outcome-highlight strong {
+      display: block;
+      color: #92400E;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .syllabus-accordion {
+      margin-bottom: 14px;
+      font-size: 0.8rem;
+      border-top: 1px dashed #CBD5E1;
+      padding-top: 10px;
+    }
+    .syllabus-accordion summary {
+      cursor: pointer;
+      color: var(--primary-blue);
+      font-weight: 700;
+      outline: none;
       list-style: none;
       display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex-grow: 1;
-    }
-    .week-item {
-      font-size: 0.84rem;
-      line-height: 1.45;
-      padding-left: 18px;
-      position: relative;
-    }
-    .week-item::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 6px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-    }
-    .week-num {
-      font-weight: 800;
-      color: var(--slate-800);
-    }
-    .week-skills {
-      color: var(--slate-600);
-      display: block;
-      margin-top: 2px;
-    }
-    .brochure-meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 0 30px 28px;
-      background: #F8FAFC;
-    }
-    .routine-box {
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      border-radius: 14px;
-      padding: 22px;
-    }
-    .outcome-box {
-      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
-      border: 2px solid #FCD34D;
-      border-radius: 14px;
-      padding: 22px;
-      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.12);
-    }
-    .brochure-footer-bar {
-      padding: 18px 30px;
-      background: #FFFFFF;
-      border-top: 1px solid var(--slate-200);
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 14px;
+      justify-content: space-between;
+      user-select: none;
     }
+    .syllabus-accordion summary::-webkit-details-marker {
+      display: none;
+    }
+    .syllabus-accordion[open] summary {
+      margin-bottom: 10px;
+      color: var(--slate-700);
+    }
+    .syllabus-table-mini {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 10px;
+      max-height: 240px;
+      overflow-y: auto;
+    }
+    .syllabus-week-row {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #EEF2F6;
+      padding-bottom: 4px;
+    }
+    .syllabus-week-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .syllabus-week-title {
+      font-weight: 700;
+      color: var(--slate-800);
+      font-size: 0.78rem;
+    }
+    .syllabus-week-desc {
+      color: var(--slate-600);
+      font-size: 0.74rem;
+      line-height: 1.35;
+    }
+    .class-routine-strip {
+      background: #FFFFFF;
+      border: 2px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .routine-col {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .routine-icon {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+    .routine-title {
+      font-weight: 800;
+      font-size: 0.86rem;
+      color: var(--slate-900);
+      margin-bottom: 2px;
+    }
+    .routine-desc {
+      font-size: 0.78rem;
+      color: var(--slate-600);
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -1489,36 +1442,38 @@
     <div class="container">
       <div class="section-title-wrap">
         <span class="section-eyebrow">Cohort Structure</span>
-        <h2 class="section-h2">1 Common Orientation &bull; 3 Separate Batches</h2>
+        <h2 class="section-h2">1 Common Orientation &bull; 3 Specialized Batches</h2>
         <p class="section-lead">
-          Everyone attends the free live orientation session together. Once regular classes begin, you will practice inside a dedicated 8-person micro-batch tailored exclusively to your daily background.
+          Everyone attends the free live orientation session together on Saturday, 17 Oct at 6:00 PM. When regular classes begin, you train inside a dedicated 8-person micro-batch tailored to your real-life environment.
         </p>
       </div>
 
       <!-- 2-STEP VISUAL SYSTEM HIGHLIGHT -->
-      <div style="background: linear-gradient(135deg, #EFF6FF 0%, #F8FAFC 100%); border: 2px solid #BFDBFE; border-radius: 16px; padding: 24px; margin-bottom: 36px; box-shadow: 0 4px 16px rgba(30,58,138,0.06);">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: stretch;">
-          <div style="background:#FFFFFF; border-radius:12px; padding:20px; border:1px solid #DBEAFE; border-left:4px solid #2563EB;">
+      <div style="background: linear-gradient(135deg, #EFF6FF 0%, #F8FAFC 100%); border: 2px solid #BFDBFE; border-radius: 16px; padding: 22px 24px; margin-bottom: 32px; box-shadow: 0 4px 16px rgba(30,58,138,0.06);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; align-items: stretch;">
+          <div style="background:#FFFFFF; border-radius:12px; padding:18px; border:1px solid #DBEAFE; border-left:4px solid #2563EB;">
             <div style="display: inline-block; background: #2563EB; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; margin-bottom: 8px;">STEP 1 &bull; COMMON FOR ALL</div>
-            <h3 style="font-size: 1.12rem; color: #0F172A; font-weight: 800; margin-bottom: 6px;">Free Live Orientation Program</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.5; margin: 0;">
+            <h3 style="font-size: 1.08rem; color: #0F172A; font-weight: 800; margin-bottom: 4px;">Free Live Orientation Session</h3>
+            <p style="font-size: 0.86rem; color: #475569; line-height: 1.5; margin: 0;">
               <strong>Sat, 17 Oct &bull; 6:00 PM – 7:00 PM on Google Meet</strong><br>
-              All candidates (Homemakers, Business Owners & Students) attend this <strong>common 1-hour session together</strong> to understand the spoken drills, roadmap, and test their readiness with the mentor.
+              All registered learners attend this 1-hour session together to understand the spoken exercises, meet the mentor, and see the interactive format.
             </p>
           </div>
-          <div style="background:#FFFFFF; border-radius:12px; padding:20px; border:1px solid #A7F3D0; border-left:4px solid #059669;">
+          <div style="background:#FFFFFF; border-radius:12px; padding:18px; border:1px solid #A7F3D0; border-left:4px solid #059669;">
             <div style="display: inline-block; background: #059669; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; margin-bottom: 8px;">STEP 2 &bull; SEPARATE BATCHES</div>
-            <h3 style="font-size: 1.12rem; color: #0F172A; font-weight: 800; margin-bottom: 6px;">3 Dedicated 8-Person Cohorts</h3>
-            <p style="font-size: 0.88rem; color: #475569; line-height: 1.5; margin: 0;">
-              <strong>Post-Orientation Regular 4-Day/Week Training</strong><br>
-              Participants are split into <strong>strictly separate batches</strong>: 🌸 <strong>Homemakers</strong>, 💼 <strong>Business Owners</strong>, and 🎓 <strong>Students</strong>. You practice only with peers who share your daily communication needs!
+            <h3 style="font-size: 1.08rem; color: #0F172A; font-weight: 800; margin-bottom: 4px;">3 Dedicated 8-Person Cohorts</h3>
+            <p style="font-size: 0.86rem; color: #475569; line-height: 1.5; margin: 0;">
+              <strong>Post-Orientation 4-Days/Week Regular Classes</strong><br>
+              Learners are placed into separate batches: 🌸 <strong>Homemakers</strong>, 💼 <strong>Business</strong>, or 🎓 <strong>Students</strong> so you only speak with peers who share your daily background!
             </p>
           </div>
         </div>
       </div>
 
+      <!-- 3 SPECIALIZED BATCH CARDS GRID -->
       <div class="batch-cards-grid">
-        <!-- BATCH 1: HOUSEWIVES -->
+        
+        <!-- BATCH 1: HOUSEWIVES & HOMEMAKERS -->
         <div class="batch-card active-card">
           <div class="batch-card-top">
             <span class="batch-code">Batch: English_HM</span>
@@ -1527,8 +1482,10 @@
           <div class="batch-icon">🌸</div>
           <h3 class="batch-name">Housewives & Homemakers</h3>
           <p class="batch-desc">
-            A warm, supportive, and 100% judgment-free space. Practice speaking confidently with children's school teachers at PTMs, handling phone calls, shopping, clinic visits, and family gatherings.
+            A warm, encouraging, 100% judgment-free space. Overcome hesitation when speaking to children's school teachers at PTMs, handling doctor appointments, and social gatherings.
           </p>
+
+          <!-- MINI SEAT ROSTER -->
           <div class="batch-roster-mini">
             <div class="mini-seat reserved" title="Said YES">#1 Said YES</div>
             <div class="mini-seat reserved" title="Said YES">#2 Said YES</div>
@@ -1539,6 +1496,87 @@
             <div class="mini-seat open">#7 Open</div>
             <div class="mini-seat open">#8 Open</div>
           </div>
+
+          <!-- 3-MONTH PROGRESSION ROADMAP -->
+          <div class="batch-progression">
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#EFF6FF; color:#1D4ED8;">Month 1</span>
+              <span><strong>Everyday English:</strong> Daily routine, rooms, food, cooking & grocery shopping.</span>
+            </div>
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#F0FDF4; color:#047857;">Month 2</span>
+              <span><strong>Everyday Situations:</strong> School PTMs with teachers, neighbours, visits & phone calls.</span>
+            </div>
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#FEF3C7; color:#B45309;">Month 3</span>
+              <span><strong>Fluency:</strong> Expressing opinions, family decisions & doctor appointments.</span>
+            </div>
+          </div>
+
+          <!-- TARGETED 3-MONTH OUTCOME -->
+          <div class="batch-outcome-highlight">
+            <strong>🎯 Targeted 3-Month Outcome</strong>
+            "Communicate confidently in everyday situations, speak for longer periods, express thoughts clearly, and handle common conversations without hesitation."
+          </div>
+
+          <!-- COLLAPSIBLE 12-WEEK SYLLABUS ACCORDION -->
+          <details class="syllabus-accordion">
+            <summary>
+              <span>📖 View Complete 12-Week Syllabus</span>
+              <span style="font-size:0.75rem;">&#9660;</span>
+            </summary>
+            <div class="syllabus-table-mini">
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 1: Introductions & Greetings</span>
+                <span class="syllabus-week-desc">Introducing yourself, polite greetings, family members.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 2: My Daily Routine</span>
+                <span class="syllabus-week-desc">Talking about workday, likes/dislikes, asking questions.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 3: At Home</span>
+                <span class="syllabus-week-desc">Rooms, common objects, requests ("Can you...?", "Please...").</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 4: Food, Cooking & Shopping</span>
+                <span class="syllabus-week-desc">Vegetable markets, asking prices, "I need / I want".</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 5: Neighbours & Visitors</span>
+                <span class="syllabus-week-desc">Small talk, welcoming visitors, offering tea/coffee.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 6: Children's School</span>
+                <span class="syllabus-week-desc">Talking to teachers, asking information, explaining a problem.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 7: Markets & Services</span>
+                <span class="syllabus-week-desc">Asking help, negotiating politely, local shopping.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 8: Phone Calls & Messages</span>
+                <span class="syllabus-week-desc">Making simple calls, common phrases, short voice notes.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 9: Past Events & Stories</span>
+                <span class="syllabus-week-desc">Describing yesterday, sharing simple past events.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 10: Opinions & Decisions</span>
+                <span class="syllabus-week-desc">Expressing opinions, agreeing/disagreeing politely.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 11: Health & Appointments</span>
+                <span class="syllabus-week-desc">Clinic visits, explaining health symptoms with confidence.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 12: Review & Fluency Review</span>
+                <span class="syllabus-week-desc">Longer conversations, mixed role-plays & next steps.</span>
+              </div>
+            </div>
+          </details>
+
           <div class="batch-card-footer">
             <div class="batch-price">₹2,000<span>/month</span></div>
             <a href="https://wa.me/918925693013?text=YES%20-%20I%20want%20to%20attend%20Free%20Orientation%20for%20English_HM%20(Housewives%20Batch)" class="batch-cta-btn" target="_blank" rel="noopener noreferrer">
@@ -1547,7 +1585,7 @@
           </div>
         </div>
 
-        <!-- BATCH 2: BUSINESS OWNERS -->
+        <!-- BATCH 2: BUSINESS OWNERS & ENTREPRENEURS -->
         <div class="batch-card active-card">
           <div class="batch-card-top">
             <span class="batch-code">Batch: English_BIZ</span>
@@ -1556,8 +1594,10 @@
           <div class="batch-icon">💼</div>
           <h3 class="batch-name">Business Owners & Freelancers</h3>
           <p class="batch-desc">
-            Tailored for small business owners, shopkeepers, traders, agency founders, and consultants who need spoken authority in client calls, vendor negotiations, business meetings, and deal closings.
+            Tailored for shopkeepers, traders, agency founders, and consultants who need spoken authority in client calls, vendor negotiations, business meetings, and deal closings.
           </p>
+
+          <!-- MINI SEAT ROSTER -->
           <div class="batch-roster-mini">
             <div class="mini-seat reserved" title="Showed Interest">#1 Said YES</div>
             <div class="mini-seat reserved" title="Showed Interest">#2 Said YES</div>
@@ -1568,6 +1608,87 @@
             <div class="mini-seat open">#7 Open</div>
             <div class="mini-seat open">#8 Open</div>
           </div>
+
+          <!-- 3-MONTH PROGRESSION ROADMAP -->
+          <div class="batch-progression">
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#EFF6FF; color:#1D4ED8;">Month 1</span>
+              <span><strong>Everyday Business:</strong> Introducing business, talking to customers, prices & orders.</span>
+            </div>
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#F0FDF4; color:#047857;">Month 2</span>
+              <span><strong>Real Situations:</strong> Handling complaints, supplier negotiations & team instructions.</span>
+            </div>
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#FEF3C7; color:#B45309;">Month 3</span>
+              <span><strong>Fluency:</strong> Commercial meetings, client persuasion, networking & deal closing.</span>
+            </div>
+          </div>
+
+          <!-- TARGETED 3-MONTH OUTCOME -->
+          <div class="batch-outcome-highlight">
+            <strong>🎯 Targeted 3-Month Outcome</strong>
+            "Speak with authority to customers, suppliers, employees, and business contacts, handle commercial conversations, and explain products clearly."
+          </div>
+
+          <!-- COLLAPSIBLE 12-WEEK SYLLABUS ACCORDION -->
+          <details class="syllabus-accordion">
+            <summary>
+              <span>📖 View Complete 12-Week Syllabus</span>
+              <span style="font-size:0.75rem;">&#9660;</span>
+            </summary>
+            <div class="syllabus-table-mini">
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 1: Introducing Yourself & Business</span>
+                <span class="syllabus-week-desc">Explaining your products/services, professional greetings.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 2: Talking to Customers</span>
+                <span class="syllabus-week-desc">Understanding customer needs, answering buyer queries.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 3: Prices, Payments & Orders</span>
+                <span class="syllabus-week-desc">Discussing quotes, discounts, payment terms, delivery dates.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 4: Daily Business Conversations</span>
+                <span class="syllabus-week-desc">Daily commercial operations, delegating, client requests.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 5: Customers & Complaints</span>
+                <span class="syllabus-week-desc">Handling difficult queries, apologizing politely, offering solutions.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 6: Suppliers & Vendors</span>
+                <span class="syllabus-week-desc">Negotiating vendor prices, checking stock, follow-ups.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 7: Phone Calls & WhatsApp</span>
+                <span class="syllabus-week-desc">Professional business phone calls & concise WhatsApp messaging.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 8: Employees & Team Communication</span>
+                <span class="syllabus-week-desc">Assigning tasks, checking work progress, polite corrections.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 9: Meetings & Discussions</span>
+                <span class="syllabus-week-desc">Participating in formal meetings, sharing business ideas.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 10: Negotiation & Persuasion</span>
+                <span class="syllabus-week-desc">Explaining commercial value, discussing terms, convincing partners.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 11: Networking & Relationships</span>
+                <span class="syllabus-week-desc">Making business small talk, introducing yourself to new contacts.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 12: Business Role-Play & Review</span>
+                <span class="syllabus-week-desc">Full commercial deal-making simulation & progress assessment.</span>
+              </div>
+            </div>
+          </details>
+
           <div class="batch-card-footer">
             <div class="batch-price">₹2,000<span>/month</span></div>
             <a href="https://wa.me/918925693013?text=YES%20-%20I%20want%20to%20attend%20Free%20Orientation%20for%20English_BIZ%20(Business%20Batch)" class="batch-cta-btn" target="_blank" rel="noopener noreferrer">
@@ -1576,7 +1697,7 @@
           </div>
         </div>
 
-        <!-- BATCH 3: STUDENTS & JOB SEEKERS -->
+        <!-- BATCH 3: STUDENTS & YOUNG ADULTS -->
         <div class="batch-card">
           <div class="batch-card-top">
             <span class="batch-code">Batch: English_STU</span>
@@ -1587,6 +1708,8 @@
           <p class="batch-desc">
             Focused on clearing campus placements, HR interview rounds, group discussions (GDs), seminar presentations, and transitioning smoothly from Tamil-medium to English corporate workplaces.
           </p>
+
+          <!-- MINI SEAT ROSTER -->
           <div class="batch-roster-mini">
             <div class="mini-seat open">#1 Open</div>
             <div class="mini-seat open">#2 Open</div>
@@ -1597,6 +1720,87 @@
             <div class="mini-seat open">#7 Open</div>
             <div class="mini-seat open">#8 Open</div>
           </div>
+
+          <!-- 3-MONTH PROGRESSION ROADMAP -->
+          <div class="batch-progression">
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#EFF6FF; color:#1D4ED8;">Month 1</span>
+              <span><strong>Confidence:</strong> Campus life, talking to professors, hobbies & self-expression.</span>
+            </div>
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#F0FDF4; color:#047857;">Month 2</span>
+              <span><strong>Study & Life:</strong> Presentations, public speaking & job interview introductions.</span>
+            </div>
+            <div class="progression-step">
+              <span class="progression-badge" style="background:#FEF3C7; color:#B45309;">Month 3</span>
+              <span><strong>Career Readiness:</strong> Group discussions (GDs), career ambitions & mock HR rounds.</span>
+            </div>
+          </div>
+
+          <!-- TARGETED 3-MONTH OUTCOME -->
+          <div class="batch-outcome-highlight">
+            <strong>🎯 Targeted 3-Month Outcome</strong>
+            "Speak confidently in everyday conversations, participate actively in discussions, introduce yourself professionally, and ace interview questions."
+          </div>
+
+          <!-- COLLAPSIBLE 12-WEEK SYLLABUS ACCORDION -->
+          <details class="syllabus-accordion">
+            <summary>
+              <span>📖 View Complete 12-Week Syllabus</span>
+              <span style="font-size:0.75rem;">&#9660;</span>
+            </summary>
+            <div class="syllabus-table-mini">
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 1: Introductions & Social English</span>
+                <span class="syllabus-week-desc">Introducing yourself, talking about interests, studies, hobbies.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 2: My Day & My Interests</span>
+                <span class="syllabus-week-desc">Daily routines, asking questions, free-time activities.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 3: Campus & College Life</span>
+                <span class="syllabus-week-desc">Interacting with professors & classmates, academic help.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 4: Everyday Situations</span>
+                <span class="syllabus-week-desc">Ordering food, shopping, making requests comfortably.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 5: Friends & Social Conversations</span>
+                <span class="syllabus-week-desc">Starting discussions, keeping chats going, agreeing politely.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 6: Phone Calls & Digital Messaging</span>
+                <span class="syllabus-week-desc">Polite professional phone calls & WhatsApp communication.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 7: Presentations & Public Speaking</span>
+                <span class="syllabus-week-desc">Organizing ideas, presenting clearly in front of others.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 8: Interviews & Self-Introduction</span>
+                <span class="syllabus-week-desc">Professional self-pitch, strengths, answering HR questions.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 9: Past Events & Stories</span>
+                <span class="syllabus-week-desc">Describing past project experiences in structured sentences.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 10: Opinions, Ideas & Discussions</span>
+                <span class="syllabus-week-desc">Group discussion (GD) drills, debating respectfully.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 11: Career & Future Goals</span>
+                <span class="syllabus-week-desc">Discussing ambitions, technical skills, and corporate roadmap.</span>
+              </div>
+              <div class="syllabus-week-row">
+                <span class="syllabus-week-title">Week 12: Fluency Challenge & Review</span>
+                <span class="syllabus-week-desc">Mock placement interviews, presentation showcase & review.</span>
+              </div>
+            </div>
+          </details>
+
           <div class="batch-card-footer">
             <div class="batch-price">₹2,000<span>/month</span></div>
             <a href="https://wa.me/918925693013?text=YES%20-%20I%20want%20to%20attend%20Free%20Orientation%20for%20English_STU%20(Students%20Batch)" class="batch-cta-btn" target="_blank" rel="noopener noreferrer">
@@ -1604,505 +1808,38 @@
             </a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- BATCH SYLLABUS & OUTCOMES BROCHURE (DETAILED 3-BATCH COMPARISON) -->
-  <section id="curriculum" class="brochure-section">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="section-eyebrow">Comprehensive Syllabus & Outcomes</span>
-        <h2 class="section-h2">Compare the 3 Cohort Programmes</h2>
-        <p class="section-lead">
-          While everyone attends the free live orientation together, each batch follows a specialized 12-week real-world syllabus designed exclusively for their everyday environment.
-        </p>
       </div>
 
-      <!-- INTERACTIVE BROCHURE SELECTOR TABS -->
-      <div class="brochure-nav-wrap">
-        <button type="button" class="brochure-tab-btn active" id="b-tab-hm" onclick="showBrochure('hm')">
-          <span>🌸</span>
-          <span>Housewives & Homemakers</span>
-          <span style="font-size:0.75rem; background:rgba(245,158,11,0.2); color:#B45309; padding:2px 8px; border-radius:999px;">6 Left</span>
-        </button>
-        <button type="button" class="brochure-tab-btn" id="b-tab-biz" onclick="showBrochure('biz')">
-          <span>💼</span>
-          <span>Business Owners & Entrepreneurs</span>
-          <span style="font-size:0.75rem; background:rgba(245,158,11,0.2); color:#B45309; padding:2px 8px; border-radius:999px;">6 Left</span>
-        </button>
-        <button type="button" class="brochure-tab-btn" id="b-tab-stu" onclick="showBrochure('stu')">
-          <span>🎓</span>
-          <span>Students & Young Adults</span>
-          <span style="font-size:0.75rem; background:rgba(16,185,129,0.15); color:#065F46; padding:2px 8px; border-radius:999px;">8 Open</span>
-        </button>
-      </div>
-
-      <!-- ======================================================== -->
-      <!-- BROCHURE PANEL 1: HOUSEWIVES & HOMEMAKERS (ENGLISH_HM)   -->
-      <!-- ======================================================== -->
-      <div class="brochure-panel active" id="b-panel-hm">
-        <div class="brochure-header-bar">
+      <!-- CLASS ROUTINE & TRAINING STRIP -->
+      <div class="class-routine-strip">
+        <div class="routine-col">
+          <div class="routine-icon">⏱️</div>
           <div>
-            <div class="brochure-tag-row">
-              <span class="brochure-batch-pill" style="background:#FEF3C7; color:#B45309; border:1px solid #FDE68A;">Batch: English_HM</span>
-              <span style="font-size:0.82rem; color:var(--slate-500); font-weight:600;">3 Months &bull; 48 Live Sessions &bull; 8 Homemakers Max</span>
-            </div>
-            <h3 style="font-size:1.35rem; font-weight:800; color:var(--slate-900); margin-bottom:4px;">
-              3-Month Spoken English for Homemakers & Adult Learners
-            </h3>
-            <p style="font-size:0.9rem; color:var(--slate-600); margin:0; max-width:720px; line-height:1.5;">
-              <strong>Programme Approach:</strong> A warm, supportive, speaking-focused programme built around real-life situations and everyday home, school, family, and social communication.
-            </p>
-          </div>
-          <div style="text-align:right;">
-            <div style="font-size:1.35rem; font-weight:900; color:var(--slate-900);">₹2,000<span style="font-size:0.85rem; font-weight:500; color:var(--slate-500);">/mo</span></div>
-            <div style="font-size:0.75rem; color:#B45309; font-weight:700;">6 of 8 Seats Remaining</div>
+            <div class="routine-title">5–10 Min Speaking Warm-Up</div>
+            <div class="routine-desc">Low-pressure spontaneous drills every session to unlock speaking muscles.</div>
           </div>
         </div>
-
-        <!-- 3 MONTHS SYLLABUS GRID -->
-        <div class="brochure-months-grid">
-          
-          <!-- MONTH 1 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#EFF6FF; color:#1D4ED8;">Month 1 &bull; Weeks 1–4</span>
-              <div class="month-title">Building Everyday English</div>
-              <div class="month-sub">Basic Communication & Daily Life</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 1: Introductions & Greetings</span>
-                <span class="week-skills">Introducing yourself, simple self-description, polite greetings, numbers, days, family members.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 2: My Daily Routine</span>
-                <span class="week-skills">Talking about your daily routine, simple present, likes/dislikes, asking simple questions.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 3: At Home</span>
-                <span class="week-skills">Rooms and common objects, describing what people are doing, making simple requests ("Can you...?", "Please...").</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 4: Food, Cooking & Shopping</span>
-                <span class="week-skills">Talking about food and cooking, buying vegetables/groceries, asking about prices, using "I need / I want".</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MONTH 2 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#F0FDF4; color:#047857;">Month 2 &bull; Weeks 5–8</span>
-              <div class="month-title">Everyday Situations</div>
-              <div class="month-sub">Real-Life Social Conversations</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 5: Neighbours & Visitors</span>
-                <span class="week-skills">Small talk, welcoming visitors, invitations, offering tea/coffee politely.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 6: Children's School</span>
-                <span class="week-skills">Talking to teachers at school PTM meetings, asking for progress information, explaining a problem.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 7: Markets, Shops & Services</span>
-                <span class="week-skills">Asking for help, describing what you want, negotiating politely, asking about prices.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 8: Phone Calls & Messages</span>
-                <span class="week-skills">Making simple phone calls, understanding common phrases, leaving short spoken messages.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MONTH 3 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#FEF3C7; color:#B45309;">Month 3 &bull; Weeks 9–12</span>
-              <div class="month-title">Fluency & Personal Expression</div>
-              <div class="month-sub">Speaking with Greater Confidence</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 9: Talking About the Past</span>
-                <span class="week-skills">Describing yesterday and last week, sharing simple past events, short storytelling.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 10: Opinions & Decisions</span>
-                <span class="week-skills">Expressing opinions, agreeing/disagreeing politely, talking about family decisions.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 11: Health & Appointments</span>
-                <span class="week-skills">Making doctor appointments, explaining health symptoms clearly, communicating with ease.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 12: Review & Real-Life Practice</span>
-                <span class="week-skills">Longer conversations, mixed-situation role-plays, personal goals, progress review.</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- META: ROUTINE & PROGRAMME OUTCOME -->
-        <div class="brochure-meta-grid">
-          
-          <!-- ROUTINE -->
-          <div class="routine-box">
-            <h4 style="font-size:0.98rem; font-weight:800; color:var(--slate-900); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
-              <span>⏱️</span> What Happens in Every Class?
-            </h4>
-            <ul style="font-size:0.86rem; color:var(--slate-600); line-height:1.6; margin:0 0 14px 18px;">
-              <li><strong>5–10 minutes:</strong> Low-pressure warm-up speaking drills</li>
-              <li><strong>One useful language point:</strong> Without heavy grammar theory</li>
-              <li><strong>Guided conversation practice:</strong> Pair & small-group activities</li>
-              <li><strong>Real-life role-plays:</strong> Everyday home & school scenarios</li>
-              <li><strong>Short speaking homework:</strong> 30–60 second voice note on WhatsApp & practice with family</li>
-            </ul>
-          </div>
-
-          <!-- OUTCOME -->
-          <div class="outcome-box">
-            <div style="display:inline-block; background:#D97706; color:#fff; font-size:0.7rem; font-weight:800; padding:3px 8px; border-radius:999px; text-transform:uppercase; margin-bottom:8px;">
-              🎯 Official Programme Outcome
-            </div>
-            <h4 style="font-size:1rem; font-weight:800; color:#78350F; margin-bottom:8px;">
-              What You Will Achieve in 3 Months
-            </h4>
-            <blockquote style="font-size:0.92rem; color:#92400E; font-weight:600; line-height:1.55; margin:0 0 12px; font-style:italic; border-left:3px solid #D97706; padding-left:12px;">
-              "By the end of 3 months, students should be able to communicate more confidently in everyday situations, speak for longer periods, express their thoughts more clearly, and handle common conversations in English."
-            </blockquote>
-            <div style="font-size:0.8rem; color:#B45309;">
-              ✅ Zero fear of school PTMs &bull; ✅ Confident clinic/store conversations &bull; ✅ No Tamil translation lag
-            </div>
-          </div>
-
-        </div>
-
-        <!-- BROCHURE FOOTER CTA -->
-        <div class="brochure-footer-bar">
+        <div class="routine-col">
+          <div class="routine-icon">💡</div>
           <div>
-            <strong style="color:var(--slate-800); font-size:0.92rem;">Ready for Saturday's Free Orientation?</strong>
-            <span style="display:block; font-size:0.8rem; color:var(--slate-500);">Batch English_HM starts immediately after orientation &bull; Strictly 8 seats</span>
+            <div class="routine-title">1 Useful Practical Point</div>
+            <div class="routine-desc">Immediate sentence patterns for real life, with zero dry grammar theory.</div>
           </div>
-          <a href="https://wa.me/918925693013?text=YES%20-%20I%20want%20to%20attend%20Free%20Orientation%20for%20English_HM%20(Housewives%20Batch)" class="batch-cta-btn" target="_blank" rel="noopener noreferrer">
-            Join Housewives Batch (6 Seats Left) &rarr;
-          </a>
         </div>
-      </div>
-
-      <!-- ======================================================== -->
-      <!-- BROCHURE PANEL 2: BUSINESS OWNERS & ENTREPRENEURS (BIZ) -->
-      <!-- ======================================================== -->
-      <div class="brochure-panel" id="b-panel-biz">
-        <div class="brochure-header-bar">
+        <div class="routine-col">
+          <div class="routine-icon">🗣️</div>
           <div>
-            <div class="brochure-tag-row">
-              <span class="brochure-batch-pill" style="background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE;">Batch: English_BIZ</span>
-              <span style="font-size:0.82rem; color:var(--slate-500); font-weight:600;">3 Months &bull; 48 Live Sessions &bull; 8 Business Owners Max</span>
-            </div>
-            <h3 style="font-size:1.35rem; font-weight:800; color:var(--slate-900); margin-bottom:4px;">
-              3-Month Spoken English for Small Business Owners & Entrepreneurs
-            </h3>
-            <p style="font-size:0.9rem; color:var(--slate-600); margin:0; max-width:720px; line-height:1.5;">
-              <strong>Programme Approach:</strong> A practical, speaking-focused programme designed to help small business owners communicate confidently with customers, suppliers, employees, service providers and business contacts.
-            </p>
-          </div>
-          <div style="text-align:right;">
-            <div style="font-size:1.35rem; font-weight:900; color:var(--slate-900);">₹2,000<span style="font-size:0.85rem; font-weight:500; color:var(--slate-500);">/mo</span></div>
-            <div style="font-size:0.75rem; color:#B45309; font-weight:700;">6 of 8 Seats Remaining (2 Interested)</div>
+            <div class="routine-title">Small-Group Role-Plays</div>
+            <div class="routine-desc">Practice realistic dialogues exclusively with fellow batchmates.</div>
           </div>
         </div>
-
-        <!-- 3 MONTHS SYLLABUS GRID -->
-        <div class="brochure-months-grid">
-          
-          <!-- MONTH 1 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#EFF6FF; color:#1D4ED8;">Month 1 &bull; Weeks 1–4</span>
-              <div class="month-title">Confident Business English</div>
-              <div class="month-sub">Building a Strong Foundation</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 1: Introducing Yourself & Business</span>
-                <span class="week-skills">Introducing yourself, describing your business, explaining what you sell or provide, greeting customers professionally.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 2: Talking to Customers</span>
-                <span class="week-skills">Understanding customer needs, asking questions, explaining products/services, answering common buyer queries.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 3: Prices, Payments & Orders</span>
-                <span class="week-skills">Talking about prices, quantities, discounts, payment methods, confirming orders and delivery details.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 4: Daily Business Conversations</span>
-                <span class="week-skills">Talking about your workday, making simple requests, giving instructions, discussing routine commercial matters.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MONTH 2 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#F0FDF4; color:#047857;">Month 2 &bull; Weeks 5–8</span>
-              <div class="month-title">Real Business Situations</div>
-              <div class="month-sub">Practical Commercial Communication</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 5: Customers & Complaints</span>
-                <span class="week-skills">Handling questions, responding politely to customer complaints, apologising professionally, offering solutions.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 6: Suppliers & Vendors</span>
-                <span class="week-skills">Enquiring about products, negotiating prices, discussing stock availability, placing & following up on orders.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 7: Phone Calls & WhatsApp</span>
-                <span class="week-skills">Making business phone calls, asking for information, leaving messages, writing simple professional WhatsApp texts.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 8: Employees & Team Communication</span>
-                <span class="week-skills">Giving instructions, assigning tasks, checking team progress, correcting employee mistakes politely.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MONTH 3 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#FEF3C7; color:#B45309;">Month 3 &bull; Weeks 9–12</span>
-              <div class="month-title">Business Confidence & Fluency</div>
-              <div class="month-sub">Speaking with Greater Authority</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 9: Meetings & Business Discussions</span>
-                <span class="week-skills">Starting business conversations, explaining commercial ideas, asking questions, participating in formal meetings.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 10: Negotiation & Persuasion</span>
-                <span class="week-skills">Explaining value proposition, discussing terms, negotiating pricing politely, convincing customers or partners.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 11: Networking & Relationships</span>
-                <span class="week-skills">Introducing yourself to new business contacts, making professional small talk, building commercial relationships.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 12: Business Role-Play & Review</span>
-                <span class="week-skills">Handling mixed deal-making situations, longer commercial conversations, role-plays, progress review.</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- META: ROUTINE & PROGRAMME OUTCOME -->
-        <div class="brochure-meta-grid">
-          
-          <!-- ROUTINE -->
-          <div class="routine-box">
-            <h4 style="font-size:0.98rem; font-weight:800; color:var(--slate-900); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
-              <span>⏱️</span> What Happens in Every Class?
-            </h4>
-            <ul style="font-size:0.86rem; color:var(--slate-600); line-height:1.6; margin:0 0 14px 18px;">
-              <li><strong>5–10 minutes:</strong> Low-pressure business speaking warm-up</li>
-              <li><strong>One useful language point:</strong> Without heavy academic grammar rules</li>
-              <li><strong>Business vocabulary & phrases:</strong> Quotes, invoices, discounts, terms</li>
-              <li><strong>Real-life business role-plays:</strong> Client pitches, vendor calls, team instructions</li>
-              <li><strong>Short speaking homework:</strong> 30–60 second business voice note & supplier/client practice</li>
-            </ul>
-          </div>
-
-          <!-- OUTCOME -->
-          <div class="outcome-box">
-            <div style="display:inline-block; background:#D97706; color:#fff; font-size:0.7rem; font-weight:800; padding:3px 8px; border-radius:999px; text-transform:uppercase; margin-bottom:8px;">
-              🎯 Official Programme Outcome
-            </div>
-            <h4 style="font-size:1rem; font-weight:800; color:#78350F; margin-bottom:8px;">
-              What You Will Achieve in 3 Months
-            </h4>
-            <blockquote style="font-size:0.92rem; color:#92400E; font-weight:600; line-height:1.55; margin:0 0 12px; font-style:italic; border-left:3px solid #D97706; padding-left:12px;">
-              "By the end of 3 months, participants should be able to speak more confidently with customers, suppliers, employees and business contacts, handle common business conversations, explain their products or services clearly, and participate more comfortably in English."
-            </blockquote>
-            <div style="font-size:0.8rem; color:#B45309;">
-              ✅ Close client deals with spoken authority &bull; ✅ Negotiate vendor rates &bull; ✅ Lead staff professionally
-            </div>
-          </div>
-
-        </div>
-
-        <!-- BROCHURE FOOTER CTA -->
-        <div class="brochure-footer-bar">
+        <div class="routine-col">
+          <div class="routine-icon">📱</div>
           <div>
-            <strong style="color:var(--slate-800); font-size:0.92rem;">Grow Your Business Spoken Authority</strong>
-            <span style="display:block; font-size:0.8rem; color:var(--slate-500);">Batch English_BIZ meets after business hours &bull; Only 6 seats left</span>
+            <div class="routine-title">Daily Voice Note Homework</div>
+            <div class="routine-desc">30–60 second WhatsApp speaking task with personal mentor feedback.</div>
           </div>
-          <a href="https://wa.me/918925693013?text=YES%20-%20I%20want%20to%20attend%20Free%20Orientation%20for%20English_BIZ%20(Business%20Batch)" class="batch-cta-btn" target="_blank" rel="noopener noreferrer">
-            Join Business Batch (6 Seats Left) &rarr;
-          </a>
-        </div>
-      </div>
-
-      <!-- ======================================================== -->
-      <!-- BROCHURE PANEL 3: STUDENTS & YOUNG ADULTS (ENGLISH_STU) -->
-      <!-- ======================================================== -->
-      <div class="brochure-panel" id="b-panel-stu">
-        <div class="brochure-header-bar">
-          <div>
-            <div class="brochure-tag-row">
-              <span class="brochure-batch-pill" style="background:#ECFDF5; color:#065F46; border:1px solid #A7F3D0;">Batch: English_STU</span>
-              <span style="font-size:0.82rem; color:var(--slate-500); font-weight:600;">3 Months &bull; 48 Live Sessions &bull; 8 Students Max</span>
-            </div>
-            <h3 style="font-size:1.35rem; font-weight:800; color:var(--slate-900); margin-bottom:4px;">
-              3-Month Spoken English for Students & Young Adults
-            </h3>
-            <p style="font-size:0.9rem; color:var(--slate-600); margin:0; max-width:720px; line-height:1.5;">
-              <strong>Programme Approach:</strong> A practical, speaking-focused programme designed to help students communicate confidently in English for studies, friendships, job interviews, presentations and everyday situations.
-            </p>
-          </div>
-          <div style="text-align:right;">
-            <div style="font-size:1.35rem; font-weight:900; color:var(--slate-900);">₹2,000<span style="font-size:0.85rem; font-weight:500; color:var(--slate-500);">/mo</span></div>
-            <div style="font-size:0.75rem; color:#059669; font-weight:700;">8 of 8 Seats Open</div>
-          </div>
-        </div>
-
-        <!-- 3 MONTHS SYLLABUS GRID -->
-        <div class="brochure-months-grid">
-          
-          <!-- MONTH 1 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#EFF6FF; color:#1D4ED8;">Month 1 &bull; Weeks 1–4</span>
-              <div class="month-title">Building Speaking Confidence</div>
-              <div class="month-sub">Everyday English & Self-Expression</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 1: Introductions & Social English</span>
-                <span class="week-skills">Introducing yourself, talking about your interests, hobbies, studies, family and friends; greetings & small talk.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 2: My Day & My Interests</span>
-                <span class="week-skills">Talking about daily college routines, likes/dislikes, asking questions, describing free-time activities.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 3: College, School & Campus Life</span>
-                <span class="week-skills">Talking to classmates and professors, asking for help, asking questions, giving simple academic explanations.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 4: Everyday Situations</span>
-                <span class="week-skills">Ordering food, shopping, asking about prices, making requests and handling common student situations.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MONTH 2 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#F0FDF4; color:#047857;">Month 2 &bull; Weeks 5–8</span>
-              <div class="month-title">Communication for Study & Life</div>
-              <div class="month-sub">Practical Speaking Skills</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 5: Friends & Social Conversations</span>
-                <span class="week-skills">Starting conversations, keeping discussions going, inviting friends, agreeing and disagreeing politely.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 6: Phone Calls & Digital Communication</span>
-                <span class="week-skills">Making phone calls, leaving messages, common phone phrases, writing polite professional WhatsApp messages.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 7: Presentations & Public Speaking</span>
-                <span class="week-skills">Organising ideas, speaking clearly in front of others, describing a topic, answering audience questions.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 8: Interviews & Self-Introduction</span>
-                <span class="week-skills">Introducing yourself professionally for campus placements, talking about strengths, goals, answering HR interview questions.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- MONTH 3 -->
-          <div class="month-card">
-            <div class="month-card-header">
-              <span class="month-badge" style="background:#FEF3C7; color:#B45309;">Month 3 &bull; Weeks 9–12</span>
-              <div class="month-title">Fluency & Future Readiness</div>
-              <div class="month-sub">Real-World Career Communication</div>
-            </div>
-            <ul class="week-list">
-              <li class="week-item">
-                <span class="week-num">Week 9: Past Experiences & Storytelling</span>
-                <span class="week-skills">Describing past project experiences, sharing events, telling short structured stories, speaking in longer sentences.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 10: Opinions, Ideas & Discussions</span>
-                <span class="week-skills">Expressing opinions, explaining ideas clearly, agreeing/disagreeing respectfully in group discussions (GDs).</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 11: Career & Future Goals</span>
-                <span class="week-skills">Talking about career plans, ambitions, technical/soft skills, higher education, and corporate goals.</span>
-              </li>
-              <li class="week-item">
-                <span class="week-num">Week 12: Fluency Challenge & Final Review</span>
-                <span class="week-skills">Mock HR interviews, presentation showcase, group discussions, personal goals and progress review.</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!-- META: ROUTINE & PROGRAMME OUTCOME -->
-        <div class="brochure-meta-grid">
-          
-          <!-- ROUTINE -->
-          <div class="routine-box">
-            <h4 style="font-size:0.98rem; font-weight:800; color:var(--slate-900); margin-bottom:12px; display:flex; align-items:center; gap:8px;">
-              <span>⏱️</span> What Happens in Every Class?
-            </h4>
-            <ul style="font-size:0.86rem; color:var(--slate-600); line-height:1.6; margin:0 0 14px 18px;">
-              <li><strong>5–10 minutes:</strong> Low-pressure spontaneous speaking drills</li>
-              <li><strong>One useful language point:</strong> Practical sentence structures without heavy grammar</li>
-              <li><strong>Guided conversation practice:</strong> Pair & small-group debates & dialogues</li>
-              <li><strong>Real-life role-plays:</strong> Mock campus interviews, GD rounds & seminar talks</li>
-              <li><strong>Short speaking homework:</strong> 30–60 second voice notes & conversation practice</li>
-            </ul>
-          </div>
-
-          <!-- OUTCOME -->
-          <div class="outcome-box">
-            <div style="display:inline-block; background:#D97706; color:#fff; font-size:0.7rem; font-weight:800; padding:3px 8px; border-radius:999px; text-transform:uppercase; margin-bottom:8px;">
-              🎯 Official Programme Outcome
-            </div>
-            <h4 style="font-size:1rem; font-weight:800; color:#78350F; margin-bottom:8px;">
-              What You Will Achieve in 3 Months
-            </h4>
-            <blockquote style="font-size:0.92rem; color:#92400E; font-weight:600; line-height:1.55; margin:0 0 12px; font-style:italic; border-left:3px solid #D97706; padding-left:12px;">
-              "By the end of 3 months, students should be able to speak more confidently in everyday conversations, participate in discussions, introduce themselves professionally, give simple presentations, handle common interview questions, and express their ideas more clearly in English."
-            </blockquote>
-            <div style="font-size:0.8rem; color:#B45309;">
-              ✅ Clear campus placement interviews &bull; ✅ Speak without hesitation in GDs &bull; ✅ Corporate workplace ready
-            </div>
-          </div>
-
-        </div>
-
-        <!-- BROCHURE FOOTER CTA -->
-        <div class="brochure-footer-bar">
-          <div>
-            <strong style="color:var(--slate-800); font-size:0.92rem;">Crack Campus Placements & Career Interviews</strong>
-            <span style="display:block; font-size:0.8rem; color:var(--slate-500);">Batch English_STU starts after Saturday's orientation &bull; 8 seats open</span>
-          </div>
-          <a href="https://wa.me/918925693013?text=YES%20-%20I%20want%20to%20attend%20Free%20Orientation%20for%20English_STU%20(Students%20Batch)" class="batch-cta-btn" target="_blank" rel="noopener noreferrer">
-            Join Student Batch (8 Seats Open) &rarr;
-          </a>
         </div>
       </div>
 
@@ -2561,24 +2298,6 @@
         window.gtag('event', 'select_batch_tab', { batch_name: key });
       }
 
-      // Sync brochure tabs with curiosity tabs
-      showBrochure(key);
-    }
-
-    // Brochure Tab Switcher
-    function showBrochure(batch) {
-      document.querySelectorAll('.brochure-tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.brochure-panel').forEach(p => p.classList.remove('active'));
-
-      const tabBtn = document.getElementById('b-tab-' + batch);
-      if (tabBtn) tabBtn.classList.add('active');
-
-      const panel = document.getElementById('b-panel-' + batch);
-      if (panel) panel.classList.add('active');
-
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'select_brochure_batch', { batch_name: batch });
-      }
     }
 
     // GA4 Conversion Tracking for all WhatsApp Lead Clicks
