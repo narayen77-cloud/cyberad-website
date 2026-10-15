@@ -972,17 +972,10 @@
         </a>
 
         <div class="header-actions">
-          <a href="tel:+919092979797" class="header-phone-link" title="Call for inquiries">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <span>+91 90929 79797</span>
-          </a>
-
-          <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="header-cta-btn" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="header-cta-btn" onclick="openRegisterModal()" style="border:none; cursor:pointer;">
             <span>Reserve Free Seat</span>
             &rarr;
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -1012,12 +1005,9 @@
         </div>
 
         <div class="hero-cta-row">
-          <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-wa-action" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.965.527 1.791.78 2.796.78 3.18 0 5.767-2.586 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm9.969 5.828c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.239l-7.181 1.881 1.914-6.992c-.855-1.488-1.345-3.216-1.345-5.05 0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
-            </svg>
-            <span>Reserve Your Free Orientation Seat</span>
-          </a>
+          <button type="button" class="btn-wa-action" onclick="openRegisterModal()" style="border:none; cursor:pointer;">
+            <span>Reserve Your Free Orientation Seat &rarr;</span>
+          </button>
 
           <a href="#batches" class="btn-secondary-link">
             <span>View Dedicated Batches &darr;</span>
@@ -1097,7 +1087,7 @@
           </a>
 
           <div class="orientation-subnote">
-            WhatsApp text: +91 89256 93013 &bull; Phone inquiries: <a href="tel:+919092979797" style="color:var(--slate-800); font-weight:600;">+91 90929 79797</a>
+            WhatsApp text: +91 89256 93013 &bull; Instant confirmation on WhatsApp
           </div>
         </div>
 
@@ -1137,10 +1127,10 @@
             </p>
           </div>
 
-          <a href="https://wa.me/918925693013?text=YES%20-%20I%20am%20interested%20in%20Batch%20English_HM%20(Housewives)" class="btn-card-action" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn-card-action" onclick="openRegisterModal('hm')" style="border:none; cursor:pointer;">
             <span>Join Housewives Batch</span>
             &rarr;
-          </a>
+          </button>
 
           <button type="button" class="btn-syllabus-trigger" onclick="openSyllabusModal('hm')">
             View 12-week syllabus &rarr;
@@ -1166,10 +1156,10 @@
             </p>
           </div>
 
-          <a href="https://wa.me/918925693013?text=YES%20-%20I%20am%20interested%20in%20Batch%20English_BIZ%20(Business)" class="btn-card-action" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn-card-action" onclick="openRegisterModal('biz')" style="border:none; cursor:pointer;">
             <span>Join Business Batch</span>
             &rarr;
-          </a>
+          </button>
 
           <button type="button" class="btn-syllabus-trigger" onclick="openSyllabusModal('biz')">
             View 12-week syllabus &rarr;
@@ -1195,10 +1185,10 @@
             </p>
           </div>
 
-          <a href="https://wa.me/918925693013?text=YES%20-%20I%20am%20interested%20in%20Batch%20English_STU%20(Students)" class="btn-card-action" target="_blank" rel="noopener noreferrer">
+          <button type="button" class="btn-card-action" onclick="openRegisterModal('stu')" style="border:none; cursor:pointer;">
             <span>Join Student Batch</span>
             &rarr;
-          </a>
+          </button>
 
           <button type="button" class="btn-syllabus-trigger" onclick="openSyllabusModal('stu')">
             View 12-week syllabus &rarr;
@@ -1300,6 +1290,40 @@
         </div>
       </div>
 
+  <!-- DEDICATED SEAT RESERVATION (WEB3FORMS) -->
+  <section id="reserve" style="background:var(--white); border-top:1px solid var(--slate-200); padding: 56px 0;">
+    <div class="container-narrow">
+      <div class="section-header-center" style="margin-bottom: 26px;">
+        <span class="section-eyebrow">Online Registration</span>
+        <h2 class="section-title">Reserve Your Free Orientation Seat</h2>
+        <p class="section-sub">Saturday, 17 October 2026 &bull; 6:00 PM – 7:00 PM IST &bull; Online via Google Meet</p>
+      </div>
+
+      <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:32px 34px; max-width:540px; margin:0 auto; box-shadow:var(--shadow-sm);">
+        <form id="inline-register-form" onsubmit="handleRegisterSubmit(event)">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Your Name</label>
+            <input type="text" name="name" required placeholder="Enter your full name" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">WhatsApp Phone Number</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 43210" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+          </div>
+          <div style="margin-bottom:20px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Select Cohort</label>
+            <select name="batch" id="inlineBatchSelect" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;">
+              <option value="Housewives & Homemakers (English_HM)">Housewives & Homemakers (English_HM)</option>
+              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners & Freelancers (English_BIZ)</option>
+              <option value="Students & Job Seekers (English_STU)">Students & Job Seekers (English_STU)</option>
+              <option value="Common Orientation Only">Common Orientation (Decide batch later)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit-form" style="width:100%; background:var(--navy-900); color:#ffffff; font-size:0.94rem; font-weight:700; padding:13px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
+            <span>Reserve My Free Seat</span> &rarr;
+          </button>
+          <div class="form-status-msg" style="margin-top:14px; font-size:0.88rem; text-align:center; display:none;"></div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -1370,7 +1394,7 @@
             <span class="faq-symbol">&#9660;</span>
           </button>
           <div class="faq-content">
-            Simply send <strong>"YES"</strong> on WhatsApp to <strong>+91 89256 93013</strong>. We will send you the Google Meet joining link and reminder directly. For phone calls, you can reach our team at <strong>+91 90929 79797</strong>.
+            Simply send <strong>"YES"</strong> on WhatsApp to <strong>+91 89256 93013</strong> or reserve your seat online using our registration form. We will send you the Google Meet joining link and reminder directly.
           </div>
         </div>
 
@@ -1386,15 +1410,15 @@
       <p>Join Saturday’s free orientation to experience the method firsthand. Strictly 8 learners per micro-batch.</p>
 
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
-        <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-wa-action" target="_blank" rel="noopener noreferrer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <button type="button" class="btn-wa-action" onclick="openRegisterModal()" style="background:#ffffff; color:var(--navy-900); border:none; cursor:pointer;">
+          <span>Reserve Free Seat Online &rarr;</span>
+        </button>
+
+        <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-secondary-link" target="_blank" rel="noopener noreferrer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.965.527 1.791.78 2.796.78 3.18 0 5.767-2.586 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm9.969 5.828c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.239l-7.181 1.881 1.914-6.992c-.855-1.488-1.345-3.216-1.345-5.05 0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
           </svg>
-          <span>Reserve Your Free Seat on WhatsApp</span>
-        </a>
-
-        <a href="tel:+919092979797" class="btn-secondary-link">
-          <span>Call +91 90929 79797</span>
+          <span>Chat on WhatsApp</span>
         </a>
       </div>
     </div>
@@ -1410,8 +1434,6 @@
         <a href="https://cyberad.in/privacy">Privacy Policy</a>
         <span>&bull;</span>
         <a href="https://wa.me/918925693013">WhatsApp (Text Only): +91 89256 93013</a>
-        <span>&bull;</span>
-        <a href="tel:+919092979797">Phone Call: +91 90929 79797</a>
       </div>
       <p style="margin-top:8px;">&copy; 2026 CyberAd. All rights reserved.</p>
     </div>
@@ -1420,8 +1442,8 @@
   <!-- MOBILE STICKY BAR -->
   <div class="mobile-footer-bar">
     <div class="mobile-phone-text">
-      <span>Orientation: Sat 6 PM</span>
-      <a href="tel:+919092979797">Call 90929 79797</a>
+      <span>Free Live Orientation</span>
+      <strong style="display:block; color:#fff; font-size:0.82rem;">Sat, 17 Oct &bull; 6:00 PM</strong>
     </div>
     <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-mobile-wa-trigger" target="_blank" rel="noopener noreferrer">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
@@ -1500,11 +1522,58 @@
 
       <div class="modal-bottom">
         <span style="font-size:0.82rem; color:var(--slate-600);">Strictly 8 learners per batch &bull; 4 live classes per week</span>
-        <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-wa-action" style="padding:7px 16px; font-size:0.84rem;" target="_blank" rel="noopener noreferrer">
-          <span>Join Free Orientation</span> &rarr;
-        </a>
+        <button type="button" class="btn-wa-action" onclick="closeSyllabusModal(); openRegisterModal();" style="padding:7px 16px; font-size:0.84rem; border:none; cursor:pointer;">
+          <span>Reserve Free Seat</span> &rarr;
+        </button>
       </div>
 
+    </div>
+  </div>
+
+  <!-- REGISTRATION MODAL (WEB3FORMS) -->
+  <div class="modal-overlay" id="registerModal" onclick="handleOutsideRegisterClick(event)">
+    <div class="modal-container" style="max-width: 500px;">
+      <div class="modal-top">
+        <div class="modal-heading">Reserve Your Free Orientation Seat</div>
+        <button type="button" class="modal-dismiss" onclick="closeRegisterModal()">&times;</button>
+      </div>
+
+      <div style="padding: 24px;">
+        <p style="font-size:0.88rem; color:var(--slate-600); margin-bottom:18px; line-height:1.5;">
+          Saturday, 17 October 2026 &bull; 6:00 PM – 7:00 PM IST &bull; Live online on Google Meet.
+        </p>
+
+        <form id="modal-register-form" onsubmit="handleRegisterSubmit(event)">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.82rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Your Name</label>
+            <input type="text" name="name" required placeholder="Enter your full name" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+          </div>
+
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.82rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">WhatsApp Phone Number</label>
+            <input type="tel" name="phone" required placeholder="+91 98765 43210" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+          </div>
+
+          <div style="margin-bottom:20px;">
+            <label style="display:block; font-size:0.82rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Select Cohort</label>
+            <select name="batch" id="modalBatchSelect" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;">
+              <option value="Housewives & Homemakers (English_HM)">Housewives & Homemakers (English_HM)</option>
+              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners & Freelancers (English_BIZ)</option>
+              <option value="Students & Job Seekers (English_STU)">Students & Job Seekers (English_STU)</option>
+              <option value="Common Orientation Only">Common Orientation (Decide batch later)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-submit-form" style="width:100%; background:var(--navy-900); color:#ffffff; font-size:0.94rem; font-weight:700; padding:13px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
+            <span>Reserve My Free Seat</span> &rarr;
+          </button>
+          <div class="form-status-msg" style="margin-top:14px; font-size:0.88rem; text-align:center; display:none;"></div>
+        </form>
+      </div>
+
+      <div style="padding:12px 24px; background:var(--slate-50); border-top:1px solid var(--slate-200); font-size:0.8rem; color:var(--slate-500); text-align:center;">
+        Prefer WhatsApp directly? <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" target="_blank" rel="noopener noreferrer" style="color:var(--badge-open-text); font-weight:700;">Reply "YES" on WhatsApp</a>
+      </div>
     </div>
   </div>
 
@@ -1557,6 +1626,101 @@
 
       const activePanel = document.getElementById('tabPanel-' + key);
       if (activePanel) activePanel.classList.add('active');
+    }
+
+    // Registration Modal Controls
+    function openRegisterModal(batchKey) {
+      document.getElementById('registerModal').style.display = 'flex';
+      const select = document.getElementById('modalBatchSelect');
+      if (select && batchKey) {
+        if (batchKey === 'hm') select.value = 'Housewives & Homemakers (English_HM)';
+        else if (batchKey === 'biz') select.value = 'Business Owners & Freelancers (English_BIZ)';
+        else if (batchKey === 'stu') select.value = 'Students & Job Seekers (English_STU)';
+      }
+    }
+    function closeRegisterModal() {
+      document.getElementById('registerModal').style.display = 'none';
+    }
+    function handleOutsideRegisterClick(e) {
+      if (e.target.id === 'registerModal') {
+        closeRegisterModal();
+      }
+    }
+
+    // Web3Forms AJAX Submission (Access Key: 0ef05e24-2b04-437b-91dc-11a547022dad)
+    async function handleRegisterSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const status = form.querySelector('.form-status-msg');
+      const name = form.elements['name'].value.trim();
+      const phone = form.elements['phone'].value.trim();
+      const batch = form.elements['batch'].value;
+
+      btn.disabled = true;
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Submitting...';
+      status.style.display = 'none';
+
+      const payload = {
+        access_key: "0ef05e24-2b04-437b-91dc-11a547022dad",
+        subject: `New English Class Registration: ${batch} - ${name}`,
+        from_name: "CyberAd English Class",
+        name: name,
+        phone: phone,
+        batch: batch
+      };
+
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (data.success) {
+          status.style.display = 'block';
+          status.style.color = '#065F46';
+          status.style.background = '#ECFDF5';
+          status.style.padding = '10px 14px';
+          status.style.borderRadius = '6px';
+          status.style.border = '1px solid #A7F3D0';
+          status.innerHTML = `<strong>Seat Reserved!</strong> Thank you, ${name}. Your seat for the Free Orientation on Saturday, 17 Oct at 6:00 PM is reserved. We will send the Google Meet joining link to your WhatsApp (${phone}) shortly.`;
+          form.reset();
+          btn.innerHTML = 'Seat Reserved Successfully';
+
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              event_category: 'registration',
+              event_label: batch,
+              value: 2000
+            });
+          }
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', 'Lead');
+          }
+        } else {
+          status.style.display = 'block';
+          status.style.color = '#991B1B';
+          status.style.background = '#FEF2F2';
+          status.style.padding = '10px 14px';
+          status.style.borderRadius = '6px';
+          status.style.border = '1px solid #FECACA';
+          status.innerText = data.message || 'Submission error. Please send "YES" on WhatsApp to 89256 93013 instead.';
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+        }
+      } catch (err) {
+        status.style.display = 'block';
+        status.style.color = '#991B1B';
+        status.style.background = '#FEF2F2';
+        status.style.padding = '10px 14px';
+        status.style.borderRadius = '6px';
+        status.style.border = '1px solid #FECACA';
+        status.innerText = 'Unable to connect. Please send "YES" on WhatsApp to 89256 93013 directly.';
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+      }
     }
 
     // GA4 Lead Conversion Event on all WhatsApp Links
