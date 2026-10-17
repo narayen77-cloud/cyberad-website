@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // Always return to Hero / Home section on refresh
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+    window.addEventListener('beforeunload', function () {
+      window.scrollTo(0, 0);
+    });
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }, 0);
+    });
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1B2LW255M"></script>
   <script>
@@ -27,28 +46,30 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Speak English with Confidence | CyberAd English Communication Lab</title>
-  <meta name="description" content="A practical speaking programme for adults who understand English but hesitate to speak. Free common orientation followed by small 8-person dedicated batches. ₹2,000 per month.">
-  <link rel="canonical" href="https://cyberad.in/English_class">
-  <link rel="icon" type="image/png" href="https://assets.cyberad.in/Favicon.png">
+  <title>Welcome — Free Spoken English Orientation (17 Oct, 6:00 PM – 6:45 PM) | CyberAd.in</title>
+  <meta name="description" content="Welcome to today's Free Spoken English Orientation (17 October, 6:00 PM – 6:45 PM). No fee, no obligation—discover what confident spoken English can unlock for you and explore how the programme works.">
+  <link rel="canonical" href="https://cyberad.in/english_class/">
+  <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
+  <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
 
   <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
       /* CyberAd Identity Palette */
       --navy-950: #040B16;
-      --navy-900: #0A1C33;
-      --navy-850: #0E2544;
-      --navy-800: #14325C;
-      --navy-700: #1E3A8A;
-      --electric: #0098FF;
+      --navy-900: #08182E;
+      --navy-850: #0D2342;
+      --navy-800: #13315C;
+      --navy-700: #1D4ED8;
+      --electric: #0066FF;
+      --electric-hover: #0052CC;
       --electric-light: #38B6FF;
       --electric-soft: #EFF6FF;
-      --electric-border: #BAE6FD;
+      --electric-border: #BFDBFE;
 
       /* Neutrals & Slate */
       --charcoal: #0F172A;
@@ -56,6 +77,7 @@
       --slate-700: #334155;
       --slate-600: #475569;
       --slate-500: #64748B;
+      --slate-400: #94A3B8;
       --slate-300: #CBD5E1;
       --slate-200: #E2E8F0;
       --slate-100: #F1F5F9;
@@ -64,21 +86,24 @@
 
       /* Intent / Badges */
       --badge-warm-text: #92400E;
-      --badge-warm-bg: #FEF3C7;
+      --badge-warm-bg: #FFFBEB;
       --badge-warm-border: #FDE68A;
       --badge-open-text: #065F46;
       --badge-open-bg: #ECFDF5;
       --badge-open-border: #A7F3D0;
+      --meet-green: #10B981;
+      --meet-green-hover: #059669;
       --whatsapp: #25D366;
-      --whatsapp-hover: #20BA5A;
+      --whatsapp-hover: #1EBE5B;
 
       /* Radii & Shadows */
-      --radius-sm: 6px;
-      --radius-md: 10px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
       --radius-lg: 16px;
-      --shadow-sm: 0 1px 3px rgba(10, 28, 51, 0.06), 0 1px 2px rgba(10, 28, 51, 0.04);
-      --shadow-md: 0 4px 14px rgba(10, 28, 51, 0.07);
-      --shadow-lg: 0 12px 32px rgba(10, 28, 51, 0.10);
+      --shadow-xs: 0 1px 2px rgba(8, 24, 46, 0.05);
+      --shadow-sm: 0 2px 8px rgba(8, 24, 46, 0.06);
+      --shadow-md: 0 8px 24px rgba(8, 24, 46, 0.08);
+      --shadow-lg: 0 16px 40px rgba(8, 24, 46, 0.12);
     }
 
     * {
@@ -98,7 +123,7 @@
       background-color: var(--slate-50);
       line-height: 1.65;
       font-size: 16px;
-      padding-bottom: 70px;
+      padding-bottom: 76px;
     }
 
     @media (min-width: 840px) {
@@ -110,157 +135,204 @@
     a {
       color: var(--electric);
       text-decoration: none;
-      transition: color 0.15s ease;
-    }
-    a:hover {
-      color: var(--navy-800);
+      transition: all 0.15s ease;
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     .container-narrow {
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 24px;
+    }
+
+    @media (max-width: 640px) {
+      .container, .container-narrow {
+        padding: 0 16px;
+      }
     }
 
     /* TOP ANNOUNCEMENT BAR */
     .top-announcement {
       background: var(--navy-950);
       color: var(--slate-300);
-      font-size: 0.81rem;
-      padding: 8px 16px;
+      font-size: 0.82rem;
+      padding: 10px 16px;
       text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       letter-spacing: 0.01em;
     }
     .top-announcement strong {
-      color: var(--electric-light);
+      color: #FFFFFF;
       font-weight: 600;
+    }
+    .top-announcement .announcement-highlight {
+      color: var(--electric-light);
+      font-weight: 700;
+    }
+    .top-announcement a.announcement-meet-link {
+      color: #6EE7B7;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-left: 6px;
+    }
+    .top-announcement a.announcement-meet-link:hover {
+      color: #A7F3D0;
     }
 
     /* HEADER */
     header {
       background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--slate-200);
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 12px rgba(8, 24, 46, 0.04);
     }
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 68px;
+      height: 76px;
+      gap: 20px;
     }
     .brand-logo {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 12px;
       text-decoration: none;
+      cursor: pointer;
     }
-    .logo-badge {
-      background: var(--navy-900);
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.05rem;
-      padding: 5px 12px;
-      border-radius: var(--radius-sm);
+    .brand-logo-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1.5px solid var(--slate-200);
+      box-shadow: 0 2px 6px rgba(8, 24, 46, 0.08);
+      background: #FFFFFF;
+    }
+    .brand-text-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.2;
+    }
+    .brand-name {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--navy-900);
       letter-spacing: -0.02em;
     }
-    .logo-badge span {
+    .brand-name span {
       color: var(--electric);
     }
-    .logo-divider {
-      width: 1px;
-      height: 20px;
-      background: var(--slate-300);
+    .brand-sub {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--slate-500);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin-top: 2px;
     }
-    .logo-text {
-      font-size: 0.84rem;
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .header-nav a {
+      font-size: 0.87rem;
+      font-weight: 600;
       color: var(--slate-600);
-      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: color 0.15s ease, background 0.15s ease;
     }
-    @media (max-width: 600px) {
-      .logo-divider, .logo-text { display: none; }
+    .header-nav a:hover {
+      color: var(--navy-900);
+      background: var(--slate-100);
+    }
+    @media (max-width: 920px) {
+      .header-nav {
+        display: none;
+      }
     }
 
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
-    }
-    .header-phone-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--slate-700);
-    }
-    .header-phone-link:hover {
-      color: var(--navy-900);
+      gap: 10px;
     }
     .header-cta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--navy-900);
+      gap: 8px;
+      background: var(--electric);
       color: #ffffff;
-      padding: 8px 16px;
+      padding: 10px 16px;
       border-radius: var(--radius-sm);
-      font-size: 0.84rem;
-      font-weight: 600;
-      transition: background 0.15s ease;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 102, 255, 0.25);
+      transition: all 0.15s ease;
     }
     .header-cta-btn:hover {
-      background: var(--navy-800);
+      background: var(--electric-hover);
       color: #ffffff;
-    }
-    @media (max-width: 540px) {
-      .header-phone-link { display: none; }
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.32);
     }
 
     /* SECTION BASICS */
     section {
-      padding: 64px 0;
+      padding: 72px 0;
     }
     @media (max-width: 768px) {
       section {
-        padding: 44px 0;
+        padding: 52px 0;
       }
     }
     .section-eyebrow {
       display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--electric);
-      margin-bottom: 8px;
+      background: var(--electric-soft);
+      border: 1px solid var(--electric-border);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
     }
     .section-title {
-      font-size: 1.95rem;
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
       font-weight: 800;
       color: var(--navy-900);
-      line-height: 1.25;
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
+      line-height: 1.24;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
     }
     .section-sub {
       font-size: 1.02rem;
       color: var(--slate-600);
-      max-width: 620px;
-      line-height: 1.6;
+      max-width: 650px;
+      line-height: 1.62;
     }
     .section-header-center {
       text-align: center;
-      margin-bottom: 38px;
+      margin-bottom: 42px;
     }
     .section-header-center .section-sub {
       margin: 0 auto;
@@ -268,125 +340,339 @@
 
     /* HERO SECTION */
     .hero {
-      background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-850) 100%);
+      background: radial-gradient(circle at 50% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
       color: #ffffff;
-      padding: 72px 0 80px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 68px 0 76px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
     }
     .hero-container {
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
-    .hero-meta-pill {
+    .hero-welcome-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      color: var(--electric-light);
-      font-size: 0.81rem;
-      font-weight: 600;
-      padding: 5px 14px;
+      gap: 10px;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(110, 231, 183, 0.35);
+      padding: 6px 16px;
       border-radius: 999px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(6px);
+    }
+    .live-pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34D399;
+      box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2);
+      flex-shrink: 0;
+    }
+    .hero-welcome-pill span {
+      font-size: 0.81rem;
+      font-weight: 700;
+      color: #D1FAE5;
       letter-spacing: 0.02em;
     }
     .hero-h1 {
-      font-size: 2.7rem;
-      font-weight: 800;
-      line-height: 1.18;
+      font-size: clamp(2.1rem, 4.6vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.16;
       letter-spacing: -0.03em;
       color: #ffffff;
       margin-bottom: 18px;
     }
-    @media (max-width: 640px) {
-      .hero-h1 {
-        font-size: 2rem;
-      }
+    .hero-h1 span {
+      color: var(--electric-light);
     }
     .hero-desc {
-      font-size: 1.1rem;
-      color: var(--slate-300);
+      font-size: clamp(1.04rem, 1.9vw, 1.18rem);
+      color: #E2E8F0;
       line-height: 1.65;
-      margin-bottom: 12px;
+      max-width: 680px;
+      margin: 0 auto 14px;
+      font-weight: 400;
     }
     .hero-subline {
-      font-size: 0.96rem;
-      color: var(--slate-400);
-      margin-bottom: 24px;
-    }
-    .hero-event-callout {
-      display: inline-block;
-      background: rgba(0, 152, 255, 0.12);
-      border: 1px solid rgba(0, 152, 255, 0.28);
-      padding: 8px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.88rem;
-      color: #ffffff;
+      font-size: 0.95rem;
+      color: #93C5FD;
       font-weight: 500;
       margin-bottom: 30px;
     }
-    .hero-event-callout strong {
-      color: var(--electric-light);
+
+    /* PROMINENT GOOGLE MEET CARD IN HERO */
+    .meet-hero-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(56, 182, 255, 0.38);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      text-align: left;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px rgba(4, 11, 22, 0.35);
     }
-    .hero-cta-row {
+    @media (max-width: 640px) {
+      .meet-hero-card {
+        padding: 22px 18px;
+      }
+    }
+    .meet-card-top {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 22px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
-    .btn-wa-action {
+    .meet-card-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .meet-card-eyebrow {
+      font-size: 0.73rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--electric-light);
+    }
+    .meet-card-datetime {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .meet-card-badge {
+      background: rgba(16, 185, 129, 0.18);
+      border: 1px solid rgba(110, 231, 183, 0.4);
+      color: #A7F3D0;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+    .meet-link-display-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(4, 11, 22, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 18px;
+    }
+    .meet-url-box {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .meet-url-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--slate-400);
+      font-weight: 700;
+    }
+    .meet-url-text {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      word-break: break-all;
+    }
+    .meet-url-text:hover {
+      color: var(--electric-light);
+      text-decoration: underline;
+    }
+    .btn-copy-link {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    .btn-copy-link:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+    .meet-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn-join-meet-primary {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--whatsapp);
-      color: #064E3B;
-      font-weight: 700;
-      font-size: 0.94rem;
-      padding: 13px 24px;
+      justify-content: center;
+      gap: 10px;
+      background: var(--electric);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.98rem;
+      padding: 15px 26px;
       border-radius: var(--radius-sm);
-      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
-      transition: background 0.15s ease, transform 0.15s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 102, 255, 0.4);
+      transition: all 0.15s ease;
+      flex: 1;
+      min-width: 240px;
+      text-align: center;
     }
-    .btn-wa-action:hover {
-      background: var(--whatsapp-hover);
-      color: #064E3B;
+    .btn-join-meet-primary:hover {
+      background: var(--electric-hover);
+      color: #FFFFFF;
       transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 102, 255, 0.5);
     }
     .btn-secondary-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      justify-content: center;
+      gap: 8px;
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.22);
       color: #ffffff;
       font-weight: 600;
-      font-size: 0.94rem;
-      padding: 13px 22px;
+      font-size: 0.92rem;
+      padding: 14px 20px;
       border-radius: var(--radius-sm);
       transition: background 0.15s ease;
     }
     .btn-secondary-link:hover {
-      background: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.15);
       color: #ffffff;
     }
-    .hero-reassurance-text {
+    .meet-card-reassurance {
+      margin-top: 14px;
       font-size: 0.82rem;
-      color: var(--slate-400);
+      color: var(--slate-300);
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .hero-trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.84rem;
+      color: var(--slate-300);
+      font-weight: 500;
+    }
+    .hero-trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-trust-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--electric-light);
+    }
+
+    /* CURIOSITY / WHAT IT UNLOCKS SECTION */
+    .curiosity-section {
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .curiosity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 900px) {
+      .curiosity-grid {
+        grid-template-columns: 1fr;
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .curiosity-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 26px 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .curiosity-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .curiosity-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--electric);
+      margin-bottom: 8px;
+    }
+    .curiosity-card h3 {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 10px;
+      line-height: 1.32;
+    }
+    .curiosity-card p {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      line-height: 1.6;
+    }
+    .curiosity-callout {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .curiosity-callout-text {
+      max-width: 640px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #E2E8F0;
+    }
+    .curiosity-callout-text strong {
+      color: #FFFFFF;
     }
 
     /* ORIENTATION SECTION */
     .orientation-section {
-      background: var(--white);
+      background: var(--slate-50);
       border-bottom: 1px solid var(--slate-200);
     }
     .orientation-wrapper {
-      background: var(--slate-50);
+      background: var(--white);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius-lg);
-      padding: 34px 38px;
+      padding: 38px 40px;
+      box-shadow: var(--shadow-sm);
     }
     @media (max-width: 640px) {
       .orientation-wrapper {
@@ -397,14 +683,16 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--slate-200);
-      margin-bottom: 22px;
+      padding: 18px 22px;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      margin-bottom: 24px;
     }
     @media (max-width: 680px) {
       .orientation-meta-bar {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 14px;
       }
     }
     .meta-box-label {
@@ -413,28 +701,29 @@
       font-weight: 700;
       letter-spacing: 0.06em;
       color: var(--slate-500);
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
     .meta-box-val {
-      font-size: 0.94rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--navy-900);
     }
     .orientation-info-strip {
-      background: var(--white);
-      border-left: 3px solid var(--electric);
-      padding: 12px 16px;
+      background: var(--electric-soft);
+      border-left: 4px solid var(--electric);
+      padding: 14px 18px;
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       font-size: 0.9rem;
-      color: var(--slate-700);
+      color: var(--navy-900);
       margin-bottom: 24px;
+      line-height: 1.58;
     }
     .orientation-agenda-list {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
     @media (max-width: 680px) {
       .orientation-agenda-list {
@@ -442,142 +731,268 @@
       }
     }
     .agenda-item {
-      background: var(--white);
+      background: var(--slate-50);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius-sm);
-      padding: 14px 16px;
+      padding: 16px 18px;
       display: flex;
       gap: 12px;
       align-items: flex-start;
     }
     .agenda-num {
-      width: 22px;
-      height: 22px;
-      border-radius: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
       background: var(--navy-900);
       color: #fff;
-      font-size: 0.75rem;
+      font-size: 0.76rem;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-top: 2px;
+      margin-top: 1px;
     }
     .agenda-text {
-      font-size: 0.88rem;
+      font-size: 0.89rem;
       color: var(--slate-700);
-      line-height: 1.5;
+      line-height: 1.52;
     }
     .orientation-action-box {
       text-align: center;
-      padding-top: 8px;
+      padding-top: 18px;
+      border-top: 1px solid var(--slate-200);
+    }
+    .orientation-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 14px;
     }
     .orientation-subnote {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--slate-500);
-      margin-top: 10px;
+      margin-top: 12px;
+    }
+
+    .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--electric);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 26px;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0, 102, 255, 0.3);
+      transition: all 0.15s ease;
+    }
+    .btn-primary-hero:hover {
+      background: var(--electric-hover);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 102, 255, 0.4);
+    }
+    .btn-wa-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--whatsapp);
+      color: #052E16;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 13px 22px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 2px 10px rgba(37, 211, 102, 0.22);
+      transition: all 0.15s ease;
+    }
+    .btn-wa-action:hover {
+      background: var(--whatsapp-hover);
+      color: #052E16;
+      transform: translateY(-1px);
+    }
+
+    /* POST-SESSION EXPLORATION BANNER */
+    .post-session-divider {
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+      padding: 28px 0;
+      text-align: center;
+    }
+    .post-session-divider p {
+      font-size: 0.92rem;
+      color: var(--slate-600);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .post-session-divider strong {
+      color: var(--navy-900);
+    }
+
+    /* HOW THE PROGRAMME WORKS */
+    .programme-works-section {
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .step-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      transition: border-color 0.15s ease;
+    }
+    .step-row:hover {
+      border-color: var(--slate-300);
+    }
+    .step-index {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--navy-900);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-content {
+      font-size: 0.94rem;
+      color: var(--slate-700);
+      line-height: 1.55;
+    }
+    .step-content strong {
+      color: var(--navy-900);
     }
 
     /* BATCH CARDS SECTION */
     .batches-section {
       background: var(--slate-50);
+      border-bottom: 1px solid var(--slate-200);
     }
     .batch-cards-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 24px;
     }
     @media (max-width: 960px) {
       .batch-cards-container {
         grid-template-columns: 1fr;
-        max-width: 500px;
+        max-width: 520px;
         margin: 0 auto;
       }
     }
     .batch-card {
       background: var(--white);
       border: 1px solid var(--slate-200);
+      border-top: 4px solid var(--navy-800);
       border-radius: var(--radius-lg);
-      padding: 26px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       box-shadow: var(--shadow-sm);
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .batch-card:hover {
-      border-color: var(--slate-300);
+      transform: translateY(-2px);
       box-shadow: var(--shadow-md);
     }
     .batch-card.featured-card {
-      border: 1px solid var(--navy-800);
-      box-shadow: var(--shadow-md);
+      border-top: 4px solid var(--electric);
     }
     .card-top-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .card-batch-code {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      font-family: monospace;
-      color: var(--slate-600);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      color: var(--navy-900);
       background: var(--slate-100);
-      padding: 3px 8px;
-      border-radius: var(--radius-sm);
+      border: 1px solid var(--slate-200);
+      padding: 4px 10px;
+      border-radius: 6px;
     }
     .card-status-pill {
       font-size: 0.74rem;
-      font-weight: 600;
-      padding: 3px 9px;
+      font-weight: 700;
+      padding: 4px 10px;
       border-radius: 999px;
-    }
-    .status-warm {
-      background: var(--badge-warm-bg);
-      color: var(--badge-warm-text);
-      border: 1px solid var(--badge-warm-border);
-    }
-    .status-open {
-      background: var(--badge-open-bg);
-      color: var(--badge-open-text);
-      border: 1px solid var(--badge-open-border);
+      background: var(--electric-soft);
+      color: var(--electric);
+      border: 1px solid var(--electric-border);
     }
     .card-title {
       font-size: 1.22rem;
       font-weight: 800;
       color: var(--navy-900);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       line-height: 1.3;
     }
     .card-desc {
-      font-size: 0.86rem;
+      font-size: 0.88rem;
       color: var(--slate-600);
+      margin-bottom: 18px;
+      line-height: 1.6;
+      min-height: 68px;
+    }
+    .card-specs-row {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-top: 1px solid var(--slate-100);
+      border-bottom: 1px solid var(--slate-100);
       margin-bottom: 16px;
-      line-height: 1.55;
-      min-height: 58px;
+      font-size: 0.78rem;
+      color: var(--slate-600);
+      font-weight: 600;
+    }
+    .card-specs-row span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
     }
     .card-outcome-panel {
       background: var(--slate-50);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius-sm);
-      padding: 12px 14px;
+      padding: 14px 16px;
       margin-bottom: 20px;
       flex-grow: 1;
     }
     .card-outcome-heading {
       font-size: 0.72rem;
       text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--navy-900);
-      margin-bottom: 4px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      color: var(--electric);
+      margin-bottom: 5px;
     }
     .card-outcome-text {
       font-size: 0.86rem;
       color: var(--slate-700);
-      line-height: 1.5;
+      line-height: 1.55;
     }
     .btn-card-action {
       display: flex;
@@ -588,11 +1003,19 @@
       background: var(--navy-900);
       color: #ffffff;
       font-size: 0.88rem;
-      font-weight: 600;
-      padding: 11px;
+      font-weight: 700;
+      padding: 12px 16px;
       border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
       transition: background 0.15s ease;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+    }
+    .batch-card.featured-card .btn-card-action {
+      background: var(--electric);
+    }
+    .batch-card.featured-card .btn-card-action:hover {
+      background: var(--electric-hover);
     }
     .btn-card-action:hover {
       background: var(--navy-800);
@@ -601,8 +1024,8 @@
     .btn-syllabus-trigger {
       background: none;
       border: none;
-      color: var(--electric);
-      font-size: 0.81rem;
+      color: var(--slate-600);
+      font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
       text-align: center;
@@ -610,83 +1033,45 @@
       padding: 4px 0;
     }
     .btn-syllabus-trigger:hover {
-      color: var(--navy-800);
+      color: var(--electric);
       text-decoration: underline;
     }
 
-    /* HOW THE PROGRAMME WORKS */
-    .programme-works-section {
+    /* SELF REFLECTION SECTION */
+    .evaluation-section {
       background: var(--white);
-      border-top: 1px solid var(--slate-200);
       border-bottom: 1px solid var(--slate-200);
     }
-    .steps-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .step-row {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-    }
-    .step-index {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: var(--navy-900);
-      color: #fff;
-      font-size: 0.78rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .step-content {
-      font-size: 0.92rem;
-      color: var(--slate-700);
-      line-height: 1.55;
-    }
-
-    /* SELF EVALUATION SECTION */
-    .evaluation-section {
-      background: var(--slate-50);
-    }
     .eval-box {
-      background: var(--white);
+      background: var(--slate-50);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius-lg);
-      padding: 32px;
-      max-width: 720px;
+      padding: 34px;
+      max-width: 760px;
       margin: 0 auto;
-      box-shadow: var(--shadow-sm);
     }
     .eval-list {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin: 20px 0;
+      margin: 16px 0 22px;
     }
     .eval-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      font-size: 0.92rem;
+      gap: 12px;
+      font-size: 0.93rem;
       color: var(--slate-700);
       cursor: pointer;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--slate-200);
+      background: var(--white);
     }
     .eval-item input[type="checkbox"] {
-      width: 17px;
-      height: 17px;
-      accent-color: var(--navy-900);
+      width: 18px;
+      height: 18px;
+      accent-color: var(--electric);
       margin-top: 3px;
       cursor: pointer;
       flex-shrink: 0;
@@ -695,13 +1080,12 @@
       background: var(--electric-soft);
       border: 1px solid var(--electric-border);
       border-radius: var(--radius-sm);
-      padding: 14px 18px;
-      font-size: 0.88rem;
+      padding: 16px 20px;
+      font-size: 0.9rem;
       color: var(--navy-900);
-      line-height: 1.5;
+      line-height: 1.58;
     }
 
-    /* PRICING SECTION */
     /* FAQ SECTION */
     .faq-section {
       background: var(--slate-50);
@@ -709,8 +1093,8 @@
     .faq-stack {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      max-width: 720px;
+      gap: 12px;
+      max-width: 760px;
       margin: 0 auto;
     }
     .faq-block {
@@ -721,20 +1105,22 @@
     }
     .faq-block.open {
       border-color: var(--slate-300);
+      box-shadow: var(--shadow-xs);
     }
     .faq-trigger {
       width: 100%;
       background: none;
       border: none;
-      padding: 16px 18px;
+      padding: 18px 20px;
       text-align: left;
-      font-size: 0.94rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--navy-900);
       display: flex;
       justify-content: space-between;
       align-items: center;
       cursor: pointer;
+      font-family: inherit;
     }
     .faq-symbol {
       font-size: 0.72rem;
@@ -746,10 +1132,10 @@
     }
     .faq-content {
       display: none;
-      padding: 0 18px 16px;
-      font-size: 0.88rem;
+      padding: 0 20px 18px;
+      font-size: 0.9rem;
       color: var(--slate-600);
-      line-height: 1.6;
+      line-height: 1.65;
     }
     .faq-block.open .faq-content {
       display: block;
@@ -757,45 +1143,89 @@
 
     /* FINAL CTA */
     .final-banner {
-      background: var(--navy-900);
+      background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
       color: #ffffff;
       text-align: center;
       padding: 68px 0;
     }
     .final-banner h2 {
-      font-size: 2.1rem;
+      font-size: clamp(1.75rem, 3.2vw, 2.25rem);
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 12px;
+      letter-spacing: -0.02em;
     }
     .final-banner p {
       color: var(--slate-300);
-      font-size: 1.02rem;
-      max-width: 580px;
-      margin: 0 auto 28px;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 26px;
     }
 
     /* FOOTER */
     footer {
       background: var(--navy-950);
-      color: var(--slate-500);
-      font-size: 0.82rem;
-      padding: 34px 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      text-align: center;
+      color: var(--slate-400);
+      font-size: 0.85rem;
+      padding: 48px 0 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer-brand-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #FFFFFF;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      flex-shrink: 0;
+    }
+    .footer-brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.25;
+    }
+    .footer-brand-sub {
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      margin-top: 2px;
     }
     .footer-nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin: 12px 0;
+      align-items: center;
+      gap: 18px;
     }
     .footer-nav a {
-      color: var(--slate-400);
+      color: var(--slate-300);
+      font-weight: 500;
     }
     .footer-nav a:hover {
       color: #ffffff;
+    }
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-top: 20px;
+      font-size: 0.78rem;
+      color: var(--slate-500);
     }
 
     /* MOBILE STICKY BOTTOM BAR */
@@ -806,41 +1236,44 @@
       left: 0;
       width: 100%;
       background: var(--navy-900);
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
       padding: 10px 16px;
       z-index: 999;
-      box-shadow: 0 -4px 16px rgba(0,0,0,0.25);
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.25);
     }
     @media (max-width: 840px) {
       .mobile-footer-bar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 10px;
       }
     }
     .mobile-phone-text {
-      color: #fff;
-      font-size: 0.78rem;
+      color: var(--slate-300);
+      font-size: 0.74rem;
+      line-height: 1.3;
     }
-    .mobile-phone-text a {
-      display: block;
-      color: var(--electric-light);
-      font-weight: 700;
-      font-size: 0.85rem;
-    }
-    .btn-mobile-wa-trigger {
+    .btn-mobile-reserve {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--whatsapp);
-      color: #064E3B;
+      background: var(--electric);
+      color: #FFFFFF;
       font-weight: 700;
-      font-size: 0.84rem;
-      padding: 9px 15px;
+      font-size: 0.82rem;
+      padding: 10px 15px;
       border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn-mobile-reserve:hover {
+      color: #FFFFFF;
+      background: var(--electric-hover);
     }
 
-    /* SYLLABUS MODAL */
+    /* MODALS */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -874,8 +1307,20 @@
       align-items: center;
       background: var(--slate-50);
     }
+    .modal-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .modal-brand-header img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--slate-200);
+    }
     .modal-heading {
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
       color: var(--navy-900);
     }
@@ -904,11 +1349,12 @@
       text-align: center;
       border-bottom: 2px solid transparent;
       transition: all 0.15s ease;
+      font-family: inherit;
     }
     .modal-tab-item.active {
       background: var(--white);
       color: var(--navy-900);
-      border-bottom: 2px solid var(--navy-900);
+      border-bottom: 2px solid var(--electric);
       font-weight: 700;
     }
     .modal-scrollable {
@@ -954,140 +1400,302 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
 
   <!-- TOP ANNOUNCEMENT BAR -->
   <div class="top-announcement">
-    Common Free Orientation: <strong>Saturday, 17 October 2026 at 6:00 PM IST</strong> on Google Meet &bull; Dedicated 8-person micro-batches
+    <strong>Welcome! Today’s Free Spoken English Orientation:</strong>
+    <span class="announcement-highlight">17 October &bull; 6:00 PM – 6:45 PM IST</span>
+    &bull; No fee, no obligation
+    <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="announcement-meet-link">Join Google Meet &rarr;</a>
   </div>
 
   <!-- HEADER -->
   <header>
     <div class="container">
       <div class="header-inner">
-        <a href="https://cyberad.in" class="brand-logo" title="CyberAd Home">
-          <div class="logo-badge">Cyber<span>Ad</span></div>
-          <div class="logo-divider"></div>
-          <div class="logo-text">English Communication Lab</div>
+        <a href="#top" class="brand-logo" onclick="scrollToHero(event)" title="Back to top">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" class="brand-logo-img" />
+          <div class="brand-text-group">
+            <div class="brand-name">CYBERAD<span>.IN</span></div>
+            <div class="brand-sub">English Communication Lab</div>
+          </div>
         </a>
 
+        <nav class="header-nav" aria-label="Page navigation">
+          <a href="#orientation" onclick="smoothNavigate(event, 'orientation')">Today’s Session</a>
+          <a href="#unlock" onclick="smoothNavigate(event, 'unlock')">What It Unlocks</a>
+          <a href="#programme-works" onclick="smoothNavigate(event, 'programme-works')">How It Works</a>
+          <a href="#batches" onclick="smoothNavigate(event, 'batches')">8-Person Batches</a>
+          <a href="#faq" onclick="smoothNavigate(event, 'faq')">FAQ</a>
+        </nav>
+
         <div class="header-actions">
-          <button type="button" class="header-cta-btn" onclick="openRegisterModal()" style="border:none; cursor:pointer;">
-            <span>Reserve Free Seat</span>
-            &rarr;
-          </button>
+          <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="header-cta-btn">
+            <span>Join Meet (6:00 PM)</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
     </div>
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="container">
       <div class="hero-container">
 
-        <div class="hero-meta-pill">
-          Free Common Orientation &bull; Saturday, 17 Oct at 6:00 PM IST
+        <div class="hero-welcome-pill">
+          <span class="live-pulse-dot"></span>
+          <span>Welcome to Today’s Free Orientation &bull; 17 October, 6:00 PM – 6:45 PM</span>
         </div>
 
-        <h1 class="hero-h1">Speak English with Confidence</h1>
+        <h1 class="hero-h1">What Could <span>Confident Spoken English</span> Unlock for You?</h1>
 
         <p class="hero-desc">
-          A practical speaking programme for adults who understand English but hesitate to speak.
+          You likely already understand English—you read it, follow conversations, and know what you want to say. Yet when the moment comes to speak out loud, a quiet hesitation steps in.
         </p>
 
         <p class="hero-subline">
-          Free common orientation followed by small 8-person batches.
+          Today’s 45-minute orientation is a warm, low-pressure space to understand how our practice method works—and decide later at your own pace.
         </p>
 
-        <div class="hero-event-callout">
-          Saturday, 17 October 2026 &bull; 6:00 PM – 7:00 PM IST &bull; <strong>Online via Google Meet</strong>
+        <!-- PROMINENT GOOGLE MEET CARD -->
+        <div class="meet-hero-card">
+          <div class="meet-card-top">
+            <div class="meet-card-title-group">
+              <span class="meet-card-eyebrow">Today’s Live Orientation Session</span>
+              <span class="meet-card-datetime">17 October &bull; 6:00 PM – 6:45 PM IST</span>
+            </div>
+            <span class="meet-card-badge">100% Free &bull; Zero Obligation</span>
+          </div>
+
+          <div class="meet-link-display-row">
+            <div class="meet-url-box">
+              <span class="meet-url-label">Google Meet Joining Link</span>
+              <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="meet-url-text">https://meet.google.com/hke-jfwk-kbc</a>
+            </div>
+            <button type="button" class="btn-copy-link" id="copyMeetBtn" onclick="copyMeetLink()">
+              Copy Link
+            </button>
+          </div>
+
+          <div class="meet-cta-actions">
+            <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="btn-join-meet-primary">
+              <span>Join Google Meet Session</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="#orientation" class="btn-secondary-link" onclick="smoothNavigate(event, 'orientation')">
+              <span>What We’ll Explore Today &darr;</span>
+            </a>
+          </div>
+
+          <div class="meet-card-reassurance">
+            No registration fee and no commitment required. Simply join the call at 6:00 PM, listen in comfortably, and see if the approach feels right for you.
+          </div>
         </div>
 
-        <div class="hero-cta-row">
-          <button type="button" class="btn-wa-action" onclick="openRegisterModal()" style="border:none; cursor:pointer;">
-            <span>Reserve Your Free Orientation Seat &rarr;</span>
-          </button>
-
-          <a href="#batches" class="btn-secondary-link">
-            <span>View Dedicated Batches &darr;</span>
-          </a>
-        </div>
-
-        <div class="hero-reassurance-text">
-          Common Google Meet session &bull; Strictly 8 learners per cohort &bull; Zero judgment
+        <div class="hero-trust-strip">
+          <div class="hero-trust-item">
+            <span class="hero-trust-dot"></span>
+            <span>No Fee &bull; No Obligation</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-dot"></span>
+            <span>45-Minute Relaxed Walkthrough</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-dot"></span>
+            <span>Understand First, Decide Later</span>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ORIENTATION SECTION -->
+  <!-- CURIOSITY SECTION: WHAT CONFIDENT ENGLISH UNLOCKS -->
+  <section class="curiosity-section" id="unlock">
+    <div class="container">
+
+      <div class="section-header-center">
+        <span class="section-eyebrow">A Quiet Shift</span>
+        <h2 class="section-title">When Hesitation Fades, What Changes?</h2>
+        <p class="section-sub">
+          Most adults don’t need more grammar textbooks. They need a safe place to bridge the gap between the English in their head and the words they speak out loud.
+        </p>
+      </div>
+
+      <div class="curiosity-grid">
+        <div class="curiosity-card">
+          <span class="curiosity-tag">01 &bull; Real-Time Flow</span>
+          <h3>Moving Past the "Translation Pause"</h3>
+          <p>
+            Imagine responding naturally in a conversation without first translating the sentence from Tamil in your head—and without worrying if a verb tense is slightly off.
+          </p>
+        </div>
+
+        <div class="curiosity-card">
+          <span class="curiosity-tag">02 &bull; Everyday Presence</span>
+          <h3>Speaking Without Holding Back</h3>
+          <p>
+            How many times have you had a good point to make in a meeting, an interview, or a school PTM, but stayed quiet or kept it short? Confident speech lets your real personality come through.
+          </p>
+        </div>
+
+        <div class="curiosity-card">
+          <span class="curiosity-tag">03 &bull; New Doors</span>
+          <h3>Opportunities You Stop Avoiding</h3>
+          <p>
+            Whether it’s handling discerning clients directly, stepping up for a career interview, or conversing comfortably anywhere—ease with spoken English quietly expands what you say "yes" to.
+          </p>
+        </div>
+      </div>
+
+      <div class="curiosity-callout">
+        <div class="curiosity-callout-text">
+          <strong>Curious why traditional classes rarely fix speaking hesitation?</strong> In today’s 6:00 PM – 6:45 PM orientation, we’ll look at what actually builds speaking reflexes in adults—and why small 8-person circles make all the difference.
+        </div>
+        <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="white-space:nowrap;">
+          <span>Join Today at 6:00 PM &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TODAY'S ORIENTATION SECTION -->
   <section class="orientation-section" id="orientation">
     <div class="container-narrow">
 
       <div class="section-header-center">
-        <span class="section-eyebrow">Interactive Live Session</span>
-        <h2 class="section-title">What Happens in the Free Orientation</h2>
-        <p class="section-sub">Experience the teaching method and meet the mentor before deciding to join.</p>
+        <span class="section-eyebrow">Today’s 45-Minute Orientation</span>
+        <h2 class="section-title">What to Expect Between 6:00 PM &amp; 6:45 PM</h2>
+        <p class="section-sub">A calm, clear introduction to how the programme works—with zero pressure to sign up on the spot.</p>
       </div>
 
       <div class="orientation-wrapper">
 
         <div class="orientation-meta-bar">
           <div>
-            <div class="meta-box-label">Date & Time</div>
-            <div class="meta-box-val">Saturday, 17 Oct &bull; 6:00 PM – 7:00 PM</div>
+            <div class="meta-box-label">Date &amp; Time</div>
+            <div class="meta-box-val">Today, 17 Oct &bull; 6:00 PM – 6:45 PM</div>
           </div>
           <div>
-            <div class="meta-box-label">Platform</div>
-            <div class="meta-box-val">Google Meet (Online)</div>
+            <div class="meta-box-label">Google Meet Link</div>
+            <div class="meta-box-val">
+              <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" style="color:var(--electric); text-decoration:underline;">meet.google.com/hke-jfwk-kbc</a>
+            </div>
           </div>
           <div>
-            <div class="meta-box-label">Fee</div>
-            <div class="meta-box-val" style="color:var(--badge-open-text);">100% Free</div>
+            <div class="meta-box-label">Fee &amp; Commitment</div>
+            <div class="meta-box-val" style="color:var(--badge-open-text);">Free &bull; Decide Later</div>
           </div>
         </div>
 
         <div class="orientation-info-strip">
-          <strong>Common Live Session:</strong> This one-hour orientation is conducted jointly for all learners. Following orientation, learners are placed into their dedicated 8-person micro-batches.
+          <strong>Relaxed, Low-Pressure Format:</strong> You don’t need to prepare anything, and nobody is put on the spot. Join the Google Meet call to meet the mentor, understand the structure, and take your time deciding afterward.
         </div>
 
-        <p style="font-size:0.92rem; font-weight:600; color:var(--navy-900); margin-bottom:12px;">In this one-hour session you will:</p>
+        <p style="font-size:0.94rem; font-weight:700; color:var(--navy-900); margin-bottom:14px;">In these 45 minutes, we will walk through:</p>
 
         <ul class="orientation-agenda-list">
           <li class="agenda-item">
             <span class="agenda-num">1</span>
-            <span class="agenda-text">Understand who the programme is designed for and why hesitation occurs.</span>
+            <span class="agenda-text">Why adults who understand English still hesitate when speaking—and how to break that habit gently.</span>
           </li>
           <li class="agenda-item">
             <span class="agenda-num">2</span>
-            <span class="agenda-text">See how the live classes and speaking practice work in a small cohort.</span>
+            <span class="agenda-text">How our 8-person micro-batches work so you only practise with peers in similar daily situations.</span>
           </li>
           <li class="agenda-item">
             <span class="agenda-num">3</span>
-            <span class="agenda-text">Experience a short practical speaking activity without pressure.</span>
+            <span class="agenda-text">A short, practical glimpse of the speaking activities we use instead of heavy grammar drills.</span>
           </li>
           <li class="agenda-item">
             <span class="agenda-num">4</span>
-            <span class="agenda-text">Learn about the three dedicated batches, schedules, and monthly fee.</span>
+            <span class="agenda-text">Full clarity on batch timings, the 12-week roadmap, and open Q&amp;A so you can decide later.</span>
           </li>
         </ul>
 
         <div class="orientation-action-box">
-          <p style="font-size:0.86rem; color:var(--slate-600); margin-bottom:14px; font-weight:500;">
-            Limited to 8 seats per batch. Reply “YES” on WhatsApp to receive the Google Meet link.
+          <p style="font-size:0.88rem; color:var(--slate-600); font-weight:500;">
+            Click below to join directly on Google Meet at 6:00 PM, or message us on WhatsApp if you’d like a reminder or post-session summary.
           </p>
 
-          <a href="https://wa.me/918925693013?text=YES%20-%20Please%20send%20me%20the%20Google%20Meet%20link%20for%20Saturday%20Orientation" class="btn-wa-action" style="max-width:380px; margin:0 auto; justify-content:center; width:100%;" target="_blank" rel="noopener noreferrer">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.965.527 1.791.78 2.796.78 3.18 0 5.767-2.586 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm9.969 5.828c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.239l-7.181 1.881 1.914-6.992c-.855-1.488-1.345-3.216-1.345-5.05 0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
-            </svg>
-            <span>Reply "YES" to Receive Meet Link</span>
-          </a>
+          <div class="orientation-cta-group">
+            <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="btn-primary-hero" style="padding:13px 24px; font-size:0.92rem;">
+              <span>Open Google Meet (hke-jfwk-kbc) &rarr;</span>
+            </a>
+
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20attending%20today%27s%206%3A00%20PM%20Spoken%20English%20Orientation%20and%20would%20like%20programme%20details." class="btn-wa-action" target="_blank" rel="noopener noreferrer">
+              <span>Message on WhatsApp</span>
+            </a>
+          </div>
 
           <div class="orientation-subnote">
-            WhatsApp text: +91 89256 93013 &bull; Instant confirmation on WhatsApp
+            Direct Meet URL: <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer">https://meet.google.com/hke-jfwk-kbc</a> &bull; WhatsApp Support: +91 89256 93013
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUPPORTING DETAILS DIVIDER FOR AFTER THE SESSION -->
+  <div class="post-session-divider">
+    <div class="container-narrow">
+      <p>
+        <strong>Want to explore the full details before or after today’s orientation?</strong> Below is a complete breakdown of how the 3-month programme works, the three 8-person batches, and the week-by-week syllabus for your reference.
+      </p>
+    </div>
+  </div>
+
+  <!-- HOW THE PROGRAMME WORKS -->
+  <section class="programme-works-section" id="programme-works">
+    <div class="container">
+
+      <div class="section-header-center">
+        <span class="section-eyebrow">Programme Reference</span>
+        <h2 class="section-title">How the Programme Works</h2>
+        <p class="section-sub">If you decide to continue after the orientation, here is how the 12-week speaking journey is structured.</p>
+      </div>
+
+      <div class="steps-container">
+
+        <div class="step-row">
+          <div class="step-index">1</div>
+          <div class="step-content">
+            <strong>Start with today’s free orientation (17 October, 6:00 PM – 6:45 PM).</strong> Understand the teaching style, ask questions, and take your time—with zero obligation.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">2</div>
+          <div class="step-content">
+            <strong>Choose your dedicated 8-person batch when ready.</strong> We keep separate micro-batches for Homemakers, Business Owners, and Students so every conversation feels relevant.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">3</div>
+          <div class="step-content">
+            <strong>Attend 4 live sessions per week for 3 months (48 sessions total).</strong> Because each group is capped at 8 learners, everyone gets comfortable, unhurried speaking time in every class.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">4</div>
+          <div class="step-content">
+            <strong>Build daily speaking habits through role-plays and short voice notes.</strong> Practise real-life scenarios and receive supportive mentor feedback between live sessions.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">5</div>
+          <div class="step-content">
+            <strong>Review notes and speaking templates anytime on Google Classroom.</strong> Simple, organized reference material to support your progress week by week.
           </div>
         </div>
 
@@ -1101,9 +1709,9 @@
     <div class="container">
 
       <div class="section-header-center">
-        <span class="section-eyebrow">Small Cohorts</span>
-        <h2 class="section-title">Dedicated Batches</h2>
-        <p class="section-sub">Practise exclusively with peers who share your daily conversation situations. Strictly 8 learners per batch.</p>
+        <span class="section-eyebrow">Dedicated 8-Person Circles</span>
+        <h2 class="section-title">Explore the Three Cohorts</h2>
+        <p class="section-sub">After today’s common orientation, learners who choose to join are placed into a small 8-person batch matching their everyday life.</p>
       </div>
 
       <div class="batch-cards-container">
@@ -1112,28 +1720,36 @@
         <div class="batch-card">
           <div class="card-top-row">
             <span class="card-batch-code">Batch English_HM</span>
-            <span class="card-status-pill status-warm">6 seats remaining</span>
+            <span class="card-status-pill">8-Learner Micro-Batch</span>
           </div>
 
-          <h3 class="card-title">Housewives & Homemakers</h3>
+          <h3 class="card-title">Housewives &amp; Homemakers</h3>
           <p class="card-desc">
-            A supportive, judgment-free environment focused on everyday situations such as school meetings, doctor appointments, neighbours, and family conversations.
+            A warm, judgment-free circle focused on everyday situations—school parent-teacher meetings, doctor visits, travel, neighbours, and family conversations.
           </p>
 
+          <div class="card-specs-row">
+            <span>Max 8 Learners</span>
+            <span>&bull;</span>
+            <span>4 Live Sessions / Wk</span>
+            <span>&bull;</span>
+            <span>12 Weeks</span>
+          </div>
+
           <div class="card-outcome-panel">
-            <div class="card-outcome-heading">3-Month Outcome</div>
+            <div class="card-outcome-heading">What You Unlock</div>
             <p class="card-outcome-text">
-              Communicate confidently in daily situations, express thoughts clearly, and handle common conversations without hesitation.
+              Handle school meetings, clinic visits, and social conversations naturally without second-guessing yourself.
             </p>
           </div>
 
-          <button type="button" class="btn-card-action" onclick="openRegisterModal('hm')" style="border:none; cursor:pointer;">
-            <span>Join Housewives Batch</span>
-            &rarr;
+          <button type="button" class="btn-card-action" onclick="openSyllabusModal('hm')">
+            <span>View 12-Week Syllabus</span>
+            <span>&rarr;</span>
           </button>
 
-          <button type="button" class="btn-syllabus-trigger" onclick="openSyllabusModal('hm')">
-            View 12-week syllabus &rarr;
+          <button type="button" class="btn-syllabus-trigger" onclick="openRegisterModal('hm')">
+            Request batch schedule &amp; details &rarr;
           </button>
         </div>
 
@@ -1141,28 +1757,36 @@
         <div class="batch-card featured-card">
           <div class="card-top-row">
             <span class="card-batch-code">Batch English_BIZ</span>
-            <span class="card-status-pill status-warm">6 seats remaining</span>
+            <span class="card-status-pill">8-Learner Micro-Batch</span>
           </div>
 
-          <h3 class="card-title">Business Owners & Freelancers</h3>
+          <h3 class="card-title">Business Owners &amp; Freelancers</h3>
           <p class="card-desc">
-            Designed for shopkeepers, traders, and consultants who need clearer, more confident English for customer calls, vendor discussions, meetings, and deal conversations.
+            Tailored for entrepreneurs, shop owners, and independent professionals who want clearer, more assured English for client calls, vendor negotiations, and meetings.
           </p>
 
+          <div class="card-specs-row">
+            <span>Max 8 Learners</span>
+            <span>&bull;</span>
+            <span>4 Live Sessions / Wk</span>
+            <span>&bull;</span>
+            <span>12 Weeks</span>
+          </div>
+
           <div class="card-outcome-panel">
-            <div class="card-outcome-heading">3-Month Outcome</div>
+            <div class="card-outcome-heading">What You Unlock</div>
             <p class="card-outcome-text">
-              Speak with greater authority to customers, suppliers, and business contacts, and handle commercial conversations more effectively.
+              Present your work with authority, negotiate smoothly, and build stronger trust with clients and partners.
             </p>
           </div>
 
-          <button type="button" class="btn-card-action" onclick="openRegisterModal('biz')" style="border:none; cursor:pointer;">
-            <span>Join Business Batch</span>
-            &rarr;
+          <button type="button" class="btn-card-action" onclick="openSyllabusModal('biz')">
+            <span>View 12-Week Syllabus</span>
+            <span>&rarr;</span>
           </button>
 
-          <button type="button" class="btn-syllabus-trigger" onclick="openSyllabusModal('biz')">
-            View 12-week syllabus &rarr;
+          <button type="button" class="btn-syllabus-trigger" onclick="openRegisterModal('biz')">
+            Request batch schedule &amp; details &rarr;
           </button>
         </div>
 
@@ -1170,28 +1794,36 @@
         <div class="batch-card">
           <div class="card-top-row">
             <span class="card-batch-code">Batch English_STU</span>
-            <span class="card-status-pill status-open">Open (8 seats available)</span>
+            <span class="card-status-pill">8-Learner Micro-Batch</span>
           </div>
 
-          <h3 class="card-title">Students & Job Seekers</h3>
+          <h3 class="card-title">Students &amp; Job Seekers</h3>
           <p class="card-desc">
-            Focused on campus life, presentations, group discussions, interviews, and moving from academic English to professional communication.
+            Focused on moving from textbook English to real-world spoken fluency—covering interviews, group discussions, presentations, and workplace communication.
           </p>
 
+          <div class="card-specs-row">
+            <span>Max 8 Learners</span>
+            <span>&bull;</span>
+            <span>4 Live Sessions / Wk</span>
+            <span>&bull;</span>
+            <span>12 Weeks</span>
+          </div>
+
           <div class="card-outcome-panel">
-            <div class="card-outcome-heading">3-Month Outcome</div>
+            <div class="card-outcome-heading">What You Unlock</div>
             <p class="card-outcome-text">
-              Speak more confidently in everyday and formal situations, introduce yourself professionally, and participate actively in discussions and interviews.
+              Introduce yourself memorably, speak up in group discussions, and walk into job interviews with calm confidence.
             </p>
           </div>
 
-          <button type="button" class="btn-card-action" onclick="openRegisterModal('stu')" style="border:none; cursor:pointer;">
-            <span>Join Student Batch</span>
-            &rarr;
+          <button type="button" class="btn-card-action" onclick="openSyllabusModal('stu')">
+            <span>View 12-Week Syllabus</span>
+            <span>&rarr;</span>
           </button>
 
-          <button type="button" class="btn-syllabus-trigger" onclick="openSyllabusModal('stu')">
-            View 12-week syllabus &rarr;
+          <button type="button" class="btn-syllabus-trigger" onclick="openRegisterModal('stu')">
+            Request batch schedule &amp; details &rarr;
           </button>
         </div>
 
@@ -1200,126 +1832,87 @@
     </div>
   </section>
 
-  <!-- HOW THE PROGRAMME WORKS -->
-  <section class="programme-works-section">
-    <div class="container">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Structured Training</span>
-        <h2 class="section-title">How the Programme Works</h2>
-        <p class="section-sub">A practical 5-step framework focused on regular speaking practice.</p>
-      </div>
-
-      <div class="steps-container">
-
-        <div class="step-row">
-          <div class="step-index">1</div>
-          <div class="step-content">
-            <strong>Attend the free common orientation on 17 October.</strong> Get a clear overview of the methodology and meet the mentor.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">2</div>
-          <div class="step-content">
-            <strong>Join your dedicated 8-person batch.</strong> Choose between Housewives, Business, or Students to practice with peers having identical goals.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">3</div>
-          <div class="step-content">
-            <strong>Attend 4 live classes per week for 3 months (48 sessions).</strong> Interactive small-group sessions with guaranteed speaking time.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">4</div>
-          <div class="step-content">
-            <strong>Practise through short speaking exercises, role-plays, and daily voice-note homework.</strong> Receive polite mentor audio feedback between classes.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">5</div>
-          <div class="step-content">
-            <strong>Access materials and assignments through Google Classroom.</strong> Structured session notes, speaking templates, and progress reviews.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SELF EVALUATION SECTION -->
+  <!-- SELF REFLECTION SECTION -->
   <section class="evaluation-section">
     <div class="container-narrow">
 
       <div class="section-header-center">
-        <span class="section-eyebrow">Self-Assessment</span>
-        <h2 class="section-title">Is This Programme Right for You?</h2>
-        <p class="section-sub">Select the statements that describe your current everyday experience:</p>
+        <span class="section-eyebrow">Quick Reflection</span>
+        <h2 class="section-title">Do Any of These Moments Feel Familiar?</h2>
+        <p class="section-sub">Check the experiences you relate to—we’ll address each of these during today’s orientation:</p>
       </div>
 
       <div class="eval-box">
         <div class="eval-list">
           <label class="eval-item">
             <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I understand English well when reading or listening, but hesitate when speaking.</span>
+            <span>I understand English well when reading or listening, but my mind goes blank or hesitates when speaking.</span>
           </label>
 
           <label class="eval-item">
             <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I mentally translate sentences from Tamil before speaking, causing awkward pauses.</span>
+            <span>I mentally translate sentences from Tamil before speaking, which creates awkward pauses.</span>
           </label>
 
           <label class="eval-item">
             <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I want speaking practice tailored to my daily life (school PTMs, client meetings, or interviews).</span>
+            <span>I want practical speaking practice for my real daily situations rather than school-style grammar rules.</span>
           </label>
 
           <label class="eval-item">
             <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I prefer a supportive circle of 8 peers where nobody criticizes mistakes or pronunciation.</span>
+            <span>I feel much more comfortable practising in a small, encouraging group of 8 peers where nobody judges mistakes.</span>
           </label>
         </div>
 
         <div class="eval-result-card" id="evalResultCard">
-          <strong>Recommended:</strong> You checked 4 out of 4 challenges. This 8-seat micro-batch is built precisely to solve these hesitation blocks in a supportive setting. Join Saturday’s free orientation to experience the method.
+          <strong>You’re in the right place:</strong> These exact hesitation patterns are what we’ll unpack in today’s session (6:00 PM – 6:45 PM). Join the Google Meet call to see how small-group practice turns passive knowledge into natural speaking.
         </div>
       </div>
+    </div>
+  </section>
 
-  <!-- DEDICATED SEAT RESERVATION (WEB3FORMS) -->
-  <section id="reserve" style="background:var(--white); border-top:1px solid var(--slate-200); padding: 56px 0;">
+  <!-- TRANSPARENT PRICING & POST-ORIENTATION DETAILS STRIP -->
+  <section style="padding: 30px 0; background: var(--slate-50); border-bottom: 1px solid var(--slate-200); text-align: center;">
     <div class="container-narrow">
-      <div class="section-header-center" style="margin-bottom: 26px;">
-        <span class="section-eyebrow">Online Registration</span>
-        <h2 class="section-title">Reserve Your Free Orientation Seat</h2>
-        <p class="section-sub">Saturday, 17 October 2026 &bull; 6:00 PM – 7:00 PM IST &bull; Online via Google Meet</p>
+      <p style="font-size: 0.95rem; color: var(--slate-700); margin: 0; font-weight: 500;">
+        <strong>For those who decide to join later:</strong> The 3-month programme is a simple <strong style="color: var(--navy-900);">₹2,000 per month</strong> (paid monthly, with no registration or upfront fees). Today’s orientation is <strong>100% free with zero obligation</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- POST-SESSION FOLLOW-UP / BATCH INTEREST FORM (WEB3FORMS) -->
+  <section id="reserve" style="background:var(--white); padding: 64px 0; border-bottom: 1px solid var(--slate-200);">
+    <div class="container-narrow">
+      <div class="section-header-center" style="margin-bottom: 28px;">
+        <span class="section-eyebrow">Stay Connected After the Session</span>
+        <h2 class="section-title">Want Batch Timings or Follow-Up Details?</h2>
+        <p class="section-sub">
+          If you’re checking this page after today’s orientation—or want us to send the syllabus and batch schedule to your WhatsApp—leave your details below.
+        </p>
       </div>
 
-      <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:32px 34px; max-width:540px; margin:0 auto; box-shadow:var(--shadow-sm);">
+      <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:34px 36px; max-width:540px; margin:0 auto; box-shadow:var(--shadow-sm);">
         <form id="inline-register-form" onsubmit="handleRegisterSubmit(event)">
-          <div style="margin-bottom:14px;">
+          <div style="margin-bottom:16px;">
             <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Your Name</label>
-            <input type="text" name="name" required placeholder="Enter your full name" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+            <input type="text" name="name" required placeholder="Enter your full name" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
           </div>
-          <div style="margin-bottom:14px;">
+          <div style="margin-bottom:16px;">
             <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">WhatsApp Phone Number</label>
-            <input type="tel" name="phone" required placeholder="+91 98765 43210" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+            <input type="tel" name="phone" required placeholder="+91 98765 43210" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
           </div>
-          <div style="margin-bottom:20px;">
-            <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Select Cohort</label>
-            <select name="batch" id="inlineBatchSelect" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;">
-              <option value="Housewives & Homemakers (English_HM)">Housewives & Homemakers (English_HM)</option>
-              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners & Freelancers (English_BIZ)</option>
-              <option value="Students & Job Seekers (English_STU)">Students & Job Seekers (English_STU)</option>
-              <option value="Common Orientation Only">Common Orientation (Decide batch later)</option>
+          <div style="margin-bottom:22px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Which Batch Are You Curious About?</label>
+            <select name="batch" id="inlineBatchSelect" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;">
+              <option value="Common Orientation / Exploring Options">Exploring Options (Decide batch later)</option>
+              <option value="Housewives & Homemakers (English_HM)">Housewives &amp; Homemakers (English_HM)</option>
+              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners &amp; Freelancers (English_BIZ)</option>
+              <option value="Students & Job Seekers (English_STU)">Students &amp; Job Seekers (English_STU)</option>
             </select>
           </div>
-          <button type="submit" class="btn-submit-form" style="width:100%; background:var(--navy-900); color:#ffffff; font-size:0.94rem; font-weight:700; padding:13px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
-            <span>Reserve My Free Seat</span> &rarr;
+          <button type="submit" class="btn-submit-form" style="width:100%; background:var(--electric); color:#ffffff; font-size:0.95rem; font-weight:700; padding:14px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
+            <span>Send Me the Programme Details</span> &rarr;
           </button>
           <div class="form-status-msg" style="margin-top:14px; font-size:0.88rem; text-align:center; display:none;"></div>
         </form>
@@ -1327,74 +1920,65 @@
     </div>
   </section>
 
-  <!-- DEDICATED PRICING STRIP -->
-  <section style="padding: 28px 0; background: var(--white); border-top: 1px solid var(--slate-200); border-bottom: 1px solid var(--slate-200); text-align: center;">
-    <div class="container-narrow">
-      <p style="font-size: 0.96rem; color: var(--slate-700); margin: 0; font-weight: 500;">
-        Simple monthly fee: <strong style="color: var(--navy-900);">₹2,000 per month</strong> for all batches &bull; Pay monthly for the 3-month programme &bull; No registration fees.
-      </p>
-    </div>
-  </section>
-
   <!-- FAQ SECTION -->
-  <section class="faq-section">
+  <section class="faq-section" id="faq">
     <div class="container-narrow">
 
       <div class="section-header-center">
         <span class="section-eyebrow">Clear Answers</span>
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-sub">Information regarding the free orientation and batch placement.</p>
+        <p class="section-sub">Everything you need to know about today’s orientation and how the batches work afterward.</p>
       </div>
 
       <div class="faq-stack">
 
         <div class="faq-block open">
           <button class="faq-trigger" type="button">
-            <span>1. How does the orientation work if batches are separate?</span>
+            <span>1. How do I join today’s 6:00 PM – 6:45 PM orientation?</span>
             <span class="faq-symbol">&#9660;</span>
           </button>
           <div class="faq-content">
-            The free live orientation on <strong>Saturday, 17 October at 6:00 PM</strong> is common for everyone. In this 1-hour session, we explain the methodology and demonstrate exercises. Following the orientation, regular classes run inside your dedicated <strong>8-person micro-batch</strong> (Housewives, Business Owners, or Students) so you only practice with peers sharing your exact speaking goals.
+            You can join directly at 6:00 PM on 17 October using this Google Meet link: <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" style="font-weight:700; text-decoration:underline;">https://meet.google.com/hke-jfwk-kbc</a>. There is no fee and no prior preparation required.
           </div>
         </div>
 
         <div class="faq-block">
           <button class="faq-trigger" type="button">
-            <span>2. What is the fee and payment terms?</span>
+            <span>2. Is there any fee or obligation if I attend today’s session?</span>
             <span class="faq-symbol">&#9660;</span>
           </button>
           <div class="faq-content">
-            The fee is ₹2,000 per month. You pay monthly for the 3-month programme. There are no registration fees or large upfront payments.
+            None at all. Today’s 45-minute orientation is completely free and low-pressure. Its only purpose is to help you understand how our speaking method works, experience the atmosphere, and decide later if it suits you.
           </div>
         </div>
 
         <div class="faq-block">
           <button class="faq-trigger" type="button">
-            <span>3. I translate from Tamil and hesitate when speaking. Is this suitable?</span>
+            <span>3. Will I be forced to speak on camera during the orientation?</span>
             <span class="faq-symbol">&#9660;</span>
           </button>
           <div class="faq-content">
-            Yes, this programme is built specifically for adults facing this hesitation. We focus on speaking reflexes and situational drills rather than memorizing complicated grammar terms.
+            No. You are welcome to simply listen in, observe how the session flows, and ask questions via chat or audio only if you feel comfortable.
           </div>
         </div>
 
         <div class="faq-block">
           <button class="faq-trigger" type="button">
-            <span>4. What days and times are the classes held?</span>
+            <span>4. How do the separate batches work if the orientation is common?</span>
             <span class="faq-symbol">&#9660;</span>
           </button>
           <div class="faq-content">
-            Each batch has its own convenient weekly schedule of 4 live classes (45–60 mins each). Homemaker batches have convenient daytime/afternoon slots, while Business and Student batches have evening slots. Exact timings are finalized with enrolled participants during Saturday's orientation.
+            Today’s orientation (17 October, 6:00 PM – 6:45 PM) is a common walkthrough for all guests. If you choose to join the programme afterward, your regular classes take place inside a dedicated <strong>8-person micro-batch</strong> (Homemakers, Business Owners, or Students) so you practise exclusively with peers who share your day-to-day situations.
           </div>
         </div>
 
         <div class="faq-block">
           <button class="faq-trigger" type="button">
-            <span>5. How do I join Saturday's Free Orientation?</span>
+            <span>5. What are the class timings and monthly fee if I decide to join later?</span>
             <span class="faq-symbol">&#9660;</span>
           </button>
           <div class="faq-content">
-            Simply send <strong>"YES"</strong> on WhatsApp to <strong>+91 89256 93013</strong> or reserve your seat online using our registration form. We will send you the Google Meet joining link and reminder directly.
+            Each 8-person batch meets 4 times a week for live sessions over 3 months (48 sessions total). Homemaker batches typically run in convenient daytime/afternoon slots, while Business and Student batches run in evening slots. The fee is a straightforward ₹2,000 per month, paid monthly with no registration fee.
           </div>
         </div>
 
@@ -1406,19 +1990,16 @@
   <!-- FINAL CTA -->
   <section class="final-banner">
     <div class="container">
-      <h2>Speak English with Confidence</h2>
-      <p>Join Saturday’s free orientation to experience the method firsthand. Strictly 8 learners per micro-batch.</p>
+      <h2>We Look Forward to Welcoming You Today at 6:00 PM</h2>
+      <p>17 October &bull; 6:00 PM – 6:45 PM IST &bull; Free Spoken English Orientation on Google Meet. No fee, no obligation—just come curious.</p>
 
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px;">
-        <button type="button" class="btn-wa-action" onclick="openRegisterModal()" style="background:#ffffff; color:var(--navy-900); border:none; cursor:pointer;">
-          <span>Reserve Free Seat Online &rarr;</span>
-        </button>
+        <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="btn-primary-hero">
+          <span>Join Google Meet (hke-jfwk-kbc) &rarr;</span>
+        </a>
 
-        <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-secondary-link" target="_blank" rel="noopener noreferrer">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.965.527 1.791.78 2.796.78 3.18 0 5.767-2.586 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm9.969 5.828c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.239l-7.181 1.881 1.914-6.992c-.855-1.488-1.345-3.216-1.345-5.05 0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
-          </svg>
-          <span>Chat on WhatsApp</span>
+        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20have%20a%20question%20about%20today%27s%206%3A00%20PM%20Spoken%20English%20Orientation." class="btn-secondary-link" target="_blank" rel="noopener noreferrer">
+          <span>Ask a Question on WhatsApp</span>
         </a>
       </div>
     </div>
@@ -1427,29 +2008,39 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p><strong>CyberAd English Communication Lab</strong> &bull; Dedicated 8-Person Batches for Housewives, Business Owners & Students.</p>
-      <div class="footer-nav">
-        <a href="https://cyberad.in">CyberAd Home</a>
-        <span>&bull;</span>
-        <a href="https://cyberad.in/privacy">Privacy Policy</a>
-        <span>&bull;</span>
-        <a href="https://wa.me/918925693013">WhatsApp (Text Only): +91 89256 93013</a>
+      <div class="footer-inner">
+        <div class="footer-brand-row">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" class="footer-brand-logo" />
+          <div>
+            <div class="footer-brand-title">CyberAd.in &bull; English Communication Lab</div>
+            <div class="footer-brand-sub">Dedicated 8-Person Batches for Housewives, Business Owners &amp; Students</div>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#top" onclick="scrollToHero(event)">Home / Top</a>
+          <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer">Google Meet Link</a>
+          <a href="https://cyberad.in">CyberAd Main Site</a>
+          <a href="https://cyberad.in/privacy">Privacy Policy</a>
+          <a href="https://wa.me/918925693013" target="_blank" rel="noopener noreferrer">WhatsApp: +91 89256 93013</a>
+        </div>
       </div>
-      <p style="margin-top:8px;">&copy; 2026 CyberAd. All rights reserved.</p>
+
+      <div class="footer-bottom">
+        <div>GSTIN: 33APPPC7049M1ZI &bull; UDYAM: TN-04-0115585</div>
+        <div>&copy; 2026 CyberAd.in (Cyber Enterprises). All rights reserved.</div>
+      </div>
     </div>
   </footer>
 
   <!-- MOBILE STICKY BAR -->
   <div class="mobile-footer-bar">
     <div class="mobile-phone-text">
-      <span>Free Live Orientation</span>
-      <strong style="display:block; color:#fff; font-size:0.82rem;">Sat, 17 Oct &bull; 6:00 PM</strong>
+      <span>Today’s Free Orientation</span>
+      <strong style="display:block; color:#fff; font-size:0.8rem;">17 Oct &bull; 6:00 – 6:45 PM</strong>
     </div>
-    <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" class="btn-mobile-wa-trigger" target="_blank" rel="noopener noreferrer">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.965.527 1.791.78 2.796.78 3.18 0 5.767-2.586 5.767-5.766.001-3.18-2.585-5.766-5.767-5.766zm9.969 5.828c0 5.518-4.482 10-10 10-1.748 0-3.385-.45-4.819-1.239l-7.181 1.881 1.914-6.992c-.855-1.488-1.345-3.216-1.345-5.05 0-5.518 4.482-10 10-10s10 4.482 10 10z"/>
-      </svg>
-      <span>WhatsApp "YES"</span>
+    <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" class="btn-mobile-reserve">
+      <span>Join Google Meet &rarr;</span>
     </a>
   </div>
 
@@ -1458,7 +2049,10 @@
     <div class="modal-container">
 
       <div class="modal-top">
-        <div class="modal-heading">12-Week Curriculum</div>
+        <div class="modal-brand-header">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in" />
+          <div class="modal-heading">12-Week Speaking Curriculum</div>
+        </div>
         <button type="button" class="modal-dismiss" onclick="closeSyllabusModal()">&times;</button>
       </div>
 
@@ -1472,75 +2066,78 @@
 
         <!-- PANEL HM -->
         <div class="modal-tab-content active" id="tabPanel-hm">
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Introductions & Polite Greetings</strong>Self-introductions, polite greetings, introducing family members.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Introductions &amp; Polite Greetings</strong>Self-introductions, polite greetings, introducing family members.</div></div>
           <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>My Daily Routine</strong>Talking about daily schedules, likes, dislikes, asking simple questions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>At Home & Polite Requests</strong>Household objects, making polite requests ("Can you...?", "Please...").</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Food, Cooking & Shopping</strong>Vegetable markets, asking prices, quantities, and everyday shopping.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Neighbours & Visitors</strong>Welcoming guests, offering tea/coffee, social pleasantries.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Children's School & PTMs</strong>Talking to teachers, asking academic updates, explaining concerns politely.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Markets, Stores & Services</strong>Asking directions, returns, polite queries with service providers.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Phone Calls & WhatsApp Messages</strong>Simple conversational phone calls and short WhatsApp messages.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Past Events & Stories</strong>Talking about yesterday, family trips, describing what happened.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Opinions & Decisions</strong>Giving polite opinions, agreeing or disagreeing comfortably.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Health & Clinic Appointments</strong>Explaining symptoms clearly to doctors and scheduling appointments.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Review & Conversational Confidence</strong>Extended real-world role-plays and personalized progress assessment.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>At Home &amp; Polite Requests</strong>Household objects, making polite requests ("Can you...?", "Please...").</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Food, Cooking &amp; Shopping</strong>Vegetable markets, asking prices, quantities, and everyday shopping.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Neighbours &amp; Visitors</strong>Welcoming guests, offering tea/coffee, social pleasantries.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Children's School &amp; PTMs</strong>Talking to teachers, asking academic updates, explaining concerns politely.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Markets, Stores &amp; Services</strong>Asking directions, returns, polite queries with service providers.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Phone Calls &amp; WhatsApp Messages</strong>Simple conversational phone calls and short WhatsApp messages.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Past Events &amp; Stories</strong>Talking about yesterday, family trips, describing what happened.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Opinions &amp; Decisions</strong>Giving polite opinions, agreeing or disagreeing comfortably.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Health &amp; Clinic Appointments</strong>Explaining symptoms clearly to doctors and scheduling appointments.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Review &amp; Conversational Confidence</strong>Extended real-world role-plays and personalized progress assessment.</div></div>
         </div>
 
         <!-- PANEL BIZ -->
         <div class="modal-tab-content" id="tabPanel-biz">
           <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Introducing Your Business</strong>Professional greetings, elevator pitch for your products/services.</div></div>
           <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>Talking to Customers</strong>Understanding buyer needs, answering inquiries with confidence.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>Prices, Quotes & Payment Terms</strong>Discussing discounts, invoices, advance payments, and delivery timelines.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>Prices, Quotes &amp; Payment Terms</strong>Discussing discounts, invoices, advance payments, and delivery timelines.</div></div>
           <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Daily Operations Communication</strong>Client coordination, delegating tasks, everyday commercial interactions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Customer Complaints & Service</strong>Resolving client dissatisfaction politely and providing clear solutions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Suppliers & Vendor Negotiation</strong>Negotiating rates, stock follow-ups, and managing supply disputes.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Business Phone & WhatsApp Etiquette</strong>Formal phone calls, concise WhatsApp messages, and follow-up notes.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Team & Staff Management</strong>Giving clear instructions, checking progress, providing polite corrections.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Commercial Meetings & Discussions</strong>Leading meetings, presenting proposals, structured business discussion.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Negotiation & Persuasion</strong>Explaining commercial value and closing deals with conviction.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Networking & Business Relations</strong>Business small talk, making introductions, building long-term ties.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Commercial Simulation & Review</strong>Full deal-making role-play, pitch showcase, and final review.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Customer Complaints &amp; Service</strong>Resolving client dissatisfaction politely and providing clear solutions.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Suppliers &amp; Vendor Negotiation</strong>Negotiating rates, stock follow-ups, and managing supply disputes.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Business Phone &amp; WhatsApp Etiquette</strong>Formal phone calls, concise WhatsApp messages, and follow-up notes.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Team &amp; Staff Management</strong>Giving clear instructions, checking progress, providing polite corrections.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Commercial Meetings &amp; Discussions</strong>Leading meetings, presenting proposals, structured business discussion.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Negotiation &amp; Persuasion</strong>Explaining commercial value and closing deals with conviction.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Networking &amp; Business Relations</strong>Business small talk, making introductions, building long-term ties.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Commercial Simulation &amp; Review</strong>Full deal-making role-play, pitch showcase, and final review.</div></div>
         </div>
 
         <!-- PANEL STU -->
         <div class="modal-tab-content" id="tabPanel-stu">
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Self-Pitch & Social English</strong>Introducing yourself, academic background, interests, and ambitions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>My Day & Interests</strong>Routines, hobbies, sharing perspectives clearly in conversation.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>College & Campus Interaction</strong>Talking to professors, academic discussions, requesting assistance.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Self-Pitch &amp; Social English</strong>Introducing yourself, academic background, interests, and ambitions.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>My Day &amp; Interests</strong>Routines, hobbies, sharing perspectives clearly in conversation.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>College &amp; Campus Interaction</strong>Talking to professors, academic discussions, requesting assistance.</div></div>
           <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Everyday Social Scenarios</strong>Ordering food, local travel, handling real-life student situations.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Conversations & Debates</strong>Starting discussions, keeping talks going, agreeing and disagreeing.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Phone Calls & Professional Messaging</strong>Academic and corporate calls, professional WhatsApp & email tone.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Presentations & Public Speaking</strong>Structuring ideas, stage presence, delivering seminars with confidence.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Placement Interviews & Self-Intro</strong>Answering "Tell me about yourself", handling strengths & weaknesses.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Storytelling & Project Descriptions</strong>Describing academic projects and internship experiences clearly.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Conversations &amp; Debates</strong>Starting discussions, keeping talks going, agreeing and disagreeing.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Phone Calls &amp; Professional Messaging</strong>Academic and corporate calls, professional WhatsApp &amp; email tone.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Presentations &amp; Public Speaking</strong>Structuring ideas, stage presence, delivering seminars with confidence.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Placement Interviews &amp; Self-Intro</strong>Answering "Tell me about yourself", handling strengths &amp; weaknesses.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Storytelling &amp; Project Descriptions</strong>Describing academic projects and internship experiences clearly.</div></div>
           <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Group Discussions (GD) Drills</strong>Speaking up in GDs, presenting arguments politely, active listening.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Career Readiness & Goals</strong>Discussing career paths, technical skills, and corporate expectations.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Mock HR Rounds & Final Review</strong>Full placement interview simulation and personal feedback review.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Career Readiness &amp; Goals</strong>Discussing career paths, technical skills, and corporate expectations.</div></div>
+          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Mock HR Rounds &amp; Final Review</strong>Full placement interview simulation and personal feedback review.</div></div>
         </div>
 
       </div>
 
       <div class="modal-bottom">
-        <span style="font-size:0.82rem; color:var(--slate-600);">Strictly 8 learners per batch &bull; 4 live classes per week</span>
-        <button type="button" class="btn-wa-action" onclick="closeSyllabusModal(); openRegisterModal();" style="padding:7px 16px; font-size:0.84rem; border:none; cursor:pointer;">
-          <span>Reserve Free Seat</span> &rarr;
+        <span style="font-size:0.82rem; color:var(--slate-600);">8 learners per batch &bull; 4 live classes per week &bull; Decide after orientation</span>
+        <button type="button" class="header-cta-btn" onclick="closeSyllabusModal(); openRegisterModal();">
+          <span>Request Details</span> &rarr;
         </button>
       </div>
 
     </div>
   </div>
 
-  <!-- REGISTRATION MODAL (WEB3FORMS) -->
+  <!-- DETAILS / FOLLOW-UP MODAL (WEB3FORMS) -->
   <div class="modal-overlay" id="registerModal" onclick="handleOutsideRegisterClick(event)">
     <div class="modal-container" style="max-width: 500px;">
       <div class="modal-top">
-        <div class="modal-heading">Reserve Your Free Orientation Seat</div>
+        <div class="modal-brand-header">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in" />
+          <div class="modal-heading">Request Batch Schedule &amp; Details</div>
+        </div>
         <button type="button" class="modal-dismiss" onclick="closeRegisterModal()">&times;</button>
       </div>
 
       <div style="padding: 24px;">
         <p style="font-size:0.88rem; color:var(--slate-600); margin-bottom:18px; line-height:1.5;">
-          Saturday, 17 October 2026 &bull; 6:00 PM – 7:00 PM IST &bull; Live online on Google Meet.
+          Joining today’s orientation (6:00 PM – 6:45 PM) is completely free with no obligation. Leave your details below if you’d like us to share batch timings and syllabus notes on WhatsApp.
         </p>
 
         <form id="modal-register-form" onsubmit="handleRegisterSubmit(event)">
@@ -1555,30 +2152,73 @@
           </div>
 
           <div style="margin-bottom:20px;">
-            <label style="display:block; font-size:0.82rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Select Cohort</label>
+            <label style="display:block; font-size:0.82rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Preferred Cohort</label>
             <select name="batch" id="modalBatchSelect" style="width:100%; padding:11px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;">
-              <option value="Housewives & Homemakers (English_HM)">Housewives & Homemakers (English_HM)</option>
-              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners & Freelancers (English_BIZ)</option>
-              <option value="Students & Job Seekers (English_STU)">Students & Job Seekers (English_STU)</option>
-              <option value="Common Orientation Only">Common Orientation (Decide batch later)</option>
+              <option value="Common Orientation / Exploring Options">Exploring Options (Decide batch later)</option>
+              <option value="Housewives & Homemakers (English_HM)">Housewives &amp; Homemakers (English_HM)</option>
+              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners &amp; Freelancers (English_BIZ)</option>
+              <option value="Students & Job Seekers (English_STU)">Students &amp; Job Seekers (English_STU)</option>
             </select>
           </div>
 
-          <button type="submit" class="btn-submit-form" style="width:100%; background:var(--navy-900); color:#ffffff; font-size:0.94rem; font-weight:700; padding:13px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
-            <span>Reserve My Free Seat</span> &rarr;
+          <button type="submit" class="btn-submit-form" style="width:100%; background:var(--electric); color:#ffffff; font-size:0.94rem; font-weight:700; padding:13px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
+            <span>Send Details to My WhatsApp</span> &rarr;
           </button>
           <div class="form-status-msg" style="margin-top:14px; font-size:0.88rem; text-align:center; display:none;"></div>
         </form>
       </div>
 
       <div style="padding:12px 24px; background:var(--slate-50); border-top:1px solid var(--slate-200); font-size:0.8rem; color:var(--slate-500); text-align:center;">
-        Prefer WhatsApp directly? <a href="https://wa.me/918925693013?text=YES%20-%20Please%20reserve%20my%20seat%20for%20the%20Free%20Orientation%20(English%20Class)" target="_blank" rel="noopener noreferrer" style="color:var(--badge-open-text); font-weight:700;">Reply "YES" on WhatsApp</a>
+        Joining today’s 6:00 PM session right now? <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" style="color:var(--electric); font-weight:700;">Open Google Meet</a>
       </div>
     </div>
   </div>
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
+    // Copy Google Meet link helper
+    function copyMeetLink() {
+      const url = 'https://meet.google.com/hke-jfwk-kbc';
+      const btn = document.getElementById('copyMeetBtn');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          if (btn) {
+            const orig = btn.innerText;
+            btn.innerText = 'Copied!';
+            btn.style.background = 'rgba(16, 185, 129, 0.28)';
+            btn.style.borderColor = 'rgba(110, 231, 183, 0.6)';
+            setTimeout(() => {
+              btn.innerText = orig;
+              btn.style.background = '';
+              btn.style.borderColor = '';
+            }, 2200);
+          }
+        });
+      } else {
+        window.open(url, '_blank');
+      }
+    }
+
+    // Smooth section navigation without polluting URL hash so refresh always stays at Hero
+    function smoothNavigate(e, targetId) {
+      if (e) e.preventDefault();
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    }
+
+    function scrollToHero(e) {
+      if (e) e.preventDefault();
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    }
+
     // FAQ Accordion
     document.querySelectorAll('.faq-trigger').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1591,16 +2231,16 @@
       });
     });
 
-    // Self-Evaluation Checkbox Logic
+    // Self-Reflection Checkbox Logic
     function handleEvalCheck() {
       const checked = document.querySelectorAll('.eval-item input[type="checkbox"]:checked').length;
       const card = document.getElementById('evalResultCard');
       if (checked >= 2) {
-        card.innerHTML = '<strong>Recommended:</strong> You checked ' + checked + ' out of 4 challenges. This 8-seat micro-batch is built precisely to solve these hesitation blocks in a supportive setting. Join Saturday’s free orientation to experience the method.';
+        card.innerHTML = '<strong>You’re in the right place:</strong> These exact hesitation patterns are what we’ll unpack in today’s session (6:00 PM – 6:45 PM). Join the Google Meet call to see how small-group practice turns passive knowledge into natural speaking.';
       } else if (checked === 1) {
-        card.innerHTML = '<strong>Good Fit:</strong> Overcoming even one major speaking hesitation transforms your daily confidence. Join Saturday’s free orientation to experience the method.';
+        card.innerHTML = '<strong>Worth exploring:</strong> Even a single hesitation habit can hold back your everyday confidence. Join today’s 6:00 PM – 6:45 PM orientation to see how our 8-person practice circles work.';
       } else {
-        card.innerHTML = 'Check any statements above that describe your everyday speaking challenges.';
+        card.innerHTML = 'Select any statements above that feel familiar in your everyday conversations.';
       }
     }
 
@@ -1659,12 +2299,12 @@
 
       btn.disabled = true;
       const originalText = btn.innerHTML;
-      btn.innerHTML = 'Submitting...';
+      btn.innerHTML = 'Sending...';
       status.style.display = 'none';
 
       const payload = {
         access_key: "0ef05e24-2b04-437b-91dc-11a547022dad",
-        subject: `New English Class Registration: ${batch} - ${name}`,
+        subject: `English Orientation Enquiry: ${batch} - ${name}`,
         from_name: "CyberAd English Class",
         name: name,
         phone: phone,
@@ -1685,9 +2325,9 @@
           status.style.padding = '10px 14px';
           status.style.borderRadius = '6px';
           status.style.border = '1px solid #A7F3D0';
-          status.innerHTML = `<strong>Seat Reserved!</strong> Thank you, ${name}. Your seat for the Free Orientation on Saturday, 17 Oct at 6:00 PM is reserved. We will send the Google Meet joining link to your WhatsApp (${phone}) shortly.`;
+          status.innerHTML = `<strong>Thank you, ${name}!</strong> We have noted your interest and will share the programme details on your WhatsApp (${phone}). You can also join today’s 6:00 PM – 6:45 PM orientation directly at <a href="https://meet.google.com/hke-jfwk-kbc" target="_blank" rel="noopener noreferrer" style="color:#065F46;font-weight:700;text-decoration:underline;">meet.google.com/hke-jfwk-kbc</a>.`;
           form.reset();
-          btn.innerHTML = 'Seat Reserved Successfully';
+          btn.innerHTML = 'Details Requested';
 
           if (typeof window.gtag === 'function') {
             window.gtag('event', 'generate_lead', {
@@ -1706,7 +2346,7 @@
           status.style.padding = '10px 14px';
           status.style.borderRadius = '6px';
           status.style.border = '1px solid #FECACA';
-          status.innerText = data.message || 'Submission error. Please send "YES" on WhatsApp to 89256 93013 instead.';
+          status.innerText = data.message || 'Unable to submit right now. Please message us on WhatsApp at +91 89256 93013.';
           btn.disabled = false;
           btn.innerHTML = originalText;
         }
@@ -1717,14 +2357,14 @@
         status.style.padding = '10px 14px';
         status.style.borderRadius = '6px';
         status.style.border = '1px solid #FECACA';
-        status.innerText = 'Unable to connect. Please send "YES" on WhatsApp to 89256 93013 directly.';
+        status.innerText = 'Unable to connect. Please message us on WhatsApp at +91 89256 93013.';
         btn.disabled = false;
         btn.innerHTML = originalText;
       }
     }
 
-    // GA4 Lead Conversion Event on all WhatsApp Links
-    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    // GA4 Engagement Event on Google Meet & WhatsApp Links
+    document.querySelectorAll('a[href*="wa.me"], a[href*="meet.google.com"]').forEach(link => {
       link.addEventListener('click', () => {
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'generate_lead', {
