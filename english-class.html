@@ -104,7 +104,7 @@
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -230,15 +230,35 @@
 
     /* HERO */
     .hero {
-      background: radial-gradient(circle at 50% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
+      background: radial-gradient(circle at 30% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
       color: #FFFFFF;
-      padding: 72px 0 80px;
-      text-align: center;
+      padding: 64px 0 72px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     @media (max-width: 640px) {
       .hero {
-        padding: 52px 0 60px;
+        padding: 44px 0 56px;
+      }
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+    }
+    .hero-content {
+      text-align: left;
+    }
+    @media (max-width: 880px) {
+      .hero-content {
+        text-align: center;
       }
     }
     .hero-pill {
@@ -249,7 +269,7 @@
       border: 1px solid rgba(56, 182, 255, 0.45);
       padding: 8px 18px;
       border-radius: 999px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .hero-pill-dot {
       width: 8px;
@@ -257,28 +277,28 @@
       border-radius: 50%;
       background: var(--emerald-light);
       box-shadow: 0 0 0 4px rgba(167, 243, 208, 0.22);
+      flex-shrink: 0;
     }
     .hero-pill span {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: #FFFFFF;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-size: clamp(2.15rem, 4.4vw, 3.3rem);
       font-weight: 900;
       line-height: 1.15;
       letter-spacing: -0.03em;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       color: #FFFFFF;
     }
     .hero-lead {
-      font-size: clamp(1.08rem, 2.2vw, 1.28rem);
+      font-size: clamp(1.04rem, 1.8vw, 1.18rem);
       color: #E2E8F0;
-      max-width: 660px;
-      margin: 0 auto 30px;
-      line-height: 1.6;
+      margin: 0 0 26px;
+      line-height: 1.62;
       font-weight: 400;
     }
 
@@ -286,30 +306,29 @@
     .batch-info-box {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      max-width: 640px;
-      margin: 0 auto 34px;
+      gap: 14px;
+      margin: 0 0 26px;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: var(--radius-lg);
-      padding: 22px 24px;
+      padding: 18px 20px;
       backdrop-filter: blur(10px);
     }
-    @media (max-width: 560px) {
+    @media (max-width: 520px) {
       .batch-info-box {
         grid-template-columns: 1fr;
-        padding: 18px;
+        padding: 16px;
       }
     }
     .info-tile {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-md);
-      padding: 16px;
+      padding: 14px;
       text-align: center;
     }
     .info-label {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--electric-light);
@@ -317,22 +336,71 @@
       margin-bottom: 4px;
     }
     .info-value {
-      font-size: 1.2rem;
+      font-size: 1.16rem;
       font-weight: 800;
       color: #FFFFFF;
     }
     .info-sub {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       color: var(--slate-300);
       margin-top: 2px;
     }
 
+    /* HERO IMAGE CARD */
+    .hero-visual {
+      position: relative;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-image-frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 24px 52px rgba(4, 11, 22, 0.55);
+      background: var(--navy-950);
+    }
+    .hero-image-frame img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .hero-image-frame img {
+        height: 360px;
+      }
+    }
+    .hero-image-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(4, 11, 22, 0.86);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: #E2E8F0;
+      font-weight: 600;
+    }
+    .hero-image-caption strong {
+      color: var(--emerald-light);
+      font-weight: 800;
+    }
+
     /* CTA BUTTONS */
     .cta-note {
-      font-size: 1.02rem;
+      font-size: 1rem;
       font-weight: 600;
       color: #E2E8F0;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .cta-note strong {
       color: #FFFFFF;
@@ -343,6 +411,14 @@
       justify-content: center;
       gap: 14px;
     }
+    .hero-content .cta-buttons {
+      justify-content: flex-start;
+    }
+    @media (max-width: 880px) {
+      .hero-content .cta-buttons {
+        justify-content: center;
+      }
+    }
     .btn-wa-large {
       display: inline-flex;
       align-items: center;
@@ -350,9 +426,9 @@
       gap: 10px;
       background: var(--whatsapp);
       color: #052E16;
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
-      padding: 16px 30px;
+      padding: 15px 26px;
       border-radius: var(--radius-sm);
       box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
     }
@@ -367,9 +443,9 @@
       gap: 10px;
       background: var(--electric);
       color: #FFFFFF;
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       font-weight: 800;
-      padding: 16px 30px;
+      padding: 15px 26px;
       border-radius: var(--radius-sm);
       box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
     }
@@ -593,45 +669,59 @@
   <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
+      <div class="hero-grid">
 
-      <div class="hero-pill">
-        <span class="hero-pill-dot"></span>
-        <span>Next Batch Starts on 20 October &bull; Hybrid (Online + Offline)</span>
-      </div>
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span>Next Batch Starts on 20 October &bull; Hybrid (Online + Offline)</span>
+          </div>
 
-      <h1>Speak English with Confidence</h1>
+          <h1>Speak English with Confidence</h1>
 
-      <p class="hero-lead">
-        A practical speaking programme for anyone who wants to learn and speak English confidently in everyday life. If you understand English but hesitate when speaking, this course will help you speak naturally and clearly.
-      </p>
+          <p class="hero-lead">
+            A practical speaking programme for anyone who wants to learn and speak English confidently in everyday life. If you understand English but hesitate when speaking, this course will help you speak naturally and clearly.
+          </p>
 
-      <div class="batch-info-box">
-        <div class="info-tile">
-          <div class="info-label">Next Batch Starts</div>
-          <div class="info-value">20 October</div>
-          <div class="info-sub">Admissions now open</div>
+          <div class="batch-info-box">
+            <div class="info-tile">
+              <div class="info-label">Next Batch Starts</div>
+              <div class="info-value">20 October</div>
+              <div class="info-sub">Admissions now open</div>
+            </div>
+            <div class="info-tile">
+              <div class="info-label">Class Format</div>
+              <div class="info-value">Hybrid Classes</div>
+              <div class="info-sub">Both Online &amp; Offline available</div>
+            </div>
+          </div>
+
+          <p class="cta-note">
+            For more details, WhatsApp <strong>8925693013</strong> or Call <strong>9092979797</strong>
+          </p>
+
+          <div class="cta-buttons">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+              <span>WhatsApp 8925693013</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="tel:+919092979797" class="btn-call-large">
+              <span>Call 9092979797</span>
+            </a>
+          </div>
         </div>
-        <div class="info-tile">
-          <div class="info-label">Class Format</div>
-          <div class="info-value">Hybrid Classes</div>
-          <div class="info-sub">Both Online &amp; Offline available</div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="/assets/english-hero.jpg" alt="Spoken English Programme — Next Batch Starts 20 October" />
+            <div class="hero-image-caption">
+              <span>Spoken English Class</span>
+              <strong>Starts 20 Oct &bull; Hybrid</strong>
+            </div>
+          </div>
         </div>
+
       </div>
-
-      <p class="cta-note">
-        For more details, WhatsApp <strong>8925693013</strong> or Call <strong>9092979797</strong>
-      </p>
-
-      <div class="cta-buttons">
-        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-          <span>WhatsApp 8925693013</span>
-          <span>&rarr;</span>
-        </a>
-        <a href="tel:+919092979797" class="btn-call-large">
-          <span>Call 9092979797</span>
-        </a>
-      </div>
-
     </div>
   </section>
 
