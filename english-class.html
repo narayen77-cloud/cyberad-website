@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <script>
-    // Always return to Hero / Home section on refresh
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
@@ -10,14 +9,6 @@
       history.replaceState(null, '', window.location.pathname + window.location.search);
     }
     window.scrollTo(0, 0);
-    window.addEventListener('beforeunload', function () {
-      window.scrollTo(0, 0);
-    });
-    window.addEventListener('load', function () {
-      setTimeout(function () {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      }, 0);
-    });
   </script>
 
   <!-- Google tag (gtag.js) -->
@@ -46,8 +37,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Speak English with Confidence — Practical Spoken English Programme | CyberAd.in</title>
-  <meta name="description" content="A practical speaking programme for adults who understand English but hesitate to speak. Dedicated 8-person micro-batches for Homemakers, Business Owners, and Students. 4 live classes per week, ₹2,000/month.">
+  <title>Speak English with Confidence — Next Batch Starts 20 October | CyberAd.in</title>
+  <meta name="description" content="Join our Spoken English programme to learn and speak English confidently. Next batch starts on 20 October with hybrid classes available (online + offline). For more details, WhatsApp or call 9092979797.">
   <link rel="canonical" href="https://cyberad.in/english_class/">
   <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
   <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
@@ -59,20 +50,15 @@
 
   <style>
     :root {
-      /* CyberAd Identity Palette */
       --navy-950: #040B16;
       --navy-900: #08182E;
       --navy-850: #0D2342;
       --navy-800: #13315C;
-      --navy-700: #1D4ED8;
       --electric: #0066FF;
       --electric-hover: #0052CC;
       --electric-light: #38B6FF;
       --electric-soft: #EFF6FF;
       --electric-border: #BFDBFE;
-
-      /* Neutrals & Slate */
-      --charcoal: #0F172A;
       --slate-800: #1E293B;
       --slate-700: #334155;
       --slate-600: #475569;
@@ -83,25 +69,14 @@
       --slate-100: #F1F5F9;
       --slate-50: #F8FAFC;
       --white: #FFFFFF;
-
-      /* Accents & Badges */
       --emerald-light: #A7F3D0;
-      --emerald-border: rgba(52, 211, 153, 0.4);
-      --emerald-bg: rgba(16, 185, 129, 0.14);
-      --badge-open-text: #065F46;
-      --badge-open-bg: #ECFDF5;
-      --badge-open-border: #A7F3D0;
       --whatsapp: #25D366;
       --whatsapp-hover: #1EBE5B;
-
-      /* Radii & Shadows */
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
-      --shadow-xs: 0 1px 2px rgba(8, 24, 46, 0.05);
-      --shadow-sm: 0 2px 8px rgba(8, 24, 46, 0.06);
-      --shadow-md: 0 8px 24px rgba(8, 24, 46, 0.08);
-      --shadow-lg: 0 16px 40px rgba(8, 24, 46, 0.12);
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 10px rgba(8, 24, 46, 0.06);
+      --shadow-md: 0 12px 32px rgba(8, 24, 46, 0.1);
     }
 
     * {
@@ -124,57 +99,44 @@
     }
 
     a {
-      color: var(--electric);
       text-decoration: none;
       transition: all 0.15s ease;
     }
 
     .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .container-narrow {
-      max-width: 820px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     @media (max-width: 640px) {
-      .container, .container-narrow {
+      .container {
         padding: 0 16px;
       }
     }
 
-    /* TOP ANNOUNCEMENT BAR */
+    /* TOP BAR */
     .top-announcement {
       background: var(--navy-950);
       color: var(--slate-300);
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       padding: 10px 16px;
       text-align: center;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      letter-spacing: 0.01em;
     }
     .top-announcement strong {
       color: #FFFFFF;
-      font-weight: 600;
-    }
-    .top-announcement .announcement-highlight {
-      color: var(--electric-light);
       font-weight: 700;
     }
-    .top-announcement .announcement-confirmed {
-      color: var(--emerald-light);
-      font-weight: 600;
+    .top-announcement .highlight {
+      color: var(--electric-light);
+      font-weight: 700;
     }
 
     /* HEADER */
     header {
       background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--slate-200);
       position: sticky;
       top: 0;
@@ -185,37 +147,28 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 76px;
+      height: 74px;
       gap: 16px;
     }
     .brand-logo {
       display: inline-flex;
       align-items: center;
       gap: 12px;
-      text-decoration: none;
-      cursor: pointer;
     }
     .brand-logo-img {
       width: 44px;
       height: 44px;
       border-radius: 50%;
       object-fit: cover;
-      flex-shrink: 0;
       border: 1.5px solid var(--slate-200);
-      box-shadow: 0 2px 6px rgba(8, 24, 46, 0.08);
       background: #FFFFFF;
-    }
-    .brand-text-group {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      line-height: 1.2;
     }
     .brand-name {
       font-size: 1.12rem;
       font-weight: 900;
       color: var(--navy-900);
       letter-spacing: -0.02em;
+      line-height: 1.2;
     }
     .brand-name span {
       color: var(--electric);
@@ -224,35 +177,10 @@
       font-size: 0.72rem;
       font-weight: 600;
       color: var(--slate-500);
-      letter-spacing: 0.02em;
       text-transform: uppercase;
-      margin-top: 2px;
+      letter-spacing: 0.03em;
     }
-
-    .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    .header-nav a {
-      font-size: 0.87rem;
-      font-weight: 600;
-      color: var(--slate-600);
-      padding: 6px 10px;
-      border-radius: 6px;
-      transition: color 0.15s ease, background 0.15s ease;
-    }
-    .header-nav a:hover {
-      color: var(--navy-900);
-      background: var(--slate-100);
-    }
-    @media (max-width: 920px) {
-      .header-nav {
-        display: none;
-      }
-    }
-
-    .header-actions {
+    .header-cta-group {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -265,37 +193,211 @@
       color: #052E16;
       padding: 10px 16px;
       border-radius: var(--radius-sm);
-      font-size: 0.83rem;
-      font-weight: 700;
-      border: none;
-      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 800;
       box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
-      transition: all 0.15s ease;
-      white-space: nowrap;
     }
     .header-wa-btn:hover {
       background: var(--whatsapp-hover);
-      color: #052E16;
       transform: translateY(-1px);
     }
-    @media (max-width: 520px) {
-      .header-wa-btn {
-        padding: 8px 12px;
-        font-size: 0.76rem;
-      }
+    .header-call-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--navy-900);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .header-call-btn:hover {
+      background: var(--navy-800);
+    }
+    @media (max-width: 560px) {
       .brand-sub {
         display: none;
       }
+      .header-call-btn {
+        display: none;
+      }
+      .header-wa-btn {
+        padding: 9px 13px;
+        font-size: 0.8rem;
+      }
     }
 
-    /* SECTION BASICS */
-    section {
-      padding: 72px 0;
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at 50% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
+      color: #FFFFFF;
+      padding: 72px 0 80px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    @media (max-width: 768px) {
-      section {
-        padding: 52px 0;
+    @media (max-width: 640px) {
+      .hero {
+        padding: 52px 0 60px;
       }
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 102, 255, 0.2);
+      border: 1px solid rgba(56, 182, 255, 0.45);
+      padding: 8px 18px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+    }
+    .hero-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald-light);
+      box-shadow: 0 0 0 4px rgba(167, 243, 208, 0.22);
+    }
+    .hero-pill span {
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: #FFFFFF;
+    }
+    .hero-lead {
+      font-size: clamp(1.08rem, 2.2vw, 1.28rem);
+      color: #E2E8F0;
+      max-width: 660px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* KEY INFO CARD IN HERO */
+    .batch-info-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 640px;
+      margin: 0 auto 34px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      backdrop-filter: blur(10px);
+    }
+    @media (max-width: 560px) {
+      .batch-info-box {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+    }
+    .info-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+    }
+    .info-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--electric-light);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .info-value {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .info-sub {
+      font-size: 0.84rem;
+      color: var(--slate-300);
+      margin-top: 2px;
+    }
+
+    /* CTA BUTTONS */
+    .cta-note {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-bottom: 18px;
+    }
+    .cta-note strong {
+      color: #FFFFFF;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+    .btn-wa-large {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--whatsapp);
+      color: #052E16;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 16px 30px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+    }
+    .btn-wa-large:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-2px);
+    }
+    .btn-call-large {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--electric);
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 16px 30px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+    }
+    .btn-call-large:hover {
+      background: var(--electric-hover);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 520px) {
+      .btn-wa-large, .btn-call-large {
+        width: 100%;
+      }
+    }
+
+    /* SIMPLE HIGHLIGHTS SECTION */
+    .highlights-section {
+      padding: 64px 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    @media (max-width: 640px) {
+      .highlights-section {
+        padding: 48px 0;
+      }
+    }
+    .section-heading {
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto 40px;
     }
     .section-eyebrow {
       display: inline-block;
@@ -310,696 +412,89 @@
       border-radius: 999px;
       margin-bottom: 12px;
     }
-    .section-title {
-      font-size: clamp(1.7rem, 3vw, 2.2rem);
+    .section-heading h2 {
+      font-size: clamp(1.65rem, 3vw, 2.15rem);
       font-weight: 800;
       color: var(--navy-900);
-      line-height: 1.24;
-      letter-spacing: -0.025em;
-      margin-bottom: 12px;
-    }
-    .section-sub {
-      font-size: 1.02rem;
-      color: var(--slate-600);
-      max-width: 660px;
-      line-height: 1.62;
-    }
-    .section-header-center {
-      text-align: center;
-      margin-bottom: 42px;
-    }
-    .section-header-center .section-sub {
-      margin: 0 auto;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      background: radial-gradient(circle at 50% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
-      color: #ffffff;
-      padding: 68px 0 80px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-container {
-      max-width: 820px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-    .hero-badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(0, 102, 255, 0.18);
-      border: 1px solid rgba(56, 182, 255, 0.4);
-      padding: 7px 18px;
-      border-radius: 999px;
-      margin-bottom: 22px;
-      backdrop-filter: blur(6px);
-    }
-    .hero-badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--electric-light);
-      box-shadow: 0 0 0 4px rgba(56, 182, 255, 0.22);
-      flex-shrink: 0;
-    }
-    .hero-badge-pill span {
-      font-size: 0.8rem;
-      font-weight: 800;
-      color: #E0F2FE;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    .hero-h1 {
-      font-size: clamp(2.25rem, 4.8vw, 3.4rem);
-      font-weight: 900;
-      line-height: 1.14;
-      letter-spacing: -0.03em;
-      color: #ffffff;
-      margin-bottom: 18px;
-    }
-    .hero-desc {
-      font-size: clamp(1.08rem, 2vw, 1.24rem);
-      color: #F1F5F9;
-      line-height: 1.6;
-      max-width: 680px;
-      margin: 0 auto 14px;
-      font-weight: 500;
-    }
-    .hero-subline {
-      font-size: 0.98rem;
-      color: #93C5FD;
-      font-weight: 500;
-      max-width: 650px;
-      margin: 0 auto 32px;
-      line-height: 1.6;
-    }
-
-    .hero-cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 36px;
-    }
-    .btn-primary-wa {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--whatsapp);
-      color: #052E16;
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 15px 28px;
-      border-radius: var(--radius-sm);
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
-      transition: all 0.18s ease;
-    }
-    .btn-primary-wa:hover {
-      background: var(--whatsapp-hover);
-      color: #052E16;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
-    }
-    .btn-secondary-hero {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.96rem;
-      padding: 15px 24px;
-      border-radius: var(--radius-sm);
-      transition: background 0.15s ease;
-    }
-    .btn-secondary-hero:hover {
-      background: rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-    }
-
-    /* HERO STATS BAR */
-    .hero-highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-lg);
-      padding: 22px 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 44px rgba(4, 11, 22, 0.35);
-      margin-bottom: 26px;
-    }
-    @media (max-width: 720px) {
-      .hero-highlights-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 18px 16px;
-      }
-    }
-    .hero-stat-box {
-      text-align: center;
-      padding: 4px 8px;
-    }
-    .hero-stat-val {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      margin-bottom: 3px;
-    }
-    .hero-stat-label {
-      font-size: 0.78rem;
-      color: var(--slate-300);
-      font-weight: 500;
-      line-height: 1.35;
-    }
-
-    .hero-trust-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.84rem;
-      color: var(--slate-300);
-      font-weight: 500;
-    }
-    .hero-trust-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .hero-trust-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--emerald-light);
-    }
-
-    /* WHAT THE PROGRAMME IS / OUTCOMES SECTION */
-    .curiosity-section {
-      background: var(--white);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .curiosity-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-bottom: 30px;
-    }
-    @media (max-width: 900px) {
-      .curiosity-grid {
-        grid-template-columns: 1fr;
-        max-width: 580px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    .curiosity-card {
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-md);
-      padding: 26px 24px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .curiosity-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
-    }
-    .curiosity-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--electric);
-      margin-bottom: 8px;
-    }
-    .curiosity-card h3 {
-      font-size: 1.12rem;
-      font-weight: 800;
-      color: var(--navy-900);
+      letter-spacing: -0.02em;
       margin-bottom: 10px;
-      line-height: 1.32;
+      line-height: 1.25;
     }
-    .curiosity-card p {
-      font-size: 0.9rem;
+    .section-heading p {
+      font-size: 1rem;
       color: var(--slate-600);
-      line-height: 1.6;
-    }
-    .curiosity-callout {
-      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
-      color: #FFFFFF;
-      border-radius: var(--radius-md);
-      padding: 24px 28px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-    .curiosity-callout-text {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 0.95rem;
-      line-height: 1.62;
-      color: #E2E8F0;
-    }
-    .curiosity-callout-text strong {
-      color: #FFFFFF;
     }
 
-    /* BATCH CARDS SECTION */
-    .batches-section {
-      background: var(--slate-50);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .batch-cards-container {
+    .cards-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
     }
-    @media (max-width: 960px) {
-      .batch-cards-container {
+    @media (max-width: 820px) {
+      .cards-grid {
         grid-template-columns: 1fr;
         max-width: 520px;
         margin: 0 auto;
       }
     }
-    .batch-card {
-      background: var(--white);
+    .feature-card {
+      background: var(--slate-50);
       border: 1px solid var(--slate-200);
-      border-top: 4px solid var(--navy-800);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .batch-card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-    .batch-card.featured-card {
       border-top: 4px solid var(--electric);
-    }
-    .card-top-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-    }
-    .card-batch-code {
-      font-size: 0.75rem;
-      font-weight: 700;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      color: var(--navy-900);
-      background: var(--slate-100);
-      border: 1px solid var(--slate-200);
-      padding: 4px 10px;
-      border-radius: 6px;
-    }
-    .card-status-pill {
-      font-size: 0.74rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--electric-soft);
-      color: var(--electric);
-      border: 1px solid var(--electric-border);
-    }
-    .card-title {
-      font-size: 1.22rem;
-      font-weight: 800;
-      color: var(--navy-900);
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-    .card-desc {
-      font-size: 0.88rem;
-      color: var(--slate-600);
-      margin-bottom: 18px;
-      line-height: 1.6;
-      min-height: 68px;
-    }
-    .card-specs-row {
-      display: flex;
-      gap: 12px;
-      padding: 10px 0;
-      border-top: 1px solid var(--slate-100);
-      border-bottom: 1px solid var(--slate-100);
-      margin-bottom: 16px;
-      font-size: 0.78rem;
-      color: var(--slate-600);
-      font-weight: 600;
-    }
-    .card-specs-row span {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .card-outcome-panel {
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-sm);
-      padding: 14px 16px;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-    .card-outcome-heading {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      color: var(--electric);
-      margin-bottom: 5px;
-    }
-    .card-outcome-text {
-      font-size: 0.86rem;
-      color: var(--slate-700);
-      line-height: 1.55;
-    }
-    .card-actions-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .btn-card-action {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      width: 100%;
-      background: var(--navy-900);
-      color: #ffffff;
-      font-size: 0.88rem;
-      font-weight: 700;
-      padding: 12px 16px;
-      border-radius: var(--radius-sm);
-      border: none;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-    .batch-card.featured-card .btn-card-action {
-      background: var(--electric);
-    }
-    .batch-card.featured-card .btn-card-action:hover {
-      background: var(--electric-hover);
-    }
-    .btn-card-action:hover {
-      background: var(--navy-800);
-      color: #ffffff;
-    }
-    .btn-card-outline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      width: 100%;
-      background: var(--white);
-      color: var(--navy-900);
-      font-size: 0.84rem;
-      font-weight: 700;
-      padding: 10px 16px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--slate-300);
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-    .btn-card-outline:hover {
-      background: var(--slate-100);
-      border-color: var(--slate-400);
-      color: var(--navy-900);
-    }
-
-    /* HOW THE PROGRAMME WORKS */
-    .programme-works-section {
-      background: var(--white);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .steps-container {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .step-row {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
       border-radius: var(--radius-md);
-      padding: 20px 24px;
-      transition: border-color 0.15s ease;
+      padding: 26px 24px;
+      box-shadow: var(--shadow-sm);
     }
-    .step-row:hover {
-      border-color: var(--slate-300);
-    }
-    .step-index {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: var(--navy-900);
-      color: #fff;
-      font-size: 0.84rem;
+    .feature-card h3 {
+      font-size: 1.12rem;
       font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .step-content {
-      font-size: 0.94rem;
-      color: var(--slate-700);
-      line-height: 1.58;
-    }
-    .step-content strong {
       color: var(--navy-900);
-      display: block;
-      font-size: 1rem;
-      margin-bottom: 3px;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 0.93rem;
+      color: var(--slate-600);
+      line-height: 1.6;
     }
 
-    /* TRANSPARENT PRICING SECTION */
-    .pricing-section {
+    /* CONTACT BANNER */
+    .contact-banner {
+      padding: 64px 0;
       background: var(--slate-50);
-      border-bottom: 1px solid var(--slate-200);
+      text-align: center;
     }
-    .pricing-card {
-      background: var(--white);
-      border: 2px solid var(--electric-border);
+    .contact-card {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: #FFFFFF;
       border-radius: var(--radius-lg);
-      padding: 36px 34px;
-      max-width: 640px;
+      padding: 44px 32px;
+      max-width: 720px;
       margin: 0 auto;
       box-shadow: var(--shadow-md);
-      text-align: center;
     }
     @media (max-width: 640px) {
-      .pricing-card {
-        padding: 28px 20px;
+      .contact-card {
+        padding: 32px 20px;
       }
     }
-    .pricing-badge {
-      display: inline-block;
-      background: var(--badge-open-bg);
-      color: var(--badge-open-text);
-      border: 1px solid var(--badge-open-border);
-      font-size: 0.76rem;
+    .contact-card h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 5px 14px;
-      border-radius: 999px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
+      color: #FFFFFF;
     }
-    .pricing-amount {
-      font-size: clamp(2.3rem, 4vw, 3rem);
-      font-weight: 900;
-      color: var(--navy-900);
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 6px;
-    }
-    .pricing-amount span {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--slate-500);
-    }
-    .pricing-subtext {
-      font-size: 0.94rem;
-      color: var(--slate-600);
-      font-weight: 500;
-      margin-bottom: 24px;
-    }
-    .pricing-features {
-      list-style: none;
-      text-align: left;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-md);
-      padding: 20px 24px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .pricing-features li {
-      font-size: 0.92rem;
-      color: var(--slate-700);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.5;
-    }
-    .pricing-check {
-      color: #10B981;
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-
-    /* SELF REFLECTION SECTION */
-    .evaluation-section {
-      background: var(--white);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .eval-box {
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-lg);
-      padding: 34px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    @media (max-width: 640px) {
-      .eval-box {
-        padding: 22px 18px;
-      }
-    }
-    .eval-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin: 16px 0 22px;
-    }
-    .eval-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.93rem;
-      color: var(--slate-700);
-      cursor: pointer;
-      padding: 12px 14px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--slate-200);
-      background: var(--white);
-    }
-    .eval-item input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--electric);
-      margin-top: 3px;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .eval-result-card {
-      background: var(--electric-soft);
-      border: 1px solid var(--electric-border);
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      font-size: 0.9rem;
-      color: var(--navy-900);
-      line-height: 1.58;
-    }
-
-    /* FAQ SECTION */
-    .faq-section {
-      background: var(--slate-50);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .faq-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .faq-block {
-      background: var(--white);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-    }
-    .faq-block.open {
-      border-color: var(--slate-300);
-      box-shadow: var(--shadow-xs);
-    }
-    .faq-trigger {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 18px 20px;
-      text-align: left;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--navy-900);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      font-family: inherit;
-      gap: 12px;
-    }
-    .faq-symbol {
-      font-size: 0.72rem;
-      color: var(--slate-500);
-      transition: transform 0.2s ease;
-      flex-shrink: 0;
-    }
-    .faq-block.open .faq-symbol {
-      transform: rotate(180deg);
-    }
-    .faq-content {
-      display: none;
-      padding: 0 20px 18px;
-      font-size: 0.9rem;
-      color: var(--slate-600);
-      line-height: 1.65;
-    }
-    .faq-block.open .faq-content {
-      display: block;
-    }
-
-    /* FINAL CTA */
-    .final-banner {
-      background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
-      color: #ffffff;
-      text-align: center;
-      padding: 64px 0;
-    }
-    .final-banner h2 {
-      font-size: clamp(1.7rem, 3.2vw, 2.2rem);
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .final-banner p {
+    .contact-card p {
+      font-size: 1.02rem;
       color: var(--slate-300);
-      font-size: 0.98rem;
-      max-width: 620px;
-      margin: 0 auto 28px;
-      line-height: 1.65;
+      max-width: 540px;
+      margin: 0 auto 24px;
+    }
+    .contact-phone-display {
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+      font-weight: 900;
+      color: var(--emerald-light);
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
     }
 
     /* FOOTER */
@@ -1007,7 +502,7 @@
       background: var(--navy-950);
       color: var(--slate-400);
       font-size: 0.85rem;
-      padding: 48px 0 36px;
+      padding: 36px 0;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
     .footer-inner {
@@ -1015,222 +510,79 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 24px;
-      padding-bottom: 28px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      gap: 20px;
     }
-    .footer-brand-row {
+    .footer-brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
-    .footer-brand-logo {
-      width: 50px;
-      height: 50px;
+    .footer-brand img {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       object-fit: cover;
       background: #FFFFFF;
-      border: 2px solid rgba(255, 255, 255, 0.15);
-      flex-shrink: 0;
     }
     .footer-brand-title {
-      font-size: 1.05rem;
       font-weight: 800;
       color: #FFFFFF;
-      line-height: 1.25;
+      font-size: 0.96rem;
     }
-    .footer-brand-sub {
-      font-size: 0.8rem;
-      color: var(--slate-400);
-      margin-top: 2px;
-    }
-    .footer-nav {
+    .footer-links {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       gap: 18px;
+      flex-wrap: wrap;
     }
-    .footer-nav a {
+    .footer-links a {
       color: var(--slate-300);
       font-weight: 500;
     }
-    .footer-nav a:hover {
-      color: #ffffff;
+    .footer-links a:hover {
+      color: #FFFFFF;
     }
-    .footer-bottom {
+    .footer-copy {
+      width: 100%;
+      padding-top: 18px;
+      margin-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding-top: 20px;
-      font-size: 0.78rem;
-      color: var(--slate-500);
-    }
-
-    /* SYLLABUS MODAL */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(4, 11, 22, 0.75);
-      backdrop-filter: blur(4px);
-      z-index: 10000;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .modal-container {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      max-width: 740px;
-      width: 100%;
-      max-height: 85vh;
-      display: flex;
-      flex-direction: column;
-      box-shadow: var(--shadow-lg);
-      overflow: hidden;
-    }
-    .modal-top {
-      padding: 16px 22px;
-      border-bottom: 1px solid var(--slate-200);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--slate-50);
-    }
-    .modal-brand-header {
-      display: flex;
-      align-items: center;
       gap: 10px;
-    }
-    .modal-brand-header img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--slate-200);
-    }
-    .modal-heading {
-      font-size: 1.02rem;
-      font-weight: 800;
-      color: var(--navy-900);
-    }
-    .modal-dismiss {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: var(--slate-500);
-      cursor: pointer;
-    }
-    .modal-tab-bar {
-      display: flex;
-      border-bottom: 1px solid var(--slate-200);
-      background: var(--slate-100);
-    }
-    .modal-tab-item {
-      flex: 1;
-      padding: 12px 14px;
-      background: none;
-      border: none;
-      font-size: 0.84rem;
-      font-weight: 600;
-      color: var(--slate-600);
-      cursor: pointer;
-      text-align: center;
-      border-bottom: 2px solid transparent;
-      transition: all 0.15s ease;
-      font-family: inherit;
-    }
-    .modal-tab-item.active {
-      background: var(--white);
-      color: var(--navy-900);
-      border-bottom: 2px solid var(--electric);
-      font-weight: 700;
-    }
-    .modal-scrollable {
-      padding: 22px;
-      overflow-y: auto;
-      flex-grow: 1;
-    }
-    .modal-tab-content {
-      display: none;
-    }
-    .modal-tab-content.active {
-      display: block;
-    }
-    .syllabus-row {
-      padding: 10px 0;
-      border-bottom: 1px solid var(--slate-100);
-      display: flex;
-      gap: 14px;
-    }
-    .syllabus-col-num {
-      width: 68px;
-      flex-shrink: 0;
       font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--navy-900);
-    }
-    .syllabus-col-detail {
-      font-size: 0.85rem;
-      color: var(--slate-700);
-    }
-    .syllabus-col-detail strong {
-      color: var(--navy-900);
-      display: block;
-      margin-bottom: 2px;
-    }
-    .modal-bottom {
-      padding: 14px 22px;
-      border-top: 1px solid var(--slate-200);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--slate-50);
-      flex-wrap: wrap;
-      gap: 12px;
+      color: var(--slate-500);
     }
   </style>
 </head>
 <body id="top">
 
-  <!-- TOP ANNOUNCEMENT BAR -->
+  <!-- TOP BAR -->
   <div class="top-announcement">
-    <strong>Spoken English Programme:</strong>
-    <span class="announcement-highlight">Dedicated 8-Person Micro-Batches</span>
-    &bull; 4 Live Classes / Week (3 Months)
-    &bull; <span class="announcement-confirmed">₹2,000 / Month &bull; No Registration Fee</span>
+    <strong>Spoken English Class:</strong>
+    <span class="highlight">Next Batch Starts on 20 October</span>
+    &bull; Hybrid Mode (Online + Offline)
+    &bull; Call / WhatsApp: <strong>9092979797</strong>
   </div>
 
   <!-- HEADER -->
   <header>
     <div class="container">
       <div class="header-inner">
-        <a href="#top" class="brand-logo" onclick="scrollToHero(event)" title="Back to top">
+        <a href="#top" class="brand-logo">
           <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" class="brand-logo-img" />
-          <div class="brand-text-group">
+          <div>
             <div class="brand-name">CYBERAD<span>.IN</span></div>
-            <div class="brand-sub">English Communication Lab</div>
+            <div class="brand-sub">Spoken English Programme</div>
           </div>
         </a>
 
-        <nav class="header-nav" aria-label="Page navigation">
-          <a href="#programme" onclick="smoothNavigate(event, 'programme')">About Programme</a>
-          <a href="#batches" onclick="smoothNavigate(event, 'batches')">8-Person Batches</a>
-          <a href="#how-it-works" onclick="smoothNavigate(event, 'how-it-works')">How It Works</a>
-          <a href="#pricing" onclick="smoothNavigate(event, 'pricing')">Pricing</a>
-          <a href="#faq" onclick="smoothNavigate(event, 'faq')">FAQ</a>
-          <a href="#contact" onclick="smoothNavigate(event, 'contact')">Enquire Now</a>
-        </nav>
-
-        <div class="header-actions">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
-            <span>WhatsApp / Enquire Now</span>
+        <div class="header-cta-group">
+          <a href="tel:+919092979797" class="header-call-btn">
+            <span>Call 9092979797</span>
+          </a>
+          <a href="https://wa.me/919092979797?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
+            <span>WhatsApp 9092979797</span>
             <span>&rarr;</span>
           </a>
         </div>
@@ -1239,550 +591,105 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero" id="hero">
+  <section class="hero">
     <div class="container">
-      <div class="hero-container">
 
-        <div class="hero-badge-pill">
-          <span class="hero-badge-dot"></span>
-          <span>3-Month Live Spoken English Programme &bull; Max 8 Learners Per Batch</span>
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        <span>Next Batch Starts on 20 October &bull; Hybrid (Online + Offline)</span>
+      </div>
+
+      <h1>Speak English with Confidence</h1>
+
+      <p class="hero-lead">
+        A practical speaking programme for anyone who wants to learn and speak English confidently in everyday life. If you understand English but hesitate when speaking, this course will help you speak naturally and clearly.
+      </p>
+
+      <div class="batch-info-box">
+        <div class="info-tile">
+          <div class="info-label">Next Batch Starts</div>
+          <div class="info-value">20 October</div>
+          <div class="info-sub">Admissions now open</div>
+        </div>
+        <div class="info-tile">
+          <div class="info-label">Class Format</div>
+          <div class="info-value">Hybrid Classes</div>
+          <div class="info-sub">Both Online &amp; Offline available</div>
+        </div>
+      </div>
+
+      <p class="cta-note">
+        For more details, WhatsApp or call <strong>9092979797</strong>
+      </p>
+
+      <div class="cta-buttons">
+        <a href="https://wa.me/919092979797?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+          <span>WhatsApp 9092979797</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="tel:+919092979797" class="btn-call-large">
+          <span>Call 9092979797</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIMPLE HIGHLIGHTS SECTION -->
+  <section class="highlights-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-eyebrow">About the Course</span>
+        <h2>Learn &amp; Speak English Confidently</h2>
+        <p>Simple, practical training focused on real-world conversation rather than complicated textbook theory.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="feature-card">
+          <h3>Practical Speaking Practice</h3>
+          <p>
+            Overcome hesitation and stop translating in your head. Build the confidence to speak naturally in daily conversations.
+          </p>
         </div>
 
-        <h1 class="hero-h1">
-          Speak English with Confidence
-        </h1>
+        <div class="feature-card">
+          <h3>Hybrid Format (Online + Offline)</h3>
+          <p>
+            Attend classes in the way that suits you best—with both online and offline learning options available.
+          </p>
+        </div>
 
-        <p class="hero-desc">
-          A practical speaking programme for adults who understand English but hesitate to speak.
+        <div class="feature-card">
+          <h3>Starting 20 October</h3>
+          <p>
+            Our new batch begins on 20 October in a supportive, easy-to-follow environment for all learners.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CONTACT SECTION -->
+  <section class="contact-banner" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Ready to Join the 20 October Batch?</h2>
+        <p>
+          Whether you prefer online or offline classes, reach out to us directly to get full details and reserve your spot.
         </p>
-
-        <p class="hero-subline">
-          Build natural speaking fluency in small 8-person micro-batches through regular live conversation practice, real-life role-plays, and supportive voice-note feedback.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
-            <span>WhatsApp / Enquire Now</span>
+        <div class="contact-phone-display">9092979797</div>
+        <div class="cta-buttons">
+          <a href="https://wa.me/919092979797?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <span>WhatsApp 9092979797</span>
             <span>&rarr;</span>
           </a>
-          <a href="#batches" class="btn-secondary-hero" onclick="smoothNavigate(event, 'batches')">
-            <span>Explore 8-Person Batches &darr;</span>
+          <a href="tel:+919092979797" class="btn-call-large">
+            <span>Call 9092979797</span>
           </a>
         </div>
-
-        <!-- PROGRAMME AT A GLANCE -->
-        <div class="hero-highlights-grid">
-          <div class="hero-stat-box">
-            <div class="hero-stat-val">Max 8 Learners</div>
-            <div class="hero-stat-label">Small, supportive micro-batches</div>
-          </div>
-          <div class="hero-stat-box">
-            <div class="hero-stat-val">48 Live Classes</div>
-            <div class="hero-stat-label">4 live sessions / week for 3 months</div>
-          </div>
-          <div class="hero-stat-box">
-            <div class="hero-stat-val">3 Focused Tracks</div>
-            <div class="hero-stat-label">Homemakers, Business &amp; Students</div>
-          </div>
-          <div class="hero-stat-box">
-            <div class="hero-stat-val">₹2,000 / Month</div>
-            <div class="hero-stat-label">Paid monthly &bull; No registration fee</div>
-          </div>
-        </div>
-
-        <div class="hero-trust-strip">
-          <div class="hero-trust-item">
-            <span class="hero-trust-dot"></span>
-            <span>Practical Conversation Focus</span>
-          </div>
-          <div class="hero-trust-item">
-            <span class="hero-trust-dot"></span>
-            <span>Daily Voice-Note Feedback</span>
-          </div>
-          <div class="hero-trust-item">
-            <span class="hero-trust-dot"></span>
-            <span>Google Classroom Materials Included</span>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
-
-  <!-- WHAT THE PROGRAMME IS & REAL-LIFE SPEAKING OUTCOMES -->
-  <section class="curiosity-section" id="programme">
-    <div class="container">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">What the Programme Is</span>
-        <h2 class="section-title">Bridging the Gap Between Understanding and Speaking</h2>
-        <p class="section-sub">
-          Most adults already understand English well—they read it, follow conversations, and know what they want to say. Our programme is designed to replace hesitation and mental translation with calm, real-life speaking confidence.
-        </p>
-      </div>
-
-      <div class="curiosity-grid">
-        <div class="curiosity-card">
-          <span class="curiosity-tag">01 &bull; Real-Time Flow</span>
-          <h3>Move Past the "Translation Pause"</h3>
-          <p>
-            Respond naturally in everyday conversations without first translating sentences from Tamil in your head—and without freezing over minor grammar doubts.
-          </p>
-        </div>
-
-        <div class="curiosity-card">
-          <span class="curiosity-tag">02 &bull; Everyday Presence</span>
-          <h3>Speak Up Without Holding Back</h3>
-          <p>
-            Express your thoughts clearly in workplace meetings, job interviews, client calls, or school PTMs instead of staying quiet or keeping answers short.
-          </p>
-        </div>
-
-        <div class="curiosity-card">
-          <span class="curiosity-tag">03 &bull; Real-Life Confidence</span>
-          <h3>Opportunities You Stop Avoiding</h3>
-          <p>
-            Whether it is handling discerning clients directly, stepping up for a career interview, or conversing comfortably anywhere—spoken ease expands what you say "yes" to.
-          </p>
-        </div>
-      </div>
-
-      <div class="curiosity-callout">
-        <div class="curiosity-callout-text">
-          <strong>Why traditional grammar classes don’t fix speaking hesitation:</strong> Speaking is a physical reflex, not a written exam. You build fluency by actually speaking in a safe, judgement-free 8-person circle with guided real-world scenarios.
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- THREE DEDICATED 8-PERSON MICRO-BATCHES -->
-  <section class="batches-section" id="batches">
-    <div class="container">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Dedicated 8-Person Micro-Batches</span>
-        <h2 class="section-title">Three Batches Tailored to Your Daily Life</h2>
-        <p class="section-sub">You never practise in a crowded, mixed classroom. Join a dedicated 8-person batch where every topic and conversation matches your real-world situations.</p>
-      </div>
-
-      <div class="batch-cards-container">
-
-        <!-- BATCH 1: HOUSEWIVES -->
-        <div class="batch-card">
-          <div class="card-top-row">
-            <span class="card-batch-code">Batch English_HM</span>
-            <span class="card-status-pill">8-Learner Micro-Batch</span>
-          </div>
-
-          <h3 class="card-title">Housewives &amp; Homemakers</h3>
-          <p class="card-desc">
-            A warm, judgment-free circle focused on everyday situations—school parent-teacher meetings, doctor visits, travel, neighbours, and family conversations.
-          </p>
-
-          <div class="card-specs-row">
-            <span>Max 8 Learners</span>
-            <span>&bull;</span>
-            <span>4 Live Classes / Wk</span>
-            <span>&bull;</span>
-            <span>3 Months</span>
-          </div>
-
-          <div class="card-outcome-panel">
-            <div class="card-outcome-heading">Real-Life Speaking Outcome</div>
-            <p class="card-outcome-text">
-              Handle school meetings, clinic visits, shopping, and social conversations naturally without second-guessing yourself.
-            </p>
-          </div>
-
-          <div class="card-actions-stack">
-            <button type="button" class="btn-card-action" onclick="openSyllabusModal('hm')">
-              <span>View 12-Week Syllabus</span>
-              <span>&rarr;</span>
-            </button>
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Housewives%20%26%20Homemakers%20(English_HM)%208-person%20Spoken%20English%20batch.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-card-outline">
-              <span>Enquire on WhatsApp</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- BATCH 2: BUSINESS OWNERS -->
-        <div class="batch-card featured-card">
-          <div class="card-top-row">
-            <span class="card-batch-code">Batch English_BIZ</span>
-            <span class="card-status-pill">8-Learner Micro-Batch</span>
-          </div>
-
-          <h3 class="card-title">Business Owners &amp; Freelancers</h3>
-          <p class="card-desc">
-            Tailored for entrepreneurs, shop owners, and independent professionals who want clearer, more assured English for client calls, vendor negotiations, and meetings.
-          </p>
-
-          <div class="card-specs-row">
-            <span>Max 8 Learners</span>
-            <span>&bull;</span>
-            <span>4 Live Classes / Wk</span>
-            <span>&bull;</span>
-            <span>3 Months</span>
-          </div>
-
-          <div class="card-outcome-panel">
-            <div class="card-outcome-heading">Real-Life Speaking Outcome</div>
-            <p class="card-outcome-text">
-              Present your work with authority, negotiate smoothly, and build stronger trust with clients, suppliers, and partners.
-            </p>
-          </div>
-
-          <div class="card-actions-stack">
-            <button type="button" class="btn-card-action" onclick="openSyllabusModal('biz')">
-              <span>View 12-Week Syllabus</span>
-              <span>&rarr;</span>
-            </button>
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Business%20Owners%20%26%20Freelancers%20(English_BIZ)%208-person%20Spoken%20English%20batch.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-card-outline">
-              <span>Enquire on WhatsApp</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- BATCH 3: STUDENTS -->
-        <div class="batch-card">
-          <div class="card-top-row">
-            <span class="card-batch-code">Batch English_STU</span>
-            <span class="card-status-pill">8-Learner Micro-Batch</span>
-          </div>
-
-          <h3 class="card-title">Students &amp; Job Seekers</h3>
-          <p class="card-desc">
-            Focused on moving from textbook English to real-world spoken fluency—covering job interviews, group discussions, presentations, and workplace communication.
-          </p>
-
-          <div class="card-specs-row">
-            <span>Max 8 Learners</span>
-            <span>&bull;</span>
-            <span>4 Live Classes / Wk</span>
-            <span>&bull;</span>
-            <span>3 Months</span>
-          </div>
-
-          <div class="card-outcome-panel">
-            <div class="card-outcome-heading">Real-Life Speaking Outcome</div>
-            <p class="card-outcome-text">
-              Introduce yourself memorably, speak up in group discussions, and walk into interviews and workplaces with calm confidence.
-            </p>
-          </div>
-
-          <div class="card-actions-stack">
-            <button type="button" class="btn-card-action" onclick="openSyllabusModal('stu')">
-              <span>View 12-Week Syllabus</span>
-              <span>&rarr;</span>
-            </button>
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Students%20%26%20Job%20Seekers%20(English_STU)%208-person%20Spoken%20English%20batch.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-card-outline">
-              <span>Enquire on WhatsApp</span>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- HOW THE PROGRAMME WORKS -->
-  <section class="programme-works-section" id="how-it-works">
-    <div class="container">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Step-by-Step Method</span>
-        <h2 class="section-title">How the Programme Works</h2>
-        <p class="section-sub">A structured 3-month speaking routine designed to build lasting fluency through consistent live practice.</p>
-      </div>
-
-      <div class="steps-container">
-
-        <div class="step-row">
-          <div class="step-index">1</div>
-          <div class="step-content">
-            <strong>Join a Dedicated 8-Person Micro-Batch</strong>
-            Choose the cohort that matches your profile—Housewives &amp; Homemakers, Business Owners &amp; Freelancers, or Students &amp; Job Seekers—so you practise comfortably with peers who share your everyday context.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">2</div>
-          <div class="step-content">
-            <strong>4 Live Classes Per Week for 3 Months (48 Sessions)</strong>
-            Attend 4 interactive live sessions every week across 12 weeks. Because each batch is strictly capped at 8 learners, everyone gets regular, unhurried speaking time in every class.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">3</div>
-          <div class="step-content">
-            <strong>Daily Speaking Practice + Voice-Note Feedback</strong>
-            Reinforce what you learn in class through practical daily role-plays and short voice-note exercises, supported by constructive mentor feedback on phrasing, clarity, and pronunciation.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">4</div>
-          <div class="step-content">
-            <strong>Google Classroom Materials &amp; Speaking Templates</strong>
-            Access all session notes, practical sentence structures, vocabulary lists, and real-life conversation templates anytime on Google Classroom to support your week-by-week progress.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TRANSPARENT PRICING SECTION -->
-  <section class="pricing-section" id="pricing">
-    <div class="container-narrow">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Transparent Pricing</span>
-        <h2 class="section-title">Simple, Monthly Fee Structure</h2>
-        <p class="section-sub">Pay month-by-month with zero registration fees and complete clarity on what is included.</p>
-      </div>
-
-      <div class="pricing-card">
-        <span class="pricing-badge">Paid Monthly &bull; No Registration Fee</span>
-        <div class="pricing-amount">₹2,000 <span>/ month</span></div>
-        <div class="pricing-subtext">3-Month Spoken English Programme &bull; 48 Live Sessions Total (16 Sessions / Month)</div>
-
-        <ul class="pricing-features">
-          <li>
-            <span class="pricing-check">&#10003;</span>
-            <span><strong>Dedicated 8-person micro-batch</strong> (Homemakers, Business Owners, or Students)</span>
-          </li>
-          <li>
-            <span class="pricing-check">&#10003;</span>
-            <span><strong>4 live interactive speaking classes per week</strong> for 3 months (48 sessions total)</span>
-          </li>
-          <li>
-            <span class="pricing-check">&#10003;</span>
-            <span><strong>Daily practice prompts &amp; voice-note feedback</strong> to build natural speaking habits</span>
-          </li>
-          <li>
-            <span class="pricing-check">&#10003;</span>
-            <span><strong>Google Classroom materials</strong> with practical conversation templates and notes</span>
-          </li>
-          <li>
-            <span class="pricing-check">&#10003;</span>
-            <span><strong>Paid monthly</strong> with no registration fee and no upfront 3-month lump-sum payment</span>
-          </li>
-        </ul>
-
-        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20joining%20the%20Spoken%20English%20programme%20(%E2%82%B92%2C000%2Fmonth).%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa" style="width:100%;">
-          <span>WhatsApp / Enquire Now</span>
-          <span>&rarr;</span>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SELF REFLECTION SECTION -->
-  <section class="evaluation-section">
-    <div class="container-narrow">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Quick Reflection</span>
-        <h2 class="section-title">Is This Programme Right for You?</h2>
-        <p class="section-sub">Check the moments you relate to—these are the exact speaking habits we resolve during the 12-week programme:</p>
-      </div>
-
-      <div class="eval-box">
-        <div class="eval-list">
-          <label class="eval-item">
-            <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I understand English well when reading or listening, but my mind goes blank or hesitates when speaking.</span>
-          </label>
-
-          <label class="eval-item">
-            <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I mentally translate sentences from Tamil before speaking, which creates awkward pauses.</span>
-          </label>
-
-          <label class="eval-item">
-            <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I want practical speaking practice for my real daily situations rather than school-style grammar rules.</span>
-          </label>
-
-          <label class="eval-item">
-            <input type="checkbox" checked onchange="handleEvalCheck()">
-            <span>I feel much more comfortable practising in a small, encouraging group of 8 peers where nobody judges mistakes.</span>
-          </label>
-        </div>
-
-        <div class="eval-result-card" id="evalResultCard">
-          <strong>You’re in the right place:</strong> Our 8-person micro-batches are built specifically for adults who already understand English but need regular, guided speaking practice to speak with confidence.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ SECTION -->
-  <section class="faq-section" id="faq">
-    <div class="container-narrow">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Clear Answers</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-sub">Everything you need to know about our batches, timings, monthly fee, and teaching method.</p>
-      </div>
-
-      <div class="faq-stack">
-
-        <div class="faq-block open">
-          <button class="faq-trigger" type="button">
-            <span>1. How are the 8-person batches organised?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            We run three dedicated 8-person micro-batches: <strong>Housewives &amp; Homemakers</strong>, <strong>Business Owners &amp; Freelancers</strong>, and <strong>Students &amp; Job Seekers</strong>. You are placed in the batch that matches your profile so you always practise with peers who share similar daily conversations and goals.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>2. How many classes are held each week, and what are the batch timings?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            Each batch meets for <strong>4 live classes per week for 3 months (48 sessions total)</strong>. Homemaker batches typically run in convenient daytime/afternoon slots, while Business Owner and Student batches run in evening slots. Message us on WhatsApp to check the available slot timings for your batch.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>3. What is the course fee, and how is it paid?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            The fee is a transparent <strong>₹2,000 per month</strong>, paid monthly. There is <strong>no registration fee</strong>, no hidden charges, and no requirement to pay for all 3 months upfront.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>4. How is this method different from traditional English classes?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            Traditional classes focus heavily on written grammar rules, which often makes adults overthink and hesitate more while speaking. Our method focuses on <strong>active speaking practice</strong>—using real-life role-plays, guided conversations in an 8-person circle, and daily voice-note feedback so speaking becomes natural.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>5. Why is every batch strictly limited to 8 participants?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            In large classes, most participants stay on mute and barely get a chance to speak. By capping each batch at 8 learners, everyone gets unhurried speaking turns in every live session along with personal attention from the mentor.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>6. How do Google Classroom materials and voice-note feedback work?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            Between your 4 weekly live classes, you receive short daily speaking prompts that you can complete via voice notes for supportive mentor feedback. All session notes, practical sentence templates, and vocabulary guides are organised on <strong>Google Classroom</strong> so you can review them anytime.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FINAL CTA WITH WHATSAPP & ENQUIRY FORM (WEB3FORMS) -->
-  <section id="contact" style="background:var(--white); padding: 72px 0; border-bottom: 1px solid var(--slate-200);">
-    <div class="container-narrow">
-      <div class="section-header-center" style="margin-bottom: 28px;">
-        <span class="section-eyebrow">Get Started</span>
-        <h2 class="section-title">Enquire About the Spoken English Programme</h2>
-        <p class="section-sub">
-          Connect with us directly on WhatsApp for instant batch details and timings, or submit your enquiry below and our team will get in touch with you.
-        </p>
-      </div>
-
-      <div style="text-align:center; margin-bottom: 30px;">
-        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
-          <span>Chat on WhatsApp (+91 89256 93013)</span>
-          <span>&rarr;</span>
-        </a>
-      </div>
-
-      <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:32px 34px; max-width:520px; margin:0 auto; box-shadow:var(--shadow-sm);">
-        <div style="font-size:0.95rem; font-weight:800; color:var(--navy-900); margin-bottom:18px; text-align:center;">
-          Or Submit an Enquiry Form
-        </div>
-
-        <form action="https://api.web3forms.com/submit" method="POST" id="enquiry-form">
-          <input type="hidden" name="access_key" value="0ef05e24-2b04-437b-91dc-11a547022dad">
-          <input type="hidden" name="subject" value="Spoken English Programme Enquiry - CyberAd.in">
-
-          <div style="margin-bottom:16px;">
-            <label for="enquiry-name" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Name <span style="color:#DC2626;">*</span></label>
-            <input type="text" id="enquiry-name" name="name" required placeholder="Enter your name" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
-          </div>
-
-          <div style="margin-bottom:16px;">
-            <label for="enquiry-phone" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">WhatsApp / Mobile Number <span style="color:#DC2626;">*</span></label>
-            <input type="tel" id="enquiry-phone" name="phone" required placeholder="Enter your WhatsApp or mobile number" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
-          </div>
-
-          <div style="margin-bottom:16px;">
-            <label for="enquiry-batch" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Preferred 8-Person Batch</label>
-            <select id="enquiry-batch" name="batch" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff; color:var(--charcoal);">
-              <option value="Housewives & Homemakers (English_HM)">Housewives &amp; Homemakers (Batch English_HM)</option>
-              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners &amp; Freelancers (Batch English_BIZ)</option>
-              <option value="Students & Job Seekers (English_STU)">Students &amp; Job Seekers (Batch English_STU)</option>
-              <option value="Need guidance choosing a batch">Not sure — please guide me</option>
-            </select>
-          </div>
-
-          <div style="margin-bottom:22px;">
-            <label for="enquiry-message" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Short Message <span style="font-weight:500; color:var(--slate-500); font-size:0.78rem;">(Optional)</span></label>
-            <textarea id="enquiry-message" name="message" rows="3" placeholder="Share your preferred timing or any questions (optional)" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff; resize:vertical;"></textarea>
-          </div>
-
-          <button type="submit" id="enquiry-submit-btn" style="width:100%; background:var(--navy-900); color:#ffffff; font-size:0.95rem; font-weight:700; padding:14px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
-            Submit Enquiry
-          </button>
-          <div id="enquiry-status" style="display:none; margin-top:14px; padding:12px 16px; border-radius:var(--radius-sm); font-size:0.9rem; font-weight:600; text-align:center;"></div>
-        </form>
-
-        <!-- PROMINENT SUBMISSION CONFIRMATION CARD -->
-        <div id="enquiry-success-card" role="status" aria-live="polite" style="display:none; text-align:center; padding:28px 20px; background:#ECFDF5; border:2px solid #10B981; border-radius:var(--radius-md); box-shadow:0 10px 25px -5px rgba(16, 185, 129, 0.18);">
-          <div style="width:56px; height:56px; margin:0 auto 16px; border-radius:50%; background:#10B981; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:1.75rem; font-weight:800; line-height:1;">
-            &#10003;
-          </div>
-          <h3 style="font-size:1.35rem; font-weight:800; color:#065F46; margin:0 0 8px; line-height:1.3; letter-spacing:-0.01em;">
-            Thank you. We have received your enquiry.
-          </h3>
-          <p style="font-size:0.95rem; color:#047857; margin:0; font-weight:500; line-height:1.55;">
-            Our team will contact you shortly with batch timings and programme details.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL BANNER -->
-  <section class="final-banner">
-    <div class="container">
-      <h2>Ready to Speak English with Confidence?</h2>
-      <p>Join a supportive 8-person micro-batch with 4 live sessions per week, daily voice-note practice, and transparent ₹2,000/month pricing.</p>
-      <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
-        <span>WhatsApp / Enquire Now</span>
-        <span>&rarr;</span>
-      </a>
     </div>
   </section>
 
@@ -1790,237 +697,30 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-brand-row">
-          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" class="footer-brand-logo" />
-          <div>
-            <div class="footer-brand-title">CyberAd.in &bull; English Communication Lab</div>
-            <div class="footer-brand-sub">Dedicated 8-Person Batches for Housewives, Business Owners &amp; Students</div>
-          </div>
+        <div class="footer-brand">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" />
+          <div class="footer-brand-title">CyberAd.in &bull; Spoken English Programme</div>
         </div>
-
-        <div class="footer-nav">
-          <a href="#top" onclick="scrollToHero(event)">Home / Top</a>
-          <a href="#batches" onclick="smoothNavigate(event, 'batches')">8-Person Batches</a>
-          <a href="#pricing" onclick="smoothNavigate(event, 'pricing')">Pricing</a>
-          <a href="#contact" onclick="smoothNavigate(event, 'contact')">Enquire Now</a>
+        <div class="footer-links">
+          <a href="#top">Top</a>
           <a href="https://cyberad.in">CyberAd Main Site</a>
           <a href="https://cyberad.in/privacy">Privacy Policy</a>
         </div>
       </div>
-
-      <div class="footer-bottom">
+      <div class="footer-copy">
         <div>GSTIN: 33APPPC7049M1ZI &bull; UDYAM: TN-04-0115585</div>
         <div>&copy; 2026 CyberAd.in (Cyber Enterprises). All rights reserved.</div>
       </div>
     </div>
   </footer>
 
-  <!-- SYLLABUS MODAL -->
-  <div class="modal-overlay" id="syllabusModal" onclick="handleOutsideModalClick(event)">
-    <div class="modal-container">
-
-      <div class="modal-top">
-        <div class="modal-brand-header">
-          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in" />
-          <div class="modal-heading">12-Week Speaking Curriculum</div>
-        </div>
-        <button type="button" class="modal-dismiss" onclick="closeSyllabusModal()">&times;</button>
-      </div>
-
-      <div class="modal-tab-bar">
-        <button type="button" class="modal-tab-item active" id="tabBtn-hm" onclick="selectModalTab('hm')">Housewives (English_HM)</button>
-        <button type="button" class="modal-tab-item" id="tabBtn-biz" onclick="selectModalTab('biz')">Business (English_BIZ)</button>
-        <button type="button" class="modal-tab-item" id="tabBtn-stu" onclick="selectModalTab('stu')">Students (English_STU)</button>
-      </div>
-
-      <div class="modal-scrollable">
-
-        <!-- PANEL HM -->
-        <div class="modal-tab-content active" id="tabPanel-hm">
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Introductions &amp; Polite Greetings</strong>Self-introductions, polite greetings, introducing family members.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>My Daily Routine</strong>Talking about daily schedules, likes, dislikes, asking simple questions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>At Home &amp; Polite Requests</strong>Household objects, making polite requests ("Can you...?", "Please...").</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Food, Cooking &amp; Shopping</strong>Vegetable markets, asking prices, quantities, and everyday shopping.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Neighbours &amp; Visitors</strong>Welcoming guests, offering tea/coffee, social pleasantries.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Children's School &amp; PTMs</strong>Talking to teachers, asking academic updates, explaining concerns politely.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Markets, Stores &amp; Services</strong>Asking directions, returns, polite queries with service providers.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Phone Calls &amp; WhatsApp Messages</strong>Simple conversational phone calls and short WhatsApp messages.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Past Events &amp; Stories</strong>Talking about yesterday, family trips, describing what happened.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Opinions &amp; Decisions</strong>Giving polite opinions, agreeing or disagreeing comfortably.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Health &amp; Clinic Appointments</strong>Explaining symptoms clearly to doctors and scheduling appointments.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Review &amp; Conversational Confidence</strong>Extended real-world role-plays and personalized progress assessment.</div></div>
-        </div>
-
-        <!-- PANEL BIZ -->
-        <div class="modal-tab-content" id="tabPanel-biz">
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Introducing Your Business</strong>Professional greetings, elevator pitch for your products/services.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>Talking to Customers</strong>Understanding buyer needs, answering inquiries with confidence.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>Prices, Quotes &amp; Payment Terms</strong>Discussing discounts, invoices, advance payments, and delivery timelines.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Daily Operations Communication</strong>Client coordination, delegating tasks, everyday commercial interactions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Customer Complaints &amp; Service</strong>Resolving client dissatisfaction politely and providing clear solutions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Suppliers &amp; Vendor Negotiation</strong>Negotiating rates, stock follow-ups, and managing supply disputes.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Business Phone &amp; WhatsApp Etiquette</strong>Formal phone calls, concise WhatsApp messages, and follow-up notes.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Team &amp; Staff Management</strong>Giving clear instructions, checking progress, providing polite corrections.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Commercial Meetings &amp; Discussions</strong>Leading meetings, presenting proposals, structured business discussion.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Negotiation &amp; Persuasion</strong>Explaining commercial value and closing deals with conviction.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Networking &amp; Business Relations</strong>Business small talk, making introductions, building long-term ties.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Commercial Simulation &amp; Review</strong>Full deal-making role-play, pitch showcase, and final review.</div></div>
-        </div>
-
-        <!-- PANEL STU -->
-        <div class="modal-tab-content" id="tabPanel-stu">
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 1</div><div class="syllabus-col-detail"><strong>Self-Pitch &amp; Social English</strong>Introducing yourself, academic background, interests, and ambitions.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 2</div><div class="syllabus-col-detail"><strong>My Day &amp; Interests</strong>Routines, hobbies, sharing perspectives clearly in conversation.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 3</div><div class="syllabus-col-detail"><strong>College &amp; Campus Interaction</strong>Talking to professors, academic discussions, requesting assistance.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 4</div><div class="syllabus-col-detail"><strong>Everyday Social Scenarios</strong>Ordering food, local travel, handling real-life student situations.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 5</div><div class="syllabus-col-detail"><strong>Conversations &amp; Debates</strong>Starting discussions, keeping talks going, agreeing and disagreeing.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 6</div><div class="syllabus-col-detail"><strong>Phone Calls &amp; Professional Messaging</strong>Academic and corporate calls, professional WhatsApp &amp; email tone.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 7</div><div class="syllabus-col-detail"><strong>Presentations &amp; Public Speaking</strong>Structuring ideas, stage presence, delivering seminars with confidence.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 8</div><div class="syllabus-col-detail"><strong>Placement Interviews &amp; Self-Intro</strong>Answering "Tell me about yourself", handling strengths &amp; weaknesses.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 9</div><div class="syllabus-col-detail"><strong>Storytelling &amp; Project Descriptions</strong>Describing academic projects and internship experiences clearly.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 10</div><div class="syllabus-col-detail"><strong>Group Discussions (GD) Drills</strong>Speaking up in GDs, presenting arguments politely, active listening.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 11</div><div class="syllabus-col-detail"><strong>Career Readiness &amp; Goals</strong>Discussing career paths, technical skills, and corporate expectations.</div></div>
-          <div class="syllabus-row"><div class="syllabus-col-num">Week 12</div><div class="syllabus-col-detail"><strong>Mock HR Rounds &amp; Final Review</strong>Full placement interview simulation and personal feedback review.</div></div>
-        </div>
-
-      </div>
-
-      <div class="modal-bottom">
-        <span style="font-size:0.82rem; color:var(--slate-600);">8 learners per batch &bull; 4 live classes per week &bull; ₹2,000 / month</span>
-        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-card-action" style="width:auto; padding:8px 18px;">
-          <span>WhatsApp / Enquire Now</span> &rarr;
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- JAVASCRIPT LOGIC -->
   <script>
-    // Smooth section navigation without polluting URL hash so refresh always stays at Hero
-    function smoothNavigate(e, targetId) {
-      if (e) e.preventDefault();
-      const el = document.getElementById(targetId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      if (window.location.hash) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-      }
-    }
-
-    function scrollToHero(e) {
-      if (e) e.preventDefault();
-      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-      if (window.location.hash) {
-        history.replaceState(null, '', window.location.pathname + window.location.search);
-      }
-    }
-
-    // FAQ Accordion
-    document.querySelectorAll('.faq-trigger').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-block').forEach(b => b.classList.remove('open'));
-        if (!isOpen) {
-          item.classList.add('open');
-        }
-      });
-    });
-
-    // Self-Reflection Checkbox Logic
-    function handleEvalCheck() {
-      const checked = document.querySelectorAll('.eval-item input[type="checkbox"]:checked').length;
-      const card = document.getElementById('evalResultCard');
-      if (checked >= 2) {
-        card.innerHTML = '<strong>You’re in the right place:</strong> Our 8-person micro-batches are built specifically for adults who already understand English but need regular, guided speaking practice to speak with confidence.';
-      } else if (checked === 1) {
-        card.innerHTML = '<strong>Worth exploring:</strong> Even a single hesitation habit can hold back your everyday confidence. Practising 4 times a week in an 8-person circle helps you replace hesitation with natural flow.';
-      } else {
-        card.innerHTML = 'Select any statements above that feel familiar in your everyday conversations.';
-      }
-    }
-
-    // Syllabus Modal Controls
-    function openSyllabusModal(key) {
-      document.getElementById('syllabusModal').style.display = 'flex';
-      selectModalTab(key);
-    }
-    function closeSyllabusModal() {
-      document.getElementById('syllabusModal').style.display = 'none';
-    }
-    function handleOutsideModalClick(e) {
-      if (e.target.id === 'syllabusModal') {
-        closeSyllabusModal();
-      }
-    }
-    function selectModalTab(key) {
-      document.querySelectorAll('.modal-tab-item').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.modal-tab-content').forEach(p => p.classList.remove('active'));
-
-      const activeBtn = document.getElementById('tabBtn-' + key);
-      if (activeBtn) activeBtn.classList.add('active');
-
-      const activePanel = document.getElementById('tabPanel-' + key);
-      if (activePanel) activePanel.classList.add('active');
-    }
-
-    // Web3Forms Submission
-    const enquiryForm = document.getElementById('enquiry-form');
-    if (enquiryForm) {
-      enquiryForm.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        const submitBtn = document.getElementById('enquiry-submit-btn');
-        const statusEl = document.getElementById('enquiry-status');
-        const successCard = document.getElementById('enquiry-success-card');
-        const originalText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Submitting...';
-        statusEl.style.display = 'none';
-
-        try {
-          const res = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: new FormData(enquiryForm),
-            headers: { 'Accept': 'application/json' }
-          });
-          const data = await res.json();
-          if (data.success) {
-            enquiryForm.reset();
-            enquiryForm.style.display = 'none';
-            if (successCard) {
-              successCard.style.display = 'block';
-              successCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
-          } else {
-            statusEl.style.display = 'block';
-            statusEl.style.background = '#FEF2F2';
-            statusEl.style.border = '1px solid #FECACA';
-            statusEl.style.color = '#991B1B';
-            statusEl.textContent = data.message || 'Submission failed. Please try again.';
-          }
-        } catch (err) {
-          statusEl.style.display = 'block';
-          statusEl.style.background = '#FEF2F2';
-          statusEl.style.border = '1px solid #FECACA';
-          statusEl.style.color = '#991B1B';
-          statusEl.textContent = 'Network error. Please try again.';
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        }
-      });
-    }
-
-    // GA4 Engagement Event on WhatsApp Link
-    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+    document.querySelectorAll('a[href*="wa.me"], a[href^="tel:"]').forEach(link => {
       link.addEventListener('click', () => {
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'generate_lead', {
             event_category: 'engagement',
-            event_label: link.href,
-            value: 2000
+            event_label: link.href
           });
         }
       });
