@@ -46,8 +46,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Today’s Session Is Full — Spoken English Orientation (17 Oct, 6:00 PM – 6:45 PM) | CyberAd.in</title>
-  <meta name="description" content="Today's Free Spoken English Orientation (17 October, 6:00 PM – 6:45 PM) is now full and closed to new registrations. Confirmed participants who already received their link have secured their place.">
+  <title>Speak English with Confidence — Practical Spoken English Programme | CyberAd.in</title>
+  <meta name="description" content="A practical speaking programme for adults who understand English but hesitate to speak. Dedicated 8-person micro-batches for Homemakers, Business Owners, and Students. 4 live classes per week, ₹2,000/month.">
   <link rel="canonical" href="https://cyberad.in/english_class/">
   <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
   <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
@@ -84,16 +84,10 @@
       --slate-50: #F8FAFC;
       --white: #FFFFFF;
 
-      /* Intent / Badges */
-      --gold-light: #FDE68A;
-      --gold-border: rgba(251, 191, 36, 0.45);
-      --gold-bg: rgba(245, 158, 11, 0.14);
+      /* Accents & Badges */
       --emerald-light: #A7F3D0;
       --emerald-border: rgba(52, 211, 153, 0.4);
       --emerald-bg: rgba(16, 185, 129, 0.14);
-      --badge-warm-text: #92400E;
-      --badge-warm-bg: #FFFBEB;
-      --badge-warm-border: #FDE68A;
       --badge-open-text: #065F46;
       --badge-open-bg: #ECFDF5;
       --badge-open-border: #A7F3D0;
@@ -168,7 +162,7 @@
       font-weight: 600;
     }
     .top-announcement .announcement-highlight {
-      color: var(--gold-light);
+      color: var(--electric-light);
       font-weight: 700;
     }
     .top-announcement .announcement-confirmed {
@@ -327,7 +321,7 @@
     .section-sub {
       font-size: 1.02rem;
       color: var(--slate-600);
-      max-width: 650px;
+      max-width: 660px;
       line-height: 1.62;
     }
     .section-header-center {
@@ -342,7 +336,7 @@
     .hero {
       background: radial-gradient(circle at 50% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
       color: #ffffff;
-      padding: 64px 0 76px;
+      padding: 68px 0 80px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
       overflow: hidden;
@@ -354,149 +348,86 @@
       position: relative;
       z-index: 2;
     }
-    .hero-status-pill {
+    .hero-badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
+      background: rgba(0, 102, 255, 0.18);
+      border: 1px solid rgba(56, 182, 255, 0.4);
       padding: 7px 18px;
       border-radius: 999px;
       margin-bottom: 22px;
       backdrop-filter: blur(6px);
     }
-    .status-amber-dot {
+    .hero-badge-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #FBBF24;
-      box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.22);
+      background: var(--electric-light);
+      box-shadow: 0 0 0 4px rgba(56, 182, 255, 0.22);
       flex-shrink: 0;
     }
-    .hero-status-pill span {
+    .hero-badge-pill span {
       font-size: 0.8rem;
       font-weight: 800;
-      color: var(--gold-light);
+      color: #E0F2FE;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
     .hero-h1 {
-      font-size: clamp(2.15rem, 4.6vw, 3.25rem);
+      font-size: clamp(2.25rem, 4.8vw, 3.4rem);
       font-weight: 900;
-      line-height: 1.15;
+      line-height: 1.14;
       letter-spacing: -0.03em;
       color: #ffffff;
       margin-bottom: 18px;
     }
-    .hero-h1 span {
-      color: var(--emerald-light);
-      display: block;
-      margin-top: 4px;
-    }
     .hero-desc {
-      font-size: clamp(1.04rem, 1.9vw, 1.16rem);
-      color: #E2E8F0;
-      line-height: 1.65;
+      font-size: clamp(1.08rem, 2vw, 1.24rem);
+      color: #F1F5F9;
+      line-height: 1.6;
       max-width: 680px;
-      margin: 0 auto 12px;
-      font-weight: 400;
+      margin: 0 auto 14px;
+      font-weight: 500;
     }
     .hero-subline {
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       color: #93C5FD;
       font-weight: 500;
-      margin-bottom: 30px;
+      max-width: 650px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
     }
 
-    /* EXCLUSIVE SESSION STATUS CARD IN HERO */
-    .session-hero-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(52, 211, 153, 0.35);
-      border-radius: var(--radius-lg);
-      padding: 28px 30px;
-      max-width: 680px;
-      margin: 0 auto 28px;
-      text-align: left;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 44px rgba(4, 11, 22, 0.4);
-    }
-    @media (max-width: 640px) {
-      .session-hero-card {
-        padding: 22px 18px;
-      }
-    }
-    .session-card-top {
+    .hero-cta-group {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      padding-bottom: 18px;
-      margin-bottom: 18px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-    .session-card-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-    .session-card-eyebrow {
-      font-size: 0.73rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--electric-light);
-    }
-    .session-card-datetime {
-      font-size: 1.14rem;
-      font-weight: 800;
-      color: #FFFFFF;
-    }
-    .session-closed-badge {
-      background: var(--gold-bg);
-      border: 1px solid var(--gold-border);
-      color: var(--gold-light);
-      font-size: 0.74rem;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 999px;
-    }
-
-    .status-panel-confirmed {
-      background: rgba(16, 185, 129, 0.11);
-      border: 1px solid rgba(52, 211, 153, 0.38);
-      border-radius: var(--radius-md);
-      padding: 20px 22px;
-      margin-bottom: 18px;
-    }
-    .panel-badge-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.84rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--emerald-light);
-      margin-bottom: 8px;
-    }
-    .panel-body-text {
-      font-size: 0.92rem;
-      color: #E2E8F0;
-      line-height: 1.62;
-    }
-    .panel-body-text strong {
-      color: #FFFFFF;
-    }
-
-    .session-cta-actions {
-      display: flex;
       justify-content: center;
-      margin-top: 6px;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 36px;
     }
-    .btn-secondary-link {
+    .btn-primary-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--whatsapp);
+      color: #052E16;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 15px 28px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      transition: all 0.18s ease;
+    }
+    .btn-primary-wa:hover {
+      background: var(--whatsapp-hover);
+      color: #052E16;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.4);
+    }
+    .btn-secondary-hero {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -505,23 +436,50 @@
       border: 1px solid rgba(255, 255, 255, 0.24);
       color: #ffffff;
       font-weight: 700;
-      font-size: 0.92rem;
-      padding: 13px 24px;
+      font-size: 0.96rem;
+      padding: 15px 24px;
       border-radius: var(--radius-sm);
       transition: background 0.15s ease;
     }
-    .btn-secondary-link:hover {
+    .btn-secondary-hero:hover {
       background: rgba(255, 255, 255, 0.18);
       color: #ffffff;
     }
-    .session-card-reassurance {
-      margin-top: 16px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 0.81rem;
-      color: var(--slate-300);
-      line-height: 1.55;
+
+    /* HERO STATS BAR */
+    .hero-highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 44px rgba(4, 11, 22, 0.35);
+      margin-bottom: 26px;
+    }
+    @media (max-width: 720px) {
+      .hero-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 18px 16px;
+      }
+    }
+    .hero-stat-box {
       text-align: center;
+      padding: 4px 8px;
+    }
+    .hero-stat-val {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 3px;
+    }
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: var(--slate-300);
+      font-weight: 500;
+      line-height: 1.35;
     }
 
     .hero-trust-strip {
@@ -529,7 +487,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 24px;
-      padding-top: 22px;
+      padding-top: 18px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-size: 0.84rem;
       color: var(--slate-300);
@@ -547,7 +505,7 @@
       background: var(--emerald-light);
     }
 
-    /* CURIOSITY / WHAT IT UNLOCKS SECTION */
+    /* WHAT THE PROGRAMME IS / OUTCOMES SECTION */
     .curiosity-section {
       background: var(--white);
       border-bottom: 1px solid var(--slate-200);
@@ -607,7 +565,7 @@
       box-shadow: var(--shadow-sm);
     }
     .curiosity-callout-text {
-      max-width: 740px;
+      max-width: 760px;
       margin: 0 auto;
       font-size: 0.95rem;
       line-height: 1.62;
@@ -615,175 +573,6 @@
     }
     .curiosity-callout-text strong {
       color: #FFFFFF;
-    }
-
-    /* ORIENTATION SECTION */
-    .orientation-section {
-      background: var(--slate-50);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .orientation-wrapper {
-      background: var(--white);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-lg);
-      padding: 38px 40px;
-      box-shadow: var(--shadow-sm);
-    }
-    @media (max-width: 640px) {
-      .orientation-wrapper {
-        padding: 24px 20px;
-      }
-    }
-    .orientation-meta-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding: 18px 22px;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-md);
-      margin-bottom: 24px;
-    }
-    @media (max-width: 680px) {
-      .orientation-meta-bar {
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-    }
-    .meta-box-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      color: var(--slate-500);
-      margin-bottom: 3px;
-    }
-    .meta-box-val {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--navy-900);
-    }
-    .orientation-info-strip {
-      background: var(--badge-open-bg);
-      border-left: 4px solid #10B981;
-      padding: 15px 18px;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      font-size: 0.9rem;
-      color: var(--navy-900);
-      margin-bottom: 24px;
-      line-height: 1.58;
-    }
-    .orientation-agenda-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-bottom: 22px;
-    }
-    @media (max-width: 680px) {
-      .orientation-agenda-list {
-        grid-template-columns: 1fr;
-      }
-    }
-    .agenda-item {
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-sm);
-      padding: 16px 18px;
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-    .agenda-num {
-      width: 24px;
-      height: 24px;
-      border-radius: 6px;
-      background: var(--navy-900);
-      color: #fff;
-      font-size: 0.76rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .agenda-text {
-      font-size: 0.89rem;
-      color: var(--slate-700);
-      line-height: 1.52;
-    }
-    .orientation-action-box {
-      text-align: center;
-      padding-top: 16px;
-      border-top: 1px solid var(--slate-200);
-      font-size: 0.86rem;
-      color: var(--slate-600);
-    }
-
-    /* POST-SESSION EXPLORATION BANNER */
-    .post-session-divider {
-      background: var(--white);
-      border-bottom: 1px solid var(--slate-200);
-      padding: 28px 0;
-      text-align: center;
-    }
-    .post-session-divider p {
-      font-size: 0.92rem;
-      color: var(--slate-600);
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .post-session-divider strong {
-      color: var(--navy-900);
-    }
-
-    /* HOW THE PROGRAMME WORKS */
-    .programme-works-section {
-      background: var(--white);
-      border-bottom: 1px solid var(--slate-200);
-    }
-    .steps-container {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-    .step-row {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-md);
-      padding: 18px 22px;
-      transition: border-color 0.15s ease;
-    }
-    .step-row:hover {
-      border-color: var(--slate-300);
-    }
-    .step-index {
-      width: 28px;
-      height: 28px;
-      border-radius: 8px;
-      background: var(--navy-900);
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .step-content {
-      font-size: 0.94rem;
-      color: var(--slate-700);
-      line-height: 1.55;
-    }
-    .step-content strong {
-      color: var(--navy-900);
     }
 
     /* BATCH CARDS SECTION */
@@ -897,6 +686,11 @@
       color: var(--slate-700);
       line-height: 1.55;
     }
+    .card-actions-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
     .btn-card-action {
       display: flex;
       align-items: center;
@@ -923,6 +717,156 @@
       background: var(--navy-800);
       color: #ffffff;
     }
+    .btn-card-outline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      background: var(--white);
+      color: var(--navy-900);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--slate-300);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-card-outline:hover {
+      background: var(--slate-100);
+      border-color: var(--slate-400);
+      color: var(--navy-900);
+    }
+
+    /* HOW THE PROGRAMME WORKS */
+    .programme-works-section {
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .step-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      transition: border-color 0.15s ease;
+    }
+    .step-row:hover {
+      border-color: var(--slate-300);
+    }
+    .step-index {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--navy-900);
+      color: #fff;
+      font-size: 0.84rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content {
+      font-size: 0.94rem;
+      color: var(--slate-700);
+      line-height: 1.58;
+    }
+    .step-content strong {
+      color: var(--navy-900);
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
+    /* TRANSPARENT PRICING SECTION */
+    .pricing-section {
+      background: var(--slate-50);
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--electric-border);
+      border-radius: var(--radius-lg);
+      padding: 36px 34px;
+      max-width: 640px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .pricing-card {
+        padding: 28px 20px;
+      }
+    }
+    .pricing-badge {
+      display: inline-block;
+      background: var(--badge-open-bg);
+      color: var(--badge-open-text);
+      border: 1px solid var(--badge-open-border);
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .pricing-amount {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--navy-900);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .pricing-amount span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--slate-500);
+    }
+    .pricing-subtext {
+      font-size: 0.94rem;
+      color: var(--slate-600);
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pricing-features li {
+      font-size: 0.92rem;
+      color: var(--slate-700);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .pricing-check {
+      color: #10B981;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
 
     /* SELF REFLECTION SECTION */
     .evaluation-section {
@@ -936,6 +880,11 @@
       padding: 34px;
       max-width: 760px;
       margin: 0 auto;
+    }
+    @media (max-width: 640px) {
+      .eval-box {
+        padding: 22px 18px;
+      }
     }
     .eval-list {
       display: flex;
@@ -976,6 +925,7 @@
     /* FAQ SECTION */
     .faq-section {
       background: var(--slate-50);
+      border-bottom: 1px solid var(--slate-200);
     }
     .faq-stack {
       display: flex;
@@ -1008,11 +958,13 @@
       align-items: center;
       cursor: pointer;
       font-family: inherit;
+      gap: 12px;
     }
     .faq-symbol {
       font-size: 0.72rem;
       color: var(--slate-500);
       transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
     .faq-block.open .faq-symbol {
       transform: rotate(180deg);
@@ -1046,7 +998,7 @@
       color: var(--slate-300);
       font-size: 0.98rem;
       max-width: 620px;
-      margin: 0 auto;
+      margin: 0 auto 28px;
       line-height: 1.65;
     }
 
@@ -1240,6 +1192,8 @@
       justify-content: space-between;
       align-items: center;
       background: var(--slate-50);
+      flex-wrap: wrap;
+      gap: 12px;
     }
   </style>
 </head>
@@ -1247,12 +1201,13 @@
 
   <!-- TOP ANNOUNCEMENT BAR -->
   <div class="top-announcement">
-    <strong>Today’s Spoken English Orientation (17 Oct, 6:00 PM – 6:45 PM):</strong>
-    <span class="announcement-highlight">Session Full &amp; Closed to New Registrations</span>
-    &bull; <span class="announcement-confirmed">Confirmed Guests: Your Place Is Secured</span>
+    <strong>Spoken English Programme:</strong>
+    <span class="announcement-highlight">Dedicated 8-Person Micro-Batches</span>
+    &bull; 4 Live Classes / Week (3 Months)
+    &bull; <span class="announcement-confirmed">₹2,000 / Month &bull; No Registration Fee</span>
   </div>
 
-  <!-- HEADER (ONLY PLACE WITH THE NEXT BATCH WHATSAPP BUTTON) -->
+  <!-- HEADER -->
   <header>
     <div class="container">
       <div class="header-inner">
@@ -1265,17 +1220,17 @@
         </a>
 
         <nav class="header-nav" aria-label="Page navigation">
-          <a href="#orientation" onclick="smoothNavigate(event, 'orientation')">Today’s Session</a>
-          <a href="#unlock" onclick="smoothNavigate(event, 'unlock')">What It Unlocks</a>
-          <a href="#programme-works" onclick="smoothNavigate(event, 'programme-works')">How It Works</a>
+          <a href="#programme" onclick="smoothNavigate(event, 'programme')">About Programme</a>
           <a href="#batches" onclick="smoothNavigate(event, 'batches')">8-Person Batches</a>
-          <a href="#contact" onclick="smoothNavigate(event, 'contact')">Contact Us</a>
+          <a href="#how-it-works" onclick="smoothNavigate(event, 'how-it-works')">How It Works</a>
+          <a href="#pricing" onclick="smoothNavigate(event, 'pricing')">Pricing</a>
           <a href="#faq" onclick="smoothNavigate(event, 'faq')">FAQ</a>
+          <a href="#contact" onclick="smoothNavigate(event, 'contact')">Enquire Now</a>
         </nav>
 
         <div class="header-actions">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20saw%20that%20today%27s%20Spoken%20English%20Orientation%20is%20full.%20I%20would%20like%20to%20express%20my%20interest%20in%20the%20next%20batch." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
-            <span>WhatsApp</span>
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
+            <span>WhatsApp / Enquire Now</span>
             <span>&rarr;</span>
           </a>
         </div>
@@ -1288,66 +1243,65 @@
     <div class="container">
       <div class="hero-container">
 
-        <div class="hero-status-pill">
-          <span class="status-amber-dot"></span>
-          <span>17 October &bull; 6:00 PM – 6:45 PM Orientation Is Now Full &amp; Closed</span>
+        <div class="hero-badge-pill">
+          <span class="hero-badge-dot"></span>
+          <span>3-Month Live Spoken English Programme &bull; Max 8 Learners Per Batch</span>
         </div>
 
         <h1 class="hero-h1">
-          Today’s Session Is Full.
-          <span>You Have Secured Your Place.</span>
+          Speak English with Confidence
         </h1>
 
         <p class="hero-desc">
-          To keep our Spoken English Orientation personal, focused, and comfortable for every guest, capacity for today’s 6:00 PM – 6:45 PM session is strictly limited and is now closed to new registrations.
+          A practical speaking programme for adults who understand English but hesitate to speak.
         </p>
 
         <p class="hero-subline">
-          If you have already enquired and received your personal Google Meet link, we look forward to welcoming you this evening.
+          Build natural speaking fluency in small 8-person micro-batches through regular live conversation practice, real-life role-plays, and supportive voice-note feedback.
         </p>
 
-        <!-- EXCLUSIVE SESSION STATUS CARD -->
-        <div class="session-hero-card">
-          <div class="session-card-top">
-            <div class="session-card-title-group">
-              <span class="session-card-eyebrow">Live Spoken English Orientation</span>
-              <span class="session-card-datetime">Today, 17 October &bull; 6:00 PM – 6:45 PM IST</span>
-            </div>
-            <span class="session-closed-badge">Full &bull; Confirmed Guests Only</span>
-          </div>
+        <div class="hero-cta-group">
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
+            <span>WhatsApp / Enquire Now</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="#batches" class="btn-secondary-hero" onclick="smoothNavigate(event, 'batches')">
+            <span>Explore 8-Person Batches &darr;</span>
+          </a>
+        </div>
 
-          <div class="status-panel-confirmed">
-            <div class="panel-badge-title">
-              <span>&#10003; Confirmed Participants — Your Seat Is Reserved</span>
-            </div>
-            <p class="panel-body-text">
-              Only participants who have already enquired and received the Google Meet link can attend today’s session. Please use the private link shared with you on WhatsApp to join at <strong>6:00 PM</strong>. Today’s 45-minute walkthrough is completely free, relaxed, and carries zero obligation—simply understand how the programme works and decide later at your own pace.
-            </p>
+        <!-- PROGRAMME AT A GLANCE -->
+        <div class="hero-highlights-grid">
+          <div class="hero-stat-box">
+            <div class="hero-stat-val">Max 8 Learners</div>
+            <div class="hero-stat-label">Small, supportive micro-batches</div>
           </div>
-
-          <div class="session-cta-actions">
-            <a href="#orientation" class="btn-secondary-link" onclick="smoothNavigate(event, 'orientation')">
-              <span>See What We’ll Explore Today &darr;</span>
-            </a>
+          <div class="hero-stat-box">
+            <div class="hero-stat-val">48 Live Classes</div>
+            <div class="hero-stat-label">4 live sessions / week for 3 months</div>
           </div>
-
-          <div class="session-card-reassurance">
-            Visiting for the first time? Today’s session is full and closed to new registrations. You can use the WhatsApp button in the top header to express interest in the next batch.
+          <div class="hero-stat-box">
+            <div class="hero-stat-val">3 Focused Tracks</div>
+            <div class="hero-stat-label">Homemakers, Business &amp; Students</div>
+          </div>
+          <div class="hero-stat-box">
+            <div class="hero-stat-val">₹2,000 / Month</div>
+            <div class="hero-stat-label">Paid monthly &bull; No registration fee</div>
           </div>
         </div>
 
         <div class="hero-trust-strip">
           <div class="hero-trust-item">
             <span class="hero-trust-dot"></span>
-            <span>Limited, Intimate Cohort</span>
+            <span>Practical Conversation Focus</span>
           </div>
           <div class="hero-trust-item">
             <span class="hero-trust-dot"></span>
-            <span>Reserved for Pre-Invited Guests</span>
+            <span>Daily Voice-Note Feedback</span>
           </div>
           <div class="hero-trust-item">
             <span class="hero-trust-dot"></span>
-            <span>Zero-Pressure Walkthrough &bull; Decide Later</span>
+            <span>Google Classroom Materials Included</span>
           </div>
         </div>
 
@@ -1355,183 +1309,61 @@
     </div>
   </section>
 
-  <!-- CURIOSITY SECTION: WHAT CONFIDENT ENGLISH UNLOCKS -->
-  <section class="curiosity-section" id="unlock">
+  <!-- WHAT THE PROGRAMME IS & REAL-LIFE SPEAKING OUTCOMES -->
+  <section class="curiosity-section" id="programme">
     <div class="container">
 
       <div class="section-header-center">
-        <span class="section-eyebrow">What Confident English Unlocks</span>
-        <h2 class="section-title">When Hesitation Fades, What Changes?</h2>
+        <span class="section-eyebrow">What the Programme Is</span>
+        <h2 class="section-title">Bridging the Gap Between Understanding and Speaking</h2>
         <p class="section-sub">
-          Most adults already understand English well—they read it, follow conversations, and know what they want to say. Today’s orientation explores how to bridge the quiet gap between understanding and speaking.
+          Most adults already understand English well—they read it, follow conversations, and know what they want to say. Our programme is designed to replace hesitation and mental translation with calm, real-life speaking confidence.
         </p>
       </div>
 
       <div class="curiosity-grid">
         <div class="curiosity-card">
           <span class="curiosity-tag">01 &bull; Real-Time Flow</span>
-          <h3>Moving Past the "Translation Pause"</h3>
+          <h3>Move Past the "Translation Pause"</h3>
           <p>
-            Imagine responding naturally in a conversation without first translating the sentence from Tamil in your head—and without worrying if a verb tense is slightly off.
+            Respond naturally in everyday conversations without first translating sentences from Tamil in your head—and without freezing over minor grammar doubts.
           </p>
         </div>
 
         <div class="curiosity-card">
           <span class="curiosity-tag">02 &bull; Everyday Presence</span>
-          <h3>Speaking Without Holding Back</h3>
+          <h3>Speak Up Without Holding Back</h3>
           <p>
-            How many times have you had a good point to make in a meeting, an interview, or a school PTM, but stayed quiet or kept it short? Confident speech lets your real personality come through.
+            Express your thoughts clearly in workplace meetings, job interviews, client calls, or school PTMs instead of staying quiet or keeping answers short.
           </p>
         </div>
 
         <div class="curiosity-card">
-          <span class="curiosity-tag">03 &bull; New Doors</span>
+          <span class="curiosity-tag">03 &bull; Real-Life Confidence</span>
           <h3>Opportunities You Stop Avoiding</h3>
           <p>
-            Whether it’s handling discerning clients directly, stepping up for a career interview, or conversing comfortably anywhere—ease with spoken English quietly expands what you say "yes" to.
+            Whether it is handling discerning clients directly, stepping up for a career interview, or conversing comfortably anywhere—spoken ease expands what you say "yes" to.
           </p>
         </div>
       </div>
 
       <div class="curiosity-callout">
         <div class="curiosity-callout-text">
-          <strong>In today’s 6:00 PM – 6:45 PM session:</strong> We’ll unpack why traditional grammar rules rarely fix speaking hesitation in adults—and how practising inside a supportive 8-person circle builds natural speaking reflexes.
+          <strong>Why traditional grammar classes don’t fix speaking hesitation:</strong> Speaking is a physical reflex, not a written exam. You build fluency by actually speaking in a safe, judgement-free 8-person circle with guided real-world scenarios.
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- TODAY'S ORIENTATION SECTION -->
-  <section class="orientation-section" id="orientation">
-    <div class="container-narrow">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Session Guide for Confirmed Guests</span>
-        <h2 class="section-title">Inside Today’s 6:00 PM – 6:45 PM Orientation</h2>
-        <p class="section-sub">A calm, structured 45-minute walkthrough for participants who have secured their spot.</p>
-      </div>
-
-      <div class="orientation-wrapper">
-
-        <div class="orientation-meta-bar">
-          <div>
-            <div class="meta-box-label">Date &amp; Time</div>
-            <div class="meta-box-val">Today, 17 Oct &bull; 6:00 PM – 6:45 PM</div>
-          </div>
-          <div>
-            <div class="meta-box-label">Registration Status</div>
-            <div class="meta-box-val" style="color:var(--badge-warm-text);">Full &bull; Closed to New Guests</div>
-          </div>
-          <div>
-            <div class="meta-box-label">For Confirmed Invitees</div>
-            <div class="meta-box-val" style="color:var(--badge-open-text);">Seat Secured &bull; No Obligation</div>
-          </div>
-        </div>
-
-        <div class="orientation-info-strip">
-          <strong>Important Attendance Note:</strong> Only participants who have already enquired and received the Google Meet link can attend today’s session. The meeting link is not published on this website—please use the private link sent to your WhatsApp to join at 6:00 PM.
-        </div>
-
-        <p style="font-size:0.94rem; font-weight:700; color:var(--navy-900); margin-bottom:14px;">What confirmed participants will experience in these 45 minutes:</p>
-
-        <ul class="orientation-agenda-list">
-          <li class="agenda-item">
-            <span class="agenda-num">1</span>
-            <span class="agenda-text">Why adults who understand English still hesitate when speaking—and how to break that habit gently.</span>
-          </li>
-          <li class="agenda-item">
-            <span class="agenda-num">2</span>
-            <span class="agenda-text">How our 8-person micro-batches work so you only practise with peers in similar daily situations.</span>
-          </li>
-          <li class="agenda-item">
-            <span class="agenda-num">3</span>
-            <span class="agenda-text">A short, zero-pressure glimpse of the speaking activities we use instead of heavy grammar drills.</span>
-          </li>
-          <li class="agenda-item">
-            <span class="agenda-num">4</span>
-            <span class="agenda-text">Full clarity on batch timings, the 12-week roadmap, and open Q&amp;A so you can decide later at your own pace.</span>
-          </li>
-        </ul>
-
-        <div class="orientation-action-box">
-          You don’t need to prepare anything in advance, and nobody is put on the spot. Simply join at 6:00 PM using your private invite link.
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SUPPORTING DETAILS DIVIDER FOR AFTER THE SESSION -->
-  <div class="post-session-divider">
-    <div class="container-narrow">
-      <p>
-        <strong>Want more details before or after today’s session?</strong> Below is the complete breakdown of how the 3-month programme works, the three 8-person batches, and the week-by-week curriculum for your reference.
-      </p>
-    </div>
-  </div>
-
-  <!-- HOW THE PROGRAMME WORKS -->
-  <section class="programme-works-section" id="programme-works">
-    <div class="container">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Programme Reference</span>
-        <h2 class="section-title">How the Programme Works</h2>
-        <p class="section-sub">For guests who decide to continue after orientation, here is how the 12-week speaking journey is structured.</p>
-      </div>
-
-      <div class="steps-container">
-
-        <div class="step-row">
-          <div class="step-index">1</div>
-          <div class="step-content">
-            <strong>Attend the live orientation session.</strong> Understand the teaching style, experience the supportive environment, and take your time deciding—with zero obligation.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">2</div>
-          <div class="step-content">
-            <strong>Choose your dedicated 8-person batch when ready.</strong> We keep separate micro-batches for Homemakers, Business Owners, and Students so every conversation feels relevant.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">3</div>
-          <div class="step-content">
-            <strong>Attend 4 live sessions per week for 3 months (48 sessions total).</strong> Because each group is capped at 8 learners, everyone gets comfortable, unhurried speaking time in every class.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">4</div>
-          <div class="step-content">
-            <strong>Build daily speaking habits through role-plays and short voice notes.</strong> Practise real-life scenarios and receive supportive mentor feedback between live sessions.
-          </div>
-        </div>
-
-        <div class="step-row">
-          <div class="step-index">5</div>
-          <div class="step-content">
-            <strong>Review notes and speaking templates anytime on Google Classroom.</strong> Simple, organized reference material to support your progress week by week.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- BATCH CARDS SECTION -->
+  <!-- THREE DEDICATED 8-PERSON MICRO-BATCHES -->
   <section class="batches-section" id="batches">
     <div class="container">
 
       <div class="section-header-center">
-        <span class="section-eyebrow">Dedicated 8-Person Circles</span>
-        <h2 class="section-title">Explore the Three Cohorts</h2>
-        <p class="section-sub">Following orientation, learners who choose to join are placed into a small 8-person batch matching their everyday life.</p>
+        <span class="section-eyebrow">Dedicated 8-Person Micro-Batches</span>
+        <h2 class="section-title">Three Batches Tailored to Your Daily Life</h2>
+        <p class="section-sub">You never practise in a crowded, mixed classroom. Join a dedicated 8-person batch where every topic and conversation matches your real-world situations.</p>
       </div>
 
       <div class="batch-cards-container">
@@ -1551,22 +1383,27 @@
           <div class="card-specs-row">
             <span>Max 8 Learners</span>
             <span>&bull;</span>
-            <span>4 Live Sessions / Wk</span>
+            <span>4 Live Classes / Wk</span>
             <span>&bull;</span>
-            <span>12 Weeks</span>
+            <span>3 Months</span>
           </div>
 
           <div class="card-outcome-panel">
-            <div class="card-outcome-heading">What You Unlock</div>
+            <div class="card-outcome-heading">Real-Life Speaking Outcome</div>
             <p class="card-outcome-text">
-              Handle school meetings, clinic visits, and social conversations naturally without second-guessing yourself.
+              Handle school meetings, clinic visits, shopping, and social conversations naturally without second-guessing yourself.
             </p>
           </div>
 
-          <button type="button" class="btn-card-action" onclick="openSyllabusModal('hm')">
-            <span>View 12-Week Syllabus</span>
-            <span>&rarr;</span>
-          </button>
+          <div class="card-actions-stack">
+            <button type="button" class="btn-card-action" onclick="openSyllabusModal('hm')">
+              <span>View 12-Week Syllabus</span>
+              <span>&rarr;</span>
+            </button>
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Housewives%20%26%20Homemakers%20(English_HM)%208-person%20Spoken%20English%20batch.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+              <span>Enquire on WhatsApp</span>
+            </a>
+          </div>
         </div>
 
         <!-- BATCH 2: BUSINESS OWNERS -->
@@ -1584,22 +1421,27 @@
           <div class="card-specs-row">
             <span>Max 8 Learners</span>
             <span>&bull;</span>
-            <span>4 Live Sessions / Wk</span>
+            <span>4 Live Classes / Wk</span>
             <span>&bull;</span>
-            <span>12 Weeks</span>
+            <span>3 Months</span>
           </div>
 
           <div class="card-outcome-panel">
-            <div class="card-outcome-heading">What You Unlock</div>
+            <div class="card-outcome-heading">Real-Life Speaking Outcome</div>
             <p class="card-outcome-text">
-              Present your work with authority, negotiate smoothly, and build stronger trust with clients and partners.
+              Present your work with authority, negotiate smoothly, and build stronger trust with clients, suppliers, and partners.
             </p>
           </div>
 
-          <button type="button" class="btn-card-action" onclick="openSyllabusModal('biz')">
-            <span>View 12-Week Syllabus</span>
-            <span>&rarr;</span>
-          </button>
+          <div class="card-actions-stack">
+            <button type="button" class="btn-card-action" onclick="openSyllabusModal('biz')">
+              <span>View 12-Week Syllabus</span>
+              <span>&rarr;</span>
+            </button>
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Business%20Owners%20%26%20Freelancers%20(English_BIZ)%208-person%20Spoken%20English%20batch.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+              <span>Enquire on WhatsApp</span>
+            </a>
+          </div>
         </div>
 
         <!-- BATCH 3: STUDENTS -->
@@ -1611,30 +1453,131 @@
 
           <h3 class="card-title">Students &amp; Job Seekers</h3>
           <p class="card-desc">
-            Focused on moving from textbook English to real-world spoken fluency—covering interviews, group discussions, presentations, and workplace communication.
+            Focused on moving from textbook English to real-world spoken fluency—covering job interviews, group discussions, presentations, and workplace communication.
           </p>
 
           <div class="card-specs-row">
             <span>Max 8 Learners</span>
             <span>&bull;</span>
-            <span>4 Live Sessions / Wk</span>
+            <span>4 Live Classes / Wk</span>
             <span>&bull;</span>
-            <span>12 Weeks</span>
+            <span>3 Months</span>
           </div>
 
           <div class="card-outcome-panel">
-            <div class="card-outcome-heading">What You Unlock</div>
+            <div class="card-outcome-heading">Real-Life Speaking Outcome</div>
             <p class="card-outcome-text">
-              Introduce yourself memorably, speak up in group discussions, and walk into job interviews with calm confidence.
+              Introduce yourself memorably, speak up in group discussions, and walk into interviews and workplaces with calm confidence.
             </p>
           </div>
 
-          <button type="button" class="btn-card-action" onclick="openSyllabusModal('stu')">
-            <span>View 12-Week Syllabus</span>
-            <span>&rarr;</span>
-          </button>
+          <div class="card-actions-stack">
+            <button type="button" class="btn-card-action" onclick="openSyllabusModal('stu')">
+              <span>View 12-Week Syllabus</span>
+              <span>&rarr;</span>
+            </button>
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Students%20%26%20Job%20Seekers%20(English_STU)%208-person%20Spoken%20English%20batch.%20Please%20share%20details." target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+              <span>Enquire on WhatsApp</span>
+            </a>
+          </div>
         </div>
 
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW THE PROGRAMME WORKS -->
+  <section class="programme-works-section" id="how-it-works">
+    <div class="container">
+
+      <div class="section-header-center">
+        <span class="section-eyebrow">Step-by-Step Method</span>
+        <h2 class="section-title">How the Programme Works</h2>
+        <p class="section-sub">A structured 3-month speaking routine designed to build lasting fluency through consistent live practice.</p>
+      </div>
+
+      <div class="steps-container">
+
+        <div class="step-row">
+          <div class="step-index">1</div>
+          <div class="step-content">
+            <strong>Join a Dedicated 8-Person Micro-Batch</strong>
+            Choose the cohort that matches your profile—Housewives &amp; Homemakers, Business Owners &amp; Freelancers, or Students &amp; Job Seekers—so you practise comfortably with peers who share your everyday context.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">2</div>
+          <div class="step-content">
+            <strong>4 Live Classes Per Week for 3 Months (48 Sessions)</strong>
+            Attend 4 interactive live sessions every week across 12 weeks. Because each batch is strictly capped at 8 learners, everyone gets regular, unhurried speaking time in every class.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">3</div>
+          <div class="step-content">
+            <strong>Daily Speaking Practice + Voice-Note Feedback</strong>
+            Reinforce what you learn in class through practical daily role-plays and short voice-note exercises, supported by constructive mentor feedback on phrasing, clarity, and pronunciation.
+          </div>
+        </div>
+
+        <div class="step-row">
+          <div class="step-index">4</div>
+          <div class="step-content">
+            <strong>Google Classroom Materials &amp; Speaking Templates</strong>
+            Access all session notes, practical sentence structures, vocabulary lists, and real-life conversation templates anytime on Google Classroom to support your week-by-week progress.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TRANSPARENT PRICING SECTION -->
+  <section class="pricing-section" id="pricing">
+    <div class="container-narrow">
+
+      <div class="section-header-center">
+        <span class="section-eyebrow">Transparent Pricing</span>
+        <h2 class="section-title">Simple, Monthly Fee Structure</h2>
+        <p class="section-sub">Pay month-by-month with zero registration fees and complete clarity on what is included.</p>
+      </div>
+
+      <div class="pricing-card">
+        <span class="pricing-badge">Paid Monthly &bull; No Registration Fee</span>
+        <div class="pricing-amount">₹2,000 <span>/ month</span></div>
+        <div class="pricing-subtext">3-Month Spoken English Programme &bull; 48 Live Sessions Total (16 Sessions / Month)</div>
+
+        <ul class="pricing-features">
+          <li>
+            <span class="pricing-check">&#10003;</span>
+            <span><strong>Dedicated 8-person micro-batch</strong> (Homemakers, Business Owners, or Students)</span>
+          </li>
+          <li>
+            <span class="pricing-check">&#10003;</span>
+            <span><strong>4 live interactive speaking classes per week</strong> for 3 months (48 sessions total)</span>
+          </li>
+          <li>
+            <span class="pricing-check">&#10003;</span>
+            <span><strong>Daily practice prompts &amp; voice-note feedback</strong> to build natural speaking habits</span>
+          </li>
+          <li>
+            <span class="pricing-check">&#10003;</span>
+            <span><strong>Google Classroom materials</strong> with practical conversation templates and notes</span>
+          </li>
+          <li>
+            <span class="pricing-check">&#10003;</span>
+            <span><strong>Paid monthly</strong> with no registration fee and no upfront 3-month lump-sum payment</span>
+          </li>
+        </ul>
+
+        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20joining%20the%20Spoken%20English%20programme%20(%E2%82%B92%2C000%2Fmonth).%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa" style="width:100%;">
+          <span>WhatsApp / Enquire Now</span>
+          <span>&rarr;</span>
+        </a>
       </div>
 
     </div>
@@ -1646,8 +1589,8 @@
 
       <div class="section-header-center">
         <span class="section-eyebrow">Quick Reflection</span>
-        <h2 class="section-title">Do Any of These Moments Feel Familiar?</h2>
-        <p class="section-sub">Check the experiences you relate to—these are the core habits we address in today’s session:</p>
+        <h2 class="section-title">Is This Programme Right for You?</h2>
+        <p class="section-sub">Check the moments you relate to—these are the exact speaking habits we resolve during the 12-week programme:</p>
       </div>
 
       <div class="eval-box">
@@ -1674,35 +1617,115 @@
         </div>
 
         <div class="eval-result-card" id="evalResultCard">
-          <strong>You’re in the right place:</strong> These exact hesitation patterns are what we’ll unpack in today’s 6:00 PM – 6:45 PM orientation. See how small-group practice turns passive knowledge into natural speaking.
+          <strong>You’re in the right place:</strong> Our 8-person micro-batches are built specifically for adults who already understand English but need regular, guided speaking practice to speak with confidence.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRANSPARENT PRICING & POST-ORIENTATION DETAILS STRIP -->
-  <section style="padding: 30px 0; background: var(--slate-50); border-bottom: 1px solid var(--slate-200); text-align: center;">
+  <!-- FAQ SECTION -->
+  <section class="faq-section" id="faq">
     <div class="container-narrow">
-      <p style="font-size: 0.95rem; color: var(--slate-700); margin: 0; font-weight: 500;">
-        <strong>For those who decide to join after orientation:</strong> The 3-month programme is a simple <strong style="color: var(--navy-900);">₹2,000 per month</strong> (paid monthly, with no registration or upfront fees). Today’s orientation is 100% free with zero obligation.
-      </p>
+
+      <div class="section-header-center">
+        <span class="section-eyebrow">Clear Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Everything you need to know about our batches, timings, monthly fee, and teaching method.</p>
+      </div>
+
+      <div class="faq-stack">
+
+        <div class="faq-block open">
+          <button class="faq-trigger" type="button">
+            <span>1. How are the 8-person batches organised?</span>
+            <span class="faq-symbol">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            We run three dedicated 8-person micro-batches: <strong>Housewives &amp; Homemakers</strong>, <strong>Business Owners &amp; Freelancers</strong>, and <strong>Students &amp; Job Seekers</strong>. You are placed in the batch that matches your profile so you always practise with peers who share similar daily conversations and goals.
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <button class="faq-trigger" type="button">
+            <span>2. How many classes are held each week, and what are the batch timings?</span>
+            <span class="faq-symbol">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            Each batch meets for <strong>4 live classes per week for 3 months (48 sessions total)</strong>. Homemaker batches typically run in convenient daytime/afternoon slots, while Business Owner and Student batches run in evening slots. Message us on WhatsApp to check the available slot timings for your batch.
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <button class="faq-trigger" type="button">
+            <span>3. What is the course fee, and how is it paid?</span>
+            <span class="faq-symbol">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            The fee is a transparent <strong>₹2,000 per month</strong>, paid monthly. There is <strong>no registration fee</strong>, no hidden charges, and no requirement to pay for all 3 months upfront.
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <button class="faq-trigger" type="button">
+            <span>4. How is this method different from traditional English classes?</span>
+            <span class="faq-symbol">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            Traditional classes focus heavily on written grammar rules, which often makes adults overthink and hesitate more while speaking. Our method focuses on <strong>active speaking practice</strong>—using real-life role-plays, guided conversations in an 8-person circle, and daily voice-note feedback so speaking becomes natural.
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <button class="faq-trigger" type="button">
+            <span>5. Why is every batch strictly limited to 8 participants?</span>
+            <span class="faq-symbol">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            In large classes, most participants stay on mute and barely get a chance to speak. By capping each batch at 8 learners, everyone gets unhurried speaking turns in every live session along with personal attention from the mentor.
+          </div>
+        </div>
+
+        <div class="faq-block">
+          <button class="faq-trigger" type="button">
+            <span>6. How do Google Classroom materials and voice-note feedback work?</span>
+            <span class="faq-symbol">&#9660;</span>
+          </button>
+          <div class="faq-content">
+            Between your 4 weekly live classes, you receive short daily speaking prompts that you can complete via voice notes for supportive mentor feedback. All session notes, practical sentence templates, and vocabulary guides are organised on <strong>Google Classroom</strong> so you can review them anytime.
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- SUBMIT ENQUIRY SECTION (WEB3FORMS) -->
-  <section id="contact" style="background:var(--white); padding: 68px 0; border-bottom: 1px solid var(--slate-200);">
+  <!-- FINAL CTA WITH WHATSAPP & ENQUIRY FORM (WEB3FORMS) -->
+  <section id="contact" style="background:var(--white); padding: 72px 0; border-bottom: 1px solid var(--slate-200);">
     <div class="container-narrow">
       <div class="section-header-center" style="margin-bottom: 28px;">
-        <span class="section-eyebrow">Contact Us</span>
-        <h2 class="section-title">Submit Enquiry</h2>
+        <span class="section-eyebrow">Get Started</span>
+        <h2 class="section-title">Enquire About the Spoken English Programme</h2>
         <p class="section-sub">
-          Leave your details below for upcoming batch enquiries.
+          Connect with us directly on WhatsApp for instant batch details and timings, or submit your enquiry below and our team will get in touch with you.
         </p>
       </div>
 
+      <div style="text-align:center; margin-bottom: 30px;">
+        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
+          <span>Chat on WhatsApp (+91 89256 93013)</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
       <div style="background:var(--slate-50); border:1px solid var(--slate-200); border-radius:var(--radius-lg); padding:32px 34px; max-width:520px; margin:0 auto; box-shadow:var(--shadow-sm);">
+        <div style="font-size:0.95rem; font-weight:800; color:var(--navy-900); margin-bottom:18px; text-align:center;">
+          Or Submit an Enquiry Form
+        </div>
+
         <form action="https://api.web3forms.com/submit" method="POST" id="enquiry-form">
           <input type="hidden" name="access_key" value="0ef05e24-2b04-437b-91dc-11a547022dad">
+          <input type="hidden" name="subject" value="Spoken English Programme Enquiry - CyberAd.in">
 
           <div style="margin-bottom:16px;">
             <label for="enquiry-name" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Name <span style="color:#DC2626;">*</span></label>
@@ -1715,16 +1738,18 @@
           </div>
 
           <div style="margin-bottom:16px;">
-            <label for="enquiry-email" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Email <span style="font-weight:500; color:var(--slate-500); font-size:0.78rem;">(Optional)</span></label>
-            <input type="email" id="enquiry-email" name="email" placeholder="Enter your email address" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff;" />
+            <label for="enquiry-batch" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Preferred 8-Person Batch</label>
+            <select id="enquiry-batch" name="batch" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff; color:var(--charcoal);">
+              <option value="Housewives & Homemakers (English_HM)">Housewives &amp; Homemakers (Batch English_HM)</option>
+              <option value="Business Owners & Freelancers (English_BIZ)">Business Owners &amp; Freelancers (Batch English_BIZ)</option>
+              <option value="Students & Job Seekers (English_STU)">Students &amp; Job Seekers (Batch English_STU)</option>
+              <option value="Need guidance choosing a batch">Not sure — please guide me</option>
+            </select>
           </div>
 
           <div style="margin-bottom:22px;">
             <label for="enquiry-message" style="display:block; font-size:0.84rem; font-weight:700; color:var(--navy-900); margin-bottom:6px;">Short Message <span style="font-weight:500; color:var(--slate-500); font-size:0.78rem;">(Optional)</span></label>
-            <textarea id="enquiry-message" name="message" rows="3" placeholder="Enter a short message (optional)" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff; resize:vertical;"></textarea>
-            <p style="margin-top:8px; font-size:0.82rem; color:var(--slate-600); line-height:1.5;">
-              Prefer to send an audio message? You can send it to us directly on WhatsApp.
-            </p>
+            <textarea id="enquiry-message" name="message" rows="3" placeholder="Share your preferred timing or any questions (optional)" style="width:100%; padding:12px 14px; border:1px solid var(--slate-300); border-radius:var(--radius-sm); font-size:0.92rem; font-family:inherit; background:#ffffff; resize:vertical;"></textarea>
           </div>
 
           <button type="submit" id="enquiry-submit-btn" style="width:100%; background:var(--navy-900); color:#ffffff; font-size:0.95rem; font-weight:700; padding:14px; border-radius:var(--radius-sm); border:none; cursor:pointer; transition:background 0.15s ease;">
@@ -1739,88 +1764,25 @@
             &#10003;
           </div>
           <h3 style="font-size:1.35rem; font-weight:800; color:#065F46; margin:0 0 8px; line-height:1.3; letter-spacing:-0.01em;">
-            Thank you. We have received your details.
+            Thank you. We have received your enquiry.
           </h3>
           <p style="font-size:0.95rem; color:#047857; margin:0; font-weight:500; line-height:1.55;">
-            Our team has noted your enquiry and will get in touch with you shortly.
+            Our team will contact you shortly with batch timings and programme details.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ SECTION -->
-  <section class="faq-section" id="faq">
-    <div class="container-narrow">
-
-      <div class="section-header-center">
-        <span class="section-eyebrow">Clear Answers</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-sub">Information regarding today’s orientation and how the batches work afterward.</p>
-      </div>
-
-      <div class="faq-stack">
-
-        <div class="faq-block open">
-          <button class="faq-trigger" type="button">
-            <span>1. I already received the Google Meet link earlier. Is my spot confirmed?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            Yes! If you have already enquired and received the Google Meet link from us on WhatsApp, your place in today’s <strong>6:00 PM – 6:45 PM</strong> session is 100% secured. Simply use the private link in your WhatsApp chat to join at 6:00 PM.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>2. Can new participants still join today’s 6:00 PM – 6:45 PM session?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            Today’s orientation (17 October, 6:00 PM – 6:45 PM) is now <strong>full and closed to new registrations</strong>. Only people who have already enquired and received the Google Meet link can attend today’s session. Newcomers can use the WhatsApp button in the top header or the Contact Us form above to express interest in the next batch.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>3. Is there any fee or obligation for confirmed guests attending today?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            None at all. Today’s 45-minute orientation is completely free and low-pressure. Its only purpose is to help you understand how our speaking method works, experience the atmosphere, and decide later if it suits you.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>4. How do the dedicated 8-person batches work after the orientation?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            The orientation is a common walkthrough of the methodology. If you choose to join the programme afterward, your regular classes take place inside a dedicated <strong>8-person micro-batch</strong> (Homemakers, Business Owners, or Students) so you practise exclusively with peers who share your day-to-day situations.
-          </div>
-        </div>
-
-        <div class="faq-block">
-          <button class="faq-trigger" type="button">
-            <span>5. What are the class timings and monthly fee if I decide to join?</span>
-            <span class="faq-symbol">&#9660;</span>
-          </button>
-          <div class="faq-content">
-            Each 8-person batch meets 4 times a week for live sessions over 3 months (48 sessions total). Homemaker batches typically run in convenient daytime/afternoon slots, while Business and Student batches run in evening slots. The fee is a straightforward ₹2,000 per month, paid monthly with no registration fee.
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
   <!-- FINAL BANNER -->
   <section class="final-banner">
     <div class="container">
-      <h2>Today’s Session Is Full. You Have Secured Your Place.</h2>
-      <p>Confirmed participants: We look forward to welcoming you this evening (17 October, 6:00 PM – 6:45 PM IST) via the private link sent to your WhatsApp.</p>
+      <h2>Ready to Speak English with Confidence?</h2>
+      <p>Join a supportive 8-person micro-batch with 4 live sessions per week, daily voice-note practice, and transparent ₹2,000/month pricing.</p>
+      <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
+        <span>WhatsApp / Enquire Now</span>
+        <span>&rarr;</span>
+      </a>
     </div>
   </section>
 
@@ -1838,7 +1800,9 @@
 
         <div class="footer-nav">
           <a href="#top" onclick="scrollToHero(event)">Home / Top</a>
-          <a href="#contact" onclick="smoothNavigate(event, 'contact')">Contact Us</a>
+          <a href="#batches" onclick="smoothNavigate(event, 'batches')">8-Person Batches</a>
+          <a href="#pricing" onclick="smoothNavigate(event, 'pricing')">Pricing</a>
+          <a href="#contact" onclick="smoothNavigate(event, 'contact')">Enquire Now</a>
           <a href="https://cyberad.in">CyberAd Main Site</a>
           <a href="https://cyberad.in/privacy">Privacy Policy</a>
         </div>
@@ -1922,10 +1886,10 @@
       </div>
 
       <div class="modal-bottom">
-        <span style="font-size:0.82rem; color:var(--slate-600);">8 learners per batch &bull; 4 live classes per week &bull; Decide after orientation</span>
-        <button type="button" class="btn-card-action" style="width:auto; padding:8px 18px;" onclick="closeSyllabusModal(); smoothNavigate(null, 'contact');">
-          <span>Contact Us</span> &rarr;
-        </button>
+        <span style="font-size:0.82rem; color:var(--slate-600);">8 learners per batch &bull; 4 live classes per week &bull; ₹2,000 / month</span>
+        <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20am%20interested%20in%20the%20Spoken%20English%20programme.%20Please%20share%20batch%20details%20and%20timings." target="_blank" rel="noopener noreferrer" class="btn-card-action" style="width:auto; padding:8px 18px;">
+          <span>WhatsApp / Enquire Now</span> &rarr;
+        </a>
       </div>
 
     </div>
@@ -1970,9 +1934,9 @@
       const checked = document.querySelectorAll('.eval-item input[type="checkbox"]:checked').length;
       const card = document.getElementById('evalResultCard');
       if (checked >= 2) {
-        card.innerHTML = '<strong>You’re in the right place:</strong> These exact hesitation patterns are what we’ll unpack in today’s 6:00 PM – 6:45 PM orientation. See how small-group practice turns passive knowledge into natural speaking.';
+        card.innerHTML = '<strong>You’re in the right place:</strong> Our 8-person micro-batches are built specifically for adults who already understand English but need regular, guided speaking practice to speak with confidence.';
       } else if (checked === 1) {
-        card.innerHTML = '<strong>Worth exploring:</strong> Even a single hesitation habit can hold back your everyday confidence. We will explore how our 8-person practice circles address this during today’s 6:00 PM – 6:45 PM session.';
+        card.innerHTML = '<strong>Worth exploring:</strong> Even a single hesitation habit can hold back your everyday confidence. Practising 4 times a week in an 8-person circle helps you replace hesitation with natural flow.';
       } else {
         card.innerHTML = 'Select any statements above that feel familiar in your everyday conversations.';
       }
