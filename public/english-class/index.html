@@ -683,64 +683,23 @@
       border-radius: 999px;
     }
 
-    /* HOW EACH CLASS WORKS & WHO IT'S FOR */
-    .split-two-col {
-      display: grid;
-      grid-template-columns: 1.08fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    @media (max-width: 880px) {
-      .split-two-col {
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-    }
-    .steps-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .step-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      background: var(--white);
-      border: 1px solid var(--slate-200);
-      border-radius: var(--radius-md);
-      padding: 14px 16px;
-      box-shadow: var(--shadow-sm);
-    }
-    .step-badge {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--royal-600);
-      color: #FFFFFF;
-      font-weight: 800;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .step-text {
-      font-size: 0.94rem;
-      color: var(--slate-700);
-    }
-    .step-text strong {
-      color: var(--royal-900);
-      font-weight: 800;
-    }
-
+    /* WHO IT'S FOR */
     .who-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
     }
-    @media (max-width: 480px) {
+    @media (max-width: 960px) {
+      .who-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .who-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 420px) {
       .who-grid {
         grid-template-columns: 1fr;
       }
@@ -749,18 +708,21 @@
       background: var(--white);
       border: 1px solid var(--slate-200);
       border-radius: var(--radius-md);
-      padding: 16px;
+      padding: 18px 16px;
       display: flex;
+      flex-direction: column;
       align-items: flex-start;
       gap: 12px;
       box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-    .who-card.full-span {
-      grid-column: 1 / -1;
+    .who-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
     .who-icon {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 10px;
       background: var(--royal-100);
       color: var(--royal-700);
@@ -768,18 +730,19 @@
       align-items: center;
       justify-content: center;
       font-weight: 800;
-      font-size: 1rem;
+      font-size: 1.15rem;
       flex-shrink: 0;
     }
     .who-card h4 {
-      font-size: 0.98rem;
+      font-size: 1rem;
       font-weight: 800;
       color: var(--royal-900);
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
     .who-card p {
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       color: var(--slate-600);
+      line-height: 1.4;
     }
 
     /* SINGLE-LINE UNIFIED EXPANDABLE BAR FOR 12-WEEK PLAN & BATCH TIMINGS */
@@ -1293,7 +1256,7 @@
 
         <nav class="nav-links">
           <a href="#ways-to-join">Ways to Join</a>
-          <a href="#how-it-works">How Class Works</a>
+          <a href="#who-its-for">Who It's For</a>
           <a href="#course-plan">12-Week Plan &amp; Timings</a>
           <a href="#contact">Enquire Now</a>
         </nav>
@@ -1455,86 +1418,49 @@
     </div>
   </section>
 
-  <!-- HOW EACH CLASS WORKS & WHO IT'S FOR -->
-  <section class="section section-alt" id="how-it-works">
+  <!-- WHO IT'S FOR -->
+  <section class="section section-alt" id="who-its-for">
     <div class="container">
-      <div class="split-two-col">
-
-        <!-- How each class works -->
-        <div>
-          <div class="section-title-bar">
-            <span class="section-accent-pill"></span>
-            <h2>How each class works</h2>
-          </div>
-          <ul class="steps-list">
-            <li class="step-row">
-              <span class="step-badge">1</span>
-              <div class="step-text"><strong>Warm-up</strong> &ndash; a fun chat to get everyone talking.</div>
-            </li>
-            <li class="step-row">
-              <span class="step-badge">2</span>
-              <div class="step-text"><strong>One focus skill</strong> &ndash; learn one useful thing, clearly.</div>
-            </li>
-            <li class="step-row">
-              <span class="step-badge">3</span>
-              <div class="step-text"><strong>Pair &amp; group practice</strong> &ndash; speak, speak, speak! <em>(breakout rooms online)</em></div>
-            </li>
-            <li class="step-row">
-              <span class="step-badge">4</span>
-              <div class="step-text"><strong>Personal feedback</strong> &ndash; gentle tips on what to improve.</div>
-            </li>
-            <li class="step-row">
-              <span class="step-badge">5</span>
-              <div class="step-text"><strong>Speaking homework</strong> &ndash; send a short voice note on WhatsApp.</div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Who it's for -->
-        <div>
-          <div class="section-title-bar">
-            <span class="section-accent-pill"></span>
-            <h2>Who it&rsquo;s for</h2>
-          </div>
-          <div class="who-grid">
-            <div class="who-card">
-              <div class="who-icon">&#127891;</div>
-              <div>
-                <h4>Students</h4>
-                <p>College &amp; campus</p>
-              </div>
-            </div>
-            <div class="who-card">
-              <div class="who-icon">&#128188;</div>
-              <div>
-                <h4>Professionals</h4>
-                <p>Meetings &amp; workplace</p>
-              </div>
-            </div>
-            <div class="who-card">
-              <div class="who-icon">&#128269;</div>
-              <div>
-                <h4>Job seekers</h4>
-                <p>Interviews</p>
-              </div>
-            </div>
-            <div class="who-card">
-              <div class="who-icon">&#127968;</div>
-              <div>
-                <h4>Homemakers</h4>
-                <p>Daily-life English</p>
-              </div>
-            </div>
-            <div class="who-card full-span">
-              <div class="who-icon">&#11088;</div>
-              <div>
-                <h4>School kids</h4>
-                <p>In-person fun batch, 5&ndash;6 PM &ndash; games &amp; stories</p>
-              </div>
-            </div>
+      <div class="section-title-bar">
+        <span class="section-accent-pill"></span>
+        <h2>Who this programme is for</h2>
+      </div>
+      <div class="who-grid">
+        <div class="who-card">
+          <div class="who-icon">&#127891;</div>
+          <div>
+            <h4>Students</h4>
+            <p>College &amp; campus communication</p>
           </div>
         </div>
-
+        <div class="who-card">
+          <div class="who-icon">&#128188;</div>
+          <div>
+            <h4>Professionals</h4>
+            <p>Meetings &amp; workplace confidence</p>
+          </div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#128269;</div>
+          <div>
+            <h4>Job seekers</h4>
+            <p>Interview preparation &amp; fluency</p>
+          </div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#127968;</div>
+          <div>
+            <h4>Homemakers</h4>
+            <p>Daily-life English &amp; social speaking</p>
+          </div>
+        </div>
+        <div class="who-card">
+          <div class="who-icon">&#11088;</div>
+          <div>
+            <h4>School kids</h4>
+            <p>In-person fun batch &bull; 5&ndash;6 PM</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1623,7 +1549,7 @@
                 <span class="compact-schedule-who">Professionals &amp; college students</span>
               </div>
               <div class="compact-schedule-item">
-                <span class="compact-schedule-time">Late Morning &middot; 11:00 AM&ndash;12:00 PM</span>
+                <span class="compact-schedule-time">Late Morning &middot; 11:30 AM&ndash;12:30 PM</span>
                 <span class="compact-schedule-who">Homemakers &amp; daily-life learners</span>
               </div>
               <div class="compact-schedule-item">
@@ -1750,8 +1676,21 @@
             </div>
 
             <div class="form-field">
-              <label for="form-message">Preferred Mode / Batch &amp; Message *</label>
-              <textarea id="form-message" name="message" placeholder="Let us know if you prefer In-person (Kondur) or Live Online classes, and your preferred timing..." required></textarea>
+              <label for="form-mode">Preferred Mode / Batch *</label>
+              <select id="form-mode" name="preferred_mode" required>
+                <option value="" disabled selected>Select your preferred mode or batch</option>
+                <option value="In-Person: Morning 7:00 AM - 8:00 AM (Kondur)">In-Person &bull; Morning 7:00 AM &ndash; 8:00 AM (Kondur)</option>
+                <option value="In-Person: Late Morning 11:30 AM - 12:30 PM (Kondur)">In-Person &bull; Late Morning 11:30 AM &ndash; 12:30 PM (Kondur)</option>
+                <option value="In-Person: Evening Kids 5:00 PM - 6:00 PM (Kondur)">In-Person &bull; Evening Kids Batch 5:00 PM &ndash; 6:00 PM (Kondur)</option>
+                <option value="In-Person: Night 7:30 PM - 8:30 PM (Kondur)">In-Person &bull; Night 7:30 PM &ndash; 8:30 PM (Kondur)</option>
+                <option value="Live Online Classes (Flexible Timing via WhatsApp)">Live Online Classes (Flexible Timing via WhatsApp)</option>
+                <option value="Help me choose during 10-Minute Assessment">Help me choose during 10-Minute Assessment</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="form-message">Message / Questions (Optional)</label>
+              <textarea id="form-message" name="message" placeholder="Any specific goals or questions before the assessment?"></textarea>
             </div>
 
             <button type="submit" id="form-submit-btn" class="btn-submit-form">Submit Form &rarr;</button>
