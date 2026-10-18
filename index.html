@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+    window.scrollTo(0, 0);
+  </script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1B2LW255M"></script>
   <script>
@@ -25,43 +35,55 @@
   </script>
   <!-- End Meta Pixel Code -->
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CyberAd.in | Performance Digital Marketing & Lead Generation Agency</title>
-  <meta name="description" content="CyberAd.in helps businesses, clinics, institutions, and founders generate qualified customer leads through targeted Meta Ads, Google Search Ads, fast landing pages, and marketing automation." />
-  <link rel="icon" type="image/png" href="https://assets.cyberad.in/Favicon.png" />
-  
-  <!-- Fonts: Inter for clean, modern typography -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Speak English with Confidence — Next Batch Starts 20 October | CyberAd.in</title>
+  <meta name="description" content="Join our Spoken English programme to learn and speak English confidently. Next batch starts on 20 October with hybrid classes available (online + offline). WhatsApp 8925693013 or Call 9092979797.">
+  <link rel="canonical" href="https://cyberad.in/english_class/">
+  <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
+  <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
+
+  <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+
   <style>
     :root {
-      --primary: #0B1D3A;
-      --primary-light: #162B5E;
-      --accent: #1E6BFF;
-      --accent-hover: #1557D6;
-      --accent-soft: #EFF6FF;
-      --text: #1E293B;
-      --text-muted: #64748B;
-      --bg: #FFFFFF;
-      --bg-alt: #F8FAFC;
-      --border: #E2E8F0;
-      --border-dark: #CBD5E1;
-      --success: #10B981;
-      --radius: 14px;
-      --shadow-sm: 0 2px 8px rgba(11, 29, 58, 0.04);
-      --shadow: 0 6px 20px rgba(11, 29, 58, 0.07);
-      --shadow-lg: 0 14px 40px rgba(11, 29, 58, 0.11);
-      --header-height: 72px;
-      --sticky-bottom-height: 74px;
+      --navy-950: #040B16;
+      --navy-900: #08182E;
+      --navy-850: #0D2342;
+      --navy-800: #13315C;
+      --electric: #0066FF;
+      --electric-hover: #0052CC;
+      --electric-light: #38B6FF;
+      --electric-soft: #EFF6FF;
+      --electric-border: #BFDBFE;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748B;
+      --slate-400: #94A3B8;
+      --slate-300: #CBD5E1;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --slate-50: #F8FAFC;
+      --white: #FFFFFF;
+      --emerald-light: #A7F3D0;
+      --whatsapp: #25D366;
+      --whatsapp-hover: #1EBE5B;
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 2px 10px rgba(8, 24, 46, 0.06);
+      --shadow-md: 0 12px 32px rgba(8, 24, 46, 0.1);
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
     }
 
     html {
@@ -69,36 +91,20 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      color: var(--text);
-      background-color: var(--bg);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--slate-700);
+      background-color: var(--slate-50);
       line-height: 1.65;
       font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      width: 100%;
-      padding-top: var(--header-height);
-      padding-bottom: 0;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding-bottom: var(--sticky-bottom-height);
-      }
     }
 
     a {
-      color: var(--accent);
       text-decoration: none;
-      transition: color 0.15s ease;
-    }
-    a:hover {
-      color: var(--accent-hover);
+      transition: all 0.15s ease;
     }
 
     .container {
-      width: 100%;
-      max-width: 1200px;
+      max-width: 1080px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -109,1285 +115,761 @@
       }
     }
 
-    /* ========== HEADER ========== */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: var(--header-height);
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 2px 10px rgba(11, 29, 58, 0.03);
+    /* TOP BAR */
+    .top-announcement {
+      background: var(--navy-950);
+      color: var(--slate-300);
+      font-size: 0.85rem;
+      padding: 10px 16px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .top-announcement strong {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+    .top-announcement .highlight {
+      color: var(--electric-light);
+      font-weight: 700;
     }
 
+    /* HEADER */
+    header {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--slate-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(8, 24, 46, 0.04);
+    }
     .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 74px;
+      gap: 16px;
+    }
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid var(--slate-200);
+      background: #FFFFFF;
+    }
+    .brand-name {
+      font-size: 1.12rem;
+      font-weight: 900;
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .brand-name span {
+      color: var(--electric);
+    }
+    .brand-sub {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .header-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--whatsapp);
+      color: #052E16;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 800;
+      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+    }
+    .header-wa-btn:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-1px);
+    }
+    .header-call-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--navy-900);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .header-call-btn:hover {
+      background: var(--navy-800);
+    }
+    @media (max-width: 560px) {
+      .brand-sub {
+        display: none;
+      }
+      .header-call-btn {
+        display: none;
+      }
+      .header-wa-btn {
+        padding: 9px 13px;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      background: radial-gradient(circle at 30% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
+      color: #FFFFFF;
+      padding: 64px 0 72px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    @media (max-width: 640px) {
+      .hero {
+        padding: 44px 0 56px;
+      }
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+      }
+    }
+    .hero-content {
+      text-align: left;
+    }
+    @media (max-width: 880px) {
+      .hero-content {
+        text-align: center;
+      }
+    }
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(0, 102, 255, 0.2);
+      border: 1px solid rgba(56, 182, 255, 0.45);
+      padding: 8px 18px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+    .hero-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald-light);
+      box-shadow: 0 0 0 4px rgba(167, 243, 208, 0.22);
+      flex-shrink: 0;
+    }
+    .hero-pill span {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(2.15rem, 4.4vw, 3.3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: #FFFFFF;
+    }
+    .hero-lead {
+      font-size: clamp(1.04rem, 1.8vw, 1.18rem);
+      color: #E2E8F0;
+      margin: 0 0 26px;
+      line-height: 1.62;
+      font-weight: 400;
+    }
+
+    /* KEY INFO CARD IN HERO */
+    .batch-info-box {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 0 0 26px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      backdrop-filter: blur(10px);
+    }
+    @media (max-width: 520px) {
+      .batch-info-box {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+    }
+    .info-tile {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      text-align: center;
+    }
+    .info-label {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--electric-light);
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .info-value {
+      font-size: 1.16rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .info-sub {
+      font-size: 0.82rem;
+      color: var(--slate-300);
+      margin-top: 2px;
+    }
+
+    /* HERO IMAGE CARD */
+    .hero-visual {
+      position: relative;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-image-frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 24px 52px rgba(4, 11, 22, 0.55);
+      background: var(--navy-950);
+    }
+    .hero-image-frame img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .hero-image-frame img {
+        height: 360px;
+      }
+    }
+    .hero-image-caption {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(4, 11, 22, 0.86);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 100%;
-      gap: 16px;
-    }
-
-    .logo {
-      display: inline-flex;
-      align-items: center;
       gap: 10px;
-      text-decoration: none;
-    }
-
-    .logo img {
-      height: 40px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .logo-text {
-      font-size: 1.35rem;
-      font-weight: 900;
-      color: var(--primary);
-      letter-spacing: -0.03em;
-    }
-
-    .logo-text span {
-      color: var(--accent);
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .nav-link {
-      font-size: 0.92rem;
-      font-weight: 600;
-      color: #475569;
-      padding: 6px 12px;
-      border-radius: 8px;
-      transition: all 0.15s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
-
-    .btn-header-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent);
-      color: #FFFFFF !important;
-      font-size: 0.9rem;
-      font-weight: 700;
-      padding: 10px 20px;
-      border-radius: 9999px;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 10px rgba(30, 107, 255, 0.25);
-    }
-
-    .btn-header-cta:hover {
-      background: var(--accent-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.35);
-    }
-
-    .btn-header-cta svg {
-      width: 16px;
-      height: 16px;
-      fill: #FFFFFF;
-    }
-
-    @media (max-width: 860px) {
-      .nav-menu {
-        display: none;
-      }
-    }
-
-    /* ========== BUTTONS ========== */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 13px 26px;
-      font-weight: 700;
-      font-size: 0.98rem;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #FFFFFF !important;
-      box-shadow: 0 4px 14px rgba(30, 107, 255, 0.3);
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(30, 107, 255, 0.4);
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: #FFFFFF !important;
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
-    }
-
-    .btn-whatsapp:hover {
-      background: #1EBE5B;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    }
-
-    .btn-outline {
-      background: #FFFFFF;
-      color: var(--primary) !important;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent) !important;
-      background: var(--accent-soft);
-      transform: translateY(-1px);
-    }
-
-    .btn-lg {
-      padding: 16px 32px;
-      font-size: 1.05rem;
-      border-radius: 12px;
-    }
-
-    /* ========== HERO SECTION ========== */
-    .hero {
-      padding: 70px 0 80px;
-      background: linear-gradient(180deg, #F0F5FF 0%, #FFFFFF 100%);
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-content {
-      max-width: 860px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .badge-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent-soft);
-      color: var(--accent);
       font-size: 0.82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 7px 16px;
-      border-radius: 9999px;
-      border: 1px solid #BFDBFE;
-      margin-bottom: 22px;
+      color: #E2E8F0;
+      font-weight: 600;
+    }
+    .hero-image-caption strong {
+      color: var(--emerald-light);
+      font-weight: 800;
     }
 
-    .badge-pill .pulse-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--accent);
-      display: inline-block;
+    /* CTA BUTTONS */
+    .cta-note {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #E2E8F0;
+      margin-bottom: 16px;
     }
-
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 900;
-      line-height: 1.15;
-      color: var(--primary);
-      letter-spacing: -0.035em;
-      margin-bottom: 20px;
+    .cta-note strong {
+      color: #FFFFFF;
     }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-      color: #475569;
-      line-height: 1.6;
-      margin-bottom: 34px;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero-actions {
+    .cta-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
       justify-content: center;
+      gap: 14px;
+    }
+    .hero-content .cta-buttons {
+      justify-content: flex-start;
+    }
+    @media (max-width: 880px) {
+      .hero-content .cta-buttons {
+        justify-content: center;
+      }
+    }
+    .btn-wa-large {
+      display: inline-flex;
       align-items: center;
-      margin-bottom: 40px;
+      justify-content: center;
+      gap: 10px;
+      background: var(--whatsapp);
+      color: #052E16;
+      font-size: 1.02rem;
+      font-weight: 800;
+      padding: 15px 26px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
     }
-
-    .hero-features-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      padding: 20px 24px;
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      max-width: 840px;
-      margin: 0 auto;
+    .btn-wa-large:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-2px);
     }
-
-    @media (max-width: 768px) {
-      .hero-features-bar {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        text-align: left;
+    .btn-call-large {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--electric);
+      color: #FFFFFF;
+      font-size: 1.02rem;
+      font-weight: 800;
+      padding: 15px 26px;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+    }
+    .btn-call-large:hover {
+      background: var(--electric-hover);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 520px) {
+      .btn-wa-large, .btn-call-large {
+        width: 100%;
       }
     }
 
-    .hero-feature-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--primary);
+    /* SIMPLE HIGHLIGHTS SECTION */
+    .highlights-section {
+      padding: 64px 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--slate-200);
     }
-
-    .hero-feature-item svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--accent);
-      flex-shrink: 0;
+    @media (max-width: 640px) {
+      .highlights-section {
+        padding: 48px 0;
+      }
     }
-
-    /* ========== SECTION HEADERS ========== */
-    section {
-      padding: 80px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .text-center {
+    .section-heading {
       text-align: center;
+      max-width: 660px;
+      margin: 0 auto 40px;
     }
-
-    .section-tag {
-      font-size: 0.8rem;
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--accent);
-      background: var(--accent-soft);
-      padding: 5px 14px;
-      border-radius: 9999px;
-      display: inline-block;
+      color: var(--electric);
+      background: var(--electric-soft);
+      border: 1px solid var(--electric-border);
+      padding: 4px 12px;
+      border-radius: 999px;
       margin-bottom: 12px;
     }
-
-    .section-title {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    .section-heading h2 {
+      font-size: clamp(1.65rem, 3vw, 2.15rem);
       font-weight: 800;
-      color: var(--primary);
-      letter-spacing: -0.025em;
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
-
-    .section-desc {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 640px;
-      margin: 0 auto 48px;
-      line-height: 1.6;
-    }
-
-    /* ========== SERVICES GRID ========== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 960px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 640px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .service-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 28px;
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .service-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 12px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .service-icon svg {
-      width: 26px;
-      height: 26px;
-      fill: currentColor;
-    }
-
-    .service-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary);
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
       margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .section-heading p {
+      font-size: 1rem;
+      color: var(--slate-600);
     }
 
-    .service-card p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .service-badge {
-      margin-top: 18px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--accent);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    /* ========== COMPARISON / PROBLEM VS SOLUTION ========== */
-    .compare-grid {
+    .about-split-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.05fr 1fr;
       gap: 32px;
+      align-items: stretch;
     }
-
-    @media (max-width: 800px) {
-      .compare-grid {
+    @media (max-width: 860px) {
+      .about-split-grid {
         grid-template-columns: 1fr;
+        max-width: 560px;
+        margin: 0 auto;
       }
     }
-
-    .compare-card {
-      background: #FFFFFF;
-      border-radius: var(--radius);
-      padding: 36px 32px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border);
-    }
-
-    .compare-card.flaws {
-      border-top: 4px solid #EF4444;
-      background: #FFFDFC;
-    }
-
-    .compare-card.solutions {
-      border-top: 4px solid var(--accent);
-      background: #FFFFFF;
-      box-shadow: var(--shadow);
-    }
-
-    .compare-card h3 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .compare-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    .compare-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.98rem;
-      color: var(--text);
-      line-height: 1.55;
-    }
-
-    .compare-list li .icon-cross {
-      color: #EF4444;
-      font-weight: 900;
-      font-size: 1.1rem;
-      line-height: 1;
-      margin-top: 3px;
-    }
-
-    .compare-list li .icon-check {
-      color: #10B981;
-      font-weight: 900;
-      font-size: 1.1rem;
-      line-height: 1;
-      margin-top: 3px;
-    }
-
-    /* ========== TARGET CLIENTELE ========== */
-    .audience-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    @media (max-width: 960px) {
-      .audience-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 540px) {
-      .audience-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .audience-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 26px 22px;
-      text-align: left;
-      transition: all 0.2s ease;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .audience-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-    }
-
-    .audience-num {
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-
-    .audience-card h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .audience-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    /* ========== 4-STEP PROCESS ========== */
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+    .about-image-card {
       position: relative;
-    }
-
-    @media (max-width: 960px) {
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .process-card {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 24px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-    }
-
-    .step-number {
-      width: 36px;
-      height: 36px;
-      background: var(--primary);
-      color: #FFFFFF;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .process-card h4 {
-      font-size: 1.08rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .process-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    /* ========== PREVIOUS PROGRAMME / SOCIAL PROOF ========== */
-    .proof-section {
-      background: var(--bg-alt);
-    }
-
-    .proof-box {
-      max-width: 920px;
-      margin: 0 auto;
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 40px;
-      box-shadow: var(--shadow);
-    }
-
-    @media (max-width: 640px) {
-      .proof-box {
-        padding: 24px;
-      }
-    }
-
-    .proof-grid {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .proof-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .proof-img-wrap {
-      width: 100%;
-      aspect-ratio: 1/1;
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1px solid var(--border);
-      cursor: pointer;
-      background: #0B1D3A;
-      position: relative;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow-md);
+      background: var(--navy-900);
+      min-height: 340px;
     }
-
-    .proof-img-wrap img {
+    .about-image-card img {
       width: 100%;
       height: 100%;
+      min-height: 340px;
       object-fit: cover;
+      object-position: center;
       display: block;
-      transition: transform 0.3s ease;
     }
-
-    .proof-img-wrap:hover img {
-      transform: scale(1.04);
-    }
-
-    .proof-tag {
-      font-size: 0.78rem;
-      font-weight: 800;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .proof-title {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-
-    .proof-desc {
-      font-size: 0.98rem;
-      color: var(--text);
-      line-height: 1.65;
-      margin-bottom: 20px;
-    }
-
-    .proof-links {
+    .about-image-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(8, 24, 46, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      color: #FFFFFF;
       display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.86rem;
+      font-weight: 600;
     }
-
-    /* ========== FAQ SECTION ========== */
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      max-width: 1040px;
-      margin: 0 auto;
+    .about-image-badge span {
+      color: var(--emerald-light);
+      font-weight: 800;
     }
-
-    @media (max-width: 800px) {
-      .faq-grid {
-        grid-template-columns: 1fr;
-      }
+    .cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
     }
-
-    .faq-item {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
+    .feature-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-left: 4px solid var(--electric);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
       box-shadow: var(--shadow-sm);
     }
-
-    .faq-item h4 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .faq-item p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    /* ========== CONTACT SECTION ========== */
-    .contact-section {
-      background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
-    }
-
-    .contact-section .section-title {
-      margin-bottom: 8px;
-    }
-
-    .contact-section .section-desc {
-      margin-bottom: 40px;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 48px;
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 860px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-    }
-
-    .contact-form {
-      background: #FFFFFF;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      box-shadow: var(--shadow);
-    }
-
-    .form-group {
-      margin-bottom: 18px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--primary);
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--navy-900);
       margin-bottom: 6px;
     }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      transition: border-color 0.15s ease;
+    .feature-card p {
+      font-size: 0.92rem;
+      color: var(--slate-600);
+      line-height: 1.58;
     }
 
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    .form-group textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .contact-info h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .contact-channel {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .contact-channel strong {
-      font-size: 0.9rem;
-      color: var(--primary);
-    }
-
-    .contact-channel a {
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    /* ========== STICKY BOTTOM CTA (MOBILE) ========== */
-    .sticky-bottom {
-      display: none;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #FFFFFF;
-      border-top: 1px solid var(--border);
-      padding: 12px 16px;
-      z-index: 999;
-      box-shadow: 0 -4px 12px rgba(0,0,0,0.08);
-    }
-
-    @media (max-width: 768px) {
-      .sticky-bottom {
-        display: block;
-      }
-    }
-
-    .sticky-bottom .btn {
-      width: 100%;
-    }
-
-    /* ========== FOOTER ========== */
-    footer {
-      background: var(--primary);
-      color: #FFFFFF;
-      padding: 40px 0 24px;
+    /* CONTACT BANNER */
+    .contact-banner {
+      padding: 64px 0;
+      background: var(--slate-50);
       text-align: center;
     }
-
-    footer a {
-      color: #93C5FD;
+    .contact-card {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      max-width: 720px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-md);
     }
-
-    footer a:hover {
+    @media (max-width: 640px) {
+      .contact-card {
+        padding: 32px 20px;
+      }
+    }
+    .contact-card h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-weight: 800;
+      margin-bottom: 10px;
       color: #FFFFFF;
     }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
+    .contact-card p {
+      font-size: 1.02rem;
+      color: var(--slate-300);
+      max-width: 540px;
+      margin: 0 auto 24px;
+    }
+    .contact-phone-display {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      font-weight: 800;
+      color: var(--emerald-light);
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
     }
 
-    .footer-copy {
+    /* FOOTER */
+    footer {
+      background: var(--navy-950);
+      color: var(--slate-400);
       font-size: 0.85rem;
-      opacity: 0.8;
+      padding: 36px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #FFFFFF;
+    }
+    .footer-brand-title {
+      font-weight: 800;
+      color: #FFFFFF;
+      font-size: 0.96rem;
+    }
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--slate-300);
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      color: #FFFFFF;
+    }
+    .footer-copy {
+      width: 100%;
+      padding-top: 18px;
+      margin-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--slate-500);
     }
   </style>
 </head>
-<body>
-  <!-- Header -->
+<body id="top">
+
+  <!-- TOP BAR -->
+  <div class="top-announcement">
+    <strong>Spoken English Programme:</strong>
+    <span class="highlight">Next Batch Starts on 20 October</span>
+    &bull; Hybrid Format (Online &amp; Offline Classes Available)
+  </div>
+
+  <!-- HEADER -->
   <header>
-    <div class="container header-inner">
-      <a href="/" class="logo">
-        <img src="https://assets.cyberad.in/cyberad-logo.png" alt="CyberAd.in" />
-        <span class="logo-text">CYBERAD<span>.IN</span></span>
-      </a>
-      <nav class="nav-menu">
-          <a href="#services" class="nav-link">Services</a>
-          <a href="#janata-plan" class="nav-link">₹5K Plan</a>
-          <a href="#comparison" class="nav-link">Why Us</a>
-          <a href="#process" class="nav-link">How It Works</a>
-          <a href="#audience" class="nav-link">Who It's For</a>
-          <a href="#faq" class="nav-link">FAQ</a>
-          <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-      <a href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." class="btn-header-cta">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
-      </a>
+    <div class="container">
+      <div class="header-inner">
+        <a href="#top" class="brand-logo">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" class="brand-logo-img" />
+          <div>
+            <div class="brand-name">CYBERAD<span>.IN</span></div>
+            <div class="brand-sub">Spoken English Programme</div>
+          </div>
+        </a>
+
+        <div class="header-cta-group">
+          <a href="tel:+919092979797" class="header-call-btn">
+            <span>Call Us</span>
+          </a>
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
+            <span>WhatsApp</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="badge-pill"><span class="pulse-dot"></span> Performance Marketing Agency</div>
-        <h1>Turn Ad Spend into <span>Qualified Leads</span></h1>
-        <p class="hero-sub">
-          CyberAd.in builds closed-loop digital marketing systems that generate exclusive, high-intent inquiries for your business. Meta Ads, Google Search, landing pages, and WhatsApp routing — all under your brand.
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            <span>Next Batch Starts on 20 October &bull; Hybrid (Online + Offline)</span>
+          </div>
+
+          <h1>Speak English with Confidence</h1>
+
+          <p class="hero-lead">
+            A practical speaking programme for anyone who wants to learn and speak English confidently in everyday life. If you understand English but hesitate when speaking, this course will help you speak naturally and clearly.
+          </p>
+
+          <div class="batch-info-box">
+            <div class="info-tile">
+              <div class="info-label">Next Batch Starts</div>
+              <div class="info-value">20 October</div>
+              <div class="info-sub">Admissions now open</div>
+            </div>
+            <div class="info-tile">
+              <div class="info-label">Class Format</div>
+              <div class="info-value">Hybrid Classes</div>
+              <div class="info-sub">Both Online &amp; Offline available</div>
+            </div>
+          </div>
+
+          <p class="cta-note">
+            Connect with us for batch timings and programme details:
+          </p>
+
+          <div class="cta-buttons">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+              <span>Chat on WhatsApp</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="tel:+919092979797" class="btn-call-large">
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="/assets/english-hero.jpg" alt="Spoken English Programme — Next Batch Starts 20 October" />
+            <div class="hero-image-caption">
+              <span>Spoken English Class</span>
+              <strong>Starts 20 Oct &bull; Hybrid</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMPLE HIGHLIGHTS SECTION -->
+  <section class="highlights-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-eyebrow">About the Course</span>
+        <h2>Learn &amp; Speak English Confidently</h2>
+        <p>Simple, practical training focused on real-world conversation rather than complicated textbook theory.</p>
+      </div>
+
+      <div class="about-split-grid">
+        <div class="about-image-card">
+          <img src="/assets/do-you-speak-english.jpg" alt="Do You Speak English — Practical Online and Offline Spoken English Classes" />
+          <div class="about-image-badge">
+            <strong>Online &amp; Offline Hybrid Learning</strong>
+            <span>New Batch: 20 October</span>
+          </div>
+        </div>
+
+        <div class="cards-stack">
+          <div class="feature-card">
+            <h3>Practical Speaking Practice</h3>
+            <p>
+              Overcome hesitation and stop translating in your head. Build the confidence to speak naturally in daily conversations.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Hybrid Format (Online + Offline)</h3>
+            <p>
+              Attend classes in the way that suits you best—with both online and offline learning options available.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Starting 20 October</h3>
+            <p>
+              Our new batch begins on 20 October in a supportive, easy-to-follow environment for all learners.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CONTACT SECTION -->
+  <section class="contact-banner" id="contact">
+    <div class="container">
+      <div class="contact-card">
+        <h2>Ready to Join the 20 October Batch?</h2>
+        <p>
+          Whether you prefer online or offline classes, reach out to us directly to get full details and reserve your spot.
         </p>
-        <div class="hero-actions">
-          <a href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." class="btn btn-primary btn-lg">Chat on WhatsApp</a>
-          <a href="#services" class="btn btn-outline btn-lg">See What We Do</a>
-        </div>
-        <div class="hero-features-bar">
-          <div class="hero-feature-item">
-            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            100% Exclusive Leads
-          </div>
-          <div class="hero-feature-item">
-            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-            &lt; 60-Sec Response Setup
-          </div>
-          <div class="hero-feature-item">
-            <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
-            Transparent ROI Tracking
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">What We Do</span>
-          <h2 class="section-title">Strategic Digital Marketing Services</h2>
-          <p class="section-desc">
-            We manage your complete digital growth stack so you can focus on running your business and closing sales.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <!-- 1. Meta Ads -->
-          <div class="service-card">
-            <div>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </div>
-              <h3>Meta Ads (Facebook & Instagram)</h3>
-              <p>
-                Reach prospective buyers based on exact geographic clusters, income segments, and verified purchasing behaviors.
-              </p>
-            </div>
-            <div class="service-badge">Targeted Visual Ads →</div>
-          </div>
-
-          <!-- 2. Google Search Ads -->
-          <div class="service-card">
-            <div>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-              </div>
-              <h3>Google Search Ads</h3>
-              <p>
-                Capture high-intent prospects who are actively searching for your services on Google with high conversion keyword targeting.
-              </p>
-            </div>
-            <div class="service-badge">High-Intent Inquiries →</div>
-          </div>
-
-          <!-- 3. Landing Pages -->
-          <div class="service-card">
-            <div>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
-              </div>
-              <h3>High-Converting Landing Pages</h3>
-              <p>
-                Fast-loading, distraction-free landing pages built to turn mobile traffic into verified WhatsApp inquiries and phone calls.
-              </p>
-            </div>
-            <div class="service-badge">Mobile-First Conversion →</div>
-          </div>
-
-          <!-- 4. WhatsApp & CRM -->
-          <div class="service-card">
-            <div>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 012.41 5.83c0 4.54-3.7 8.23-8.24 8.23-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.188 8.188 0 01-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.39 1.02 2.56.12.17 1.75 2.67 4.25 3.73 2.1.89 2.53.72 2.98.67.46-.04 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.28-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-.1.24-1.91-.46-.36-.7-.12-.34.24-.14.1-.24.25-.1.14-.02.31.12.5.14.19.66 1.12 1.51 1.56.85.44 1.53.52 1.8.05.27-.46 1.11-.18.25-.23.07-.05.15-.08.23-.08.08 0 .23-.04.35-.02.12.02.76.36.89.42.13.06.22.09.25.14.03.05.03.3-.1.66-.13.36-.78.7-.89.73-.11.03-.24.05-.37.05-.13 0-.34-.05-.52-.14-.18-.09-.42-.22-.42-.22s-.18.08-.42.08c-.24 0-.55-.1-.84-.28-.29-.18-.55-.42-.55-.42s-.2.08-.42.08c-.22 0-.48-.1-.71-.28-.23-.18-.42-.42-.42-.42s-.15.08-.35.08c-.2 0-.42-.1-.62-.28-.2-.18-.35-.42-.35-.42s-.1.08-.28.08c-.18 0-.38-.1-.55-.28-.17-.18-.28-.42-.28-.42s-.05.08-.2.08c-.15 0-.32-.1-.47-.28-.15-.18-.24-.42-.24-.42s0 .08-.14.08c-.14 0-.3-.1-.44-.28-.14-.18-.22-.42-.22-.42s.04.08-.1.08c-.14 0-.28-.1-.4-.28-.12-.18-.18-.42-.18-.42s.06.08-.06.08c-.12 0-.24-.1-.34-.28-.1-.18-.14-.42-.14-.42s.08.08-.02.08c-.1 0-.2-.1-.28-.28-.08-.18-.1-.42-.1-.42s.1.08.02.08c-.08 0-.16-.1-.22-.28-.06-.18-.06-.42-.06-.42s.12.08.06.08c-.06 0-.12-.1-.16-.28-.04-.18-.02-.42-.02-.42s.14.08.1.08c-.04 0-.08-.1-.1-.28-.02-.18.02-.42.02-.42s.16.08.14.08c-.02 0-.04-.1-.04-.28 0-.18.04-.42.04-.42s.18.08.18.08c0 0-.02-.1-.02-.28 0-.18.04-.42.04-.42s.2.08.2.08c0 0 0-.1 0-.28 0-.18.04-.42.04-.42s.22.08.22.08c0 0 .02-.1.02-.28 0-.18.04-.42.04-.42s.24.08.24.08c0 0 .04-.1.04-.28 0-.18.04-.42.04-.42s.26.08.26.08c0 0 .06-.1.06-.28 0-.18.04-.42.04-.42s.28.08.28.08c0 0 .08-.1.08-.28 0-.18.04-.42.04-.42s.3.08.3.08c0 0 .1-.1.1-.28 0-.18.04-.42.04-.42s.32.08.32.08c0 0 .12-.1.12-.28 0-.18.04-.42.04-.42s.34.08.34.08c0 0 .14-.1.14-.28 0-.18.04-.42.04-.42s.36.08.36.08c0 0 .16-.1.16-.28 0-.18.04-.42.04-.42s.38.08.38.08c0 0 .18-.1.18-.28 0-.18.04-.42.04-.42s.4.08.4.08c0 0 .2-.1.2-.28 0-.18.04-.42.04-.42s.42.08.42.08c0 0 .22-.1.22-.28 0-.18.04-.42.04-.42s.44.08.44.08c0 0 .24-.1.24-.28 0-.18.04-.42.04-.42s.46.08.46.08c0 0 .26-.1.26-.28 0-.18.04-.42.04-.42s.48.08.48.08c0 0 .28-.1.28-.28 0-.18.04-.42.04-.42s.5.08.5.08c0 0 .3-.1.3-.28 0-.18.04-.42.04-.42s.52.08.52.08c0 0 .32-.1.32-.28 0-.18.04-.42.04-.42s.54.08.54.08c0 0 .34-.1.34-.28 0-.18.04-.42.04-.42s.56.08.56.08c0 0 .36-.1.36-.28 0-.18.04-.42.04-.42s.58.08.58.08c0 0 .38-.1.38-.28 0-.18.04-.42.04-.42s.6.08.6.08c0 0 .4-.1.4-.28 0-.18.04-.42.04-.42s.62.08.62.08c0 0 .42-.1.42-.28 0-.18.04-.42.04-.42s.64.08.64.08c0 0 .44-.1.44-.28 0-.18.04-.42.04-.42s.66.08.66.08c0 0 .46-.1.46-.28 0-.18.04-.42.04-.42s.68.08.68.08c0 0 .48-.1.48-.28 0-.18.04-.42.04-.42s.7.08.7.08c0 0 .5-.1.5-.28 0-.18.04-.42.04-.42s.72.08.72.08c0 0 .52-.1.52-.28 0-.18.04-.42.04-.42s.74.08.74.08c0 0 .54-.1.54-.28 0-.18.04-.42.04-.42s.76.08.76.08c0 0 .56-.1.56-.28 0-.18.04-.42.04-.42s.78.08.78.08c0 0 .58-.1.58-.28 0-.18.04-.42.04-.42s.8.08.8.08c0 0 .6-.1.6-.28 0-.18.04-.42.04-.42s.82.08.82.08c0 0 .62-.1.62-.28 0-.18.04-.42.04-.42s.84.08.84.08c0 0 .64-.1.64-.28 0-.18.04-.42.04-.42s.86.08.86.08c0 0 .66-.1.66-.28 0-.18.04-.42.04-.42s.88.08.88.08c0 0 .68-.1.68-.28 0-.18.04-.42.04-.42s.9.08.9.08c0 0 .7-.1.7-.28 0-.18.04-.42.04-.42s.92.08.92.08c0 0 .72-.1.72-.28 0-.18.04-.42.04-.42s.94.08.94.08c0 0 .74-.1.74-.28 0-.18.04-.42.04-.42s.96.08.96.08c0 0 .76-.1.76-.28 0-.18.04-.42.04-.42s.98.08.98.08c0 0 .78-.1.78-.28 0-.18.04-.42.04-.42s1 .08 1 .08c0 0 .8-.1.8-.28 0-.18.04-.42.04-.42s1.02.08 1.02.08c0 0 .82-.1.82-.28 0-.18.04-.42.04-.42s1.04.08 1.04.08c0 0 .84-.1.84-.28 0-.18.04-.42.04-.42s1.06.08 1.06.08c0 0 .86-.1.86-.28 0-.18.04-.42.04-.42s1.08.08 1.08.08c0 0 .88-.1.88-.28 0-.18.04-.42.04-.42s1.1.08 1.1.08c0 0 .9-.1.9-.28 0-.18.04-.42.04-.42s1.12.08 1.12.08c0 0 .92-.1.92-.28 0-.18.04-.42.04-.42s1.14.08 1.14.08c0 0 .94-.1.94-.28 0-.18.04-.42.04-.42s1.16.08 1.16.08c0 0 .96-.1.96-.28 0-.18.04-.42.04-.42s1.18.08 1.18.08c0 0 .98-.1.98-.28 0-.18.04-.42.04-.42s1.2.08 1.2.08c0 0 1-.1 1-.28 0-.18.04-.42.04-.42s1.22.08 1.22.08c0 0 1.02-.1 1.02-.28 0-.18.04-.42.04-.42s1.24.08 1.24.08c0 0 1.04-.1 1.04-.28 0-.18.04-.42.04-.42s1.26.08 1.26.08c0 0 1.06-.1 1.06-.28 0-.18.04-.42.04-.42s1.28.08 1.28.08c0 0 1.08-.1 1.08-.28 0-.18.04-.42.04-.42s1.3.08 1.3.08c0 0 1.1-.1 1.1-.28 0-.18.04-.42.04-.42s1.32.08 1.32.08c0 0 1.12-.1 1.12-.28 0-.18.04-.42.04-.42s1.34.08 1.34.08c0 0 1.14-.1 1.14-.28 0-.18.04-.42.04-.42s1.36.08 1.36.08c0 0 1.16-.1 1.16-.28 0-.18.04-.42.04-.42s1.38.08 1.38.08c0 0 1.18-.1 1.18-.28 0-.18.04-.42.04-.42s1.4.08 1.4.08c0 0 1.2-.1 1.2-.28 0-.18.04-.42.04-.42s1.42.08 1.42.08c0 0 1.22-.1 1.22-.28 0-.18.04-.42.04-.42s1.44.08 1.44.08c0 0 1.24-.1 1.24-.28 0-.18.04-.42.04-.42s1.46.08 1.46.08c0 0 1.26-.1 1.26-.28 0-.18.04-.42.04-.42s1.48.08 1.48.08c0 0 1.28-.1 1.28-.28 0-.18.04-.42.04-.42s1.5.08 1.5.08c0 0 1.3-.1 1.3-.28 0-.18.04-.42.04-.42s1.52.08 1.52.08c0 0 1.32-.1 1.32-.28 0-.18.04-.42.04-.42s1.54.08 1.54.08c0 0 1.34-.1 1.34-.28 0-.18.04-.42.04-.42s1.56.08 1.56.08c0 0 1.36-.1 1.36-.28 0-.18.04-.42.04-.42s1.58.08 1.58.08c0 0 1.38-.1 1.38-.28 0-.18.04-.42.04-.42s1.6.08 1.6.08c0 0 1.4-.1 1.4-.28 0-.18.04-.42.04-.42s1.62.08 1.62.08c0 0 1.42-.1 1.42-.28 0-.18.04-.42.04-.42s1.64.08 1.64.08c0 0 1.44-.1 1.44-.28 0-.18.04-.42.04-.42s1.66.08 1.66.08c0 0 1.46-.1 1.46-.28 0-.18.04-.42.04-.42s1.68.08 1.68.08c0 0 1.48-.1 1.48-.28 0-.18.04-.42.04-.42s1.7.08 1.7.08c0 0 1.5-.1 1.5-.28 0-.18.04-.42.04-.42s1.72.08 1.72.08c0 0 1.52-.1 1.52-.28 0-.18.04-.42.04-.42s1.74.08 1.74.08c0 0 1.54-.1 1.54-.28 0-.18.04-.42.04-.42s1.76.08 1.76.08c0 0 1.56-.1 1.56-.28 0-.18.04-.42.04-.42s1.78.08 1.78.08c0 0 1.58-.1 1.58-.28 0-.18.04-.42.04-.42s1.8.08 1.8.08c0 0 1.6-.1 1.6-.28 0-.18.04-.42.04-.42s1.82.08 1.82.08c0 0 1.62-.1 1.62-.28 0-.18.04-.42.04-.42s1.84.08 1.84.08c0 0 1.64-.1 1.64-.28 0-.18.04-.42.04-.42s1.86.08 1.86.08c0 0 1.66-.1 1.66-.28 0-.18.04-.42.04-.42s1.88.08 1.88.08c0 0 1.68-.1 1.68-.28 0-.18.04-.42.04-.42s1.9.08 1.9.08c0 0 1.7-.1 1.7-.28 0-.18.04-.42.04-.42s1.92.08 1.92.08c0 0 1.72-.1 1.72-.28 0-.18.04-.42.04-.42s1.94.08 1.94.08c0 0 1.74-.1 1.74-.28 0-.18.04-.42.04-.42s1.96.08 1.96.08c0 0 1.76-.1 1.76-.28 0-.18.04-.42.04-.42s1.98.08 1.98.08c0 0 1.78-.1 1.78-.28 0-.18.04-.42.04-.42s2 .08 2 .08c0 0 1.8-.1 1.8-.28 0-.18.04-.42.04-.42s2.02.08 2.02.08c0 0 1.82-.1 1.82-.28 0-.18.04-.42.04-.42s2.04.08 2.04.08c0 0 1.84-.1 1.84-.28 0-.18.04-.42.04-.42s2.06.08 2.06.08c0 0 1.86-.1 1.86-.28 0-.18.04-.42.04-.42s2.08.08 2.08.08c0 0 1.88-.1 1.88-.28 0-.18.04-.42.04-.42s2.1.08 2.1.08c0 0 1.9-.1 1.9-.28 0-.18.04-.42.04-.42s2.12.08 2.12.08c0 0 1.92-.1 1.92-.28 0-.18.04-.42.04-.42s2.14.08 2.14.08c0 0 1.94-.1 1.94-.28 0-.18.04-.42.04-.42s2.16.08 2.16.08c0 0 1.96-.1 1.96-.28 0-.18.04-.42.04-.42s2.18.08 2.18.08c0 0 1.98-.1 1.98-.28 0-.18.04-.42.04-.42s2.2.08 2.2.08c0 0 2-.1 2-.28 0-.18.04-.42.04-.42s2.22.08 2.22.08c0 0 2.02-.1 2.02-.28 0-.18.04-.42.04-.42s2.04.08 2.04.08c0 0 2.04-.1 2.04-.28 0-.18.04-.42.04-.42s2.06.08 2.06.08c0 0 2.06-.1 2.06-.28 0-.18.04-.42.04-.42s2.08.08 2.08.08c0 0 2.08-.1 2.08-.28 0-.18.04-.42.04-.42s2.1.08 2.1.08c0 0 2.1-.1 2.1-.28 0-.18.04-.42.04-.42s2.12.08 2.12.08c0 0 2.12-.1 2.12-.28 0-.18.04-.42.04-.42s2.14.08 2.14.08c0 0 2.14-.1 2.14-.28 0-.18.04-.42.04-.42s2.16.08 2.16.08c0 0 2.16-.1 2.16-.28 0-.18.04-.42.04-.42s2.18.08 2.18.08c0 0 2.18-.1 2.18-.28 0-.18.04-.42.04-.42s2.2.08 2.2.08c0 0 2.2-.1 2.2-.28 0-.18.04-.42.04-.42s2.22.08 2.22.08c0 0 2.22-.1 2.22-.28 0-.18.04-.42.04-.42s2.24.08 2.24.08c0 0 2.24-.1 2.24-.28 0-.18.04-.42.04-.42s2.26.08 2.26.08c0 0 2.26-.1 2.26-.28 0-.18.04-.42.04-.42s2.28.08 2.28.08c0 0 2.28-.1 2.28-.28 0-.18.04-.42.04-.42s2.3.08 2.3.08c0 0 2.3-.1 2.3-.28 0-.18.04-.42.04-.42s2.32.08 2.32.08c0 0 2.32-.1 2.32-.28 0-.18.04-.42.04-.42s2.34.08 2.34.08c0 0 2.34-.1 2.34-.28 0-.18.04-.42.04-.42s2.36.08 2.36.08c0 0 2.36-.1 2.36-.28 0-.18.04-.42.04-.42s2.38.08 2.38.08c0 0 2.38-.1 2.38-.28 0-.18.04-.42.04-.42s2.4.08 2.4.08c0 0 2.4-.1 2.4-.28 0-.18.04-.42.04-.42s2.42.08 2.42.08c0 0 2.42-.1 2.42-.28 0-.18.04-.42.04-.42s2.44.08 2.44.08c0 0 2.44-.1 2.44-.28 0-.18.04-.42.04-.42s2.46.08 2.46.08c0 0 2.46-.1 2.46-.28 0-.18.04-.42.04-.42s2.48.08 2.48.08c0 0 2.48-.1 2.48-.28 0-.18.04-.42.04-.42s2.5.08 2.5.08c0 0 2.5-.1 2.5-.28 0-.18.04-.42.04-.42s2.52.08 2.52.08c0 0 2.52-.1 2.52-.28 0-.18.04-.42.04-.42s2.54.08 2.54.08c0 0 2.54-.1 2.54-.28 0-.18.04-.42.04-.42s2.56.08 2.56.08c0 0 2.56-.1 2.56-.28 0-.18.04-.42.04-.42s2.58.08 2.58.08c0 0 2.58-.1 2.58-.28 0-.18.04-.42.04-.42s2.6.08 2.6.08c0 0 2.6-.1 2.6-.28 0-.18.04-.42.04-.42s2.62.08 2.62.08c0 0 2.62-.1 2.62-.28 0-.18.04-.42.04-.42s2.64.08 2.64.08c0 0 2.64-.1 2.64-.28 0-.18.04-.42.04-.42s2.66.08 2.66.08c0 0 2.66-.1 2.66-.28 0-.18.04-.42.04-.42s2.68.08 2.68.08c0 0 2.68-.1 2.68-.28 0-.18.04-.42.04-.42s2.7.08 2.7.08c0 0 2.7-.1 2.7-.28 0-.18.04-.42.04-.42s2.72.08 2.72.08c0 0 2.72-.1 2.72-.28 0-.18.04-.42.04-.42s2.74.08 2.74.08c0 0 2.74-.1 2.74-.28 0-.18.04-.42.04-.42s2.76.08 2.76.08c0 0 2.76-.1 2.76-.28 0-.18.04-.42.04-.42s2.78.08 2.78.08c0 0 2.78-.1 2.78-.28 0-.18.04-.42.04-.42s2.8.08 2.8.08c0 0 2.8-.1 2.8-.28 0-.18.04-.42.04-.42s2.82.08 2.82.08c0 0 2.82-.1 2.82-.28 0-.18.04-.42.04-.42s2.84.08 2.84.08c0 0 2.84-.1 2.84-.28 0-.18.04-.42.04-.42s2.86.08 2.86.08c0 0 2.86-.1 2.86-.28 0-.18.04-.42.04-.42s2.88.08 2.88.08c0 0 2.88-.1 2.88-.28 0-.18.04-.42.04-.42s2.9.08 2.9.08c0 0 2.9-.1 2.9-.28 0-.18.04-.42.04-.42s2.92.08 2.92.08c0 0 2.92-.1 2.92-.28 0-.18.04-.42.04-.42s2.94.08 2.94.08c0 0 2.94-.1 2.94-.28 0-.18.04-.42.04-.42s2.96.08 2.96.08c0 0 2.96-.1 2.96-.28 0-.18.04-.42.04-.42s2.98.08 2.98.08c0 0 2.98-.1 2.98-.28 0-.18.04-.42.04-.42s3 .08 3 .08c0 0 3-.1 3-.28 0-.18.04-.42.04-.42s3.02.08 3.02.08c0 0 3.02-.1 3.02-.28 0-.18.04-.42.04-.42s3.04.08 3.04.08c0 0 3.04-.1 3.04-.28 0-.18.04-.42.04-.42s3.06.08 3.06.08c0 0 3.06-.1 3.06-.28 0-.18.04-.42.04-.42s3.08.08 3.08.08c0 0 3.08-.1 3.08-.28 0-.18.04-.42.04-.42s3.1.08 3.1.08c0 0 3.1-.1 3.1-.28 0-.18.04-.42.04-.42s3.12.08 3.12.08c0 0 3.12-.1 3.12-.28 0-.18.04-.42.04-.42s3.14.08 3.14.08c0 0 3.14-.1 3.14-.28 0-.18.04-.42.04-.42s3.16.08 3.16.08c0 0 3.16-.1 3.16-.28 0-.18.04-.42.04-.42s3.18.08 3.18.08c0 0 3.18-.1 3.18-.28 0-.18.04-.42.04-.42s3.2.08 3.2.08c0 0 3.2-.1 3.2-.28 0-.18.04-.42.04-.42s3.22.08 3.22.08c0 0 3.22-.1 3.22-.28 0-.18.04-.42.04-.42s3.24.08 3.24.08c0 0 3.24-.1 3.24-.28 0-.18.04-.42.04-.42s3.26.08 3.26.08c0 0 3.26-.1 3.26-.28 0-.18.04-.42.04-.42s3.28.08 3.28.08c0 0 3.28-.1 3.28-.28 0-.18.04-.42.04-.42s3.3.08 3.3.08c0 0 3.3-.1 3.3-.28 0-.18.04-.42.04-.42s3.32.08 3.32.08c0 0 3.32-.1 3.32-.28 0-.18.04-.42.04-.42s3.34.08 3.34.08c0 0 3.34-.1 3.34-.28 0-.18.04-.42.04-.42s3.36.08 3.36.08c0 0 3.36-.1 3.36-.28 0-.18.04-.42.04-.42s3.38.08 3.38.08c0 0 3.38-.1 3.38-.28 0-.18.04-.42.04-.42s3.4.08 3.4.08c0 0 3.4-.1 3.4-.28 0-.18.04-.42.04-.42s3.42.08 3.42.08c0 0 3.42-.1 3.42-.28 0-.18.04-.42.04-.42s3.44.08 3.44.08c0 0 3.44-.1 3.44-.28 0-.18.04-.42.04-.42s3.46.08 3.46.08c0 0 3.46-.1 3.46-.28 0-.18.04-.42.04-.42s3.48.08 3.48.08c0 0 3.48-.1 3.48-.28 0-.18.04-.42.04-.42s3.5.08 3.5.08c0 0 3.5-.1 3.5-.28 0-.18.04-.42.04-.42s3.52.08 3.52.08c0 0 3.52-.1 3.52-.28 0-.18.04-.42.04-.42s3.54.08 3.54.08c0 0 3.54-.1 3.54-.28 0-.18.04-.42.04-.42s3.56.08 3.56.08c0 0 3.56-.1 3.56-.28 0-.18.04-.42.04-.42s3.58.08 3.58.08c0 0 3.58-.1 3.58-.28 0-.18.04-.42.04-.42s3.6.08 3.6.08c0 0 3.6-.1 3.6-.28 0-.18.04-.42.04-.42s3.62.08 3.62.08c0 0 3.62-.1 3.62-.28 0-.18.04-.42.04-.42s3.64.08 3.64.08c0 0 3.64-.1 3.64-.28 0-.18.04-.42.04-.42s3.66.08 3.66.08c0 0 3.66-.1 3.66-.28 0-.18.04-.42.04-.42s3.68.08 3.68.08c0 0 3.68-.1 3.68-.28 0-.18.04-.42.04-.42s3.7.08 3.7.08c0 0 3.7-.1 3.7-.28 0-.18.04-.42.04-.42s3.72.08 3.72.08c0 0 3.72-.1 3.72-.28 0-.18.04-.42.04-.42s3.74.08 3.74.08c0 0 3.74-.1 3.74-.28 0-.18.04-.42.04-.42s3.76.08 3.76.08c0 0 3.76-.1 3.76-.28 0-.18.04-.42.04-.42s3.78.08 3.78.08c0 0 3.78-.1 3.78-.28 0-.18.04-.42.04-.42s3.8.08 3.8.08c0 0 3.8-.1 3.8-.28 0-.18.04-.42.04-.42s3.82.08 3.82.08c0 0 3.82-.1 3.82-.28 0-.18.04-.42.04-.42s3.84.08 3.84.08c0 0 3.84-.1 3.84-.28 0-.18.04-.42.04-.42s3.86.08 3.86.08c0 0 3.86-.1 3.86-.28 0-.18.04-.42.04-.42s3.88.08 3.88.08c0 0 3.88-.1 3.88-.28 0-.18.04-.42.04-.42s3.9.08 3.9.08c0 0 3.9-.1 3.9-.28 0-.18.04-.42.04-.42s3.92.08 3.92.08c0 0 3.92-.1 3.92-.28 0-.18.04-.42.04-.42s3.94.08 3.94.08c0 0 3.94-.1 3.94-.28 0-.18.04-.42.04-.42s3.96.08 3.96.08c0 0 3.96-.1 3.96-.28 0-.18.04-.42.04-.42s3.98.08 3.98.08c0 0 3.98-.1 3.98-.28 0-.18.04-.42.04-.42s4 .08 4 .08c0 0 4-.1 4-.28 0-.18.04-.42.04-.42s4.02.08 4.02.08c0 0 4.02-.1 4.02-.28 0-.18.04-.42.04-.42s4.04.08 4.04.08c0 0 4.04-.1 4.04-.28 0-.18.04-.42.04-.42s4.06.08 4.06.08c0 0 4.06-.1 4.06-.28 0-.18.04-.42.04-.42s4.08.08 4.08.08c0 0 4.08-.1 4.08-.28 0-.18.04-.42.04-.42s4.1.08 4.1.08c0 0 4.1-.1 4.1-.28 0-.18.04-.42.04-.42s4.12.08 4.12.08c0 0 4.12-.1 4.12-.28 0-.18.04-.42.04-.42s4.14.08 4.14.08c0 0 4.14-.1 4.14-.28 0-.18.04-.42.04-.42s4.16.08 4.16.08c0 0 4.16-.1 4.16-.28 0-.18.04-.42.04-.42s4.18.08 4.18.08c0 0 4.18-.1 4.18-.28 0-.18.04-.42.04-.42s4.2.08 4.2.08c0 0 4.2-.1 4.2-.28 0-.18.04-.42.04-.42s4.22.08 4.22.08c0 0 4.22-.1 4.22-.28 0-.18.04-.42.04-.42s4.24.08 4.24.08c0 0 4.24-.1 4.24-.28 0-.18.04-.42.04-.42s4.26.08 4.26.08c0 0 4.26-.1 4.26-.28 0-.18.04-.42.04-.42s4.28.08 4.28.08c0 0 4.28-.1 4.28-.28 0-.18.04-.42.04-.42s4.3.08 4.3.08c0 0 4.3-.1 4.3-.28 0-.18.04-.42.04-.42s4.32.08 4.32.08c0 0 4.32-.1 4.32-.28 0-.18.04-.42.04-.42s4.34.08 4.34.08c0 0 4.34-.1 4.34-.28 0-.18.04-.42.04-.42s4.36.08 4.36.08c0 0 4.36-.1 4.36-.28 0-.18.04-.42.04-.42s4.38.08 4.38.08c0 0 4.38-.1 4.38-.28 0-.18.04-.42.04-.42s4.4.08 4.4.08c0 0 4.4-.1 4.4-.28 0-.18.04-.42.04-.42s4.42.08 4.42.08c0 0 4.42-.1 4.42-.28 0-.18.04-.42.04-.42s4.44.08 4.44.08c0 0 4.44-.1 4.44-.28 0-.18.04-.42.04-.42s4.46.08 4.46.08c0 0 4.46-.1 4.46-.28 0-.18.04-.42.04-.42s4.48.08 4.48.08c0 0 4.48-.1 4.48-.28 0-.18.04-.42.04-.42s4.5.08 4.5.08c0 0 4.5-.1 4.5-.28 0-.18.04-.42.04-.42s4.52.08 4.52.08c0 0 4.52-.1 4.52-.28 0-.18.04-.42.04-.42s4.54.08 4.54.08c0 0 4.54-.1 4.54-.28 0-.18.04-.42.04-.42s4.56.08 4.56.08c0 0 4.56-.1 4.56-.28 0-.18.04-.42.04-.42s4.58.08 4.58.08c0 0 4.58-.1 4.58-.28 0-.18.04-.42.04-.42s4.6.08 4.6.08c0 0 4.6-.1 4.6-.28 0-.18.04-.42.04-.42s4.62.08 4.62.08c0 0 4.62-.1 4.62-.28 0-.18.04-.42.04-.42s4.64.08 4.64.08c0 0 4.64-.1 4.64-.28 0-.18.04-.42.04-.42s4.66.08 4.66.08c0 0 4.66-.1 4.66-.28 0-.18.04-.42.04-.42s4.68.08 4.68.08c0 0 4.68-.1 4.68-.28 0-.18.04-.42.04-.42s4.7.08 4.7.08c0 0 4.7-.1 4.7-.28 0-.18.04-.42.04-.42s4.72.08 4.72.08c0 0 4.72-.1 4.72-.28 0-.18.04-.42.04-.42s4.74.08 4.74.08c0 0 4.74-.1 4.74-.28 0-.18.04-.42.04-.42s4.76.08 4.76.08c0 0 4.76-.1 4.76-.28 0-.18.04-.42.04-.42s4.78.08 4.78.08c0 0 4.78-.1 4.78-.28 0-.18.04-.42.04-.42s4.8.08 4.8.08c0 0 4.8-.1 4.8-.28 0-.18.04-.42.04-.42s4.82.08 4.82.08c0 0 4.82-.1 4.82-.28 0-.18.04-.42.04-.42s4.84.08 4.84.08c0 0 4.84-.1 4.84-.28 0-.18.04-.42.04-.42s4.86.08 4.86.08c0 0 4.86-.1 4.86-.28 0-.18.04-.42.04-.42s4.88.08 4.88.08c0 0 4.88-.1 4.88-.28 0-.18.04-.42.04-.42s4.9.08 4.9.08c0 0 4.9-.1 4.9-.28 0-.18.04-.42.04-.42s4.92.08 4.92.08c0 0 4.92-.1 4.92-.28 0-.18.04-.42.04-.42s4.94.08 4.94.08c0 0 4.94-.1 4.94-.28 0-.18.04-.42.04-.42s4.96.08 4.96.08c0 0 4.96-.1 4.96-.28 0-.18.04-.42.04-.42s4.98.08 4.98.08c0 0 4.98-.1 4.98-.28 0-.18.04-.42.04-.42s5 .08 5 .08c0 0 5-.1 5-.28 0-.18.04-.42.04-.42"/></svg>
-              </div>
-              <h3>WhatsApp & CRM Routing</h3>
-              <p>
-                Automate instant lead notifications directly to your phone or team CRM so you never miss a hot customer inquiry.
-              </p>
-            </div>
-            <div class="service-badge">&lt; 60-Sec Response Setup →</div>
-          </div>
-
-          <!-- 5. Local SEO -->
-          <div class="service-card">
-            <div>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              </div>
-              <h3>Local SEO & Google Maps</h3>
-              <p>
-                Optimize your Google Business Profile and local listings to dominate local search rankings and drive consistent walk-ins.
-              </p>
-            </div>
-            <div class="service-badge">Local Dominance →</div>
-          </div>
-
-          <!-- 6. Analytics & ROI -->
-          <div class="service-card">
-            <div>
-              <div class="service-icon">
-                <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
-              </div>
-              <h3>Analytics & ROI Tracking</h3>
-              <p>
-                Clear, transparent reporting on cost per lead, conversion rate, and return on ad spend (ROAS) across all ad platforms.
-              </p>
-            </div>
-            <div class="service-badge">Data-Driven Growth →</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- JANATA PLAN / AFFORDABLE PRICING -->
-    <section id="janata-plan" style="background: var(--bg-alt);">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Janata Plan</span>
-          <h2 class="section-title">Start Digital Marketing for Just ₹5,000 / Month</h2>
-          <p class="section-desc">
-            Simple, no-frills ads that bring real enquiries to your shop, clinic, or local business. Facebook, Instagram, and weekend blasts — without big agency fees.
-          </p>
-        </div>
-
-        <div style="max-width: 720px; margin: 0 auto; background: #FFFFFF; border: 1px solid var(--border); border-radius: var(--radius); padding: 40px 36px; box-shadow: var(--shadow); text-align: center;">
-          <div style="font-size: 3rem; font-weight: 900; color: var(--primary); letter-spacing: -0.03em; line-height: 1;">₹5,000</div>
-          <div style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 28px; font-weight: 600;">per month • cancel anytime</div>
-
-          <ul style="list-style: none; text-align: left; max-width: 480px; margin: 0 auto 32px; display: flex; flex-direction: column; gap: 14px;">
-            <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 1rem;">
-              <span style="color: #10B981; font-weight: 900; font-size: 1.2rem;">✓</span>
-              <span><strong>Facebook & Instagram Ads</strong> — reach people in your area who need what you sell</span>
-            </li>
-            <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 1rem;">
-              <span style="color: #10B981; font-weight: 900; font-size: 1.2rem;">✓</span>
-              <span><strong>Weekend YouTube + Facebook Blast</strong> — extra push on Saturdays & Sundays when people are free</span>
-            </li>
-            <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 1rem;">
-              <span style="color: #10B981; font-weight: 900; font-size: 1.2rem;">✓</span>
-              <span><strong>Google Ads</strong> — add if you want search visibility (optional)</span>
-            </li>
-            <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 1rem;">
-              <span style="color: #10B981; font-weight: 900; font-size: 1.2rem;">✓</span>
-              <span><strong>YouTube Ads</strong> — available if you want video reach (optional)</span>
-            </li>
-            <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 1rem;">
-              <span style="color: #10B981; font-weight: 900; font-size: 1.2rem;">✓</span>
-              <span>WhatsApp lead delivery + basic monthly report</span>
-            </li>
-          </ul>
-
-          <a href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20want%20to%20start%20the%20%E2%82%B95%2C000%20Janata%20Digital%20Marketing%20Plan." class="btn btn-primary btn-lg" style="margin-bottom: 12px;">
-            Start ₹5,000 Plan on WhatsApp
+        <div class="cta-buttons">
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <span>Chat on WhatsApp</span>
+            <span>&rarr;</span>
           </a>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 12px;">No long contracts. We set up and run the ads. You get the enquiries.</p>
+          <a href="tel:+919092979797" class="btn-call-large">
+            <span>Call Now</span>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- COMPARISON: WHY WORK WITH US -->
-    <section id="comparison" style="background: var(--bg-alt);">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">The Difference</span>
-          <h2 class="section-title">Why Traditional Marketing Fails</h2>
-          <p class="section-desc">
-            Stop wasting budgets on generic boosting. Build a predictable, closed-loop acquisition engine.
-          </p>
-        </div>
-
-        <div class="compare-grid">
-          <div class="compare-card flaws">
-            <h3>❌ The Common Pitfalls</h3>
-            <ul class="compare-list">
-              <li><span class="icon-cross">✕</span> Boosting social media posts without clear conversion tracking or sales funnels.</li>
-              <li><span class="icon-cross">✕</span> Buying shared listing portal leads where 10 other competitors call the same person.</li>
-              <li><span class="icon-cross">✕</span> Sending paid clicks to slow websites filled with distractions and no clear action.</li>
-              <li><span class="icon-cross">✕</span> Delayed customer follow-ups that cause interested buyers to buy elsewhere.</li>
-            </ul>
-          </div>
-          <div class="compare-card solutions">
-            <h3>✓ The CyberAd Engine</h3>
-            <ul class="compare-list">
-              <li><span class="icon-check">✓</span> <strong>100% Exclusive Leads:</strong> Enquiries generated belong solely to your business.</li>
-              <li><span class="icon-check">✓</span> <strong>High-Intent Targeting:</strong> Reaching buyers actively searching with budget ready.</li>
-              <li><span class="icon-check">✓</span> <strong>Custom Conversion Landing Pages:</strong> Laser-focused on inquiries and phone calls.</li>
-              <li><span class="icon-check">✓</span> <strong>Automated WhatsApp Sync:</strong> Immediate notifications to your phone within seconds.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Audience -->
-    <section id="audience">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Target Clientele</span>
-          <h2 class="section-title">Who We Build Growth Systems For</h2>
-          <p class="section-desc">
-            Tailored digital marketing funnels built for businesses that require high-intent leads and direct customer calls.
-          </p>
-        </div>
-
-        <div class="audience-grid">
-          <div class="audience-card">
-            <div class="audience-num">01 / LOCAL BUSINESSES</div>
-            <h4>Retail & Local Stores</h4>
-            <p>Drive foot traffic, local map pack visibility, and seasonal promotion inquiries.</p>
-          </div>
-          <div class="audience-card">
-            <div class="audience-num">02 / HEALTHCARE</div>
-            <h4>Clinics & Doctors</h4>
-            <p>Generate qualified patient appointment bookings and consultation requests.</p>
-          </div>
-          <div class="audience-card">
-            <div class="audience-num">03 / EDUCATION</div>
-            <h4>Schools & Institutes</h4>
-            <p>Fill admission inquiries and seat registrations before batches close.</p>
-          </div>
-          <div class="audience-card">
-            <div class="audience-num">04 / REAL ESTATE</div>
-            <h4>Builders & Developers</h4>
-            <p>Acquire serious property buyers for plotted layouts, apartments, and villas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" style="background: var(--bg-alt);">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">How It Works</span>
-          <h2 class="section-title">Our Simple 4-Step Process</h2>
-          <p class="section-desc">
-            A proven framework that takes your campaigns from setup to consistent daily customer inquiries.
-          </p>
-        </div>
-
-        <div class="process-grid">
-          <div class="process-card">
-            <div class="step-number">1</div>
-            <h4>Market & Audience Audit</h4>
-            <p>We analyze your local market, competitors, and target demographics to identify high-intent buyer keywords.</p>
-          </div>
-          <div class="process-card">
-            <div class="step-number">2</div>
-            <h4>Landing Page & Funnel Setup</h4>
-            <p>We build an ultra-fast, mobile-optimized landing page with direct WhatsApp and call integration.</p>
-          </div>
-          <div class="process-card">
-            <div class="step-number">3</div>
-            <h4>Campaign Launch</h4>
-            <p>We deploy laser-targeted Google Search and Meta ad campaigns with verified conversion tracking.</p>
-          </div>
-          <div class="process-card">
-            <div class="step-number">4</div>
-            <h4>Lead Delivery & Optimization</h4>
-            <p>Inquiries are delivered in real time to your phone/CRM, and campaigns are optimized weekly for lower CPL.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Proof -->
-    <section class="proof-section">
-      <div class="container">
-        <div class="proof-box">
-          <div class="proof-grid">
-            <div class="proof-img-wrap">
-              <img src="/assets/batch-1-graduates.jpg" alt="El Curso Batch 1 graduates at Pondicherry University" />
-            </div>
-            <div>
-              <div class="proof-tag">Track Record & Foundation</div>
-              <h3 class="proof-title">El Curso · Batch 1 at Pondicherry University</h3>
-              <p class="proof-desc">
-                Conducted at the Department of Management Studies, Pondicherry University, in association with ACIC-PUSH. We train, build, and deploy high-performance marketing systems for business owners and students.
-              </p>
-              <div class="proof-links">
-                <a href="/digital-marketing-beginners.html" class="btn btn-outline">View Programme Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Frequently Asked Questions</span>
-          <h2 class="section-title">Answers to Common Questions</h2>
-          <p class="section-desc">
-            Everything you need to know about starting your digital marketing campaign with CyberAd.in.
-          </p>
-        </div>
-
-        <div class="faq-grid">
-          <div class="faq-item">
-            <h4>What is the minimum budget required to start?</h4>
-            <p>We structure custom ad budgets based on your industry and location. Campaigns typically begin from small local tests to scalable multi-channel budgets, ensuring positive ROAS before expanding. The Janata Plan starts at ₹5,000/month.</p>
-          </div>
-          <div class="faq-item">
-            <h4>How soon can we expect inquiries to start coming in?</h4>
-            <p>Once landing pages and tracking APIs are deployed (usually within 3–5 business days), live ad campaigns on Meta and Google start generating inquiries within the first 24 to 48 hours.</p>
-          </div>
-          <div class="faq-item">
-            <h4>Are the leads exclusive to my business?</h4>
-            <p>Yes, 100%. Unlike shared lead portals, all campaigns are run under your brand. Every lead submitted is routed directly and exclusively to your WhatsApp, phone, or CRM.</p>
-          </div>
-          <div class="faq-item">
-            <h4>How do I get in touch to start a campaign?</h4>
-            <p>You can click the WhatsApp button to chat directly with us, or fill out the consultation form below. We will review your requirements and share a tailored strategy.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Ready to Scale Your Inquiries?</h2>
-          <p class="section-desc">
-            Tell us about your business goals and let's map out your custom digital marketing campaign.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-form">
-            <h3 style="margin-bottom: 20px; font-size: 1.15rem;">Request Strategy Consultation</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Fill out the form and our team will get back to you within 2 business hours.</p>
-            <form action="https://formspree.io/f/xpwzgqkj" method="POST">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" required>
-              </div>
-              <div class="form-group">
-                <label for="business">Business / Industry</label>
-                <input type="text" id="business" name="business" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Tell us about your goals</label>
-                <textarea id="message" name="message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Consultation Request</button>
-            </form>
-          </div>
-          <div class="contact-info">
-            <h3>Direct Contact Channels</h3>
-            <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 12px;">Prefer an instant conversation? Reach out directly via WhatsApp or email.</p>
-            <div class="contact-channel">
-              <strong>WhatsApp Hotline</strong>
-              <a href="https://wa.me/918925693013">+91 89256 93013</a>
-            </div>
-            <div class="contact-channel">
-              <strong>Official Email</strong>
-              <a href="mailto:hello@cyberad.in">hello@cyberad.in</a>
-            </div>
-            <div class="contact-channel">
-              <strong>Operating Hours</strong>
-              <span>Mon – Sat: 9:30 AM – 6:30 PM</span>
-            </div>
-            <a href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." class="btn btn-whatsapp" style="margin-top: 16px;">Instant WhatsApp Chat</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Sticky bottom CTA -->
-  <div class="sticky-bottom">
-    <a href="https://wa.me/918925693013?text=Hello%20CyberAd%2C%20I%20am%20interested%20in%20digital%20marketing%20services%20for%20my%20business." class="btn btn-whatsapp">Chat on WhatsApp</a>
-  </div>
-
+  <!-- FOOTER -->
   <footer>
     <div class="container">
-      <div class="footer-links">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/english-class.html">English Classes</a>
-        <a href="mailto:hello@cyberad.in">hello@cyberad.in</a>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" />
+          <div class="footer-brand-title">CyberAd.in &bull; Spoken English Programme</div>
+        </div>
+        <div class="footer-links">
+          <a href="#top">Top</a>
+          <a href="https://cyberad.in">CyberAd Main Site</a>
+          <a href="https://cyberad.in/privacy">Privacy Policy</a>
+        </div>
       </div>
-      <div class="footer-copy">&copy; 2026 CyberAd.in • Digital Marketing & Innovation</div>
+      <div class="footer-copy">
+        <div>GSTIN: 33APPPC7049M1ZI &bull; UDYAM: TN-04-0115585</div>
+        <div>&copy; 2026 CyberAd.in (Cyber Enterprises). All rights reserved.</div>
+      </div>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('a[href*="wa.me"], a[href^="tel:"]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'generate_lead', {
+            event_category: 'engagement',
+            event_label: link.href
+          });
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
