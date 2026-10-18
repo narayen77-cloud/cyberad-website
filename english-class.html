@@ -38,7 +38,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Speak English with Confidence — Live Classes In Person & Online | CyberAd.in</title>
-  <meta name="description" content="Practical spoken English — more speaking, less theory. Live classes in person at Kondur, Cuddalore or live online. Start with a 10-minute level assessment call. WhatsApp / Call +91 89256 93013.">
+  <meta name="description" content="Practical spoken English — more speaking, less theory. Live classes in person at Kondur, Cuddalore or live online. Start with a 10-minute speaking assessment. WhatsApp +91 89256 93013.">
   <link rel="canonical" href="https://cyberad.in/">
   <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
   <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
@@ -967,6 +967,7 @@
     }
 
     /* FINAL BOOKING & CONTACT CARD */
+    /* FINAL BOOKING, WEB3FORMS & CONTACT CARD */
     .final-cta-section {
       padding: 72px 0;
       background: var(--slate-50);
@@ -977,12 +978,12 @@
       border-radius: var(--radius-xl);
       padding: 44px;
       display: grid;
-      grid-template-columns: 1.35fr 0.65fr;
+      grid-template-columns: 1.15fr 0.95fr;
       gap: 36px;
-      align-items: center;
+      align-items: start;
       box-shadow: var(--shadow-lg);
     }
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .final-cta-card {
         grid-template-columns: 1fr;
         padding: 32px 24px;
@@ -1043,24 +1044,128 @@
     }
 
     .flyer-preview-box {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: var(--radius-lg);
       padding: 14px;
-      text-align: center;
-      color: var(--royal-900);
-      box-shadow: 0 12px 32px rgba(4, 16, 40, 0.28);
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
     .flyer-preview-box img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
       display: block;
-      margin-bottom: 10px;
+      flex-shrink: 0;
     }
-    .flyer-preview-box span {
-      font-size: 0.82rem;
+    .flyer-preview-box div {
+      font-size: 0.86rem;
+      color: #E2E8F0;
+      line-height: 1.45;
+    }
+    .flyer-preview-box strong {
+      color: #FFFFFF;
+      display: block;
+      font-size: 0.94rem;
+      margin-bottom: 4px;
+    }
+
+    /* WEB3FORMS CONTACT FORM CARD */
+    .enquiry-form-card {
+      background: #FFFFFF;
+      color: var(--slate-800);
+      border-radius: var(--radius-lg);
+      padding: 28px 26px;
+      box-shadow: 0 14px 36px rgba(4, 16, 40, 0.28);
+    }
+    .enquiry-form-card h3 {
+      font-size: 1.28rem;
       font-weight: 800;
-      color: var(--royal-800);
+      color: var(--royal-900);
+      margin-bottom: 4px;
+    }
+    .enquiry-form-card p.form-sub {
+      font-size: 0.88rem;
+      color: var(--slate-500);
+      margin-bottom: 18px;
+    }
+    .form-field {
+      margin-bottom: 14px;
+    }
+    .form-field label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--royal-900);
+      margin-bottom: 5px;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--slate-200);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.94rem;
+      color: var(--slate-800);
+      background: var(--slate-50);
+      transition: all 0.15s ease;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--royal-500);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(29, 104, 240, 0.12);
+    }
+    .form-field textarea {
+      min-height: 84px;
+      resize: vertical;
+    }
+    .btn-submit-form {
+      width: 100%;
+      background: var(--royal-600);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 14px 20px;
+      font-family: inherit;
+      font-size: 0.98rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      box-shadow: 0 6px 18px rgba(21, 84, 198, 0.28);
+    }
+    .btn-submit-form:hover {
+      background: var(--royal-700);
+      transform: translateY(-1px);
+    }
+    .btn-submit-form:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .enquiry-success-box {
+      display: none;
+      background: #ECFDF5;
+      border: 1.5px solid #A7F3D0;
+      color: #065F46;
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+    }
+    .enquiry-success-box h4 {
+      font-size: 1.12rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .enquiry-success-box p {
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     /* FOOTER */
@@ -1127,7 +1232,7 @@
   <div class="top-announcement">
     <strong>Spoken English Classes by Cyber Enterprises:</strong>
     <span class="highlight">Live Classes — Join In Person (Kondur, Cuddalore) or Online</span>
-    &bull; Start with a 10-Min Level Assessment Call
+    &bull; Start with a 10-Min Level Assessment
   </div>
 
   <!-- HEADER -->
@@ -1147,14 +1252,11 @@
           <a href="#how-it-works">How Class Works</a>
           <a href="#course-plan">12-Week Plan</a>
           <a href="#timings">Batch Timings</a>
-          <a href="#contact">Assessment Call</a>
+          <a href="#contact">Enquire Now</a>
         </nav>
 
         <div class="header-cta-group">
-          <a href="tel:+918925693013" class="header-call-btn">
-            <span>Call Us</span>
-          </a>
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20call%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
             <span>WhatsApp</span>
             <span>&rarr;</span>
           </a>
@@ -1197,12 +1299,12 @@
           </div>
 
           <div class="cta-buttons">
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20call%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
               <span>Book 10-Min Assessment on WhatsApp</span>
               <span>&rarr;</span>
             </a>
-            <a href="tel:+918925693013" class="btn-call-large">
-              <span>Call +91 89256 93013</span>
+            <a href="#contact" class="btn-call-large">
+              <span>Submit Enquiry Form</span>
             </a>
           </div>
         </div>
@@ -1303,8 +1405,8 @@
           </div>
         </div>
         <div>
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20call." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-            <span>Book Assessment Call</span>
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <span>WhatsApp for Assessment</span>
             <span>&rarr;</span>
           </a>
         </div>
@@ -1366,7 +1468,7 @@
               <div class="who-icon">&#128188;</div>
               <div>
                 <h4>Professionals</h4>
-                <p>Meetings &amp; calls</p>
+                <p>Meetings &amp; workplace communication</p>
               </div>
             </div>
             <div class="who-card">
@@ -1432,7 +1534,7 @@
         <div class="week-card">
           <span class="week-pill">Weeks 3&ndash;4</span>
           <h3>Everyday conversations</h3>
-          <p>Shopping, asking directions, phone calls and friendly small talk.</p>
+          <p>Shopping, asking directions, workplace conversations and friendly small talk.</p>
         </div>
 
         <div class="week-card">
@@ -1525,7 +1627,7 @@
         </div>
         <div class="outcome-card">
           <div class="outcome-check">&#10003;</div>
-          <p><strong>Handle daily situations</strong> &ndash; shops, banks, calls.</p>
+          <p><strong>Handle daily situations</strong> &ndash; shops, banks, everyday conversations.</p>
         </div>
         <div class="outcome-card">
           <div class="outcome-check">&#10003;</div>
@@ -1548,11 +1650,12 @@
     </div>
   </section>
 
-  <!-- FINAL CONTACT & BOOKING SECTION -->
+  <!-- FINAL CONTACT, WHATSAPP & WEB3FORMS ENQUIRY SECTION -->
   <section class="final-cta-section" id="contact">
     <div class="container">
       <div class="final-cta-card">
 
+        <!-- Left Column: WhatsApp & Centre Info -->
         <div>
           <div class="final-brand-row">
             <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" />
@@ -1561,23 +1664,20 @@
 
           <h2>Book your 10-minute speaking assessment today</h2>
           <p class="final-sub">
-            A quick 10-minute conversation to assess your current level and find the right batch fit. WhatsApp us for fees and the next batch date.
+            A quick 10-minute conversation to assess your current level and find the right batch fit. Message us on WhatsApp or submit the form for fees and the next batch date.
           </p>
 
           <div class="final-phone-highlight">
-            WhatsApp / Call: +91 89256 93013
+            WhatsApp: +91 89256 93013
           </div>
           <div class="final-phone-note">
-            One number for everything &ndash; WhatsApp us, even to speak with the trainer.
+            WhatsApp us anytime &ndash; even to schedule your 10-minute assessment with the trainer.
           </div>
 
           <div class="cta-buttons">
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20call%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
               <span>Chat on WhatsApp</span>
               <span>&rarr;</span>
-            </a>
-            <a href="tel:+918925693013" class="btn-call-large">
-              <span>Call +91 89256 93013</span>
             </a>
           </div>
 
@@ -1585,11 +1685,54 @@
             <div>&#128100; <strong>Trainer:</strong> Lakshmi Narayanan &nbsp;&bull;&nbsp; &#127760; <strong>cyberad.in</strong></div>
             <div>&#128205; <strong>Centre Address:</strong> 19 Third Street, Aditya Nagar, Kondur, Cuddalore 607006</div>
           </div>
+
+          <div class="flyer-preview-box">
+            <img src="/assets/spoken-english-flyer.png" alt="Scan QR Code to WhatsApp CyberAd Spoken English Classes" />
+            <div>
+              <strong>Official Course Flyer &amp; WhatsApp QR</strong>
+              Scan the QR code or click the WhatsApp button above to message us directly at +91 89256 93013.
+            </div>
+          </div>
         </div>
 
-        <div class="flyer-preview-box">
-          <img src="/assets/spoken-english-flyer.png" alt="Scan QR Code to WhatsApp CyberAd Spoken English Classes" />
-          <span>Scan QR Code or Click to WhatsApp Us</span>
+        <!-- Right Column: Web3Forms Contact Form -->
+        <div class="enquiry-form-card">
+          <h3>Send an Enquiry</h3>
+          <p class="form-sub">Fill in your details below and we will reach out to you on WhatsApp.</p>
+
+          <form id="cyberad-contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="07031dc1-f48b-40ea-909d-a5aeffee8b95">
+            <input type="hidden" name="subject" value="New Spoken English Enquiry — CyberAd.in">
+            <input type="hidden" name="from_name" value="CyberAD Contact form">
+
+            <div class="form-field">
+              <label for="form-name">Your Name *</label>
+              <input type="text" id="form-name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="form-phone">WhatsApp Number *</label>
+              <input type="tel" id="form-phone" name="phone" placeholder="e.g. +91 98765 43210" required>
+            </div>
+
+            <div class="form-field">
+              <label for="form-email">Email Address *</label>
+              <input type="email" id="form-email" name="email" placeholder="yourname@example.com" required>
+            </div>
+
+            <div class="form-field">
+              <label for="form-message">Preferred Mode / Batch &amp; Message *</label>
+              <textarea id="form-message" name="message" placeholder="Let us know if you prefer In-person (Kondur) or Live Online classes, and your preferred timing..." required></textarea>
+            </div>
+
+            <button type="submit" id="form-submit-btn" class="btn-submit-form">Submit Form &rarr;</button>
+            <div id="form-error-msg" style="display:none; margin-top:12px; padding:10px 12px; border-radius:8px; background:#FEF2F2; border:1px solid #FECACA; color:#991B1B; font-size:0.86rem;"></div>
+          </form>
+
+          <div id="form-success-box" class="enquiry-success-box">
+            <h4>&#10003; Thank you! Your enquiry has been received.</h4>
+            <p>We have received your details and will connect with you on WhatsApp shortly to schedule your 10-minute speaking assessment.</p>
+          </div>
         </div>
 
       </div>
@@ -1613,14 +1756,63 @@
         </div>
       </div>
       <div class="footer-copy">
-        <div>19 Third Street, Aditya Nagar, Kondur, Cuddalore 607006 &bull; WhatsApp / Call: +91 89256 93013</div>
+        <div>19 Third Street, Aditya Nagar, Kondur, Cuddalore 607006 &bull; WhatsApp: +91 89256 93013</div>
         <div>&copy; 2026 CyberAd.in (Cyber Enterprises). All rights reserved.</div>
       </div>
     </div>
   </footer>
 
   <script>
-    document.querySelectorAll('a[href*="wa.me"], a[href^="tel:"]').forEach(link => {
+    const contactForm = document.getElementById('cyberad-contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('form-submit-btn');
+        const errorMsg = document.getElementById('form-error-msg');
+        const successBox = document.getElementById('form-success-box');
+        const originalBtnText = submitBtn.innerHTML;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+        errorMsg.style.display = 'none';
+
+        try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+          });
+          const result = await response.json();
+          if (result.success) {
+            contactForm.reset();
+            contactForm.style.display = 'none';
+            if (successBox) {
+              successBox.style.display = 'block';
+            }
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'generate_lead', {
+                event_category: 'form',
+                event_label: 'cyberad_contact_form'
+              });
+            }
+            if (typeof window.fbq === 'function') {
+              window.fbq('track', 'Lead');
+            }
+          } else {
+            errorMsg.textContent = result.message || 'Something went wrong. Please message us on WhatsApp at +91 89256 93013.';
+            errorMsg.style.display = 'block';
+          }
+        } catch (err) {
+          errorMsg.textContent = 'Unable to submit right now. Please message us on WhatsApp at +91 89256 93013.';
+          errorMsg.style.display = 'block';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnText;
+        }
+      });
+    }
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
       link.addEventListener('click', () => {
         if (typeof window.gtag === 'function') {
           window.gtag('event', 'generate_lead', {
