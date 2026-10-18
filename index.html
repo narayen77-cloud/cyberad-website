@@ -37,9 +37,9 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Speak English with Confidence — Next Batch Starts 20 October | CyberAd.in</title>
-  <meta name="description" content="Join our Spoken English programme to learn and speak English confidently. Next batch starts on 20 October with hybrid classes available (online + offline). WhatsApp 8925693013 or Call 9092979797.">
-  <link rel="canonical" href="https://cyberad.in/english_class/">
+  <title>Speak English with Confidence — Live Classes In Person & Online | CyberAd.in</title>
+  <meta name="description" content="Practical spoken English — more speaking, less theory. Live classes in person at Kondur, Cuddalore or live online. Start with a free 10-minute speaking chat. WhatsApp / Call +91 89256 93013.">
+  <link rel="canonical" href="https://cyberad.in/">
   <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
   <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
 
@@ -50,15 +50,17 @@
 
   <style>
     :root {
-      --navy-950: #040B16;
-      --navy-900: #08182E;
-      --navy-850: #0D2342;
-      --navy-800: #13315C;
-      --electric: #0066FF;
-      --electric-hover: #0052CC;
-      --electric-light: #38B6FF;
-      --electric-soft: #EFF6FF;
-      --electric-border: #BFDBFE;
+      --royal-950: #041028;
+      --royal-900: #071B42;
+      --royal-800: #0B2B6A;
+      --royal-700: #0E3B91;
+      --royal-600: #1554C6;
+      --royal-500: #1D68F0;
+      --royal-400: #4A8CFF;
+      --royal-300: #93BDFF;
+      --royal-100: #E0ECFF;
+      --royal-50: #F0F6FF;
+      --slate-900: #0F172A;
       --slate-800: #1E293B;
       --slate-700: #334155;
       --slate-600: #475569;
@@ -69,14 +71,15 @@
       --slate-100: #F1F5F9;
       --slate-50: #F8FAFC;
       --white: #FFFFFF;
-      --emerald-light: #A7F3D0;
       --whatsapp: #25D366;
       --whatsapp-hover: #1EBE5B;
       --radius-sm: 10px;
       --radius-md: 14px;
       --radius-lg: 20px;
-      --shadow-sm: 0 2px 10px rgba(8, 24, 46, 0.06);
-      --shadow-md: 0 12px 32px rgba(8, 24, 46, 0.1);
+      --radius-xl: 26px;
+      --shadow-sm: 0 2px 10px rgba(7, 27, 66, 0.05);
+      --shadow-md: 0 12px 32px rgba(7, 27, 66, 0.09);
+      --shadow-lg: 0 20px 48px rgba(4, 16, 40, 0.18);
     }
 
     * {
@@ -93,18 +96,18 @@
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: var(--slate-700);
-      background-color: var(--slate-50);
-      line-height: 1.65;
+      background-color: var(--white);
+      line-height: 1.6;
       font-size: 16px;
     }
 
     a {
       text-decoration: none;
-      transition: all 0.15s ease;
+      transition: all 0.18s ease;
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -117,19 +120,19 @@
 
     /* TOP BAR */
     .top-announcement {
-      background: var(--navy-950);
-      color: var(--slate-300);
-      font-size: 0.85rem;
+      background: var(--royal-950);
+      color: #CBD5E1;
+      font-size: 0.84rem;
       padding: 10px 16px;
       text-align: center;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .top-announcement strong {
       color: #FFFFFF;
       font-weight: 700;
     }
     .top-announcement .highlight {
-      color: var(--electric-light);
+      color: var(--royal-300);
       font-weight: 700;
     }
 
@@ -141,13 +144,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 2px 12px rgba(8, 24, 46, 0.04);
+      box-shadow: 0 2px 12px rgba(7, 27, 66, 0.04);
     }
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 74px;
+      height: 76px;
       gap: 16px;
     }
     .brand-logo {
@@ -156,29 +159,43 @@
       gap: 12px;
     }
     .brand-logo-img {
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       object-fit: cover;
-      border: 1.5px solid var(--slate-200);
+      border: 2px solid var(--royal-100);
       background: #FFFFFF;
     }
     .brand-name {
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       font-weight: 900;
-      color: var(--navy-900);
+      color: var(--royal-900);
       letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-    .brand-name span {
-      color: var(--electric);
+      line-height: 1.15;
     }
     .brand-sub {
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--slate-500);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      margin-top: 2px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--slate-600);
+    }
+    .nav-links a:hover {
+      color: var(--royal-600);
+    }
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
     }
     .header-cta-group {
       display: flex;
@@ -191,11 +208,11 @@
       gap: 8px;
       background: var(--whatsapp);
       color: #052E16;
-      padding: 10px 16px;
+      padding: 10px 18px;
       border-radius: var(--radius-sm);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 800;
-      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.25);
+      box-shadow: 0 2px 10px rgba(37, 211, 102, 0.28);
     }
     .header-wa-btn:hover {
       background: var(--whatsapp-hover);
@@ -205,17 +222,17 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--navy-900);
+      background: var(--royal-800);
       color: #FFFFFF;
       padding: 10px 16px;
       border-radius: var(--radius-sm);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
       font-weight: 700;
     }
     .header-call-btn:hover {
-      background: var(--navy-800);
+      background: var(--royal-700);
     }
-    @media (max-width: 560px) {
+    @media (max-width: 580px) {
       .brand-sub {
         display: none;
       }
@@ -223,17 +240,40 @@
         display: none;
       }
       .header-wa-btn {
-        padding: 9px 13px;
+        padding: 9px 14px;
         font-size: 0.8rem;
       }
     }
 
-    /* HERO */
+    /* HERO SECTION — MATCHING BROCHURE & FLYER ROYAL BLUE */
     .hero {
-      background: radial-gradient(circle at 30% 0%, #13315C 0%, var(--navy-900) 65%, var(--navy-950) 100%);
+      background: linear-gradient(135deg, #072257 0%, #0C3688 55%, #134DC2 100%);
       color: #FFFFFF;
-      padding: 64px 0 72px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 68px 0 76px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      left: -100px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: rgba(29, 104, 240, 0.25);
+      pointer-events: none;
     }
     @media (max-width: 640px) {
       .hero {
@@ -242,182 +282,97 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.9fr;
+      grid-template-columns: 1.25fr 0.85fr;
       gap: 44px;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
-    @media (max-width: 880px) {
+    @media (max-width: 900px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
-        text-align: center;
+        gap: 36px;
       }
     }
-    .hero-content {
-      text-align: left;
-    }
-    @media (max-width: 880px) {
-      .hero-content {
-        text-align: center;
-      }
-    }
-    .hero-pill {
+
+    /* SPEECH BUBBLES BADGE */
+    .speech-bubbles-row {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(0, 102, 255, 0.2);
-      border: 1px solid rgba(56, 182, 255, 0.45);
-      padding: 8px 18px;
-      border-radius: 999px;
+      gap: 12px;
       margin-bottom: 20px;
+      flex-wrap: wrap;
     }
-    .hero-pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--emerald-light);
-      box-shadow: 0 0 0 4px rgba(167, 243, 208, 0.22);
-      flex-shrink: 0;
-    }
-    .hero-pill span {
-      font-size: 0.82rem;
-      font-weight: 800;
-      color: #FFFFFF;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    .hero h1 {
-      font-size: clamp(2.15rem, 4.4vw, 3.3rem);
+    .bubble-hello {
+      background: #FFFFFF;
+      color: var(--royal-800);
       font-weight: 900;
-      line-height: 1.15;
+      font-size: 1rem;
+      padding: 8px 18px;
+      border-radius: 14px 14px 14px 3px;
+      box-shadow: 0 6px 20px rgba(4, 16, 40, 0.22);
+    }
+    .bubble-hi {
+      background: var(--royal-500);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 8px 18px;
+      border-radius: 14px 14px 3px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 6px 20px rgba(4, 16, 40, 0.18);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.7rem);
+      font-weight: 900;
+      line-height: 1.08;
       letter-spacing: -0.03em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: #FFFFFF;
     }
-    .hero-lead {
-      font-size: clamp(1.04rem, 1.8vw, 1.18rem);
-      color: #E2E8F0;
-      margin: 0 0 26px;
-      line-height: 1.62;
-      font-weight: 400;
-    }
-
-    /* KEY INFO CARD IN HERO */
-    .batch-info-box {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin: 0 0 26px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: var(--radius-lg);
-      padding: 18px 20px;
-      backdrop-filter: blur(10px);
-    }
-    @media (max-width: 520px) {
-      .batch-info-box {
-        grid-template-columns: 1fr;
-        padding: 16px;
-      }
-    }
-    .info-tile {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md);
-      padding: 14px;
-      text-align: center;
-    }
-    .info-label {
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--electric-light);
-      font-weight: 800;
-      margin-bottom: 4px;
-    }
-    .info-value {
-      font-size: 1.16rem;
-      font-weight: 800;
-      color: #FFFFFF;
-    }
-    .info-sub {
-      font-size: 0.82rem;
-      color: var(--slate-300);
-      margin-top: 2px;
-    }
-
-    /* HERO IMAGE CARD */
-    .hero-visual {
-      position: relative;
-      max-width: 420px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .hero-image-frame {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 2px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 24px 52px rgba(4, 11, 22, 0.55);
-      background: var(--navy-950);
-    }
-    .hero-image-frame img {
-      width: 100%;
-      height: 460px;
-      object-fit: cover;
+    .hero h1 span {
+      color: var(--royal-300);
       display: block;
     }
-    @media (max-width: 640px) {
-      .hero-image-frame img {
-        height: 360px;
-      }
+    .hero-subtitle {
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
     }
-    .hero-image-caption {
-      position: absolute;
-      bottom: 14px;
-      left: 14px;
-      right: 14px;
-      background: rgba(4, 11, 22, 0.86);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: var(--radius-md);
-      padding: 12px 16px;
+    .hero-lead {
+      font-size: clamp(1rem, 1.7vw, 1.12rem);
+      color: #E0ECFF;
+      margin-bottom: 24px;
+      max-width: 620px;
+      line-height: 1.62;
+    }
+
+    /* PILL TAGS IN HERO */
+    .hero-tags {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-wrap: wrap;
       gap: 10px;
-      font-size: 0.82rem;
-      color: #E2E8F0;
-      font-weight: 600;
+      margin-bottom: 30px;
     }
-    .hero-image-caption strong {
-      color: var(--emerald-light);
-      font-weight: 800;
+    .hero-tag {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(147, 189, 255, 0.45);
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 15px;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
     }
 
     /* CTA BUTTONS */
-    .cta-note {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #E2E8F0;
-      margin-bottom: 16px;
-    }
-    .cta-note strong {
-      color: #FFFFFF;
-    }
     .cta-buttons {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 14px;
-    }
-    .hero-content .cta-buttons {
-      justify-content: flex-start;
-    }
-    @media (max-width: 880px) {
-      .hero-content .cta-buttons {
-        justify-content: center;
-      }
+      align-items: center;
     }
     .btn-wa-large {
       display: inline-flex;
@@ -430,7 +385,7 @@
       font-weight: 800;
       padding: 15px 26px;
       border-radius: var(--radius-sm);
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.32);
     }
     .btn-wa-large:hover {
       background: var(--whatsapp-hover);
@@ -441,16 +396,16 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: var(--electric);
-      color: #FFFFFF;
+      background: #FFFFFF;
+      color: var(--royal-900);
       font-size: 1.02rem;
       font-weight: 800;
-      padding: 15px 26px;
+      padding: 15px 24px;
       border-radius: var(--radius-sm);
-      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+      box-shadow: 0 8px 24px rgba(4, 16, 40, 0.2);
     }
     .btn-call-large:hover {
-      background: var(--electric-hover);
+      background: var(--royal-50);
       transform: translateY(-2px);
     }
     @media (max-width: 520px) {
@@ -459,169 +414,652 @@
       }
     }
 
-    /* SIMPLE HIGHLIGHTS SECTION */
-    .highlights-section {
-      padding: 64px 0;
-      background: var(--white);
+    /* HERO FLYER CARD */
+    .hero-flyer-wrap {
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-flyer-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.24);
+      border-radius: var(--radius-xl);
+      padding: 12px;
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(10px);
+    }
+    .hero-flyer-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* SECTION HEADINGS */
+    .section {
+      padding: 72px 0;
       border-bottom: 1px solid var(--slate-200);
     }
+    .section-alt {
+      background: var(--slate-50);
+    }
     @media (max-width: 640px) {
-      .highlights-section {
-        padding: 48px 0;
+      .section {
+        padding: 52px 0;
       }
     }
-    .section-heading {
-      text-align: center;
-      max-width: 660px;
-      margin: 0 auto 40px;
+    .section-title-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
     }
-    .section-eyebrow {
+    .section-accent-pill {
+      width: 6px;
+      height: 28px;
+      background: var(--royal-500);
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+    .section-title-bar h2 {
+      font-size: clamp(1.55rem, 3vw, 2.05rem);
+      font-weight: 800;
+      color: var(--royal-900);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    /* TWO EASY WAYS TO JOIN */
+    .ways-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 780px) {
+      .ways-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .way-card {
+      background: var(--white);
+      border: 1.5px solid var(--slate-200);
+      border-top: 5px solid var(--royal-500);
+      border-radius: var(--radius-lg);
+      padding: 30px 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .way-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .way-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--royal-50);
+      color: var(--royal-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .way-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--royal-900);
+    }
+    .way-sub {
+      font-size: 0.92rem;
+      color: var(--slate-500);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .way-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .way-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.98rem;
+      color: var(--slate-700);
+      line-height: 1.5;
+    }
+    .way-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--royal-500);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      background: var(--royal-50);
+      border: 1px solid var(--royal-100);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .trust-item {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--royal-900);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .trust-item span {
+      color: var(--royal-500);
+      font-weight: 900;
+    }
+
+    /* 10 MINUTES FREE SPEAKING CHAT BANNER */
+    .free-chat-box {
+      background: linear-gradient(135deg, #F0F6FF 0%, #E5EFFF 100%);
+      border: 1.5px solid #BFDBFE;
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 28px;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 860px) {
+      .free-chat-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 26px 20px;
+        gap: 20px;
+      }
+    }
+    .ten-min-circle {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      background: var(--royal-500);
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(29, 104, 240, 0.3);
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+    .ten-min-num {
+      font-size: 2.1rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .ten-min-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 3px;
+      line-height: 1.15;
+    }
+    .free-chat-content h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--royal-800);
+      margin-bottom: 8px;
+    }
+    .free-chat-content p {
+      font-size: 0.98rem;
+      color: var(--slate-700);
+      margin-bottom: 14px;
+      max-width: 640px;
+    }
+    .level-pills {
+      display: inline-flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .level-pill-light {
+      background: #93BDFF;
+      color: var(--royal-950);
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 999px;
+    }
+    .level-pill-dark {
+      background: var(--royal-600);
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 5px 16px;
+      border-radius: 999px;
+    }
+
+    /* HOW EACH CLASS WORKS & WHO IT'S FOR */
+    .split-two-col {
+      display: grid;
+      grid-template-columns: 1.08fr 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+    @media (max-width: 880px) {
+      .split-two-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .step-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .step-badge {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--royal-600);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text {
+      font-size: 0.96rem;
+      color: var(--slate-700);
+    }
+    .step-text strong {
+      color: var(--royal-900);
+      font-weight: 800;
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 480px) {
+      .who-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .who-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .who-card.full-span {
+      grid-column: 1 / -1;
+    }
+    .who-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--royal-100);
+      color: var(--royal-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+    .who-card h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--royal-900);
+      margin-bottom: 2px;
+    }
+    .who-card p {
+      font-size: 0.86rem;
+      color: var(--slate-600);
+    }
+
+    /* 12-WEEK SPEAKING JOURNEY */
+    .journey-banner {
+      background: linear-gradient(135deg, var(--royal-900) 0%, var(--royal-700) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 32px 36px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-md);
+    }
+    @media (max-width: 640px) {
+      .journey-banner {
+        padding: 24px 20px;
+      }
+    }
+    .journey-banner h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.3rem);
+      font-weight: 900;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+    }
+    .journey-banner p {
+      color: var(--royal-300);
+      font-size: 0.98rem;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .journey-stats {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .stat-box {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-md);
+      padding: 12px 20px;
+      text-align: center;
+      min-width: 110px;
+    }
+    .stat-num {
+      font-size: 1.55rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.76rem;
+      color: var(--royal-100);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .weeks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 880px) {
+      .weeks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 560px) {
+      .weeks-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .week-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .week-card.highlight-card {
+      background: var(--royal-50);
+      border-color: #BFDBFE;
+    }
+    .week-pill {
       display: inline-block;
+      background: var(--royal-600);
+      color: #FFFFFF;
       font-size: 0.75rem;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--electric);
-      background: var(--electric-soft);
-      border: 1px solid var(--electric-border);
       padding: 4px 12px;
       border-radius: 999px;
       margin-bottom: 12px;
     }
-    .section-heading h2 {
-      font-size: clamp(1.65rem, 3vw, 2.15rem);
+    .week-card h3 {
+      font-size: 1.12rem;
       font-weight: 800;
-      color: var(--navy-900);
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
-      line-height: 1.25;
+      color: var(--royal-900);
+      margin-bottom: 8px;
     }
-    .section-heading p {
-      font-size: 1rem;
-      color: var(--slate-600);
-    }
-
-    .about-split-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 32px;
-      align-items: stretch;
-    }
-    @media (max-width: 860px) {
-      .about-split-grid {
-        grid-template-columns: 1fr;
-        max-width: 560px;
-        margin: 0 auto;
-      }
-    }
-    .about-image-card {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--slate-200);
-      box-shadow: var(--shadow-md);
-      background: var(--navy-900);
-      min-height: 340px;
-    }
-    .about-image-card img {
-      width: 100%;
-      height: 100%;
-      min-height: 340px;
-      object-fit: cover;
-      object-position: center;
-      display: block;
-    }
-    .about-image-badge {
-      position: absolute;
-      bottom: 16px;
-      left: 16px;
-      right: 16px;
-      background: rgba(8, 24, 46, 0.92);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: var(--radius-md);
-      padding: 14px 18px;
-      color: #FFFFFF;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.86rem;
-      font-weight: 600;
-    }
-    .about-image-badge span {
-      color: var(--emerald-light);
-      font-weight: 800;
-    }
-    .cards-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      justify-content: space-between;
-    }
-    .feature-card {
-      background: var(--slate-50);
-      border: 1px solid var(--slate-200);
-      border-left: 4px solid var(--electric);
-      border-radius: var(--radius-md);
-      padding: 22px 24px;
-      box-shadow: var(--shadow-sm);
-    }
-    .feature-card h3 {
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: var(--navy-900);
-      margin-bottom: 6px;
-    }
-    .feature-card p {
+    .week-card p {
       font-size: 0.92rem;
       color: var(--slate-600);
-      line-height: 1.58;
+      line-height: 1.55;
     }
 
-    /* CONTACT BANNER */
-    .contact-banner {
-      padding: 64px 0;
-      background: var(--slate-50);
-      text-align: center;
-    }
-    .contact-card {
-      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
-      color: #FFFFFF;
+    /* IN-PERSON BATCHES SCHEDULE TABLE */
+    .schedule-table-wrap {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
       border-radius: var(--radius-lg);
-      padding: 44px 32px;
-      max-width: 720px;
-      margin: 0 auto;
-      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+    }
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--slate-200);
+      align-items: center;
+      gap: 16px;
+    }
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+    .schedule-row.header-row {
+      background: var(--royal-50);
+      font-weight: 800;
+      color: var(--royal-800);
+      font-size: 0.9rem;
     }
     @media (max-width: 640px) {
-      .contact-card {
-        padding: 32px 20px;
+      .schedule-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 14px 18px;
+      }
+      .schedule-row.header-row {
+        display: none;
       }
     }
-    .contact-card h2 {
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
+    .schedule-time {
       font-weight: 800;
-      margin-bottom: 10px;
+      color: var(--royal-900);
+      font-size: 0.98rem;
+    }
+    .schedule-for {
+      color: var(--slate-700);
+      font-size: 0.95rem;
+    }
+
+    .online-timing-notice {
+      background: var(--royal-50);
+      border: 1.5px solid #BFDBFE;
+      border-radius: var(--radius-md);
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.95rem;
+      color: var(--slate-800);
+    }
+    .online-timing-notice strong {
+      color: var(--royal-900);
+    }
+
+    /* WHAT YOU'LL BE ABLE TO DO */
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 880px) {
+      .outcomes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 560px) {
+      .outcomes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .outcome-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .outcome-check {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--royal-50);
+      color: var(--royal-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .outcome-card p {
+      font-size: 0.94rem;
+      color: var(--slate-700);
+      line-height: 1.5;
+    }
+    .outcome-card strong {
+      color: var(--royal-900);
+    }
+
+    /* FINAL BOOKING & CONTACT CARD */
+    .final-cta-section {
+      padding: 72px 0;
+      background: var(--slate-50);
+    }
+    .final-cta-card {
+      background: linear-gradient(135deg, #072257 0%, #0E3B91 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 44px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 36px;
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+    }
+    @media (max-width: 860px) {
+      .final-cta-card {
+        grid-template-columns: 1fr;
+        padding: 32px 24px;
+      }
+    }
+    .final-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .final-brand-row img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      padding: 2px;
+    }
+    .final-brand-row span {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--royal-100);
+    }
+    .final-cta-card h2 {
+      font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+      font-weight: 900;
+      margin-bottom: 8px;
       color: #FFFFFF;
     }
-    .contact-card p {
+    .final-sub {
       font-size: 1.02rem;
-      color: var(--slate-300);
-      max-width: 540px;
-      margin: 0 auto 24px;
+      color: var(--royal-100);
+      margin-bottom: 22px;
     }
-    .contact-phone-display {
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    .final-phone-highlight {
+      font-size: clamp(1.3rem, 2.6vw, 1.65rem);
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .final-phone-note {
+      font-size: 0.88rem;
+      color: var(--royal-300);
+      margin-bottom: 22px;
+    }
+    .trainer-meta {
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      padding-top: 18px;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: #E2E8F0;
+    }
+    .trainer-meta strong {
+      color: #FFFFFF;
+    }
+
+    .flyer-preview-box {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 14px;
+      text-align: center;
+      color: var(--royal-900);
+      box-shadow: 0 12px 32px rgba(4, 16, 40, 0.28);
+    }
+    .flyer-preview-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .flyer-preview-box span {
+      font-size: 0.82rem;
       font-weight: 800;
-      color: var(--emerald-light);
-      letter-spacing: 0.01em;
-      margin-bottom: 24px;
+      color: var(--royal-800);
     }
 
     /* FOOTER */
     footer {
-      background: var(--navy-950);
+      background: var(--royal-950);
       color: var(--slate-400);
       font-size: 0.85rem;
       padding: 36px 0;
@@ -649,7 +1087,7 @@
     .footer-brand-title {
       font-weight: 800;
       color: #FFFFFF;
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
     .footer-links {
       display: flex;
@@ -681,9 +1119,9 @@
 
   <!-- TOP BAR -->
   <div class="top-announcement">
-    <strong>Spoken English Programme:</strong>
-    <span class="highlight">Next Batch Starts on 20 October</span>
-    &bull; Hybrid Format (Online &amp; Offline Classes Available)
+    <strong>Spoken English Classes by Cyber Enterprises:</strong>
+    <span class="highlight">Live Classes — Join In Person (Kondur, Cuddalore) or Online</span>
+    &bull; Start with a Free 10-Min Speaking Chat
   </div>
 
   <!-- HEADER -->
@@ -693,16 +1131,24 @@
         <a href="#top" class="brand-logo">
           <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" class="brand-logo-img" />
           <div>
-            <div class="brand-name">CYBERAD<span>.IN</span></div>
-            <div class="brand-sub">Spoken English Programme</div>
+            <div class="brand-name">CYBERAD.IN</div>
+            <div class="brand-sub">Spoken English Classes by Cyber Enterprises</div>
           </div>
         </a>
 
+        <nav class="nav-links">
+          <a href="#ways-to-join">Ways to Join</a>
+          <a href="#how-it-works">How Class Works</a>
+          <a href="#course-plan">12-Week Plan</a>
+          <a href="#timings">Batch Timings</a>
+          <a href="#contact">Book Free Chat</a>
+        </nav>
+
         <div class="header-cta-group">
-          <a href="tel:+919092979797" class="header-call-btn">
+          <a href="tel:+918925693013" class="header-call-btn">
             <span>Call Us</span>
           </a>
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20book%20my%20free%2010-minute%20speaking%20chat%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
             <span>WhatsApp</span>
             <span>&rarr;</span>
           </a>
@@ -717,122 +1163,429 @@
       <div class="hero-grid">
 
         <div class="hero-content">
-          <div class="hero-pill">
-            <span class="hero-pill-dot"></span>
-            <span>Next Batch Starts on 20 October &bull; Hybrid (Online + Offline)</span>
+          <div class="speech-bubbles-row">
+            <span class="bubble-hello">Hello!</span>
+            <span class="bubble-hi">Hi there!</span>
           </div>
 
-          <h1>Speak English with Confidence</h1>
+          <h1>
+            Speak English
+            <span>with Confidence</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            Live classes &ndash; join in person or online
+          </div>
 
           <p class="hero-lead">
-            A practical speaking programme for anyone who wants to learn and speak English confidently in everyday life. If you understand English but hesitate when speaking, this course will help you speak naturally and clearly.
+            Practical spoken English &ndash; more speaking, less theory. Real-life conversations from day one &ndash; speak better at home, college and work.
           </p>
 
-          <div class="batch-info-box">
-            <div class="info-tile">
-              <div class="info-label">Next Batch Starts</div>
-              <div class="info-value">20 October</div>
-              <div class="info-sub">Admissions now open</div>
-            </div>
-            <div class="info-tile">
-              <div class="info-label">Class Format</div>
-              <div class="info-value">Hybrid Classes</div>
-              <div class="info-sub">Both Online &amp; Offline available</div>
-            </div>
+          <div class="hero-tags">
+            <span class="hero-tag">Real-life speaking practice</span>
+            <span class="hero-tag">Small batches</span>
+            <span class="hero-tag">Personal feedback</span>
+            <span class="hero-tag">Live sessions only &ndash; no recorded classes</span>
+            <span class="hero-tag">Beginner &amp; Intermediate</span>
+            <span class="hero-tag">Kondur, Cuddalore</span>
           </div>
 
-          <p class="cta-note">
-            Connect with us for batch timings and programme details:
+          <div class="cta-buttons">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20book%20my%20free%2010-minute%20speaking%20chat%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+              <span>Book Free Speaking Chat on WhatsApp</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="tel:+918925693013" class="btn-call-large">
+              <span>Call +91 89256 93013</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-flyer-wrap">
+          <div class="hero-flyer-card">
+            <img src="/assets/spoken-english-flyer.png" alt="Speak English with Confidence — CyberAd.in Spoken English Classes Flyer" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO EASY WAYS TO JOIN & 10-MINUTE FREE SPEAKING CHAT -->
+  <section class="section" id="ways-to-join">
+    <div class="container">
+
+      <div class="section-title-bar">
+        <span class="section-accent-pill"></span>
+        <h2>Two easy ways to join</h2>
+      </div>
+
+      <div class="ways-grid">
+        <!-- In-person classroom -->
+        <div class="way-card">
+          <div class="way-card-header">
+            <div class="way-icon">&#127979;</div>
+            <h3>In-person classroom</h3>
+          </div>
+          <div class="way-sub">For learners living nearby</div>
+          <ul class="way-list">
+            <li>
+              <span class="way-dot"></span>
+              <span>Learn face-to-face at our <strong>Kondur, Cuddalore</strong> centre</span>
+            </li>
+            <li>
+              <span class="way-dot"></span>
+              <span><strong>Small batch of 8&ndash;12 learners</strong></span>
+            </li>
+            <li>
+              <span class="way-dot"></span>
+              <span>Real conversations, role-plays and group activities</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Live online -->
+        <div class="way-card">
+          <div class="way-card-header">
+            <div class="way-icon">&#128187;</div>
+            <h3>Live online</h3>
+          </div>
+          <div class="way-sub">Join from anywhere &ndash; home, hostel or office</div>
+          <ul class="way-list">
+            <li>
+              <span class="way-dot"></span>
+              <span><strong>Live on Zoom / Google Meet</strong> &ndash; not recordings</span>
+            </li>
+            <li>
+              <span class="way-dot"></span>
+              <span><strong>Small batch of 6&ndash;10 learners</strong></span>
+            </li>
+            <li>
+              <span class="way-dot"></span>
+              <span>Speak in breakout rooms with partners</span>
+            </li>
+            <li>
+              <span class="way-dot"></span>
+              <span><strong>Timing set with you</strong> &ndash; WhatsApp us to fix a slot</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="trust-strip">
+        <div class="trust-item"><span>&#10003;</span> Same course</div>
+        <div class="trust-item"><span>&#10003;</span> Same trainer</div>
+        <div class="trust-item"><span>&#10003;</span> Live only</div>
+        <div class="trust-item"><span>&#10003;</span> Small batches</div>
+      </div>
+
+      <!-- Start with a free speaking chat -->
+      <div class="free-chat-box">
+        <div class="ten-min-circle">
+          <div class="ten-min-num">10</div>
+          <div class="ten-min-label">MINUTES<br>FREE</div>
+        </div>
+        <div class="free-chat-content">
+          <h3>Start with a free speaking chat</h3>
+          <p>
+            A relaxed 10-minute talk with your trainer &ndash; no exam, no pressure. We listen to how you speak today and place you in the right level &ndash; Beginner or Intermediate.
+          </p>
+          <div class="level-pills">
+            <span class="level-pill-light">Beginner</span>
+            <span class="level-pill-dark">Intermediate</span>
+          </div>
+        </div>
+        <div>
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20book%20my%20free%2010-minute%20speaking%20chat." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <span>Book Free Chat</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW EACH CLASS WORKS & WHO IT'S FOR -->
+  <section class="section section-alt" id="how-it-works">
+    <div class="container">
+      <div class="split-two-col">
+
+        <!-- How each class works -->
+        <div>
+          <div class="section-title-bar">
+            <span class="section-accent-pill"></span>
+            <h2>How each class works</h2>
+          </div>
+          <ul class="steps-list">
+            <li class="step-row">
+              <span class="step-badge">1</span>
+              <div class="step-text"><strong>Warm-up</strong> &ndash; a fun chat to get everyone talking.</div>
+            </li>
+            <li class="step-row">
+              <span class="step-badge">2</span>
+              <div class="step-text"><strong>One focus skill</strong> &ndash; learn one useful thing, clearly.</div>
+            </li>
+            <li class="step-row">
+              <span class="step-badge">3</span>
+              <div class="step-text"><strong>Pair &amp; group practice</strong> &ndash; speak, speak, speak! <em>(breakout rooms online)</em></div>
+            </li>
+            <li class="step-row">
+              <span class="step-badge">4</span>
+              <div class="step-text"><strong>Personal feedback</strong> &ndash; gentle tips on what to improve.</div>
+            </li>
+            <li class="step-row">
+              <span class="step-badge">5</span>
+              <div class="step-text"><strong>Speaking homework</strong> &ndash; send a short voice note on WhatsApp.</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Who it's for -->
+        <div>
+          <div class="section-title-bar">
+            <span class="section-accent-pill"></span>
+            <h2>Who it&rsquo;s for</h2>
+          </div>
+          <div class="who-grid">
+            <div class="who-card">
+              <div class="who-icon">&#127891;</div>
+              <div>
+                <h4>Students</h4>
+                <p>College &amp; campus</p>
+              </div>
+            </div>
+            <div class="who-card">
+              <div class="who-icon">&#128188;</div>
+              <div>
+                <h4>Professionals</h4>
+                <p>Meetings &amp; calls</p>
+              </div>
+            </div>
+            <div class="who-card">
+              <div class="who-icon">&#128269;</div>
+              <div>
+                <h4>Job seekers</h4>
+                <p>Interviews</p>
+              </div>
+            </div>
+            <div class="who-card">
+              <div class="who-icon">&#127968;</div>
+              <div>
+                <h4>Homemakers</h4>
+                <p>Daily-life English</p>
+              </div>
+            </div>
+            <div class="who-card full-span">
+              <div class="who-icon">&#11088;</div>
+              <div>
+                <h4>School kids</h4>
+                <p>In-person fun batch, 5&ndash;6 PM &ndash; games &amp; stories</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUR 12-WEEK SPEAKING JOURNEY -->
+  <section class="section" id="course-plan">
+    <div class="container">
+
+      <div class="journey-banner">
+        <div>
+          <h2>Your 12-week speaking journey</h2>
+          <p>One practical course &ndash; more speaking, less theory</p>
+        </div>
+        <div class="journey-stats">
+          <div class="stat-box">
+            <div class="stat-num">12</div>
+            <div class="stat-label">weeks</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">3</div>
+            <div class="stat-label">classes / week</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-num">60&ndash;75</div>
+            <div class="stat-label">min / class</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weeks-grid">
+        <div class="week-card">
+          <span class="week-pill">Weeks 1&ndash;2</span>
+          <h3>Foundations</h3>
+          <p>Introduce yourself with ease, clear pronunciation, talk about your daily routine.</p>
+        </div>
+
+        <div class="week-card">
+          <span class="week-pill">Weeks 3&ndash;4</span>
+          <h3>Everyday conversations</h3>
+          <p>Shopping, asking directions, phone calls and friendly small talk.</p>
+        </div>
+
+        <div class="week-card">
+          <span class="week-pill">Weeks 5&ndash;6</span>
+          <h3>Grammar for speaking</h3>
+          <p>Tenses to tell stories, asking questions, fixing common mistakes.</p>
+        </div>
+
+        <div class="week-card">
+          <span class="week-pill">Weeks 7&ndash;8</span>
+          <h3>Fluency &amp; confidence</h3>
+          <p>Share your opinions, join group discussions, hesitate less.</p>
+        </div>
+
+        <div class="week-card">
+          <span class="week-pill">Weeks 9&ndash;10</span>
+          <h3>Practical English</h3>
+          <p>Job interviews, meetings and short presentations.</p>
+        </div>
+
+        <div class="week-card highlight-card">
+          <span class="week-pill">Weeks 11&ndash;12</span>
+          <h3>Public speaking</h3>
+          <p>Give a prepared talk + your final speaking assessment.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IN-PERSON BATCH TIMINGS & ONLINE TIMINGS -->
+  <section class="section section-alt" id="timings">
+    <div class="container">
+
+      <div class="section-title-bar">
+        <span class="section-accent-pill"></span>
+        <h2>In-person batches &ndash; pick a time that fits your day</h2>
+      </div>
+
+      <div class="schedule-table-wrap">
+        <div class="schedule-row header-row">
+          <div>Time (in person, Kondur centre)</div>
+          <div>Best for</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-time">Morning &middot; 7:00&ndash;8:00 AM</div>
+          <div class="schedule-for">Professionals, college students</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-time">Late morning &middot; 11:00 AM&ndash;12:00 noon</div>
+          <div class="schedule-for">Homemakers, daily-life learners</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-time">Evening &middot; 5:00&ndash;6:00 PM</div>
+          <div class="schedule-for">School kids &ndash; fun batch with games, storytelling &amp; reading aloud</div>
+        </div>
+        <div class="schedule-row">
+          <div class="schedule-time">Evening &middot; 7:30&ndash;8:30 PM</div>
+          <div class="schedule-for">Professionals, job seekers</div>
+        </div>
+      </div>
+
+      <div class="online-timing-notice">
+        <div class="way-icon">&#128187;</div>
+        <div>
+          <strong>Joining online?</strong> Online timings are fixed with you personally &ndash; WhatsApp <strong><a href="https://wa.me/918925693013" style="color: var(--royal-700);">+91 89256 93013</a></strong> to choose a time with the trainer that works for your location and schedule.
+        </div>
+      </div>
+
+      <p style="font-size: 0.9rem; color: var(--slate-600); margin-top: 14px;">
+        Every class is a live session &ndash; no recorded classes. <strong>WhatsApp us for fees and the next batch date.</strong>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL BE ABLE TO DO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title-bar">
+        <span class="section-accent-pill"></span>
+        <h2>What you&rsquo;ll be able to do</h2>
+      </div>
+
+      <div class="outcomes-grid">
+        <div class="outcome-card">
+          <div class="outcome-check">&#10003;</div>
+          <p><strong>Introduce yourself</strong> to new people with ease.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-check">&#10003;</div>
+          <p><strong>Handle daily situations</strong> &ndash; shops, banks, calls.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-check">&#10003;</div>
+          <p><strong>Hold a real conversation</strong> &ndash; ask questions, make small talk.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-check">&#10003;</div>
+          <p><strong>Share your opinion</strong> in group discussions, without fear.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-check">&#10003;</div>
+          <p><strong>Face interviews &amp; meetings</strong> &ndash; answer clearly, speak up.</p>
+        </div>
+        <div class="outcome-card">
+          <div class="outcome-check">&#10003;</div>
+          <p><strong>Speak in front of a group</strong> &ndash; a short talk, with confidence.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CONTACT & BOOKING SECTION -->
+  <section class="final-cta-section" id="contact">
+    <div class="container">
+      <div class="final-cta-card">
+
+        <div>
+          <div class="final-brand-row">
+            <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" />
+            <span>CYBERAD.IN &middot; Spoken English Classes by Cyber Enterprises</span>
+          </div>
+
+          <h2>Book your free speaking chat today</h2>
+          <p class="final-sub">
+            Just 10 minutes to find your level. WhatsApp us for fees and the next batch date.
           </p>
 
+          <div class="final-phone-highlight">
+            WhatsApp / Call: +91 89256 93013
+          </div>
+          <div class="final-phone-note">
+            One number for everything &ndash; WhatsApp us, even to speak with the trainer.
+          </div>
+
           <div class="cta-buttons">
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20book%20my%20free%2010-minute%20speaking%20chat%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
               <span>Chat on WhatsApp</span>
               <span>&rarr;</span>
             </a>
-            <a href="tel:+919092979797" class="btn-call-large">
-              <span>Call Now</span>
+            <a href="tel:+918925693013" class="btn-call-large">
+              <span>Call +91 89256 93013</span>
             </a>
           </div>
-        </div>
 
-        <div class="hero-visual">
-          <div class="hero-image-frame">
-            <img src="/assets/english-hero.jpg" alt="Spoken English Programme — Next Batch Starts 20 October" />
-            <div class="hero-image-caption">
-              <span>Spoken English Class</span>
-              <strong>Starts 20 Oct &bull; Hybrid</strong>
-            </div>
+          <div class="trainer-meta">
+            <div>&#128100; <strong>Trainer:</strong> Lakshmi Narayanan &nbsp;&bull;&nbsp; &#127760; <strong>cyberad.in</strong></div>
+            <div>&#128205; <strong>Centre Address:</strong> 19 Third Street, Aditya Nagar, Kondur, Cuddalore 607006</div>
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- SIMPLE HIGHLIGHTS SECTION -->
-  <section class="highlights-section">
-    <div class="container">
-
-      <div class="section-heading">
-        <span class="section-eyebrow">About the Course</span>
-        <h2>Learn &amp; Speak English Confidently</h2>
-        <p>Simple, practical training focused on real-world conversation rather than complicated textbook theory.</p>
-      </div>
-
-      <div class="about-split-grid">
-        <div class="about-image-card">
-          <img src="/assets/do-you-speak-english.jpg" alt="Do You Speak English — Practical Online and Offline Spoken English Classes" />
-          <div class="about-image-badge">
-            <strong>Online &amp; Offline Hybrid Learning</strong>
-            <span>New Batch: 20 October</span>
-          </div>
+        <div class="flyer-preview-box">
+          <img src="/assets/spoken-english-flyer.png" alt="Scan QR Code to WhatsApp CyberAd Spoken English Classes" />
+          <span>Scan QR Code or Click to WhatsApp Us</span>
         </div>
 
-        <div class="cards-stack">
-          <div class="feature-card">
-            <h3>Practical Speaking Practice</h3>
-            <p>
-              Overcome hesitation and stop translating in your head. Build the confidence to speak naturally in daily conversations.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Hybrid Format (Online + Offline)</h3>
-            <p>
-              Attend classes in the way that suits you best—with both online and offline learning options available.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <h3>Starting 20 October</h3>
-            <p>
-              Our new batch begins on 20 October in a supportive, easy-to-follow environment for all learners.
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FINAL CONTACT SECTION -->
-  <section class="contact-banner" id="contact">
-    <div class="container">
-      <div class="contact-card">
-        <h2>Ready to Join the 20 October Batch?</h2>
-        <p>
-          Whether you prefer online or offline classes, reach out to us directly to get full details and reserve your spot.
-        </p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20more%20details%20about%20the%20Spoken%20English%20class%20starting%20on%2020%20October." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-            <span>Chat on WhatsApp</span>
-            <span>&rarr;</span>
-          </a>
-          <a href="tel:+919092979797" class="btn-call-large">
-            <span>Call Now</span>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -843,16 +1596,18 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <img src="/assets/cyberad-emblem.jpg" alt="CyberAd.in Logo" />
-          <div class="footer-brand-title">CyberAd.in &bull; Spoken English Programme</div>
+          <div class="footer-brand-title">CYBERAD.IN &bull; Spoken English Classes by Cyber Enterprises</div>
         </div>
         <div class="footer-links">
           <a href="#top">Top</a>
-          <a href="https://cyberad.in">CyberAd Main Site</a>
-          <a href="https://cyberad.in/privacy">Privacy Policy</a>
+          <a href="#ways-to-join">Ways to Join</a>
+          <a href="#course-plan">12-Week Plan</a>
+          <a href="#timings">Batch Timings</a>
+          <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
       <div class="footer-copy">
-        <div>GSTIN: 33APPPC7049M1ZI &bull; UDYAM: TN-04-0115585</div>
+        <div>19 Third Street, Aditya Nagar, Kondur, Cuddalore 607006 &bull; WhatsApp / Call: +91 89256 93013</div>
         <div>&copy; 2026 CyberAd.in (Cyber Enterprises). All rights reserved.</div>
       </div>
     </div>
