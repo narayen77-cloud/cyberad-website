@@ -430,9 +430,15 @@
     }
     .hero-flyer-card img {
       width: 100%;
-      height: auto;
+      height: 460px;
+      object-fit: cover;
       display: block;
       border-radius: 16px;
+    }
+    @media (max-width: 640px) {
+      .hero-flyer-card img {
+        height: 360px;
+      }
     }
 
     /* SECTION HEADINGS */
@@ -1203,7 +1209,7 @@
 
         <div class="hero-flyer-wrap">
           <div class="hero-flyer-card">
-            <img src="/assets/spoken-english-flyer.png" alt="Speak English with Confidence — CyberAd.in Spoken English Classes Flyer" />
+            <img src="/assets/english-grammar-hero.jpg" alt="Speak English with Confidence — CyberAd.in Spoken English Classes" />
           </div>
         </div>
 
