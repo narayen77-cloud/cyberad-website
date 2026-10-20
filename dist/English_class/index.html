@@ -681,17 +681,12 @@
       line-height: 1.4;
     }
 
-    /* SINGLE-LINE UNIFIED EXPANDABLE BAR FOR 12-WEEK PLAN & BATCH TIMINGS */
+    /* 12-WEEK COURSE PLAN CARD */
     .unified-bar-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-      align-items: start;
-    }
-    @media (max-width: 860px) {
-      .unified-bar-row {
-        grid-template-columns: 1fr;
-      }
+      grid-template-columns: 1fr;
+      max-width: 960px;
+      margin: 0 auto;
     }
     .expand-card {
       background: var(--white);
@@ -909,6 +904,95 @@
     }
     .outcome-card strong {
       color: var(--royal-900);
+    }
+
+    /* BATCHES & TIMINGS SECTION */
+    .batches-timings-card {
+      background: var(--white);
+      border: 1.5px solid var(--slate-200);
+      border-top: 5px solid var(--royal-500);
+      border-radius: var(--radius-xl);
+      padding: 34px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 640px) {
+      .batches-timings-card {
+        padding: 24px 20px;
+      }
+    }
+    .batches-lead {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--royal-900);
+      margin-bottom: 20px;
+    }
+    .batches-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 680px) {
+      .batches-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .batch-type-item {
+      background: var(--royal-50);
+      border: 1.5px solid var(--royal-100);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .batch-type-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: #FFFFFF;
+      color: var(--royal-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .batch-type-info h4 {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--royal-900);
+      margin-bottom: 4px;
+    }
+    .batch-type-info p {
+      font-size: 0.88rem;
+      color: var(--slate-600);
+      line-height: 1.45;
+    }
+    .batches-note-box {
+      background: #F8FAFC;
+      border-left: 4px solid var(--royal-500);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .batches-note-primary {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--royal-950);
+      margin-bottom: 4px;
+    }
+    .batches-note-secondary {
+      font-size: 0.92rem;
+      color: var(--slate-600);
+      line-height: 1.5;
+    }
+    .batches-action-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
     /* FINAL BOOKING, WHATSAPP QR, PDF DOWNLOAD & WEB3FORMS SECTION */
@@ -1256,7 +1340,8 @@
         <nav class="nav-links">
           <a href="#how-it-works">How It Works</a>
           <a href="#who-its-for">Who It's For</a>
-          <a href="#course-plan">12-Week Plan &amp; Timings</a>
+          <a href="#course-plan">12-Week Plan</a>
+          <a href="#batches-timings">Batches &amp; Timings</a>
           <a href="#contact">Enquire Now</a>
         </nav>
 
@@ -1433,19 +1518,19 @@
     </div>
   </section>
 
-  <!-- UNIFIED SINGLE-LINE EXPANDABLE SECTION: 12-WEEK PLAN & BATCH TIMINGS -->
+  <!-- 12-WEEK SPEAKING JOURNEY -->
   <section class="section" id="course-plan">
     <div class="container">
 
       <div class="section-title-bar">
         <span class="section-accent-pill"></span>
-        <h2>12-week speaking journey &amp; batch timings</h2>
+        <h2>12-week speaking journey</h2>
       </div>
 
-      <div class="unified-bar-row" id="timings">
+      <div class="unified-bar-row">
 
-        <!-- Expandable 1: 12-Week Speaking Journey -->
-        <details class="expand-card">
+        <!-- 12-Week Course Plan -->
+        <details class="expand-card" open>
           <summary class="expand-summary">
             <div class="expand-summary-left">
               <span class="expand-title">12-Week Course Plan</span>
@@ -1501,40 +1586,6 @@
           </div>
         </details>
 
-        <!-- Expandable 2: In-Person & Online Batch Timings -->
-        <details class="expand-card">
-          <summary class="expand-summary">
-            <div class="expand-summary-left">
-              <span class="expand-title">Batch Timings</span>
-              <span class="expand-badge">Kondur In-Person &amp; Live Online</span>
-            </div>
-            <span class="expand-chevron">&#9662;</span>
-          </summary>
-          <div class="expand-body">
-            <div class="compact-schedule-list">
-              <div class="compact-schedule-item">
-                <span class="compact-schedule-time">Morning &middot; 7:00&ndash;8:00 AM</span>
-                <span class="compact-schedule-who">Professionals &amp; college students</span>
-              </div>
-              <div class="compact-schedule-item">
-                <span class="compact-schedule-time">Late Morning &middot; 11:30 AM&ndash;12:30 PM</span>
-                <span class="compact-schedule-who">Homemakers &amp; daily-life learners</span>
-              </div>
-              <div class="compact-schedule-item">
-                <span class="compact-schedule-time">Evening &middot; 5:00&ndash;6:00 PM</span>
-                <span class="compact-schedule-who">School kids &ndash; games &amp; storytelling</span>
-              </div>
-              <div class="compact-schedule-item">
-                <span class="compact-schedule-time">Evening &middot; 7:30&ndash;8:30 PM</span>
-                <span class="compact-schedule-who">Professionals &amp; job seekers</span>
-              </div>
-            </div>
-            <div class="compact-online-note">
-              <strong>Joining online?</strong> Online timings are fixed personally with you on WhatsApp (<strong>+91 89256 93013</strong>) to match your schedule.
-            </div>
-          </div>
-        </details>
-
       </div>
 
     </div>
@@ -1573,6 +1624,52 @@
         <div class="outcome-card">
           <div class="outcome-check">&#10003;</div>
           <p><strong>Speak in front of a group</strong> &ndash; a short talk, with confidence.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BATCHES & TIMINGS SECTION -->
+  <section class="section" id="batches-timings">
+    <div class="container">
+
+      <div class="section-title-bar">
+        <span class="section-accent-pill"></span>
+        <h2>Batches &amp; Timings</h2>
+      </div>
+
+      <div class="batches-timings-card">
+        <p class="batches-lead">We are currently starting with two batches only:</p>
+
+        <div class="batches-grid">
+          <div class="batch-type-item">
+            <div class="batch-type-icon">&#127979;</div>
+            <div class="batch-type-info">
+              <h4>One in-person batch</h4>
+              <p>Face-to-face interactive practice at our Kondur, Cuddalore centre</p>
+            </div>
+          </div>
+
+          <div class="batch-type-item">
+            <div class="batch-type-icon">&#128187;</div>
+            <div class="batch-type-info">
+              <h4>One live online batch</h4>
+              <p>Live interactive classes on Zoom / Google Meet</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="batches-note-box">
+          <p class="batches-note-primary">Exact timings are being finalised based on student availability.</p>
+          <p class="batches-note-secondary">Please speak to the counselor to know the current schedule and confirm your slot.</p>
+        </div>
+
+        <div class="batches-action-row">
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20know%20the%20current%20schedule%20and%20confirm%20my%20slot%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <span>WhatsApp: +91 89256 93013</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
 
@@ -1658,14 +1755,11 @@
             </div>
 
             <div class="form-field">
-              <label for="form-mode">Preferred Mode / Batch *</label>
+              <label for="form-mode">Preferred Batch *</label>
               <select id="form-mode" name="preferred_mode" required>
-                <option value="" disabled selected>Select your preferred mode or batch</option>
-                <option value="In-Person: Morning 7:00 AM - 8:00 AM (Kondur)">In-Person &bull; Morning 7:00 AM &ndash; 8:00 AM (Kondur)</option>
-                <option value="In-Person: Late Morning 11:30 AM - 12:30 PM (Kondur)">In-Person &bull; Late Morning 11:30 AM &ndash; 12:30 PM (Kondur)</option>
-                <option value="In-Person: Evening Kids 5:00 PM - 6:00 PM (Kondur)">In-Person &bull; Evening Kids Batch 5:00 PM &ndash; 6:00 PM (Kondur)</option>
-                <option value="In-Person: Night 7:30 PM - 8:30 PM (Kondur)">In-Person &bull; Night 7:30 PM &ndash; 8:30 PM (Kondur)</option>
-                <option value="Live Online Classes (Flexible Timing via WhatsApp)">Live Online Classes (Flexible Timing via WhatsApp)</option>
+                <option value="" disabled selected>Select your preferred batch</option>
+                <option value="One in-person batch (Kondur, Cuddalore)">One in-person batch (Kondur, Cuddalore)</option>
+                <option value="One live online batch">One live online batch</option>
                 <option value="Help me choose during 10-Minute Assessment">Help me choose during 10-Minute Assessment</option>
               </select>
             </div>
@@ -1700,7 +1794,8 @@
         <div class="footer-links">
           <a href="#top">Top</a>
           <a href="#how-it-works">How It Works</a>
-          <a href="#course-plan">Course &amp; Timings</a>
+          <a href="#course-plan">12-Week Plan</a>
+          <a href="#batches-timings">Batches &amp; Timings</a>
           <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
