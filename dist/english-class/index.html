@@ -38,7 +38,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Speak English with Confidence — Live Classes In Person & Online | CyberAd.in</title>
-  <meta name="description" content="Practical spoken English — more speaking, less theory. Live classes in person at Kondur, Cuddalore or live online. Start with a 10-minute speaking assessment. WhatsApp +91 89256 93013.">
+  <meta name="description" content="Practical spoken English — more speaking, less theory. Live classes in person at Kondur, Cuddalore or live online. ₹500/month, small batches, and personal feedback.">
   <link rel="canonical" href="https://cyberad.in/">
   <link rel="icon" type="image/jpeg" href="/assets/cyberad-emblem.jpg">
   <link rel="apple-touch-icon" href="/assets/cyberad-emblem.jpg">
@@ -239,6 +239,20 @@
     .header-wa-btn:hover {
       background: var(--whatsapp-hover);
       transform: translateY(-1px);
+    }
+    @media (max-width: 480px) {
+      .header-wa-btn {
+        padding: 8px 12px;
+        font-size: 0.78rem;
+        gap: 6px;
+      }
+      .brand-name {
+        font-size: 1rem;
+      }
+      .brand-logo-img {
+        width: 36px;
+        height: 36px;
+      }
     }
 
     /* HERO SECTION */
@@ -551,26 +565,18 @@
       background: linear-gradient(135deg, #F0F6FF 0%, #E5EFFF 100%);
       border: 1.5px solid #BFDBFE;
       border-radius: var(--radius-xl);
-      padding: 22px 28px;
+      padding: 18px 24px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: center;
       box-shadow: var(--shadow-sm);
-    }
-    @media (max-width: 860px) {
-      .how-cta-strip {
-        flex-direction: column;
-        text-align: center;
-        gap: 16px;
-      }
     }
     .trust-strip-inner {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px 24px;
+      gap: 16px 28px;
       align-items: center;
+      justify-content: center;
     }
     @media (max-width: 860px) {
       .trust-strip-inner {
@@ -946,7 +952,6 @@
       border-left: 4px solid var(--royal-500);
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       padding: 16px 20px;
-      margin-bottom: 24px;
     }
     .batches-note-primary {
       font-size: 0.98rem;
@@ -959,14 +964,72 @@
       color: var(--slate-600);
       line-height: 1.5;
     }
-    .batches-action-row {
+
+    /* COMMON QUESTIONS (FAQ) */
+    .faq-grid {
+      max-width: 860px;
+      margin: 0 auto;
       display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1.5px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+    .faq-item[open] {
+      border-color: var(--royal-400);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 22px;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--royal-900);
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 14px;
+      user-select: none;
+    }
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-summary:hover {
+      background: var(--royal-50);
+    }
+    .faq-chevron {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--royal-100);
+      color: var(--royal-700);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 900;
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+    .faq-item[open] .faq-chevron {
+      transform: rotate(180deg);
+      background: var(--royal-600);
+      color: #FFFFFF;
+    }
+    .faq-answer {
+      padding: 0 22px 20px 22px;
+      font-size: 0.94rem;
+      color: var(--slate-600);
+      line-height: 1.6;
     }
 
-    /* FINAL BOOKING, WHATSAPP QR, PDF DOWNLOAD & WEB3FORMS SECTION */
+    /* FINAL CTA & ENQUIRY SECTION */
     .final-cta-section {
       padding: 64px 0;
       background: var(--slate-50);
@@ -979,7 +1042,7 @@
       display: grid;
       grid-template-columns: 1.1fr 0.95fr;
       gap: 36px;
-      align-items: center;
+      align-items: flex-start;
       box-shadow: var(--shadow-lg);
     }
     @media (max-width: 920px) {
@@ -993,24 +1056,19 @@
       font-weight: 900;
       margin-bottom: 10px;
       color: #FFFFFF;
-      white-space: nowrap;
-    }
-    @media (max-width: 640px) {
-      .final-cta-card h2 {
-        white-space: normal;
-      }
     }
     .final-sub {
       font-size: 0.98rem;
       color: var(--royal-100);
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       line-height: 1.55;
     }
-    .final-phone-highlight {
-      font-size: clamp(1.25rem, 2.3vw, 1.5rem);
-      font-weight: 900;
-      color: #FFFFFF;
-      margin-bottom: 18px;
+    .final-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 24px;
     }
 
     /* PRICING HIGHLIGHT BOX */
@@ -1019,7 +1077,7 @@
       border: 1.5px solid rgba(255, 255, 255, 0.28);
       border-radius: var(--radius-md);
       padding: 16px 18px;
-      margin: 18px 0 22px 0;
+      margin-bottom: 20px;
       backdrop-filter: blur(8px);
     }
     .pricing-highlight-top {
@@ -1076,53 +1134,21 @@
       font-size: 0.95rem;
     }
 
-    /* QR & PDF DOWNLOAD BOX */
-    .qr-brochure-card {
+    /* BROCHURE DOWNLOAD BOX */
+    .brochure-download-card {
       background: rgba(255, 255, 255, 0.1);
       border: 1.5px solid rgba(255, 255, 255, 0.22);
       border-radius: var(--radius-lg);
-      padding: 20px;
-      margin-top: 22px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
+      padding: 20px 22px;
     }
-    @media (max-width: 520px) {
-      .qr-brochure-card {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-    .qr-img-box {
-      background: #FFFFFF;
-      padding: 10px;
-      border-radius: 12px;
-      flex-shrink: 0;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(4, 16, 40, 0.25);
-    }
-    .qr-img-box img {
-      width: 124px;
-      height: 124px;
-      display: block;
-    }
-    .qr-img-box span {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 800;
-      color: var(--royal-900);
-      margin-top: 5px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-    }
-    .brochure-download-info h4 {
+    .brochure-download-card h4 {
       font-size: 1.05rem;
       font-weight: 800;
       color: #FFFFFF;
       margin-bottom: 6px;
     }
-    .brochure-download-info p {
-      font-size: 0.86rem;
+    .brochure-download-card p {
+      font-size: 0.88rem;
       color: var(--royal-100);
       margin-bottom: 14px;
       line-height: 1.45;
@@ -1312,12 +1338,13 @@
           <a href="#how-it-works">How It Works</a>
           <a href="#who-its-for">Who It's For</a>
           <a href="#course-plan">Course Outline</a>
-          <a href="#contact">Enquire Now</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Enquire</a>
         </nav>
 
         <div class="header-cta-group">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
-            <span>WhatsApp</span>
+          <a href="https://wa.me/918925693013?text=Hi%2C%20I%E2%80%99d%20like%20to%20speak%20to%20a%20counsellor%20about%20the%20Spoken%20English%20Programme." target="_blank" rel="noopener noreferrer" class="header-wa-btn">
+            <span>Talk to a Counsellor</span>
             <span>&rarr;</span>
           </a>
         </div>
@@ -1351,12 +1378,12 @@
           </div>
 
           <div class="cta-buttons">
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-              <span>WhatsApp for 10-Min Assessment</span>
+            <a href="https://wa.me/918925693013?text=Hi%2C%20I%E2%80%99d%20like%20to%20speak%20to%20a%20counsellor%20about%20the%20Spoken%20English%20Programme." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+              <span>Talk to a Counsellor</span>
               <span>&rarr;</span>
             </a>
             <a href="#contact" class="btn-secondary-large">
-              <span>Submit Enquiry Form</span>
+              <span>Submit an Enquiry</span>
             </a>
           </div>
         </div>
@@ -1416,19 +1443,13 @@
         </div>
       </div>
 
-      <!-- Trust & CTA Bar -->
+      <!-- Course Features Strip -->
       <div class="how-cta-strip">
         <div class="trust-strip-inner">
           <div class="trust-item"><span>&#10003;</span> <strong>₹500 / month</strong> &bull; No registration fee</div>
           <div class="trust-item"><span>&#10003;</span> Attend online or in person</div>
           <div class="trust-item"><span>&#10003;</span> No long-term commitment</div>
           <div class="trust-item"><span>&#10003;</span> 12 weeks &bull; 3 classes weekly</div>
-        </div>
-        <div class="how-action">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-            <span>WhatsApp for 10-Min Assessment</span>
-            <span>&rarr;</span>
-          </a>
         </div>
       </div>
 
@@ -1626,31 +1647,108 @@
 
         <div class="batches-note-box">
           <p class="batches-note-primary">Exact timings are being finalised based on student availability.</p>
-          <p class="batches-note-secondary">Please speak to the counselor to know the current schedule and confirm your slot.</p>
-        </div>
-
-        <div class="batches-action-row">
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20know%20the%20current%20schedule%20and%20confirm%20my%20slot%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-            <span>WhatsApp: +91 89256 93013</span>
-            <span>&rarr;</span>
-          </a>
+          <p class="batches-note-secondary">Please speak to the counsellor or submit an enquiry below to know the current schedule and confirm your slot.</p>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- FINAL CONTACT, WHATSAPP QR, DOWNLOADABLE PDF BROCHURE & WEB3FORMS SECTION -->
+  <!-- COMMON QUESTIONS (FAQ) -->
+  <section class="section" id="faq">
+    <div class="container">
+
+      <div class="section-title-bar">
+        <span class="section-accent-pill"></span>
+        <h2>Common questions</h2>
+      </div>
+
+      <div class="faq-grid">
+        <details class="faq-item" open>
+          <summary class="faq-summary">
+            <span>Can I attend classes online or in person?</span>
+            <span class="faq-chevron">&#9662;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>You can choose whichever format suits you best. We conduct in-person classes at our centre in Kondur, Cuddalore, as well as live interactive online classes on Google Meet / Zoom. Both options follow the same 12-week practical curriculum with small groups and live trainer guidance.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>What is the fee and are there any extra charges?</span>
+            <span class="faq-chevron">&#9662;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>The fee is ₹500 per month. There is zero registration fee, no admission charges, and no long-term commitment. You simply pay month-by-month as you learn.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>How many classes are held each week and what is the batch size?</span>
+            <span class="faq-chevron">&#9662;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>There are 3 live classes per week over 12 weeks (36 interactive sessions total). Each batch is strictly capped at 6 to 10 learners so every student receives individual attention, speaking practice, and direct feedback in every session.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>What happens during the 10-minute speaking assessment?</span>
+            <span class="faq-chevron">&#9662;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>It is a short, friendly conversation with our trainer to assess your current speaking comfort and understand your goals. There is zero written testing, grammar interrogation, or pressure. It simply helps us place you in the right batch (Beginner or Intermediate).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>I make grammar mistakes and feel nervous speaking English. Can I join?</span>
+            <span class="faq-chevron">&#9662;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes, absolutely. Most of our students understand English but struggle with hesitation, finding the right words, or fear of making mistakes. Our small, supportive batches are designed specifically to help you overcome hesitation and build speaking confidence from day one.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span>How do I enrol or confirm my slot?</span>
+            <span class="faq-chevron">&#9662;</span>
+          </summary>
+          <div class="faq-answer">
+            <p>You can tap "Talk to a Counsellor" in the header to connect directly on WhatsApp, or fill out the enquiry form below. Our counsellor will share current batch timings and arrange your 10-minute speaking assessment.</p>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CTA & ENQUIRY SECTION -->
   <section class="final-cta-section" id="contact">
     <div class="container">
       <div class="final-cta-card">
 
-        <!-- Left Column: WhatsApp CTA, Pricing Highlight Box, Scannable QR & Brochure PDF -->
+        <!-- Left Column: Primary Actions, Pricing & Brochure -->
         <div>
-          <h2>Book your 10-minute speaking assessment</h2>
+          <h2>Ready to improve your spoken English?</h2>
           <p class="final-sub">
-            A quick, relaxed conversation to assess your current level and find the right batch fit. No written test, zero pressure.
+            Speak to our counsellor to confirm current batch timings, or submit your enquiry below to schedule your 10-minute speaking assessment.
           </p>
+
+          <div class="final-cta-actions">
+            <a href="https://wa.me/918925693013?text=Hi%2C%20I%E2%80%99d%20like%20to%20speak%20to%20a%20counsellor%20about%20the%20Spoken%20English%20Programme." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+              <span>Talk to a Counsellor</span>
+              <span>&rarr;</span>
+            </a>
+            <a href="#cyberad-contact-form" class="btn-secondary-large">
+              <span>Submit an Enquiry</span>
+            </a>
+          </div>
 
           <!-- Pricing Highlight Box -->
           <div class="pricing-highlight-box">
@@ -1666,42 +1764,25 @@
             </ul>
           </div>
 
-          <div class="final-phone-highlight">
-            WhatsApp: +91 89256 93013
-          </div>
-
-          <div class="cta-buttons">
-            <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-              <span>Chat on WhatsApp</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-
-          <!-- QR Code to Scan & Downloadable Course Brochure PDF -->
-          <div class="qr-brochure-card">
-            <div class="qr-img-box">
-              <img src="/assets/whatsapp-qr.png" alt="Scan QR Code to WhatsApp CyberAd Spoken English" />
-              <span>Scan to WhatsApp</span>
-            </div>
-            <div class="brochure-download-info">
-              <h4>Programme Overview &amp; Brochure</h4>
-              <p>Download our official course brochure for batch details, learning outcomes, and speaking topics.</p>
-              <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-                <a href="/assets/CyberAd-Spoken-English-Brochure.pdf" download="CyberAd-Spoken-English-Brochure.pdf" id="download-brochure-btn" class="btn-download-pdf">
-                  <span>&#128196; Download Brochure (PDF)</span>
-                </a>
-                <a href="/assets/CyberAd-Spoken-English-Brochure.jpg" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF; font-size:0.82rem; text-decoration:underline; opacity:0.9;">
-                  View flyer image &nearr;
-                </a>
-              </div>
+          <!-- Downloadable Course Brochure -->
+          <div class="brochure-download-card">
+            <h4>Programme Overview &amp; Brochure</h4>
+            <p>Download our official course brochure for batch details, learning outcomes, and speaking topics.</p>
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <a href="/assets/CyberAd-Spoken-English-Brochure.pdf" download="CyberAd-Spoken-English-Brochure.pdf" id="download-brochure-btn" class="btn-download-pdf">
+                <span>&#128196; Download Brochure (PDF)</span>
+              </a>
+              <a href="/assets/CyberAd-Spoken-English-Brochure.jpg" target="_blank" rel="noopener noreferrer" style="color:#FFFFFF; font-size:0.82rem; text-decoration:underline; opacity:0.9;">
+                View flyer image &nearr;
+              </a>
             </div>
           </div>
         </div>
 
         <!-- Right Column: Web3Forms Contact Form -->
         <div class="enquiry-form-card">
-          <h3>Send an Enquiry</h3>
-          <p class="form-sub">Fill in your details below and we will connect on WhatsApp to schedule your 10-minute speaking assessment. Simple fee: ₹500/month with no registration fee.</p>
+          <h3>Submit an Enquiry</h3>
+          <p class="form-sub">Fill in your details below and our counsellor will connect with you on WhatsApp to confirm batch timings and arrange your 10-minute speaking assessment.</p>
 
           <form id="cyberad-contact-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="07031dc1-f48b-40ea-909d-a5aeffee8b95">
@@ -1729,7 +1810,7 @@
                 <option value="" disabled selected>Select your preferred batch</option>
                 <option value="One in-person batch (Kondur, Cuddalore)">One in-person batch (Kondur, Cuddalore)</option>
                 <option value="One live online batch">One live online batch</option>
-                <option value="Help me choose during 10-Minute Assessment">Help me choose during 10-Minute Assessment</option>
+                <option value="Speak with counsellor first">Speak with counsellor first</option>
               </select>
             </div>
 
@@ -1738,13 +1819,13 @@
               <textarea id="form-message" name="message" placeholder="Any specific goals or questions before the assessment?"></textarea>
             </div>
 
-            <button type="submit" id="form-submit-btn" class="btn-submit-form">Submit Form &rarr;</button>
+            <button type="submit" id="form-submit-btn" class="btn-submit-form">Submit Enquiry &rarr;</button>
             <div id="form-error-msg" style="display:none; margin-top:12px; padding:10px 12px; border-radius:8px; background:#FEF2F2; border:1px solid #FECACA; color:#991B1B; font-size:0.86rem;"></div>
           </form>
 
           <div id="form-success-box" class="enquiry-success-box">
             <h4>&#10003; Thank you! Your enquiry has been received.</h4>
-            <p>We have received your details and will connect with you on WhatsApp shortly to schedule your 10-minute speaking assessment.</p>
+            <p>We have received your details and our counsellor will connect with you on WhatsApp shortly to discuss your batch slot and schedule your 10-minute speaking assessment.</p>
           </div>
         </div>
 
@@ -1765,6 +1846,8 @@
           <a href="#how-it-works">How It Works</a>
           <a href="#who-its-for">Who It's For</a>
           <a href="#course-plan">Course Outline</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Enquire</a>
           <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
