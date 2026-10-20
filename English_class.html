@@ -495,91 +495,116 @@
       }
     }
 
-    /* TWO EASY WAYS TO JOIN */
-    .ways-grid {
+    /* HOW IT WORKS (3 CONCISE OUTCOME-FOCUSED STEPS) */
+    .how-it-works-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 22px;
-      margin-bottom: 18px;
+      margin-bottom: 24px;
     }
-    @media (max-width: 780px) {
-      .ways-grid {
+    @media (max-width: 900px) {
+      .how-it-works-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
       }
     }
-    .way-card {
+    .how-card {
       background: var(--white);
       border: 1.5px solid var(--slate-200);
       border-top: 5px solid var(--royal-500);
       border-radius: var(--radius-lg);
-      padding: 26px;
+      padding: 26px 24px;
       box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
-    .way-card-header {
+    .how-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .how-card-top {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 6px;
+      margin-bottom: 14px;
     }
-    .way-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: var(--royal-50);
-      color: var(--royal-600);
+    .how-step-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--royal-500);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
-      font-weight: 800;
+      font-weight: 900;
+      font-size: 1.05rem;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(29, 104, 240, 0.25);
     }
-    .way-card h3 {
-      font-size: 1.22rem;
+    .how-step-tag {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--royal-600);
+    }
+    .how-card h3 {
+      font-size: 1.18rem;
       font-weight: 800;
       color: var(--royal-900);
-      white-space: nowrap;
+      margin-bottom: 10px;
+      line-height: 1.35;
     }
-    .way-sub {
-      font-size: 0.9rem;
-      color: var(--slate-500);
+    .how-card p {
+      font-size: 0.94rem;
+      color: var(--slate-600);
+      line-height: 1.55;
       margin-bottom: 16px;
-      font-weight: 500;
+      flex-grow: 1;
     }
-    .way-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .way-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.95rem;
-      color: var(--slate-700);
-      line-height: 1.5;
-    }
-    .way-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--royal-500);
-      margin-top: 7px;
-      flex-shrink: 0;
-    }
-
-    /* TRUST STRIP */
-    .trust-strip {
+    .how-card-pill {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--royal-700);
       background: var(--royal-50);
       border: 1px solid var(--royal-100);
-      border-radius: var(--radius-md);
-      padding: 12px 20px;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+    .how-cta-strip {
+      background: linear-gradient(135deg, #F0F6FF 0%, #E5EFFF 100%);
+      border: 1.5px solid #BFDBFE;
+      border-radius: var(--radius-xl);
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 860px) {
+      .how-cta-strip {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+      }
+    }
+    .trust-strip-inner {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 12px;
-      margin-bottom: 26px;
+      gap: 16px 24px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .trust-strip-inner {
+        justify-content: center;
+      }
     }
     .trust-item {
       font-size: 0.9rem;
@@ -588,99 +613,10 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      white-space: nowrap;
     }
     .trust-item span {
       color: var(--royal-500);
       font-weight: 900;
-    }
-
-    /* 10-MINUTE SPEAKING ASSESSMENT BANNER */
-    .free-chat-box {
-      background: linear-gradient(135deg, #F0F6FF 0%, #E5EFFF 100%);
-      border: 1.5px solid #BFDBFE;
-      border-radius: var(--radius-xl);
-      padding: 26px 30px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 24px;
-      align-items: center;
-      box-shadow: var(--shadow-sm);
-    }
-    @media (max-width: 860px) {
-      .free-chat-box {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 24px 20px;
-        gap: 18px;
-      }
-    }
-    .ten-min-circle {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: var(--royal-500);
-      color: #FFFFFF;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      box-shadow: 0 10px 24px rgba(29, 104, 240, 0.3);
-      margin: 0 auto;
-      flex-shrink: 0;
-    }
-    .ten-min-num {
-      font-size: 1.9rem;
-      font-weight: 900;
-      line-height: 1;
-    }
-    .ten-min-label {
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin-top: 3px;
-      line-height: 1.15;
-    }
-    .free-chat-content h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--royal-800);
-      margin-bottom: 6px;
-      white-space: nowrap;
-    }
-    @media (max-width: 640px) {
-      .free-chat-content h3 {
-        white-space: normal;
-      }
-    }
-    .free-chat-content p {
-      font-size: 0.95rem;
-      color: var(--slate-700);
-      margin-bottom: 12px;
-      max-width: 640px;
-    }
-    .level-pills {
-      display: inline-flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .level-pill-light {
-      background: #93BDFF;
-      color: var(--royal-950);
-      font-size: 0.8rem;
-      font-weight: 800;
-      padding: 4px 14px;
-      border-radius: 999px;
-    }
-    .level-pill-dark {
-      background: var(--royal-600);
-      color: #FFFFFF;
-      font-size: 0.8rem;
-      font-weight: 800;
-      padding: 4px 14px;
-      border-radius: 999px;
     }
 
     /* WHO IT'S FOR */
@@ -1021,6 +957,13 @@
       color: #FFFFFF;
       margin-bottom: 18px;
     }
+    .fee-supporting-note {
+      font-size: 0.88rem;
+      color: var(--royal-100);
+      margin-top: 14px;
+      line-height: 1.45;
+      opacity: 0.95;
+    }
 
     /* QR & PDF DOWNLOAD BOX */
     .qr-brochure-card {
@@ -1238,8 +1181,8 @@
   <!-- TOP BAR -->
   <div class="top-announcement">
     <strong>Spoken English Programme:</strong>
-    <span class="highlight">Live Classes — Join In Person (Kondur, Cuddalore) or Online</span>
-    &bull; Start with a 10-Min Level Assessment
+    <span class="highlight">12 Weeks &bull; 3 Live Classes Weekly &mdash; In Person (Kondur) or Online</span>
+    &bull; Start with a 10-Min Speaking Assessment
   </div>
 
   <!-- HEADER (SINGLE LINE) -->
@@ -1255,7 +1198,7 @@
         </a>
 
         <nav class="nav-links">
-          <a href="#ways-to-join">Ways to Join</a>
+          <a href="#how-it-works">How It Works</a>
           <a href="#who-its-for">Who It's For</a>
           <a href="#course-plan">12-Week Plan &amp; Timings</a>
           <a href="#contact">Enquire Now</a>
@@ -1293,6 +1236,7 @@
           </p>
 
           <div class="hero-tags">
+            <span class="hero-tag">12 Weeks &bull; 3 Classes Weekly</span>
             <span class="hero-tag">Real-life speaking practice</span>
             <span class="hero-tag">Small batches</span>
             <span class="hero-tag">Personal feedback</span>
@@ -1322,94 +1266,62 @@
     </div>
   </section>
 
-  <!-- TWO EASY WAYS TO JOIN & 10-MINUTE SPEAKING ASSESSMENT -->
-  <section class="section" id="ways-to-join">
+  <!-- HOW IT WORKS (3 CONCISE OUTCOME-FOCUSED STEPS) -->
+  <section class="section" id="how-it-works">
+    <div id="ways-to-join" style="position:relative; top:-80px; visibility:hidden;"></div>
     <div class="container">
 
       <div class="section-title-bar">
         <span class="section-accent-pill"></span>
-        <h2>Two easy ways to join</h2>
+        <h2>How it works</h2>
       </div>
 
-      <div class="ways-grid">
-        <!-- In-person classroom -->
-        <div class="way-card">
-          <div class="way-card-header">
-            <div class="way-icon">&#127979;</div>
-            <h3>In-person classroom</h3>
+      <div class="how-it-works-grid">
+        <!-- Step 1 -->
+        <div class="how-card">
+          <div class="how-card-top">
+            <span class="how-step-badge">1</span>
+            <span class="how-step-tag">Step 1 &bull; Friendly Check</span>
           </div>
-          <div class="way-sub">For learners living nearby</div>
-          <ul class="way-list">
-            <li>
-              <span class="way-dot"></span>
-              <span>Learn face-to-face at our <strong>Kondur, Cuddalore</strong> centre</span>
-            </li>
-            <li>
-              <span class="way-dot"></span>
-              <span><strong>Small batch of 8&ndash;12 learners</strong></span>
-            </li>
-            <li>
-              <span class="way-dot"></span>
-              <span>Real conversations, role-plays and group activities</span>
-            </li>
-          </ul>
+          <h3>10-minute speaking assessment</h3>
+          <p>We understand your current level and goals in a relaxed 10-minute chat with your trainer &mdash; no written exams, zero pressure.</p>
+          <div class="how-card-pill">Beginner or Intermediate placement</div>
         </div>
 
-        <!-- Live online -->
-        <div class="way-card">
-          <div class="way-card-header">
-            <div class="way-icon">&#128187;</div>
-            <h3>Live online</h3>
+        <!-- Step 2 -->
+        <div class="how-card">
+          <div class="how-card-top">
+            <span class="how-step-badge">2</span>
+            <span class="how-step-tag">Step 2 &bull; Small Live Batches</span>
           </div>
-          <div class="way-sub">Join from anywhere &ndash; home, hostel or office</div>
-          <ul class="way-list">
-            <li>
-              <span class="way-dot"></span>
-              <span><strong>Live on Zoom / Google Meet</strong> &ndash; not recordings</span>
-            </li>
-            <li>
-              <span class="way-dot"></span>
-              <span><strong>Small batch of 6&ndash;10 learners</strong></span>
-            </li>
-            <li>
-              <span class="way-dot"></span>
-              <span>Speak in breakout rooms with partners</span>
-            </li>
-            <li>
-              <span class="way-dot"></span>
-              <span><strong>Timing set with you</strong> &ndash; WhatsApp us to fix a slot</span>
-            </li>
-          </ul>
+          <h3>Join a live batch &amp; speak from day one</h3>
+          <p>Choose live online or in-person at Kondur, Cuddalore. 3 live classes each week in a small, encouraging group of 6&ndash;10 learners, so everyone speaks and gets personal feedback in every session.</p>
+          <div class="how-card-pill">3 Classes / Week &bull; 6&ndash;10 Learners</div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="how-card">
+          <div class="how-card-top">
+            <span class="how-step-badge">3</span>
+            <span class="how-step-tag">Step 3 &bull; Real Results</span>
+          </div>
+          <h3>Build real confidence over 12 weeks</h3>
+          <p>Happens over 12 weeks (36 live interactive classes) to turn hesitation into natural expression. Build lasting confidence and fluency for everyday conversations, workplace meetings, and job interviews.</p>
+          <div class="how-card-pill">12-Week Complete Journey</div>
         </div>
       </div>
 
-      <!-- Trust Strip -->
-      <div class="trust-strip">
-        <div class="trust-item"><span>&#10003;</span> Same course</div>
-        <div class="trust-item"><span>&#10003;</span> Same trainer</div>
-        <div class="trust-item"><span>&#10003;</span> Live only</div>
-        <div class="trust-item"><span>&#10003;</span> Small batches</div>
-      </div>
-
-      <!-- Start with a 10-minute speaking assessment -->
-      <div class="free-chat-box">
-        <div class="ten-min-circle">
-          <div class="ten-min-num">10</div>
-          <div class="ten-min-label">MIN LEVEL<br>CHECK</div>
+      <!-- Trust & CTA Bar -->
+      <div class="how-cta-strip">
+        <div class="trust-strip-inner">
+          <div class="trust-item"><span>&#10003;</span> 12 weeks &bull; 3 classes weekly</div>
+          <div class="trust-item"><span>&#10003;</span> Small batches (6&ndash;10 learners)</div>
+          <div class="trust-item"><span>&#10003;</span> In-person (Kondur) &amp; Live online</div>
+          <div class="trust-item"><span>&#10003;</span> Practical speaking &mdash; not lecture theory</div>
         </div>
-        <div class="free-chat-content">
-          <h3>Start with a 10-minute speaking assessment</h3>
-          <p>
-            A relaxed 10-minute conversation with your trainer to find the right fit &ndash; no written exam, no pressure. We listen to how you speak today and place you in the right batch &ndash; Beginner or Intermediate.
-          </p>
-          <div class="level-pills">
-            <span class="level-pill-light">Beginner</span>
-            <span class="level-pill-dark">Intermediate</span>
-          </div>
-        </div>
-        <div>
-          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
-            <span>WhatsApp for Assessment</span>
+        <div class="how-action">
+          <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+            <span>WhatsApp for 10-Min Assessment</span>
             <span>&rarr;</span>
           </a>
         </div>
@@ -1481,7 +1393,7 @@
           <summary class="expand-summary">
             <div class="expand-summary-left">
               <span class="expand-title">12-Week Course Plan</span>
-              <span class="expand-badge">12 Weeks &bull; 3x/Wk &bull; 60&ndash;75 Min</span>
+              <span class="expand-badge">12 Weeks &bull; 3 Classes Weekly &bull; 60&ndash;75 Min</span>
             </div>
             <span class="expand-chevron">&#9662;</span>
           </summary>
@@ -1616,11 +1528,11 @@
     <div class="container">
       <div class="final-cta-card">
 
-        <!-- Left Column: WhatsApp CTA, Scannable QR & Downloadable Brochure PDF -->
+        <!-- Left Column: WhatsApp CTA, Supporting Line, Scannable QR & Brochure PDF -->
         <div>
           <h2>Book your 10-minute speaking assessment</h2>
           <p class="final-sub">
-            A quick 10-minute conversation to assess your current level and find the right batch fit. Message us on WhatsApp or submit the form for fees and the next batch date.
+            A quick, relaxed conversation to assess your current level and find the right batch fit. No written test, zero pressure.
           </p>
 
           <div class="final-phone-highlight">
@@ -1634,6 +1546,10 @@
             </a>
           </div>
 
+          <p class="fee-supporting-note">
+            Message us on WhatsApp for batch details and the simple monthly fee.
+          </p>
+
           <!-- QR Code to Scan & Downloadable Course Brochure PDF -->
           <div class="qr-brochure-card">
             <div class="qr-img-box">
@@ -1641,8 +1557,8 @@
               <span>Scan to WhatsApp</span>
             </div>
             <div class="brochure-download-info">
-              <h4>Scan QR or Save Course Brochure</h4>
-              <p>Scan the QR code with your phone to open WhatsApp directly, or download the complete 2-page programme brochure PDF to keep for reference.</p>
+              <h4>Programme Overview &amp; Brochure</h4>
+              <p>Download our concise 2-page course guide for batch details, 12-week speaking outcomes, and practice topics.</p>
               <a href="/assets/CyberAd-Spoken-English-Brochure.pdf" download="CyberAd-Spoken-English-Brochure.pdf" id="download-brochure-btn" class="btn-download-pdf">
                 <span>&#128196; Download Course Brochure (PDF)</span>
               </a>
@@ -1653,7 +1569,7 @@
         <!-- Right Column: Web3Forms Contact Form -->
         <div class="enquiry-form-card">
           <h3>Send an Enquiry</h3>
-          <p class="form-sub">Fill in your details below and we will reach out to you on WhatsApp.</p>
+          <p class="form-sub">Fill in your details below and we will connect on WhatsApp to schedule your 10-minute speaking assessment.</p>
 
           <form id="cyberad-contact-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="07031dc1-f48b-40ea-909d-a5aeffee8b95">
@@ -1717,7 +1633,7 @@
         </div>
         <div class="footer-links">
           <a href="#top">Top</a>
-          <a href="#ways-to-join">Ways to Join</a>
+          <a href="#how-it-works">How It Works</a>
           <a href="#course-plan">Course &amp; Timings</a>
           <a href="/privacy">Privacy Policy</a>
         </div>
