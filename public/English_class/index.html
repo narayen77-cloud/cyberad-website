@@ -245,7 +245,7 @@
     .hero {
       background: linear-gradient(135deg, #072257 0%, #0C3688 55%, #134DC2 100%);
       color: #FFFFFF;
-      padding: 60px 0 68px;
+      padding: 70px 0 76px;
       position: relative;
       overflow: hidden;
     }
@@ -257,7 +257,7 @@
       width: 460px;
       height: 460px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       pointer-events: none;
     }
     .hero::after {
@@ -268,18 +268,18 @@
       width: 380px;
       height: 380px;
       border-radius: 50%;
-      background: rgba(29, 104, 240, 0.25);
+      background: rgba(29, 104, 240, 0.2);
       pointer-events: none;
     }
     @media (max-width: 640px) {
       .hero {
-        padding: 40px 0 50px;
+        padding: 44px 0 50px;
       }
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.32fr 0.8fr;
-      gap: 40px;
+      grid-template-columns: 1.28fr 0.82fr;
+      gap: 48px;
       align-items: center;
       position: relative;
       z-index: 2;
@@ -287,96 +287,55 @@
     @media (max-width: 920px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 36px;
       }
     }
 
-    /* SPEECH BUBBLES BADGE */
-    .speech-bubbles-row {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 18px;
-      flex-wrap: nowrap;
-    }
-    .bubble-hello {
-      background: #FFFFFF;
-      color: var(--royal-800);
-      font-weight: 900;
-      font-size: 0.95rem;
-      padding: 7px 16px;
-      border-radius: 14px 14px 14px 3px;
-      box-shadow: 0 6px 20px rgba(4, 16, 40, 0.22);
-      white-space: nowrap;
-    }
-    .bubble-hi {
-      background: var(--royal-500);
-      color: #FFFFFF;
-      font-weight: 800;
-      font-size: 0.92rem;
-      padding: 7px 16px;
-      border-radius: 14px 14px 3px 14px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      box-shadow: 0 6px 20px rgba(4, 16, 40, 0.18);
-      white-space: nowrap;
-    }
-
-    /* SINGLE-LINE HERO HEADING */
+    /* HERO TYPOGRAPHY & SPACING */
     .hero h1 {
-      font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+      font-size: clamp(2.1rem, 3.8vw, 3.1rem);
       font-weight: 900;
       line-height: 1.15;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.025em;
       margin-bottom: 12px;
       color: #FFFFFF;
-      white-space: nowrap;
-    }
-    @media (max-width: 560px) {
-      .hero h1 {
-        white-space: normal;
-        font-size: 2rem;
-      }
     }
     .hero h1 span {
-      color: var(--royal-300);
+      color: #93BDFF;
     }
-    .hero-subtitle {
-      font-size: clamp(1.08rem, 1.9vw, 1.3rem);
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 10px;
-      white-space: nowrap;
-    }
-    @media (max-width: 560px) {
-      .hero-subtitle {
-        white-space: normal;
-      }
+    .hero-subheading {
+      font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+      font-weight: 600;
+      color: #E0ECFF;
+      margin-bottom: 14px;
+      line-height: 1.4;
     }
     .hero-lead {
-      font-size: clamp(0.98rem, 1.6vw, 1.08rem);
-      color: #E0ECFF;
-      margin-bottom: 22px;
-      max-width: 640px;
+      font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+      color: #BFDBFE;
+      margin-bottom: 24px;
+      max-width: 560px;
       line-height: 1.6;
     }
 
-    /* PILL TAGS IN HERO */
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 26px;
+    /* ESSENTIAL COURSE INFO BLOCK */
+    .hero-course-meta {
+      margin-bottom: 30px;
+      padding-left: 16px;
+      border-left: 3px solid #60A5FA;
     }
-    .hero-tag {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(147, 189, 255, 0.45);
+    .hero-meta-primary {
+      font-size: clamp(1rem, 1.5vw, 1.08rem);
+      font-weight: 700;
       color: #FFFFFF;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 999px;
-      white-space: nowrap;
-      backdrop-filter: blur(6px);
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .hero-meta-secondary {
+      font-size: 0.94rem;
+      font-weight: 500;
+      color: #93BDFF;
+      line-height: 1.4;
     }
 
     /* CTA BUTTONS */
@@ -399,6 +358,7 @@
       border-radius: var(--radius-sm);
       white-space: nowrap;
       box-shadow: 0 8px 24px rgba(37, 211, 102, 0.32);
+      transition: all 0.18s ease;
     }
     .btn-wa-large:hover {
       background: var(--whatsapp-hover);
@@ -417,6 +377,7 @@
       border-radius: var(--radius-sm);
       white-space: nowrap;
       box-shadow: 0 8px 24px rgba(4, 16, 40, 0.2);
+      transition: all 0.18s ease;
     }
     .btn-secondary-large:hover {
       background: var(--royal-50);
@@ -430,17 +391,17 @@
 
     /* HERO IMAGE CARD */
     .hero-flyer-wrap {
-      max-width: 400px;
+      max-width: 410px;
       margin: 0 auto;
       width: 100%;
     }
     .hero-flyer-card {
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: var(--radius-xl);
       padding: 10px;
-      box-shadow: var(--shadow-lg);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 48px rgba(4, 16, 40, 0.32);
+      backdrop-filter: blur(8px);
     }
     .hero-flyer-card img {
       width: 100%;
@@ -448,6 +409,16 @@
       object-fit: cover;
       display: block;
       border-radius: 16px;
+    }
+    @media (max-width: 920px) {
+      .hero-flyer-card img {
+        height: 380px;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-flyer-card img {
+        height: 300px;
+      }
     }
     @media (max-width: 640px) {
       .hero-flyer-card img {
@@ -1340,8 +1311,7 @@
         <nav class="nav-links">
           <a href="#how-it-works">How It Works</a>
           <a href="#who-its-for">Who It's For</a>
-          <a href="#course-plan">12-Week Plan</a>
-          <a href="#batches-timings">Batches &amp; Timings</a>
+          <a href="#course-plan">Course Outline</a>
           <a href="#contact">Enquire Now</a>
         </nav>
 
@@ -1361,29 +1331,23 @@
       <div class="hero-grid">
 
         <div class="hero-content">
-          <div class="speech-bubbles-row">
-            <span class="bubble-hello">Hello!</span>
-            <span class="bubble-hi">Hi there!</span>
-          </div>
-
           <h1>Speak English <span>with Confidence</span></h1>
 
-          <div class="hero-subtitle">
-            Live classes &ndash; join in person or online
-          </div>
-
-          <p class="hero-lead">
-            Practical spoken English &ndash; more speaking, less theory. Just <strong>₹500 per month</strong> with <strong>no registration fee or long-term commitment</strong>. Attend live online or in person at Kondur, Cuddalore.
+          <p class="hero-subheading">
+            Live classes &mdash; join online or in person
           </p>
 
-          <div class="hero-tags">
-            <span class="hero-tag" style="background:var(--royal-600); color:#FFFFFF; border-color:var(--royal-500); font-weight:800;">₹500 / Month</span>
-            <span class="hero-tag">Attend Online or In Person</span>
-            <span class="hero-tag">No Registration Fee</span>
-            <span class="hero-tag">No Long-Term Commitment</span>
-            <span class="hero-tag">12 Weeks &bull; 3 Classes Weekly</span>
-            <span class="hero-tag">Small batches</span>
-            <span class="hero-tag">Personal feedback</span>
+          <p class="hero-lead">
+            Practical spoken English &mdash; more speaking, less theory.
+          </p>
+
+          <div class="hero-course-meta">
+            <div class="hero-meta-primary">
+              ₹500/month &middot; 3 classes per week &middot; 12-week programme
+            </div>
+            <div class="hero-meta-secondary">
+              Small batches &middot; Personal feedback
+            </div>
           </div>
 
           <div class="cta-buttons">
@@ -1799,8 +1763,8 @@
         <div class="footer-links">
           <a href="#top">Top</a>
           <a href="#how-it-works">How It Works</a>
-          <a href="#course-plan">12-Week Plan</a>
-          <a href="#batches-timings">Batches &amp; Timings</a>
+          <a href="#who-its-for">Who It's For</a>
+          <a href="#course-plan">Course Outline</a>
           <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
