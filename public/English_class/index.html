@@ -957,12 +957,68 @@
       color: #FFFFFF;
       margin-bottom: 18px;
     }
-    .fee-supporting-note {
-      font-size: 0.88rem;
+
+    /* PRICING HIGHLIGHT BOX */
+    .pricing-highlight-box {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      margin: 18px 0 22px 0;
+      backdrop-filter: blur(8px);
+    }
+    .pricing-highlight-top {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .pricing-highlight-fee {
+      font-size: 1.85rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+    .pricing-highlight-period {
+      font-size: 0.95rem;
+      font-weight: 600;
       color: var(--royal-100);
-      margin-top: 14px;
-      line-height: 1.45;
-      opacity: 0.95;
+    }
+    .pricing-highlight-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-left: auto;
+    }
+    .pricing-highlight-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+    }
+    .pricing-highlight-list li {
+      font-size: 0.88rem;
+      color: var(--royal-50);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.4;
+    }
+    .pricing-highlight-list li strong {
+      color: #FFFFFF;
+    }
+    .pricing-highlight-list .check-icon {
+      color: #6EE7B7;
+      font-weight: 900;
+      font-size: 0.95rem;
     }
 
     /* QR & PDF DOWNLOAD BOX */
@@ -1181,8 +1237,8 @@
   <!-- TOP BAR -->
   <div class="top-announcement">
     <strong>Spoken English Programme:</strong>
-    <span class="highlight">12 Weeks &bull; 3 Live Classes Weekly &mdash; In Person (Kondur) or Online</span>
-    &bull; Start with a 10-Min Speaking Assessment
+    <span class="highlight">₹500 / Month &bull; Attend Online or In Person &bull; No Registration Fee</span>
+    &bull; 12 Weeks (3 Classes Weekly) &bull; Start with a 10-Min Assessment
   </div>
 
   <!-- HEADER (SINGLE LINE) -->
@@ -1232,17 +1288,17 @@
           </div>
 
           <p class="hero-lead">
-            Practical spoken English &ndash; more speaking, less theory. Real-life conversations from day one &ndash; speak better at home, college and work.
+            Practical spoken English &ndash; more speaking, less theory. Just <strong>₹500 per month</strong> with <strong>no registration fee or long-term commitment</strong>. Attend live online or in person at Kondur, Cuddalore.
           </p>
 
           <div class="hero-tags">
+            <span class="hero-tag" style="background:var(--royal-600); color:#FFFFFF; border-color:var(--royal-500); font-weight:800;">₹500 / Month</span>
+            <span class="hero-tag">Attend Online or In Person</span>
+            <span class="hero-tag">No Registration Fee</span>
+            <span class="hero-tag">No Long-Term Commitment</span>
             <span class="hero-tag">12 Weeks &bull; 3 Classes Weekly</span>
-            <span class="hero-tag">Real-life speaking practice</span>
             <span class="hero-tag">Small batches</span>
             <span class="hero-tag">Personal feedback</span>
-            <span class="hero-tag">Live sessions only</span>
-            <span class="hero-tag">Beginner &amp; Intermediate</span>
-            <span class="hero-tag">Kondur, Cuddalore</span>
           </div>
 
           <div class="cta-buttons">
@@ -1314,10 +1370,10 @@
       <!-- Trust & CTA Bar -->
       <div class="how-cta-strip">
         <div class="trust-strip-inner">
+          <div class="trust-item"><span>&#10003;</span> <strong>₹500 / month</strong> &bull; No registration fee</div>
+          <div class="trust-item"><span>&#10003;</span> Attend online or in person</div>
+          <div class="trust-item"><span>&#10003;</span> No long-term commitment</div>
           <div class="trust-item"><span>&#10003;</span> 12 weeks &bull; 3 classes weekly</div>
-          <div class="trust-item"><span>&#10003;</span> Small batches (6&ndash;10 learners)</div>
-          <div class="trust-item"><span>&#10003;</span> In-person (Kondur) &amp; Live online</div>
-          <div class="trust-item"><span>&#10003;</span> Practical speaking &mdash; not lecture theory</div>
         </div>
         <div class="how-action">
           <a href="https://wa.me/918925693013?text=Hi%20CyberAd%2C%20I%20would%20like%20to%20schedule%20a%2010-minute%20speaking%20assessment%20for%20Spoken%20English%20classes." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
@@ -1393,7 +1449,7 @@
           <summary class="expand-summary">
             <div class="expand-summary-left">
               <span class="expand-title">12-Week Course Plan</span>
-              <span class="expand-badge">12 Weeks &bull; 3 Classes Weekly &bull; 60&ndash;75 Min</span>
+              <span class="expand-badge">12 Weeks &bull; 3 Classes Weekly &bull; ₹500/Month</span>
             </div>
             <span class="expand-chevron">&#9662;</span>
           </summary>
@@ -1528,12 +1584,26 @@
     <div class="container">
       <div class="final-cta-card">
 
-        <!-- Left Column: WhatsApp CTA, Supporting Line, Scannable QR & Brochure PDF -->
+        <!-- Left Column: WhatsApp CTA, Pricing Highlight Box, Scannable QR & Brochure PDF -->
         <div>
           <h2>Book your 10-minute speaking assessment</h2>
           <p class="final-sub">
             A quick, relaxed conversation to assess your current level and find the right batch fit. No written test, zero pressure.
           </p>
+
+          <!-- Pricing Highlight Box -->
+          <div class="pricing-highlight-box">
+            <div class="pricing-highlight-top">
+              <span class="pricing-highlight-fee">₹500</span>
+              <span class="pricing-highlight-period">/ month</span>
+              <span class="pricing-highlight-badge">Simple Monthly Fee</span>
+            </div>
+            <ul class="pricing-highlight-list">
+              <li><span class="check-icon">&#10003;</span> Attend classes either <strong>online or in person</strong></li>
+              <li><span class="check-icon">&#10003;</span> <strong>No registration fee</strong></li>
+              <li><span class="check-icon">&#10003;</span> <strong>No long-term commitment</strong> &ndash; pay month-by-month</li>
+            </ul>
+          </div>
 
           <div class="final-phone-highlight">
             WhatsApp: +91 89256 93013
@@ -1545,10 +1615,6 @@
               <span>&rarr;</span>
             </a>
           </div>
-
-          <p class="fee-supporting-note">
-            Message us on WhatsApp for batch details and the simple monthly fee.
-          </p>
 
           <!-- QR Code to Scan & Downloadable Course Brochure PDF -->
           <div class="qr-brochure-card">
@@ -1569,7 +1635,7 @@
         <!-- Right Column: Web3Forms Contact Form -->
         <div class="enquiry-form-card">
           <h3>Send an Enquiry</h3>
-          <p class="form-sub">Fill in your details below and we will connect on WhatsApp to schedule your 10-minute speaking assessment.</p>
+          <p class="form-sub">Fill in your details below and we will connect on WhatsApp to schedule your 10-minute speaking assessment. Simple fee: ₹500/month with no registration fee.</p>
 
           <form id="cyberad-contact-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="07031dc1-f48b-40ea-909d-a5aeffee8b95">
