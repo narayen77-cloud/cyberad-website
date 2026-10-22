@@ -23,6 +23,8 @@ export default defineConfig(() => {
           commercialLand: path.resolve(__dirname, 'commercial-land-cuddalore.html'),
           englishClass: path.resolve(__dirname, 'english-class.html'),
           englishClassIndex: path.resolve(__dirname, 'English_class/index.html'),
+          dmLanding: path.resolve(__dirname, 'DM/index.html'),
+          dm: path.resolve(__dirname, 'dm.html'),
         },
       },
     },
