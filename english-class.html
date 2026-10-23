@@ -443,20 +443,14 @@
       padding: 56px 0;
       border-bottom: 1px solid var(--slate-200);
     }
-    .video-intro-text {
-      font-size: clamp(1.02rem, 1.8vw, 1.18rem);
-      font-weight: 600;
-      color: var(--slate-600);
-      margin-bottom: 24px;
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.5;
+    .section-video .section-title-bar h2 {
+      white-space: normal;
+      text-align: center;
     }
     .video-container-card {
-      max-width: 760px;
+      max-width: 380px;
       margin: 0 auto 24px;
-      background: #000000;
+      background: var(--royal-950);
       border: 1.5px solid var(--slate-200);
       border-radius: var(--radius-lg);
       padding: 8px;
@@ -470,8 +464,8 @@
     .video-embed-wrapper {
       position: relative;
       width: 100%;
-      aspect-ratio: 16 / 9;
-      border-radius: 12px;
+      aspect-ratio: 9 / 16;
+      border-radius: 14px;
       overflow: hidden;
       background: #000000;
     }
@@ -1435,12 +1429,10 @@
   <section class="section section-video" id="video">
     <div class="container" style="text-align: center;">
 
-      <div class="section-title-bar" style="justify-content: center; margin-bottom: 12px;">
+      <div class="section-title-bar" style="justify-content: center; margin-bottom: 24px;">
         <span class="section-accent-pill"></span>
-        <h2>Watch the Video</h2>
+        <h2>Watch the video and see if this sounds like you.</h2>
       </div>
-
-      <p class="video-intro-text">Watch the video and see if this sounds like you.</p>
 
       <div class="video-container-card">
         <div class="video-embed-wrapper">
