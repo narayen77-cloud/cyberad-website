@@ -284,6 +284,30 @@
       }
     }
 
+    /* HERO TRUST BADGE */
+    .hero-trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #E0ECFF;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-trust-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #34D399;
+      box-shadow: 0 0 8px #34D399;
+    }
+
     /* HERO TYPOGRAPHY & SPACING */
     .hero h1 {
       font-size: clamp(2.1rem, 3.8vw, 3.1rem);
@@ -411,6 +435,57 @@
       .section {
         padding: 44px 0;
       }
+    }
+
+    /* WATCH THE VIDEO SECTION */
+    .section-video {
+      background: var(--white);
+      padding: 56px 0;
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .video-container-card {
+      max-width: 380px;
+      margin: 0 auto 24px;
+      background: var(--royal-950);
+      border: 1.5px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 8px;
+      box-shadow: 0 16px 40px rgba(4, 16, 40, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .video-container-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 48px rgba(4, 16, 40, 0.18);
+    }
+    .video-embed-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #000000;
+    }
+    .video-embed-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    .video-cta-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .video-cta-text {
+      font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+      font-weight: 700;
+      color: var(--royal-900);
+      line-height: 1.4;
     }
     .section-title-bar {
       display: flex;
@@ -1310,6 +1385,11 @@
       <div class="hero-grid">
 
         <div class="hero-content">
+          <div class="hero-trust-badge">
+            <span class="hero-trust-badge-dot"></span>
+            Structured 12-Week Interactive Speaking Programme
+          </div>
+
           <h1>Speak English <span>with Confidence</span></h1>
 
           <p class="hero-subheading">
@@ -1338,6 +1418,38 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- WATCH THE VIDEO SECTION -->
+  <section class="section section-video" id="video">
+    <div class="container" style="text-align: center;">
+
+      <div class="section-title-bar" style="justify-content: center; margin-bottom: 22px;">
+        <span class="section-accent-pill"></span>
+        <h2>Watch the Video</h2>
+      </div>
+
+      <div class="video-container-card">
+        <div class="video-embed-wrapper">
+          <iframe 
+            src="https://www.youtube.com/embed/-af7zXjDpxE" 
+            title="Watch the Video — CyberAd Spoken English"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="video-cta-block">
+        <p class="video-cta-text">If this sounds like you, talk to a counsellor.</p>
+        <a href="https://wa.me/918925693013?text=Hi%2C%20I%20watched%20the%20video%20and%20I%E2%80%99d%20like%20to%20speak%20to%20a%20counsellor%20about%20the%20Spoken%20English%20Programme." target="_blank" rel="noopener noreferrer" class="btn-wa-large">
+          <span>Talk to a Counsellor</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
     </div>
   </section>
 
@@ -1657,25 +1769,6 @@
           </div>
         </details>
 
-        <details class="faq-item">
-          <summary class="faq-summary">
-            <span>Can I pay the course fee in parts?</span>
-            <span class="faq-chevron">&#9662;</span>
-          </summary>
-          <div class="faq-answer">
-            <p>Yes. The total course fee of ₹1,500 can be paid in parts through the payment link.</p>
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">
-            <span>How many parts can I pay in?</span>
-            <span class="faq-chevron">&#9662;</span>
-          </summary>
-          <div class="faq-answer">
-            <p>There is no fixed number. You can pay the ₹1,500 in two, three, four, five, or more parts, as convenient, until the full course fee is paid.</p>
-          </div>
-        </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
@@ -1813,6 +1906,9 @@
           <a href="#contact">Enquire</a>
           <a href="/privacy">Privacy Policy</a>
         </div>
+      </div>
+      <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.8rem; color: #94A3B8; text-align: center; line-height: 1.6;">
+        Cyber Enterprises &bull; Registered MSME: <strong>UDYAM-TN-04-0115585</strong> &bull; GSTIN: <strong>33APPPC7049M1ZI</strong> &bull; Kondur, Cuddalore, Tamil Nadu
       </div>
     </div>
   </footer>
