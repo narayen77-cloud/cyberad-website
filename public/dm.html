@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get More Local Customers — Cyberad.in | ₹999 for 2 Days</title>
-  <meta name="description" content="Simple 2-day Facebook, Instagram & WhatsApp ads for local businesses. ₹999 only. No contracts. We handle everything.">
+  <title>Get More Local Customers — Cyberad.in</title>
+  <meta name="description" content="Simple Facebook, Instagram & WhatsApp ads for local businesses. We handle everything.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -32,8 +32,21 @@
     .hero {
       background: linear-gradient(135deg, #0f2c5c 0%, #1e40af 100%);
       color: white;
-      padding: 60px 0 40px;
+      padding: 60px 0 50px;
+    }
+    .hero-container {
+      max-width: 1040px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      gap: 36px;
       text-align: center;
+    }
+    .hero-content {
+      max-width: 580px;
+      margin: 0 auto;
     }
     .hero h1 {
       font-size: clamp(1.8rem, 5vw, 2.8rem);
@@ -42,36 +55,12 @@
       margin-bottom: 16px;
     }
     .hero p.sub {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       opacity: 0.9;
       margin-bottom: 28px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
-    }
-    .price-box {
-      display: inline-flex;
-      align-items: center;
-      background: white;
-      color: #0f2c5c;
-      border-radius: 12px;
-      overflow: hidden;
-      margin: 20px 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    }
-    .price-box .price {
-      background: #0f2c5c;
-      color: white;
-      padding: 16px 28px;
-      font-size: 2rem;
-      font-weight: 700;
-    }
-    .price-box .days {
-      background: #fbbf24;
-      color: #0f2c5c;
-      padding: 16px 28px;
-      font-size: 1.4rem;
-      font-weight: 700;
     }
     .cta-btn {
       display: inline-block;
@@ -82,11 +71,59 @@
       padding: 16px 32px;
       border-radius: 50px;
       text-decoration: none;
-      margin-top: 16px;
+      margin-top: 8px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
-    .cta-btn small { display: block; font-size: 0.75rem; opacity: 0.9; font-weight: 400; }
+    
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .hero-image-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 24px 48px rgba(3, 14, 40, 0.35);
+      backdrop-filter: blur(8px);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .hero-image-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 56px rgba(3, 14, 40, 0.45);
+    }
+    .hero-image-card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      border-radius: 14px;
+    }
+
+    @media (min-width: 860px) {
+      .hero {
+        padding: 72px 0 64px;
+      }
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
+        text-align: left;
+      }
+      .hero-content {
+        max-width: 100%;
+        margin: 0;
+      }
+      .hero p.sub {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .hero-image-wrap {
+        max-width: 100%;
+      }
+    }
     
     section { padding: 60px 0; }
     section h2 {
@@ -156,9 +193,6 @@
     footer a { color: #fbbf24; text-decoration: none; }
     .footer-cta { margin: 20px 0; }
     
-    @media (max-width: 600px) {
-      .price-box .price, .price-box .days { padding: 12px 20px; font-size: 1.5rem; }
-    }
   </style>
 </head>
 <body>
@@ -168,29 +202,27 @@
         <div class="logo">CYBERAD<span>.IN</span></div>
         <div class="tagline">DIGITAL MARKETING & INNOVATION</div>
       </div>
-      <a href="https://wa.me/918925693013?text=Hi%2C%20I%20want%20the%20%E2%82%B9999%20local%20ads%20package" class="cta-btn" style="padding:10px 20px; font-size:0.95rem; margin:0;">WhatsApp Us</a>
+      <a href="https://wa.me/918925693013?text=Hi%2C%20I%20want%20to%20know%20more%20about%20local%20ads" class="cta-btn" style="padding:10px 20px; font-size:0.95rem; margin:0;">WhatsApp Us</a>
     </div>
   </header>
 
   <div class="hero">
-    <div class="container">
-      <h1>Get More Customers<br>From Your Area</h1>
-      <p class="sub">Your advertisement on Facebook, Instagram & WhatsApp.<br>We set it up. You get the calls and messages.</p>
-      
-      <div class="price-box">
-        <div class="price">₹999</div>
-        <div class="days">2 DAYS</div>
-      </div>
-      
-      <p style="font-size:0.95rem; opacity:0.85; margin-bottom:8px;">No long contracts. Just try and see.</p>
-      
-      <a href="https://wa.me/918925693013?text=Hi%2C%20I%20want%20to%20try%20the%20%E2%82%B9999%20for%202%20days%20local%20ads" class="cta-btn">
-        Message on WhatsApp
-        <small>8925693013 · Limited slots</small>
-      </a>
-      
-      <div style="margin-top:40px;">
-        <img src="flyer.png" alt="Cyberad 2-Day Promo Flyer" style="max-width:320px; border-radius:16px; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Get More Customers<br>From Your Area</h1>
+          <p class="sub">Your advertisement on Facebook, Instagram & WhatsApp.<br>We set it up. You get the calls and messages.</p>
+          
+          <a href="https://wa.me/918925693013?text=Hi%2C%20I%20want%20to%20know%20more%20about%20local%20ads" class="cta-btn">
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="hero-image-card">
+            <img src="social-media-hero.jpg" alt="Local Social Media Advertising on Facebook, Instagram and WhatsApp - CyberAd" width="1024" height="576" loading="eager" fetchpriority="high" decoding="async">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -218,7 +250,7 @@
           <p>Ad design, targeting, running the campaign — all done.</p>
         </div>
         <div class="benefit">
-          <h3>✓ Short report after 2 days</h3>
+          <h3>✓ Clear campaign reports</h3>
           <p>See how many people saw your ad and who messaged you.</p>
         </div>
       </div>
@@ -239,7 +271,7 @@
         <div class="step">
           <div class="step-num">2</div>
           <h3>We set up</h3>
-          <p>We create and run the ads for 2 days. You approve if needed.</p>
+          <p>We create and run the ads for your business. You approve if needed.</p>
         </div>
         <div class="step">
           <div class="step-num">3</div>
@@ -264,10 +296,9 @@
   <section>
     <div class="container" style="text-align:center;">
       <h2>Ready to try?</h2>
-      <p class="lead">₹999 for 2 days. See if more local customers come to you.<br>No long commitment.</p>
-      <a href="https://wa.me/918925693013?text=Hi%2C%20I%20saw%20the%20offer%20and%20want%20to%20try%20%E2%82%B9999%20for%202%20days" class="cta-btn">
-        Message Now on WhatsApp
-        <small>8925693013</small>
+      <p class="lead">See if more local customers come to you.<br>No long commitment.</p>
+      <a href="https://wa.me/918925693013?text=Hi%2C%20I%20want%20to%20know%20more%20about%20local%20ads" class="cta-btn">
+        Message on WhatsApp
       </a>
     </div>
   </section>
