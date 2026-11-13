@@ -54,33 +54,43 @@
 
 [[redirects]]
   from = "/English_class"
-  to = "/English_class/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/English_class/*"
-  to = "/English_class/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/english_class"
-  to = "/English_class/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/english_class/*"
-  to = "/English_class/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/english-class"
-  to = "/English_class/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/english-class/*"
-  to = "/English_class/index.html"
-  status = 200
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/english-class.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/English_class.html"
+  to = "/"
+  status = 301
 
 [[redirects]]
   from = "/DM"

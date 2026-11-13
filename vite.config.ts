@@ -21,8 +21,6 @@ export default defineConfig(() => {
           thankYou: path.resolve(__dirname, 'thank-you.html'),
           englishCommunication: path.resolve(__dirname, 'english-communication-programme.html'),
           commercialLand: path.resolve(__dirname, 'commercial-land-cuddalore.html'),
-          englishClass: path.resolve(__dirname, 'english-class.html'),
-          englishClassIndex: path.resolve(__dirname, 'English_class/index.html'),
           dmLanding: path.resolve(__dirname, 'DM/index.html'),
           dm: path.resolve(__dirname, 'dm.html'),
         },
