@@ -1262,12 +1262,46 @@
       color: var(--royal-900);
     }
 
+    .btn-review {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--slate-800);
+      border: 1.5px solid var(--slate-200);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-review:hover {
+      border-color: #F59E0B;
+      background: #FFFBEB;
+      color: #92400E;
+    }
+
+    .profile-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
     @media (max-width: 640px) {
       .business-profile-card {
         flex-direction: column;
         align-items: flex-start;
       }
-      .btn-gmb {
+      .profile-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-gmb,
+      .btn-review {
         width: 100%;
         justify-content: center;
       }
@@ -1739,10 +1773,16 @@
             <p>Verified Business Listing &bull; Cuddalore, Tamil Nadu, India</p>
           </div>
         </div>
-        <a href="https://share.google/pYZVggkALFQjbXqib" target="_blank" rel="noopener noreferrer" class="btn-gmb">
-          <span>View on Google Business Profile</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-        </a>
+        <div class="profile-actions">
+          <a href="https://share.google/pYZVggkALFQjbXqib" target="_blank" rel="noopener noreferrer" class="btn-gmb">
+            <span>View on Google Business Profile</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <a href="https://g.page/r/CctJ_MlMfCdREBM/review" target="_blank" rel="noopener noreferrer" class="btn-review">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#F59E0B" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <span>Write a Google Review</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
